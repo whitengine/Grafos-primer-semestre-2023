@@ -1,0 +1,51 @@
+This is BibTeX, Version 0.99d
+Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
+The top-level auxiliary file: Apuntes - GRAFOS.aux
+Reallocating 'name_of_file' (item size: 1) to 6 items.
+The style file: alpha.bst
+Reallocating 'name_of_file' (item size: 1) to 19 items.
+Database file #1: BibliografiaGRAFOS.bib
+Warning--can't use both volume and number fields in diestelGraphTheory
+Warning--empty publisher in diestelGraphTheory
+You've used 1 entry,
+            2543 wiz_defined-function locations,
+            566 strings with 4609 characters,
+and the built_in function-call counts, 409 in all, are:
+= -- 32
+> -- 25
+< -- 1
++ -- 9
+- -- 9
+* -- 35
+:= -- 77
+add.period$ -- 3
+call.type$ -- 1
+change.case$ -- 6
+chr.to.int$ -- 1
+cite$ -- 3
+duplicate$ -- 15
+empty$ -- 26
+format.name$ -- 10
+if$ -- 75
+int.to.chr$ -- 1
+int.to.str$ -- 0
+missing$ -- 2
+newline$ -- 8
+num.names$ -- 3
+pop$ -- 9
+preamble$ -- 1
+purify$ -- 8
+quote$ -- 0
+skip$ -- 13
+stack$ -- 0
+substring$ -- 7
+swap$ -- 3
+text.length$ -- 1
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 4
+warning$ -- 2
+while$ -- 3
+width$ -- 2
+write$ -- 14
+(There were 2 warnings)

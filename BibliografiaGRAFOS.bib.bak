@@ -1,0 +1,9 @@
+@Book{diestelGraphTheory,
+  title={Graph theory},
+  author={Diestel, Reinhard and Schrijver, Alexander and Seymour, Paul},
+  journal={Oberwolfach Reports},
+  volume={7},
+  number={1},
+  pages={521--580},
+  year={2010}
+}

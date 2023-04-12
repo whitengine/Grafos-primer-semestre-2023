@@ -1,0 +1,1316 @@
+\documentclass[12pt]{report}
+
+\let\widering\relax %esto es porque hay problemas con el comando \widering que se define en la fuenta fouriernc y en el paquete mathbx
+\usepackage{fouriernc}%la fuente
+%\usepackage[sc]{mathpazo}
+
+\usepackage[utf8]{inputenc}
+
+\usepackage[a4paper,width=150mm,top=25mm,bottom=25mm]{geometry}
+
+\usepackage{subfiles} %esto es para modularizar el overleaf
+%para usar este paquete solamente hay que usar el comando
+%\subfile{}
+
+\usepackage{graphicx}
+\usepackage{framed}
+\usepackage[dvipsnames]{xcolor} %agrega mas colores para xcolor.
+
+\usepackage{xparse}
+\usepackage{xstring}
+
+\usepackage{stmaryrd} %para poner el comando \mapsfrom "<---|"	
+
+\usepackage{amssymb}
+
+\usepackage{amsmath}
+
+\usepackage{subfig}
+
+\usepackage{mathrsfs} % para tener mas tipos de texto: \mathscr que es una letra mayuscula cursiva.
+
+\usepackage{tikz-cd}
+
+\usepackage{tkz-graph}%este paquete es para crear grafos con el ambiente \begin{tikzpicture}
+
+\usepackage{caption}
+
+\usepackage[shortlabels]{enumitem}
+
+
+
+\usepackage[spanish,activeacute]{babel}
+
+\usepackage{xparse}
+\usepackage{xstring}
+
+\usepackage{braket} %para definir \set , \Set y que los conjuntos se vean mas lindos
+
+\usepackage{mathtools}
+
+\usepackage[shortlabels]{enumitem}
+
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks,
+    citecolor=red,
+    filecolor=red,
+    linkcolor=red,
+    urlcolor=red
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{amsthm}
+
+\theoremstyle{plain}
+\newtheorem{theorem}{Teorema}[section]
+\newtheorem{lemma}[theorem]{Lema}
+\newtheorem{proposition}[theorem]{Proposición}
+\newtheorem{proposition/definition}[theorem]{Proposición/Definición}
+\newtheorem{corollary}[theorem]{Corolario}
+\newtheorem{conjecture}[theorem]{Conjetura}
+\newtheorem{afirmacion}[theorem]{Afirmación}
+\newtheorem{recuerdo}[theorem]{Recuerdo}
+
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definición}
+\newtheorem{hypothesis}[theorem]{Hipótesis}
+\newtheorem{example}[theorem]{Ejemplo}
+\newtheorem{obs}[theorem]{Observación}
+\newtheorem{notation}[theorem]{Notación}
+\newtheorem{remark}[theorem]{Comentario}
+
+
+%por alguna razon el teorema $warning  est aen uso, asi que lo remuevo de maqnera trucha
+\newtheorem{warn}[theorem]{\textbf{ADVERTENCIA}}
+\renewenvironment{warning}{\begin{warn}}{\end{warn}}
+
+%crear ejercicio
+\newtheorem{exercise}[theorem]{Ejercicio}
+%solución
+\newenvironment{solution}{\begin{proof}[Solución]}{\end{proof}}
+
+
+
+
+
+%como crear un nuevo ambiente de teorema o proposición que este sobreado con un recuadro de "color". primero hacemos
+
+%\newenvironment{Theorem}{\colorlet{shadecolor}{color} \begin{shaded} \begin{theorem} }{ \end{theorem} \end{shaded} }
+
+%Notar que primero hay que definir el color del sobreado con el comando
+%"\colorlet{shadecolor}{color}" y luego hay que usar el environment "shaded". Adentro de este ponemos el environment que queremos, en nuestro caso queremos "pintar" el environment "\begin{theorem}".
+
+
+%se puede cambiar la tonalidad de un color "yellow!80" es el color amarillo pero al 80%  y el 20% es mezclado con blanco, i.e. está aclarado. Pero "yellow!80!Black" es 80% amarillo y 20% negro, i.e. es obscurecido 20%.
+
+\newenvironment{Definition}{\colorlet{shadecolor}{Apricot!12} \begin{shaded} \begin{definition} }{ \end{definition} \end{shaded} }
+
+\newenvironment{Example}{\colorlet{shadecolor}{Goldenrod!16} \begin{shaded} \begin{example}}{ \end{example} \end{shaded}}
+
+\newenvironment{Remark}{\colorlet{shadecolor}{Orchid!12} \begin{shaded} \begin{remark}}{ \end{remark} \end{shaded}}
+
+\newenvironment{Warning}{\colorlet{shadecolor}{red!12} \begin{shaded} \begin{warning}}{ \end{warning} \end{shaded}}
+
+\newenvironment{Conjecture}{\colorlet{shadecolor}{magenta!16} \begin{shaded} \begin{conjecture}}{ \end{conjecture} \end{shaded}}
+
+\newenvironment{Theorem}{\colorlet{shadecolor}{OliveGreen!18} \begin{shaded} \begin{theorem}}{ \end{theorem} \end{shaded}}
+
+\newenvironment{Lemma}{\colorlet{shadecolor}{LimeGreen!12} \begin{shaded} \begin{lemma}}{ \end{lemma} \end{shaded}}
+
+\newenvironment{Proposition}{\colorlet{shadecolor}{Green!12} \begin{shaded} \begin{proposition}}{ \end{proposition}\end{shaded}}
+
+\newenvironment{Corollary}{\colorlet{shadecolor}{TealBlue!16} \begin{shaded} \begin{corollary}}{ \end{corollary} \end{shaded}}
+
+\newenvironment{Obs}{\colorlet{shadecolor}{Dandelion!22} \begin{shaded} \begin{obs}}{ \end{obs} \end{shaded}}
+
+\newenvironment{Exercise}{\colorlet{shadecolor}{Lavender!12} \begin{shaded} \begin{exercise}}{ \end{exercise} \end{shaded}}
+
+%%%%%COLORES%%%%%%%%%%%%
+%Hay varios comandos del paquete Xcolor:
+%\color{blue,green,red,yellow,orange,black,white,pink,purble,etc...} hace que todo el bloque de texto se transforme en este color, se puede encerrar entre {} el bloque de texto que uno quiere colorear
+%\textcolor{color}{text} escribe el texto "text" en "color".
+%\colorbox{color}{text} pinta un rectangulo de "color" detrás del "text".
+%\shaded
+
+
+
+%lista de colores base de xcolor, como son colores de la extension del paquetem, empiezan con la primera letra mayuscula: si usaramos solo el paquete {xcolor} entonces no sería necesario.
+
+%red, Green (fluorecente), Blue (muy obscuro), Cyan, Magenta, Yellow, Black, Gray, lightgray, White, darkgray, lightgray, Brown, lime (este verde mas lindo manzana), olive (marron verdoso feo), Orange, pink, Purple, teal (verde marino), Violet
+
+%marco los colores lindos: red, Cyan, Magenta, Yellow, Black, Gray, White,  lime, Orange, pink, teal, Violet
+
+%Colores que incluye el paquete dvipsnames: Apricot (color beige), Brown, Goldenrod, JungleGreen, Salmon, Lavender, SpringGreen, Turquoise, Plum, Emerald, BurntOrange (naranja piola), ForestGreen (verde oscuro), BrickRed (rojo obscuro)
+
+
+\newcommand{\red}[1]{\textcolor{BrickRed}{#1}}
+
+			\newcommand{\comentario}[1]{\red{#1}}
+
+\newcommand{\green}[1]{\textcolor{SpringGreen}{#1}}
+
+\newcommand{\blue}[1]{\textcolor{Cyan}{#1}}
+
+\newcommand{\yellow}[1]{\textcolor{yellow!80!Black}{#1}} %se puede cambiar la tonalidad de un color "yellow!80" es el color amarillo pero al 80%  y el 20% es mezclado con blanco, i.e. está aclarado. Pero "yellow!80!Black" es 80% amarillo y 20% negro, i.e. es obscurecido 20%.
+
+\newcommand{\black}[1]{\textcolor{Black}{#1}}
+
+\newcommand{\gray}[1]{\textcolor{Gray}{#1}}
+
+\newcommand{\purple}[1]{\textcolor{Purple}{#1}}
+
+\newcommand{\beige}[1]{\textcolor{Apricot}{#1}}
+
+\newcommand{\darkgreen}[1]{\textcolor{ForestGreen}{#1}}
+
+\newcommand{\pink}[1]{\textcolor{Lavender}{#1}}
+
+\newcommand{\salmon}[1]{\textcolor{Salmon}{#1}}
+
+\newcommand{\brown}[1]{\textcolor{RawSienna}{#1}}
+
+\newcommand{\white}[1]{\textcolor{White}{#1}}
+
+\newcommand{\orange}[1]{\textcolor{BurntOrange}{#1}}
+
+
+
+
+
+
+
+
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+
+%grupos de matrices
+%SL
+\newcommand{\SL}[2]{\operatorname{SL}_{#1} ( #2)}
+%GL
+\newcommand{\GL}[2]{\operatorname{GL}_{#1} ( #2)}
+
+%matriz identidad
+\newcommand{\Id}{\operatorname{Id}}
+
+
+
+%enteros Z
+\newcommand{\integers}{\mathbb{Z}}
+%racionales
+\newcommand{\rationals}{\mathbb{Q}}
+%naturales
+\newcommand{\naturals}{\mathbb{N}}
+%reales R
+\newcommand{\reals}{\mathbb{R}}
+%imaginarios
+\newcommand{\complex}{\mathbb{C}}
+%p-adicos
+\newcommand{\padics}{\mathbb{Q}_p}
+%enteros p-adicos
+\newcommand{\padicintegers}{\mathbb{Z}_p}
+
+%cuerpos finitos
+%Fp
+\newcommand{\Fp}{\mathbb{F}_p}
+%Fq
+\newcommand{\Fq}{\mathbb{F}_q}
+
+
+
+%valor absoluto p-adico
+\newcommand{\abs}[1]{\left \vert #1 \right \vert}
+%valor absoluto p-adico
+\newcommand{\Abs}[1]{\left \vert \left \vert #1 \right \vert \right \vert}
+%valuacion p-adica
+\newcommand{\val}[1]{\operatorname{val} (#1)}
+
+%Hom
+\newcommand{\Hom}{\operatorname{Hom}}
+
+%imagen y núcleo
+\newcommand{\Imagen}{\operatorname{Im}}
+\newcommand{\Ker}{\operatorname{Ker}}
+
+%coker
+\newcommand{\Coker}{\operatorname{Coker}}
+
+%limite inverso
+\newcommand{\liminv}{\varprojlim}
+
+
+%un poco de typeset para categorias
+\newcommand{\catname}[1]{{\operatorfont\textbf{#1}}}
+
+
+\renewcommand{\hat}[1]{\widehat{#1}}
+\renewcommand{\bar}[1]{\overline{#1}}
+
+%declaro un comando nuevo para escribir restricción de funciones
+\newcommand\rest[2]{{% we make the whole thing an ordinary symbol
+  \left.\kern-\nulldelimiterspace % automatically resize the bar with \right
+  #1 % the function
+  \vphantom{\big|} % pretend it's a little taller at normal size
+  \right|_{#2} % this is the delimiter
+  }}
+
+
+%%%%   COMANDO ALGEBRA CONMUTATIVA   %%%%
+
+%altura de un ideal:
+\newcommand{\height}{\textsc{height}}
+
+%Clausura topológica
+\newcommand{\closure}[1]{\overline{#1}}
+
+%longitud de un A-modulo. Notacion: \length_A M
+\newcommand{\length}{\operatorname{length}}
+
+%Anulador de un $A$-módulo.
+\newcommand{\Ann}[1]{\operatorname{Ann} (#1)}
+
+%Cuerpo de fracciones. Notacion $\FracField A$.
+\newcommand{\FracField}[1]{\operatorname{Fr} (#1)}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+
+
+
+%%%%   COMANDO TEORÍA DE NÚMEROS  %%%%
+
+%Discriminante
+\newcommand{\discriminant}[1]{\mathfrak{d} (#1 )}
+
+%%%%Ideales primos%%%
+%escribe una letra en notación mathfrak, para denotar a un ideal o elemento primo.
+
+\newcommand{\primo}[1]{\mathfrak{#1}}
+\newcommand{\Primo}[1]{\mathfrak{\MakeUppercase{#1}}}
+
+%anillo de enteros O_K
+\renewcommand{\O}{\mathcal{O}}
+%anillo de enteros con subindice de cuerpo (input, por ejemplo $K$).
+\newcommand{\integralring}[1]{O_{#1}}
+
+%caracteristica de un cuerpo Char k
+\newcommand{\Char}[1]{\operatorname{Char} #1}
+
+%traza. Notación \trace = Tr
+\newcommand{\trace}{\operatorname{Tr}}
+
+%Traza de extensiones. Notación \Tr L K \alpha = \operatorname{Tr}_{L/K} (\alpha)
+\newcommand{\Tr}[1]{\operatorname{Tr}_{L/K} (#1)} %la extension es L/K por default
+\newcommand{\tr}[3]{\operatorname{Tr}_{#1/#2} (#3)}
+
+%Norma de extensiones. Notación \Norm L K \alpha = \operatorname{N}_{L/K} (\alpha)
+\newcommand{\Norm}[1]{\operatorname{N}_{L/K} (#1)}%la extension es L/K por default
+\newcommand{\norm}[3]{\operatorname{N}_{#1/#2} (#3)}
+
+
+%discriminante de una forma bilineal simetrica. notacion \disc{B} = \operatorname{disc} ( B)
+\newcommand{\disc}[1]{\operatorname{disc} (#1)}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+
+%%%%%%%%%%%%%COMANDO GRAFOS%%%%%%%%%%%%%
+
+%diámetro de un grafo
+\newcommand{\diam}[1]{\operatorname{diam} (#1)}
+
+%radio de un grafo
+\newcommand{\rad}[1]{\operatorname{rad}(#1)}
+
+%Kappa: 
+\newcommand{\Kappa}{\mathcal{K}}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%Creamos un ambiente para cada clase
+
+
+\newcounter{numeroClase}%ponemos un contador que empieza en 0 y que cuenta el número de clase
+
+%creamos una clase, i.e. ponemos un aseccion con el numero de clase y con un argumento obligatorio \Clase{argumento obligatorio} que es la fecha de la clase, por ejemplo 13/03/23.
+\newenvironment{Clase}[1]{
+	\stepcounter{numeroClase}
+    \section{Clase \thenumeroClase: #1}
+}{}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%Cada dibujo se puede automatizar:
+%1) necesitamos el archivo "Dibujo n.png" en la carpeta "Clase m", donde $n$ es el número del dibujo y $m$ es el número de la clase.
+
+\newcounter{numeroDibujo}[numeroClase]
+
+\renewcommand\thefigure{\thesection.\arabic{figure}}  
+
+%el comando Dibujo tiene dos inputs \Dibujo{input 1}{input 2}, el primer input es el número de dibujo y el segundo es el caption de la figura.
+\NewDocumentCommand{\Dibujo}{O{0.8} m}{
+\stepcounter{numeroDibujo}
+\begin{center}
+\includegraphics[width=#1\columnwidth]{"./Figuras/Clase \thenumeroClase /Dibujo \thenumeroDibujo .pdf"}
+\captionof{figure}{#2}
+\end{center}
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\title{Apuntes - GRAFOS}
+\author{Enzo Giannotta}
+
+
+
+
+
+
+\begin{document}
+
+\maketitle
+
+%--------------------------------- ACA VA LA TABLA DE CONTENIDOS
+
+\tableofcontents
+
+%---------------------------------
+
+\chapter{Parte I: Introducción a grafos}
+
+
+Bibliografia: \cite{diestelGraphTheory}.
+
+
+
+\section*{Evaluaciones:}
+
+\textbf{Nota:} sumativa significa examen.
+
+\begin{enumerate}
+\item Sumativa 1 : Lunes 24 abril. 30 porciento.
+\item Sumativa 2: Lunes 22 mayo: 25 porciento.
+\item Sumativa 3: Jueves 6 julio: 25 porciento.
+\item Talleres (usualmente los viernes): 20 porciento (hay que trabajar y entregar lo que se hizo en el taller, te pueden hacer resolver en clase al azar el ejercicio al siguiente taller).
+\end{enumerate}
+
+
+%%%%%%%%%%%
+\Clase{16/03/23}   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%
+
+\begin{Definition}
+Un \textbf{Grafo} es un par ordenado $G = (V,E)$, donde $V$ es un conjunto de \textbf{vértices} y $E$ es un conjunto de \textbf{Aristas}. Es decir, las aristas son pares $(v_1,v_2)$ con $v_1,v_2 \in V$. En un prinicipio si el grafo \textbf{no es dirigido}, no importa el orden de los vértices que aparece en un par $(v_1,v_2)$.
+\end{Definition}
+
+La manera de visualizar un grafo es dibujar cada vértice y unir dos pares de vértices $v_1,v_2 \in V$ por un segmento que representa la arista $(v_1,v_2)$.
+
+\begin{example}
+Sea $V = \{ 1,2,3,4,5\}$ y $E = \{ \{1,3\} , \{3,4\} , \{ 5,4\} , \{4,1 \} , \{ 1,2\}\}$
+
+
+\Dibujo{Dibujo del grafo $V$.}
+\end{example}
+
+
+\begin{definition}
+Para un grafo $G = (W,R)$, denotamos por $V(G)$ a $W$ (los vértices) y por $E(G) = R$ (las aristas).
+
+El número de vértices de $G$ se denota como $\abs G$ o $\abs{V(G)}$, y se llama \textbf{orden} de $G$. El número de aristas lo denotamos como $\Abs G$ o simplemente $\abs{E(G)}$. Un grafo con orden $1$ o $0$ se llama \textbf{trivial}.
+\end{definition}
+
+\begin{definition}
+Si $v \in V(G)$ y $e \in E(G)$, y además $v \in e$, decimos que $v$ es \textbf{incidente} en $e$ y viceversa, i.e. $e$ es incidente en $v$. Los dos vértices que inciden en una arista son sus \textbf{extremos}.
+
+Dos vértices $x,y$ son \textbf{adyacentes} o \textbf{vecinos} si $(x,y) \in E$ (Otra notación: $xy \in E$ donde $xy$ es la arista).
+\end{definition}
+
+\begin{obs}
+Si mi grafo tiene $n$ vértices, entonces tiene a lo sumo $\binom n 2$ aristas. Luego, la cantidad de grafos que se pueden construir es $2^{\binom n 2}$.
+\end{obs}
+
+\begin{definition}
+Si en un grafo todo par de vértices es adyacente, decimos que el grafo es \textbf{completo}.
+Notamos: $K_n$ para todo $n \geq 1$, al grafo completo con $n$ vértices.
+\end{definition}
+
+\Dibujo{Ejemplo de grafos completos de orden $1,2,3$ y $5$.}
+
+\begin{definition}
+Si un par de vértices no es adyacente, decimos que son \textbf{independientes} o \textbf{estables}.
+
+Si $V' \subset V(G)$ es tal que cada par de vértices en $V'$ es independiente, entonces decimos que $V'$ es \textbf{independiente}.
+\end{definition}
+
+\begin{definition}
+Sean $G1 = (V1,E1)$ y $G2 = (V2, E2)$ grafos, decimos que $\varphi : V1 \rightarrow V2$ es un \textbf{isomorfismo} si para todo par de vértices $x,y \in V1$ se tiene que $xy \in E1 \Leftrightarrow \varphi (x) \varphi (y) \in E2$. 
+
+Usualmente no hacemos distinciones entre dos grafos isomorfos. De hecho en ese caso escribimos $G1 = G2$.
+\end{definition}
+
+
+\Dibujo{Ejemplo de isomorfismo de grafos.}
+En este ejemplo un isomorfismo válido entre $G1$ y $G2$ es
+\begin{align*}
+\varphi : 1 &\mapsto A \\
+			2 &\mapsto B \\
+			3 &\mapsto C \\
+			4 &\mapsto D
+\end{align*}
+
+
+\begin{definition}
+Definimos:
+\begin{itemize}
+\item $G \cup G' := (V \cup V', E \cup E')$
+\item $G \cap G' := (V \cap V' , E \cap E')$
+\end{itemize}
+\end{definition}
+
+\Dibujo{Ejemplo de unión e intersección de grafos.}
+
+\begin{definition}
+Si $G \cap G' = \emptyset$, decimos que son \textbf{disjuntos}.
+
+Si $V' \subset V$ y $E' \subset E$, decimos que $G'$ es \textbf{subgrafo} de $G$, y que $G$ es \textbf{supergrafo} de $G'$. Notamos $G' \subset G$. Si $G'$ es subgrafo de $G$ pero $G \neq G$, decimos que $G'$ es \textbf{subgrafo propio} de $G'$ y análogamente decimois que $G$ \textbf{supergrafo propio} de $G'$; notamos $G' \subsetneq G$.
+\end{definition}
+
+\begin{definition}
+Sea $G' \subset G$, tal que $G'$ contiene todas las aristas $xy \in E$ tal que $x,y \in V'$. Decimos que $G'$ es un \textbf{subgrafo inducido} de $G$.
+
+En este caso diremos que $V'$ \textbf{induce} $G'$ en $G$, y escribimos $G' = G[V']$ para un subconjunto $V' \subset V$.
+\end{definition}
+
+\Dibujo{Ejemplo de grafo inducido y no inducido.}
+
+
+
+
+
+
+
+%%%%%%%%%%%
+\Clase{18/03/23}   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%
+
+\begin{definition}
+Si $U \subset V(G)$, escribimos $G \setminus U$ para denotar $G[V \setminus U]$. Es decir, $G \setminus U$ se obtiene de borrar los vértices de $U$ y sus aristas incidentes.
+\end{definition}
+
+\Dibujo{Ejemplo de $G \setminus U$.}
+
+\begin{definition}
+El \textbf{complemento} $\bar G$ de un grafo $G$, es el grafo con vértices $V(G)$ y que tiene una arista $xy$ si y solo si $xy \not \in E(G)$.
+\end{definition}
+
+\Dibujo{Ejemplo de complemento.}
+
+Notar que en el ejemplo de arriba, $G$ y $\bar G$ son isomorfos. Esto no pasa necesariamente, por ejemplo el complemento de un grafo completo es el grafo sin aristas.
+
+
+\subsection{El grado de un vértice}
+\begin{definition}
+Sea $G$ un grafo no vacío, y sea $v \in V(G)$. El conjunto de vecinos de $v$ lo denotamos como $N (v)$ o si el contexto no es claro $N_G (v)$. Llamamos a este conjunto el \textbf{vecindario} de $v$.
+
+Más en general, si $U \subset V(G)$, no vacío. El \textbf{vecindario} de $U$ es el subconjunto de vértices de $V(G) \setminus U$ que contiene vecinos de algún elemento de $U$. Notamos $N(U)$ o $N_G (U)$.
+\end{definition}
+
+\Dibujo[0.6]{Ejemplo de vecindario de $U = \{ 3,4\}$. Tenemos que $N(U) = \{0,2\}$.}
+
+\begin{Definition}
+El \textbf{grado} de un vértice $v \in V(G)$ es el número de aristas que inciden en $v$ y lo denotamos como $d (v)$ o $d_G (v)$. Notar que 
+$$
+d(v) = \abs{N(v)},
+$$
+porque no permitimos multigrafos.
+
+Si $v$ tiene grado $0$, decimos que es \textbf{aislado}.
+\end{Definition}
+
+\begin{Definition}
+Definimos la cantidad de $G$:
+$$
+\delta ( G) := \min_{v \in V(G)} \{ d(v) \}.
+$$
+Es el \textbf{grado mínimo} de $G$.
+
+Análogamente, tenemos la cantidad $G$:
+$$
+\Delta (G) := \max_{v \in V(G)} \{ d(v) \}.
+$$
+Es el \textbf{grado máximo} de $G$.
+
+En el caso que todos los vértices tienen el mismo grado, i.e. $\delta (G) = \Delta (G)$, decimos que $G$ tiene grado $k$ y que $G$ es \textbf{$k$-regular} o simplemente \textbf{regular}.
+\end{Definition}
+
+\begin{definition}
+Definimos la cantidad del grafo $G$:
+$$
+d(G) := \frac{1}{\abs {V(G)}} \sum_{v \in V(G)} d(v) = \frac{1}{\abs {G}} \sum_{v \in V(G)} d(v) .
+$$
+Es el \textbf{grado promedio} de $G$.
+\end{definition}
+
+\begin{Obs}
+$$
+\sum_{v \in V(G)} d(v) = 2 \abs{E(G)} = 2 \Abs G.
+$$
+Con lo cual,
+$$
+\boxed{d(G) = 2 \frac{E(G)}{V(G)}= 2 \frac{\Abs G}{\abs G}.}
+$$
+\end{Obs}
+
+\begin{Proposition}
+El número de vértices de grado impar en un grafo siempre par.
+\end{Proposition}
+\begin{proof}
+Por la observación anterior, $\sum_{v \in V(G)} = 2 \abs{G} \equiv 0 \mod 2$ con lo cual, 
+$$
+\# \set{ v \in V(G) | d(v) \equiv 1 \mod 2 } = \sum_{v | d(v) \equiv 1 \mod 2} d(v) \equiv 0 \mod 2 .
+$$
+\end{proof}
+
+\subsection{Caminos y Ciclos}
+
+\begin{Definition}
+Un \textbf{camino} es un grafo no vacío $P = (V,E)$ de la forma
+$$
+V = \{ x_0,x_1,\ldots,x_k\}.
+$$
+Con
+$$
+E = \{ x_0x_1, x_1x_2,\ldots,x_{k-1} x_k\}.
+$$
+Donde todos los $x_i$ son distintos.
+
+Decimos que $\Abs G$, i.e. el número de aristas, es su \textbf{longitud}.
+
+Usualmente denotamos al camino $P$ como la secuencia de vértices
+$$
+P = x_0 x_1 \ldots x_k.
+$$
+En este caso diremos que $P$ es un \textbf{camino entre} $x_0$ y $x_k$.
+\end{Definition}
+
+Notar que $\abs G = k+1$, y que $\Abs G = k$.
+
+\Dibujo[0.9]{Dibujo de un camino de $k+1$ vértices.}
+
+
+
+\begin{definition}
+Sea $C$ un grafo que se construye a partir de un camino $P = x_0x_1\cdots x_k$ con $k \geq 1$, en donde agregamos la arista $x_kx_0$. Este grafo se llama \textbf{ciclo}. Notamos a esta construcción $C:= P + x_k x_0$ o $x_0 x_1 \ldots x_k x_0$.
+
+La \textbf{longitud} de un ciclo es su número de aristas, es decir $\Abs C$.
+\end{definition}
+Notar que $\abs C = k$.
+
+
+\begin{definition}
+Sea $G$ un grafo. Definimos la \textbf{cintura} de $G$ como la mínima longitud de un ciclo en $G$.
+\end{definition}
+
+\Dibujo[0.6]{Ejemplo de ciclos en un grafo de cinutra igual a $4$.}
+
+
+\begin{definition}
+Una arista que une a dos vértices de un ciclo $C$, pero que no pertenece a $E(C)$, se la llama \textbf{cuerda}.
+\end{definition}
+
+\Dibujo{Ejemplo de dos cuerdas de un ciclo $C$.}
+
+\begin{Proposition}
+Todo grafo $G$ contiene un camino de largo $\geq \delta (G)$. Más aún, si $\delta (G) \geq 2$, entonces también contiene un ciclo de largo $\geq \delta (G) + 1$.
+\end{Proposition}
+\begin{proof}
+Sea $P = x_0x_1\ldots x_k$ un camino de largo $k$ máximo en $G$. El caso $k = 1$ es inmediato, luego supongamos que $k \geq 1$.
+
+\Dibujo[0.9]{Camino $P$ de longitud maximal $k$. Imaginemos que $x_0 = 0$ y que $x_k = 8$ (no pude cambiar las etiquetas en sage math cuando grafique el grafo).}
+
+Notar que por maximalidad de $P$, todos los vecinos de $x_k$ están en $V(P)$, de lo contrario habria un camino más largo. Con lo cual 
+$$
+\abs{V(P)} = k \geq d(x_k) + 1 \geq \delta (G) + 1 .
+$$
+Con lo cual, $\Abs P \geq \delta (G)$.
+
+Ahora, sea $i <k$ el menor índice tal que $x_i x_k \in E(G)$. Como $\delta (G) \geq 2$, se sigue que $i < k-1$, i.e. $x_i$ y $x_k$ no son adyacentes, luego tomamos el ciclo $C = x_i x_{i+1} \ldots x_k x_i$. Notar que entonces la longitud de $\Abs C \geq \delta (x_k) + 1 \geq \delta (G) + 1$.
+\end{proof}
+
+
+
+%%%%%%%%%%%
+\Clase{20/03/23}   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%
+
+
+\begin{Definition}
+La \textbf{distancia} entre dos vértices $x,y$ de un grafo $G$, es la longitud de un camino con longitud mínima entre $x,y$, la notamos
+$$
+d(x,y).
+$$
+Si no hay un camino entre $x$ e $y$, escribimos
+$$
+d(x,y) = \infty.
+$$
+
+El \textbf{diámetro} de $G$ es el máximo de las distancias entre todos los pares de vértices, lo notamos
+$$
+\diam G .
+$$
+\end{Definition}
+
+Notar que $d(x,y) = 0$ si y solo si $ x = y$.
+
+\begin{definition}
+El \textbf{radio} de un grafo $G$, denotado $\rad G$, es la cantidad
+$$
+\rad G = \min_{x \in V(G)} \max_{y \in V(G)} d (x,y).
+$$
+
+Decimos que un vértice $v \in V(G)$ es \textbf{central}, si
+$$
+\max_{y \in v(G)} d(v,y) = \rad G. 
+$$
+Es decir, $v$ minimiza la función $x \mapsto \max_{y \in V(G)} d(x,y)$.
+
+\Dibujo{Ejemplo de vértice central es $3$ y tiene radio $4$. El grafo $G$ tiene diámetro $8$.}
+\end{definition}
+
+\begin{Exercise}[\textbf{Entrega de taller}]
+Probar que
+$$
+\rad G \leq \diam G \leq 2 \rad G .
+$$
+\end{Exercise}
+\begin{solution}
+Si el grafo $G$ no es conexo, luego el radio y el diámetro son infinito, luego vale la desigualdad. En efecto, por un lado si $x \in V(G)$ está fijo, como $G$ no es conexo existe $y \in V(G)$ tal que $d (x,y) = \infty$, con lo cual $\max_{y \in V(G)} d(x,y) = \infty$ para $x$ fijo, luego si tomamos mínimo sobre los $x$ se tiene que $\rad G = \infty$. Por otro lado, $\diam G = \infty$ porque es el máximo sobre todas las distancias entre dos vértices, y como mencionamos recién, al no ser conexo el grafo tiene que haber una distancia infinita entre algún par de vértices.
+
+Ahora supongamos que $G$ es conexo, es decir para todo par de vértices $x,y$ existe un camino $P_{xy}$ que los conecta, sin pérdida de generalidad supongamos que es el más corto, i.e. $d(x,y)$ es la longitud de $P_{xy}$. Se deduce que $d(x,y) \leq \diam G$ por definición de diámetro. Tomando máximo sobre $y$ y luego mínimo sobre $x$ se sigue por definición que
+$$
+\rad G \leq \diam G.
+$$
+Esto prueba la primera desigualdad. Ahora veamos la segunda.
+
+Sea $o$ un vértice que minimice la función $x \mapsto \max_{y \in V(G)} d(x,y)$, es decir, $o$ es central. Ahora tomemos dos vértices arbitrarios $x,y$. Como $o$  minimiza la función anterior, tenemos que $d(x,o) \leq \rad G = \max_{z \in V(G)} d(o,z)$, es decir existe un camino de longitud $\leq \rad G$ que une $x$ con $o$. Análogamente, existe un camino de longitud $\leq \rad G$ que une $o$ con $y$. Concatenando ambos caminos obtenemos un camino entre $x$ e $y$ de longitud $\leq 2 \rad G$. Tomando máximo sobre $x,y$ obtenemos la otra desigualdad:
+$$
+\diam G \leq 2 \rad G.
+$$
+\end{solution}
+
+Si queremos relacionar el radio o diámetro con el grafo mínimo, promedio o máximo debemos tener otros parámetros como intermediario. Por ejemplo, los caminos tienen grado mínimo $1$ pero pueden tener radio y diámetro arbitrariamente grandes. O podemos tener radio y diámetro arbitrariamente grande y grado mínimo arbitrario. Antes de dar un ejemplo, necesitamos la siguiente definición:
+
+\begin{definition}
+Sea $G$ un grafo, definimos $G^k$ como la \textbf{potencia} de $G$. Es el grafo que contiene los mismos vértices y las aristas son las originales pero agregando a cada vértice $x$ una arista incidente con cada vértice $y$ a distancia $ d(x,y) \geq k$.
+\end{definition}
+
+\Dibujo[0.6]{El camino $P : 0,1,2,\ldots,7$ dibujado en \black{negro}, le agregamos aristas para dibujar $P^3$. Las aristas rojas conectan nodos a distancia $2$ y las \blue{azules} $3$.}
+
+Por ejemplo, todo camino de longitud $2n$ tiene $2n+1$ vértices, radio $n$, diámetro $2n$. Luego $P^k$ tiene misma cantidad de vértices (pero no aristas), mismo radio y diámetro, pero grado $k$ para todo $1 \leq k \leq 2n$.
+
+Vamos a relacionar el radio y grado máximo a través de el número de vértices. Un grafo puede tener muchos vértices, por ejemplo si tiene radio alto, o si tiene grado máximo alto, 
+
+\begin{proposition}
+Sea $d \geq 3$. Un grafo $G$ con radio a lo más $k$ y grado máximo a lo más $d$. Entonces tiene menos que $\frac{d}{d-2} (d-1)^k$ vértices.
+\end{proposition}
+\begin{proof}
+Sea $z$ un vértice central de $G$ y $D_i$ el conjunto de los vértices a distancia $i$ de $z$.
+
+\Dibujo{$D_0$ son los \green{verdes}, $D_1$ los \yellow{amarillos}, y así...}
+
+Tenemos que $\abs{D_0} =1, \abs{D_1} \leq \Delta \leq d$. Notar que cada vértice de $D_1$ tiene como vecino en $D_2$ a lo sumo $d - 1$ vértices, pues ya es vecino de $z$. En general, tenemos que
+$$
+\abs{D_{i+1}} \leq \abs{D_i} (d-1) , \quad i \geq 1 .
+$$
+Con lo cual 
+$$
+\abs{D_{i+1}} \leq \abs{D_1} (d-1)^i = d (d-1)^i , \quad i \geq 1 .
+$$
+Entonces
+\begin{align*}
+\abs{V(G)} = \sum_{i=0}^k \abs{D_i} &\leq 1 + d \sum_{i=0}^{k-1} (d - 1)^i \\
+&= 1 + d (d-1)^k - 1 / d-2 \\
+&< \frac{d}{d-2} (d-1)^k .
+\end{align*}
+\end{proof}
+
+\begin{obs}
+\begin{enumerate}[1.]
+\item Cuando el radio es $k=1$, por ejemplo en un grafo estrella, la cantidad de vértices es asintóticamente igual a $\frac{d}{d-2} (d-1)^k$ cuando $d \rightarrow \infty$.
+
+\Dibujo[0.6]{Ilustración del grafo estrella.}
+
+
+\item La cota no es para nada óptima para grafos de potencia $P^k$ de caminos. Por ejemplo, si $P$ tiene $2n+1$ vértices, $k = n$ y $d = k \geq 3$. Luego en el mejor de los casos con $d = 3$, tenemos que
+$$
+\abs{P^k} = 2n+1 \ll 3 \cdot 2^n .
+$$
+O sea que la diferencia es exponencial.
+
+\end{enumerate}
+\end{obs}
+
+\subsection{Conexidad}
+
+\begin{Definition}
+Un grafo es \textbf{conexo} si es no vacío y para todo par de vértices, existe un camino que los une a ambos.
+\end{Definition}
+
+\begin{Proposition}\label{prop: todo grafo conexo se puede enumerar de manera que G_i[v1,...,vi] es conexo para todo i}
+Los vértices de un grafo conexo $G$ se pueden enumerar, digamos $v_1,v_2,\ldots,v_n$ tal que $G_i = G[v_1,v_2,\ldots,v_i]$ es conexo para todo $i = 1,\ldots ,n$.
+\end{Proposition}
+
+\begin{proof}
+Probaremos la proposición por inducción en $n$. Sea $v$ arbitrario, y asumamos por inducción que $v_1,\ldots,v_i$ han sido escogidos para $i < \abs{V(G)}$ y que $G_i$ es conexo 
+
+Escojo un vértice $v$ no enumerado aún. Como $G$ es conexo existe un camino $P$ entre $v_1$ y $v$.
+
+\Dibujo[0.7]{Camino $P$ que une a $v$ y $v_1$. En color \blue{azul} representa los vértice de $G_i$ en $P$.}
+
+Tomamos como $v_{i+1}$ al último vértice en $P$, contado desde $v$, que no está en $G_i$. Como $v_{i+1}$ tiene vecino en $G_i$ y $G_i$ es conexo se tiene que $G_{i+1}$ es conexo.
+
+\end{proof}
+
+\begin{example}
+El siguiente dibujo es un mal ejemplo:
+
+\Dibujo{Mal ejemplo, pues \gray{$0$ y $2$} no inducen un grafo conexo $G[0,2]$.}
+\end{example}
+
+
+
+
+
+
+
+
+%%%%%%%%%%%
+\Clase{23/03/23}   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%
+
+\begin{definition}[Maximalidad]
+Consideremos una propiedad $P$, para para algún grafo, conjunto de vértices, etc. Decimos que un conjunto de vértices $U$ es maximal para $P$, si $U$ cumple $P$, y $U \cup \{v\}$ con $v \not \in U$ no cumple $P$.
+\end{definition}
+
+\Dibujo{Ejemplo de camino maximal: $0,1,2,3,5,6,7,8$. Sin embargo, $5,7,8$ no lo es.}
+
+
+\begin{definition}
+Sea $G = (V,E)$ un grafo. Un subgrafo conexo maximal de $G$ es llamado una \textbf{componente} o \textbf{componente conexa} de $G$.
+\end{definition}
+
+\Dibujo{Ejemplo de componentes: tiene $3$.}
+
+
+
+\subsection{Árboles y bosques}
+
+\begin{Definition}
+Un grafo acíclico, es decir, sin ciclos, es llamado un \textbf{bosque}.
+
+A un bosque conexo lo llamamos \textbf{árbol}, es decir un grafo conexo y acíclico.
+\end{Definition}
+Notar que las componentes conexas de un bosque son árboles.
+
+\begin{obs}
+Los subgrafos conexos de un árbol son árboles.
+\end{obs}
+
+\begin{definition}
+Los vértices de grado $1$ en un árbol se llaman \textbf{hojas}.
+\end{definition}
+
+\begin{exercise}
+Todo árbol tiene al menos $1$ hoja. Más aún, si el árbol tiene más de un vértice entonces tiene al menos $2$ hojas. En particular los árboles tienen grado mínimo $\delta = 1$.
+\end{exercise}
+\begin{solution}
+Sea $P$ un camino maximal en el árbol, y miro uno de los extremos (podría haber solo uno si el camino tiene un solo vértice). Ese extremo si tuviera grado $\geq 2$, el otro vecino debería caer en el camino por maximalidad, luego existe un ciclo, absurdo!. Más aún, si el árbol tiene más de un vértice entonces el camino maximal que tomamos tiene dos vértices, i.e. dos hojas.
+\end{solution}
+
+Esto implica lo mismo para caminos, pues los caminos son árboles.
+
+\begin{Theorem}
+Sea $T$ un grafo. Las siguientes definiciones son equivalentes:
+\begin{enumerate}[(i)]
+\item $T$ es árbol.
+\item Cada par de vértices en $T$ están unidos por un único camino.
+\item $T$ es conexo, pero $T \setminus e$ es disconexo para todo $e \in E(T)$.
+\item $T$ es conexo, pero $T \setminus v$ es disconexo para todo $v \in V(T)$ que no sea hoja.
+\item $T$ es acíclico, pero $T \cup xy$ tiene un ciclo para cualquier par de vértices $x,y$ no adyacentes.
+\end{enumerate}
+\end{Theorem}
+\begin{proof}
+\begin{enumerate}
+\item[]
+
+\item[(i) $\Rightarrow$ (ii)] Si no, existe al menos un camino por ser conexo, luego si hay dos caminos distintos entonces podemos construir un ciclo.
+
+\item[(ii) $\Rightarrow$ (iii)] Sea $e$ una arista entre $xy$, entonces $xy$ es un camino entre esos vértices, por hipótesis es el único, luego al quitarlo debe quedar disconexo, de lo contrario es que había otro camino.
+
+\item[(iii) $\Rightarrow$ (iv)] Como $v$ no es una hoja, es vecino de al menos dos vértices distintos, dicamos $a,b$. Si todo camino entre $a$ y $b$ pasa por $v$, entonces quitar este vértice haría que $T$ fuera disconexo. Supongamos que existe un camino que une $a,b$ pero que no contiene a $v$. Luego si quitamos la arista $av$ o $vb$ el grafo sigue siendo conexo, pues tenemos un ciclo $a v b$, absurdo.
+
+\item[(iv) $\Rightarrow$ (v)] $T$ es acíclico, pues de lo contrario podríamos podríamos quitar un vértice y que siga quedando conexo. En efeco, sea $C$ un ciclo en $T$, digamos con vértices $x_0,x_1,\ldots,x_n,x_0$ y $n \geq 2$. Si quitamos cualquier vértice $v$ de $C$, este queda conexo, pero veamos que $T$ también. De lo contrario, es que $v$ separa a $T$ en dos componentes conexas, es decir, todos los caminos entre $C$ y $T \setminus C$ pasan por $v$, con lo cual tomando otro vértice de $C$ que no sea $v$ y quitándolo, nos quedaría que $T$ menos ese punto ex conexo, absurdo.
+
+Sean $x,y$ no adyacentes. Consideremos $P$ un camino entre $x,y$. Como no son adyacentes este camino necesariamente tiene al menos un vértice en intermedio, digamos $z$. Por hipótesis, si quitamos $z$ el grafo nos queda disconexo, y esto lo podemos hacer para cualquier $z \neq x,y$ en $P$. Con lo cual, $P \cup xy$ es un ciclo en $T \cup xy$.
+
+\item[(v) $\Rightarrow$ (i)] Por hipótesis, $T$ es acíclico. Sean $x,y \in V(G)$. Por hipótesis tenemos que $T \cup xy$ tiene un cíclo $C_{xy}$, luego $C_{xy}$ debe contener la arista $xy$ pues $T$ es acíclico. Entonces $C_{xy} \setminus xy$ conecta a $xy$. Como $x,y$ eran arbitrarios, tenemos que $T$ es conexo.
+\end{enumerate}
+\end{proof}
+
+\begin{definition}
+Sea $G$ un grafo. Un \textbf{árbol generador} de $G$ es un subgrafo de $G$ que es árbol y que contiene a todos los vértices de $G$.
+\end{definition}
+
+\Dibujo[0.35]{Ejemplo: árbol generador, con aristas en \red{rojo}.}
+
+\begin{obs}
+Del dibujo anterior podemos ver que el árbol generador no necesariamente es único, y de hecho, puede haber otro que no sea isomorfo. Por ejemplo cambiemos los vértices del árbol en \red{rojo}, de manera que ya no tenga vértices de grado $3$:
+\Dibujo[0.20]{Otro árbol generador.}
+\end{obs}
+
+\begin{proposition}
+Todo grafo conexo tiene un árbol generador.
+\end{proposition}
+\begin{proof}
+Tomemos un subgrafo minimalmente conexo $H$, que contenga a todo $V(G)$. Por (iii) del teorema anterior tenemos que $H$ es un árbol.
+\end{proof}
+
+\begin{obs}
+Esta demostración nos da un álgoritmo para construir el árbol generador de un grafo: quitamos aristas hasta que nos quede minimalmente conexo.
+\end{obs}
+
+\begin{Proposition}
+Los vértices de un árbol $T$ pueden ser enumerados, digamos $v_1,v_2,\ldots,v_n$ de manera que para todo $i \geq 1$, $v_i$ es hoja en $T[v_1,\ldots,v_i]$ (que es árbol también).
+\end{Proposition}
+\begin{proof}
+Por la Proposición \ref{prop: todo grafo conexo se puede enumerar de manera que G_i[v1,...,vi] es conexo para todo i} existe una enumeración $v_1,\ldots,v_n$ tal que $T[v_1,\ldots,v_i]$ es conexo para todo $i \geq 1$. Inspeccionando la demostración, se puede ver que esta construcción sirve. En efecto, sabemos que $v_{i+1}$ tiene un vecino en $G[v_1,\ldots,v_i]$, llamemosló $x$, si tuviera otro llamado $y$, entonces $G[v_1,\ldots,v_i]$ contiene un camino $P_{xy}$ entre ellos, que junto con $x v_{i+1} y$ nos forma un cíclo, absurdo.
+
+\Dibujo{Ver dibujo.}
+\end{proof}
+
+
+
+
+
+
+
+
+%%%%%%%%%%%
+\Clase{27/03/23}   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%
+
+
+\begin{corollary}
+Un grafo de $n$ vértices conexo es un árbol si y solo si tiene $n-1$ aristas.
+\end{corollary}
+\begin{proof}
+\begin{enumerate}
+\item[$\Rightarrow$)] Supongamos que $T$ es árbol; en particular es conexo. Por la proposición anterior, existe una enumeración $v_1,v_2,\ldots,v_n$ tal que para todo $i \geq 1$, el grafo $T[v_1,\ldots, v_i]$ tiene $i-1$ aristas por inducción.
+
+\item[$\Leftarrow$)] Como $T$ es conexo tiene árbol generador $T'$, y por la implicación anterior tiene $n-1$ aristas, entonces $T = T'$, i.e. $T$ es árbol.
+\end{enumerate}
+\end{proof}
+
+\begin{corollary}
+Todo grafo conexo de $n$ vértices tiene al menos $n-1$ aristas.
+\end{corollary}
+\begin{proof}
+Tiene un árbol generador, que debe tener $n-1$ aristas.
+\end{proof}
+
+\subsection{Grafos bipartitos}
+
+\begin{Definition}
+Sea $r \geq 2$ entero. Decimos que un grafo $G = (V,E)$ es \textbf{$r$-partito} si podemos particionar a $V$ en $r$ partes tal que cada arista tiene sus extremos en partes distintas. Es decir, cada parte es un conjunto independiente.
+
+$2$-partito es \textbf{bipartito}, $3$-partito es \textbf{tripartito}, etc.
+\end{Definition}
+
+\Dibujo[0.20]{Ejemplo de grafo $3$-partito, $4$-partito y $5$-partito, pero no $2$-partito porque siempre existirian dos vértices del triangulo \yellow{amarillo} en la misma partición, pero eso es imposible porque son adyacentes. Se ilustran dos triparticiones distintas: $A,B,C$ y por otro lado \red{rojo}, \blue{azul}, \green{verde}.}
+
+\Dibujo[0.6]{Ejemplo de grafo $2$-partito.}
+
+\begin{definition}
+Un grafo $r$-partito $G$, donde cada par de vértices de partes distintas son adyacentes, decimos que $G$ es \textbf{$r$-partito completo}.
+
+Un grafo $r$-partito completo con partes de tamaño $n_1,n_2,\ldots, n_r$ se denota $K_{n_1,n_2,\ldots, n_r}$.
+
+\Dibujo[0.6]{Ejemplo de grafo $3$-partito completo.}
+\end{definition}
+
+\begin{obs}
+Un grafo $K_{1,n}$ es una \textit{estrella}.
+
+\Dibujo[0.60]{$K_{1,5}$}
+\end{obs}
+
+\begin{obs}
+Si $G$ es bipartito, entonces no tiene ciclos impares.
+\end{obs}
+\begin{proof}
+Sea $C=C_{2k+1}$ con $k \geq 1$ un subciclo de longitud $2k+1$ de $G$. Si $G$ fuera bipartito, entonces $C$ también. En efecto, numerando $C : x_0, x_1, \ldots, x_{2k} , x_0$, ser bipartito equivale a que existe una función $\rho : x_i \mapsto 0, 1 \in \{ 0 , 1 \}$ tal que $\rho (x) \neq \rho (y)$ para todo par de vértices adyacentes $x,y \in C$. Sin pérdida de generalidad $\rho (x_0 ) = 0$. Pero como $x_i$ y $x_{i+1}$ son siempre adyacentes, debe ser que $\rho (x_0 ) =  0 , \rho (x_1) = 1 , \ldots , \rho (x_i) = i \mod 2$ (lo podemos probar recursivamente). Con lo cual, $\rho ( x_{2k}) = 0 = \rho ( x_0)$, lo cual es absurdo porque $x_{2k}$ y $x_0$ son adyacentes.
+\end{proof}
+
+
+\Dibujo{Como se ilustra en el dibujo, no podemos $2$-particionar a $C_7,C_5$ ni $C_3$. Pues siempre que pintamos con dos colores quedan dos vértices adyacentes.}
+
+\begin{Theorem}
+Un grafo es bipartito si y solo si no tiene ciclos impares.
+\end{Theorem}
+\begin{proof}
+La observación anterior prueba la necesidad. Veamos la suficiencia. Sea $G$ un grafo sin ciclos impares. Podemos asumir sin pérdida de generalidad que es conexo. Sea $T$ un árbol generador, $r$ un vértice de $G$ que llamaremos raíz (de $T$). Para $v \in V(G)$ denotamos por $rTv$ al único camino entre $r$ y $v$ en $T$ (por la caracterización de árboles). Por último, si $w,v \in V(G)$, entonces decimos que $w \leq v$, si $w \in rTv$.
+
+Definimos la partición de $G$: los vértices $v$ tales que $rTv$ tiene largo par, y por otro lado los vértices $v$ tales que $rTv$ tiene largo impar. Veamos que en efecto esto es una partición, i.e., no hay vértices adyacentes en la misma partición. Sea $e = xy$ una arista de $G$.
+\begin{enumerate}
+\item[]
+
+\item[\textsc{Caso 1:}] Si $e \in E(T)$, tendremos $x < y$ o $y < x$, pero nunca igualdad. Más aún, $\Abs{rTx} = \Abs{rTy} \pm 1$, i.e. tienen paridades distintas.
+
+\item[\textsc{Caso 2:}]  Si $e \not \in E(T)$, entonces $rTx, rTy$ y $e$ forman un ciclo (por la caracterización de árbol). Por la hipótesis, el ciclo es par. Esto implica que $\Abs{rTx}$ y $\Abs{rTy}$ tienen distinta paridad:
+
+\Dibujo[0.7]{Ilustración de este hecho.}
+\end{enumerate}
+\end{proof}
+
+\begin{corollary}
+Los árboles y los bosques son bipartitos.
+\end{corollary}
+
+
+\subsection{Paseos Eulerianos}
+
+Viajamos a Prusia, siglo XVIII, a la ciudad de Königsberg.
+
+\Dibujo{Los siete puentes de Königsberg.}
+
+La gente de la ciudad se preguntaba si se podía partir de un punto $x \in A$ o $B$ de la ciudad, cruzar cada puente exactamente una sola vez y volver a $x$. Euler se propuso a responder la pregunta.
+
+Podemos modelar el problema como un \textit{multi}grafo (i.e. dos vértices pueden estar unidos por más de una arista):
+
+\Dibujo[0.7]{Multigrafo de los puentes de Königsberg.}
+
+
+\begin{Definition}
+Un \textbf{paseo} en un multigrafo, es una secuencia de vértices $x_0,x_1,\ldots, $ tal que $x_i x_{i+1}$ es arista para todo $i \geq 0$, y ninguna de estas aristas se repite.
+
+Un \textbf{paseo cerrado} comienza y termina en el mismo vértice.
+
+Un paseo es \textbf{Euleriano} si es cerrado y recorre todas las aristas del multigrafo.
+
+Un \textbf{grafo Euleriano}, es un multigrafo que contiene un paseo Euleriano.
+\end{Definition}
+
+\begin{Theorem}
+Un multigrafo conexo es Euleriano si y solo si todos sus vértices tienen grado par.
+\end{Theorem}
+
+Veremos la demostración la clase siguiente.
+
+
+
+
+
+
+
+
+
+
+
+
+%%%%%%%%%%%
+\Clase{30/03/23}   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%
+
+
+
+\begin{Theorem}
+Un multigrafo conexo es Euleriano si y solo si todos sus vértices tienen grado par.
+\end{Theorem}
+\begin{proof}
+\begin{enumerate}
+\item[]
+
+
+\item[$\Rightarrow$)] Asumimos que $G$ tiene un paseo Euleriano $P$. Cada vez que el paseo ''entra'' en una vértice, lo hace por medio de una arista, y debe salir por otra. Cada vez que $v$ a parece en $P$ se utilizan otras dos aristas incidentes en $v$. Como se ocupan todas esas aristas, $d(v)$ es par.
+
+\item[$\Leftarrow$)]  Supongamos que todos los grados son pares. Haremos inducción en $\Abs G$. El caso base es $\Abs G = 2$ que claramente tiene un paseo Euleriano:
+
+\Dibujo[0.1]{$\Abs G = 2$.}
+
+Supongamos que $\Abs G >2$. Cuando todos los grados son pares, puedo encontrar un paseo cerrado no trivial. Tomemos como $P$ el de largo máximo, y sea $F$ su conjunto de aristas. Si $F$ es todo, la demostración está terminada. Luego supongamos que no. Sea $G \setminus F = G'$, tiene una arista $e$ que incide en un vértice de $P$, pues $G$ es conexo. Sea $C$ la componente de $G'$ que contiene a $e$. Aplicando la hipótesis inductiva, podemos encontrar un paseo Euleriano en $C$, llamémoslo $P'$. Como $P$ y $P'$ unidos son un paseo cerrado más grande que $P$, llegamos a un absurdo.
+
+\Dibujo{Esta es una ilustración de lo que podría suceder: $P : 0,1,2,3,5,6,7,8,4,0$ es el camino \black{negro} y \darkgreen{$C$ es el grafo conexo}.}
+
+\end{enumerate}
+
+\end{proof}
+
+\subsection{Conexidad}
+
+\begin{Definition}
+Decimos que un conjunto $X$ de vértices o aristas \textbf{separa} a $u,v \in V$ si $u,v \not \in X$ y todo camino entre $u$ y $v$ tiene un elemento de $X$.
+
+Si $X$ separa un par de vértices, decimos que es \textbf{separador} (de $u,v$). Si un vértice solo, i.e. $X$ es un singleton, es separador, decimos que es un \textbf{vértice de corte}. Un pequeño abuso de notación será simplemente referirnos a ese vértice en lugar del conjunto que lo contiene.
+
+Análogamente, una arista sola $X = \{e\}$ que separa sus vértices se dice \textbf{puente}. Un pequeño abuso de notación será simplemente referirnos a ese vértice en lugar del conjunto que lo contiene.
+\end{Definition}
+
+\Dibujo{Ejemplo: \yellow{$X = \{4,5,7,8,9 \}$} separa a \red{$u = 3,v = 6$}. También \purple{$Y = \{ e_1, e_2 \}$} e  \brown{$Y ' = \{ e_3, e_4\}$} son separadores de \red{$u,v$}. La arista \blue{$e = (6,10)$} es un puente.}
+
+\begin{definition}
+Para $k \geq 0$ decimos que $G = (V,E)$ es \textbf{$k$-conexo} si $\abs V > k$ y $G \setminus X$ es conexo para todo $X \subset V$ con $\abs X < k$. Es decir, ningún conjunto de menos de $k$-vértices separa.
+\end{definition}
+
+\begin{example}
+\begin{itemize}
+\item \textit{$0$-conexo:} Todo grafo no vacío.
+
+\item \textit{$1$-conexo:} grafos conexos no triviales (tiene que tener al menos una arista).
+
+\end{itemize}
+\end{example}
+
+
+\begin{definition}
+La \textbf{conexidad}, $\Kappa (G)$ de $G$, es el máximo $k \geq 0$ tal que $G$ es $k$-conexo.
+\end{definition}
+
+\begin{example}\label{ex:clase6 - exemplo Kappa(K_n) = n-1}
+\begin{itemize}
+\item \textit{$\Kappa (G) = 0$:} Todo grafo disconexo no vacío o $K_1$.
+
+\item \textit{$\Kappa (K_n) = n-1 , \forall n \geq 1$.}
+
+\end{itemize}
+\end{example}
+
+\begin{definition}
+Sea $G$ no vacío y sea $\ell \geq 1$. Decimos que $G$ es \textbf{$\ell$-arista conexo}, si $G \setminus F$ es conexo para todo $F \subset E$ con $\Abs F < \ell$.
+\end{definition}
+
+\begin{example}
+\textit{$1$-arista conexo:} los grafos conexos no vacíos.
+\end{example}
+
+\begin{definition}
+La \textbf{arista conexidad}, $\lambda (G)$ de $G$, es el máximo $\ell$ tal que $G$ es $\ell$-arista conexo.
+\end{definition}
+
+\Dibujo[0.8]{Ejemplo de grafo que tiene $\Kappa = 4, \lambda = 4$.}
+
+\begin{example}\label{ex:clase6 - exemplo lambda (K_n) = Kappa(K_n) = n-1}
+\textit{$\lambda (K_n) = n-1 , \forall n \geq 1$.}. Con lo cual, por el Ejemplo \ref{ex:clase6 - exemplo Kappa(K_n) = n-1} tenemos que 
+$$
+\lambda (K_n) = \Kappa (K_n) .
+$$
+\end{example}
+
+\begin{exercise}
+Calcular $\Kappa$ y $\lambda$ del siguiente grafo $G$:
+\Dibujo[0.5]{Grafo $G$.}
+\end{exercise}
+\begin{solution}
+Si quitamos los  \blue{vértices $4,5$} entonces nos queda $G$ disconexo, luego $\Kappa (G) <3$. Si quito cualquier vértice, entonces el grafo sigue siendo conexo, luego es $2$-conexo, i.e. $\Kappa (G) \geq 2$. Luego $\Kappa (G) = 2$.
+
+En el anterior ejemplo teníamos $\lambda = 4$ en cada \blue{triángulo azul}, y como sacar $3$ aristas incidentes a \blue{$4,5$} no evita que $G$ siga siendo conexo, tenemos que $G$ es $4$-arista conexo, i.e. $\lambda (G) \geq 4$. Por otro lado, si quitamos las $4$ aristas incidentes en el \red{vértice $1$}, queda el aislado del resto del grafo, i.e. $\lambda (G) < 5$. Luego $\lambda (G) = 4$.
+\end{solution}
+
+
+%%%%%%%%%%%
+\Clase{03/04/23}   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%
+
+\begin{Proposition}
+Si $G$ es no trivial, entonces $\Kappa (G) \leq \lambda (G) \leq \delta (G)$
+\end{Proposition}
+\begin{proof}
+La segunda desigualdad se tiene porque todas las aristas incidentes en un vértice fijo separan a $G$.
+
+Veamos ahora la primera desigualdad. Sea $F$ un conjunto de aristas que separa a $G$, con $\abs F = \lambda (G)$, tal que $G \setminus F$ es disconexo. \textit{Observación:} $F$ es un conjunto de aristas minimal con la propiedad de ser separador.
+\begin{enumerate}
+\item[\textsc{Caso 1:}] Existe $v \in V(G)$ que no incide en $F$. Sea $C$ la componente conexa que contiene a $v$ en $G \setminus F$. No puede haber una arista $f$ de $F$ con extremos en $C$, pues de lo contrario $F \setminus \{f\}$ sería un conjunto más chico tal que es separador, lo cual contradice la minimalidad de $F$. 
+
+\Dibujo[0.6]{Ilustración de \blue{$C$}, donde las \purple{aristas violeta} corresponden a aristas de \purple{$F$}.}
+
+Luego, si quitamos los vértices de las aristas de $F$ incidentes en $C$, las cuales solo comparten un vértice de $C$, nos queda que $v$ estaría separado del resto del grafo. Esta cantidad de vértices es a lo sumo $\abs F = \lambda (G)$. Con lo cual $\Kappa (G) \leq \abs F = \lambda (G)$.
+
+\item[\textsc{Caso 2:}] Todo $v \in V(G)$ incide en $F$. Fijemos $v \in V(G)$ y $C$ la componente conexa de $G \setminus F$ que lo contiene. Consideremos $N_{G} (v)$, los vecinos de $v$. Cada $w \in N_{G} (v) $ incide en una arista de $F$.
+
+\Dibujo{Ilustración de lo que sucede: los \darkgreen{vecinos} de \green{$v$} inciden en una \purple{arista de $F$}.}
+
+Entonces $d_G (v) \leq \abs F = \lambda (G)$. Por lo tanto, salvo que $V(G) = \{ v \} \cup N_G ( v)$, tenemos que $N_G (v)$ separa a $v$ del resto del grafo, y salvo ese caso tendríamos que $\Kappa (G) \leq \abs{N_G (v)} \leq \lambda (G)$. Pero $v$ era arbitrario, entonces en el peor de todos los casos, tenemos que $V(G) =  \{ v \} \cup N_G ( v)$ para todo $v \in G$, i.e. $G$ es un grafo completo. Pero en este caso vale la igualdad por el Ejemplo \ref{ex:clase6 - exemplo lambda (K_n) = Kappa(K_n) = n-1}.
+\end{enumerate}
+\end{proof}
+
+\subsection{Grafos $2$-conexos}
+
+\begin{Definition}
+Sea $H$ un grafo. Decimos que un camino $P$ es un \textbf{$H$-camino} si es no trivial (tiene al menos una arista) e interseca a $H$ exactamente en sus extremos ($P$ no tiene ni vértices ni aristas en $H$, salvo por sus extremos).
+\end{Definition}
+
+\Dibujo[.7]{Ejemplo de \blue{$H$}-camino \yellow{$P$} de un grafo \blue{$H$}. Notar que en el dibujo consideramos a los vértices \blue{$0,5$} como extremos de \yellow{$P$}.}
+
+Los ciclos son los grafos $2$-conexos más elementales. Veamos que todos los demás se pueden construir a partir de ellos.
+
+\Dibujo[.7]{Ejemplos de ciclos: $C_7, C_6, C_5, C_4$ y $C_3$.}
+
+\begin{proposition}
+Un grafo es $2$-conexo si y solo si se puede construir a partir de un ciclo añadiendo sucesivamente $H$-caminos a grafos $H$ ya construidos.
+\end{proposition}
+
+\begin{remark}
+Es decir, si $H_0$ es un ciclo, le agregamos un $H_0$-camino, y a la unión la llamamos $H_1$, el cual es $2$-conexo, si quisieramos podemos agregar un $H_1$-camino y seguiría siendo $2$-conexo, etc.
+\end{remark}
+
+\Dibujo{Ilustración de un ciclo $H_0$ en negro, al que le agregamo $H$-caminos en el siguiente orden: \yellow{$H_0$-camino}, \red{$H_1$-camino} y por último \blue{$H_2$-camino}.}
+
+\begin{proof}
+\begin{enumerate}
+\item[]
+
+\item[ ( $\Leftarrow$ )] Claramente un grafo construido de esta manera no se puede separar por un solo vértice. Y por su puesto que tiene más de $2$ vértices.
+
+\item[ ($\Rightarrow$)] Tomemos un grafo $G$, $2$-conexo (en particular es también conexo). Como es $2$-conexo, debe tener algún ciclo $C$, pues de lo contrario sería un árbol con al menos $3$-vértices, y quitando un vértice que no es hoja nos quedaría separado. Nos fijamos si tiene un $C$-camino, si esto es así lo agregamos, y luego seguimos agregando hasta que no podamos más. Consideremos el subgrafo maximal $H$ de $G$ construido de esta manera a partir de $C$. Entonces toda arista $xy \in E(G) \setminus E(H)$ tal que $x,y \in V(H)$, es un $H$-camino, con lo cual no puede existir por maximalidad de $H$. Es decir, $H$ es un subgrafo inducido de $G$. Entonces todas las aristas de $G$ que no están en $H$ tienen un extremo fuera de $H$. Si $H$ es $G$ habríamos terminado, luego por el absurdo supongamos que no. Por conexión existe un vértice $v \in G \setminus H$, y conectándolo por un camino con $H$ podemos asumir que $v$ es incidente en $H$, es decir existe $w \in H$ tal que $v w$ es una arista incidente en $H$. Como $G$ es $2$-conexo, si quitamos a $w$ el grafo sigue siendo conexo, luego debe ser que existe otro camino $P$ de $v$ a $H$, con lo cual $P \cup v w$ es un $H$-camino. Absurdo por maximalidad de $H$.
+\end{enumerate}
+\end{proof}
+
+
+\Dibujo{Ilustración: \green{$H$} contiene a \green{$w$}, con una arista incidente de extremo \blue{$v$}, que se extiende a un \green{$H$}-camino \blue{P}.}
+
+
+
+
+
+
+
+%%%%%%%%%%%
+\Clase{06/04/23}   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%
+
+
+
+
+Todo grafo \textit{sin vértices aislados} se puede particionar en subgrafos $1$-conexos. Y podemos intentar lo mismo para subgrafos $2$-conexos. Pero pueden ocurrir problemas, por ejemplo:
+
+\Dibujo{Ejemplo de problemas para particionar en subgrafos $2$-conexos maximales. Las componentes $2$-conexas del dibujo son sus \blue{ciclos} que comparten vértices con otras estructuras como por ejemplo las dos \yellow{aristas} $12$ y $23$; o comparten aristas entre dos ciclos.}
+
+Como ilustra la figura de arriba, los subgrafos $2$-conexos maximales no siempre abarcan todo el grafo ni son siempre disjuntos. Veamos como se arregla: podemos simplificar la noción para poder abarcar todo el grafo.
+
+\begin{definition}
+Un \textbf{bloque} es un subgrafo conexo maximal sin vértices de corte.
+\end{definition}
+
+En la figura anterior, los bloques del grafo con los \blue{ciclos} y las \yellow{aristas} $12$ y $23$.
+
+\begin{obs}
+Es fácil ver que los bloques van a ser o subgrafos \textit{$2$-conexos} o una \textit{arista} o un \textit{vértice}.
+\end{obs}
+
+\begin{proposition}
+Los ciclos de un grafo son los ciclos de sus bloques.
+\end{proposition}
+\begin{proof}
+Todo ciclo es $2$-conexo, luego es conexo sin vértices de corte, y debe estar contenido en un subgrafo maximal con esta propiedad, i.e. un bloque.
+\end{proof}
+
+\begin{proposition}
+Sean $e,f \in E(G)$. Entonces pertenecen a un mismo bloque si y solo si pertenecen a un mismo ciclo.
+\end{proposition}
+\begin{proof}
+Si pertenecen al mismo ciclo, entonces por la proposición anterior están en el mismo bloque.
+
+Recíprocamente, como $e,f$ son dos aristas en un mismo bloque, puedo asumir que el bloque es un subgrafo $2$-conexo (no es arista sola o vértice solo). La idea es la siguiente: este subgrafo $2$-conexo se construye a partir de un ciclo uniendo $H$-caminos, luego no es difícil ver que las dos aristas están contenidas en un mismo ciclo.
+\end{proof}
+
+\begin{definition}
+El \textbf{grafo bloque} de un grafo $G$ tiene un vértice por cada bloque y por cada vértice de corte de $G$; hay una arista entre dos vértices si una representa un bloque y si el otro representa un vértice de corte que está dentro del bloque.
+\end{definition}
+
+\Dibujo{Ejemplo: $G$ (izquierda) tiene $5$ \purple{bloques} (denotados por letras mayúscula: \purple{$A,B,C,D,E$}) y $2$ \darkgreen{puntos de corte} (denotados por letras minúscula: \darkgreen{$a,b$}). Luego el grafo bloque (derecha) de $G$ tiene $7$ vértices.}
+
+Notar que en nuestro ejemplo, el grafo bloque es un árbol. Esto no es casualidad:
+
+\begin{proposition}
+El grafo bloque de un grafo conexo es un árbol.
+\end{proposition}
+\begin{proof}
+\comentario{TAREA PARA MI}
+\end{proof}
+
+
+\subsection{Contracciones y menores}
+
+\begin{definition}
+\textbf{Contraer una arista} $e=xy$ equivale a borrar $x$ e $y$, y añadir un nuevo vértice $v_{xy}$ adyacente a todos los vértices que eran vecinos a $x$ o $y$.
+\end{definition}
+
+\Dibujo{Ejemplo. Contraemos los vértices \blue{$x,y$} y formamos $\blue{v_{xy}}$.}
+
+\begin{notation}
+Dado un grafo $G$ y $e = xy \in E(G)$, notamos como $G/e$ al grafo que se obtiene de $G$ al contraer la arista $e$.
+\end{notation}
+
+\begin{definition}
+Decimos que $H$ es un \textbf{menor} de $G$ si se puede obtener $H$ a partir de $G$ al utilizar las siguientes operaciones:
+\begin{enumerate}[1.]
+\item Borrar vértices.
+\item Borrar vértices y aristas.
+\item Contraer aristas. O equivalentemente, contraer subgrafos conexos.
+\end{enumerate}
+\end{definition}
+
+\begin{example}
+Los subgrafos y contracciones de $G$ son \textit{menores} de $G$. No necesariamente vale la vuelta:
+
+\Dibujo{Ejemplo de menor \blue{$H$} de \green{$G$}, que no es subgrafo porque tiene grado máximo $\Delta (H) = 5$. Pues \blue{$H$} se obtiene luego de contraer las \yellow{aristas} de \green{$G$}}
+\end{example}
+
+
+
+
+
+
+
+%--------------------------------
+\newpage
+
+\bibliographystyle{alpha}
+\bibliography{BibliografiaGRAFOS}{}
+%--------------------------------
+
+
+
+
+
+
+
+\end{document}
+
