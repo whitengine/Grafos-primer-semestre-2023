@@ -1,0 +1,75 @@
+%! Author = enzo
+%! Date = 19-04-23
+
+% Preamble
+\documentclass[../main.tex]{subfiles}
+
+% Document
+\begin{document}
+
+\appendix
+
+\chapter{Primera parte de la materia (primer capítulo del Diestel)}
+
+\section[]{Un poco de álgebra lineal}
+
+Sea $G = (V,E)$ un grafo con $n$ vértices y $m$ aristas, digamos $V = \{v_1,\ldots,v_n\}$ y $E = \{e_1,\ldots,e_m\}$.
+
+\begin{definition}
+El \textbf{espacio de vértices} $\mathcal{V} (G)$ de $G$, es el $\mathbb{F}_2$-espacio vectorial de todas las funciones $V \rightarrow \mathbb{F}_2$.
+\end{definition}
+Todo elemento de $\mathcal{V} (G)$ corresponde naturalmente con un subconjunto de $V$, más precisamente con la preimagen de $1$, y más aún todo subconjunto de $V$ se representa de manera única de esta manera por su función indicadora. Con lo cual, podemos identificar a $\mathcal{V} (G)$ con el conjunto de subconjuntos de $V$, i.e. $2^V$; así tenemos un espacio vectorial de los subconjuntos de $V$: $U + U' = U \Delta U'$ es la diferencia simétrica! y $U = -U$. El cero en este espacio vectorial corresponde con el subconjunto vacío $\emptyset \subset V$. Notar que $\{ \{ v_1 \}, \ldots, \{ v_n\} \}$ es una base de $\mathcal{V} (G)$, llamada la \textbf{base standard}; tenemos entonces que $\dim \mathcal{V} (G) = n$.
+
+
+\begin{definition}
+Análogamente, podemos definir el \textbf{espacio de aristas} $\mathcal{E} (G)$ de $G$, más precisamente, el $\mathbb{F}_2$-espacio vectorial de funciones $E \rightarrow \mathbb{F}_2$.
+\end{definition}
+Nuevamente, los elementos de $\mathcal{E} (G)$ se corressponden con subconjuntos de $E$: tomamos la preimagen de $1$. En este caso, la suma de vectores es la diferencia simétrica de conjuntos de aristas, y el conjunto vacío $\emptyset \subset E$ corresponde con el cero, además $F = -F$ para todo $F \subset E$. La \textbf{base standard} es $\{ \{e_1\},\ldots \{e_m\} \}$, luego $\dim \mathcal{E} (G) = m$.
+
+Dados $F,F' \in \mathcal{E} (G)$, vistos como funciones, podemos definir:
+\[
+    \langle F, F' \rangle := \sum_{e \in E} F (e) F'(e) \in \mathbb{F}_2.
+\]
+Esta cantidad es cero si y solo si $F$ y $F'$ tienen una cantidad par de aristas en común, i.e $\abs{F \cap F'} \equiv 0 \mod 2$; en particular ciertamente puede suceder que $\langle F , F \rangle = 0$ con $F \neq \emptyset$. De todas formas, es simétrico y $\mathbb{F}_2$-bilineal.
+De manera la manera usual, para cualquier subespacio $\mathcal{F} \subset \mathcal{E}(G)$, podemos definir el subespacio ortogonal:
+\[
+    \mathcal{F}^\perp := \Set{D \in \mathcal{E}(G) | \langle F , D \rangle = 0, \\ \forall F \in \mathcal{F}}.
+\]
+Que es un subespacio. Se tiene que
+$$
+\dim \mathcal{F} + \dim \mathcal{F}^perp = m.
+$$
+Pues se sigue de la demostración standard, ya que este producto es \textit{no degenerado}, es decír el morfismo de espacios vectoriales $F \mapsto \langle \cdot, F \rangle$ es inyectivo, luego la ecuación se sigue de álgebra lineal (estudiando el espacio dual).
+
+\begin{definition}
+El \textbf{espacio de ciclos} $\mathcal{C} = \mathcal{C}(G)$ es el subespacio de $\mathcal{E}(G)$ generado por todos los ciclos de $G$ (por sus aristas). La dimensión de este espacio se lo llama a veces \textbf{número ciclomático} de $G$.
+\end{definition}
+
+\begin{proposition}
+Las siguientes afiirmacaiones son equivalentes para conjuntos de aristas $D \subset E$:
+\begin{enumerate}[1.]
+\item $D \in \mathcal{C} (G)$;
+\item $D$ es una unión (posiblemente vacía) disjunta de ciclos en $G$;
+\item Todos los grados de los vértices de $(V,D)$ son pares.
+\end{enumerate}
+\end{proposition}
+\begin{proof}
+Como los ciclos tienen grados pares y tomar diferencia simétrica preserva esta propiedad, luego 1. implica 3. por inducción en la cantidad de ciclos que generan $D$ con la suma. Que 3. implica 2. se sigue por inducción en $\abs D$: si $D \neq \emptyset$ entonces $(V,D)$ contiene un ciclo por la Proposición \ref{proposition:todo grafo tiene un camino de largo >= delta y ciclo de largo >= delta +1}, borrando las aristas de $C$ podemos proceder inductivamente pues los vértices siguen teniendo grado par. Finalmente la implicación 2. $\Rightarrow$ 1. es inmediata de la definición de $\mathcal{C}(G)$.
+\end{proof}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\end{document}

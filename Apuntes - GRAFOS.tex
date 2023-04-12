@@ -153,6 +153,8 @@
 
 \newcommand{\blue}[1]{\textcolor{Cyan}{#1}}
 
+\newcommand{\darkblue}[1]{\textcolor{Cyan!70!Black}{#1}}
+
 \newcommand{\yellow}[1]{\textcolor{yellow!80!Black}{#1}} %se puede cambiar la tonalidad de un color "yellow!80" es el color amarillo pero al 80%  y el 20% es mezclado con blanco, i.e. está aclarado. Pero "yellow!80!Black" es 80% amarillo y 20% negro, i.e. es obscurecido 20%.
 
 \newcommand{\black}[1]{\textcolor{Black}{#1}}
@@ -329,6 +331,12 @@
 
 %%%%%%%%%%%%%COMANDO GRAFOS%%%%%%%%%%%%%
 
+%\ceil funcion techo
+\newcommand{\ceil}[1]{\left\lceil #1  \right\rceil}
+
+%\floor funcion piso
+\newcommand{\floor}[1]{\left\lfloor #1  \right\rfloor}
+
 %diámetro de un grafo
 \newcommand{\diam}[1]{\operatorname{diam} (#1)}
 
@@ -380,7 +388,7 @@
 \NewDocumentCommand{\Dibujo}{O{0.8} m}{
 \stepcounter{numeroDibujo}
 \begin{center}
-\includegraphics[width=#1\columnwidth]{"./Figuras/Clase \thenumeroClase /Dibujo \thenumeroDibujo .pdf"}
+\includegraphics[width=#1\columnwidth]{"./Editor de Grafos/Figuras/Clase \thenumeroClase /Dibujo \thenumeroDibujo .pdf"}
 \captionof{figure}{#2}
 \end{center}
 }
@@ -600,6 +608,26 @@ $$
 $$
 \end{proof}
 
+\begin{proposition}\label{prop:ultima proposicion de la clase anterior a caminos y ciclos}
+Para todo grafo $G$ con al menos una arista, existe un subgrafo $H$ tal que
+$$
+\delta (H) > \frac{\abs{E(H)}}{\abs{V(H)}} \geq \frac{\abs{E(G)}}{\abs{V(G)}}.
+$$
+\end{proposition}
+\begin{proof}
+En efecto, la idea es la siguiente: construimos una secuencia de grafos $G = G_0 \supset G_1 \supset \ldots$ de subgrafos inducidos, tales que si $G_i$ tiene un vértice de grado $d(v_i) \leq \frac{\abs{E(G_i)}}{\abs{V(G_i)}}$, entonces tomamos $G_{i+1} := G_i \setminus v_i$; si no, la secuencia termina en $H := G_i$.
+Por la elección de $v_i$ se sigue que $\frac{\abs{E(G_{i+1})}}{\abs{V(G_{i+1})}} \geq \frac{\abs{E(G_i)}}{\abs{V(G_i)}}$, pues esto sucede si y solo si
+\begin{align*}
+\frac{\abs{E(G_i)}-d(v_i)}{\abs{V(G_i)}-1} & \geq \frac{\abs{E(G_i)}}{\abs{V(G_i)}} \\
+\Leftrightarrow (\abs{E(G_i)}-d(v_i))\abs{V(G_i)} &\geq \abs{E(G_i)}(\abs{V(G_i)}-1) \\
+\Leftrightarrow -d(v_i) \abs{V(G_i)} &\geq -\abs{E(G_i)} \\
+\Leftrightarrow \frac{\abs{E(G_i)}}{\abs{V(G_i)}} &\geq d (v_i).
+\end{align*}
+En particular, $\frac{\abs{E(H)}}{\abs{V(H)}} \geq \frac{\abs{E(G)}}{\abs{V(G)}}$.
+
+Afirmamos que $H$ tiene al menos una arista, de lo contrario $\frac{\abs{E(H)}}{\abs{V(H)}} = 0 < \frac{\abs{E(G)}}{\abs{V(G)}}$, por tener $G$ al menos una arista. En particular, $H \neq \emptyset$. Como $H$ es el mínimo de esta construcción, se tiene que $\delta (H) > \frac{\abs{E(H)}}{\abs{V(H)}}$.
+\end{proof}
+
 \subsection{Caminos y Ciclos}
 
 \begin{Definition}
@@ -637,8 +665,12 @@ Notar que $\abs C = k$.
 
 
 \begin{definition}
-Sea $G$ un grafo. Definimos la \textbf{cintura} de $G$ como la mínima longitud de un ciclo en $G$.
+Sea $G$ un grafo. Definimos la \textbf{cintura} de $G$ como la mínima longitud $g(G)$ de un ciclo en $G$.
+
+Definimos la \textbf{circunferencia} como la máxima longitud de un ciclo en $G$.
 \end{definition}
+
+Si $G$ no tiene ciclos, definimos $g(G):= \infty$ y circunferencia $0$.
 
 \Dibujo[0.6]{Ejemplo de ciclos en un grafo de cinutra igual a $4$.}
 
@@ -649,7 +681,7 @@ Una arista que une a dos vértices de un ciclo $C$, pero que no pertenece a $E(C
 
 \Dibujo{Ejemplo de dos cuerdas de un ciclo $C$.}
 
-\begin{Proposition}
+\begin{Proposition}\label{proposition:todo grafo tiene un camino de largo >= delta y ciclo de largo >= delta +1}
 Todo grafo $G$ contiene un camino de largo $\geq \delta (G)$. Más aún, si $\delta (G) \geq 2$, entonces también contiene un ciclo de largo $\geq \delta (G) + 1$.
 \end{Proposition}
 \begin{proof}
@@ -779,6 +811,52 @@ O sea que la diferencia es exponencial.
 \end{enumerate}
 \end{obs}
 
+Similarmente, podemos acotar el orden de $G$ por abajo, si es que podemos controlar inferiormente $\delta$ y $g$. Definamos la cantidad para $d \in \reals$ y $g \in \naturals$:
+\[
+    n_0(d,g):= \begin{cases}
+                1 + d \sum_{i = 0}^{r-1} (d-1)^i & \text{ si $g = 2 r +1$ es impar,}\\
+                2 \sum_{i=0}^{r-1} (d-1)^i & \text{ si $g = 2 r$ es par.}
+                \end{cases}
+\]
+
+\begin{theorem}[Versión débil]\footnote{La versión fuerte de este teorema, por Alon, Hoory and Linial, 2002, dice que si $d(G) \geq d \neq 2$ y $g(G) \geq g \in \naturals$, entonces $\abs G \geq n_0 (d,g)$.}
+Sea $G$ un grafo con $\delta (G) \geq d \geq 2$ y $g(G) \geq g \in \naturals$.
+\end{theorem}
+\begin{proof}
+Sea $v$ un vértice de un ciclo $C$ de largo mínimo, i.e. $\geq g$. Consideremos como $D_i$ al conjunto de vértices a distancia $i$ de $v$ en $G$. Como antes, $\abs {D_0} = 1$, para cada vértice de $D_{i+1}$ tiene un vecino en $D_{i}$ si $i>0$; como cada vértice de $D_i$ tiene un vecino en $D_{i-1}$, se sigue que $\abs{D_{i+1}} \geq (\delta ( G)-1)\abs{D_i} \geq (d-1) \abs{D_i}$ si $i < r$, ya que de lo contrario existiría un ciclo de longitud más chica que $r$.
+Reiterando recursivamente esta igualdad, se sigue que $\abs{D_{i+1}} \geq (d-1)^i \abs{D_1}$ para todo $i < r$
+
+Luego como $G = \sqcup_{i} D_i \supset \sqcup_{0\leq i\leq r} D_i$, se sigue que
+\begin{enumerate}
+\item[Caso $g = 2 r +1$] $\abs G \geq \sum_{0 \leq i \leq r} \abs{D_i} =  1 + \sum{i=0}^{r-1} \abs{D_{i+1}} \geq 1 + \sum_{i=0}^{r-1} (d-1)^i \abs{D_1} \geq 1 + \sum_{i=0}^{r-1} (d-1)^i d$.
+\item[Caso $g = 2 r$] Analogo.
+\end{enumerate}
+\end{proof}
+\begin{corollary}
+Si $\delta(G) \geq 3$, entonces $g(G) < 2 \log_2 \abs G$.
+\end{corollary}
+\begin{proof}
+Tomamos $g = g(G)$. Si es par, entonces
+$$
+n_0(3,g) = 2 \frac{2^{g/2}-1}{2  - 1} = 2^{g/2} +(2^{g/2}-2) > 2^{g/2}.
+$$
+Si $g$ es impar, entonces
+$$
+n_0(3,g) = 1 + 3 \frac{2^{(g-1)/2}-1}{2-1} = \frac{3}{\sqrt 2} 2^{g/2} - 2 > 2^{g/2}.
+$$
+Luego por el teorema anterior el resultado se sigue luego de tomar logarítmo en base $2$.
+\end{proof}
+
+\begin{proposition}
+Todo grafo $G$ que contiene al menos un ciclo, satisface
+$$
+g(G) \leq 2 \diam G +1.
+$$
+\end{proposition}
+\begin{proof}
+Supongamos que no. Es decir, si $C$ es el ciclo de $G$ con menor longitud, se tiene que $\Abs C = g(G) \geq 2 \diam +2$. Es decir, existen dos vértices de $C$, digamos $x,y$ tales que su distancia en $C$ es mayor o igual a $\diam G +1$. En $G$, estos vértices están a distancia menor que $\diam G+1$, sea $P$ el camino mas corto en $G$ que une a $x,y$ (i.e. tiene longitud $< \diam G +1$), luego $P$ no es subgrafo de $G$. Con lo cual, existe un subcamino de $P$ que es un $C$-camino; luego este camino unión el $x-y$ camino más corto de $C$ es un ciclo de longitud más chica que la de $C$, absurdo.
+\end{proof}
+
 \subsection{Conexidad}
 
 \begin{Definition}
@@ -831,6 +909,47 @@ Sea $G = (V,E)$ un grafo. Un subgrafo conexo maximal de $G$ es llamado una \text
 \Dibujo{Ejemplo de componentes: tiene $3$.}
 
 
+\begin{notation}
+Sea $G= (V,E)$ un grafo. Vamos a notar a la cantidad de arisstas por vértice como la cantidad:
+\[
+    \epsilon ( G) = \frac{\abs E}{\abs V}.
+\]
+\end{notation}
+
+\begin{theorem}
+Sea $k \in \naturals$. Todo grafo $G$ con $d(G) \geq 4 k$ tiene un subgrafo $H$ que es $(k-1)$-conexo tal que $\epsilon (H) > \epsilon (G) -k$.
+\end{theorem}
+\begin{proof}
+Notemos por $\gamma = \epsilon (G)$; como $\gamma = \frac 1 2 d(G)$, tenemos que $\gamma \geq 2 k$. Consideremos los subgrafos $G' \subset G$ tales que
+\[
+    \abs{G'} \geq 2k \quad \text{y} \quad \Abs{G'}> \gamma ( \abs{G'}-k);
+\]
+esta familia es no vacía, pues $G$ cumple esta condición; notemos por $H$ al subgrafo de menor orden que cumple esta condición.
+En efecto, $G$ cumple ambas condiciones, pues por un lado $\Abs G > \gamma (\abs G - k) = \Abs G - \gamma k$, y por otro lado
+$$
+\Delta (G) \geq d(G) \geq 4k,
+$$
+con lo cual existe un vértice de $G$ de grado máximo, con al menos $4k$ vecinos, es decir $\abs G \geq 4k +1 \geq 2k$.
+
+Notar que ningún grafo $G'$ que cumpla la condición tiene orden exactamente $2k$, ya que esto implicaría que $\Abs {G'} > \gamma k \geq 2k^2 > \binom{\abs {G'}}{2} = k(2k-1)$, lo cual contradice la cantidad máxima de aristas que puede tener un grafo de $\abs{G'}$ vértices.
+Por minimalidad de $H$, se tiene que $\delta (H) > \gamma$: de lo contrario podríamos eliminar un vértice de grado a lo más $\gamma$ y obtener un grafo $G' \subsetneq H$ que satisface la condición. En particular, como existe un vértice de grado $> \gamma$, se sigue que $\abs H \geq \gamma$. Ddividiendo la desigualdad $\Abs H > \gamma \abs H - \gamma k$ de la c ondición por $\abs H$, tenemos que $\epsilon (H) > \gamma - k$, como queríamos.
+
+Falta ver que $H$ es efectivamente $(k+1)$-conexo. De lo contrario, $H$ tendría una separación propia $\{U_1, U_2\}$ de orden a lo más $k$; escribamos $H[U_i] =: H_i$. Como todo vértice $v \in U_1 \setminus U_{2}$ tiene $d(v) \geq \delta (H) > \gamma$ vecínos de $H$ en $H_1$, tenemos que $\abs{H_1}\geq \gamma \geq 2k$. Similarmente, $\abs{H_2} \geq 2k$. Por la minimalidad de $H$, ninguno de los $H_1,H_2$ puede satisfaced la condición, con lo cual
+\[
+    \Abs {H_i} \leq \gamma (\abs{H_i}-k), \quad i = 1,2.
+\]
+Sin embargo, tenemos que
+\begin{align*}
+\Abs H &\leq \Abs {H_1} + \Abs{H_2} \\
+    &\leq \gamma (\abs {H_1} + \abs{H_2} -2k) = \gamma (\abs{H}+ \abs{H_1 \cap H_2}-2k) \\
+    &\leq \gamma (\abs H - k) \quad (\text{pues $\abs{H_1\cap H_2} \leq k$}),
+\end{align*}
+contradiciendo la condición.
+\end{proof}
+
+
+
+
 
 \subsection{Árboles y bosques}
 
@@ -838,6 +957,8 @@ Sea $G = (V,E)$ un grafo. Un subgrafo conexo maximal de $G$ es llamado una \text
 Un grafo acíclico, es decir, sin ciclos, es llamado un \textbf{bosque}.
 
 A un bosque conexo lo llamamos \textbf{árbol}, es decir un grafo conexo y acíclico.
+
+Los vértices de grado $1$ son sus \textbf{hojas}, los otros vértices son sus \textbf{vértices interiores}.
 \end{Definition}
 Notar que las componentes conexas de un bosque son árboles.
 
@@ -845,9 +966,9 @@ Notar que las componentes conexas de un bosque son árboles.
 Los subgrafos conexos de un árbol son árboles.
 \end{obs}
 
-\begin{definition}
-Los vértices de grado $1$ en un árbol se llaman \textbf{hojas}.
-\end{definition}
+\Dibujo{Un \brown{árbol} con \darkgreen{hojas} y \green{vértices interiores}.}
+
+
 
 \begin{exercise}
 Todo árbol tiene al menos $1$ hoja. Más aún, si el árbol tiene más de un vértice entonces tiene al menos $2$ hojas. En particular los árboles tienen grado mínimo $\delta = 1$.
@@ -863,9 +984,9 @@ Sea $T$ un grafo. Las siguientes definiciones son equivalentes:
 \begin{enumerate}[(i)]
 \item $T$ es árbol.
 \item Cada par de vértices en $T$ están unidos por un único camino.
-\item $T$ es conexo, pero $T \setminus e$ es disconexo para todo $e \in E(T)$.
+\item $T$ es conexo, pero $T \setminus e$ es disconexo para todo $e \in E(T)$. Es decir, es minimalmente conexo.
 \item $T$ es conexo, pero $T \setminus v$ es disconexo para todo $v \in V(T)$ que no sea hoja.
-\item $T$ es acíclico, pero $T \cup xy$ tiene un ciclo para cualquier par de vértices $x,y$ no adyacentes.
+\item $T$ es acíclico, pero $T \cup xy$ tiene un ciclo para cualquier par de vértices $x,y$ no adyacentes. Es decir, es maximalmente acíclico.
 \end{enumerate}
 \end{Theorem}
 \begin{proof}
@@ -901,15 +1022,19 @@ Del dibujo anterior podemos ver que el árbol generador no necesariamente es ún
 Todo grafo conexo tiene un árbol generador.
 \end{proposition}
 \begin{proof}
-Tomemos un subgrafo minimalmente conexo $H$, que contenga a todo $V(G)$. Por (iii) del teorema anterior tenemos que $H$ es un árbol.
+Tomemos un subgrafo minimalmente conexo $H$, que contenga a todo $V(G)$. Por (iii) del teorema anterior tenemos que $H$ es un árbol. También se puede usar el ítem (v), aplicado a un subgrafo acíclico maximal.
 \end{proof}
 
 \begin{obs}
 Esta demostración nos da un álgoritmo para construir el árbol generador de un grafo: quitamos aristas hasta que nos quede minimalmente conexo.
 \end{obs}
 
+\begin{definition}
+Si $T$ es un árbol generador de un grafo $G$, las aristas en $E(G) \setminus E(T)$ son las \textbf{cuerdas} de $T$ en $G$.
+\end{definition}
+
 \begin{Proposition}
-Los vértices de un árbol $T$ pueden ser enumerados, digamos $v_1,v_2,\ldots,v_n$ de manera que para todo $i \geq 1$, $v_i$ es hoja en $T[v_1,\ldots,v_i]$ (que es árbol también).
+Los vértices de un árbol $T$ pueden ser enumerados, digamos $v_1,v_2,\ldots,v_n$ de manera que para todo $i \geq 2$, $v_i$ es hoja en $T[v_1,\ldots,v_i]$ (que es árbol también).
 \end{Proposition}
 \begin{proof}
 Por la Proposición \ref{prop: todo grafo conexo se puede enumerar de manera que G_i[v1,...,vi] es conexo para todo i} existe una enumeración $v_1,\ldots,v_n$ tal que $T[v_1,\ldots,v_i]$ es conexo para todo $i \geq 1$. Inspeccionando la demostración, se puede ver que esta construcción sirve. En efecto, sabemos que $v_{i+1}$ tiene un vecino en $G[v_1,\ldots,v_i]$, llamemosló $x$, si tuviera otro llamado $y$, entonces $G[v_1,\ldots,v_i]$ contiene un camino $P_{xy}$ entre ellos, que junto con $x v_{i+1} y$ nos forma un cíclo, absurdo.
@@ -946,6 +1071,67 @@ Todo grafo conexo de $n$ vértices tiene al menos $n-1$ aristas.
 \begin{proof}
 Tiene un árbol generador, que debe tener $n-1$ aristas.
 \end{proof}
+
+\begin{corollary}
+Si $T$ es un arbol y $G$ es un grafo con $\delta (G) \geq \abs T -1$, entonces $T \subset G$, es decir $G$ tiene un subgrafo isomorfo a $T$.
+\end{corollary}
+\begin{proof}
+Sea $v_1,\ldots,v_n$ con $n = \abs T$, una numeración de los vértices de $T$ tal que $v_i, i \geq 2$ es una hoja de $T[v_1,\ldots,v_{i-1}]$. Haremos inducción en estos vértices. El caso base es trivial. Veamos el paso inductivo: supongamos que $G$ tiene a $T[v_1,\ldots,v_{i-1}]$ como subgrafo con $i\leq n$, entonces como $\delta (G) \geq n-1$, tenemos que $v_j, 1 \leq j \leq i-1$ (el único vecino de $v_i$) tiene al menos $\delta(G) \geq n-1$ vecinos en $G$, es decir, tiene un vecino que no está en $T[v_1,\ldots, v_{i-1}]$, luego agregamos a ese vértice como $v_i$ junto con la arista que le corresponde a $v_j$.
+\end{proof}
+
+\bigskip
+
+De véz en cuando, es útil fijar un vértice $r$ de un árbol $T$, que llamaremos \textbf{raíz}. Un árbol con una raíz fija, se denomina \textbf{árbol enraigado} (o en inglés, \textbf{rooted tree}).
+Recordemos que para todo $y \in V(T)$, existe un único camino entre $r$ e $y$ que denotaremos $rTy$; esto induce un orden parcial $x \leq y$ si y solo si $x \in r T y$. Este orden en $V(T)$ se lo llama el \textbf{orden del árbol} asosciado a $T$ y $r$. Definimos los conjuntos:
+\[
+    \ceil y := \Set{x | x \leq y} \quad \text{y} \quad \floor x := \Set{ y | y \geq x}
+\]
+la \textbf{clausura inferior} de $y$, y la \textbf{clausura superior} de $x$, respectivamente. En general, definimos $\ceil X := \bigcup_{x \in X} \ceil x $ y annálogamente $\floor X$, para un conjunto $X \subset V(T)$. Un conjunto $X$ que coincide con $\ceil X$, se dice \textbf{cerrado inferiormente}, análogamente en el otro caso tenemos que es \textbf{cerrado inferiormente}.
+
+Notar que $r$ es el \textit{mínimo} en este orden, y todas las hojas de $T$ son \textit{maximales}. Los extremos de una arista son siempre comparables entre sí, y los elementos de una clausura superior o inferior forman una \textit{cadena} (i.e. son comparables entre sí). Decimos que los vértice a distancia $k$ de $r$ tienen \textbf{altura} $k$ y el conjunto de estos vértices forma el $k$-ésimo \textbf{nivel} de $T$.
+
+Un árbol enraigado $T$ contenido en un grafo $G$ se dice \textbf{normal} en $G$, si los extremos de todo $T$-camino en $G$ son comparables en el orden de $T$. Si $T$ genera $G$, esto equivale a pedir que dos vértices de $T$ sean comparables siempre que sean adyacentes en $G$; ver la siguiente figura:
+
+\Dibujo{Un \brown{árbol} generador normal con raíz \darkgreen{r} de un grafo $G$.}
+
+Un arbol normal puede ser una herramienta realmente útil para examinar la estructura de su grafo subyacente, ya que este grafo refleja las propiedades de separación de $T$:
+
+\begin{lemma}
+Sea $T$ un árbol normal en $G$. Tenemos que:
+\begin{enumerate}[(i)]
+\item Dados $x,y \in V(T)$, están separados en $G$ por el conjunto $\ceil x \cap \ceil y$.
+1\item Supongamos que $T$ genera $G$. Si $S \subset V(T) = V(G)$ y $S$ es inferiormente cerrado, luego las componentes conexas de $G \setminus S$ están generadas por los conjuntos $\floor x$ con $x$ minimal en $T \setminus S$.
+\end{enumerate}
+\end{lemma}
+\begin{proof}
+\begin{enumerate}[(i)]
+\item Sea $P$ cualquier camino entre $x,y$ en $G$; veamos que $P$ interseca $\ceil x \cap \ceil y$. Sea $t_1,\ldots,t_n$ una sucesión de vértices en $P \cap T$, minimal con la propiedad que $t_1 = x$ y $t_n = y$ y $t_i,t_{i+1}$ son comparables en el orden del árbol $T$ para todo $i$. Dicha sucesión existe, pues el conjunto de todos los vértices en $P \cap T$, con el orden natural inducido por $P$, tiene esta propiedad, ya que como $T$ es normal todo segmento $t_i P t_{i+1}$ es una arista de $T$ o un $T$-camino. En nuestra secuencia minimal no podemos tener $t_{i-1}< t_i > t_{i+1}$ para ningún $i$, pues $t_{i-1},t_{i+1}$ son comparables y podríamos eliminar a $t_i$ de nuestra secuencia, obteniendo así una secuencia más chica. Entonces nuestra secuencia tiene la forma
+\[
+    x = t_1 > \ldots > t_k < \ldots < t_n = y
+\]
+(se podrían retirar los elementos en el ''medio''). Así, $t_k \in \ceil x \cap \ceil y \cap V(P)$.
+\item Consideremos una componente $C$ de $G \setminus S$, y tomemos $x$ un elemento minimal ($T$ genera $G$) de $V(G)$. Afirmamos que $x$ es único, en efecto, si $x'$ fuera otro, ambos serian no comparables entre sí, pero por el ítem (i), cualquier camino entre $x,x'$ contiene un vértice más chico que ambos, contradiciendo minimalidad en $C$. Por lo tanto todo vértice de $C$ yace arriba de $x$: nuevamente por el ítem (i) hay un vértice debajo de ambos que por minimalidad es $x$. Recíproccamente, todo vértice $y \in \floor x$ está en $C$, pues como $S$ es cerrado inferiormente, el camino creciente $x T y$ yace en $T\setminus S$. Consecuentemente, $V(C)= \floor x$.
+
+Ahora veamos que $x$ es minimal no solo en $V(C)$, sino también en $T \setminus S$. Los vérticces por debajo de $x$ forman una cadena $\ceil t$ en $T$. Como $t$ es vecino de $x$ en $T$, la maximalidad de $C$ como componente conexa de $G \setminus S$ implica que $t \in S$, y por lo tanto $\ceil t \subset S$ porque $S$ es cerrado inferiormente. Esto completa la demostración de que toda componente de $G\setminus S$ está generada por un conjunto $\floor x$ con $x$ minimal en $T \setminus S$.
+
+Recíprocamente, si $x$ es un elemento minimal en $T \setminus S$, claramente también es minimal en la componente $C$ de $G \setminus S$ que lo contiene. Eso significa que $V(C) = \floor x$.
+\end{enumerate}
+\end{proof}
+
+
+\begin{proposition}
+Todo grafo conexo contiene un árbol generado normal, con el orden inducido por cualquier vértice como raíz.
+\end{proposition}
+\begin{proof}
+Sea $G$ un grafo conexo y $r \in G$ un vértice fijo. Sea $T$ un árbol normal maximal con raíz $r$, veamos que $V(T) = V(G)$, i.e. genera $G$..
+
+Supongamos por el absurdo que no, y sea $C$ una componente conexa de $G \setminus T$. Como $T$ es normal, la vecindad $N_G (C)$ (que está contenida en $T$) es una cadena en $T$, obviamente porque $C$ permite construir $T$-caminos entre cualquier par de vértices de $N_G(C)$. Sea $x$ su máximo elemento (recordemos que estamos en una cadena), y sea $y \in C$ adyacente a $x$. Sea $T'$ el arbol obtenido de $T$ agregando la arista $yx$; el orden de árbol de $T'$ extiende al de $T$. Veamos que $T'$ también es normal en $G$, contradiciendo maximalida.
+
+Sea $P$ un $T'$-camino en $G$. Si sus extremos están en $T$, luego son comparables con el orden de $T$, y por lo tanto por el de $T'$ también, ya que $P$ es un $T$-camino también porque $T \subset T'$ y $T$ es normal. Si alguno de los extremos de $P$ fuera $y$, tenemos que $P \subset C$ salvo por su otro extremo $z$, que yace en $N_G(C)$. Como $x$ era máximo, tenemos que $z \leq x$. Luego $z,y$ serán comparables si vemos que $x < y$, es decir que $x \in r T' y$. Lo cual es claro ya que $y$ es una hoja de $T'$ con vecinon $x$.
+\end{proof}
+
+
+
 
 \subsection{Grafos bipartitos}
 
@@ -1066,7 +1252,7 @@ Un multigrafo conexo es Euleriano si y solo si todos sus vértices tienen grado 
 
 \Dibujo[0.1]{$\Abs G = 2$.}
 
-Supongamos que $\Abs G >2$. Cuando todos los grados son pares, puedo encontrar un paseo cerrado no trivial. Tomemos como $P$ el de largo máximo, y sea $F$ su conjunto de aristas. Si $F$ es todo, la demostración está terminada. Luego supongamos que no. Sea $G \setminus F = G'$, tiene una arista $e$ que incide en un vértice de $P$, pues $G$ es conexo. Sea $C$ la componente de $G'$ que contiene a $e$. Aplicando la hipótesis inductiva, podemos encontrar un paseo Euleriano en $C$, llamémoslo $P'$. Como $P$ y $P'$ unidos son un paseo cerrado más grande que $P$, llegamos a un absurdo.
+Supongamos que $\Abs G >2$. Cuando todos los grados son pares, puedo encontrar un paseo cerrado no trivial. Tomemos como $P$ el de largo máximo, y sea $F$ su conjunto de aristas. Si $F$ es todo, la demostración está terminada. Luego supongamos que no. Sea $G \setminus F = G'$, tiene una arista $e$ que incide en un vértice de $P$, pues $G$ es conexo. Sea $C$ la componente de $G'$ que contiene a $e$. Todo vértice de $G$, posee un número par de aristas incidentes en $F$, luego la cantidad de aristas en $G'$ sigue siendo par. Aplicando la hipótesis inductiva, podemos encontrar un paseo Euleriano en $C$, llamémoslo $P'$. Como $P$ y $P'$ unidos son un paseo cerrado más grande que $P$, llegamos a un absurdo.
 
 \Dibujo{Esta es una ilustración de lo que podría suceder: $P : 0,1,2,3,5,6,7,8,4,0$ es el camino \black{negro} y \darkgreen{$C$ es el grafo conexo}.}
 
@@ -1295,6 +1481,116 @@ Los subgrafos y contracciones de $G$ son \textit{menores} de $G$. No necesariame
 \end{example}
 
 
+\subsection{subdivisiones}
+
+Sea $X$ un grafo fijo.
+
+\begin{definition}
+Llamamos \textbf{subdivisión} de $X$ a cualquier grafo $G$ que se obtiiene de 'subdividir' algunas aristas de $X$ y dibujando encima nuevos vértices. Más precisamente, reemplazamos las aristas de $X$ con nuevos caminos entre sus exxtremos, de manera que estos caminos no se intersecan entre si y tampoco intersecan a $V(X)$ salvo en los extremos.
+Diremos que $G$ es un $TX$.
+
+Llamaremos a los vértices originales de $X$, \textbf{vértices de ramificación de los de} $TX$; a los nuevos vértices los llamaremos \textbf{vértices subdivisores}.
+
+Si un grafo $Y$ contiene a $TX$ como subgrafo, diremos que $X$ es una \textbf{menor topológica} de $Y$.
+\end{definition}
+Notar que los vértices subdivisores tienen grado $2$ y los vértices de ramificación no cambian de grado.
+
+\Dibujo{De izquierda a derecha, tenemos la construcción prograsia de $X$, luego le agregamos \red{vértices subdivisores} formando $TX$, y finalmente ilustramos un ejemplo de grafo $Y$ con $X$ como menor topológico.}
+
+
+
+\begin{definition}
+Similarmente, reemplazando los vértices $x \in X$ con grafos conexos disjuntos $G_x$, y las aristas $xy \in X$ con conjuntos no vacíos de $G_x - G_y$ aristas, obtenemos un grafo que llamaremos $IX$. Recíprocamente, decimos que $X$ se obtiene a partir de $G$ \textbf{contrayendo} subgrafos $G_x$ (y fusionando las $G_x-G_y$ aristas), y lo llamamos una \textbf{menor contraida} de $G$.
+
+Si un grafo $Y$ contiene un $IX$ como subgrafo, decimos entonces que $X$ es una \textbf{menor} de $Y$, llamamos a $IX$ unu \textbf{modelo} de $X$ en $Y$, y denotamos $X\preccurlyeq Y$
+\end{definition}
+
+\Dibujo{De izquierda a derecha, tenemos el grafo $X$, que se obtiene de contraer \purple{sub}\red{gr}\darkgreen{af}\blue{os} de $G$; finalmente, el grafo $Y$ tiene a $X$ como menor y a $G$ como modelo de $X$ en $Y$}
+
+Por lo tanto, $X$ es un menor de $Y$ si y solo si existe una función $\varphi : S \subset V(Y) \twoheadrightarrow V(X)$ tal que para todo vértice $x \in X$ si preimagen $\varphi^{-1} (x)$ es conexa en $Y$ y para toda arista $xx' \in E(X)$ existe una arista en $Y$ entre conjuntos de ramificación $\varphi^{-1}(x), \varphi^{-1} (x')$. Si el dominio de $\varphi$ es todo $V(Y)= S$, y si $xx' \in E(X)$ siempre que $x \neq x'$ e $Y$ tiene una arista entre $\varphi^{-1}(x)$ y $\varphi^{-1} (x')$ (es decir $Y$ es una $IX$), decimos que $\varphi$ es una \textbf{contracción} de $Y$ en $X$.
+
+
+\begin{proposition}
+La relación de menores $\preccurlyeq$ y la relación de menores topológicos son ordenes parciales en la clase de grafos finitos. Es decir, son reflexivos, antisimétricos, y transitivos.
+\end{proposition}
+
+
+Si $G$ es una $IX$, luego $P = \Set{G_x | x \in X}$ es una partición de $V(G)$, y notamos $G/P := X$. Si $U = G_x$ es el único conjunto de ramificación que no es un singleton, escribimos $G/U := X$, y notamos $v_U$ al vértice $x \in X$ al que se contrae $U$, y pensamos al ressto de $X$ como un subgrafo inducido de $G$. El caso más simple es cuando $U$ contiene exactamente dos vértices que forman una arista $e= U$, aquí escribiremos $G/e = X$, el grafo que se obtiene de \textbf{contraer la arista} $e$.
+
+\begin{proposition}
+Sean $X$ e $Y$ grafos finitos. Entonces $X$ es una menor de $Y$ si y solo si existen grafos $G_0,\ldots,G_n$ tales que $G_0 = Y$ y $G_n = X$, y además $G_{i+1}$ se obtiene a partir de $G_i$ borrando aristas, contrayendo aristas, o borrando vérticces.
+\end{proposition}
+\begin{proof}
+Estas tres últimas operaciones claramente producen una menor $X$, pues la relación de menor es transitiva. Recíprocamente, se puede hacer inducción en $\abs Y + \Abs Y$.
+\end{proof}
+
+Finalmente, tenemos la siguiente relación entre menores y menores topológicos:
+
+\begin{proposition}
+\begin{enumerate}[(i)]\comentario{no entiendo por que vale el segundo item.}
+\item Todo $TX$ es también un $IX$ (ver la siguiente figura); por lo tanto, toda menor topológica de un grafo es su menor (ordinaria).
+\item Si $\Delta (X) \leq 3$, entonces todo $IX$ contiene un $TX$; con lo cual, toda menor con grado máximo a lo sumo $3$ de un grafo es también su menor topológico.
+\end{enumerate}
+\end{proposition}
+
+\Dibujo{Ejemplo: Una subdivisión de $K^4$ visto como $I K^4$.}
+
+
+Ahora que conocemos todas las relaciones standard entre grafos, podemos definir lo qu esignifica embeber a un grafo en otro.
+
+\begin{definition}
+Básicamente, una \textbf{inmersión} (o \textbf{embedding} en inglés) de $H$ en $G$ es un mapa inyectivo $\varphi : V(H) \rightarrow V(G)$ tal que preserva la estructura en la que estamos interesados. Con lo cual, $\varphi$ embebe a $H$ en $G$ c omo un subgrafo si preserva la adyacencia entre vértices, y como subgrafo inducido si preserva tanto la adyacencia como la no adyacencia. Si $\varphi$ está definido también en $E(H)$ como en $V(H)$ y manda $xy$ en caminos independientes de $G$ entre $\varphi (x)$ y $\varphi (y)$, decimos que $\varphi$ embebe a $H$ en $G$ como un menor topológico. Similarmente, decimos que es una inmesión de $H$ en $G$ como un menor, si mapea a $V(H)$ en conjuntos disjuntos de vértices en $G$ conexos, de manera que $G$ tiene una arista entre los conjuntos $\varphi (x)$ y $\varphi (y)$ siempre que $xy$ es una arisda de $H$. Más varíantes existen, pero depende del contexto en el que estemos; por ejemplo, se pueden definir de manera obvia las inmersiones de 'subgrafos generadores', y 'menores inducidas', etc.
+\end{definition}
+
+%%%%%%%%%%%
+\Clase{17/04/23}   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%
+
+
+\begin{lemma}
+Todo grafo $3$-conexo, distinto de $K_4$, tiene una arista $e$ tal que $G/e$ es $3$-conexo.
+\end{lemma}
+\begin{proof}
+Supongamos que no hay una arista con esta propiedad. Es decir, para toda $xy \in E(G)$, el grafo $G/xy$ tiene un conjunto separador $S$ de a lo más $2$ vértices. Como $G$ es $3$-conexo, $v_{xy}$ (el vértice que sale de contraer la arista $xy$) tiene que estar en $S$ y $\abs S = 2$, ya que $\abs S = 0$ es imposible porque el grafo es conexo y por otro lado si $\abs S = 1$, estamos diciendo que $G$ se puede separar con un solo vértice si $v_{xy} \not \in S$ o si $v_{xy}\in S$ entonces podemos desconectar a $G$ con los vértices $x, y$, imposible.
+Luego, escribimos $S = \{z, v_{xy}\}$ con $z \not \in \{x,y\}$ separador de $G/xy$. Con lo cual, $T=\{z,x,y\}$ separa a $G$. Como ningún subconjunto propio de $T$ separa, cada vértice de $T$ tiene un vecino en cada componente de $G \setminus T$.
+\Dibujo{Ilustración del conjunto \purple{$T$}, donde se muestra que el vértice \purple{$z$} tiene vecinos en cada \yellow{com}\red{po}\blue{nente} de $G \setminus T$.}
+
+Como $xy$ era arbitrario, podemos elegir la arista $xy$, el vértice $z$ y la componente $C$ tal que $\abs C$ es mínimo. Tomo $v \in C$ y es vecino de $z$. Entoncces $G/v z$ tampoco es $3$-conexo, o sea que existe $w$ tal que $v,z,w$ (distintos) separan $G$. Como antes cada una de $v,z,w$ tiene un vecino en cada conmponente de $G \setminus \{v,z,w\}$. Como $x$ e $y$ son adyacentes, existe $D$ componente de $G \setminus \{v,z,w\}$ tal que $D \cap \{x,y\} = \emptyset$ (porque $G \neq K_4$!).
+\Dibujo{\blue{$D$} está contenido en el \blue{subgrafo azul}.}
+Dado que $v \in C$, los vecinos de $v$ en $D$ están en $C$. Tenemos que $D \cap C \neq \emptyset$, más aún, $D \subsetneq C$. Contradiciendo la minimalidad del orden de $C$.
+\end{proof}
+
+\begin{theorem}[Teorema de Tutte, 1961]
+Un grafo $G$ es $3$-conexo si y solo si existe una secuencia de grafos $G_0, G_1, \ldots, G_n$ que cumple lo siguiente:
+\begin{enumerate}[(i)]
+\item $G_0 = K_4$ y $G_n = G$.
+\item $G_{i+1}$ tiene una arista $xy$ tal que $d(x),d(y) \geq 3$ y $G_i = G_{i+1}/xy$ para todo $i < n$. Más aún, cada $G_i$ es $3$-conexo.
+\end{enumerate}
+\end{theorem}
+\begin{proof}
+Por el lema anterior, podemos quitar una arista recursivamente hasta llegar a $K_4$. La vuelta esta en el DIESTEL.
+\end{proof}
+
+
+\subsection[]{Teorema de Wenger}
+\begin{definition}
+Si $A,B,X \subset V(G)$ son tales que todo $A,B$-camino tiene un vértice de $X$, decimos que $X$ separa a $A$ y $B$ en $G$.
+\end{definition}
+
+\begin{theorem}[Wenger, 1927]
+Sea $G = (V,E)$ un grafo y sean $A,B \subset V$. El mínimo número de vértices que separa a $A$ y $B$ es igual al máximo número de $A,B$-caminos disjuntos.
+\end{theorem}
+
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%subfile{"nombre de carpeta"/"Nombre del archivo"}
+\subfile{Apendice/Apendice.tex}
 
 
 
