@@ -1486,7 +1486,7 @@ Los subgrafos y contracciones de $G$ son \textit{menores} de $G$. No necesariame
 Sea $X$ un grafo fijo.
 
 \begin{definition}
-Llamamos \textbf{subdivisión} de $X$ a cualquier grafo $G$ que se obtiiene de 'subdividir' algunas aristas de $X$ y dibujando encima nuevos vértices. Más precisamente, reemplazamos las aristas de $X$ con nuevos caminos entre sus exxtremos, de manera que estos caminos no se intersecan entre si y tampoco intersecan a $V(X)$ salvo en los extremos.
+Llamamos \textbf{subdivisión} de $X$ a cualquier grafo $G$ que se obtiene de \textit{subdividir} algunas aristas de $X$ y dibujando encima nuevos vértices. Más precisamente, reemplazamos las aristas de $X$ con nuevos caminos entre sus extremos, de manera que estos caminos no se intersecan entre si y tampoco intersecan a $V(X)$ salvo en los extremos.
 Diremos que $G$ es un $TX$.
 
 Llamaremos a los vértices originales de $X$, \textbf{vértices de ramificación de los de} $TX$; a los nuevos vértices los llamaremos \textbf{vértices subdivisores}.
@@ -1502,7 +1502,7 @@ Notar que los vértices subdivisores tienen grado $2$ y los vértices de ramific
 \begin{definition}
 Similarmente, reemplazando los vértices $x \in X$ con grafos conexos disjuntos $G_x$, y las aristas $xy \in X$ con conjuntos no vacíos de $G_x - G_y$ aristas, obtenemos un grafo que llamaremos $IX$. Recíprocamente, decimos que $X$ se obtiene a partir de $G$ \textbf{contrayendo} subgrafos $G_x$ (y fusionando las $G_x-G_y$ aristas), y lo llamamos una \textbf{menor contraida} de $G$.
 
-Si un grafo $Y$ contiene un $IX$ como subgrafo, decimos entonces que $X$ es una \textbf{menor} de $Y$, llamamos a $IX$ unu \textbf{modelo} de $X$ en $Y$, y denotamos $X\preccurlyeq Y$
+Si un grafo $Y$ contiene un $IX$ como subgrafo, decimos entonces que $X$ es una \textbf{menor} de $Y$, llamamos a $IX$ un \textbf{modelo} de $X$ en $Y$, y denotamos $X\preccurlyeq Y$
 \end{definition}
 
 \Dibujo{De izquierda a derecha, tenemos el grafo $X$, que se obtiene de contraer \purple{sub}\red{gr}\darkgreen{af}\blue{os} de $G$; finalmente, el grafo $Y$ tiene a $X$ como menor y a $G$ como modelo de $X$ en $Y$}
@@ -1527,11 +1527,17 @@ Estas tres últimas operaciones claramente producen una menor $X$, pues la relac
 Finalmente, tenemos la siguiente relación entre menores y menores topológicos:
 
 \begin{proposition}
-\begin{enumerate}[(i)]\comentario{no entiendo por que vale el segundo item.}
+\begin{enumerate}[(i)]
 \item Todo $TX$ es también un $IX$ (ver la siguiente figura); por lo tanto, toda menor topológica de un grafo es su menor (ordinaria).
 \item Si $\Delta (X) \leq 3$, entonces todo $IX$ contiene un $TX$; con lo cual, toda menor con grado máximo a lo sumo $3$ de un grafo es también su menor topológico.
 \end{enumerate}
 \end{proposition}
+\begin{proof}
+Veamos solo (ii), el primer ítem es obvio. En efecto, $IX$ es el grafo que se obtiene de $X$ reemplazando cada vértice $x$ de él por un subgrafo conexo $G_x$ y cada arista por un conjunto de aristas no vacío, luego tomando una arista de ese conjunto, basta con escoger un vértice de $G_x$ que tenga por cada vecino de $x$ en $X$ un camino distinto hacia cada arista incidente en $G_x$. Esto es posible: empezamos eligiendo de manera inocente al vértice que es extremo de una arista incidente con $G_x$, de este vértice, llamemosló $x$, tendríamos que contrar dos caminos disjuntos con extremo final, en el peor de los casos pues $\Delta (X) \leq 3$, en otras dos aristas de $X$; ahora si no se cruzan ya ganamos, de lo contrario se fusionan a partir de un momento, incluso varias veces, pero luego movemos nuestro vértice $x$ a la última véz que se fusionan los caminos, y llamemosló $x'$:
+
+\Dibujo{Ilustración de cómo se ven dos caminos, ambos de color amarillo pero uno más claro que el otro, que salen de nuestro vértice $x$ y tienen que llegar a las aristas incidentes en $G_x$. Al final movemos nuestro vértice a $x'$.}
+
+\end{proof}
 
 \Dibujo{Ejemplo: Una subdivisión de $K^4$ visto como $I K^4$.}
 
@@ -1621,7 +1627,7 @@ El \textbf{grafo línea} $L(G)$ de un grafo $G = (V,E)$ es aquel cuyo conjunto d
 
 
 \begin{definition}
-Un conjunto de $a,B$-caminos es un \textbf{$a,B$-abaníco} si cada par de estos caminos se intersecta SOLO en $a$.
+Un conjunto de $a,B$-caminos es un \textbf{$a,B$-abanico} si cada par de estos caminos se intersecta SOLO en $a$.
 \end{definition}
 
 \Dibujo{Ejemplo de $\red{a},\blue{B}$-abanico.}
@@ -1639,10 +1645,10 @@ Aplicamos el Teorema de Menger a $G \setminus a$ con conjuntos $A = N_G (a)$ y $
 
 
 \begin{corollary}
-Sean $a$ y $b$ vértices distintos de $G$.
+Sean $a$ y $b$ vértices distintos de $G= (V,E)$.
 \begin{enumerate}[(i)]
-\item Si $ab \not \in E$, entonces el mínimo número de vértices que separan $a$ de $b$ en $G$ es igual al máximo número de $a,b$-caminos INTERNAMENTE disjuntos.
-\item El mínimo número de aaritas que separan $a$ de $b$ es igual al máximo número de $a,b$-caminos arista disjuntos.
+\item Si $ab \not \in E$ ($a,b$ no son adyacentes), entonces el mínimo número de vértices que separan $a$ de $b$ en $G$ es igual al máximo número de $a,b$-caminos INTERNAMENTE disjuntos.
+\item El mínimo número de aritas que separan $a$ de $b$ es igual al máximo número de $a,b$-caminos arista-disjuntos.
 \end{enumerate}
 \end{corollary}
 \begin{proof}
@@ -1652,6 +1658,7 @@ Sean $a$ y $b$ vértices distintos de $G$.
 \end{enumerate}
 \end{proof}
 
+Notar que en el segundo ítem de la demostración anterior usamos que hay una correspondencia biyectiva entre aristas $A,B$-separadoras y vérticces separadores de $E(A),E(B)$ en $L(G)$, y también entre los $A,B$-caminos arista-disjuntos y los $E(A),E(B)$-caminos disjuntos de $L(G)$.
 
 \begin{theorem}[Versión global de Menger]
 \begin{enumerate}[(i)]

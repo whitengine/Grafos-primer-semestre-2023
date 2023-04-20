@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.4.11)  20 APR 2023 16:11
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.4.11)  20 APR 2023 17:47
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -2340,19 +2340,20 @@ Package caption Warning: The option `hypcap=true' will be ignored for this
 (caption)                particular \caption on input line 1498.
 See the caption package documentation for explanation.
 
-<./Editor de Grafos/Figuras/Clase 8/Dibujo 6.pdf, id=1441, 455.30101pt x 241.73
-462pt>
+<./Editor de Grafos/Figuras/Clase 8/Dibujo 6.pdf, id=1441, 455.30101pt x 199.47
+693pt>
 File: ./Editor de Grafos/Figuras/Clase 8/Dibujo 6.pdf Graphic file (type pdf)
 <use ./Editor de Grafos/Figuras/Clase 8/Dibujo 6.pdf>
 Package pdftex.def Info: ./Editor de Grafos/Figuras/Clase 8/Dibujo 6.pdf  used 
 on input line 1508.
-(pdftex.def)             Requested size: 341.43436pt x 181.28575pt.
+(pdftex.def)             Requested size: 341.43436pt x 149.59515pt.
 
 Package caption Warning: The option `hypcap=true' will be ignored for this
 (caption)                particular \caption on input line 1508.
 See the caption package documentation for explanation.
 
-[43 <./Editor de Grafos/Figuras/Clase 8/Dibujo 5.pdf>]
+[43 <./Editor de Grafos/Figuras/Clase 8/Dibujo 5.pdf> <./Editor de Grafos/Figur
+as/Clase 8/Dibujo 6.pdf>]
 
 LaTeX Font Warning: Font shape `T1/fnc/m/scit' undefined
 (Font)              using `T1/fnc/m/sc' instead on input line 1531.
@@ -2361,153 +2362,165 @@ LaTeX Font Warning: Font shape `T1/fnc/m/scit' undefined
 LaTeX Font Warning: Font shape `T1/fnc/m/scit' undefined
 (Font)              using `T1/fnc/m/sc' instead on input line 1532.
 
-<./Editor de Grafos/Figuras/Clase 8/Dibujo 7.pdf, id=1461, 455.30101pt x 199.47
-693pt>
+<./Editor de Grafos/Figuras/Clase 8/Dibujo 7.pdf, id=1475, 455.1099pt x 303.538
+99pt>
 File: ./Editor de Grafos/Figuras/Clase 8/Dibujo 7.pdf Graphic file (type pdf)
 <use ./Editor de Grafos/Figuras/Clase 8/Dibujo 7.pdf>
 Package pdftex.def Info: ./Editor de Grafos/Figuras/Clase 8/Dibujo 7.pdf  used 
-on input line 1536.
-(pdftex.def)             Requested size: 341.43436pt x 149.59515pt.
+on input line 1538.
+(pdftex.def)             Requested size: 341.43436pt x 227.72777pt.
 
 Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 1536.
+(caption)                particular \caption on input line 1538.
 See the caption package documentation for explanation.
 
-[44 <./Editor de Grafos/Figuras/Clase 8/Dibujo 6.pdf>]
-<./Editor de Grafos/Figuras/Clase 9/Dibujo 1.pdf, id=1492, 455.30101pt x 315.80
+[44]
+<./Editor de Grafos/Figuras/Clase 8/Dibujo 8.pdf, id=1486, 455.30101pt x 254.28
+986pt>
+File: ./Editor de Grafos/Figuras/Clase 8/Dibujo 8.pdf Graphic file (type pdf)
+<use ./Editor de Grafos/Figuras/Clase 8/Dibujo 8.pdf>
+Package pdftex.def Info: ./Editor de Grafos/Figuras/Clase 8/Dibujo 8.pdf  used 
+on input line 1542.
+(pdftex.def)             Requested size: 341.43436pt x 190.70139pt.
+
+
+Package caption Warning: The option `hypcap=true' will be ignored for this
+(caption)                particular \caption on input line 1542.
+See the caption package documentation for explanation.
+
+[45 <./Editor de Grafos/Figuras/Clase 8/Dibujo 7.pdf> <./Editor de Grafos/Figur
+as/Clase 8/Dibujo 8.pdf>]
+<./Editor de Grafos/Figuras/Clase 9/Dibujo 1.pdf, id=1530, 455.30101pt x 315.80
 94pt>
 File: ./Editor de Grafos/Figuras/Clase 9/Dibujo 1.pdf Graphic file (type pdf)
 <use ./Editor de Grafos/Figuras/Clase 9/Dibujo 1.pdf>
 Package pdftex.def Info: ./Editor de Grafos/Figuras/Clase 9/Dibujo 1.pdf  used 
-on input line 1557.
+on input line 1563.
 (pdftex.def)             Requested size: 341.43436pt x 236.83719pt.
 
 
 Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 1557.
+(caption)                particular \caption on input line 1563.
 See the caption package documentation for explanation.
 
-[45 <./Editor de Grafos/Figuras/Clase 8/Dibujo 7.pdf>]
-<./Editor de Grafos/Figuras/Clase 9/Dibujo 2.pdf, id=1515, 455.30101pt x 175.26
+<./Editor de Grafos/Figuras/Clase 9/Dibujo 2.pdf, id=1531, 455.30101pt x 175.26
 088pt>
 File: ./Editor de Grafos/Figuras/Clase 9/Dibujo 2.pdf Graphic file (type pdf)
 <use ./Editor de Grafos/Figuras/Clase 9/Dibujo 2.pdf>
 Package pdftex.def Info: ./Editor de Grafos/Figuras/Clase 9/Dibujo 2.pdf  used 
-on input line 1560.
+on input line 1566.
 (pdftex.def)             Requested size: 341.43436pt x 131.43463pt.
 
-
 Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 1560.
+(caption)                particular \caption on input line 1566.
 See the caption package documentation for explanation.
 
+[46 <./Editor de Grafos/Figuras/Clase 9/Dibujo 1.pdf>]
 
 LaTeX Font Warning: Font shape `T1/fnc/m/scit' undefined
-(Font)              using `T1/fnc/m/sc' instead on input line 1567.
+(Font)              using `T1/fnc/m/sc' instead on input line 1573.
 
 
 LaTeX Font Warning: Font shape `T1/fnc/m/scit' undefined
-(Font)              using `T1/fnc/m/sc' instead on input line 1568.
+(Font)              using `T1/fnc/m/sc' instead on input line 1574.
 
-[46 <./Editor de Grafos/Figuras/Clase 9/Dibujo 1.pdf> <./Editor de Grafos/Figur
-as/Clase 9/Dibujo 2.pdf>]
-<./Editor de Grafos/Figuras/Clase 10/Dibujo 1.pdf, id=1552, 455.30101pt x 169.2
+<./Editor de Grafos/Figuras/Clase 10/Dibujo 1.pdf, id=1551, 455.30101pt x 169.2
 4695pt>
 File: ./Editor de Grafos/Figuras/Clase 10/Dibujo 1.pdf Graphic file (type pdf)
 <use ./Editor de Grafos/Figuras/Clase 10/Dibujo 1.pdf>
 Package pdftex.def Info: ./Editor de Grafos/Figuras/Clase 10/Dibujo 1.pdf  used
- on input line 1603.
-(pdftex.def)             Requested size: 341.43436pt x 126.92456pt.
-
-
-Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 1603.
-See the caption package documentation for explanation.
-
-<./Editor de Grafos/Figuras/Clase 10/Dibujo 2.pdf, id=1553, 455.30101pt x 216.7
-8082pt>
-File: ./Editor de Grafos/Figuras/Clase 10/Dibujo 2.pdf Graphic file (type pdf)
-<use ./Editor de Grafos/Figuras/Clase 10/Dibujo 2.pdf>
-Package pdftex.def Info: ./Editor de Grafos/Figuras/Clase 10/Dibujo 2.pdf  used
  on input line 1609.
-(pdftex.def)             Requested size: 341.43436pt x 162.57196pt.
+(pdftex.def)             Requested size: 341.43436pt x 126.92456pt.
 
 Package caption Warning: The option `hypcap=true' will be ignored for this
 (caption)                particular \caption on input line 1609.
 See the caption package documentation for explanation.
 
-[47 <./Editor de Grafos/Figuras/Clase 10/Dibujo 1.pdf>]
+[47 <./Editor de Grafos/Figuras/Clase 9/Dibujo 2.pdf>]
+<./Editor de Grafos/Figuras/Clase 10/Dibujo 2.pdf, id=1577, 455.30101pt x 216.7
+8082pt>
+File: ./Editor de Grafos/Figuras/Clase 10/Dibujo 2.pdf Graphic file (type pdf)
+<use ./Editor de Grafos/Figuras/Clase 10/Dibujo 2.pdf>
+Package pdftex.def Info: ./Editor de Grafos/Figuras/Clase 10/Dibujo 2.pdf  used
+ on input line 1615.
+(pdftex.def)             Requested size: 341.43436pt x 162.57196pt.
+
+
+Package caption Warning: The option `hypcap=true' will be ignored for this
+(caption)                particular \caption on input line 1615.
+See the caption package documentation for explanation.
+
 <./Editor de Grafos/Figuras/Clase 10/Dibujo 3.pdf, id=1578, 455.30101pt x 119.9
 4185pt>
 File: ./Editor de Grafos/Figuras/Clase 10/Dibujo 3.pdf Graphic file (type pdf)
 <use ./Editor de Grafos/Figuras/Clase 10/Dibujo 3.pdf>
 Package pdftex.def Info: ./Editor de Grafos/Figuras/Clase 10/Dibujo 3.pdf  used
- on input line 1618.
+ on input line 1624.
 (pdftex.def)             Requested size: 341.43436pt x 89.94882pt.
 
-
 Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 1618.
+(caption)                particular \caption on input line 1624.
 See the caption package documentation for explanation.
 
-<./Editor de Grafos/Figuras/Clase 10/Dibujo 4.pdf, id=1579, 455.30101pt x 142.8
+[48 <./Editor de Grafos/Figuras/Clase 10/Dibujo 1.pdf> <./Editor de Grafos/Figu
+ras/Clase 10/Dibujo 2.pdf>]
+<./Editor de Grafos/Figuras/Clase 10/Dibujo 4.pdf, id=1614, 455.30101pt x 142.8
 814pt>
 File: ./Editor de Grafos/Figuras/Clase 10/Dibujo 4.pdf Graphic file (type pdf)
 <use ./Editor de Grafos/Figuras/Clase 10/Dibujo 4.pdf>
 Package pdftex.def Info: ./Editor de Grafos/Figuras/Clase 10/Dibujo 4.pdf  used
- on input line 1620.
+ on input line 1626.
 (pdftex.def)             Requested size: 341.43436pt x 107.15205pt.
 
+
 Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 1620.
+(caption)                particular \caption on input line 1626.
 See the caption package documentation for explanation.
 
-<./Editor de Grafos/Figuras/Clase 10/Dibujo 5.pdf, id=1580, 455.30101pt x 248.9
+<./Editor de Grafos/Figuras/Clase 10/Dibujo 5.pdf, id=1615, 455.30101pt x 248.9
 3697pt>
 File: ./Editor de Grafos/Figuras/Clase 10/Dibujo 5.pdf Graphic file (type pdf)
 <use ./Editor de Grafos/Figuras/Clase 10/Dibujo 5.pdf>
 Package pdftex.def Info: ./Editor de Grafos/Figuras/Clase 10/Dibujo 5.pdf  used
- on input line 1627.
+ on input line 1633.
 (pdftex.def)             Requested size: 341.43436pt x 186.68707pt.
 
 Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 1627.
+(caption)                particular \caption on input line 1633.
 See the caption package documentation for explanation.
 
-[48 <./Editor de Grafos/Figuras/Clase 10/Dibujo 2.pdf> <./Editor de Grafos/Figu
-ras/Clase 10/Dibujo 3.pdf> <./Editor de Grafos/Figuras/Clase 10/Dibujo 4.pdf>]
-<./Editor de Grafos/Figuras/Clase 10/Dibujo 6.pdf, id=1651, 455.30101pt x 213.9
+<./Editor de Grafos/Figuras/Clase 10/Dibujo 6.pdf, id=1616, 455.30101pt x 213.9
 1039pt>
 File: ./Editor de Grafos/Figuras/Clase 10/Dibujo 6.pdf Graphic file (type pdf)
 <use ./Editor de Grafos/Figuras/Clase 10/Dibujo 6.pdf>
 Package pdftex.def Info: ./Editor de Grafos/Figuras/Clase 10/Dibujo 6.pdf  used
- on input line 1636.
+ on input line 1642.
 (pdftex.def)             Requested size: 341.43436pt x 160.41933pt.
 
-
 Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 1636.
+(caption)                particular \caption on input line 1642.
 See the caption package documentation for explanation.
 
+[49 <./Editor de Grafos/Figuras/Clase 10/Dibujo 3.pdf> <./Editor de Grafos/Figu
+ras/Clase 10/Dibujo 4.pdf> <./Editor de Grafos/Figuras/Clase 10/Dibujo 5.pdf>]
 
 LaTeX Font Warning: Font shape `T1/fnc/m/scit' undefined
-(Font)              using `T1/fnc/m/sc' instead on input line 1644.
-
-
-LaTeX Font Warning: Font shape `T1/fnc/m/scit' undefined
-(Font)              using `T1/fnc/m/sc' instead on input line 1645.
+(Font)              using `T1/fnc/m/sc' instead on input line 1650.
 
 
 LaTeX Font Warning: Font shape `T1/fnc/m/scit' undefined
-(Font)              using `T1/fnc/m/sc' instead on input line 1658.
+(Font)              using `T1/fnc/m/sc' instead on input line 1651.
 
-[49 <./Editor de Grafos/Figuras/Clase 10/Dibujo 5.pdf> <./Editor de Grafos/Figu
-ras/Clase 10/Dibujo 6.pdf>]
 
 LaTeX Font Warning: Font shape `T1/fnc/m/scit' undefined
-(Font)              using `T1/fnc/m/sc' instead on input line 1659.
+(Font)              using `T1/fnc/m/sc' instead on input line 1665.
 
-(./Apendice/Apendice.tex [50]
+
+LaTeX Font Warning: Font shape `T1/fnc/m/scit' undefined
+(Font)              using `T1/fnc/m/sc' instead on input line 1666.
+
+(./Apendice/Apendice.tex [50 <./Editor de Grafos/Figuras/Clase 10/Dibujo 6.pdf>
+]
 Ap\'{e}ndice A.
 [51
 
@@ -2528,10 +2541,10 @@ Package rerunfilecheck Info: File `"Apuntes - GRAFOS".out' has not changed.
 (rerunfilecheck)             Checksum: 1A3A52E31A0F9EC8837335F78CCA0BE0;3603.
  ) 
 Here is how much of TeX's memory you used:
- 29621 strings out of 476017
- 571093 string characters out of 5786780
+ 29628 strings out of 476017
+ 571492 string characters out of 5786780
  1865666 words of memory out of 5000000
- 49200 multiletter control sequences out of 15000+600000
+ 49207 multiletter control sequences out of 15000+600000
  596809 words of font info for 186 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  98i,13n,94p,1287b,995s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -2555,10 +2568,10 @@ tengine/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb>
 /home/whitengine/texlive/2023/texmf-dist/fonts/type1/urw/ncntrsbk/uncr8a.pfb></
 home/whitengine/texlive/2023/texmf-dist/fonts/type1/urw/ncntrsbk/uncri8a.pfb>
 Output written on "/home/enzo/Desktop/Doctorado Chile/Clases/2023/Primer semest
-re/Grafos/out/Apuntes - GRAFOS.pdf" (56 pages, 941318 bytes).
+re/Grafos/out/Apuntes - GRAFOS.pdf" (56 pages, 948905 bytes).
 PDF statistics:
- 1865 PDF objects out of 2073 (max. 8388607)
- 1089 compressed objects within 11 object streams
+ 1883 PDF objects out of 2073 (max. 8388607)
+ 1102 compressed objects within 12 object streams
  291 named destinations out of 1000 (max. 500000)
- 500 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 505 words of extra memory for PDF output out of 10000 (max. 10000000)
 

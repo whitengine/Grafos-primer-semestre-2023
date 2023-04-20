@@ -18,7 +18,7 @@
 \contentsline {section}{\numberline {1.8}Clase 8: 06/04/23}{40}{section.1.8}%
 \contentsline {subsection}{\numberline {1.8.1}Contracciones y menores}{42}{subsection.1.8.1}%
 \contentsline {subsection}{\numberline {1.8.2}subdivisiones}{43}{subsection.1.8.2}%
-\contentsline {section}{\numberline {1.9}Clase 9: 17/04/23}{45}{section.1.9}%
+\contentsline {section}{\numberline {1.9}Clase 9: 17/04/23}{46}{section.1.9}%
 \contentsline {subsection}{\numberline {1.9.1}}{47}{subsection.1.9.1}%
 \contentsline {section}{\numberline {1.10}Clase 10: 20/04/23}{47}{section.1.10}%
 \contentsline {chapter}{\numberline {A}Primera parte de la materia (primer capítulo del Diestel)}{51}{appendix.Alph1}%
