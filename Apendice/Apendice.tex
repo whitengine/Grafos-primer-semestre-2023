@@ -37,7 +37,7 @@ De manera la manera usual, para cualquier subespacio $\mathcal{F} \subset \mathc
 \]
 Que es un subespacio. Se tiene que
 $$
-\dim \mathcal{F} + \dim \mathcal{F}^perp = m.
+\dim \mathcal{F} + \dim \mathcal{F}^\perp = m.
 $$
 Pues se sigue de la demostración standard, ya que este producto es \textit{no degenerado}, es decír el morfismo de espacios vectoriales $F \mapsto \langle \cdot, F \rangle$ es inyectivo, luego la ecuación se sigue de álgebra lineal (estudiando el espacio dual).
 
@@ -59,17 +59,77 @@ Como los ciclos tienen grados pares y tomar diferencia simétrica preserva esta 
 
 
 
+\begin{definition}
+Un conjunto $F$ de aristas se dice un \textbf{corte}\footnote{No vamos a incluir el caso de particiones vacías. Luego la única manera de que el conjunto vacío de aristas sea un corte es que el grafo subyacente sea disconexo.}
+ de $G$ si existe una partición $\{V_1,V_2\}$ de $V$ tal que $F = E(V_1,V_2)$. Decimos que las aristas de $F$ \textbf{cortan} esta partición. Los conjuntos $V_1,V_2$ son los \textbf{lados} del corte. A un corte no vacío minimal lo llamamos \textbf{enlace}.
+\end{definition}
 
+\begin{proposition}
+Junto con el conjunto vacío $\emptyset$, los cortes en $G$ forman un subespacio $\mathcal B = \mathcal B ( G) \subset \mathcal{E}(G)$. Este espacio está generado por los cortes de la forma $E(v)$ ( es decir los conjuntos de aristas incidentes a un vértice).
+\end{proposition}
+\begin{proof}
+Sea $\mathcal B$ el subespacio generado por los cortes de la forma $E(v)$ en $\mathcal{E} (G)$. Todo corte de $G$, con partición $\{ V_1 , V_2 \}$, coincide con $\sum_{v \in V_1} E(v)$ y por lo tanto está en $\mathcal{B}$. En efecto, el conjunto $\sum_{v \in V_1} E(v)$ es la diferencia simétrica de los conjuntos $E(v)$, i.e. las aristas que están en algún $E(v), v  \in V_1$ pero no en todos, es decir, las aristas que inciden en un vértice de $V_1$ y que su otro extremo no puede estár en $V_1$, es decir tiene que estár en $V_2$. Recíprocamente, todo conjunto $\sum_{u \in U}E(u) \in \mathcal{B}$ es vacío, por ejemplo si $U \in \{ \emptyset , V \}$, o es el corte $E(U, V \setminus U)$ (mismo razonamiento de antes).
+\end{proof}
 
+\begin{definition}
+El espacio $\mathcal{B} (G)$ es el \textbf{espacio de cortes}, o el \textbf{espacio de enlaces} de $G$.
+\end{definition}
 
+\begin{obs}
+Los enlaces son para $\mathcal B$, lo que son los ciclos para $\mathcal C$: elementos minimales no vacíos.
 
+Si $G$ es conexo, entonces los enlaces son justamente sus cortes minimales: un corte en un grafo conexo es minimal si y solo si ambos lados de la partición inducen subgrafos conexos. En efecto, por un lado, dados un corte minimal con bipartición $\{V_1,V_2\}$ induce subgrafos conexos $G[V_1],G[V_2]$, pues de lo contrario eligiendo un vértice $v_1 \in V_1$ aislado en $G[V_1]$, se sigue que el corte $E(V_1 \setminus \{v_1 \}, V_2 \cup \{ v_1 \})$ pierde todas la $V_1,V_2$ aristas incidentes en $v_1$ ($G$ es conexo), contradiciendo minimalidad; por otro lado, un corte con bipartición $\{V_1,V_2\}$ de conjuntos de vértices que inducen subgrafos conexos tiene que ser minimal, de lo contrario es que se le pueden quitar aristas y sigue siendo un corte, luego es porque uno de los subgrafos inducidos no era conexo. Ahora, si $G$ es disconexo, luego sus enlases sson los cortes minimales de sus componentes conexas, pues unir cortes de cada componente conexa sigue dando un corte (y por lo tanto un corte no es minimal a menos que esté contenido en una componente).
+\end{obs}
 
+\begin{lemma}
+Todo corte es la unión disjunta de enlaces.
+\end{lemma}
+\begin{proof}
+Haremos inducción en el tamaño del corte $F$ a considerar. Para $F = \emptyset$ no hay nada que probar. Si $F \neq \emptyset$, y no es un enlace, luego contiene propiamente a algún corte $F'$. Por la proposición anterior, la suma de cortes es un corte (forman un subespacio), es decir $F \setminus F' = F + F'$ es un corte más chico no vacío. Por inducción tenemos que $F'$ y $F \setminus F'$ son ambos unión disjunta de enlaces, y por lo tanto $F$ también.
+\end{proof}
 
+\begin{exercise}
+Hallar una base de $\mathcal{B}(G)$ dada por conjuntos de aristas de la forma $E(v)$.
+\end{exercise}
+\begin{proof}
+Por el lema anterior, sabemos que los enlaces generan $\mathcal{B} (G)$, luego afirmamos que son linealmente independientes y por lo tanto forman un base deste subespacio. En efecto, que sean linealmente dependientes equivale a que existen enlaces $E(U_1^1,U_2^1), \ldots, E(U_1^r, U_2^r)$ (distintos) tales que
+$$
+\emptyset = \sum_{1 \leq j\leq r} E(U_1^j,U_2^j).
+$$
+Que los enlaces sean distintos, implica que la suma (comlpemento simétrico) es en realidad una unión disjunta y en particular no puede dar vacío. En efecto, dados dos enlaces distintos $F$ y $F'$, deben ser disjuntos, pues por el lema anterior, el conjunto de cortes es un subespacio luego $F+F'$ es un enlace contenido en $F$ y $F'$
+\end{proof}
 
+\begin{corollary}
+Se sigue que
+$$
+\dim \mathcal{B} (G) = \sum_{C \text{ componente de $G$}} (\abs{C} -1) = \abs{G} -  \# \{\text{componentes de $G$}\}.
+$$
+En particular si $G$ es conexo,
+\[
+    \dim \mathcal{B} (G) = \abs G -1.
+\]
+\end{corollary}
 
+\begin{exercise}
+Construir de manera explícita la partición en enlaces de un corte: sea $F$ un corte en $G$, con partición $\{V_1, V_2\}$. Para $i = 1,2$ escribamos $C_1^i, \ldots, C^i_{k(i)}$ a las componentes conexas de $G[V_i]$. Usar los $C_j^i$ para definir los enlaces que forman una unión disjunta para $F$.
+\end{exercise}
+\begin{solution}
+Vamos a considerar el caso $G$ conexo, pues el caso disconexo directamente escribimos a un corte como la unión disjunta de sus aristas en cada componente. Ahora, si $G$ es conexo consideremos los conjuntos de aristas
+$$
+E(C_i^1 \cup \bigcup_{C_j^2 \cap N (C_i^1) \neq \emptyset} C_j^2, \bigcup_{C_j^2 \cap N(C_i^1) = \emptyset} C_j^2 \cup \bigcup_{C_k^1 \neq C_i^1} C_{k}^1),
+$$
+para todo $1 \leq i \leq k(1)$ fijo. Hay que verificar que estos son disjuntos entre si, y su unión da $E(V_1,V_2)$, y además que son enlaces (basta ver que su partición induce subgrafos conexos). En efecto, $E(V_1,V_2)$ está claramente contenido en su unión; recíprocamente, las aristas de $E(C_i^1 \cup N (C_i^1)\cap V_2, *)$ están en $E(V_1,V_2)$ pues hay dos posibilidades: o la arista está en $E(C_i^1, C_j^2)$ con $C_j^2 \cap N (C_i^1) = \emptyset$ o está en $E(C_j^2,C_{i'}^1)$. Por contrucción son enlaces porque cada parte de la partición es un subgrafo inducido conexo, pues la parte $\bigcup_{C_j^2 \cap N(C_i^1) = \emptyset} C_j^2 \cup \bigcup_{C_k^1 \neq C_i^1} C_{k}^1$ tiene que ser conexa porque $G$ lo es y las $C_j^i$ con $i$ fijo no están conectadas entre sí porque son las componentes de $V_i$. Finalmente, tienen que ser claramente disjuntas.
+\end{solution}
 
+\begin{theorem}
+El espacio de ciclos $\mathcal{C}(G)$ y el espacio de cortes $\mathcal{B}(G)$ de cualquier grafo satisfacen
+\[
+    \mathcal C = \mathcal B^{perp} \quad \text{y} \quad \mathcal B = \mathcal C^{\perp}.
+\]
+\end{theorem}
+\begin{proof}
 
-
+\end{proof}
 
 
 \end{document}

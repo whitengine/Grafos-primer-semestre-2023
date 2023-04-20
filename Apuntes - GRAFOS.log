@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.4.11)  17 APR 2023 23:08
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.4.11)  19 APR 2023 20:37
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1336,12 +1336,12 @@ Package: amsthm 2020/05/29 v2.20.6
 \c@numeroClase=\count344
 \c@numeroDibujo=\count345
 LaTeX Font Info:    Trying to load font information for T1+fnc on input line 40
-0.
+6.
  (/home/whitengine/texlive/2023/texmf-dist/tex/latex/fouriernc/t1fnc.fd
 File: t1fnc.fd 2005/12/13 scaled font definitions for T1/fnc.
 )
 LaTeX Font Info:    Font shape `T1/fnc/m/n' will be
-(Font)              scaled to size 11.15991pt on input line 400.
+(Font)              scaled to size 11.15991pt on input line 406.
 
 (/home/enzo/Desktop/Doctorado Chile/Clases/2023/Primer semestre/Grafos/Apuntes 
 - GRAFOS.aux
@@ -1350,53 +1350,53 @@ LaTeX Info: Redefining \% on input line 23.
 )
 \openout1 = `"Apuntes - GRAFOS.aux"'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 400.
-LaTeX Font Info:    ... okay on input line 400.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 400.
-LaTeX Font Info:    ... okay on input line 400.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 400.
-LaTeX Font Info:    ... okay on input line 400.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 400.
-LaTeX Font Info:    ... okay on input line 400.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 400.
-LaTeX Font Info:    ... okay on input line 400.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 400.
-LaTeX Font Info:    ... okay on input line 400.
-LaTeX Font Info:    Checking defaults for U/mathx/m/n on input line 400.
-LaTeX Font Info:    ... okay on input line 400.
-LaTeX Font Info:    Checking defaults for FML/fncmi/m/it on input line 400.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 406.
+LaTeX Font Info:    ... okay on input line 406.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 406.
+LaTeX Font Info:    ... okay on input line 406.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 406.
+LaTeX Font Info:    ... okay on input line 406.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 406.
+LaTeX Font Info:    ... okay on input line 406.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 406.
+LaTeX Font Info:    ... okay on input line 406.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 406.
+LaTeX Font Info:    ... okay on input line 406.
+LaTeX Font Info:    Checking defaults for U/mathx/m/n on input line 406.
+LaTeX Font Info:    ... okay on input line 406.
+LaTeX Font Info:    Checking defaults for FML/fncmi/m/it on input line 406.
 LaTeX Font Info:    Trying to load font information for FML+fncmi on input line
- 400.
+ 406.
 
 (/home/whitengine/texlive/2023/texmf-dist/tex/latex/fouriernc/fmlfncmi.fd
 File: fmlfncmi.fd 2005/12/20 Fontinst v1.928 font definitions for FML/fncmi.
 )
-LaTeX Font Info:    ... okay on input line 400.
-LaTeX Font Info:    Checking defaults for FMS/fncm/m/n on input line 400.
+LaTeX Font Info:    ... okay on input line 406.
+LaTeX Font Info:    Checking defaults for FMS/fncm/m/n on input line 406.
 LaTeX Font Info:    Trying to load font information for FMS+fncm on input line 
-400.
+406.
 
 (/home/whitengine/texlive/2023/texmf-dist/tex/latex/fouriernc/fmsfncm.fd
 File: fmsfncm.fd 2005/12/20 Fontinst v1.928 font definitions for FMS/fncm.
 )
-LaTeX Font Info:    ... okay on input line 400.
-LaTeX Font Info:    Checking defaults for FMX/futm/m/n on input line 400.
+LaTeX Font Info:    ... okay on input line 406.
+LaTeX Font Info:    Checking defaults for FMX/futm/m/n on input line 406.
 LaTeX Font Info:    Trying to load font information for FMX+futm on input line 
-400.
+406.
 
 (/home/whitengine/texlive/2023/texmf-dist/tex/latex/fourier/fmxfutm.fd
 File: fmxfutm.fd futm-extension
 )
-LaTeX Font Info:    ... okay on input line 400.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 400.
-LaTeX Font Info:    ... okay on input line 400.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 400.
-LaTeX Font Info:    ... okay on input line 400.
-LaTeX Font Info:    Redeclaring math symbol \iintop on input line 400.
-LaTeX Font Info:    Redeclaring math symbol \iiintop on input line 400.
-LaTeX Font Info:    Redeclaring math symbol \oiintop on input line 400.
-LaTeX Font Info:    Redeclaring math accent \widehat on input line 400.
-LaTeX Font Info:    Redeclaring math accent \widetilde on input line 400.
+LaTeX Font Info:    ... okay on input line 406.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 406.
+LaTeX Font Info:    ... okay on input line 406.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 406.
+LaTeX Font Info:    ... okay on input line 406.
+LaTeX Font Info:    Redeclaring math symbol \iintop on input line 406.
+LaTeX Font Info:    Redeclaring math symbol \iiintop on input line 406.
+LaTeX Font Info:    Redeclaring math symbol \oiintop on input line 406.
+LaTeX Font Info:    Redeclaring math accent \widehat on input line 406.
+LaTeX Font Info:    Redeclaring math accent \widetilde on input line 406.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -1457,15 +1457,15 @@ g
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
-LaTeX Info: Command `\dddot' is already robust on input line 400.
-LaTeX Info: Command `\ddddot' is already robust on input line 400.
+LaTeX Info: Command `\dddot' is already robust on input line 406.
+LaTeX Info: Command `\ddddot' is already robust on input line 406.
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: subfig package v1.3 is loaded.
 Package caption Info: hyperref package is loaded.
 Package caption Info: End \AtBeginDocument code.
-LaTeX Info: Redefining \. on input line 400.
-LaTeX Info: Redefining \% on input line 400.
-Package hyperref Info: Link coloring ON on input line 400.
+LaTeX Info: Redefining \. on input line 406.
+LaTeX Info: Redefining \% on input line 406.
+Package hyperref Info: Link coloring ON on input line 406.
 
 (/home/enzo/Desktop/Doctorado Chile/Clases/2023/Primer semestre/Grafos/Apuntes 
 - GRAFOS.out)
@@ -1475,49 +1475,49 @@ Package hyperref Info: Link coloring ON on input line 400.
 \openout4 = `"Apuntes - GRAFOS.out"'.
 
 LaTeX Font Info:    Font shape `T1/fnc/m/n' will be
-(Font)              scaled to size 19.28804pt on input line 403.
+(Font)              scaled to size 19.28804pt on input line 409.
 LaTeX Font Info:    Font shape `T1/fnc/m/n' will be
-(Font)              scaled to size 13.39188pt on input line 403.
+(Font)              scaled to size 13.39188pt on input line 409.
 LaTeX Font Info:    Font shape `T1/fnc/m/n' will be
-(Font)              scaled to size 9.29993pt on input line 403.
+(Font)              scaled to size 9.29993pt on input line 409.
 LaTeX Font Info:    Font shape `T1/fnc/m/n' will be
-(Font)              scaled to size 7.43994pt on input line 403.
+(Font)              scaled to size 7.43994pt on input line 409.
 LaTeX Font Info:    Font shape `FMX/futm/m/n' will be
-(Font)              scaled to size 13.24796pt on input line 403.
+(Font)              scaled to size 13.24796pt on input line 409.
 LaTeX Font Info:    Font shape `FMX/futm/m/n' will be
-(Font)              scaled to size 9.19998pt on input line 403.
+(Font)              scaled to size 9.19998pt on input line 409.
 LaTeX Font Info:    Font shape `FMX/futm/m/n' will be
-(Font)              scaled to size 7.35999pt on input line 403.
+(Font)              scaled to size 7.35999pt on input line 409.
 LaTeX Font Info:    Trying to load font information for FML+fncm on input line 
-403.
+409.
 
 (/home/whitengine/texlive/2023/texmf-dist/tex/latex/fouriernc/fmlfncm.fd
 File: fmlfncm.fd 2005/12/20 Fontinst v1.928 font definitions for FML/fncm.
 )
 LaTeX Font Info:    Font shape `U/futm/m/n' will be
-(Font)              scaled to size 13.24796pt on input line 403.
+(Font)              scaled to size 13.24796pt on input line 409.
 LaTeX Font Info:    Font shape `U/futm/m/n' will be
-(Font)              scaled to size 9.19998pt on input line 403.
+(Font)              scaled to size 9.19998pt on input line 409.
 LaTeX Font Info:    Font shape `U/futm/m/n' will be
-(Font)              scaled to size 7.35999pt on input line 403.
+(Font)              scaled to size 7.35999pt on input line 409.
 LaTeX Font Info:    Trying to load font information for U+stmry on input line 4
-03.
+09.
 
 (/home/whitengine/texlive/2023/texmf-dist/tex/latex/stmaryrd/Ustmry.fd)
-LaTeX Font Info:    Trying to load font information for U+msa on input line 403
+LaTeX Font Info:    Trying to load font information for U+msa on input line 409
 .
 
 (/home/whitengine/texlive/2023/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 403
+LaTeX Font Info:    Trying to load font information for U+msb on input line 409
 .
 
 (/home/whitengine/texlive/2023/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
 LaTeX Font Info:    Trying to load font information for U+rsfs on input line 40
-3.
+9.
 
 (/home/whitengine/texlive/2023/texmf-dist/tex/latex/jknapltx/ursfs.fd
 File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
@@ -1526,9 +1526,9 @@ File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
 {/home/whitengine/texlive/2023/texmf-var/fonts/map/pdftex/updmap/pdftex.map}{/h
 ome/whitengine/texlive/2023/texmf-dist/fonts/enc/dvips/base/8r.enc}]
 LaTeX Font Info:    Font shape `T1/fnc/m/n' will be
-(Font)              scaled to size 23.13821pt on input line 406.
+(Font)              scaled to size 23.13821pt on input line 412.
 LaTeX Font Info:    Font shape `T1/fnc/b/n' will be
-(Font)              scaled to size 23.13821pt on input line 406.
+(Font)              scaled to size 23.13821pt on input line 412.
 
 (/home/enzo/Desktop/Doctorado Chile/Clases/2023/Primer semestre/Grafos/Apuntes 
 - GRAFOS.toc
@@ -1561,111 +1561,111 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.410 \chapter
+l.416 \chapter
               {Parte I: IntroducciÃ³n a grafos} [1
 
 ]
 Cap\'{\i }tulo 1.
 LaTeX Font Info:    Font shape `T1/fnc/m/n' will be
-(Font)              scaled to size 16.07027pt on input line 417.
+(Font)              scaled to size 16.07027pt on input line 423.
 LaTeX Font Info:    Font shape `T1/fnc/b/n' will be
-(Font)              scaled to size 16.07027pt on input line 417.
-<./Editor de Grafos/Figuras/Clase 1/Dibujo 1.pdf, id=119, 426.39299pt x 199.619
+(Font)              scaled to size 16.07027pt on input line 423.
+<./Editor de Grafos/Figuras/Clase 1/Dibujo 1.pdf, id=134, 426.39299pt x 199.619
 06pt>
 File: ./Editor de Grafos/Figuras/Clase 1/Dibujo 1.pdf Graphic file (type pdf)
 <use ./Editor de Grafos/Figuras/Clase 1/Dibujo 1.pdf>
 Package pdftex.def Info: ./Editor de Grafos/Figuras/Clase 1/Dibujo 1.pdf  used 
-on input line 443.
+on input line 449.
 (pdftex.def)             Requested size: 341.43436pt x 159.8508pt.
 
 Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 443.
+(caption)                particular \caption on input line 449.
 See the caption package documentation for explanation.
 
 [2
 
 ]
-<./Editor de Grafos/Figuras/Clase 1/Dibujo 2.pdf, id=134, 396.52141pt x 187.420
+<./Editor de Grafos/Figuras/Clase 1/Dibujo 2.pdf, id=149, 396.52141pt x 187.420
 2pt>
 File: ./Editor de Grafos/Figuras/Clase 1/Dibujo 2.pdf Graphic file (type pdf)
 <use ./Editor de Grafos/Figuras/Clase 1/Dibujo 2.pdf>
 Package pdftex.def Info: ./Editor de Grafos/Figuras/Clase 1/Dibujo 2.pdf  used 
-on input line 468.
+on input line 474.
 (pdftex.def)             Requested size: 341.43436pt x 161.38985pt.
 
 
 Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 468.
+(caption)                particular \caption on input line 474.
 See the caption package documentation for explanation.
 
 [3 </home/enzo/Desktop/Doctorado Chile/Clases/2023/Primer semestre/Grafos/./Edi
 tor de Grafos/Figuras/Clase 1/Dibujo 1.pdf> </home/enzo/Desktop/Doctorado Chile
 /Clases/2023/Primer semestre/Grafos/./Editor de Grafos/Figuras/Clase 1/Dibujo 2
 .pdf>]
-<./Editor de Grafos/Figuras/Clase 1/Dibujo 3.pdf, id=176, 269.80798pt x 103.105
+<./Editor de Grafos/Figuras/Clase 1/Dibujo 3.pdf, id=191, 269.80798pt x 103.105
 2pt>
 File: ./Editor de Grafos/Figuras/Clase 1/Dibujo 3.pdf Graphic file (type pdf)
 <use ./Editor de Grafos/Figuras/Clase 1/Dibujo 3.pdf>
 Package pdftex.def Info: ./Editor de Grafos/Figuras/Clase 1/Dibujo 3.pdf  used 
-on input line 483.
+on input line 489.
 (pdftex.def)             Requested size: 341.43436pt x 130.48903pt.
 
 
 Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 483.
+(caption)                particular \caption on input line 489.
 See the caption package documentation for explanation.
 
-<./Editor de Grafos/Figuras/Clase 1/Dibujo 4.pdf, id=177, 340.4144pt x 281.0515
+<./Editor de Grafos/Figuras/Clase 1/Dibujo 4.pdf, id=192, 340.4144pt x 281.0515
 3pt>
 File: ./Editor de Grafos/Figuras/Clase 1/Dibujo 4.pdf Graphic file (type pdf)
 <use ./Editor de Grafos/Figuras/Clase 1/Dibujo 4.pdf>
 Package pdftex.def Info: ./Editor de Grafos/Figuras/Clase 1/Dibujo 4.pdf  used 
-on input line 501.
+on input line 507.
 (pdftex.def)             Requested size: 341.43436pt x 281.89568pt.
 
 Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 501.
+(caption)                particular \caption on input line 507.
 See the caption package documentation for explanation.
 
 [4 </home/enzo/Desktop/Doctorado Chile/Clases/2023/Primer semestre/Grafos/./Edi
 tor de Grafos/Figuras/Clase 1/Dibujo 3.pdf> </home/enzo/Desktop/Doctorado Chile
 /Clases/2023/Primer semestre/Grafos/./Editor de Grafos/Figuras/Clase 1/Dibujo 4
 .pdf>]
-<./Editor de Grafos/Figuras/Clase 1/Dibujo 5.pdf, id=219, 425.8259pt x 157.7409
+<./Editor de Grafos/Figuras/Clase 1/Dibujo 5.pdf, id=234, 425.8259pt x 157.7409
 8pt>
 File: ./Editor de Grafos/Figuras/Clase 1/Dibujo 5.pdf Graphic file (type pdf)
 <use ./Editor de Grafos/Figuras/Clase 1/Dibujo 5.pdf>
 Package pdftex.def Info: ./Editor de Grafos/Figuras/Clase 1/Dibujo 5.pdf  used 
-on input line 515.
+on input line 521.
 (pdftex.def)             Requested size: 341.43436pt x 126.48178pt.
 
 
 Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 515.
+(caption)                particular \caption on input line 521.
 See the caption package documentation for explanation.
 
-<./Editor de Grafos/Figuras/Clase 2/Dibujo 1.pdf, id=220, 425.86919pt x 233.663
+<./Editor de Grafos/Figuras/Clase 2/Dibujo 1.pdf, id=235, 425.86919pt x 233.663
 71pt>
 File: ./Editor de Grafos/Figuras/Clase 2/Dibujo 1.pdf Graphic file (type pdf)
 <use ./Editor de Grafos/Figuras/Clase 2/Dibujo 1.pdf>
 Package pdftex.def Info: ./Editor de Grafos/Figuras/Clase 2/Dibujo 1.pdf  used 
-on input line 531.
+on input line 537.
 (pdftex.def)             Requested size: 341.43436pt x 187.3448pt.
 
 Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 531.
+(caption)                particular \caption on input line 537.
 See the caption package documentation for explanation.
 
-<./Editor de Grafos/Figuras/Clase 2/Dibujo 2.pdf, id=221, 425.86919pt x 220.863
+<./Editor de Grafos/Figuras/Clase 2/Dibujo 2.pdf, id=236, 425.86919pt x 220.863
 04pt>
 File: ./Editor de Grafos/Figuras/Clase 2/Dibujo 2.pdf Graphic file (type pdf)
 <use ./Editor de Grafos/Figuras/Clase 2/Dibujo 2.pdf>
 Package pdftex.def Info: ./Editor de Grafos/Figuras/Clase 2/Dibujo 2.pdf  used 
-on input line 537.
+on input line 543.
 (pdftex.def)             Requested size: 341.43436pt x 177.08159pt.
 
 Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 537.
+(caption)                particular \caption on input line 543.
 See the caption package documentation for explanation.
 
 [5 </home/enzo/Desktop/Doctorado Chile/Clases/2023/Primer semestre/Grafos/./Edi
@@ -1678,18 +1678,18 @@ rimer semestre/Grafos/./Editor de Grafos/Figuras/Clase 2/Dibujo 1.pdf): PDF inc
 lusion: multiple pdfs with page group included in a single page
 >]
 LaTeX Font Info:    Font shape `T1/fnc/b/n' will be
-(Font)              scaled to size 13.39188pt on input line 542.
-<./Editor de Grafos/Figuras/Clase 2/Dibujo 3.pdf, id=289, 309.2322pt x 280.8048
+(Font)              scaled to size 13.39188pt on input line 548.
+<./Editor de Grafos/Figuras/Clase 2/Dibujo 3.pdf, id=304, 309.2322pt x 280.8048
 2pt>
 File: ./Editor de Grafos/Figuras/Clase 2/Dibujo 3.pdf Graphic file (type pdf)
 <use ./Editor de Grafos/Figuras/Clase 2/Dibujo 3.pdf>
 Package pdftex.def Info: ./Editor de Grafos/Figuras/Clase 2/Dibujo 3.pdf  used 
-on input line 549.
+on input line 555.
 (pdftex.def)             Requested size: 256.0774pt x 232.5452pt.
 
 
 Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 549.
+(caption)                particular \caption on input line 555.
 See the caption package documentation for explanation.
 
 [6 </home/enzo/Desktop/Doctorado Chile/Clases/2023/Primer semestre/Grafos/./Edi
@@ -1702,33 +1702,33 @@ rimer semestre/Grafos/./Editor de Grafos/Figuras/Clase 2/Dibujo 3.pdf): PDF inc
 lusion: multiple pdfs with page group included in a single page
 >]
 LaTeX Font Info:    Font shape `T1/fnc/m/it' will be
-(Font)              scaled to size 11.15991pt on input line 595.
+(Font)              scaled to size 11.15991pt on input line 601.
  [7]
-<./Editor de Grafos/Figuras/Clase 2/Dibujo 4.pdf, id=367, 415.5525pt x 281.8529
+<./Editor de Grafos/Figuras/Clase 2/Dibujo 4.pdf, id=382, 415.5525pt x 281.8529
 8pt>
 File: ./Editor de Grafos/Figuras/Clase 2/Dibujo 4.pdf Graphic file (type pdf)
 <use ./Editor de Grafos/Figuras/Clase 2/Dibujo 4.pdf>
 Package pdftex.def Info: ./Editor de Grafos/Figuras/Clase 2/Dibujo 4.pdf  used 
-on input line 649.
+on input line 655.
 (pdftex.def)             Requested size: 384.10959pt x 260.5379pt.
 
 
 Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 649.
+(caption)                particular \caption on input line 655.
 See the caption package documentation for explanation.
 
 [8]
-<./Editor de Grafos/Figuras/Clase 2/Dibujo 5.pdf, id=375, 280.94429pt x 280.209
+<./Editor de Grafos/Figuras/Clase 2/Dibujo 5.pdf, id=391, 280.94429pt x 280.209
 95pt>
 File: ./Editor de Grafos/Figuras/Clase 2/Dibujo 5.pdf Graphic file (type pdf)
 <use ./Editor de Grafos/Figuras/Clase 2/Dibujo 5.pdf>
 Package pdftex.def Info: ./Editor de Grafos/Figuras/Clase 2/Dibujo 5.pdf  used 
-on input line 669.
+on input line 675.
 (pdftex.def)             Requested size: 256.0774pt x 255.41045pt.
 
 
 Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 669.
+(caption)                particular \caption on input line 675.
 See the caption package documentation for explanation.
 
 [9 </home/enzo/Desktop/Doctorado Chile/Clases/2023/Primer semestre/Grafos/./Edi
@@ -1740,29 +1740,29 @@ pdfTeX warning: pdflatex (file /home/enzo/Desktop/Doctorado Chile/Clases/2023/P
 rimer semestre/Grafos/./Editor de Grafos/Figuras/Clase 2/Dibujo 5.pdf): PDF inc
 lusion: multiple pdfs with page group included in a single page
 >]
-<./Editor de Grafos/Figuras/Clase 2/Dibujo 6.pdf, id=420, 426.39299pt x 170.183
+<./Editor de Grafos/Figuras/Clase 2/Dibujo 6.pdf, id=435, 426.39299pt x 170.183
 33pt>
 File: ./Editor de Grafos/Figuras/Clase 2/Dibujo 6.pdf Graphic file (type pdf)
 <use ./Editor de Grafos/Figuras/Clase 2/Dibujo 6.pdf>
 Package pdftex.def Info: ./Editor de Grafos/Figuras/Clase 2/Dibujo 6.pdf  used 
-on input line 676.
+on input line 682.
 (pdftex.def)             Requested size: 341.43436pt x 136.27927pt.
 
 
 Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 676.
+(caption)                particular \caption on input line 682.
 See the caption package documentation for explanation.
 
-<./Editor de Grafos/Figuras/Clase 2/Dibujo 7.pdf, id=421, 426.39299pt x 121.665
+<./Editor de Grafos/Figuras/Clase 2/Dibujo 7.pdf, id=436, 426.39299pt x 121.665
 37pt>
 File: ./Editor de Grafos/Figuras/Clase 2/Dibujo 7.pdf Graphic file (type pdf)
 <use ./Editor de Grafos/Figuras/Clase 2/Dibujo 7.pdf>
 Package pdftex.def Info: ./Editor de Grafos/Figuras/Clase 2/Dibujo 7.pdf  used 
-on input line 684.
+on input line 690.
 (pdftex.def)             Requested size: 384.10959pt x 109.60362pt.
 
 Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 684.
+(caption)                particular \caption on input line 690.
 See the caption package documentation for explanation.
 
 [10 </home/enzo/Desktop/Doctorado Chile/Clases/2023/Primer semestre/Grafos/./Ed
@@ -1774,599 +1774,709 @@ pdfTeX warning: pdflatex (file /home/enzo/Desktop/Doctorado Chile/Clases/2023/P
 rimer semestre/Grafos/./Editor de Grafos/Figuras/Clase 2/Dibujo 7.pdf): PDF inc
 lusion: multiple pdfs with page group included in a single page
 >]
-<./Editor de Grafos/Figuras/Clase 3/Dibujo 1.pdf, id=465, 353.09454pt x 192.972
+<./Editor de Grafos/Figuras/Clase 3/Dibujo 1.pdf, id=480, 353.09454pt x 192.972
 58pt>
 File: ./Editor de Grafos/Figuras/Clase 3/Dibujo 1.pdf Graphic file (type pdf)
 <use ./Editor de Grafos/Figuras/Clase 3/Dibujo 1.pdf>
 Package pdftex.def Info: ./Editor de Grafos/Figuras/Clase 3/Dibujo 1.pdf  used 
-on input line 732.
+on input line 738.
 (pdftex.def)             Requested size: 341.43436pt x 186.61487pt.
 
 
 Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 732.
+(caption)                particular \caption on input line 738.
 See the caption package documentation for explanation.
 
 [11 </home/enzo/Desktop/Doctorado Chile/Clases/2023/Primer semestre/Grafos/./Ed
 itor de Grafos/Figuras/Clase 3/Dibujo 1.pdf>]
-<./Editor de Grafos/Figuras/Clase 3/Dibujo 2.pdf, id=495, 204.1961pt x 261.1197
+<./Editor de Grafos/Figuras/Clase 3/Dibujo 2.pdf, id=510, 204.1961pt x 261.1197
 4pt>
 File: ./Editor de Grafos/Figuras/Clase 3/Dibujo 2.pdf Graphic file (type pdf)
 <use ./Editor de Grafos/Figuras/Clase 3/Dibujo 2.pdf>
 Package pdftex.def Info: ./Editor de Grafos/Figuras/Clase 3/Dibujo 2.pdf  used 
-on input line 762.
+on input line 768.
 (pdftex.def)             Requested size: 256.0774pt x 327.47462pt.
 
 
 Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 762.
+(caption)                particular \caption on input line 768.
 See the caption package documentation for explanation.
 
 [12]
-<./Editor de Grafos/Figuras/Clase 3/Dibujo 3.pdf, id=502, 281.85298pt x 240.828
+<./Editor de Grafos/Figuras/Clase 3/Dibujo 3.pdf, id=517, 281.85298pt x 240.828
 34pt>
 File: ./Editor de Grafos/Figuras/Clase 3/Dibujo 3.pdf Graphic file (type pdf)
 <use ./Editor de Grafos/Figuras/Clase 3/Dibujo 3.pdf>
 Package pdftex.def Info: ./Editor de Grafos/Figuras/Clase 3/Dibujo 3.pdf  used 
-on input line 774.
+on input line 780.
 (pdftex.def)             Requested size: 341.43436pt x 291.74493pt.
 
 
 Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 774.
+(caption)                particular \caption on input line 780.
 See the caption package documentation for explanation.
 
 [13 </home/enzo/Desktop/Doctorado Chile/Clases/2023/Primer semestre/Grafos/./Ed
 itor de Grafos/Figuras/Clase 3/Dibujo 2.pdf>]
-<./Editor de Grafos/Figuras/Clase 3/Dibujo 4.pdf, id=529, 232.89807pt x 262.760
+<./Editor de Grafos/Figuras/Clase 3/Dibujo 4.pdf, id=544, 232.89807pt x 262.760
 24pt>
 File: ./Editor de Grafos/Figuras/Clase 3/Dibujo 4.pdf Graphic file (type pdf)
 <use ./Editor de Grafos/Figuras/Clase 3/Dibujo 4.pdf>
 Package pdftex.def Info: ./Editor de Grafos/Figuras/Clase 3/Dibujo 4.pdf  used 
-on input line 796.
+on input line 802.
 (pdftex.def)             Requested size: 256.0774pt x 288.9369pt.
 
 
 Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 796.
+(caption)                particular \caption on input line 802.
 See the caption package documentation for explanation.
 
 [14 </home/enzo/Desktop/Doctorado Chile/Clases/2023/Primer semestre/Grafos/./Ed
 itor de Grafos/Figuras/Clase 3/Dibujo 3.pdf>] [15 </home/enzo/Desktop/Doctorado
  Chile/Clases/2023/Primer semestre/Grafos/./Editor de Grafos/Figuras/Clase 3/Di
 bujo 4.pdf>]
-<./Editor de Grafos/Figuras/Clase 3/Dibujo 5.pdf, id=576, 181.32628pt x 280.747
+<./Editor de Grafos/Figuras/Clase 3/Dibujo 5.pdf, id=591, 181.32628pt x 280.747
 24pt>
 File: ./Editor de Grafos/Figuras/Clase 3/Dibujo 5.pdf Graphic file (type pdf)
 <use ./Editor de Grafos/Figuras/Clase 3/Dibujo 5.pdf>
 Package pdftex.def Info: ./Editor de Grafos/Figuras/Clase 3/Dibujo 5.pdf  used 
-on input line 869.
+on input line 875.
 (pdftex.def)             Requested size: 298.75262pt x 462.59177pt.
 
 
 Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 869.
+(caption)                particular \caption on input line 875.
 See the caption package documentation for explanation.
 
 [16]
-<./Editor de Grafos/Figuras/Clase 3/Dibujo 6.pdf, id=585, 354.12299pt x 214.180
+<./Editor de Grafos/Figuras/Clase 3/Dibujo 6.pdf, id=600, 354.12299pt x 214.180
 65pt>
 File: ./Editor de Grafos/Figuras/Clase 3/Dibujo 6.pdf Graphic file (type pdf)
 <use ./Editor de Grafos/Figuras/Clase 3/Dibujo 6.pdf>
 Package pdftex.def Info: ./Editor de Grafos/Figuras/Clase 3/Dibujo 6.pdf  used 
-on input line 878.
+on input line 884.
 (pdftex.def)             Requested size: 341.43436pt x 206.5196pt.
 
 
 Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 878.
+(caption)                particular \caption on input line 884.
 See the caption package documentation for explanation.
 
 [17 </home/enzo/Desktop/Doctorado Chile/Clases/2023/Primer semestre/Grafos/./Ed
 itor de Grafos/Figuras/Clase 3/Dibujo 5.pdf>]
-<./Editor de Grafos/Figuras/Clase 4/Dibujo 1.pdf, id=619, 281.85298pt x 163.750
+<./Editor de Grafos/Figuras/Clase 4/Dibujo 1.pdf, id=634, 281.85298pt x 163.750
 12pt>
 File: ./Editor de Grafos/Figuras/Clase 4/Dibujo 1.pdf Graphic file (type pdf)
 <use ./Editor de Grafos/Figuras/Clase 4/Dibujo 1.pdf>
 Package pdftex.def Info: ./Editor de Grafos/Figuras/Clase 4/Dibujo 1.pdf  used 
-on input line 896.
+on input line 902.
 (pdftex.def)             Requested size: 341.43436pt x 198.3706pt.
 
 
 Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 896.
+(caption)                particular \caption on input line 902.
 See the caption package documentation for explanation.
 
-<./Editor de Grafos/Figuras/Clase 4/Dibujo 2.pdf, id=620, 281.85298pt x 66.1005
+<./Editor de Grafos/Figuras/Clase 4/Dibujo 2.pdf, id=635, 281.85298pt x 66.1005
 pt>
 File: ./Editor de Grafos/Figuras/Clase 4/Dibujo 2.pdf Graphic file (type pdf)
 <use ./Editor de Grafos/Figuras/Clase 4/Dibujo 2.pdf>
 Package pdftex.def Info: ./Editor de Grafos/Figuras/Clase 4/Dibujo 2.pdf  used 
-on input line 903.
+on input line 909.
 (pdftex.def)             Requested size: 341.43436pt x 80.07564pt.
 
 Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 903.
+(caption)                particular \caption on input line 909.
 See the caption package documentation for explanation.
 
 [18 </home/enzo/Desktop/Doctorado Chile/Clases/2023/Primer semestre/Grafos/./Ed
 itor de Grafos/Figuras/Clase 3/Dibujo 6.pdf> </home/enzo/Desktop/Doctorado Chil
 e/Clases/2023/Primer semestre/Grafos/./Editor de Grafos/Figuras/Clase 4/Dibujo 
 1.pdf> </home/enzo/Desktop/Doctorado Chile/Clases/2023/Primer semestre/Grafos/.
-/Editor de Grafos/Figuras/Clase 4/Dibujo 2.pdf>]
-
-LaTeX Font Warning: Font shape `T1/fnc/m/scit' undefined
-(Font)              using `T1/fnc/m/sc' instead on input line 936.
-
-LaTeX Font Info:    Font shape `T1/fnc/m/sc' will be
-(Font)              scaled to size 11.15991pt on input line 936.
-
-LaTeX Font Warning: Font shape `T1/fnc/m/scit' undefined
-(Font)              using `T1/fnc/m/sc' instead on input line 937.
-
-
-LaTeX Font Warning: Font shape `T1/fnc/m/scit' undefined
-(Font)              using `T1/fnc/m/sc' instead on input line 938.
-
-
-LaTeX Font Warning: Font shape `T1/fnc/m/scit' undefined
-(Font)              using `T1/fnc/m/sc' instead on input line 939.
-
-
-LaTeX Font Warning: Font shape `T1/fnc/m/scit' undefined
-(Font)              using `T1/fnc/m/sc' instead on input line 940.
-
-[19]
-<./Editor de Grafos/Figuras/Clase 4/Dibujo 3.pdf, id=694, 140.7963pt x 280.7472
-4pt>
+/Editor de Grafos/Figuras/Clase 4/Dibujo 2.pdf>] [19]
+<./Editor de Grafos/Figuras/Clase 4/Dibujo 3.pdf, id=701, 354.12299pt x 112.159
+01pt>
 File: ./Editor de Grafos/Figuras/Clase 4/Dibujo 3.pdf Graphic file (type pdf)
 <use ./Editor de Grafos/Figuras/Clase 4/Dibujo 3.pdf>
 Package pdftex.def Info: ./Editor de Grafos/Figuras/Clase 4/Dibujo 3.pdf  used 
-on input line 965.
-(pdftex.def)             Requested size: 149.37956pt x 297.8905pt.
-
-
-Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 965.
-See the caption package documentation for explanation.
-
-[20 </home/enzo/Desktop/Doctorado Chile/Clases/2023/Primer semestre/Grafos/./Ed
-itor de Grafos/Figuras/Clase 4/Dibujo 3.pdf>]
-<./Editor de Grafos/Figuras/Clase 4/Dibujo 4.pdf, id=721, 89.90869pt x 280.7472
-4pt>
-File: ./Editor de Grafos/Figuras/Clase 4/Dibujo 4.pdf Graphic file (type pdf)
-<use ./Editor de Grafos/Figuras/Clase 4/Dibujo 4.pdf>
-Package pdftex.def Info: ./Editor de Grafos/Figuras/Clase 4/Dibujo 4.pdf  used 
 on input line 969.
-(pdftex.def)             Requested size: 85.35696pt x 266.53699pt.
+(pdftex.def)             Requested size: 341.43436pt x 108.14719pt.
 
 
 Package caption Warning: The option `hypcap=true' will be ignored for this
 (caption)                particular \caption on input line 969.
 See the caption package documentation for explanation.
 
-<./Editor de Grafos/Figuras/Clase 4/Dibujo 5.pdf, id=723, 281.53096pt x 161.441
-88pt>
+
+LaTeX Font Warning: Font shape `T1/fnc/m/scit' undefined
+(Font)              using `T1/fnc/m/sc' instead on input line 985.
+
+LaTeX Font Info:    Font shape `T1/fnc/m/sc' will be
+(Font)              scaled to size 11.15991pt on input line 985.
+
+LaTeX Font Warning: Font shape `T1/fnc/m/scit' undefined
+(Font)              using `T1/fnc/m/sc' instead on input line 986.
+
+
+LaTeX Font Warning: Font shape `T1/fnc/m/scit' undefined
+(Font)              using `T1/fnc/m/sc' instead on input line 987.
+
+
+LaTeX Font Warning: Font shape `T1/fnc/m/scit' undefined
+(Font)              using `T1/fnc/m/sc' instead on input line 988.
+
+
+LaTeX Font Warning: Font shape `T1/fnc/m/scit' undefined
+(Font)              using `T1/fnc/m/sc' instead on input line 989.
+
+[20 </home/enzo/Desktop/Doctorado Chile/Clases/2023/Primer semestre/Grafos/./Ed
+itor de Grafos/Figuras/Clase 4/Dibujo 3.pdf>]
+<./Editor de Grafos/Figuras/Clase 4/Dibujo 4.pdf, id=735, 140.7963pt x 280.7472
+4pt>
+File: ./Editor de Grafos/Figuras/Clase 4/Dibujo 4.pdf Graphic file (type pdf)
+<use ./Editor de Grafos/Figuras/Clase 4/Dibujo 4.pdf>
+Package pdftex.def Info: ./Editor de Grafos/Figuras/Clase 4/Dibujo 4.pdf  used 
+on input line 1014.
+(pdftex.def)             Requested size: 149.37956pt x 297.8905pt.
+
+
+Package caption Warning: The option `hypcap=true' will be ignored for this
+(caption)                particular \caption on input line 1014.
+See the caption package documentation for explanation.
+
+[21]
+<./Editor de Grafos/Figuras/Clase 4/Dibujo 5.pdf, id=742, 89.90869pt x 280.7472
+4pt>
 File: ./Editor de Grafos/Figuras/Clase 4/Dibujo 5.pdf Graphic file (type pdf)
 <use ./Editor de Grafos/Figuras/Clase 4/Dibujo 5.pdf>
 Package pdftex.def Info: ./Editor de Grafos/Figuras/Clase 4/Dibujo 5.pdf  used 
-on input line 989.
+on input line 1018.
+(pdftex.def)             Requested size: 85.35696pt x 266.53699pt.
+
+
+Package caption Warning: The option `hypcap=true' will be ignored for this
+(caption)                particular \caption on input line 1018.
+See the caption package documentation for explanation.
+
+[22 </home/enzo/Desktop/Doctorado Chile/Clases/2023/Primer semestre/Grafos/./Ed
+itor de Grafos/Figuras/Clase 4/Dibujo 4.pdf> </home/enzo/Desktop/Doctorado Chil
+e/Clases/2023/Primer semestre/Grafos/./Editor de Grafos/Figuras/Clase 4/Dibujo 
+5.pdf>]
+Overfull \hbox (13.36049pt too wide) in paragraph at lines 1033--1034
+[][]\T1/fnc/b/n/12 Definición 1.4.13. []\T1/fnc/m/n/12 Si $\FML/fncmi/m/it/12 T
+$ \T1/fnc/m/n/12 es un ár-bol ge-ne-ra-dor de un gra-fo $\FML/fncmi/m/it/12 G$\
+T1/fnc/m/n/12 , las aris-tas en $\FML/fncmi/m/it/12 E\U/matha/m/n/12 p\FML/fncm
+i/m/it/12 G\U/matha/m/n/12 qz\FML/fncmi/m/it/12 E\U/matha/m/n/12 p\FML/fncmi/m/
+it/12 T\U/matha/m/n/12 q$
+ []
+
+<./Editor de Grafos/Figuras/Clase 4/Dibujo 6.pdf, id=792, 281.53096pt x 161.441
+88pt>
+File: ./Editor de Grafos/Figuras/Clase 4/Dibujo 6.pdf Graphic file (type pdf)
+<use ./Editor de Grafos/Figuras/Clase 4/Dibujo 6.pdf>
+Package pdftex.def Info: ./Editor de Grafos/Figuras/Clase 4/Dibujo 6.pdf  used 
+on input line 1042.
 (pdftex.def)             Requested size: 341.43436pt x 195.8133pt.
 
 Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 989.
+(caption)                particular \caption on input line 1042.
 See the caption package documentation for explanation.
 
-[21 </home/enzo/Desktop/Doctorado Chile/Clases/2023/Primer semestre/Grafos/./Ed
-itor de Grafos/Figuras/Clase 4/Dibujo 4.pdf>]
-<./Editor de Grafos/Figuras/Clase 5/Dibujo 1.pdf, id=754, 68.10837pt x 208.2314
-9pt>
+[23 </home/enzo/Desktop/Doctorado Chile/Clases/2023/Primer semestre/Grafos/./Ed
+itor de Grafos/Figuras/Clase 4/Dibujo 6.pdf>]
+Overfull \hbox (12.83005pt too wide) in paragraph at lines 1079--1080
+\T1/fnc/m/n/12 ca-so ba-se es tri-vial. Vea-mos el pa-so in-duc-ti-vo: su-pon-g
+a-mos que $\FML/fncmi/m/it/12 G$ \T1/fnc/m/n/12 tie-ne a $\FML/fncmi/m/it/12 T\
+U/matha/m/n/12 r\FML/fncmi/m/it/12 v[]; [] ; v[]\U/matha/m/n/12 s$
+ []
+
+<./Editor de Grafos/Figuras/Clase 5/Dibujo 1.pdf, id=835, 455.30101pt x 285.723
+43pt>
 File: ./Editor de Grafos/Figuras/Clase 5/Dibujo 1.pdf Graphic file (type pdf)
 <use ./Editor de Grafos/Figuras/Clase 5/Dibujo 1.pdf>
 Package pdftex.def Info: ./Editor de Grafos/Figuras/Clase 5/Dibujo 1.pdf  used 
-on input line 1030.
+on input line 1095.
+(pdftex.def)             Requested size: 341.43436pt x 214.2746pt.
+
+Package caption Warning: The option `hypcap=true' will be ignored for this
+(caption)                particular \caption on input line 1095.
+See the caption package documentation for explanation.
+
+[24]
+
+LaTeX Font Warning: Font shape `T1/fnc/m/scit' undefined
+(Font)              using `T1/fnc/m/sc' instead on input line 1102.
+
+
+LaTeX Font Warning: Font shape `T1/fnc/m/scit' undefined
+(Font)              using `T1/fnc/m/sc' instead on input line 1103.
+
+[25 </home/enzo/Desktop/Doctorado Chile/Clases/2023/Primer semestre/Grafos/./Ed
+itor de Grafos/Figuras/Clase 5/Dibujo 1.pdf>]
+<./Editor de Grafos/Figuras/Clase 5/Dibujo 2.pdf, id=866, 68.10837pt x 208.2314
+9pt>
+File: ./Editor de Grafos/Figuras/Clase 5/Dibujo 2.pdf Graphic file (type pdf)
+<use ./Editor de Grafos/Figuras/Clase 5/Dibujo 2.pdf>
+Package pdftex.def Info: ./Editor de Grafos/Figuras/Clase 5/Dibujo 2.pdf  used 
+on input line 1144.
 (pdftex.def)             Requested size: 85.35696pt x 260.9909pt.
 
 
 Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 1030.
+(caption)                particular \caption on input line 1144.
 See the caption package documentation for explanation.
 
-[22 </home/enzo/Desktop/Doctorado Chile/Clases/2023/Primer semestre/Grafos/./Ed
-itor de Grafos/Figuras/Clase 4/Dibujo 5.pdf>]
-<./Editor de Grafos/Figuras/Clase 5/Dibujo 2.pdf, id=796, 209.58301pt x 205.958
+[26]
+<./Editor de Grafos/Figuras/Clase 5/Dibujo 3.pdf, id=873, 209.58301pt x 205.958
 31pt>
-File: ./Editor de Grafos/Figuras/Clase 5/Dibujo 2.pdf Graphic file (type pdf)
-<use ./Editor de Grafos/Figuras/Clase 5/Dibujo 2.pdf>
-Package pdftex.def Info: ./Editor de Grafos/Figuras/Clase 5/Dibujo 2.pdf  used 
-on input line 1032.
+File: ./Editor de Grafos/Figuras/Clase 5/Dibujo 3.pdf Graphic file (type pdf)
+<use ./Editor de Grafos/Figuras/Clase 5/Dibujo 3.pdf>
+Package pdftex.def Info: ./Editor de Grafos/Figuras/Clase 5/Dibujo 3.pdf  used 
+on input line 1146.
 (pdftex.def)             Requested size: 256.0774pt x 251.67104pt.
 
 
 Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 1032.
+(caption)                particular \caption on input line 1146.
 See the caption package documentation for explanation.
 
 
-Overfull \hbox (15.63673pt too wide) in paragraph at lines 1037--1038
+Overfull \hbox (15.63673pt too wide) in paragraph at lines 1151--1152
 []\T1/fnc/m/n/12 Un gra-fo $\FML/fncmi/m/it/12 r$\T1/fnc/m/n/12 -partito com-pl
 e-to con par-tes de ta-ma-ño $\FML/fncmi/m/it/12 n[]; n[]; [] ; n[]$ \T1/fnc/m/
 n/12 se de-no-ta $\FML/fncmi/m/it/12 K[]$\T1/fnc/m/n/12 . 
  []
 
-<./Editor de Grafos/Figuras/Clase 5/Dibujo 3.pdf, id=797, 157.2228pt x 208.4650
+<./Editor de Grafos/Figuras/Clase 5/Dibujo 4.pdf, id=874, 157.2228pt x 208.4650
 3pt>
-File: ./Editor de Grafos/Figuras/Clase 5/Dibujo 3.pdf Graphic file (type pdf)
-<use ./Editor de Grafos/Figuras/Clase 5/Dibujo 3.pdf>
-Package pdftex.def Info: ./Editor de Grafos/Figuras/Clase 5/Dibujo 3.pdf  used 
-on input line 1039.
-(pdftex.def)             Requested size: 256.0774pt x 339.54369pt.
-
-Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 1039.
-See the caption package documentation for explanation.
-
-[23 </home/enzo/Desktop/Doctorado Chile/Clases/2023/Primer semestre/Grafos/./Ed
-itor de Grafos/Figuras/Clase 5/Dibujo 1.pdf> </home/enzo/Desktop/Doctorado Chil
-e/Clases/2023/Primer semestre/Grafos/./Editor de Grafos/Figuras/Clase 5/Dibujo 
-2.pdf>]
-<./Editor de Grafos/Figuras/Clase 5/Dibujo 4.pdf, id=824, 268.48553pt x 280.404
-22pt>
 File: ./Editor de Grafos/Figuras/Clase 5/Dibujo 4.pdf Graphic file (type pdf)
 <use ./Editor de Grafos/Figuras/Clase 5/Dibujo 4.pdf>
 Package pdftex.def Info: ./Editor de Grafos/Figuras/Clase 5/Dibujo 4.pdf  used 
-on input line 1045.
-(pdftex.def)             Requested size: 256.0774pt x 267.4607pt.
-
-
-Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 1045.
-See the caption package documentation for explanation.
-
-[24 </home/enzo/Desktop/Doctorado Chile/Clases/2023/Primer semestre/Grafos/./Ed
-itor de Grafos/Figuras/Clase 5/Dibujo 3.pdf> </home/enzo/Desktop/Doctorado Chil
-e/Clases/2023/Primer semestre/Grafos/./Editor de Grafos/Figuras/Clase 5/Dibujo 
-4.pdf>]
-<./Editor de Grafos/Figuras/Clase 5/Dibujo 5.pdf, id=886, 353.09454pt x 122.000
-64pt>
-File: ./Editor de Grafos/Figuras/Clase 5/Dibujo 5.pdf Graphic file (type pdf)
-<use ./Editor de Grafos/Figuras/Clase 5/Dibujo 5.pdf>
-Package pdftex.def Info: ./Editor de Grafos/Figuras/Clase 5/Dibujo 5.pdf  used 
-on input line 1056.
-(pdftex.def)             Requested size: 341.43436pt x 117.98117pt.
-
+on input line 1153.
+(pdftex.def)             Requested size: 256.0774pt x 339.54369pt.
 
 Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 1056.
-See the caption package documentation for explanation.
-
-<./Editor de Grafos/Figuras/Clase 5/Dibujo 6.pdf, id=887, 281.85298pt x 256.699
-28pt>
-File: ./Editor de Grafos/Figuras/Clase 5/Dibujo 6.pdf Graphic file (type pdf)
-<use ./Editor de Grafos/Figuras/Clase 5/Dibujo 6.pdf>
-Package pdftex.def Info: ./Editor de Grafos/Figuras/Clase 5/Dibujo 6.pdf  used 
-on input line 1072.
-(pdftex.def)             Requested size: 298.75262pt x 272.09601pt.
-
-Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 1072.
-See the caption package documentation for explanation.
-
-[25 </home/enzo/Desktop/Doctorado Chile/Clases/2023/Primer semestre/Grafos/./Ed
-itor de Grafos/Figuras/Clase 5/Dibujo 5.pdf>]
-<./Editor de Grafos/Figuras/Clase 5/Dibujo 7.pdf, id=927, 303.1325pt x 238.8925
-pt>
-File: ./Editor de Grafos/Figuras/Clase 5/Dibujo 7.pdf Graphic file (type pdf)
-<use ./Editor de Grafos/Figuras/Clase 5/Dibujo 7.pdf>
-Package pdftex.def Info: ./Editor de Grafos/Figuras/Clase 5/Dibujo 7.pdf  used 
-on input line 1085.
-(pdftex.def)             Requested size: 341.43436pt x 269.08145pt.
-
-
-Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 1085.
-See the caption package documentation for explanation.
-
-[26 </home/enzo/Desktop/Doctorado Chile/Clases/2023/Primer semestre/Grafos/./Ed
-itor de Grafos/Figuras/Clase 5/Dibujo 6.pdf> </home/enzo/Desktop/Doctorado Chil
-e/Clases/2023/Primer semestre/Grafos/./Editor de Grafos/Figuras/Clase 5/Dibujo 
-7.pdf>]
-<./Editor de Grafos/Figuras/Clase 5/Dibujo 8.pdf, id=962, 196.77707pt x 178.416
-56pt>
-File: ./Editor de Grafos/Figuras/Clase 5/Dibujo 8.pdf Graphic file (type pdf)
-<use ./Editor de Grafos/Figuras/Clase 5/Dibujo 8.pdf>
-Package pdftex.def Info: ./Editor de Grafos/Figuras/Clase 5/Dibujo 8.pdf  used 
-on input line 1091.
-(pdftex.def)             Requested size: 298.75262pt x 270.91283pt.
-
-
-Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 1091.
+(caption)                particular \caption on input line 1153.
 See the caption package documentation for explanation.
 
 [27 </home/enzo/Desktop/Doctorado Chile/Clases/2023/Primer semestre/Grafos/./Ed
-itor de Grafos/Figuras/Clase 5/Dibujo 8.pdf>]
-<./Editor de Grafos/Figuras/Clase 6/Dibujo 1.pdf, id=978, 184.00914pt x 339.668
-99pt>
-File: ./Editor de Grafos/Figuras/Clase 6/Dibujo 1.pdf Graphic file (type pdf)
-<use ./Editor de Grafos/Figuras/Clase 6/Dibujo 1.pdf>
-Package pdftex.def Info: ./Editor de Grafos/Figuras/Clase 6/Dibujo 1.pdf  used 
-on input line 1139.
-(pdftex.def)             Requested size: 42.68173pt x 78.78563pt.
-
-
-Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 1139.
-See the caption package documentation for explanation.
-
-<./Editor de Grafos/Figuras/Clase 6/Dibujo 2.pdf, id=979, 278.24028pt x 339.668
-99pt>
-File: ./Editor de Grafos/Figuras/Clase 6/Dibujo 2.pdf Graphic file (type pdf)
-<use ./Editor de Grafos/Figuras/Clase 6/Dibujo 2.pdf>
-Package pdftex.def Info: ./Editor de Grafos/Figuras/Clase 6/Dibujo 2.pdf  used 
-on input line 1143.
-(pdftex.def)             Requested size: 341.43436pt x 416.84189pt.
-
-Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 1143.
-See the caption package documentation for explanation.
-
-[28 </home/enzo/Desktop/Doctorado Chile/Clases/2023/Primer semestre/Grafos/./Ed
-itor de Grafos/Figuras/Clase 6/Dibujo 1.pdf>]
-Underfull \hbox (badness 5862) in paragraph at lines 1143--1143
-[]\T1/fnc/m/n/12 Figura 1.6.33: |[]Esta es una ilus-tra-ción de lo que po-dría 
-su-ce-der: $\FML/fncmi/m/it/12 P \T1/fnc/m/n/12 :
- []
-
-<./Editor de Grafos/Figuras/Clase 6/Dibujo 3.pdf, id=991, 324.4375pt x 339.6689
-9pt>
-File: ./Editor de Grafos/Figuras/Clase 6/Dibujo 3.pdf Graphic file (type pdf)
-<use ./Editor de Grafos/Figuras/Clase 6/Dibujo 3.pdf>
-Package pdftex.def Info: ./Editor de Grafos/Figuras/Clase 6/Dibujo 3.pdf  used 
+itor de Grafos/Figuras/Clase 5/Dibujo 2.pdf> </home/enzo/Desktop/Doctorado Chil
+e/Clases/2023/Primer semestre/Grafos/./Editor de Grafos/Figuras/Clase 5/Dibujo 
+3.pdf>]
+<./Editor de Grafos/Figuras/Clase 5/Dibujo 5.pdf, id=902, 268.48553pt x 280.404
+22pt>
+File: ./Editor de Grafos/Figuras/Clase 5/Dibujo 5.pdf Graphic file (type pdf)
+<use ./Editor de Grafos/Figuras/Clase 5/Dibujo 5.pdf>
+Package pdftex.def Info: ./Editor de Grafos/Figuras/Clase 5/Dibujo 5.pdf  used 
 on input line 1159.
-(pdftex.def)             Requested size: 341.43436pt x 357.49222pt.
+(pdftex.def)             Requested size: 256.0774pt x 267.4607pt.
+
 
 Package caption Warning: The option `hypcap=true' will be ignored for this
 (caption)                particular \caption on input line 1159.
 See the caption package documentation for explanation.
 
-[29 </home/enzo/Desktop/Doctorado Chile/Clases/2023/Primer semestre/Grafos/./Ed
-itor de Grafos/Figuras/Clase 6/Dibujo 2.pdf>]
-<./Editor de Grafos/Figuras/Clase 6/Dibujo 4.pdf, id=1022, 455.30101pt x 320.54
-178pt>
-File: ./Editor de Grafos/Figuras/Clase 6/Dibujo 4.pdf Graphic file (type pdf)
-<use ./Editor de Grafos/Figuras/Clase 6/Dibujo 4.pdf>
-Package pdftex.def Info: ./Editor de Grafos/Figuras/Clase 6/Dibujo 4.pdf  used 
-on input line 1200.
-(pdftex.def)             Requested size: 341.43436pt x 240.38617pt.
+[28 </home/enzo/Desktop/Doctorado Chile/Clases/2023/Primer semestre/Grafos/./Ed
+itor de Grafos/Figuras/Clase 5/Dibujo 4.pdf> </home/enzo/Desktop/Doctorado Chil
+e/Clases/2023/Primer semestre/Grafos/./Editor de Grafos/Figuras/Clase 5/Dibujo 
+5.pdf>]
+<./Editor de Grafos/Figuras/Clase 5/Dibujo 6.pdf, id=963, 353.09454pt x 122.000
+64pt>
+File: ./Editor de Grafos/Figuras/Clase 5/Dibujo 6.pdf Graphic file (type pdf)
+<use ./Editor de Grafos/Figuras/Clase 5/Dibujo 6.pdf>
+Package pdftex.def Info: ./Editor de Grafos/Figuras/Clase 5/Dibujo 6.pdf  used 
+on input line 1170.
+(pdftex.def)             Requested size: 341.43436pt x 117.98117pt.
 
 
 Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 1200.
+(caption)                particular \caption on input line 1170.
+See the caption package documentation for explanation.
+
+<./Editor de Grafos/Figuras/Clase 5/Dibujo 7.pdf, id=964, 281.85298pt x 256.699
+28pt>
+File: ./Editor de Grafos/Figuras/Clase 5/Dibujo 7.pdf Graphic file (type pdf)
+<use ./Editor de Grafos/Figuras/Clase 5/Dibujo 7.pdf>
+Package pdftex.def Info: ./Editor de Grafos/Figuras/Clase 5/Dibujo 7.pdf  used 
+on input line 1186.
+(pdftex.def)             Requested size: 298.75262pt x 272.09601pt.
+
+Package caption Warning: The option `hypcap=true' will be ignored for this
+(caption)                particular \caption on input line 1186.
+See the caption package documentation for explanation.
+
+[29 </home/enzo/Desktop/Doctorado Chile/Clases/2023/Primer semestre/Grafos/./Ed
+itor de Grafos/Figuras/Clase 5/Dibujo 6.pdf>]
+<./Editor de Grafos/Figuras/Clase 5/Dibujo 8.pdf, id=1003, 303.1325pt x 238.892
+5pt>
+File: ./Editor de Grafos/Figuras/Clase 5/Dibujo 8.pdf Graphic file (type pdf)
+<use ./Editor de Grafos/Figuras/Clase 5/Dibujo 8.pdf>
+Package pdftex.def Info: ./Editor de Grafos/Figuras/Clase 5/Dibujo 8.pdf  used 
+on input line 1199.
+(pdftex.def)             Requested size: 341.43436pt x 269.08145pt.
+
+
+Package caption Warning: The option `hypcap=true' will be ignored for this
+(caption)                particular \caption on input line 1199.
 See the caption package documentation for explanation.
 
 [30 </home/enzo/Desktop/Doctorado Chile/Clases/2023/Primer semestre/Grafos/./Ed
+itor de Grafos/Figuras/Clase 5/Dibujo 7.pdf> </home/enzo/Desktop/Doctorado Chil
+e/Clases/2023/Primer semestre/Grafos/./Editor de Grafos/Figuras/Clase 5/Dibujo 
+8.pdf>]
+<./Editor de Grafos/Figuras/Clase 5/Dibujo 9.pdf, id=1039, 196.77707pt x 178.41
+656pt>
+File: ./Editor de Grafos/Figuras/Clase 5/Dibujo 9.pdf Graphic file (type pdf)
+<use ./Editor de Grafos/Figuras/Clase 5/Dibujo 9.pdf>
+Package pdftex.def Info: ./Editor de Grafos/Figuras/Clase 5/Dibujo 9.pdf  used 
+on input line 1205.
+(pdftex.def)             Requested size: 298.75262pt x 270.91283pt.
+
+
+Package caption Warning: The option `hypcap=true' will be ignored for this
+(caption)                particular \caption on input line 1205.
+See the caption package documentation for explanation.
+
+[31 </home/enzo/Desktop/Doctorado Chile/Clases/2023/Primer semestre/Grafos/./Ed
+itor de Grafos/Figuras/Clase 5/Dibujo 9.pdf>]
+<./Editor de Grafos/Figuras/Clase 6/Dibujo 1.pdf, id=1055, 184.00914pt x 339.66
+899pt>
+File: ./Editor de Grafos/Figuras/Clase 6/Dibujo 1.pdf Graphic file (type pdf)
+<use ./Editor de Grafos/Figuras/Clase 6/Dibujo 1.pdf>
+Package pdftex.def Info: ./Editor de Grafos/Figuras/Clase 6/Dibujo 1.pdf  used 
+on input line 1253.
+(pdftex.def)             Requested size: 42.68173pt x 78.78563pt.
+
+
+Package caption Warning: The option `hypcap=true' will be ignored for this
+(caption)                particular \caption on input line 1253.
+See the caption package documentation for explanation.
+
+<./Editor de Grafos/Figuras/Clase 6/Dibujo 2.pdf, id=1056, 278.24028pt x 339.66
+899pt>
+File: ./Editor de Grafos/Figuras/Clase 6/Dibujo 2.pdf Graphic file (type pdf)
+<use ./Editor de Grafos/Figuras/Clase 6/Dibujo 2.pdf>
+Package pdftex.def Info: ./Editor de Grafos/Figuras/Clase 6/Dibujo 2.pdf  used 
+on input line 1257.
+(pdftex.def)             Requested size: 341.43436pt x 416.84189pt.
+
+Package caption Warning: The option `hypcap=true' will be ignored for this
+(caption)                particular \caption on input line 1257.
+See the caption package documentation for explanation.
+
+[32 </home/enzo/Desktop/Doctorado Chile/Clases/2023/Primer semestre/Grafos/./Ed
+itor de Grafos/Figuras/Clase 6/Dibujo 1.pdf>]
+Underfull \hbox (badness 5862) in paragraph at lines 1257--1257
+[]\T1/fnc/m/n/12 Figura 1.6.35: |[]Esta es una ilus-tra-ción de lo que po-dría 
+su-ce-der: $\FML/fncmi/m/it/12 P \T1/fnc/m/n/12 :
+ []
+
+<./Editor de Grafos/Figuras/Clase 6/Dibujo 3.pdf, id=1068, 324.4375pt x 339.668
+99pt>
+File: ./Editor de Grafos/Figuras/Clase 6/Dibujo 3.pdf Graphic file (type pdf)
+<use ./Editor de Grafos/Figuras/Clase 6/Dibujo 3.pdf>
+Package pdftex.def Info: ./Editor de Grafos/Figuras/Clase 6/Dibujo 3.pdf  used 
+on input line 1273.
+(pdftex.def)             Requested size: 341.43436pt x 357.49222pt.
+
+Package caption Warning: The option `hypcap=true' will be ignored for this
+(caption)                particular \caption on input line 1273.
+See the caption package documentation for explanation.
+
+[33 </home/enzo/Desktop/Doctorado Chile/Clases/2023/Primer semestre/Grafos/./Ed
+itor de Grafos/Figuras/Clase 6/Dibujo 2.pdf>]
+<./Editor de Grafos/Figuras/Clase 6/Dibujo 4.pdf, id=1100, 354.12299pt x 214.18
+065pt>
+File: ./Editor de Grafos/Figuras/Clase 6/Dibujo 4.pdf Graphic file (type pdf)
+<use ./Editor de Grafos/Figuras/Clase 6/Dibujo 4.pdf>
+Package pdftex.def Info: ./Editor de Grafos/Figuras/Clase 6/Dibujo 4.pdf  used 
+on input line 1314.
+(pdftex.def)             Requested size: 341.43436pt x 206.5196pt.
+
+
+Package caption Warning: The option `hypcap=true' will be ignored for this
+(caption)                particular \caption on input line 1314.
+See the caption package documentation for explanation.
+
+[34 </home/enzo/Desktop/Doctorado Chile/Clases/2023/Primer semestre/Grafos/./Ed
 itor de Grafos/Figuras/Clase 6/Dibujo 3.pdf>]
-<./Editor de Grafos/Figuras/Clase 6/Dibujo 5.pdf, id=1068, 257.51218pt x 339.34
+<./Editor de Grafos/Figuras/Clase 6/Dibujo 5.pdf, id=1145, 257.51218pt x 339.34
 154pt>
 File: ./Editor de Grafos/Figuras/Clase 6/Dibujo 5.pdf Graphic file (type pdf)
 <use ./Editor de Grafos/Figuras/Clase 6/Dibujo 5.pdf>
 Package pdftex.def Info: ./Editor de Grafos/Figuras/Clase 6/Dibujo 5.pdf  used 
-on input line 1211.
+on input line 1325.
 (pdftex.def)             Requested size: 213.39566pt x 281.21844pt.
 
 
 Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 1211.
+(caption)                particular \caption on input line 1325.
 See the caption package documentation for explanation.
 
 
-Overfull \hbox (8.26614pt too wide) in paragraph at lines 1214--1215
+Overfull \hbox (8.26614pt too wide) in paragraph at lines 1328--1329
 []\T1/fnc/m/n/12 Si qui-ta-mos los []vér-ti-ces $4\FML/fncmi/m/it/12 ; \T1/fnc/
 m/n/12 5$[] en-ton-ces nos que-da $\FML/fncmi/m/it/12 G$ \T1/fnc/m/n/12 dis-co-
 ne-xo, lue-go $\FMS/fncm/m/n/12 K\U/matha/m/n/12 p\FML/fncmi/m/it/12 G\U/matha/
 m/n/12 q  
  []
 
-[31 </home/enzo/Desktop/Doctorado Chile/Clases/2023/Primer semestre/Grafos/./Ed
+[35 </home/enzo/Desktop/Doctorado Chile/Clases/2023/Primer semestre/Grafos/./Ed
 itor de Grafos/Figuras/Clase 6/Dibujo 4.pdf> </home/enzo/Desktop/Doctorado Chil
 e/Clases/2023/Primer semestre/Grafos/./Editor de Grafos/Figuras/Clase 6/Dibujo 
 5.pdf>]
-<./Editor de Grafos/Figuras/Clase 7/Dibujo 1.pdf, id=1123, 230.40143pt x 339.34
+<./Editor de Grafos/Figuras/Clase 7/Dibujo 1.pdf, id=1197, 230.40143pt x 339.34
 154pt>
 File: ./Editor de Grafos/Figuras/Clase 7/Dibujo 1.pdf Graphic file (type pdf)
 <use ./Editor de Grafos/Figuras/Clase 7/Dibujo 1.pdf>
 Package pdftex.def Info: ./Editor de Grafos/Figuras/Clase 7/Dibujo 1.pdf  used 
-on input line 1234.
+on input line 1348.
 (pdftex.def)             Requested size: 256.0774pt x 377.19652pt.
 
-
-Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 1234.
-See the caption package documentation for explanation.
-
-[32 </home/enzo/Desktop/Doctorado Chile/Clases/2023/Primer semestre/Grafos/./Ed
-itor de Grafos/Figuras/Clase 7/Dibujo 1.pdf>]
-<./Editor de Grafos/Figuras/Clase 7/Dibujo 2.pdf, id=1155, 322.29173pt x 338.74
-431pt>
-File: ./Editor de Grafos/Figuras/Clase 7/Dibujo 2.pdf Graphic file (type pdf)
-<use ./Editor de Grafos/Figuras/Clase 7/Dibujo 2.pdf>
-Package pdftex.def Info: ./Editor de Grafos/Figuras/Clase 7/Dibujo 2.pdf  used 
-on input line 1240.
-(pdftex.def)             Requested size: 341.43436pt x 358.87083pt.
-
-
-Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 1240.
-See the caption package documentation for explanation.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 1246.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 1246.
-
-[33 </home/enzo/Desktop/Doctorado Chile/Clases/2023/Primer semestre/Grafos/./Ed
-itor de Grafos/Figuras/Clase 7/Dibujo 2.pdf>]
-<./Editor de Grafos/Figuras/Clase 7/Dibujo 3.pdf, id=1188, 439.71295pt x 339.66
-899pt>
-File: ./Editor de Grafos/Figuras/Clase 7/Dibujo 3.pdf Graphic file (type pdf)
-<use ./Editor de Grafos/Figuras/Clase 7/Dibujo 3.pdf>
-Package pdftex.def Info: ./Editor de Grafos/Figuras/Clase 7/Dibujo 3.pdf  used 
-on input line 1252.
-(pdftex.def)             Requested size: 298.75262pt x 230.79045pt.
-
-
-Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 1252.
-See the caption package documentation for explanation.
-
-<./Editor de Grafos/Figuras/Clase 7/Dibujo 4.pdf, id=1189, 455.30101pt x 82.085
-16pt>
-File: ./Editor de Grafos/Figuras/Clase 7/Dibujo 4.pdf Graphic file (type pdf)
-<use ./Editor de Grafos/Figuras/Clase 7/Dibujo 4.pdf>
-Package pdftex.def Info: ./Editor de Grafos/Figuras/Clase 7/Dibujo 4.pdf  used 
-on input line 1256.
-(pdftex.def)             Requested size: 298.75262pt x 53.86324pt.
-
-Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 1256.
-See the caption package documentation for explanation.
-
-<./Editor de Grafos/Figuras/Clase 7/Dibujo 5.pdf, id=1190, 383.2954pt x 339.668
-99pt>
-File: ./Editor de Grafos/Figuras/Clase 7/Dibujo 5.pdf Graphic file (type pdf)
-<use ./Editor de Grafos/Figuras/Clase 7/Dibujo 5.pdf>
-Package pdftex.def Info: ./Editor de Grafos/Figuras/Clase 7/Dibujo 5.pdf  used 
-on input line 1266.
-(pdftex.def)             Requested size: 341.43436pt x 302.57913pt.
-
-Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 1266.
-See the caption package documentation for explanation.
-
-[34 </home/enzo/Desktop/Doctorado Chile/Clases/2023/Primer semestre/Grafos/./Ed
-itor de Grafos/Figuras/Clase 7/Dibujo 3.pdf> </home/enzo/Desktop/Doctorado Chil
-e/Clases/2023/Primer semestre/Grafos/./Editor de Grafos/Figuras/Clase 7/Dibujo 
-4.pdf>]
-<./Editor de Grafos/Figuras/Clase 7/Dibujo 6.pdf, id=1221, 358.13078pt x 339.34
-154pt>
-File: ./Editor de Grafos/Figuras/Clase 7/Dibujo 6.pdf Graphic file (type pdf)
-<use ./Editor de Grafos/Figuras/Clase 7/Dibujo 6.pdf>
-Package pdftex.def Info: ./Editor de Grafos/Figuras/Clase 7/Dibujo 6.pdf  used 
-on input line 1279.
-(pdftex.def)             Requested size: 341.43436pt x 323.52213pt.
-
-
-Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 1279.
-See the caption package documentation for explanation.
-
-[35 </home/enzo/Desktop/Doctorado Chile/Clases/2023/Primer semestre/Grafos/./Ed
-itor de Grafos/Figuras/Clase 7/Dibujo 5.pdf>]
-<./Editor de Grafos/Figuras/Clase 8/Dibujo 1.pdf, id=1232, 455.30101pt x 177.87
-634pt>
-File: ./Editor de Grafos/Figuras/Clase 8/Dibujo 1.pdf Graphic file (type pdf)
-<use ./Editor de Grafos/Figuras/Clase 8/Dibujo 1.pdf>
-Package pdftex.def Info: ./Editor de Grafos/Figuras/Clase 8/Dibujo 1.pdf  used 
-on input line 1296.
-(pdftex.def)             Requested size: 341.43436pt x 133.39606pt.
-
-
-Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 1296.
-See the caption package documentation for explanation.
-
-[36 </home/enzo/Desktop/Doctorado Chile/Clases/2023/Primer semestre/Grafos/./Ed
-itor de Grafos/Figuras/Clase 7/Dibujo 6.pdf> </home/enzo/Desktop/Doctorado Chil
-e/Clases/2023/Primer semestre/Grafos/./Editor de Grafos/Figuras/Clase 8/Dibujo 
-1.pdf>]
-<./Editor de Grafos/Figuras/Clase 8/Dibujo 2.pdf, id=1277, 455.30101pt x 170.23
-985pt>
-File: ./Editor de Grafos/Figuras/Clase 8/Dibujo 2.pdf Graphic file (type pdf)
-<use ./Editor de Grafos/Figuras/Clase 8/Dibujo 2.pdf>
-Package pdftex.def Info: ./Editor de Grafos/Figuras/Clase 8/Dibujo 2.pdf  used 
-on input line 1330.
-(pdftex.def)             Requested size: 341.43436pt x 127.66917pt.
-
-
-Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 1330.
-See the caption package documentation for explanation.
-
-<./Editor de Grafos/Figuras/Clase 8/Dibujo 3.pdf, id=1278, 455.30101pt x 261.70
-206pt>
-File: ./Editor de Grafos/Figuras/Clase 8/Dibujo 3.pdf Graphic file (type pdf)
-<use ./Editor de Grafos/Figuras/Clase 8/Dibujo 3.pdf>
-Package pdftex.def Info: ./Editor de Grafos/Figuras/Clase 8/Dibujo 3.pdf  used 
-on input line 1348.
-(pdftex.def)             Requested size: 341.43436pt x 196.26007pt.
 
 Package caption Warning: The option `hypcap=true' will be ignored for this
 (caption)                particular \caption on input line 1348.
 See the caption package documentation for explanation.
 
+[36 </home/enzo/Desktop/Doctorado Chile/Clases/2023/Primer semestre/Grafos/./Ed
+itor de Grafos/Figuras/Clase 7/Dibujo 1.pdf>]
+<./Editor de Grafos/Figuras/Clase 7/Dibujo 2.pdf, id=1231, 322.29173pt x 338.74
+431pt>
+File: ./Editor de Grafos/Figuras/Clase 7/Dibujo 2.pdf Graphic file (type pdf)
+<use ./Editor de Grafos/Figuras/Clase 7/Dibujo 2.pdf>
+Package pdftex.def Info: ./Editor de Grafos/Figuras/Clase 7/Dibujo 2.pdf  used 
+on input line 1354.
+(pdftex.def)             Requested size: 341.43436pt x 358.87083pt.
+
+
+Package caption Warning: The option `hypcap=true' will be ignored for this
+(caption)                particular \caption on input line 1354.
+See the caption package documentation for explanation.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 1360.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 1360.
+
 [37 </home/enzo/Desktop/Doctorado Chile/Clases/2023/Primer semestre/Grafos/./Ed
-itor de Grafos/Figuras/Clase 8/Dibujo 2.pdf>]
-<./Editor de Grafos/Figuras/Clase 8/Dibujo 4.pdf, id=1306, 455.30101pt x 241.73
-462pt>
-File: ./Editor de Grafos/Figuras/Clase 8/Dibujo 4.pdf Graphic file (type pdf)
-<use ./Editor de Grafos/Figuras/Clase 8/Dibujo 4.pdf>
-Package pdftex.def Info: ./Editor de Grafos/Figuras/Clase 8/Dibujo 4.pdf  used 
+itor de Grafos/Figuras/Clase 7/Dibujo 2.pdf>]
+<./Editor de Grafos/Figuras/Clase 7/Dibujo 3.pdf, id=1263, 439.71295pt x 339.66
+899pt>
+File: ./Editor de Grafos/Figuras/Clase 7/Dibujo 3.pdf Graphic file (type pdf)
+<use ./Editor de Grafos/Figuras/Clase 7/Dibujo 3.pdf>
+Package pdftex.def Info: ./Editor de Grafos/Figuras/Clase 7/Dibujo 3.pdf  used 
 on input line 1366.
-(pdftex.def)             Requested size: 341.43436pt x 181.28575pt.
+(pdftex.def)             Requested size: 298.75262pt x 230.79045pt.
 
 
 Package caption Warning: The option `hypcap=true' will be ignored for this
 (caption)                particular \caption on input line 1366.
 See the caption package documentation for explanation.
 
+<./Editor de Grafos/Figuras/Clase 7/Dibujo 4.pdf, id=1264, 455.30101pt x 82.085
+16pt>
+File: ./Editor de Grafos/Figuras/Clase 7/Dibujo 4.pdf Graphic file (type pdf)
+<use ./Editor de Grafos/Figuras/Clase 7/Dibujo 4.pdf>
+Package pdftex.def Info: ./Editor de Grafos/Figuras/Clase 7/Dibujo 4.pdf  used 
+on input line 1370.
+(pdftex.def)             Requested size: 298.75262pt x 53.86324pt.
+
+Package caption Warning: The option `hypcap=true' will be ignored for this
+(caption)                particular \caption on input line 1370.
+See the caption package documentation for explanation.
+
+<./Editor de Grafos/Figuras/Clase 7/Dibujo 5.pdf, id=1265, 383.2954pt x 339.668
+99pt>
+File: ./Editor de Grafos/Figuras/Clase 7/Dibujo 5.pdf Graphic file (type pdf)
+<use ./Editor de Grafos/Figuras/Clase 7/Dibujo 5.pdf>
+Package pdftex.def Info: ./Editor de Grafos/Figuras/Clase 7/Dibujo 5.pdf  used 
+on input line 1380.
+(pdftex.def)             Requested size: 341.43436pt x 302.57913pt.
+
+Package caption Warning: The option `hypcap=true' will be ignored for this
+(caption)                particular \caption on input line 1380.
+See the caption package documentation for explanation.
+
 [38 </home/enzo/Desktop/Doctorado Chile/Clases/2023/Primer semestre/Grafos/./Ed
+itor de Grafos/Figuras/Clase 7/Dibujo 3.pdf> </home/enzo/Desktop/Doctorado Chil
+e/Clases/2023/Primer semestre/Grafos/./Editor de Grafos/Figuras/Clase 7/Dibujo 
+4.pdf>]
+<./Editor de Grafos/Figuras/Clase 7/Dibujo 6.pdf, id=1297, 358.13078pt x 339.34
+154pt>
+File: ./Editor de Grafos/Figuras/Clase 7/Dibujo 6.pdf Graphic file (type pdf)
+<use ./Editor de Grafos/Figuras/Clase 7/Dibujo 6.pdf>
+Package pdftex.def Info: ./Editor de Grafos/Figuras/Clase 7/Dibujo 6.pdf  used 
+on input line 1393.
+(pdftex.def)             Requested size: 341.43436pt x 323.52213pt.
+
+
+Package caption Warning: The option `hypcap=true' will be ignored for this
+(caption)                particular \caption on input line 1393.
+See the caption package documentation for explanation.
+
+[39 </home/enzo/Desktop/Doctorado Chile/Clases/2023/Primer semestre/Grafos/./Ed
+itor de Grafos/Figuras/Clase 7/Dibujo 5.pdf>]
+<./Editor de Grafos/Figuras/Clase 8/Dibujo 1.pdf, id=1308, 455.30101pt x 177.87
+634pt>
+File: ./Editor de Grafos/Figuras/Clase 8/Dibujo 1.pdf Graphic file (type pdf)
+<use ./Editor de Grafos/Figuras/Clase 8/Dibujo 1.pdf>
+Package pdftex.def Info: ./Editor de Grafos/Figuras/Clase 8/Dibujo 1.pdf  used 
+on input line 1410.
+(pdftex.def)             Requested size: 341.43436pt x 133.39606pt.
+
+
+Package caption Warning: The option `hypcap=true' will be ignored for this
+(caption)                particular \caption on input line 1410.
+See the caption package documentation for explanation.
+
+[40 </home/enzo/Desktop/Doctorado Chile/Clases/2023/Primer semestre/Grafos/./Ed
+itor de Grafos/Figuras/Clase 7/Dibujo 6.pdf> </home/enzo/Desktop/Doctorado Chil
+e/Clases/2023/Primer semestre/Grafos/./Editor de Grafos/Figuras/Clase 8/Dibujo 
+1.pdf>]
+<./Editor de Grafos/Figuras/Clase 8/Dibujo 2.pdf, id=1352, 455.30101pt x 170.23
+985pt>
+File: ./Editor de Grafos/Figuras/Clase 8/Dibujo 2.pdf Graphic file (type pdf)
+<use ./Editor de Grafos/Figuras/Clase 8/Dibujo 2.pdf>
+Package pdftex.def Info: ./Editor de Grafos/Figuras/Clase 8/Dibujo 2.pdf  used 
+on input line 1444.
+(pdftex.def)             Requested size: 341.43436pt x 127.66917pt.
+
+
+Package caption Warning: The option `hypcap=true' will be ignored for this
+(caption)                particular \caption on input line 1444.
+See the caption package documentation for explanation.
+
+<./Editor de Grafos/Figuras/Clase 8/Dibujo 3.pdf, id=1353, 455.30101pt x 261.70
+206pt>
+File: ./Editor de Grafos/Figuras/Clase 8/Dibujo 3.pdf Graphic file (type pdf)
+<use ./Editor de Grafos/Figuras/Clase 8/Dibujo 3.pdf>
+Package pdftex.def Info: ./Editor de Grafos/Figuras/Clase 8/Dibujo 3.pdf  used 
+on input line 1462.
+(pdftex.def)             Requested size: 341.43436pt x 196.26007pt.
+
+Package caption Warning: The option `hypcap=true' will be ignored for this
+(caption)                particular \caption on input line 1462.
+See the caption package documentation for explanation.
+
+[41 </home/enzo/Desktop/Doctorado Chile/Clases/2023/Primer semestre/Grafos/./Ed
+itor de Grafos/Figuras/Clase 8/Dibujo 2.pdf>]
+<./Editor de Grafos/Figuras/Clase 8/Dibujo 4.pdf, id=1381, 455.30101pt x 241.73
+462pt>
+File: ./Editor de Grafos/Figuras/Clase 8/Dibujo 4.pdf Graphic file (type pdf)
+<use ./Editor de Grafos/Figuras/Clase 8/Dibujo 4.pdf>
+Package pdftex.def Info: ./Editor de Grafos/Figuras/Clase 8/Dibujo 4.pdf  used 
+on input line 1480.
+(pdftex.def)             Requested size: 341.43436pt x 181.28575pt.
+
+
+Package caption Warning: The option `hypcap=true' will be ignored for this
+(caption)                particular \caption on input line 1480.
+See the caption package documentation for explanation.
+
+[42 </home/enzo/Desktop/Doctorado Chile/Clases/2023/Primer semestre/Grafos/./Ed
 itor de Grafos/Figuras/Clase 8/Dibujo 3.pdf> </home/enzo/Desktop/Doctorado Chil
 e/Clases/2023/Primer semestre/Grafos/./Editor de Grafos/Figuras/Clase 8/Dibujo 
 4.pdf>]
-<./Editor de Grafos/Figuras/Clase 9/Dibujo 1.pdf, id=1360, 455.30101pt x 315.80
+<./Editor de Grafos/Figuras/Clase 8/Dibujo 5.pdf, id=1435, 455.30101pt x 230.98
+888pt>
+File: ./Editor de Grafos/Figuras/Clase 8/Dibujo 5.pdf Graphic file (type pdf)
+<use ./Editor de Grafos/Figuras/Clase 8/Dibujo 5.pdf>
+Package pdftex.def Info: ./Editor de Grafos/Figuras/Clase 8/Dibujo 5.pdf  used 
+on input line 1498.
+(pdftex.def)             Requested size: 341.43436pt x 173.22711pt.
+
+
+Package caption Warning: The option `hypcap=true' will be ignored for this
+(caption)                particular \caption on input line 1498.
+See the caption package documentation for explanation.
+
+<./Editor de Grafos/Figuras/Clase 8/Dibujo 6.pdf, id=1436, 455.30101pt x 241.73
+462pt>
+File: ./Editor de Grafos/Figuras/Clase 8/Dibujo 6.pdf Graphic file (type pdf)
+<use ./Editor de Grafos/Figuras/Clase 8/Dibujo 6.pdf>
+Package pdftex.def Info: ./Editor de Grafos/Figuras/Clase 8/Dibujo 6.pdf  used 
+on input line 1508.
+(pdftex.def)             Requested size: 341.43436pt x 181.28575pt.
+
+Package caption Warning: The option `hypcap=true' will be ignored for this
+(caption)                particular \caption on input line 1508.
+See the caption package documentation for explanation.
+
+[43 </home/enzo/Desktop/Doctorado Chile/Clases/2023/Primer semestre/Grafos/./Ed
+itor de Grafos/Figuras/Clase 8/Dibujo 5.pdf>]
+
+LaTeX Font Warning: Font shape `T1/fnc/m/scit' undefined
+(Font)              using `T1/fnc/m/sc' instead on input line 1531.
+
+
+LaTeX Font Warning: Font shape `T1/fnc/m/scit' undefined
+(Font)              using `T1/fnc/m/sc' instead on input line 1532.
+
+<./Editor de Grafos/Figuras/Clase 8/Dibujo 7.pdf, id=1456, 455.30101pt x 199.47
+693pt>
+File: ./Editor de Grafos/Figuras/Clase 8/Dibujo 7.pdf Graphic file (type pdf)
+<use ./Editor de Grafos/Figuras/Clase 8/Dibujo 7.pdf>
+Package pdftex.def Info: ./Editor de Grafos/Figuras/Clase 8/Dibujo 7.pdf  used 
+on input line 1536.
+(pdftex.def)             Requested size: 341.43436pt x 149.59515pt.
+
+Package caption Warning: The option `hypcap=true' will be ignored for this
+(caption)                particular \caption on input line 1536.
+See the caption package documentation for explanation.
+
+[44 </home/enzo/Desktop/Doctorado Chile/Clases/2023/Primer semestre/Grafos/./Ed
+itor de Grafos/Figuras/Clase 8/Dibujo 6.pdf>]
+<./Editor de Grafos/Figuras/Clase 9/Dibujo 1.pdf, id=1487, 455.30101pt x 315.80
 94pt>
 File: ./Editor de Grafos/Figuras/Clase 9/Dibujo 1.pdf Graphic file (type pdf)
 <use ./Editor de Grafos/Figuras/Clase 9/Dibujo 1.pdf>
 Package pdftex.def Info: ./Editor de Grafos/Figuras/Clase 9/Dibujo 1.pdf  used 
-on input line 1386.
+on input line 1557.
 (pdftex.def)             Requested size: 341.43436pt x 236.83719pt.
 
 
 Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 1386.
+(caption)                particular \caption on input line 1557.
 See the caption package documentation for explanation.
 
-<./Editor de Grafos/Figuras/Clase 9/Dibujo 2.pdf, id=1361, 455.30101pt x 175.26
+[45 </home/enzo/Desktop/Doctorado Chile/Clases/2023/Primer semestre/Grafos/./Ed
+itor de Grafos/Figuras/Clase 8/Dibujo 7.pdf>]
+<./Editor de Grafos/Figuras/Clase 9/Dibujo 2.pdf, id=1510, 455.30101pt x 175.26
 088pt>
 File: ./Editor de Grafos/Figuras/Clase 9/Dibujo 2.pdf Graphic file (type pdf)
 <use ./Editor de Grafos/Figuras/Clase 9/Dibujo 2.pdf>
 Package pdftex.def Info: ./Editor de Grafos/Figuras/Clase 9/Dibujo 2.pdf  used 
-on input line 1389.
+on input line 1560.
 (pdftex.def)             Requested size: 341.43436pt x 131.43463pt.
 
+
 Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 1389.
+(caption)                particular \caption on input line 1560.
 See the caption package documentation for explanation.
 
-[39 </home/enzo/Desktop/Doctorado Chile/Clases/2023/Primer semestre/Grafos/./Ed
+
+LaTeX Font Warning: Font shape `T1/fnc/m/scit' undefined
+(Font)              using `T1/fnc/m/sc' instead on input line 1567.
+
+
+LaTeX Font Warning: Font shape `T1/fnc/m/scit' undefined
+(Font)              using `T1/fnc/m/sc' instead on input line 1568.
+
+[46 </home/enzo/Desktop/Doctorado Chile/Clases/2023/Primer semestre/Grafos/./Ed
 itor de Grafos/Figuras/Clase 9/Dibujo 1.pdf> </home/enzo/Desktop/Doctorado Chil
 e/Clases/2023/Primer semestre/Grafos/./Editor de Grafos/Figuras/Clase 9/Dibujo 
 2.pdf>]
+(/home/enzo/Desktop/Doctorado Chile/Clases/2023/Primer semestre/Grafos/Apendice
+/Apendice.tex [47]
+Ap\'{e}ndice A.
+[48
 
-LaTeX Font Warning: Font shape `T1/fnc/m/scit' undefined
-(Font)              using `T1/fnc/m/sc' instead on input line 1396.
-
-
-LaTeX Font Warning: Font shape `T1/fnc/m/scit' undefined
-(Font)              using `T1/fnc/m/sc' instead on input line 1397.
-
-[40]
+]) [49]
 (/home/enzo/Desktop/Doctorado Chile/Clases/2023/Primer semestre/Grafos/Apuntes 
-- GRAFOS.bbl) [41
+- GRAFOS.bbl) [50
 
 ]
 (/home/enzo/Desktop/Doctorado Chile/Clases/2023/Primer semestre/Grafos/Apuntes 
@@ -2375,16 +2485,16 @@ LaTeX Info: Redefining \. on input line 23.
 LaTeX Info: Redefining \% on input line 23.
 )
 Package rerunfilecheck Info: File `"Apuntes - GRAFOS".out' has not changed.
-(rerunfilecheck)             Checksum: ACB061ED2453E45D26244947E35774C2;2901.
+(rerunfilecheck)             Checksum: AF9C8537C278690ABAE0A8B8076257DB;3451.
  ) 
 Here is how much of TeX's memory you used:
- 29437 strings out of 476017
- 565391 string characters out of 5786780
- 1864666 words of memory out of 5000000
- 49098 multiletter control sequences out of 15000+600000
+ 29541 strings out of 476017
+ 568579 string characters out of 5786780
+ 1865666 words of memory out of 5000000
+ 49154 multiletter control sequences out of 15000+600000
  592812 words of font info for 183 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 98i,12n,94p,1287b,995s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 98i,13n,94p,1287b,995s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
 pdfTeX warning (dest): name{theorem.1.6.6} has been referenced but does not exi
 st, replaced by a fixed one
@@ -2398,15 +2508,17 @@ blic/mathabx-type1/matha10.pfb></home/whitengine/texlive/2023/texmf-dist/fonts/
 type1/public/mathabx-type1/matha12.pfb></home/whitengine/texlive/2023/texmf-dis
 t/fonts/type1/public/mathabx-type1/matha7.pfb></home/whitengine/texlive/2023/te
 xmf-dist/fonts/type1/public/mathabx-type1/matha9.pfb></home/whitengine/texlive/
-2023/texmf-dist/fonts/type1/public/mathabx-type1/mathx10.pfb></home/whitengine/
-texlive/2023/texmf-dist/fonts/type1/urw/ncntrsbk/uncb8a.pfb></home/whitengine/t
-exlive/2023/texmf-dist/fonts/type1/urw/ncntrsbk/uncr8a.pfb></home/whitengine/te
-xlive/2023/texmf-dist/fonts/type1/urw/ncntrsbk/uncri8a.pfb>
+2023/texmf-dist/fonts/type1/public/mathabx-type1/mathb12.pfb></home/whitengine/
+texlive/2023/texmf-dist/fonts/type1/public/mathabx-type1/mathx10.pfb></home/whi
+tengine/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb>
+</home/whitengine/texlive/2023/texmf-dist/fonts/type1/urw/ncntrsbk/uncb8a.pfb><
+/home/whitengine/texlive/2023/texmf-dist/fonts/type1/urw/ncntrsbk/uncr8a.pfb></
+home/whitengine/texlive/2023/texmf-dist/fonts/type1/urw/ncntrsbk/uncri8a.pfb>
 Output written on "/home/enzo/Desktop/Doctorado Chile/Clases/2023/Primer semest
-re/Grafos/Apuntes - GRAFOS.pdf" (42 pages, 814526 bytes).
+re/Grafos/Apuntes - GRAFOS.pdf" (51 pages, 892942 bytes).
 PDF statistics:
- 1514 PDF objects out of 1728 (max. 8388607)
- 875 compressed objects within 9 object streams
- 217 named destinations out of 1000 (max. 500000)
- 413 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1694 PDF objects out of 1728 (max. 8388607)
+ 991 compressed objects within 10 object streams
+ 258 named destinations out of 1000 (max. 500000)
+ 462 words of extra memory for PDF output out of 10000 (max. 10000000)
 
