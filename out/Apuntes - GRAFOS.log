@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.4.11)  20 APR 2023 17:47
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.4.11)  21 APR 2023 13:14
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -2526,10 +2526,47 @@ Ap\'{e}ndice A.
 
 ] [52]
 LaTeX Font Info:    Font shape `T1/fnc/m/it' will be
-(Font)              scaled to size 8.36993pt on input line 105.
+(Font)              scaled to size 8.36993pt on input line 113.
 LaTeX Font Info:    Font shape `T1/fnc/m/it' will be
-(Font)              scaled to size 6.50995pt on input line 105.
- [53]) [54] (./Apuntes - GRAFOS.bbl) [55
+(Font)              scaled to size 6.50995pt on input line 113.
+ [53] [54]
+
+LaTeX Warning: File `"./Editor de Grafos/Figuras/Clase 10/Dibujo 7.pdf"' not fo
+und on input line 155.
+
+
+./Apendice/Apendice.tex:155: Package pdftex.def Error: File `./Editor de Grafos
+/Figuras/Clase 10/Dibujo 7.pdf' not found: using draft setting.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.155 ...tal $C_e$, y el corte fundamental $D_f$.}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+LaTeX Font Info:    Trying to load font information for T1+cmtt on input line 1
+55.
+(/home/whitengine/texlive/2023/texmf-dist/tex/latex/base/t1cmtt.fd
+File: t1cmtt.fd 2022/07/10 v2.5l Standard LaTeX font definitions
+)
+
+Package caption Warning: The option `hypcap=true' will be ignored for this
+(caption)                particular \caption on input line 155.
+See the caption package documentation for explanation.
+
+
+LaTeX Font Warning: Font shape `T1/fnc/m/scit' undefined
+(Font)              using `T1/fnc/m/sc' instead on input line 160.
+
+
+LaTeX Font Warning: Font shape `T1/fnc/m/scit' undefined
+(Font)              using `T1/fnc/m/sc' instead on input line 161.
+
+) [55{/home/whitengine/texlive/2023/texmf-dist/fonts/enc/dvips/cm-super/cm-supe
+r-t1.enc}] (./Apuntes - GRAFOS.bbl) [56
 
 ]
 (/home/enzo/Desktop/Doctorado Chile/Clases/2023/Primer semestre/Grafos/out/Apun
@@ -2541,11 +2578,11 @@ Package rerunfilecheck Info: File `"Apuntes - GRAFOS".out' has not changed.
 (rerunfilecheck)             Checksum: 1A3A52E31A0F9EC8837335F78CCA0BE0;3603.
  ) 
 Here is how much of TeX's memory you used:
- 29628 strings out of 476017
- 571492 string characters out of 5786780
+ 29701 strings out of 476017
+ 574137 string characters out of 5786780
  1865666 words of memory out of 5000000
- 49207 multiletter control sequences out of 15000+600000
- 596809 words of font info for 186 fonts, out of 8000000 for 9000
+ 49255 multiletter control sequences out of 15000+600000
+ 597122 words of font info for 187 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  98i,13n,94p,1287b,995s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
@@ -2564,14 +2601,16 @@ xmf-dist/fonts/type1/public/mathabx-type1/matha9.pfb></home/whitengine/texlive/
 2023/texmf-dist/fonts/type1/public/mathabx-type1/mathb12.pfb></home/whitengine/
 texlive/2023/texmf-dist/fonts/type1/public/mathabx-type1/mathx10.pfb></home/whi
 tengine/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb>
-</home/whitengine/texlive/2023/texmf-dist/fonts/type1/urw/ncntrsbk/uncb8a.pfb><
-/home/whitengine/texlive/2023/texmf-dist/fonts/type1/urw/ncntrsbk/uncr8a.pfb></
-home/whitengine/texlive/2023/texmf-dist/fonts/type1/urw/ncntrsbk/uncri8a.pfb>
+</home/whitengine/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sftt1200.
+pfb></home/whitengine/texlive/2023/texmf-dist/fonts/type1/urw/ncntrsbk/uncb8a.p
+fb></home/whitengine/texlive/2023/texmf-dist/fonts/type1/urw/ncntrsbk/uncr8a.pf
+b></home/whitengine/texlive/2023/texmf-dist/fonts/type1/urw/ncntrsbk/uncri8a.pf
+b>
 Output written on "/home/enzo/Desktop/Doctorado Chile/Clases/2023/Primer semest
-re/Grafos/out/Apuntes - GRAFOS.pdf" (56 pages, 948905 bytes).
+re/Grafos/out/Apuntes - GRAFOS.pdf" (57 pages, 983207 bytes).
 PDF statistics:
- 1883 PDF objects out of 2073 (max. 8388607)
- 1102 compressed objects within 12 object streams
- 291 named destinations out of 1000 (max. 500000)
+ 1898 PDF objects out of 2073 (max. 8388607)
+ 1114 compressed objects within 12 object streams
+ 296 named destinations out of 1000 (max. 500000)
  505 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -91,13 +91,21 @@ Haremos inducción en el tamaño del corte $F$ a considerar. Para $F = \emptyset
 \begin{exercise}
 Hallar una base de $\mathcal{B}(G)$ dada por conjuntos de aristas de la forma $E(v)$.
 \end{exercise}
-\begin{proof}
-Por el lema anterior, sabemos que los enlaces generan $\mathcal{B} (G)$, luego afirmamos que son linealmente independientes y por lo tanto forman un base deste subespacio. En efecto, que sean linealmente dependientes equivale a que existen enlaces $E(U_1^1,U_2^1), \ldots, E(U_1^r, U_2^r)$ (distintos) tales que
+\begin{solution}
+Sabemos que los $E(v), v \in V(G)$ generan $\mathcal{B}(G)$; afirmamos que si $G$ es conexo, entonces para todo $w \in V(G)$ el siguiente conjunto forma una base del subespacio de cortes:
 $$
-\emptyset = \sum_{1 \leq j\leq r} E(U_1^j,U_2^j).
+\{ E(v) \}_{v \in V(G) \setminus \{w\}}.
 $$
-Que los enlaces sean distintos, implica que la suma (comlpemento simétrico) es en realidad una unión disjunta y en particular no puede dar vacío. En efecto, dados dos enlaces distintos $F$ y $F'$, deben ser disjuntos, pues por el lema anterior, el conjunto de cortes es un subespacio luego $F+F'$ es un enlace contenido en $F$ y $F'$
-\end{proof}
+En efecto, el conjunto de generadores de $\mathcal{B}(G)$ es linealmente dependiente porque $\sum_{v \in V(G)} E(v) = \emptyset$, pero si quitamos cualquier vértice se vuelve linealmente independiente, pues que sea linealmente dependiente equivale a que existe un subconjunto $S \subsetneq V(G)$ no vacío tal que
+$$
+\emptyset = \sum_{v \in S} E(v) = E(S, V(G) \setminus S),
+$$
+que es imposible si $G$ es conexo.
+
+En general, si $G$ no es conexo escribimos $G = \bigsqcup_i C_i$, donde $C_i$ son sus componentes conexas, luego una base de $\mathcal{B}(G)$ es la unión de las bases de $\mathcal{B}(G_i)$, pues podemos hacer el abuso de notación $\mathcal{B}(G) = \bigoplus_i \mathcal{B}(G_i)$.
+\end{solution}
+
+
 
 \begin{corollary}
 Se sigue que
@@ -128,8 +136,62 @@ El espacio de ciclos $\mathcal{C}(G)$ y el espacio de cortes $\mathcal{B}(G)$ de
 \]
 \end{theorem}
 \begin{proof}
+Consideremos un grafo $G = (V,E)$. Claramente todo ciclo en $G$ tiene un número par de aristas en cada corte, luego los ciclos son ortogonales a los cortes, es decir
+$$
+\mathcal{C}(B) \subset \mathcal{B}(G)^\perp \quad \text{y} \quad \mathcal(B)(G)  \subset \mathcal{C}(G)^\perp.
+$$
+
+Para probar $\mathcal{B}(G)^\perp \subset \mathcal C$ hay que usar la anteúltima proposición que caracteriza los vectores del subespacio de ciclos, es decir $F \not \in \mathcal{C}(G)$ si y solo si tiene un vértice incidente con un número impar de aristas en $F$. Luego $\langle E(v), F \rangle = 1$, entonces como $E(v) \in \mathcal{B}(G)$ se sigue que $F \not \in \mathcal{B}(G)^\perp$. Esto termina de probar que $\mathcal C = \mathcal B ^\perp$ en $G$.
+
+Finalmente, para probar $\mathcal (G)^\perp \subset \mathcal B (G)$, tomemos $F \in \mathcal C (G)^\perp$. Consideremos el \textit{multigrafo} $H$ obtenido a partir de $G$ luego de contraer las aristas de $E \setminus F$. Todo ciclo en $H$ tiene sus aristas en $F$. Como lo podemos extender a cualquier ciclo en $G$ agergando aristas de $E\setminus F$, entonces el número de aristas del ciclo extendido que están en $F$ (es decir las aristas del ciclo en $H$ original) debe ser par, pues $F \in \mathcal C ^\perp$. Usando la caracterización de grafos bipartitos, tenemos q ue $H$ es bipartito. Su partición induce una partición $(V_1,V_2)$ de $V$ (ya que las aristas que habíamos contraído convierten la bipartición en un corte), tal que $E(V_1,V_2) = F$, i.e. $F \in \mathcal{B}(G)$.
+\end{proof}
+
+
+
+Consideremos ahaora un grafo conexo $G = (V,E)$ con un árbol generador $T \subset G$. Para toda cuerda $e \in E \setminus E(T)$ existe un único ciclo $C_e$ en $T+e$, que llamaremos el \textbf{ciclo fundamental} de $e$ con respecto a $T$. Similarmente, para toda arista $f \in T$, el bosque tienee exactamente dos componentes (por la caracterización de árbol). El conjunto $D_f \subset E$ de aristas de $G$ entre ambas componentes es un \textit{enlace} (usando una de las propiedades probadas en essta sección, pues ambos lados de la partición son subgrafos inducidos conexos) en $G$, el \textbf{corte fundamental} de $f$ con respecto de $T$.
+
+Notar que $f \in C_e$ si y solo si $e \in D_f$, para todo $e \not \in T$ y $f \in T$. Esto indica una conexión más profunda de dualidad; el siguiente teorema explora un poco este descubrimiento.
+
+\Dibujo{Ejemplo: El ciclo fundamental $C_e$, y el corte fundamental $D_f$.}
+
+\begin{theorem}
+Sea $G$ un grafo conexo con $n$ vértices y $m$ aristas, y sea $T \subset G$ un árbol generador.
+\begin{enumerate}[(i)]
+\item Los cortes fundamentales y los ciclos fundamentales de $G$ respecto de $T$ forman bases de $\mathcal{B}(G)$ y $\mathcal{C}(G)$, respectivamente.
+\item Consecuentemente,
+$$
+\dim \mathcal{B}(G) = n-1 \quad \text{y} \quad \dim \mathcal{C}(G) = m - n + 1.
+$$
+\end{enumerate}
+\end{theorem}
+\begin{proof}
+\begin{enumerate}[(i)]
+\end{enumerate}
 
 \end{proof}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 \end{document}
