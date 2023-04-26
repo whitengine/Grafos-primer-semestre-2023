@@ -7,7 +7,7 @@
 \contentsline {section}{\numberline {1.3}Clase 3: 20/03/23}{10}{section.1.3}%
 \contentsline {subsection}{\numberline {1.3.1}Conexidad}{16}{subsection.1.3.1}%
 \contentsline {section}{\numberline {1.4}Clase 4: 23/03/23}{18}{section.1.4}%
-\contentsline {subsection}{\numberline {1.4.1}Árboles y bosques}{19}{subsection.1.4.1}%
+\contentsline {subsection}{\numberline {1.4.1}Árboles y bosques}{20}{subsection.1.4.1}%
 \contentsline {section}{\numberline {1.5}Clase 5: 27/03/23}{23}{section.1.5}%
 \contentsline {subsection}{\numberline {1.5.1}Grafos bipartitos}{26}{subsection.1.5.1}%
 \contentsline {subsection}{\numberline {1.5.2}Paseos Eulerianos}{30}{subsection.1.5.2}%
@@ -19,7 +19,9 @@
 \contentsline {subsection}{\numberline {1.8.1}Contracciones y menores}{42}{subsection.1.8.1}%
 \contentsline {subsection}{\numberline {1.8.2}subdivisiones}{43}{subsection.1.8.2}%
 \contentsline {section}{\numberline {1.9}Clase 9: 17/04/23}{46}{section.1.9}%
-\contentsline {subsection}{\numberline {1.9.1}}{47}{subsection.1.9.1}%
-\contentsline {section}{\numberline {1.10}Clase 10: 20/04/23}{47}{section.1.10}%
-\contentsline {chapter}{\numberline {A}Primera parte de la materia (primer capítulo del Diestel)}{51}{appendix.Alph1}%
-\contentsline {section}{\numberline {A.1}}{51}{section.Alph1.1}%
+\contentsline {subsection}{\numberline {1.9.1}}{48}{subsection.1.9.1}%
+\contentsline {section}{\numberline {1.10}Clase 10: 20/04/23}{48}{section.1.10}%
+\contentsline {section}{\numberline {1.11}Ejercicios}{51}{section.1.11}%
+\contentsline {chapter}{\numberline {A}Primera parte de la materia (primer capítulo del Diestel)}{56}{appendix.Alph1}%
+\contentsline {section}{\numberline {A.1}}{56}{section.Alph1.1}%
+\contentsline {section}{\numberline {A.2}}{62}{section.Alph1.2}%

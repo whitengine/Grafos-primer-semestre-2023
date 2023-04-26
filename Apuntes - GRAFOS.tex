@@ -8,6 +8,8 @@
 
 \usepackage[a4paper,width=150mm,top=25mm,bottom=25mm]{geometry}
 
+
+
 \usepackage{subfiles} %esto es para modularizar el overleaf
 %para usar este paquete solamente hay que usar el comando
 %\subfile{}
@@ -602,7 +604,7 @@ $$
 El número de vértices de grado impar en un grafo siempre par.
 \end{Proposition}
 \begin{proof}
-Por la observación anterior, $\sum_{v \in V(G)} = 2 \abs{G} \equiv 0 \mod 2$ con lo cual, 
+Por la observación anterior, $\sum_{v \in V(G)} d(v) = 2 \abs{G} \equiv 0 \mod 2$ con lo cual,
 $$
 \# \set{ v \in V(G) | d(v) \equiv 1 \mod 2 } = \sum_{v | d(v) \equiv 1 \mod 2} d(v) \equiv 0 \mod 2 .
 $$
@@ -762,7 +764,9 @@ $$
 Si queremos relacionar el radio o diámetro con el grafo mínimo, promedio o máximo debemos tener otros parámetros como intermediario. Por ejemplo, los caminos tienen grado mínimo $1$ pero pueden tener radio y diámetro arbitrariamente grandes. O podemos tener radio y diámetro arbitrariamente grande y grado mínimo arbitrario. Antes de dar un ejemplo, necesitamos la siguiente definición:
 
 \begin{definition}
-Sea $G$ un grafo, definimos $G^k$ como la \textbf{potencia} de $G$. Es el grafo que contiene los mismos vértices y las aristas son las originales pero agregando a cada vértice $x$ una arista incidente con cada vértice $y$ a distancia $ d(x,y) \geq k$.
+Sea $G$ un grafo, definimos $G^k$ como la \textbf{potencia} de $G$. Es el grafo que contiene los mismos vértices y
+las aristas son las originales pero agregando a cada vértice $x$ una arista incidente con cada vértice $y$ a
+distancia $ d(x,y) \leq k$.
 \end{definition}
 
 \Dibujo[0.6]{El camino $P : 0,1,2,\ldots,7$ dibujado en \black{negro}, le agregamos aristas para dibujar $P^3$. Las aristas rojas conectan nodos a distancia $2$ y las \blue{azules} $3$.}
@@ -819,18 +823,36 @@ Similarmente, podemos acotar el orden de $G$ por abajo, si es que podemos contro
                 \end{cases}
 \]
 
-\begin{theorem}[Versión débil]\footnote{La versión fuerte de este teorema, por Alon, Hoory and Linial, 2002, dice que si $d(G) \geq d \neq 2$ y $g(G) \geq g \in \naturals$, entonces $\abs G \geq n_0 (d,g)$.}
-Sea $G$ un grafo con $\delta (G) \geq d \geq 2$ y $g(G) \geq g \in \naturals$.
+\begin{theorem}[Versión débil]\footnote{La versión fuerte de este teorema, por Alon, Hoory and Linial, 2002, dice que
+ si $d(G) \geq d \geq 2$ y $g(G) \geq g \in \naturals$, entonces $\abs G \geq n_0 (d,g)$.}
+Sea $G$ un grafo con $\delta (G) \geq d \geq 2$ y $g(G) \geq g \in \naturals$. Entonces
+\[
+    \abs G \geq n_0 (d,g).
+\]
+En particular, $\abs G \geq n_0 ( d(G)/2, g)$.
 \end{theorem}
 \begin{proof}
-Sea $v$ un vértice de un ciclo $C$ de largo mínimo, i.e. $\geq g$. Consideremos como $D_i$ al conjunto de vértices a distancia $i$ de $v$ en $G$. Como antes, $\abs {D_0} = 1$, para cada vértice de $D_{i+1}$ tiene un vecino en $D_{i}$ si $i>0$; como cada vértice de $D_i$ tiene un vecino en $D_{i-1}$, se sigue que $\abs{D_{i+1}} \geq (\delta ( G)-1)\abs{D_i} \geq (d-1) \abs{D_i}$ si $i < r$, ya que de lo contrario existiría un ciclo de longitud más chica que $r$.
+Notar que la función es creciente en ambas variables para todo $d \geq 2$ y $g \in \naturals$. Con lo cual, basta
+probar la afirmación para $d = \delta(G)$ y $g = g(G)$.
+
+Sea $v$ un vértice de un ciclo $C$ de largo mínimo, i.e. $\geq g$. Consideremos como $D_i$ al conjunto de vértices a distancia $i$ de $v$ en $G$. Como antes, $\abs {D_0} = 1$, para cada vértice de $D_{i+1}$ tiene un vecino en $D_{i}$ si $i>0$; como cada vértice de $D_i$ tiene un vecino en $D_{i-1}$, se sigue que $\abs{D_{i+1}}  \geq (d-1) \abs{D_i}$ si $i < r$, ya que de lo contrario existiría un ciclo de longitud más chica que $r$.
 Reiterando recursivamente esta igualdad, se sigue que $\abs{D_{i+1}} \geq (d-1)^i \abs{D_1}$ para todo $i < r$
 
-Luego como $G = \sqcup_{i} D_i \supset \sqcup_{0\leq i\leq r} D_i$, se sigue que
+Luego como
+$$
+G = \sqcup_{i} D_i \supset \sqcup_{0\leq i\leq r} D_i,
+$$
+se sigue que
 \begin{enumerate}
-\item[Caso $g = 2 r +1$] $\abs G \geq \sum_{0 \leq i \leq r} \abs{D_i} =  1 + \sum{i=0}^{r-1} \abs{D_{i+1}} \geq 1 + \sum_{i=0}^{r-1} (d-1)^i \abs{D_1} \geq 1 + \sum_{i=0}^{r-1} (d-1)^i d$.
+\item[Caso $g = 2 r +1$]
+$$
+\abs G \geq \sum_{0 \leq i \leq r} \abs{D_i} =  1 + \sum_{i=0}^{r-1} \abs{D_{i+1}} \geq 1 + \sum_{i=0}^{r-1} (d-1)^i \abs{D_1} \geq 1 + \sum_{i=0}^{r-1} (d-1)^i d.$$
+
 \item[Caso $g = 2 r$] Analogo.
 \end{enumerate}
+
+La última afirmación vale, pues sea $d = d(G)/2 = \epsilon (G)$, luego por la Proposición \ref{}, existe un subgrafo $H$ de $G$ tal que $\delta (G) > d$, y por lo tanto aplicando este teorema a $H$ se tiene que $\abs G \geq \abs H \geq n_0 (\delta(H),g(H))$, pero como $\delta (H) > d$ y $g(H) \geq g(G) = g$, y $n_0$ es creciente en ambas variables, se sigue que $\abs G \geq n_0 (d,g)$.
+
 \end{proof}
 \begin{corollary}
 Si $\delta(G) \geq 3$, entonces $g(G) < 2 \log_2 \abs G$.
@@ -854,7 +876,8 @@ g(G) \leq 2 \diam G +1.
 $$
 \end{proposition}
 \begin{proof}
-Supongamos que no. Es decir, si $C$ es el ciclo de $G$ con menor longitud, se tiene que $\Abs C = g(G) \geq 2 \diam +2$. Es decir, existen dos vértices de $C$, digamos $x,y$ tales que su distancia en $C$ es mayor o igual a $\diam G +1$. En $G$, estos vértices están a distancia menor que $\diam G+1$, sea $P$ el camino mas corto en $G$ que une a $x,y$ (i.e. tiene longitud $< \diam G +1$), luego $P$ no es subgrafo de $G$. Con lo cual, existe un subcamino de $P$ que es un $C$-camino; luego este camino unión el $x-y$ camino más corto de $C$ es un ciclo de longitud más chica que la de $C$, absurdo.
+Supongamos que no. Es decir, si $C$ es el ciclo de $G$ con menor longitud, se tiene que $\Abs C = g(G) \geq 2 \diam
+G+2$. Es decir, existen dos vértices de $C$, digamos $x,y$ tales que su distancia en $C$ es mayor o igual a $\diam G +1$. En $G$, estos vértices están a distancia menor que $\diam G+1$, sea $P$ el camino mas corto en $G$ que une a $x,y$ (i.e. tiene longitud $< \diam G +1$), luego $P$ no es subgrafo de $G$. Con lo cual, existe un subcamino de $P$ que es un $C$-camino; luego este camino unión el $x-y$ camino más corto de $C$ es un ciclo de longitud más chica que la de $C$, absurdo.
 \end{proof}
 
 \subsection{Conexidad}
@@ -1086,9 +1109,18 @@ Recordemos que para todo $y \in V(T)$, existe un único camino entre $r$ e $y$ q
 \[
     \ceil y := \Set{x | x \leq y} \quad \text{y} \quad \floor x := \Set{ y | y \geq x}
 \]
-la \textbf{clausura inferior} de $y$, y la \textbf{clausura superior} de $x$, respectivamente. En general, definimos $\ceil X := \bigcup_{x \in X} \ceil x $ y annálogamente $\floor X$, para un conjunto $X \subset V(T)$. Un conjunto $X$ que coincide con $\ceil X$, se dice \textbf{cerrado inferiormente}, análogamente en el otro caso tenemos que es \textbf{cerrado inferiormente}.
+la \textbf{clausura inferior} de $y$, y la \textbf{clausura superior} de $x$, respectivamente. En general, definimos $\ceil X := \bigcup_{x \in X} \ceil x $ y análogamente $\floor X$, para un conjunto $X \subset V(T)$. Un conjunto $X$ que coincide con $\ceil X$, se dice \textbf{cerrado inferiormente}, análogamente en el otro caso tenemos que es \textbf{cerrado superiormente}.
 
-Notar que $r$ es el \textit{mínimo} en este orden, y todas las hojas de $T$ son \textit{maximales}. Los extremos de una arista son siempre comparables entre sí, y los elementos de una clausura superior o inferior forman una \textit{cadena} (i.e. son comparables entre sí). Decimos que los vértice a distancia $k$ de $r$ tienen \textbf{altura} $k$ y el conjunto de estos vértices forma el $k$-ésimo \textbf{nivel} de $T$.
+Notar que $r$ es el \textit{mínimo} en este orden, y todas las hojas de $T$ son \textit{maximales}. Los extremos de
+una arista son siempre comparables entre sí, y los elementos de una clausura inferior forman una \textit{cadena} (i.e
+. son comparables entre sí), sin embargo los elementos de una clausura superior no tienen por qué formar una cadena.
+Decimos
+que los
+vértice a
+distancia $k$ de $r$
+tienen \textbf{altura} $
+k$ y el
+conjunto de estos vértices forma el $k$-ésimo \textbf{nivel} de $T$.
 
 Un árbol enraigado $T$ contenido en un grafo $G$ se dice \textbf{normal} en $G$, si los extremos de todo $T$-camino en $G$ son comparables en el orden de $T$. Si $T$ genera $G$, esto equivale a pedir que dos vértices de $T$ sean comparables siempre que sean adyacentes en $G$; ver la siguiente figura:
 
@@ -1100,7 +1132,7 @@ Un arbol normal puede ser una herramienta realmente útil para examinar la estru
 Sea $T$ un árbol normal en $G$. Tenemos que:
 \begin{enumerate}[(i)]
 \item Dados $x,y \in V(T)$, están separados en $G$ por el conjunto $\ceil x \cap \ceil y$.
-1\item Supongamos que $T$ genera $G$. Si $S \subset V(T) = V(G)$ y $S$ es inferiormente cerrado, luego las componentes conexas de $G \setminus S$ están generadas por los conjuntos $\floor x$ con $x$ minimal en $T \setminus S$.
+\item Supongamos que $T$ genera $G$. Si $S \subset V(T) = V(G)$ y $S$ es inferiormente cerrado, luego las componentes conexas de $G \setminus S$ están generadas por los conjuntos $\floor x$ con $x$ minimal en $T \setminus S$.
 \end{enumerate}
 \end{lemma}
 \begin{proof}
@@ -1445,11 +1477,17 @@ El \textbf{grafo bloque} de un grafo $G$ tiene un vértice por cada bloque y por
 
 Notar que en nuestro ejemplo, el grafo bloque es un árbol. Esto no es casualidad:
 
-\begin{proposition}
+\begin{exercise}
 El grafo bloque de un grafo conexo es un árbol.
-\end{proposition}
+\end{exercise}
 \begin{proof}
-\comentario{TAREA PARA MI}
+\textit{Notación:} al grafo bloque de $G$ lo denotamos por $Block(G)$. A un subgrafo conexo sin vértices de corte
+maximal,
+i.e. un bloque, lo vamos a denotar con las letras mayusculas $B,C,D$. Y denotaremos con la misma letra al vértice que inducen en el grafo $Block(G)$. A los vértices de corte los denotaremos por una letra minúscula como $x,y,z,u,v,w$ y los denotaremos de la misma manera en el grafo $Block (G)$. Quedará claro dependiendo del contexto, a qué grafo pertenece cada vértice en esta notación. Haremos el abuso de notación y llamaremos bloque tanto al subgrafo de $G$ como al vértice de $Block (G)$. Análogamente, cuando digamos vértice de corte de $Block(G)$ nos estamos refiriendo a un vértice que proviene de un vértice de corte de $G$.
+
+Si $G$ es conexo, luego $Block(G)$ es conexo. Antes notemos que basta probar que entre dos blockes de $Block (G)$ existe un camino, pues todo vértice de corte de $Block (G)$ es adyacente a algún bloque en $Block (G)$ por definición de grafo bloque. Sean $B,B'$ dos bloques de $Block(G)$, consideremos luego a partir de un $B,B'$-camino siempre podemos construir un camino que no puede entrara y salir de un bloque más de una vez, por conexión del bloque. Este camino nos induce un camino en $Block(G)$ dado por $\tilde P : B_0 v_0 B_1 v_1 \cdots B_{r-1} v_{r-1} B_r $, donde cada bloque o vértice aparece en el orden en el cual el camino $P$ se intersecó por primera véz con estos en $G$.
+
+Ahora vevamos que $Block(G)$ es aciclico. En efecto, supongamos que no, sea $C$ un ciclo en $Block(G)$. Como $Block(G)$ es bipartito (particionamos entre vértices de corte y bloques), no tiene ciclos impares, luego $C$ tiene al menos $4$ vértices (pueden ser cortes o bloques). Con lo cual, existen dos bloques distintos $B_1,B_2$ y dos vértices de corte distintos $v_1,v_2$ tal que podemos escribir $C : B_1 v_1 B_2 \cdots v_2 B_1$. Pero esto quiere decir que hay otro $B_1,B_2$-camino en $G$ que no pasa por $v_1$, es decir que $v_1$ no era vértice de corte, absurdo.
 \end{proof}
 
 
@@ -1674,6 +1712,211 @@ Notar que en el segundo ítem de la demostración anterior usamos que hay una co
 
 
 
+\section{Ejercicios}
+
+\begin{exercise}
+Sea $G$ un grafo que contiene un ciclo $C$, y supongamos que $G$ contiene un camino de longitud al menos $k$ entre
+dos vértices de $C$. Probar que $G$ contiene un ciclo de longitud al menos $\sqrt k$.
+\end{exercise}
+\begin{solution}
+    Si $C$ tiene longitud $\sqrt k$ entonces la afirmación vale. Si no, denotemos por $P$ al camino de longitud $k$
+    entre dos vérticces $x,y \in C$. Como $\Abs C < \sqrt k$, $P$ interseca con $C$ en menos de $\sqrt k$ vértices,
+    por lo tanto existen dos vértices $a,b \in P \cap C$ tales que, en el orden inducido por el camino $P$, no hay otro
+    vértice de $C$ entre estos, y $a P b$ tiene longitud $\geq \sqrt k$. Luego el ciclo $a P b C a$ tiene logitd $\geq \sqrt k$.
+\end{solution}
+
+
+\begin{exercise}
+Probar que los grafos de cintura $\geq 5$ y orden $n$ tienen $\delta = o (n)$. Es decir, existe $f : \naturals \rightarrow \naturals$ tal que $f(n) /n \rightarrow 0$ cuando $n \rightarrow \infty$ y $\delta (G) \leq f(n)$ para todo $G$ de orden $n$.
+\end{exercise}
+\begin{solution}
+    En efecto, tenemos que
+    $$
+    n = \abs G \geq n_0 ( \delta, 5) = 1 + \delta (1 + (\delta -1)) = 1 + \delta^2
+    $$
+    por el Teorema débil \ref{}, si $\delta \geq 2$.
+\end{solution}
+
+\begin{exercise}
+Probar que todo grafo conexo $G$ contiene un camino o un ciclo de longitud al menos $\min \{2 \delta (G) , \abs G\}$.
+\end{exercise}
+\begin{solution}
+Comentario, el resultado es falso solo para $n = 2$. En efecto, veremos en la demostración que vale para $n \neq 2$,
+y un camino de longitud uno no cumple pues $2 \delta = 2$ y $n = 2$ pero la longitud de cualquier sub camino o ciclo
+es a lo más uno.
+
+Procederemos por inducción en $\abs G = n$. Vale trivialmente para $n=1$; vimos que para $n=2$ es falso; pero para $n
+=3$ vale pues $G$ es un camino o un ciclo de longitud $3$ y aquí si vale la afirmación. En general, supongamos que es
+ falso para algún $n \geq 4$, el cual podemos tomarlo mínimo. Sea $P$ un camino o ciclo de longitud máxima $m$ en $G$, notar que $m < 2 \delta (G), n$. Supongamos que $P$ es un camino, luego sus extremos no pueden ser adyacentes (por maximalidad de $P$), pero tampoco pueden tener tener vecinos
+
+SEGUIR PENSANDO
+ Sea $v \in G \setminus P$. Debe ser que todos sus vecinos son vértices de $P$. En efecto, completar...
+ Luego, notar que si $x,y \in N_G(v)$ son distintos, entonces no pueden ser adyacentes por maximalidad de $P$, luego $P$ tiene logitud $ \geq 2 (\delta(G))$ si $v$ no tiene grado mínimo, con lo cual todos los vértices fuera de $P$ tienen grado $\delta(G)$ y además $P$ tiene longitud $\geq 2 (\delta(G)-1)$.
+
+ Si $P$ es un ciclo la demostración es una versión más facil de la anterior y es análoga.
+
+ Si $P$
+
+
+
+\end{solution}
+
+\begin{exercise}
+Sean $\alpha, \beta$ dos invariantes de grafos en $\naturals$.
+\end{exercise}
+
+\begin{exercise}
+Probar que todo árbol $T$ tiene al menos $\Delta (T)$ hojas.
+\end{exercise}
+\begin{proof}
+En efecto, fijemos una raíz $r$ con $d (r) = \Delta (t)$. Afirmamos que hay una hoja distinta por cada vecinos de $r$, más aún, estos son los elementos maximales en el orden de arbol con raíz $r$. Y hay al menos $d(r)$ de estos, tomand el máximo de cada conjuntos $w^{\geq} := \{ v \in T | v \geq w \}$, con $w \in N_T (r)$. Son distintos, pues de lo contrario, sean $m_1$ al mínimo vértice de $w_1^{\geq}$ y $m_2$ el de $w_2^{\geq}$ tales que no son más grandes que $w_2$ y $w_1$ respectivamente. En particular, existe $m \geq w_1,w_2$. Luego tenemos un ciclo $r <  w_1 < \cdots < m_1 < m > m_2 > \cdots > w_2 > r$, lo cual es imposible.
+\end{proof}
+
+
+
+
+\begin{exercise}
+Sean $F,F'$ dos bosques en el mismo conjunto de vértices, y $\Abs F < \Abs  {F'}$. Probar que $F'$ tiene una arista $
+e$ tal que $F + e$ es nuevamente un bosque.
+\end{exercise}
+\begin{solution}
+    En efecto, si $F$ tuviera más de una componente, entonces cualquier arista $e \in F'$ con extremo en ambas
+    funcionaría. Luego supongamos que $F'$ no tiene aristas que conectan ningúna componente de $F$, es decir por
+    inducción en $\Abs F$ se sigue el resultado. Luego supongamos que $F$ es conexo, es decir es un árbol, como $\Abs {F'} = \abs {F'}- \# \text{componentes}$, se sigue de la desigualdad del enunciado que $F'$ también es conexo. Ahora si consideramos el grafo $G = F + F$, este grafo tiene dos árboles generadores $F$ y $F'$. Si $F$ y $F'$ tuvieran una arista en común, luego el resultado se sigue. De lo contrario, tendríamos que por cada arista $e \in F'$, tenemos un ciclo en $T+e$, es decir un ciclo fundamental $C_e$. Pero por la Proposición \ref{}:
+    \[
+    \Abs F + \Abs {F'} = \dim \mathcal E (G) = n -1 + \dim \mathcal C (G)
+    \]
+    con $n = \abs F = \abs {F'}$, y como $F$ es árbol $n-1 = \Abs F$. Luego $\dim \mathcal C (G) = \Abs {F'}$. An
+    álogamente, $\dim \mathcal C (G) = \Abs {F} < \Abs {F'}$, imposible.
+\end{solution}
+
+\begin{exercise}
+    Probar que todo grafo es $2$-arista-conexo, si y solo si, tiene una orientación \textbf{fuertemente conexa}, es
+    decir, tiene una orientación en la cual para todo par de vértices $x,y$ existe un camino dirigido $\overset{
+    \rightarrow}{P}$ con dirección de $x$ hacia $y$.
+\end{exercise}
+\begin{solution}
+    \begin{enumerate}
+    \item[($\Rightarrow$)] Numeremos los vértices de $G$: $v_{1},v_2, v_3,\ldots, v_n$
+    \item[($\Leftarrow$)]
+    \end{enumerate}
+\end{solution}
+
+\begin{exercise}
+    Dar una demostración corta por inducción de la exisstencia de un árbol normal generador en cualquier grafo finito
+     conexo (para cualquier orden de árbol).
+\end{exercise}
+\begin{solution}
+    Afirmamos que existe un vértice $v$ de $G$ que se puede eliminar y sigue siendo conexo: $G$ tiene un árbol generador
+    , luego quitamos una hoja. Ahora por inducción, $G \setminus v$ tiene un árbol generador normal $T'$. Afirmamos
+    que el árbol generador $T = T' vx$ de $G$ es también normal, donde $x \in T'$ es adyacente a $v$ en $G$, maximal
+    en el orden de $T'$.
+    Ahora, el orden de $T'$ se extiende al de $T$ para cualquier raíz $r$ de $T'$. Sea $P$ un $T$-camino entre dos vértices
+    distintos de $v$, luego son comparables en $T'$; por otro lado, si uno de los vértices es $v$ y el otro es $y$,
+    digamos, entonces $x v P y$ es un $T'$-camino, luego $x$ e $y$ son comparables, y por lo tanto $v$ e $y$ tambi
+    én, pues por la maximalidad de $x$, $x \geq y$. (
+    Notar
+    que
+    luego
+    vale para $v$
+    como raíz
+    tambi
+    én.)
+\end{solution}
+
+
+\begin{exercise}[Depth-first search]
+Sea $G$ un grafo conexo, y $r \in G$ un vértice arbitrario. Empezando desde $r$, nos movemos a través de las aristas
+de $G$, priorizando movernos a un vértice que no hayamos visitado aún. Si no hay ningún vértice, retrocedemos por las
+ aristas que visitamos por última véz, ordenadamente: la más reciente primero, intentando ocupar un vértice no
+ visitadao nuevamente. El algorítmo para cuando regresamos a $r$. Probar que las aristas recorridas forman un árbol
+ normal generadores de $G$ con raíz $r$.
+\end{exercise}
+ \begin{solution}
+ Debemos probar varias cosas, primero que este recorrido, que llamaremos $T$, es un árbol: basta ver que no tiene
+ ciclos;
+  que
+  es generador; y que es
+  normal.
+  \begin{enumerate}[1.]
+  \item Sea $C$ un ciclo con vértices consecutivos $x_0, x_1, x_2 , \ldots, x_k$ en $T$. Podemos suponer que $x_k$ fue
+   el último en haber sido visitado. Luego $x_0$ tuvo que haber sido el vértice que se visitó primero de $C$ y en
+   consecuencia se visitó en orden: $x_0, x_1, \ldots, x_k$. Pero una vez visitado $x_k$ el algorítmo sigui corriendo
+    sin volver a $x_0$ pues este ya fue visitado, pero esto significa que $C$ no puede tener la arista $x_k x_0$,
+    absurdo.
+  \item Supongamos que existe un vértice no visitado, luego existe un vértice sin visitar a distancia mínima de $T$,
+  i.e. adyacente a $x \in T$. Luego el algorítmo tuvo que pasar por este vértice cuando volvió a $x$ por última vez.
+    \item Como $T$ genera, se sigue que es normal si y solo si para todo par de vértices adyacentes en $G \setminus T$ son comparables. En efecto, supongamos que el algorítmo visitó primero a $x$ y luego a $y$, con lo cual $x \leq y$.
+  \end{enumerate}
+ \end{solution}
+
+ \begin{exercise}
+     Sea $\mathcal T$ un conjunto de subárboles de un árbol $T$, y $k \in \naturals$.
+     \begin{enumerate}[(i)]
+     \item Mostrar que si los árboles de $\mathcal T$ son disjuntos dos a dos, entonces $\bigcap_{S \in \mathcal T} S \neq \emptyset$.
+     \item Mostrar que o $\mathcal T$ tiene $k$ árboles disjuntos o existe un conjunto de a lo sumo $k-1$ vérticces
+     de $T$ en $\bigcap_{S \in \mathcal T} S$.
+     \end{enumerate}
+ \end{exercise}
+ Notar que $\mathcal T$ tiene que ser finito, por ejemplo si $T$ es finito, porque si no el primer ítem fallta
+ tomando una cadena (con el orden de inclusión) de conjuntos de caminos infinitos.
+
+\begin{solution}
+    \begin{enumerate}[(i)]
+        \item Basta probar que la intersección de dos subárboles de $T$ es un subárbol de $T$, pues . En efecto, es ac
+        íclico; veamos que también es conexo. De lo contrario, sean $x,y$ dos elementos de la intersección $S \cap S'$, de dos subárboles, en distintas componentes. Tomemos a $y$ de manera que tenga distancia mínima a $x$ en $S$, y tomemos un camino $P$ que la realice. Por otro lado, hay otro camino $yQx$ en $S'$ que debe ser internamente disjunto con $P$, de lo contrario violaríamos la minimalidad de $P$. Con lo cual, $T$ tendría un ciclo $x P y Q x$, absurdo.
+        \item Por inducción en $k$. Si $k = 1$
+    \end{enumerate}
+\end{solution}
+
+
+
+\begin{exercise}
+    Probar que todo automorfismo de un árbol fija un vértice o una arista.
+\end{exercise}
+\begin{solution}
+        Supongamos que el automorfismo $\varphi$ no fija ningún vértice. Veamos que fija entonces una arista. Tomemos $x \in T$ y consideremos el conjunto $\{ y \in T | x < y \}$; también consideremos $\{ x \in T | x < \varphi (x) \}$. Tomemos a $x$ maximal en este conjunto. Entonces que pasa si hacemos $\varphi (x)$? Siguen siendo comparables $\varphi (x) y \varphi^2 (x)$, más aún, $\varphi$ preserva la orientación. Con lo cual, al ser distintas,  $\varphi (x) < \varphi^2 (x)$, absurdo por maximalidad de $x$. Consecuentemente tenemos que $\varphi^2 x > \varphi (x)$. Consideremos ahora $z$ el minimo de los vértices más grandes que $x$. Veamos que $ z = \varphi (x)$ y por lo tanto $\varphi (x)$ y $x$ son adyacentes, en particular $\varphi$ preserva la arista $x \varphi(x)$. En efecto, de lo contrario tendríamos $x < z < \varphi (x)$ y como $z$ no está en el conjunto: $z > \varphi (z)$ y tenemos $\varphi (x) > z > x > \varphi (z)$
+\end{solution}
+
+
+
+\begin{exercise}
+    Mostrar que en un grafo conexo los conjuntos de aristas que son minimales con la propiedad de contener una arista
+     de cada árbol generador son precisamente los enlaces del grafo.
+\end{exercise}
+\begin{solution}
+    Por un lado, un corte de $G$ tiene que tener una arista de cada árbol generador, pues el arbol es conexo y no se
+    puede separar por las partes que inducen el corte; luego los enlaces son minimales con esta propiedad. Por otro
+    lado, lo anterior implica que los conjuntos de aristas minimales con esta propiedad, cumplen que si son cortes
+    entonces son enlaces. Luego basta probar que estos conjuntos son cortes. Para eso, usamos la Proposición \ref{},
+    que dice que $F \in \mathcal B$ si y solo si $F \in \mathcal C ^\perp$, es decir, todos los cortes de $G$
+    intersecan un número  par de veces a cualquier ciclo de $G$. Ahora, necesitamos el siguiente lema:
+    \begin{lemma}
+        Sea un $S$ un conjunto de aristas fuera de los árboles generadores $T_1,\ldots,T_r$ de $G$, entonces el conjunto
+        $$
+        S' = S + \sum_{f \in S \cap T'} D_f ( T') \quad \text{($D_f (T')$ es un corte fundamental)},
+        $$
+        con $T'$ un árbol de generador de $G$, tiene a todas sus aristas fuera de $T_1,\ldots,T_r,T'$.
+    \end{lemma}
+    \begin{proof}
+        Antes, necesitamos observar que el conjunto $S'$ no tiene aristas en $T'$, pues de lo contrario, digamos $g \in T'$, si $g \in S$ entoncces está en un único $D_f (T)$, luego no esta en $S'$; si $g \not \in S$, luego no puede estar en ningún $D_f (T')$, pues $g \in T'$.
+
+        Ahora, veamos que tampoco tiene aristas en $T_i$ con $1 \leq i \leq r$. En efecto, sea $g \in T = T_i \cap S'$
+        con $i$ fijo, entonces sabemos por lo anterior que $g \not \in T'$, también tenemos que como $S  \cap T = \emptyset$, luego $g \not \in S$, consecuentemente  está en una
+        cantidad impar de $
+        D_f(T'
+        )$ con $f \in S \cap T'$ porque $g \in S'$, sin embargo, tenemos por dualidad que $g \in D_f(T')$ si y solo
+        si $f \in C_g (T')$, si y solo si $f \in \left (\sum_{f \in S \cap T'} D_f (T') \right ) \cap C_e (T')$ pero
+        esta intersección es par porque los corrtes fundamentales están en $\mathcal B = \mathcal C^\perp$. Absurdo.
+    \end{proof}
+
+    Finalmente, consideramos aplicar el lema anterior reiteradas veces a $S := F + \sum_{f \in F \cap T} D_{f} (T)$
+    con $T$ un árbol generador arbitrario: $S$ no contiene aristas en $T$. Luego se puede obtener $S' = F + F'$ un
+    conjunto de
+     aristas, con $F' \in \mathcal B$ pues los $D_f(T)$ son cortes fundamentales, que está fuera de todo árbol
+     generador de $G$, es decir es vacío. En particular $F = F' \in \mathcal B$.
+\end{solution}
+
 
 
 
@@ -1692,7 +1935,7 @@ Notar que en el segundo ítem de la demostración anterior usamos que hay una co
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-%subfile{"nombre de carpeta"/"Nombre del archivo"}
+%import{nombre de carpeta/}{Nombre del archivo}
 \subfile{Apendice/Apendice.tex}
 
 
