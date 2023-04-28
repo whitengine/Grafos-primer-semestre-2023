@@ -1928,6 +1928,154 @@ de $G$, priorizando movernos a un vértice que no hayamos visitado aún. Si no h
 
 
 
+%%%%%%%%%%%
+\Clase{27/04/23}   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%
+
+
+\begin{definition}
+        Un \textbf{matching} o \textbf{emparejamiento} en un grafo $G = (V,E)$ es un subconjunto $M \subset E$ tal
+        que ningún par de aristas en $M$ comparten un vértice.
+
+        Un matching es \textbf{maximal} si al añadirle cualquier otra arista deja de ser matching.
+
+        Un matching es \textbf{máximo} si no hay otro matchinig con mayor tamaño (número de aristas).
+
+        Decimos que un matching \textbf{cubre} a los vértices de sus aristas.
+\end{definition}
+
+
+
+Un matching que cubre a todo $V(G)$ es \textbf{perfecto}.
+\begin{remark}
+Hay grafos sin mathchings perfectos. Ejemplo:
+\Dibujo{}
+\emd{remark}
+
+\begin{obs}
+Un arbol tiene un matching perfecto si y solo si es un camino.
+\end{obs}
+
+
+Sea $G = (X \sqcup Y, E)$ un grafo bipartito (hablamos de un \textbf{$X,Y$-bigrafo}). Si $G$ tiene un matching de
+tamaño $\abs X$  (en particular cubre a $X$) los elementos de cualquier $S \subset X$ tienen
+\begin{equation}\label{eq:condicion de Hall}
+\abs{N(S)} \geq \abs S.
+\end{equation}
+
+\begin{definition}
+        Cualquier subconjunto de vértices $S \subset G$ tal que cumplen $\eqref{eq:condicion de Hall}$, decimos que $
+        S$ cumple la \textbf{condición de Hall}.
+\end{definition}
+
+\begin{theorem}[Teorema de Hall (1935)]\label{th:teorema de Hall}
+En un $X,Y$-bigrafo, existe un matching que cubre a $X$ si y solo si $S$ cumple la
+condición de Hall \eqref{eq:condicion de Hall} para todo $S \subset X$.
+\end{theorem}
+\begin{proof}
+La primera implicación la vimos antes de la definición de condición de Hall.
+
+Veamos la recíproca. Lo haremos por inducción en $\abs X =: n$. Si $n =1$ es trivial. En general, si $n> 1$, queremos
+ ver que vale para $n+1$. Hay dos casos:
+ \begin{enumerate}
+ \item[Caso 1:] $\abs{N(S)}> \abs S$ para todo subconjunto $S \subsetneq X$ no vacío. Tomemos un vértices que sean
+ vecinos $x \in X$ e $y \in Y$, luego consideramos la $X',Y' = X \setminus \{x\}, Y \setminus \{y\}$-bipartición
+ proveniente
+ de $G$ al eliminar $x,y$; todos los subconjuntos de $X'$ siguen cumpliendo la
+ condición de
+ Hall,
+ luego tiene
+  un matching por hipótesis inductiva, luego
+ agregando $xy$
+ obtenemos un matching que cubre a $X$ en $G$.
+ \item[Caso 2:] Sea $S \supset X$ no vacío tal que $\abs{N(S)} = \abs S$.
+ \Dibujo{Ilustración de lo que sucede.}
+ Sea $G_1$ el grafo inducido por los vértices $S \cup N(S)$, y sea $G_2$ el subgrafo inducido por $G \setminus (S
+  \cup N(S))$. Notar que $G_1$ cumple la condición de Hall. Por lo tanto, usando hipótesis inductiva, hay un matching
+   en $G_1$ que subre $S$. Veamos que la condición de Hall se tiene que cumplir también en $G_2$. Consideremos $T \subset X \setminus S$ y notamos que $$N_{G_2} (T) = N_G (T \cup S) \setminus N_G (S).$$ Así tenemos que
+   \[
+       \abs{N_{G_2}(T)} = \abs{N_G (T\cup S)} - \abs{N_G (S)} \geq \abs{T \cup S} - \abs{ N_G (S)} = \abs{T \cup S} - \abs S = \abs T.
+   \]
+   Entonces $G_2$ cumple la condición de Hall y tiene matching que cubre a $X \setminus S$ por hipótesis inductiva.
+   Uniendo los dos
+   matchings
+    obtenidos, conseguimos un matching que cubre a $X$.
+ \end{enumerate}
+\end{proof}
+
+\begin{corollary}[König-Frobenius]
+Cada grafo bipartito regular (no trivial) tiene un matching perfecto. En particular ambos conjuntos de la bipartición
+de $G$
+tienen que tener el mismo cardinoal.
+\end{corollary}
+\begin{proof}
+        En un $X,Y$-bigrafo $k$-regular $G$, consideramos $S \subset X$. Veamos que $N(S) \geq S$. Antes, notemos que
+         la cantidad de aristas que inciden en $S$ es $k \cdot \abs S$. Análogamente, hay $k \cdot \abs{N(S)}$
+         aristas que inciden en $N(S)$. Todas las aristas que inciden en $S$ también lo hacen en $N(S)$, pero no son
+         las únicas, podría haber más aristas incidentes en $N(S)$ que provienen de vértices de $X \setminus S$. Es
+         decir,
+         \[
+             k \abs S \leq k \abs{N(S)} \quad \Leftrightarrow \abs S \leq \abs{N(S)}.
+         \]
+         Como $S\subset X$ era arbitrario, se cumple la condición de Hall, y luego por el Teorema anterior existe un
+         matching de $G$ que cubre a $X$.
+
+        De la misma manera podemos conseguir un matching de $G$ que cubra a $Y$. Consecuentemente, $\abs X = \abs Y$
+        y el matching es perfecto.
+\end{proof}
+
+
+\subsection{Relaciones min-máx}
+
+El Teorema de Hall nos dice cuándo podemos encontrar u matching que cubre una de las partes de un grafo bipartito.
+Pero quizá, sabiendo que no puedo cubrir ninguna de las partes, igual quiero saber el tamaño máximo de un matching en
+ mi grafo.
+
+\begin{notation}
+    Denotamos por $\alpha ' (G)$ al tamaño máximo de un matching en un grafo $G$.
+\end{notation}
+
+\begin{definition}
+    Para un $X,Y$-bigrafo, el \textbf{defecto} $df(S)$ de un conjunto $S \subset X$ es
+    \[
+        \abs S \setminus \abs{N(S)}.
+    \]
+\end{definition}
+
+\begin{corollary}[Fórmula del defecto]
+En un $X,Y$-bigrafo $G$, se tiene
+\[
+    \alpha ' (G) = \min_{S \subset X} \{ \abs X - df (S) \}.
+\]
+\end{corollary}
+\begin{proof}
+    \Dibujo{Ilustración.}
+
+    Todo matching de un subconjunto $S \subset X$ no cubre $df(S)$ vértices de $S$. Así, $$\alpha ' (G) \leq \abs X -
+    df (S), \forall S \subset X.$$ Tomando mínimo sobre $S$ tenemos una desigualdad.
+
+    Para la otra desigualdad construiremos un matching del tamaño mínimo.
+\end{proof}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

@@ -22,6 +22,7 @@
 \contentsline {subsection}{\numberline {1.9.1}}{48}{subsection.1.9.1}%
 \contentsline {section}{\numberline {1.10}Clase 10: 20/04/23}{48}{section.1.10}%
 \contentsline {section}{\numberline {1.11}Ejercicios}{51}{section.1.11}%
-\contentsline {chapter}{\numberline {A}Primera parte de la materia (primer capítulo del Diestel)}{56}{appendix.Alph1}%
-\contentsline {section}{\numberline {A.1}}{56}{section.Alph1.1}%
-\contentsline {section}{\numberline {A.2}}{62}{section.Alph1.2}%
+\contentsline {section}{\numberline {1.12}Clase 11: 27/04/23}{55}{section.1.12}%
+\contentsline {chapter}{\numberline {A}Primera parte de la materia (primer capítulo del Diestel)}{58}{appendix.Alph1}%
+\contentsline {section}{\numberline {A.1}}{58}{section.Alph1.1}%
+\contentsline {section}{\numberline {A.2}}{64}{section.Alph1.2}%
