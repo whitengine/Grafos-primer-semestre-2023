@@ -22,7 +22,9 @@
 \contentsline {subsection}{\numberline {1.9.1}}{48}{subsection.1.9.1}%
 \contentsline {section}{\numberline {1.10}Clase 10: 20/04/23}{48}{section.1.10}%
 \contentsline {section}{\numberline {1.11}Ejercicios}{51}{section.1.11}%
-\contentsline {section}{\numberline {1.12}Clase 11: 27/04/23}{55}{section.1.12}%
-\contentsline {chapter}{\numberline {A}Primera parte de la materia (primer capítulo del Diestel)}{58}{appendix.Alph1}%
-\contentsline {section}{\numberline {A.1}}{58}{section.Alph1.1}%
-\contentsline {section}{\numberline {A.2}}{64}{section.Alph1.2}%
+\contentsline {section}{\numberline {1.12}Clase 11: 27/04/23}{59}{section.1.12}%
+\contentsline {subsection}{\numberline {1.12.1}Relaciones min-máx}{62}{subsection.1.12.1}%
+\contentsline {chapter}{\numberline {A}Primera parte de la materia (primer capítulo del Diestel)}{64}{appendix.Alph1}%
+\contentsline {section}{\numberline {A.1}}{64}{section.Alph1.1}%
+\contentsline {section}{\numberline {A.2}}{70}{section.Alph1.2}%
+\contentsline {chapter}{\numberline {B}Orden parcial completo-dirigido y teorema del punto fijo de Kleene}{73}{appendix.Alph2}%

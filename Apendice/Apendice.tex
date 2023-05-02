@@ -365,6 +365,97 @@ las aristas paralelas a $e$ se convierten en bucles de $v_e$, mientras que las a
 
 
 
+\chapter{Orden parcial completo-dirigido y teorema del punto fijo de Kleene}\label{apendice:orden parcial completo
+-dirigido y teorema del punto fijo de Kleene}
+
+Este capítulo del apéndice fue creado con la esperanza de poder resolver el Ejercicio \ref{ejercicio:todo
+automorfismo de un arbol tiene un vertice o arista fijos}, pero este no se pudo resolver así, pues considerar
+ un morfismo de grafos $f : T \rightarrow T$ no tiene por qué ser Scott continua con el $r$-orden de árbol de $
+ T \ni r$. Y de hecho, el ejercicio de pudo resolver muy fácilmente haciendo inducción y considerando
+ brillantemente el morfismo $f : L(T) \rightarrow L(T)$.
+
+\begin{definition}
+    Un \textbf{orden parcial completo-dirigido}, o \textbf{opcd} es un orden parcial donde todo subconjunto
+    dirijido $D$ (es
+    decir, es no vacío y para todo $x,y \in D$ existe $z \in D$ tal que $x,y \leq z$) tiene supremo.
+\end{definition}
+
+A un orden parcial (en particular a un opcd) se le puede dar la \textbf{topología Scott} en la cual los abiertos son los subconjuntos $S$ cerrados
+superiormente (recordemos que
+esto era cuando $S$ coincidía con
+ la unión de los $\ceil x$ con $x \in S$) e \textbf{inaccesibles por supremos de subconjuntos dirigidos}, es
+  decir, si todos los subconjuntos dirigidos $D$ con supremo $\sup (D) \in S$ intersecan a $S$. Con esta
+  topología podemos definir las funciones continuas entre dos ordenes parciales $A,B$:
+
+  \begin{definition}
+  Una función $f : A \rightarrow B$ se dice \textbf{Scott continua} si es continua con la topología de Scott
+  en $A$ y $B$.
+  \end{definition}
+
+  \begin{lemma}
+  Sea $f: A \rightarrow B$ una función entre dos conjuntos ordenados $A,B$. Luego $f$ es Scott continua si y
+  solo si
+  preserva
+  supremos de subconjuntos dirigidos.
+  \end{lemma}
+  \begin{proof}
+  \begin{enumerate}[(i)]
+  \item[($\Rightarrow$)] Notemos que $f$ es mónotona creciente. En efecto, sean $x \leq x' \in A$, supongamos
+  que $f(x) \not \leq f(x')$. Consideremos el conjunto $U = B \setminus \floor{f(x')}$, el cual es un Scott
+  abierto (fácil de verificar), más aún $f(x) \in U$. Como $f$ es Scott continua, tenemos que $f^{-1} (U)$ es
+   Scott abierto de $A$, y notemos que $x \in f^{-1} (U)$. Pero $x' \geq x$, luego debe ser que $x' \in f^{-1} (U)$, i.e. $f(x') \in U$ absurdo! O sea que $f$ es monótona creciente. Sea $d = \sup D$ con $D$ un subconjunto dirigido de $A$. Por un lado, $a \leq d $ para todo $a \in D$ implica que $f(d) \geq b$ para todo $b \in f(D)$. Por otro lado, si $c \in B$ es tal que $c \geq f(a)$ para todo $a \in D$, debe ser que $c \geq f(d)$. En efecto, si esto no fuera cierto, tendríamos que $f(d) \in U := B \setminus \floor{c}$ Scott abierto y por continuidad de $f$ se sigue que $d$ pertenece al Scott abierto $f^{-1} (U) \subset A$. Con lo cual, como $d$ es el supremo del conjunto dirigido $D$, tenemos que existe $a' in D$ tal que $a' \in f^{-1} (U)$, i.e. $f(a') \in U$ con $a' \in D$ absurdo! Esto dice que $f(d) = \sup f(D)$.
+  \item[($\Leftarrow$)] Notar que $f$ es monótona creciente, pues si $x \leq x'$ entonces $f(x') = f(\sup \{ x,
+  x'\}) = \sup \{f(x),f(y)\}$, con lo cual $f(x') \geq f(x)$. Esto implica muy facilmente que $f$ es Scott continua.
+  \end{enumerate}
+  \end{proof}
+  Notar que en la demostración anterior vimos que las funciones Scott continuas son monótona crecientes.
+
+  \begin{definition}
+  Sea $m$ un elemento mínimo de un conjunto ordenado. Una \textbf{cadena ascendente de
+      Kleene} de $f$, es la cadena
+      \[
+          m \leq f(m) \leq f(f(m)) \leq f(f(f(m))) \leq \cdots
+      \]
+  \end{definition}
+
+  \begin{theorem}[Teorema del punto fijo de Kleene]
+  Sea $T$ un opcd con un mínimo $m$, y sea $f: T \rightarrow T$ una función Scott continua (y en particular mon
+  ótona).
+   Entonces $f$ tiene un \textbf{mínimo punto fijo}, es decir, el conjunto de puntos fijos de $f$ es no vac
+   ío y tiene un elemento mínimo. Más aún, este elemento mínimo es el supremo de una cadena ascendente de
+   Kleene de $f$.
+  \end{theorem}
+  \begin{proof}
+    Consideremos la cadena ascendente de $Kleene$ inducida por $m$. Este es un conjunto dirigido, pues es una
+     cadena. Luego como $T$ es un opcd tiene un supremo, digamos $s$. Tenemos que probar que $s$ es un punto
+     fijo de $f$ y que efectivamente es el mínimo de todos los puntos fijos. Por un lado, como $f$ es Scott
+     continua, el lema anterior nos dice que $f(s) = \sup_{i \geq 1} {f^i(m)}$, pero $\sup_{i \geq 1} {f^i(m)} = \sup_{i \geq 0} {f^i(m)}$, es decir $s$ es un punto fijo de $f$. Por otro lado, si $s'$ es un punto fijo de $f$, tenemos que $s' \geq f^i(m)$ para todo $i\geq 0$, con lo cual $s' \geq s$ porque $s$ es el supremo de la cadena. En efecto, vale para $i= 0$, luego por inducción supongamos que $s' \geq f^{i} (m)$ entonces como $f$ es monótona creciente $f(s')$, tenemos que $s' = f(s') \geq f(f^i(m)) = f^{i+1} (m)$.
+  \end{proof}
+
+
+\comentario{DEMOSTRACIÓN ERRONEA}
+\begin{corollary}
+    Todo automorfismo de un árbol fija un vértice o una arista.
+\end{corollary}
+\begin{proof}
+Sea $T$ un árbol y $r \in T$ una raíz. Consideremos el orden parcial inducido por la raíz en $T$. Notar que $
+r$ es el mínimo de $T$ y que todo subconjunto dirigido de $T$ tiene supremo porque $T$ es un orden parcial en
+ un conjunto finito. O sea que $T$ es un opcd. Análogamente, podemos considerar el orden de raíz de $T$
+ respecto de $f(r)$. Ahora, un morfismo de grafos $f : T \rightarrow T$, es una función entre dos opcds
+ considerando el $r$-orden del dominio y el $f(r)$-orden en el codominio. Afirmamos que $f$
+ es Scott continua. En efecto, por el lema anterior, esto equivale a probar que preserva el supremo de
+ subconjuntos dirigidos. Sea $D \subset T$ dirigido y $s = \sup D$ (como $T$ es finito $s \in D$); tenemos
+ que $D$ es el camino $xTd$ (pensando en el $r$-orden: $x \leq d$) para el mínimo en $D$, pues todos
+ los
+ elementos de $D$ son
+ comparables.
+ Con lo
+ cual, como $f$ es morfismo de grafos, preserva la adyacencia de aristas, luego manda caminos en caminos,
+ pero entonces $f(D) = f(xTd) =f(x) T f(d) $ (pensando en el $f(r)$-orden: $f(x) \leq f(d)$), i.e. $f(d)$ es
+ el supremo (máximo) de $f(D)$ en el $f(r)$-orden.
+
+ Por el Teorema del punto fijo de Kleen, existe en particular un punto fijo de $T$.
+\end{proof}
 
 
 
