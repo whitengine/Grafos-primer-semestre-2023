@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.4.11)  1 MAY 2023 23:23
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.4.11)  4 MAY 2023 13:31
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -2684,8 +2684,217 @@ LaTeX Font Info:    Undo math alphabet allocation in version normal on input li
 ne 2197.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
 ine 2197.
+LaTeX Font Info:    Undo math alphabet allocation in version normal on input li
+ne 2199.
+LaTeX Font Info:    Undo math alphabet allocation in version normal on input li
+ne 2199.
 [62 <./Editor de Grafos/Figuras/Clase 11/Dibujo 5.pdf>]
-(./Apendice/Apendice.tex [63]
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2202.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2203.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2203.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2203.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2203.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2203.
+
+
+LaTeX Warning: File `"./Editor de Grafos/Figuras/Clase 11/Dibujo 6.pdf"' not fo
+und on input line 2204.
+
+
+./Apuntes - GRAFOS.tex:2204: Package pdftex.def Error: File `./Editor de Grafos
+/Figuras/Clase 11/Dibujo 6.pdf' not found: using draft setting.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.2204     \Dibujo{Ilustración de $G'$.}
+                                         
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+LaTeX Font Info:    Trying to load font information for T1+cmtt on input line 2
+204.
+(/home/whitengine/texlive/2023/texmf-dist/tex/latex/base/t1cmtt.fd
+File: t1cmtt.fd 2022/07/10 v2.5l Standard LaTeX font definitions
+)
+
+Package caption Warning: The option `hypcap=true' will be ignored for this
+(caption)                particular \caption on input line 2204.
+See the caption package documentation for explanation.
+
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2204.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2204.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2205.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2205.
+LaTeX Font Info:    Undo math alphabet allocation in version normal on input li
+ne 2205.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2205.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2205.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2205.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2205.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2205.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2205.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2212.
+
+LaTeX Warning: File `"./Editor de Grafos/Figuras/Clase 11/Dibujo 7.pdf"' not fo
+und on input line 2214.
+
+
+./Apuntes - GRAFOS.tex:2214: Package pdftex.def Error: File `./Editor de Grafos
+/Figuras/Clase 11/Dibujo 7.pdf' not found: using draft setting.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.2214 ...o{Ejemplo de cubrimiento por vértices.}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+Package caption Warning: The option `hypcap=true' will be ignored for this
+(caption)                particular \caption on input line 2214.
+See the caption package documentation for explanation.
+
+[63{/home/whitengine/texlive/2023/texmf-dist/fonts/enc/dvips/cm-super/cm-super-
+t1.enc}]
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2215.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2215.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2218.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2220.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2221.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2226.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2226.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2226.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2232.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2232.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2232.
+LaTeX Font Info:    Undo math alphabet allocation in version normal on input li
+ne 2232.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2232.
+ [64]
+LaTeX Font Info:    Undo math alphabet allocation in version normal on input li
+ne 2235.
+
+
+LaTeX Warning: File `"./Editor de Grafos/Figuras/Clase 11/Dibujo 8.pdf"' not fo
+und on input line 2236.
+
+
+./Apuntes - GRAFOS.tex:2236: Package pdftex.def Error: File `./Editor de Grafos
+/Figuras/Clase 11/Dibujo 8.pdf' not found: using draft setting.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.2236 \Dibujo{Inspiremonos con el dibujo.}
+                                           
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+Package caption Warning: The option `hypcap=true' will be ignored for this
+(caption)                particular \caption on input line 2236.
+See the caption package documentation for explanation.
+
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2237.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2237.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2237.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2247.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2247.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2247.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2249.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2251.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2251.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2251.
+
+LaTeX Warning: File `"./Editor de Grafos/Figuras/Clase 11/Dibujo 9.pdf"' not fo
+und on input line 2252.
+
+
+./Apuntes - GRAFOS.tex:2252: Package pdftex.def Error: File `./Editor de Grafos
+/Figuras/Clase 11/Dibujo 9.pdf' not found: using draft setting.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.2252 \Dibujo{Ejemplo.}
+                        
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+Package caption Warning: The option `hypcap=true' will be ignored for this
+(caption)                particular \caption on input line 2252.
+See the caption package documentation for explanation.
+
+[65]
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2255.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2255.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2255.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2257.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2257.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2257.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2257.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2260.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2262.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2263.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2267.
+ (./Apendice/Apendice.tex [66]
 Ap\'{e}ndice A.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
 ine 50.
@@ -2777,7 +2986,7 @@ LaTeX Font Info:    No math alphabet change to frozen version normal on input l
 ine 68.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
 ine 71.
-[64
+[67
 
 ]
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
@@ -2904,7 +3113,7 @@ LaTeX Font Info:    No math alphabet change to frozen version normal on input l
 ine 115.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
 ine 115.
- [65]
+ [68]
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
 ine 122.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
@@ -2991,7 +3200,7 @@ LaTeX Font Info:    No math alphabet change to frozen version normal on input l
 ine 156.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
 ine 156.
- [66]
+ [69]
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
 ine 159.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
@@ -3158,8 +3367,8 @@ LaTeX Font Info:    No math alphabet change to frozen version normal on input l
 ine 187.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
 ine 187.
- [67]
-<./Apendice/Figuras/Capitulo 1/Dibujo 1.pdf, id=1999, 455.30101pt x 250.76039pt
+ [70]
+<./Apendice/Figuras/Capitulo 1/Dibujo 1.pdf, id=2024, 455.30101pt x 250.76039pt
 >
 File: ./Apendice/Figuras/Capitulo 1/Dibujo 1.pdf Graphic file (type pdf)
 <use ./Apendice/Figuras/Capitulo 1/Dibujo 1.pdf>
@@ -3225,7 +3434,7 @@ LaTeX Font Info:    No math alphabet change to frozen version normal on input l
 ine 213.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
 ine 213.
-[68 <./Apendice/Figuras/Capitulo 1/Dibujo 1.pdf>]
+[71 <./Apendice/Figuras/Capitulo 1/Dibujo 1.pdf>]
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
 ine 215.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
@@ -3242,7 +3451,7 @@ LaTeX Font Info:    No math alphabet change to frozen version normal on input l
 ine 215.
 
 
-LaTeX Warning: Reference `' on page 69 undefined on input line 215.
+LaTeX Warning: Reference `' on page 72 undefined on input line 215.
 
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
 ine 215.
@@ -3402,7 +3611,7 @@ LaTeX Font Info:    No math alphabet change to frozen version normal on input l
 ine 257.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
 ine 257.
-[69]
+[72]
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
 ine 258.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
@@ -3525,8 +3734,8 @@ LaTeX Font Info:    No math alphabet change to frozen version normal on input l
 ine 315.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
 ine 315.
- [70]
-<./Apendice/Figuras/Capitulo 1/Dibujo 2.pdf, id=2041, 794.97pt x 614.295pt>
+ [73]
+<./Apendice/Figuras/Capitulo 1/Dibujo 2.pdf, id=2067, 794.97pt x 614.295pt>
 File: ./Apendice/Figuras/Capitulo 1/Dibujo 2.pdf Graphic file (type pdf)
 <use ./Apendice/Figuras/Capitulo 1/Dibujo 2.pdf>
 Package pdftex.def Info: ./Apendice/Figuras/Capitulo 1/Dibujo 2.pdf  used on in
@@ -3602,7 +3811,7 @@ LaTeX Font Info:    No math alphabet change to frozen version normal on input l
 ine 343.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
 ine 344.
- [71 <./Apendice/Figuras/Capitulo 1/Dibujo 2.pdf>]
+ [74 <./Apendice/Figuras/Capitulo 1/Dibujo 2.pdf>]
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
 ine 346.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
@@ -3635,7 +3844,7 @@ LaTeX Font Info:    No math alphabet change to frozen version normal on input l
 ine 355.
 
 
-LaTeX Warning: Reference `' on page 72 undefined on input line 355.
+LaTeX Warning: Reference `' on page 75 undefined on input line 355.
 
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
 ine 356.
@@ -3643,7 +3852,7 @@ LaTeX Font Info:    No math alphabet change to frozen version normal on input l
 ine 356.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
 ine 356.
-[72]
+[75]
 Ap\'{e}ndice B.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
 ine 373.
@@ -3782,7 +3991,7 @@ mi/m/it/12 x[]\U/matha/m/n/12 q ^^P \FML/fncmi/m/it/12 f\U/matha/m/n/12 p[]t\FM
 L/fncmi/m/it/12 x; x[]\U/matha/m/n/12 uq ^^P
  []
 
-[73
+[76
 
 ]
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
@@ -3913,7 +4122,7 @@ LaTeX Font Info:    No math alphabet change to frozen version normal on input l
 ine 455.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
 ine 457.
-) [74] (./Apuntes - GRAFOS.bbl) [75
+) [77] (./Apuntes - GRAFOS.bbl) [78
 
 ]
 (/home/enzo/Desktop/Doctorado Chile/Clases/2023/Primer semestre/Grafos/out/Apun
@@ -3928,11 +4137,11 @@ Package rerunfilecheck Info: File `"Apuntes - GRAFOS".out' has not changed.
 (rerunfilecheck)             Checksum: C5E603C048B6DD3B6ECA28F623C8BAEB;4483.
  ) 
 Here is how much of TeX's memory you used:
- 29840 strings out of 476017
- 577367 string characters out of 5786780
+ 30019 strings out of 476017
+ 585559 string characters out of 5786780
  1868666 words of memory out of 5000000
- 49311 multiletter control sequences out of 15000+600000
- 601125 words of font info for 191 fonts, out of 8000000 for 9000
+ 49453 multiletter control sequences out of 15000+600000
+ 601438 words of font info for 192 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  98i,13n,94p,1287b,995s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
@@ -3951,15 +4160,17 @@ xmf-dist/fonts/type1/public/mathabx-type1/matha9.pfb></home/whitengine/texlive/
 2023/texmf-dist/fonts/type1/public/mathabx-type1/mathb12.pfb></home/whitengine/
 texlive/2023/texmf-dist/fonts/type1/public/mathabx-type1/mathx10.pfb></home/whi
 tengine/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb>
-</home/whitengine/texlive/2023/texmf-dist/fonts/type1/urw/ncntrsbk/uncb8a.pfb><
-/home/whitengine/texlive/2023/texmf-dist/fonts/type1/urw/ncntrsbk/uncbi8a.pfb><
-/home/whitengine/texlive/2023/texmf-dist/fonts/type1/urw/ncntrsbk/uncr8a.pfb></
-home/whitengine/texlive/2023/texmf-dist/fonts/type1/urw/ncntrsbk/uncri8a.pfb>
+</home/whitengine/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sftt1200.
+pfb></home/whitengine/texlive/2023/texmf-dist/fonts/type1/urw/ncntrsbk/uncb8a.p
+fb></home/whitengine/texlive/2023/texmf-dist/fonts/type1/urw/ncntrsbk/uncbi8a.p
+fb></home/whitengine/texlive/2023/texmf-dist/fonts/type1/urw/ncntrsbk/uncr8a.pf
+b></home/whitengine/texlive/2023/texmf-dist/fonts/type1/urw/ncntrsbk/uncri8a.pf
+b>
 Output written on "/home/enzo/Desktop/Doctorado Chile/Clases/2023/Primer semest
-re/Grafos/out/Apuntes - GRAFOS.pdf" (76 pages, 1090799 bytes).
+re/Grafos/out/Apuntes - GRAFOS.pdf" (79 pages, 1122291 bytes).
 PDF statistics:
- 2228 PDF objects out of 2487 (max. 8388607)
- 1342 compressed objects within 14 object streams
- 390 named destinations out of 1000 (max. 500000)
+ 2263 PDF objects out of 2487 (max. 8388607)
+ 1372 compressed objects within 14 object streams
+ 405 named destinations out of 1000 (max. 500000)
  590 words of extra memory for PDF output out of 10000 (max. 10000000)
 

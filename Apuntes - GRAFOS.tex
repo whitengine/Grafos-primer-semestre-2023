@@ -2196,21 +2196,76 @@ En un $X,Y$-bigrafo $G$, se tiene
     matching} no cubre $\defecto{S} = \red{5} - \blue{2}$ vértices de $\red{S}$, con lo cual cubre a lo
     más $\abs X - \defecto S = 8 - 2 = 6$ vértices de $X$.}
 
-    Para la otra desigualdad construiremos un matching de tamaño mínimo.
+    Para la otra desigualdad construiremos un matching de tamaño mínimo. Como vimos recién $\alpha ' (G) \leq \abs X - \defecto S, \forall S \subset X$. Si tomamos $d = \max_{S \subset X} \{ \defecto S \}$, en particular tenemos que
+    \[
+        \alpha' (G) \leq \abs X - d.
+    \]
+    Luego basta encontrar un matching de tamaño al menos $\abs X - d$. Construyamos un grafo $G'$ añadiendo $d$ vértices a $Y$, cada uno adyacente a todo $X$.
+    \Dibujo{Ilustración de $G'$.}
+    El grafo $G'$ cumple la condición de Hall, pues para cada subconjunto $S\subset X$ le añado $d \geq \defecto S$ vecinos nuevos. Con lo cual $G'$ tiene un matching que cubre a $X$. En el peor de los casos, este matching tiene que cubrir a los $d$ vértices nuevos que agregamos a $Y$, es decir, que quitando estos vértices obtenemos un matching con al menos $\abs X - d$ vértices de $X$ cubiertos.
 \end{proof}
 
+El tamaño de un matching está acotado por un parámetro ``dual'' natural.
+\begin{definition}
+Un \textbf{cubrimiento por vértices} es un conjunto de vértices que contiene al menos un extremo de cada arista.
 
+Denotamos por $\beta (G)$ al tamaño mínimo de un cubrimiento por vértices.
+\end{definition}
+\Dibujo{Ejemplo de cubrimiento por vértices.}
+Notar que un cubrimiento obvio, pero poco interesante, de un grafo $G$ es todo el conjunto de vértices $V(G)$.
 
+\begin{theorem}[König-Egevary (1931)]
+Si $G$ es bipartito, entonces
+\[
+    \boxed{\alpha'(G) = \beta (G).}
+\]
+\end{theorem}
 
+\begin{Remark}
+\begin{enumerate}
+\item Todo grafo (no necesariamente bipartito) se cumple \[ \alpha' (G) \leq \beta (G)\]. En efecto, tomemos un cubrmiento de tamaño mínimo $\beta (G)$, dados un matching de $G$, toda arista del matching cubre a algún vértice del cubrimiento, pero dadas dos aristas distintas del matching, no tienen el mismo vértice del cubrmiento pues no son adyacentes.
+\item El Teorema de König-Egevary nos garatinza que en un grafo bipartito podemos demostrar la optimalidad de un matching al encontrar un cubrimiento por vértices del mismo tamaño (y viceversa).
+\end{enumerate}
+\end{Remark}
 
+\begin{proof}[Teorema]\red{Puede entrar en el control}
+Sea $G$ un $X,Y$-bigrafo. Ya vimos una de las desigualdades, ahora veamos la otra. Vamos a buscar un cubrimiento por vértices, de tamaño $\alpha' (G)$. La fórmula del defecto nos dice que $\alpha' (G) = \min_{S \subset X} \{ \abs X - \defecto S \}$, tomando $T \subset X$ que realice el mínimo:
+\[
+    \alpha ' (G) = \abs X - \defecto T = \abs X - \abs T + \abs{ N(T)} = \abs{X \setminus T} + \abs {N(T)}.
+\]
+\Dibujo{Inspiremonos con el dibujo.}
+Un cubrimiento por vértices de tamaño $\alpha ' (G)$ es entonces $(X \setminus T) \cup N(T)$, luego el cubrmiento mínimo debe ser $\beta (G) \leq \alpha ' (G)$.
+\end{proof}
 
+Como corolario, este teorema nos dice que en un bigrafo encontrar un mátching máximo, o un cubrimiento por vértices mínimo son problemas de optimizasción duales.
 
+\bigskip
 
+Veamos otro par de problemas duales.
 
+\begin{definition}
+El \textbf{número de independencia} de un grafo $G$ es el tamaño máximo de un conjunto independiente de vértices en $G$. Denotamos a esta cantidad $\alpha (G)$.
+\end{definition}
+Notar que $\alpha ' (G) = \alpha (L(G))$, es decir que independencia de vértices y matchings son conceptos \textit{duales}.
 
+En un $X,Y$-bigrafo, ambas partes $X,Y$ son conjuntos independientes, pero podría pasar que $\alpha (G) > \max \{ \abs X, \abs Y \}$:
+\Dibujo{Ejemplo.}
 
+\begin{definition}
+Un \textbf{cubrimiento por aristas} de $G$ es un conjunto de aristas tal que todo vértice de $G$ es extremo de alguna arista en el conjunto. Notemos a esta cantidad $\beta ' (G)$.
+\end{definition}
+Notar que lo más inocente que uno podría intentar hacer en un grafo $G$ para encontrar un cubrimiento por aristas, es elejir el conjunto de todas las aristas $E$, sin embargo, si $G$ tiene vértices aislados entonces no hay cubrimiento! (En este caso definimos $\beta ' (G) := \infty$.) Es decir, solamente los grafos sin vértices aislados tienen cubrimiento por aristas.
 
+\begin{theorem}[König (1916)]
+Si $G$ es bipartito sin vértices aislados
+\[
+    \boxed{\alpha (G) = \beta ' (G) .}
+\]
+\end{theorem}
 
+\begin{exercise}
+Probar que $\alpha (G) \leq \beta ' (G)$.
+\end{exercise}
 
 
 

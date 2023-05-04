@@ -24,7 +24,7 @@
 \contentsline {section}{\numberline {1.11}Ejercicios}{51}{section.1.11}%
 \contentsline {section}{\numberline {1.12}Clase 11: 27/04/23}{59}{section.1.12}%
 \contentsline {subsection}{\numberline {1.12.1}Relaciones min-máx}{62}{subsection.1.12.1}%
-\contentsline {chapter}{\numberline {A}Primera parte de la materia (primer capítulo del Diestel)}{64}{appendix.Alph1}%
-\contentsline {section}{\numberline {A.1}}{64}{section.Alph1.1}%
-\contentsline {section}{\numberline {A.2}}{70}{section.Alph1.2}%
-\contentsline {chapter}{\numberline {B}Orden parcial completo-dirigido y teorema del punto fijo de Kleene}{73}{appendix.Alph2}%
+\contentsline {chapter}{\numberline {A}Primera parte de la materia (primer capítulo del Diestel)}{67}{appendix.Alph1}%
+\contentsline {section}{\numberline {A.1}}{67}{section.Alph1.1}%
+\contentsline {section}{\numberline {A.2}}{73}{section.Alph1.2}%
+\contentsline {chapter}{\numberline {B}Orden parcial completo-dirigido y teorema del punto fijo de Kleene}{76}{appendix.Alph2}%
