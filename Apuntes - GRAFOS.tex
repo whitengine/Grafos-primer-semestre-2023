@@ -14,9 +14,17 @@
 %para usar este paquete solamente hay que usar el comando
 %\subfile{}
 
+
 \usepackage{graphicx}
+
+\graphicspath{{./Editor de Grafos/Figuras/Clase 13/}} %esto es para que encuentre las figuras hechas con pdf_tex en inkscape
+
 \usepackage{framed}
 \usepackage[dvipsnames]{xcolor} %agrega mas colores para xcolor.
+
+%\usepackage[outdir=./]{epstopdf} %sin esto importar eps es imposible
+
+
 
 \usepackage{xparse}
 \usepackage{xstring}
@@ -389,11 +397,22 @@
 
 \renewcommand\thefigure{\thesection.\arabic{figure}}  
 
-%el comando Dibujo tiene dos inputs \Dibujo{input 1}{input 2}, el primer input es el número de dibujo y el segundo es el caption de la figura.
+%el comando Dibujo tiene dos inputs \Dibujo{input 1}{input 2}, el primer input es [OPCIONAL] y representa el ancho del dibujo, y el segundo es el caption de la figura.
 \NewDocumentCommand{\Dibujo}{O{0.8} m}{
 \stepcounter{numeroDibujo}
 \begin{center}
 \includegraphics[width=#1\columnwidth]{"./Editor de Grafos/Figuras/Clase \thenumeroClase /Dibujo \thenumeroDibujo .pdf"}
+\captionof{figure}{#2}
+\end{center}
+}
+
+
+%el comando Inkscape tiene dos inputs \Inkscape{input 1}{input 2}, el primer input es [OPCIONAL] y representa el ancho del dibujo, y el segundo es el caption de la figura.
+\NewDocumentCommand{\Inkscape}{O{1} m}{
+\stepcounter{numeroDibujo}
+\begin{center}
+\def\svgwidth{#1\textwidth}
+\input{"./Editor de Grafos/Figuras/Clase \thenumeroClase/Dibujo \thenumeroDibujo.pdf_tex"}
 \captionof{figure}{#2}
 \end{center}
 }
@@ -2163,6 +2182,8 @@ Todo $X,Y$-bigrafo regular (no trivial) tiene un matching perfecto. En particula
 \end{proof}
 
 
+
+
 \subsection{Relaciones min-máx}
 
 El Teorema de Hall nos dice cuándo podemos encontrar un matching que cubre una de las partes de un grafo bipartito.
@@ -2172,6 +2193,13 @@ Pero quizá, sabiendo que no puedo cubrir ninguna de las partes, igual quiero sa
 \begin{notation}
 Denotamos por $\alpha ' (G)$ al tamaño máximo de un matching en un grafo $G$ (cantidad de aristas del matching).
 \end{notation}
+
+\begin{obs}
+En un grafo $G$ con un matching $M$ de tamaño $m$, tenemos que $2 m \leq \abs G$, pues los vértices que cubre cada arista de $M$ son disjuntos por definición de matching. Consecuentemente,
+\[
+    2 \alpha ' (G) \leq \abs G.
+\]
+\end{obs}
 
 \begin{definition}
     Para un $X,Y$-bigrafo, el \textbf{defecto} $\defecto{S}$ de un conjunto $S \subset X$ es la cantidad
@@ -2201,7 +2229,7 @@ En un $X,Y$-bigrafo $G$, se tiene
         \alpha' (G) \leq \abs X - d.
     \]
     Luego basta encontrar un matching de tamaño al menos $\abs X - d$. Construyamos un grafo $G'$ añadiendo $d$ vértices a $Y$, cada uno adyacente a todo $X$.
-    \Dibujo{Ilustración de $G'$.}
+    \Dibujo{Ilustración de $G'$: agregamos en el dibujo \brown{dos vértices} adyacentes a todos los vértices de $X$ (fila superior con vértices \blue{azules} y \yellow{amarillos}). Notar que en este caso \brown{$2$} es el defecto de \yellow{$S$}.}
     El grafo $G'$ cumple la condición de Hall, pues para cada subconjunto $S\subset X$ le añado $d \geq \defecto S$ vecinos nuevos. Con lo cual $G'$ tiene un matching que cubre a $X$. En el peor de los casos, este matching tiene que cubrir a los $d$ vértices nuevos que agregamos a $Y$, es decir, que quitando estos vértices obtenemos un matching con al menos $\abs X - d$ vértices de $X$ cubiertos.
 \end{proof}
 
@@ -2211,8 +2239,20 @@ Un \textbf{cubrimiento por vértices} es un conjunto de vértices que contiene a
 
 Denotamos por $\beta (G)$ al tamaño mínimo de un cubrimiento por vértices.
 \end{definition}
-\Dibujo{Ejemplo de cubrimiento por vértices.}
+\Dibujo[0.5]{Ejemplo de \purple{cubrimiento por vértices} de un grafo $G$.}
 Notar que un cubrimiento obvio, pero poco interesante, de un grafo $G$ es todo el conjunto de vértices $V(G)$.
+
+\begin{obs}
+Tenemos que
+\[
+    \#\{\text{Componentes conexas no trivialdes de $G$}\} \leq \beta (G) \leq \min \{ \abs G , \Abs G \} .
+\]
+\end{obs}
+\begin{proof}
+    Por un lado, cada componente conexa no trivial debe tener una arista, que debe ser cubiarte por al menos un vértices. Así se ve la primera desigualdad. Notar que esta cota es tight porque podemos considerar un grafo que sea la unión disjunta de $k$ estrellas de de cualquier cantidad de aristas y $l$ vértices aislados.
+
+    Por otro lado, cada vértice $u$ de un cubrimiento $U$ por vértices de $G$ de tamaño mínimo $\beta (G)$ es extremo de alguna arista $e_u$ cuyo otro extremo está fuera de $U$. Luego si $u y u'$ son distintos, es porque sus aristas $e_u$ y $e_{u'}$ también lo son. Esto nos dice que $G$ tiene al menos $\abs U = \beta (G)$ aristas. Como trivialmente $\abs U \leq \abs G$, se tiene la segunda desigualdad. Notar que esta cota es tight porque podemos considerar a $G$ como la unión disjunta de una cantidad $k$ de $1$-caminos.
+\end{proof}
 
 \begin{theorem}[König-Egevary (1931)]
 Si $G$ es bipartito, entonces
@@ -2223,7 +2263,8 @@ Si $G$ es bipartito, entonces
 
 \begin{Remark}
 \begin{enumerate}
-\item Todo grafo (no necesariamente bipartito) se cumple \[ \alpha' (G) \leq \beta (G)\]. En efecto, tomemos un cubrmiento de tamaño mínimo $\beta (G)$, dados un matching de $G$, toda arista del matching cubre a algún vértice del cubrimiento, pero dadas dos aristas distintas del matching, no tienen el mismo vértice del cubrmiento pues no son adyacentes.
+\item En todo grafo (no necesariamente bipartito) se cumple \[ \alpha' (G) \leq \beta (G).\]
+En efecto, tomemos un cubrmiento de tamaño mínimo $\beta (G)$, dados un matching de $G$, toda arista del matching cubre a algún vértice del cubrimiento, pero dadas dos aristas distintas del matching, no tienen el mismo vértice del cubrmiento pues no son adyacentes.
 \item El Teorema de König-Egevary nos garatinza que en un grafo bipartito podemos demostrar la optimalidad de un matching al encontrar un cubrimiento por vértices del mismo tamaño (y viceversa).
 \end{enumerate}
 \end{Remark}
@@ -2233,11 +2274,27 @@ Sea $G$ un $X,Y$-bigrafo. Ya vimos una de las desigualdades, ahora veamos la otr
 \[
     \alpha ' (G) = \abs X - \defecto T = \abs X - \abs T + \abs{ N(T)} = \abs{X \setminus T} + \abs {N(T)}.
 \]
-\Dibujo{Inspiremonos con el dibujo.}
+\Dibujo{Inspiremonos con el dibujo. Del lado \blue{$X$} tenemos a \yellow{$T$}, y del lado \red{$Y$} tenemos \yellow{$N(T)$}.}
 Un cubrimiento por vértices de tamaño $\alpha ' (G)$ es entonces $(X \setminus T) \cup N(T)$, luego el cubrmiento mínimo debe ser $\beta (G) \leq \alpha ' (G)$.
 \end{proof}
 
 Como corolario, este teorema nos dice que en un bigrafo encontrar un mátching máximo, o un cubrimiento por vértices mínimo son problemas de optimizasción duales.
+
+\begin{exercise}
+Calcular $\alpha ' (K_n)$ para todo $n \geq 3$. (Notar que $\alpha ' (K_2) = 1$).
+\end{exercise}
+\begin{solution}
+Vamos a probar por inducción que
+\begin{equation}\label{eq:ejercicio random 1}
+    \alpha ' (K_{n+1}) = \alpha ' (k_{n}) + 1, \quad \forall n \geq 3.
+\end{equation}
+Esto, junto con el hecho de que $\alpha ' (K_3) = 1$, prueba la afirmación:
+\[
+    \alpha ' (K_n) = n-2, \quad \forall n \geq 3.
+\]
+
+Claramente vale \eqref{eq:ejercicio random 1} para $n = 3$. En general, tomando un vértice $x \in K_{n+1}$ y considerando $K_n = K_{n+1} \setminus \{x \}$ se ve por inducción que agregando una arista incidente a $x$ a un matching de $K_n$ de tamaño $\alpha ' (K_n)$, obtenemos un matching de $K_{n+1}$ una unidad mayor, i.e. $\alpha ' (K_n) + 1 \leq \alpha ' (K_{n+1})$. Por otro lado, un matching de $K_{n+1}$ de tamaño $\alpha ' (K_{n+1})$ se convierte en un matching de $K_n$ si quitamos un vértice de $K_{n+1}$ cubierto por él, i.e. $\alpha ' (K_{n+1}) - 1 \leq \alpha ' (K_n)$. Probando así la igualdad \eqref{eq:ejercicio random 1}.
+\end{solution}
 
 \bigskip
 
@@ -2251,10 +2308,37 @@ Notar que $\alpha ' (G) = \alpha (L(G))$, es decir que independencia de vértice
 En un $X,Y$-bigrafo, ambas partes $X,Y$ son conjuntos independientes, pero podría pasar que $\alpha (G) > \max \{ \abs X, \abs Y \}$:
 \Dibujo{Ejemplo.}
 
+\begin{obs}
+Si $S$ es un conjunto de vértices independientes de tamaño máximo $\alpha (G)$, se tiene todo vértice en $V(G) \setminus S$ es adyacente a algún vértice de $S$. Luego
+\[
+    \abs G - \alpha (G) \leq \Abs G \quad \Leftrightarrow \quad \abs G - \Abs G \leq \alpha (G).
+\]
+Pero en la mayoría de los casos no nos dice nada, pues el lado izquierdo es negativo.
+\end{obs}
+
 \begin{definition}
 Un \textbf{cubrimiento por aristas} de $G$ es un conjunto de aristas tal que todo vértice de $G$ es extremo de alguna arista en el conjunto. Notemos a esta cantidad $\beta ' (G)$.
 \end{definition}
-Notar que lo más inocente que uno podría intentar hacer en un grafo $G$ para encontrar un cubrimiento por aristas, es elejir el conjunto de todas las aristas $E$, sin embargo, si $G$ tiene vértices aislados entonces no hay cubrimiento! (En este caso definimos $\beta ' (G) := \infty$.) Es decir, solamente los grafos sin vértices aislados tienen cubrimiento por aristas.
+Notar que lo más inocente que uno podría intentar hacer en un grafo $G$ para encontrar un cubrimiento por aristas, es elegir el conjunto de todas las aristas $E$, sin embargo, si $G$ tiene vértices aislados entonces no hay cubrimiento! (En este caso definimos $\beta ' (G) := \infty$). Es decir, solamente los grafos sin vértices aislados tienen cubrimiento por aristas.
+
+\begin{obs}
+Tenemos que
+\[
+    \abs G / 2 \leq \beta ' (G) \leq \abs G - \#\{\text{ componentes conexas de $G$}\}.
+\]
+\end{obs}
+\begin{proof}
+Sea $S$ un cubrimiento por aristas de $G$ de tamaño mínimo $\beta ' (G)$. Por minimalidad de $S$, ambos extremos de una arista de $S$ no pueden tener otras aristas incidentes de $S$, luego en el peor de los casos, se necesitan $\abs G -1$ aristas para cubrir $G$. Luego $\beta ' (G) \leq \abs G -1$. Este argumento se puede luego aplicar a cada componente de $G$, pues un cubrimiento de $G$ es la unión disjunta de los cubrimientos de sus componentes. Esta cota es tight porque podemos considerar un grafo que sea la unión disjunta de $k$ estrellas de grado $n$.
+
+Por otro lado, por cada arista $e \in S$ cubrimos a lo más dos vértices, luego en el por de los casos $\abs G / 2 \leq \abs S = \beta ' (G)$.
+\end{proof}
+
+\begin{exercise}
+Probar que $\alpha (G) \leq \beta ' (G)$.
+\end{exercise}
+\begin{solution}
+Claramente si $G$ tiene puntos aislados la desigualdad se cumple trivialmente. Tomemos un conjunto $U$ de vértices de $G$ que son aislados de tamaño máximo $\alpha (G)$. Consideremos un conjunto de aristas $F$ de $G$ de tamaño mínimo que cubre a $G$. Todo vértice $x$ de $U$ es extremo de una arista de $F$, más aún, dos vértices distintos de $U$ no pueden compartir la misma arista porque no son adyacentes, luego $\alpha (G) = \abs U \leq \abs F =  \beta ' (G)$.
+\end{solution}
 
 \begin{theorem}[König (1916)]
 Si $G$ es bipartito sin vértices aislados
@@ -2262,10 +2346,206 @@ Si $G$ es bipartito sin vértices aislados
     \boxed{\alpha (G) = \beta ' (G) .}
 \]
 \end{theorem}
+\begin{proof}
+El ejercicio anterior prueba una desigualdad. Para probar la otra desigualdad basta encontrar un cubrimiento por aristas de tamaño $ \leq \alpha (G)$. Tomemos un conjunto de vértices independiente $U$ de tamaño máximo $\alpha (G)$. Por maximalidad, cualquier vértice de $V(G) \setminus U$ es adyacente a un vértice de $U$. Es decir, el conjunto $F$ de aristas que inciden en $U$ cubre $G$. Sin pérdida de generalidad, supongamos que $F$ es minimal. Veamos que por cada vértice de $u \in U$ hay a lo más una arista incidente; como consecuencia se sigue que $\abs F \leq \alpha (G)$ como queríamos encontrar. En efecto, de lo contrario, si $u$ tuviera dos vecinos distintos $v,v'$ en el complemento de $U$ (digamos $u \in X$ y $v,v \in Y$), por minimalidad de $F$ debe ser que $v$ y $v'$ no tienen otro vecino en $U$ que no sea $u$. Luego llegamos a un absurdo construyendo un conjunto de vértices independiente más grande: $U\setminus \{u\} \cup \{v,v'\}$.
+\end{proof}
+
+
+
+
+\subsection{Ejercicios}
 
 \begin{exercise}
-Probar que $\alpha (G) \leq \beta ' (G)$.
+\begin{enumerate}[(a)]
+\item Si $M$ es un matching en un grafo $G$ tal que $\abs M < \delta (G) / 2$, entonces $M$ no es máximo. Concluya que $\alpha ' (G) \geq \delta (G)/2$ para todo grafo $G$.
+\item Demuestre para todo grafo $G$ bipartito, $\alpha ' (G) \geq \delta (G)$.
+\item En cada caso, encontrar una familia infinita de grafos donde se cumple la igualdad.
+\end{enumerate}
 \end{exercise}
+\begin{solution}
+\begin{enumerate}[(a)]
+\item Esto equivale a probar que todo grafo $G$ tiene un matching the tamaño al menos $\lceil \delta (G)/2 \rceil$. En efecto, sabemos que todo grafo contiene un camino de longitud $\geq \delta (G)$, luego en ese camino podemos construir un matching obvio de longitud $\geq \lceil \delta (G) /2 \rceil \geq \delta (G)/2$: elegimos la primera arista (en un orden natural inducido por el camino) y luego la siguiente arista no adyacente más cercana, y repetimos el procedimiento de manera recursiva. (En un camino de longitud $n = 2k$ este algorítmo construye un matching de tamaño $k$, y en un camino de longitud $n = 2k +1$ construye uno de tamaño $k+1$). Esto implica que $\alpha ' (G) \geq \delta (G) /2$.
+\item En un $X,Y$-bigrafo. Tomemos $y_0 \in Y$. Como $y$ tiene $d(y) \geq \delta (G)$ vecinos en $X$, sabemos que $X$ tiene al menos $\delta (G)$ vértices. Tomemos un subconjunto $T \subset X$ de tamaño $\delta (G)$ (por ejemplo los vecinos de $y$). Notemos que $T$ cumple la Condición de Hall. En efecto, para todo $S \subset T$ no vacío, sabemos que cualquier vértice de $S$ tiene al menos $\delta (G)$ vecinos, en particular
+$$\abs {N(S)} \geq \delta (G) = \abs T \geq \abs S .$$
+Con lo cual, el Teorema de Hall no dice que existe un matching de $G$ que cubre a $T$, es decir, un matching con $\abs T = \delta (G)$ aristas. Consecuentemente $\alpha ' (G) \geq \delta (G)$.
+\item
+        \begin{enumerate}[(a)]
+        \item Consideremos la familia $G_k = (P_{2k})^{2k}$, es decir, la familia de las $2k$-potencias de caminos de longitud $2k$ con $k \in \naturals$. Recordar que la $i$-potencia de un grafo $G$ es un grafo con los mismos vértices pero donde dos vértices son adyacentes si y solo si estaban a distancia a lo más $i$ en $G$. Afirmamos que $\delta (G_k) = 2k$ y que $\alpha ' (G_k) = k$. Numerando a los vértices de $P_{2k} : x_0 x_1 \cdots x_{2k}$, tenemos que claramente $x_i$ es adyacente a $x_j$ en $G_k$, para todo $0 \leq i, j \leq 2k$, luego $G_k$ es $2k$-regular, en particular $\delta (G_k) = 2k$. Ahora, notemos que el conjunto de aristas de $G_k$ dado por $\{ e_i\}_{i = 1}^k$ con $e_i = x_{2i-1}x_{2i}$ es un matching de $G_k$ con $k$ aristas. Esto nos dice que $\alpha ' (G) \geq k$. Por otro lado, observemos que un grafo $G$ arbitrario, con un matching de $r$ aristas, se tiene que $2 r \leq \abs G$, pues el matching cubre $2 r$ vértices distintos, con lo cual $2 \alpha ' (G) \leq \abs G$. Aplicando esta observación a $G_k$, se sigue que $\alpha ' (G_k) \leq \abs {G_k}/2 = k$. En resumen, hemos visto que $\alpha ' (G_k) = k = \delta (G_k)/2$ para todo $k \in \naturals$.
+        \item Consideremos ahora la familia $G_k = K_{k,k}$ de grafos bipartitos completos con dos particiones de $k$ elementos, para $k \in \naturals$. $G_k$ es $k$-regular, en particular $\delta (G_k) = k$. Por otro lado, vimos en el ítem (b) que $\alpha ' (G_k) \geq \delta (G_k) = k$. Veamos que no puede haber un matching con más de $k$ aristas. En efecto, todo matching de $G_k$ cubre a lo más $k$ vértices en una de las particiones de $K_{k,k} = G_k$. Esto concluye la demostración de que $\alpha ' (G_k) = k = \delta (G_k)$, para todo $k \in \naturals$.
+        \end{enumerate}
+\end{enumerate}
+\end{solution}
+
+
+\begin{exercise}
+Demuestre que un grafo $G$ es bipartito si y solo si $\alpha ' (H) = \beta (H)$ para todo subgrafo $H$ de $G$.
+\end{exercise}
+\begin{solution}
+En clase vimos la demostración del Teorema de König-Egevary, que dice que vale la igualdad $\alpha ' (G) = \beta (G)$ para todo grafo bipartito $G$, luego como todo subgrafo $H$ de $G$ es también bipartito, salvo por el subgrafo trivial donde no hay nada que probar, se tiene una de las implicaciones del ejercicio.
+
+Veamos la recíproca, es decir, veamos que si un grafo $G$ cumple la igualdad para todo subgrafo $H$ de $G$, entonces es bipartito. En efecto, supongamos por el absurdo que $G$ no es bipartito, i.e. $G$ contiene un ciclo impar $H$. Llegaremos a un absurdo si logramos probar que para todo ciclo impar, no se cumple la igualdad del enunciado.
+
+Así es, pues si escribimos $C: x_0 \cdot x_1 \cdot x_2 \cdots x_{2k} \cdot x_0$ para cualquier ciclo impar con $k \geq 1$, entonces $\beta (C) = k+1$ ya que los vértices de índice par cubren todas las aristas y con $k$ vértices no se pueden cubrir todas las aristas, pues cada vértice cubre $2$ aristas de $C$ pero $C$ tiene $2k+1$ aristas; por otro lado, sabemos que en todo grafo $\alpha ' (C) \leq \beta (C)$, entonces basta ver que no hay un mathcing en $C$ de tamaño $k+1$: como notamos en el ejercicio anterior, en un matching con $r = k+1$ aristas, $2 r \leq \abs C = 2k +1$, imposible. Esto prueba que $G$ no puede tener ciclos impares.
+\end{solution}
+
+
+\begin{exercise}
+Sea $G$ un $X,Y$-bigrafo tal que $\abs X = \alpha (G)$, donde $\alpha (G)$ es el tamaño máximo de un conjunto de vértices independiente de $G$. Demuestre que $G$ tiene un matching que cubre a $Y$.
+\end{exercise}
+\begin{solution}
+Notemos primero que la igualdad $\abs X = \alpha (G)$ nos dice que $\abs Y \leq \abs X$, ya que $Y$ también es un conjunto independiente. Para probar que $G$ tiene un matching que cubre a $Y$, esto equivale a probar que todos los subconjuntos de $Y$ cumplen la Condición de Hall. En efecto, supongamos por el absurdo que no, es decir, existe un subconjunto $S \subset Y$ no vacío de tamaño mínimo tal que no cumple la condición de Hall. Claramente $\abs S > 1$, pues si no $S = \{y\}$ con  $y$ sin vecinos en $X$, pero luego $X \cup S$ es independiente y $\alpha (G) > \abs X$. Ahora tomemos $y \in S$, y notemos $S' = S \setminus \{y \} \neq \emptyset$. Por minimalidad de $S$, el conjunto $S'$ cumple la condición de Hall, i.e. existe un matching de $G$ que cubre a $S'$; más aún, $\abs {N(S')} = \abs {S'} $, de lo contrario $S$ cumpliría la condición de Hall. Consideramos ahora el conjunto $X \setminus N(S') \cup S = X \setminus N(S') \cup S' \cup \{y\}$ de $G$ de tamaño $\abs X +1$. Por hipótesis, no puede ser independiente, y por construcción, debe ser que $y$ tiene un vecino en $X \setminus N(S')$, es decir, $\abs {N (S)} \geq \abs{N(S')} + 1 = \abs {S'} + 1 = \abs S$, lo cual es imposible porque $S$ no cumplía la condición de Hall.
+\end{solution}
+
+
+
+%%%%%%%%%%%
+\Clase{8/05/23}   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%
+
+
+
+\begin{proposition}
+Tenemos la fórmula
+\[
+    \boxed{\alpha (G) + \beta (G) = \abs G.}
+\]
+\end{proposition}
+\begin{proof}
+Tomemos un conjunto $U$ de vértices independiente de tamaño máximo $\alpha (G)$. Sea $W := V(G) \setminus U$, tenemos que todos los vértices de $W$ son adyacentes a algún vértice de $U$ por maximalidad. Notar que $W$ debe ser un cubrimiento de $G$ porque no hay aristas con ambos extremos en $U$. Con lo cual
+\[
+    \alpha (G) + \beta (G) \leq \alpha (G) + \abs W = \abs G.
+\]
+
+Recíprocamente, tomemos un cubrimiento por vértices $S$ de $G$ de tamaño mínimo $\beta (G)$. Por minimalidad de $G$ tenemos que el conjunto $T := V(G) \setminus S$ es independiente. Es decir,
+\[
+    \abs G = \abs T + \beta (G) \leq \alpha (G) + \beta (G).
+\]
+\end{proof}
+
+Análogamente:
+\begin{proposition}
+Si $G$ no tiene vértices aislados:
+\[
+    \boxed{\alpha ' (G) + \beta ' (G) = \abs G .}
+\]
+\end{proposition}
+\begin{proof}
+Sea $S$ un matching de tamaño máximo $\alpha ' (G)$ en $G$. Consideremos $U$ el conjunto de vértices de $G$ que no son cubiertos por $S$, i.e. $\abs U = \abs G - 2 \alpha ' (G)$. Por maximalidad de $S$, todas las aristas incidentes a un vértice $u \in U$ deben tener su otro extremo en $W = V(G) \setminus U$. Por cada vértice de $U$, tomemos una de estas aristas. Luego este conjunto de aristas junto con $S$ cubren a $G$, i.e.
+\[
+    \beta ' (G) \leq \abs S + \abs U = \alpha ' (G) + (\abs G - 2 \alpha ' (G)) = \abs G - \alpha ' (G),
+\]
+obteniendo así una desigualdad.
+
+Para obtener la otra, consideremos un conjunto $S$ de aristas que cubren a $G$ de tamaño mínimo, consideremos también a $S'$ matching de $G$ compuesto de aristas de $S$ de tamaño más grande. Sea $U'$ el conjunto de vértices cubiertos por $S'$, i.e. $\abs {U'} = 2 \abs {S'}$. Tomemos $U = V(G) \setminus U'$, este es cubierto por una única arista de $S \setminus S'$. En efecto, sea $u \in U$, está cubierto por una arista de $S$ que no puede estar en $S'$ por definición de $U$, y de hecho si hubiera otra arista de $S$ incidente en $u$, entonces cualquier otro extremo que no sea $u$ tiene que estar cubierto por $S'$, de lo contrario podríamos agrandar $S'$ agregando esta arista (contradiciendo maximalidad de $S'$), pero esto es imposible por minimalidad de $S$ (podríamos quitar esta arista y seguiriamos teniendo un cubrimiento de $G$). Con lo cual, $\abs {U} \leq \abs {S \setminus S'} = \abs S - \abs {S'}$. Juntando todo:
+\[
+    \abs G = \abs U + \abs {U'} \leq \abs S + \abs {S'} = \beta ' (G) + \abs {S'} \leq \beta ' (G) + \alpha ' (G),
+\]
+pues $S'$ es un matching de $G$.
+\end{proof}
+
+
+
+\subsection{Caminos aumentantes}
+
+
+\begin{definition}
+Dado un matching $M$ de un grafo $G$. Llamamos \textbf{camino $M$-alternate} a un camino de $G$ que alterna entre aristas de $M$ y aristas de $E(G) \setminus M$.
+
+Un camino camino $M$-alternante cuyos vértices extremos no están cubiertos por $M$ se llama \textbf{$M$-aumentante}.
+\end{definition}
+
+\Dibujo{Ejemplo de camino \red{$M$}-aumentante: $1,2,3,4,5,6,7,8$.}
+
+Si $P$ es un camino $M$-aumentante, entonces reemplazando las aristas de $M$ que están en $P$ por las aristas de $E(G) \setminus M$ en $P$ obtenemos un nuevo matching $M'$ de tamaño estrictamente mayor a $M$. De aquí el nombre ``aumentante''. Así, un matching máximo $M$ no tiene caminos $M$-aumentantes. Más aún, vale la recíproca:
+
+\begin{theorem}[Berge (1957)]
+Sea $M$ un conjunto de aristas en un grafo $G$. $M$ es un matching de tamaño máximo si y solo si $G$ no tiene caminos $M$-aumentantes.
+\end{theorem}
+\begin{proof}
+Acabamos de observar una de las implicaciones, veamos la vuelta. Supongamos que sí hay un matching $M'$ de tamaño estrictamente más grande que un matching $M$ sin caminos $M$-aumentantes. Sea $F = M \Delta M'$ la diferencia simétrica entre estos dos conjuntos. Como $M$ y $M'$ son matchings, cada vértice incide en a lo más una arista de $M$ y una de $M'$. Así, $\Delta (H) \leq 2$ si vemos a $F$ como un grafo $H := (V(G), F)$. Entonces $H$ es unión disjunta de ciclos y caminos.
+    \Dibujo{Ilustración de $H$, donde por un lado tenemos las aristas de \red{$M \setminus M'$} y las de \blue{$M' \setminus M$}.}
+    Cada componente de $H$ alterna entre $M$ y $M'$, y por lo tanto sus ciclos son pares. Al tener $\abs{M'} > \abs M$ tiene que haber en $H$ una componente que no es ciclo. Más aún, alguna de las componentes que no son ciclos tiene que tener más aristas de $M'$ que de $M$. Por lo tanto, hay una componente que es camino que empieza y termina con aristas de $M'$. Esta componente nos da un camino $M$-aumentante, lo cual es imposible.
+\end{proof}
+
+
+
+%%%%%%%%%%%
+\Clase{15/05/23}   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%
+
+
+\subsection{Grafos planares}
+
+
+\subsubsection{Prerequisitos topológicos}
+
+\begin{definition}
+\begin{enumerate}[(a)]
+\item Un \textbf{segmento de recta} en el plano Euclídeo es un conjunto de puntos de la forma $\{ P + \lambda (Q-P) | 0 \leq \lambda \leq 1 \}$ para un par de puntos fijos $P,Q \in \reals^2$.
+\item Un \textbf{polígono} es un subconjunto de $\reals ^2$ que es unión de un número finíto de segmentos que es homeomorfo\footnote{ Recordar que un \textbf{homeomorfismo} $\varphi : X \rightarrow Y$ entre dos espacios topológicos $X$ e $Y$, es una función continua y biyectiva tal que su función inversa $\varphi^{-1} : Y \rightarrow X$ también es continua.} al cículo unitario.
+\item Un \textbf{arco} (poligonal) es la unión de un número finito de segmentos que es homeomorfo al intervalo cerrado $[0,1]$. En particular, un arco es cerrado. Fijado un homeomorfismo, las pre-imágenes de $0$ y $1$ son los \textbf{extremos} del arco y decimos que el arco \textbf{une} o \textbf{va entre} sus extremos. Observar que los extremos de un arco son distintos, pues un homeomorfismo es biyectivo. Si $P$ es un arco entre $x$ e $y$, denotamos por $I(P)$ al \textbf{interior} del arco, es decir, $I(P) :== P \setminus \{ x,y \}$.
+\item Sea $A \subset \reals^2$ un conjunto abierto. Estar unido por un arco en $A$, define una relación de equivalencia en los elementos de $A$. Las clases de equivalencia las llamamos \textbf{regiones}. (Notar que las regiones son las componentes arco-conexas (por curvas continuas), o equivalentemente, las componentes conexas).
+\item La \textbf{frontera} de un conjunto $X \subset \reals^2$ es el conjunto $Y$ de todos los puntos $y \in \reals^2$ tal que todo vecindario de $y$ intersecta a ambos $X$ y $\reals^2 \setminus X$.
+\end{enumerate}
+\end{definition}
+
+\Inkscape{Ilustración de un abierto \darkblue{$A$}. Ilustramos los puntos $x_1,y_1 \in A$ equivalentes, ya que podemos dibujar un arco $P_1 \subset A$ entre ellos. Similarmente, $x_2,y_2$ están unidos por un arco $P_2$ en $A$, luego son equivalentes entre sí. Las regiones de $A$ son el \textit{maní} y el \textit{boomerang}. La frontera de $A$ es la ``cáscara'' del maní (líneas punteadas) y el ``borde'' del boomerang.}
+
+\begin{theorem}[De la curva de Jordan para polígonos]
+Para todo polígono $P \subset \reals ^2$, el conjunto $\reals^2 \setminus P$ tiene dos regiones: una acotada\footnote{En $\reals^2$ o más en general en $\reals^n$, decimos que un conjunto es \textbf{acotado}, si está contenido en alguna bola de tamaño lo suficientemente grande.} y otra no acotada. Cada región tiene a $P$ como frontera.
+\end{theorem}
+
+Con este teorema no es difícil probar lo siguiente:
+\begin{lemma}
+Sean $P_1, P_2, P_3$ arcos disjuntos salvo en sus extremos, donde cualquier par de arcos comparten ambos extremos. Entonces:
+\begin{enumerate}[(i)]
+\item $\reals ^2 \setminus (P_1 \cup P_2 \cup P_3)$ tiene exactamente tres regiones con fronteras $P_1 \cup P_2$, $P_2 \cup P_3$ y $P_1 \cup P_3$.
+\item Si $P$ es un arco entre un punto en $I (P_1)$ y otro en $I(P_3)$, tal que $I(P)$ está en la región $\reals^2 \setminus (P_1 \cup P_3)$ que contiene a $I(P_2)$, entonces $I(P) \cap I(P_2) \neq \emptyset$.
+\end{enumerate}
+\end{lemma}
+
+\Inkscape{Dos ilustraciones del lema.}
+
+\begin{lemma}
+Para todo arco $P$, el conjunto $\reals^2 \setminus P$ tiene una sola región.
+\end{lemma}
+
+\bigskip
+
+\begin{definition}
+Un \textbf{grafo plano} (no confundir con \textit{grafo planar}) es un par $(V,E)$ que cumple:
+\begin{enumerate}
+\item $V \subset \reals^2$ es finito.
+\item $E$ es un conjunto de arcos entre elementos de $V$.
+\item Aristas distintas tienen distintos conjuntos de extremos.
+\item El interior de una arista no contiene ningún vértice y ningún punto de otra arista.
+\end{enumerate}
+\end{definition}
+
+Todo grafo plano $(V,E)$ define un grafo $G$ en $V$ de manera natural.
+
+\begin{definition}
+Decimos que $G$ es un \textbf{grafo planar} si se puede construir a partir de un grafo plano.
+\end{definition}
+
+\Inkscape[0.4]{Ejemplo de grafo plano, correspondiente a $K_4$.}
+
+Es conveniente pensar al \textit{grafo plano} asosciado a un \textit{grafo planar} $G$, como el ``dibujo'' de $G$. A veces haremos el abuso de notación, y hablaremos de grafo plano y de su grafo planar asosciado refiriéndonos a cualquiera de los dos sin preocuparnos por ser correctos con la terminología.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

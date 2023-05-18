@@ -1,0 +1,322 @@
+\documentclass[12pt]{article}
+\usepackage[utf8]{inputenc}
+
+\usepackage[a4paper,width=150mm,top=25mm,bottom=25mm]{geometry}
+
+\usepackage{subfiles} %esto es para modularizar el overleaf
+%para usar este paquete solamente hay que usar el comando
+%\subfile{}
+
+\usepackage{graphicx}
+\usepackage{framed}
+\usepackage[dvipsnames]{xcolor}
+
+\usepackage{xparse}
+\usepackage{xstring}
+
+\usepackage{stmaryrd} %para poner el comando \mapsfrom "<---|"
+
+\usepackage{amssymb}
+
+\usepackage{amsmath}
+\usepackage{amsthm}
+
+\usepackage{subfig}
+
+\usepackage{mathrsfs} % para tener las fuentes \mathscr que es una letra mayuscula cursiva.
+
+\usepackage{tikz-cd}
+
+\usepackage{tkz-graph}%este paquete es para crear grafos con el ambiente \begin{tikzpicture}
+
+\usepackage{graphicx}
+
+\usepackage{caption}
+
+\usepackage[shortlabels]{enumitem}
+
+\usepackage[sc]{mathpazo}
+
+\usepackage[spanish,activeacute]{babel}
+
+\usepackage{xparse}
+\usepackage{xstring}
+
+\usepackage{braket} %para definir \set , \Set y que los conjuntos se vean mas lindos
+
+\usepackage{mathtools}
+
+\usepackage{mathabx}
+
+\usepackage[shortlabels]{enumitem}
+
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks,
+    citecolor=red,
+    filecolor=red,
+    linkcolor=red,
+    urlcolor=red
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\theoremstyle{plain}
+\newtheorem{theorem}{Teorema}[section]
+\newtheorem{lemma}[theorem]{Lema}
+\newtheorem{proposition}[theorem]{Proposición}
+\newtheorem{proposition/definition}[theorem]{Proposición/Definición}
+\newtheorem{corollary}[theorem]{Corolario}
+\newtheorem{conjecture}[theorem]{Conjetura}
+\newtheorem{afirmacion}[theorem]{Afirmación}
+\newtheorem{recuerdo}[theorem]{Recuerdo}
+
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definición}
+\newtheorem{hypothesis}[theorem]{Hipótesis}
+\newtheorem{example}[theorem]{Ejemplo}
+\newtheorem{obs}[theorem]{Observación}
+\newtheorem{notation}[theorem]{Notación}
+\newtheorem{comentario}[theorem]{Comentario}
+
+\newtheorem{exercise}[theorem]{Ejercicio}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+
+%grupos de matrices
+%SL
+\newcommand{\SL}[2]{\operatorname{SL}_{#1} ( #2)}
+%GL
+\newcommand{\GL}[2]{\operatorname{GL}_{#1} ( #2)}
+
+%matriz identidad
+\newcommand{\Id}{\operatorname{Id}}
+
+
+
+%enteros Z
+\newcommand{\integers}{\mathbb{Z}}
+%racionales
+\newcommand{\rationals}{\mathbb{Q}}
+%naturales
+\newcommand{\naturals}{\mathbb{N}}
+%reales R
+\newcommand{\reals}{\mathbb{R}}
+%imaginarios
+\newcommand{\complex}{\mathbb{C}}
+%p-adicos
+\newcommand{\padics}{\mathbb{Q}_p}
+%enteros p-adicos
+\newcommand{\padicintegers}{\mathbb{Z}_p}
+
+%cuerpos finitos
+%Fp
+\newcommand{\Fp}{\mathbb{F}_p}
+%Fq
+\newcommand{\Fq}{\mathbb{F}_q}
+
+
+
+%valor absoluto p-adico
+\newcommand{\abs}[1]{\left \vert #1 \right \vert}
+%valor absoluto p-adico
+\newcommand{\Abs}[1]{\left \vert \left \vert #1 \right \vert \right \vert}
+%valuacion p-adica
+\newcommand{\val}[1]{\operatorname{val} (#1)}
+
+%Hom
+\newcommand{\Hom}{\operatorname{Hom}}
+
+%imagen y núcleo
+\newcommand{\Imagen}{\operatorname{Im}}
+\newcommand{\Ker}{\operatorname{Ker}}
+
+%coker
+\newcommand{\Coker}{\operatorname{Coker}}
+
+%limite inverso
+\newcommand{\liminv}{\varprojlim}
+
+
+%un poco de typeset para categorias
+\newcommand{\catname}[1]{{\operatorfont\textbf{#1}}}
+
+
+\renewcommand{\hat}[1]{\widehat{#1}}
+\renewcommand{\bar}[1]{\overline{#1}}
+
+%declaro un comando nuevo para escribir restricción de funciones
+\newcommand\rest[2]{{% we make the whole thing an ordinary symbol
+  \left.\kern-\nulldelimiterspace % automatically resize the bar with \right
+  #1 % the function
+  \vphantom{\big|} % pretend it's a little taller at normal size
+  \right|_{#2} % this is the delimiter
+  }}
+
+
+%%%%   COMANDO ALGEBRA CONMUTATIVA   %%%%
+
+%altura de un ideal:
+\newcommand{\height}{\textsc{height}}
+
+%Clausura topológica
+\newcommand{\closure}[1]{\overline{#1}}
+
+%longitud de un A-modulo. Notacion: \length_A M
+\newcommand{\length}{\operatorname{length}}
+
+%Anulador de un $A$-módulo.
+\newcommand{\Ann}[1]{\operatorname{Ann} (#1)}
+
+%Cuerpo de fracciones. Notacion $\FracField A$.
+\newcommand{\FracField}[1]{\operatorname{Fr} (#1)}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+
+
+
+%%%%   COMANDO TEORÍA DE NÚMEROS  %%%%
+
+%Discriminante
+\newcommand{\discriminant}[1]{\mathfrak{d} (#1 )}
+
+%%%%Ideales primos%%%
+%escribe una letra en notación mathfrak, para denotar a un ideal o elemento primo.
+
+\newcommand{\primo}[1]{\mathfrak{#1}}
+\newcommand{\Primo}[1]{\mathfrak{\MakeUppercase{#1}}}
+
+%anillo de enteros O_K
+\renewcommand{\O}{\mathcal{O}}
+%anillo de enteros con subindice de cuerpo (input, por ejemplo $K$).
+\newcommand{\integralring}[1]{O_{#1}}
+
+%caracteristica de un cuerpo Char k
+\newcommand{\Char}[1]{\operatorname{Char} #1}
+
+%traza. Notación \trace = Tr
+\newcommand{\trace}{\operatorname{Tr}}
+
+%Traza de extensiones. Notación \Tr L K \alpha = \operatorname{Tr}_{L/K} (\alpha)
+\newcommand{\Tr}[1]{\operatorname{Tr}_{L/K} (#1)} %la extension es L/K por default
+\newcommand{\tr}[3]{\operatorname{Tr}_{#1/#2} (#3)}
+
+%Norma de extensiones. Notación \Norm L K \alpha = \operatorname{N}_{L/K} (\alpha)
+\newcommand{\Norm}[1]{\operatorname{N}_{L/K} (#1)}%la extension es L/K por default
+\newcommand{\norm}[3]{\operatorname{N}_{#1/#2} (#3)}
+
+
+%discriminante de una forma bilineal simetrica. notacion \disc{B} = \operatorname{disc} ( B)
+\newcommand{\disc}[1]{\operatorname{disc} (#1)}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%COMANDO GRAFOS%%%%%%%%%%%%%
+
+%diámetro de un grafo
+\newcommand{\diam}[1]{\operatorname{diam} (#1)}
+
+%radio de un grafo
+\newcommand{\rad}[1]{\operatorname{rad}(#1)}
+
+
+
+
+
+
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+%solución
+\newenvironment{solution}{\begin{proof}[Solución]}{\end{proof}}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\title{Entrega 3 - GRAFOS}
+\author{Enzo Giannotta}
+
+
+
+
+
+
+\begin{document}
+
+\maketitle
+
+\section{Entrega 3 - Viernes 06/05/2023}
+
+\begin{exercise}
+\begin{enumerate}[(a)]
+\item Si $M$ es un matching en un grafo $G$ tal que $\abs M < \delta (G) / 2$, entonces $M$ no es máximo. Concluya que $\alpha ' (G) \geq \delta (G)/2$ para todo grafo $G$.
+\item Demuestre para todo grafo $G$ bipartito, $\alpha ' (G) \geq \delta (G)$.
+\item En cada caso, encontrar una familia infinita de grafos donde se cumple la igualdad.
+\end{enumerate}
+\end{exercise}
+\begin{solution}
+\begin{enumerate}[(a)]
+\item Esto equivale a probar que todo grafo $G$ tiene un matching the tamaño al menos $\lceil \delta (G)/2 \rceil$. En efecto, sabemos que todo grafo contiene un camino de longitud $\geq \delta (G)$, luego en ese camino podemos construir un matching obvio de longitud $\geq \lceil \delta (G) /2 \rceil \geq \delta (G)/2$: elegimos la primera arista (en un orden natural inducido por el camino) y luego la siguiente arista no adyacente más cercana, y repetimos el procedimiento de manera recursiva. (En un camino de longitud $n = 2k$ este algorítmo construye un matching de tamaño $k$, y en un camino de longitud $n = 2k +1$ construye uno de tamaño $k+1$). Esto implica que $\alpha ' (G) \geq \delta (G) /2$.
+\item En un $X,Y$-bigrafo. Tomemos $y_0 \in Y$. Como $y$ tiene $d(y) \geq \delta (G)$ vecinos en $X$, sabemos que $X$ tiene al menos $\delta (G)$ vértices. Tomemos un subconjunto $T \subset X$ de tamaño $\delta (G)$ (por ejemplo los vecinos de $y$). Notemos que $T$ cumple la Condición de Hall. En efecto, para todo $S \subset T$ no vacío, sabemos que cualquier vértice de $S$ tiene al menos $\delta (G)$ vecinos, en particular
+$$\abs {N(S)} \geq \delta (G) = \abs T \geq \abs S .$$
+Con lo cual, el Teorema de Hall no dice que existe un matching de $G$ que cubre a $T$, es decir, un matching con $\abs T = \delta (G)$ aristas. Consecuentemente $\alpha ' (G) \geq \delta (G)$.
+\item
+        \begin{enumerate}[(a)]
+        \item Consideremos la familia $G_k = (P_{2k})^{2k}$, es decir, la familia de las $2k$-potencias de caminos de longitud $2k$ con $k \in \naturals$. Recordar que la $i$-potencia de un grafo $G$ es un grafo con los mismos vértices pero donde dos vértices son adyacentes si y solo si estaban a distancia a lo más $i$ en $G$. Afirmamos que $\delta (G_k) = 2k$ y que $\alpha ' (G_k) = k$. Numerando a los vértices de $P_{2k} : x_0 x_1 \cdots x_{2k}$, tenemos que claramente $x_i$ es adyacente a $x_j$ en $G_k$, para todo $0 \leq i, j \leq 2k$, luego $G_k$ es $2k$-regular, en particular $\delta (G_k) = 2k$. Ahora, notemos que el conjunto de aristas de $G_k$ dado por $\{ e_i\}_{i = 1}^k$ con $e_i = x_{2i-1}x_{2i}$ es un matching de $G_k$ con $k$ aristas. Esto nos dice que $\alpha ' (G) \geq k$. Por otro lado, observemos que un grafo $G$ arbitrario, con un matching de $r$ aristas, se tiene que $2 r \leq \abs G$, pues el matching cubre $2 r$ vértices distintos, con lo cual $2 \alpha ' (G) \leq \abs G$. Aplicando esta observación a $G_k$, se sigue que $\alpha ' (G_k) \leq \abs {G_k}/2 = k$. En resumen, hemos visto que $\alpha ' (G_k) = k = \delta (G_k)/2$ para todo $k \in \naturals$.
+        \item Consideremos ahora la familia $G_k = K_{k,k}$ de grafos bipartitos completos con dos particiones de $k$ elementos, para $k \in \naturals$. $G_k$ es $k$-regular, en particular $\delta (G_k) = k$. Por otro lado, vimos en el ítem (b) que $\alpha ' (G_k) \geq \delta (G_k) = k$. Veamos que no puede haber un matching con más de $k$ aristas. En efecto, todo matching de $G_k$ cubre a lo más $k$ vértices en una de las particiones de $K_{k,k} = G_k$. Esto concluye la demostración de que $\alpha ' (G_k) = k = \delta (G_k)$, para todo $k \in \naturals$.
+        \end{enumerate}
+\end{enumerate}
+\end{solution}
+
+
+\begin{exercise}
+Demuestre que un grafo $G$ es bipartito si y solo si $\alpha ' (H) = \beta (H)$ para todo subgrafo $H$ de $G$.
+\end{exercise}
+
+\begin{solution}
+En clase vimos la demostración del Teorema de König-Egevary, que dice que vale la igualdad $\alpha ' (G) = \beta (G)$ para todo grafo bipartito $G$, luego como todo subgrafo $H$ de $G$ es también bipartito, salvo por el subgrafo trivial donde no hay nada que probar, se tiene una de las implicaciones del ejercicio.
+
+Veamos la recíproca, es decir, veamos que si un grafo $G$ cumple la igualdad para todo subgrafo $H$ de $G$, entonces es bipartito. En efecto, supongamos por el absurdo que $G$ no es bipartito, i.e. $G$ contiene un ciclo impar $H$. Llegaremos a un absurdo si logramos probar que para todo ciclo impar, no se cumple la igualdad del enunciado.
+
+Así es, pues si escribimos $C: x_0 \cdot x_1 \cdot x_2 \cdots x_{2k} \cdot x_0$ para cualquier ciclo impar con $k \geq 1$, entonces $\beta (C) = k+1$ ya que los vértices de índice par cubren todas las aristas y con $k$ vértices no se pueden cubrir todas las aristas, pues cada vértice cubre $2$ aristas de $C$ pero $C$ tiene $2k+1$ aristas; por otro lado, sabemos que en todo grafo $\alpha ' (C) \leq \beta (C)$, entonces basta ver que no hay un mathcing en $C$ de tamaño $k+1$: como notamos en el ejercicio anterior, en un matching con $r = k+1$ aristas, $2 r \leq \abs C = 2k +1$, imposible. Esto prueba que $G$ no puede tener ciclos impares.
+\end{solution}
+
+
+\begin{exercise}
+Sea $G$ un $X,Y$-bigrafo tal que $\abs X = \alpha (G)$, donde $\alpha (G)$ es el tamaño máximo de un conjunto de vértices independiente de $G$. Demuestre que $G$ tiene un matching que cubre a $Y$.
+\end{exercise}
+\begin{solution}
+Notemos primero que la igualdad $\abs X = \alpha (G)$ nos dice que $\abs Y \leq \abs X$, ya que $Y$ también es un conjunto independiente. Para probar que $G$ tiene un matching que cubre a $Y$, esto equivale a probar que todos los subconjuntos de $Y$ cumplen la Condición de Hall. En efecto, supongamos por el absurdo que no, es decir, existe un subconjunto $S \subset Y$ no vacío de tamaño mínimo tal que no cumple la condición de Hall. Claramente $\abs S > 1$, pues si no $S = \{y\}$ con  $y$ sin vecinos en $X$, pero luego $X \cup S$ es independiente y $\alpha (G) > \abs X$. Ahora tomemos $y \in S$, y notemos $S' = S \setminus \{y \} \neq \emptyset$. Por minimalidad de $S$, el conjunto $S'$ cumple la condición de Hall, i.e. existe un matching de $G$ que cubre a $S'$; más aún, $\abs {N(S')} = \abs {S'} $, de lo contrario $S$ cumpliría la condición de Hall. Consideramos ahora el conjunto $X \setminus N(S') \cup S = X \setminus N(S') \cup S' \cup \{y\}$ de $G$ de tamaño $\abs X +1$. Por hipótesis, no puede ser independiente, y por construcción, debe ser que $y$ tiene un vecino en $X \setminus N(S')$, es decir, $\abs {N (S)} \geq \abs{N(S')} + 1 = \abs {S'} + 1 = \abs S$, lo cual es imposible porque $S$ no cumplía la condición de Hall.
+\end{solution}
+
+
+\begin{exercise}
+Calcular $\alpha ' (K_n)$ para todo $n \geq 3$. (Notar que $\alpha ' (K_2) = 1$).
+\end{exercise}
+\begin{solution}
+Vamos a probar por inducción que
+\begin{equation}\label{eq:ejercicio random 1}
+    \alpha ' (K_{n+1}) = \alpha ' (k_{n}) + 1, \quad \forall n \geq 3.
+\end{equation}
+Esto, junto con el hecho de que $\alpha ' (K_3) = 1$, prueba la afirmación:
+\[
+    \alpha ' (K_n) = n-2, \quad \forall n \geq 3.
+\]
+
+Claramente vale \eqref{eq:ejercicio random 1} para $n = 3$. En general, tomando un vértice $x \in K_{n+1}$ y considerando $K_n = K_{n+1} \setminus \{x \}$ se ve por inducción que agregando una arista incidente a $x$ a un matching de $K_n$ de tamaño $\alpha ' (K_n)$, obtenemos un matching de $K_{n+1}$ una unidad mayor, i.e. $\alpha ' (K_n) + 1 \leq \alpha ' (K_{n+1})$. Por otro lado, un matching de $K_{n+1}$ de tamaño $\alpha ' (K_{n+1})$ se convierte en un matching de $K_n$ si quitamos un vértice de $K_{n+1}$ cubierto por él, i.e. $\alpha ' (K_{n+1}) - 1 \leq \alpha ' (K_n)$. Probando así la igualdad \eqref{eq:ejercicio random 1}.
+\end{solution}
+
+\end{document}
+
