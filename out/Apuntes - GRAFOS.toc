@@ -23,14 +23,17 @@
 \contentsline {section}{\numberline {1.10}Clase 10: 20/04/23}{48}{section.1.10}%
 \contentsline {section}{\numberline {1.11}Ejercicios}{51}{section.1.11}%
 \contentsline {section}{\numberline {1.12}Clase 11: 27/04/23}{59}{section.1.12}%
-\contentsline {subsection}{\numberline {1.12.1}Relaciones min-máx}{62}{subsection.1.12.1}%
-\contentsline {subsection}{\numberline {1.12.2}Ejercicios}{67}{subsection.1.12.2}%
-\contentsline {section}{\numberline {1.13}Clase 12: 8/05/23}{69}{section.1.13}%
-\contentsline {subsection}{\numberline {1.13.1}Caminos aumentantes}{70}{subsection.1.13.1}%
-\contentsline {section}{\numberline {1.14}Clase 13: 15/05/23}{71}{section.1.14}%
-\contentsline {subsection}{\numberline {1.14.1}Grafos planares}{71}{subsection.1.14.1}%
-\contentsline {subsubsection}{Prerequisitos topológicos}{71}{section*.5}%
-\contentsline {chapter}{\numberline {A}Primera parte de la materia (primer capítulo del Diestel)}{75}{appendix.Alph1}%
-\contentsline {section}{\numberline {A.1}}{75}{section.Alph1.1}%
-\contentsline {section}{\numberline {A.2}}{81}{section.Alph1.2}%
-\contentsline {chapter}{\numberline {B}Orden parcial completo-dirigido y teorema del punto fijo de Kleene}{84}{appendix.Alph2}%
+\contentsline {subsection}{\numberline {1.12.1}Matchings con preferencias}{63}{subsection.1.12.1}%
+\contentsline {subsection}{\numberline {1.12.2}Relaciones min-máx}{64}{subsection.1.12.2}%
+\contentsline {subsection}{\numberline {1.12.3}Ejercicios}{69}{subsection.1.12.3}%
+\contentsline {section}{\numberline {1.13}Clase 12: 8/05/23}{71}{section.1.13}%
+\contentsline {subsection}{\numberline {1.13.1}Caminos aumentantes}{72}{subsection.1.13.1}%
+\contentsline {subsection}{\numberline {1.13.2}Matchings en grafos generales}{77}{subsection.1.13.2}%
+\contentsline {section}{\numberline {1.14}Clase 13: 15/05/23}{81}{section.1.14}%
+\contentsline {subsection}{\numberline {1.14.1}Grafos planares}{81}{subsection.1.14.1}%
+\contentsline {subsubsection}{Prerequisitos topológicos}{81}{section*.5}%
+\contentsline {section}{\numberline {1.15}Clase 14: 18/05/23}{83}{section.1.15}%
+\contentsline {chapter}{\numberline {A}Primera parte de la materia (primer capítulo del Diestel)}{88}{appendix.Alph1}%
+\contentsline {section}{\numberline {A.1}}{88}{section.Alph1.1}%
+\contentsline {section}{\numberline {A.2}}{94}{section.Alph1.2}%
+\contentsline {chapter}{\numberline {B}Orden parcial completo-dirigido y teorema del punto fijo de Kleene}{97}{appendix.Alph2}%

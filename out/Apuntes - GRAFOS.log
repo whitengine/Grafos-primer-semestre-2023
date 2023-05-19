@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.4.11)  17 MAY 2023 21:16
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.4.11)  19 MAY 2023 12:35
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1568,7 +1568,7 @@ LaTeX Font Info:    Font shape `T1/fnc/m/n' will be
 (Font)              scaled to size 16.07027pt on input line 447.
 LaTeX Font Info:    Font shape `T1/fnc/b/n' will be
 (Font)              scaled to size 16.07027pt on input line 447.
-<./Editor de Grafos/Figuras/Clase 1/Dibujo 1.pdf, id=190, 426.39299pt x 199.619
+<./Editor de Grafos/Figuras/Clase 1/Dibujo 1.pdf, id=205, 426.39299pt x 199.619
 06pt>
 File: ./Editor de Grafos/Figuras/Clase 1/Dibujo 1.pdf Graphic file (type pdf)
 <use ./Editor de Grafos/Figuras/Clase 1/Dibujo 1.pdf>
@@ -1583,7 +1583,7 @@ See the caption package documentation for explanation.
 [2
 
 ]
-<./Editor de Grafos/Figuras/Clase 1/Dibujo 2.pdf, id=205, 396.52141pt x 187.420
+<./Editor de Grafos/Figuras/Clase 1/Dibujo 2.pdf, id=220, 396.52141pt x 187.420
 2pt>
 File: ./Editor de Grafos/Figuras/Clase 1/Dibujo 2.pdf Graphic file (type pdf)
 <use ./Editor de Grafos/Figuras/Clase 1/Dibujo 2.pdf>
@@ -1598,7 +1598,7 @@ See the caption package documentation for explanation.
 
 [3 <./Editor de Grafos/Figuras/Clase 1/Dibujo 1.pdf> <./Editor de Grafos/Figura
 s/Clase 1/Dibujo 2.pdf>]
-<./Editor de Grafos/Figuras/Clase 1/Dibujo 3.pdf, id=246, 269.80798pt x 103.105
+<./Editor de Grafos/Figuras/Clase 1/Dibujo 3.pdf, id=261, 269.80798pt x 103.105
 2pt>
 File: ./Editor de Grafos/Figuras/Clase 1/Dibujo 3.pdf Graphic file (type pdf)
 <use ./Editor de Grafos/Figuras/Clase 1/Dibujo 3.pdf>
@@ -1611,7 +1611,7 @@ Package caption Warning: The option `hypcap=true' will be ignored for this
 (caption)                particular \caption on input line 513.
 See the caption package documentation for explanation.
 
-<./Editor de Grafos/Figuras/Clase 1/Dibujo 4.pdf, id=247, 340.4144pt x 281.0515
+<./Editor de Grafos/Figuras/Clase 1/Dibujo 4.pdf, id=262, 340.4144pt x 281.0515
 3pt>
 File: ./Editor de Grafos/Figuras/Clase 1/Dibujo 4.pdf Graphic file (type pdf)
 <use ./Editor de Grafos/Figuras/Clase 1/Dibujo 4.pdf>
@@ -1625,7 +1625,7 @@ See the caption package documentation for explanation.
 
 [4 <./Editor de Grafos/Figuras/Clase 1/Dibujo 3.pdf> <./Editor de Grafos/Figura
 s/Clase 1/Dibujo 4.pdf>]
-<./Editor de Grafos/Figuras/Clase 1/Dibujo 5.pdf, id=289, 425.8259pt x 157.7409
+<./Editor de Grafos/Figuras/Clase 1/Dibujo 5.pdf, id=304, 425.8259pt x 157.7409
 8pt>
 File: ./Editor de Grafos/Figuras/Clase 1/Dibujo 5.pdf Graphic file (type pdf)
 <use ./Editor de Grafos/Figuras/Clase 1/Dibujo 5.pdf>
@@ -1638,7 +1638,7 @@ Package caption Warning: The option `hypcap=true' will be ignored for this
 (caption)                particular \caption on input line 545.
 See the caption package documentation for explanation.
 
-<./Editor de Grafos/Figuras/Clase 2/Dibujo 1.pdf, id=290, 425.86919pt x 233.663
+<./Editor de Grafos/Figuras/Clase 2/Dibujo 1.pdf, id=305, 425.86919pt x 233.663
 71pt>
 File: ./Editor de Grafos/Figuras/Clase 2/Dibujo 1.pdf Graphic file (type pdf)
 <use ./Editor de Grafos/Figuras/Clase 2/Dibujo 1.pdf>
@@ -1650,7 +1650,7 @@ Package caption Warning: The option `hypcap=true' will be ignored for this
 (caption)                particular \caption on input line 561.
 See the caption package documentation for explanation.
 
-<./Editor de Grafos/Figuras/Clase 2/Dibujo 2.pdf, id=291, 425.86919pt x 220.863
+<./Editor de Grafos/Figuras/Clase 2/Dibujo 2.pdf, id=306, 425.86919pt x 220.863
 04pt>
 File: ./Editor de Grafos/Figuras/Clase 2/Dibujo 2.pdf Graphic file (type pdf)
 <use ./Editor de Grafos/Figuras/Clase 2/Dibujo 2.pdf>
@@ -1670,7 +1670,7 @@ pdfTeX warning: pdflatex (file ./Editor de Grafos/Figuras/Clase 2/Dibujo 1.pdf)
 >]
 LaTeX Font Info:    Font shape `T1/fnc/b/n' will be
 (Font)              scaled to size 13.39188pt on input line 572.
-<./Editor de Grafos/Figuras/Clase 2/Dibujo 3.pdf, id=359, 309.2322pt x 280.8048
+<./Editor de Grafos/Figuras/Clase 2/Dibujo 3.pdf, id=374, 309.2322pt x 280.8048
 2pt>
 File: ./Editor de Grafos/Figuras/Clase 2/Dibujo 3.pdf Graphic file (type pdf)
 <use ./Editor de Grafos/Figuras/Clase 2/Dibujo 3.pdf>
@@ -1692,7 +1692,7 @@ pdfTeX warning: pdflatex (file ./Editor de Grafos/Figuras/Clase 2/Dibujo 3.pdf)
 LaTeX Font Info:    Font shape `T1/fnc/m/it' will be
 (Font)              scaled to size 11.15991pt on input line 625.
  [7]
-<./Editor de Grafos/Figuras/Clase 2/Dibujo 4.pdf, id=438, 415.5525pt x 281.8529
+<./Editor de Grafos/Figuras/Clase 2/Dibujo 4.pdf, id=453, 415.5525pt x 281.8529
 8pt>
 File: ./Editor de Grafos/Figuras/Clase 2/Dibujo 4.pdf Graphic file (type pdf)
 <use ./Editor de Grafos/Figuras/Clase 2/Dibujo 4.pdf>
@@ -1706,7 +1706,7 @@ Package caption Warning: The option `hypcap=true' will be ignored for this
 See the caption package documentation for explanation.
 
 [8]
-<./Editor de Grafos/Figuras/Clase 2/Dibujo 5.pdf, id=446, 280.94429pt x 280.209
+<./Editor de Grafos/Figuras/Clase 2/Dibujo 5.pdf, id=461, 280.94429pt x 280.209
 95pt>
 File: ./Editor de Grafos/Figuras/Clase 2/Dibujo 5.pdf Graphic file (type pdf)
 <use ./Editor de Grafos/Figuras/Clase 2/Dibujo 5.pdf>
@@ -1725,7 +1725,7 @@ s/Clase 2/Dibujo 5.pdf
 pdfTeX warning: pdflatex (file ./Editor de Grafos/Figuras/Clase 2/Dibujo 5.pdf)
 : PDF inclusion: multiple pdfs with page group included in a single page
 >]
-<./Editor de Grafos/Figuras/Clase 2/Dibujo 6.pdf, id=490, 426.39299pt x 170.183
+<./Editor de Grafos/Figuras/Clase 2/Dibujo 6.pdf, id=505, 426.39299pt x 170.183
 33pt>
 File: ./Editor de Grafos/Figuras/Clase 2/Dibujo 6.pdf Graphic file (type pdf)
 <use ./Editor de Grafos/Figuras/Clase 2/Dibujo 6.pdf>
@@ -1738,7 +1738,7 @@ Package caption Warning: The option `hypcap=true' will be ignored for this
 (caption)                particular \caption on input line 706.
 See the caption package documentation for explanation.
 
-<./Editor de Grafos/Figuras/Clase 2/Dibujo 7.pdf, id=491, 426.39299pt x 121.665
+<./Editor de Grafos/Figuras/Clase 2/Dibujo 7.pdf, id=506, 426.39299pt x 121.665
 37pt>
 File: ./Editor de Grafos/Figuras/Clase 2/Dibujo 7.pdf Graphic file (type pdf)
 <use ./Editor de Grafos/Figuras/Clase 2/Dibujo 7.pdf>
@@ -1756,7 +1756,7 @@ as/Clase 2/Dibujo 7.pdf
 pdfTeX warning: pdflatex (file ./Editor de Grafos/Figuras/Clase 2/Dibujo 7.pdf)
 : PDF inclusion: multiple pdfs with page group included in a single page
 >]
-<./Editor de Grafos/Figuras/Clase 3/Dibujo 1.pdf, id=535, 353.09454pt x 192.972
+<./Editor de Grafos/Figuras/Clase 3/Dibujo 1.pdf, id=550, 353.09454pt x 192.972
 58pt>
 File: ./Editor de Grafos/Figuras/Clase 3/Dibujo 1.pdf Graphic file (type pdf)
 <use ./Editor de Grafos/Figuras/Clase 3/Dibujo 1.pdf>
@@ -1770,7 +1770,7 @@ Package caption Warning: The option `hypcap=true' will be ignored for this
 See the caption package documentation for explanation.
 
 [11 <./Editor de Grafos/Figuras/Clase 3/Dibujo 1.pdf>]
-<./Editor de Grafos/Figuras/Clase 3/Dibujo 2.pdf, id=566, 204.1961pt x 261.1197
+<./Editor de Grafos/Figuras/Clase 3/Dibujo 2.pdf, id=581, 204.1961pt x 261.1197
 4pt>
 File: ./Editor de Grafos/Figuras/Clase 3/Dibujo 2.pdf Graphic file (type pdf)
 <use ./Editor de Grafos/Figuras/Clase 3/Dibujo 2.pdf>
@@ -1784,7 +1784,7 @@ Package caption Warning: The option `hypcap=true' will be ignored for this
 See the caption package documentation for explanation.
 
 [12]
-<./Editor de Grafos/Figuras/Clase 3/Dibujo 3.pdf, id=573, 281.85298pt x 240.828
+<./Editor de Grafos/Figuras/Clase 3/Dibujo 3.pdf, id=588, 281.85298pt x 240.828
 34pt>
 File: ./Editor de Grafos/Figuras/Clase 3/Dibujo 3.pdf Graphic file (type pdf)
 <use ./Editor de Grafos/Figuras/Clase 3/Dibujo 3.pdf>
@@ -1798,7 +1798,7 @@ Package caption Warning: The option `hypcap=true' will be ignored for this
 See the caption package documentation for explanation.
 
 [13 <./Editor de Grafos/Figuras/Clase 3/Dibujo 2.pdf>]
-<./Editor de Grafos/Figuras/Clase 3/Dibujo 4.pdf, id=600, 232.89807pt x 262.760
+<./Editor de Grafos/Figuras/Clase 3/Dibujo 4.pdf, id=615, 232.89807pt x 262.760
 24pt>
 File: ./Editor de Grafos/Figuras/Clase 3/Dibujo 4.pdf Graphic file (type pdf)
 <use ./Editor de Grafos/Figuras/Clase 3/Dibujo 4.pdf>
@@ -1817,7 +1817,7 @@ Figuras/Clase 3/Dibujo 4.pdf>]
 LaTeX Warning: Reference `' on page 16 undefined on input line 876.
 
 [16]
-<./Editor de Grafos/Figuras/Clase 3/Dibujo 5.pdf, id=652, 181.32628pt x 280.747
+<./Editor de Grafos/Figuras/Clase 3/Dibujo 5.pdf, id=667, 181.32628pt x 280.747
 24pt>
 File: ./Editor de Grafos/Figuras/Clase 3/Dibujo 5.pdf Graphic file (type pdf)
 <use ./Editor de Grafos/Figuras/Clase 3/Dibujo 5.pdf>
@@ -1831,7 +1831,7 @@ Package caption Warning: The option `hypcap=true' will be ignored for this
 See the caption package documentation for explanation.
 
 [17 <./Editor de Grafos/Figuras/Clase 3/Dibujo 5.pdf>]
-<./Editor de Grafos/Figuras/Clase 3/Dibujo 6.pdf, id=686, 354.12299pt x 214.180
+<./Editor de Grafos/Figuras/Clase 3/Dibujo 6.pdf, id=701, 354.12299pt x 214.180
 65pt>
 File: ./Editor de Grafos/Figuras/Clase 3/Dibujo 6.pdf Graphic file (type pdf)
 <use ./Editor de Grafos/Figuras/Clase 3/Dibujo 6.pdf>
@@ -1844,7 +1844,7 @@ Package caption Warning: The option `hypcap=true' will be ignored for this
 (caption)                particular \caption on input line 929.
 See the caption package documentation for explanation.
 
-<./Editor de Grafos/Figuras/Clase 4/Dibujo 1.pdf, id=687, 281.85298pt x 163.750
+<./Editor de Grafos/Figuras/Clase 4/Dibujo 1.pdf, id=702, 281.85298pt x 163.750
 12pt>
 File: ./Editor de Grafos/Figuras/Clase 4/Dibujo 1.pdf Graphic file (type pdf)
 <use ./Editor de Grafos/Figuras/Clase 4/Dibujo 1.pdf>
@@ -1856,7 +1856,7 @@ Package caption Warning: The option `hypcap=true' will be ignored for this
 (caption)                particular \caption on input line 947.
 See the caption package documentation for explanation.
 
-<./Editor de Grafos/Figuras/Clase 4/Dibujo 2.pdf, id=688, 281.85298pt x 66.1005
+<./Editor de Grafos/Figuras/Clase 4/Dibujo 2.pdf, id=703, 281.85298pt x 66.1005
 pt>
 File: ./Editor de Grafos/Figuras/Clase 4/Dibujo 2.pdf Graphic file (type pdf)
 <use ./Editor de Grafos/Figuras/Clase 4/Dibujo 2.pdf>
@@ -1871,7 +1871,7 @@ See the caption package documentation for explanation.
 [18 <./Editor de Grafos/Figuras/Clase 3/Dibujo 6.pdf> <./Editor de Grafos/Figur
 as/Clase 4/Dibujo 1.pdf>] [19 <./Editor de Grafos/Figuras/Clase 4/Dibujo 2.pdf>
 ]
-<./Editor de Grafos/Figuras/Clase 4/Dibujo 3.pdf, id=757, 354.12299pt x 112.159
+<./Editor de Grafos/Figuras/Clase 4/Dibujo 3.pdf, id=772, 354.12299pt x 112.159
 01pt>
 File: ./Editor de Grafos/Figuras/Clase 4/Dibujo 3.pdf Graphic file (type pdf)
 <use ./Editor de Grafos/Figuras/Clase 4/Dibujo 3.pdf>
@@ -1907,7 +1907,7 @@ LaTeX Font Warning: Font shape `T1/fnc/m/scit' undefined
 (Font)              using `T1/fnc/m/sc' instead on input line 1034.
 
 [20 <./Editor de Grafos/Figuras/Clase 4/Dibujo 3.pdf>]
-<./Editor de Grafos/Figuras/Clase 4/Dibujo 4.pdf, id=791, 140.7963pt x 280.7472
+<./Editor de Grafos/Figuras/Clase 4/Dibujo 4.pdf, id=806, 140.7963pt x 280.7472
 4pt>
 File: ./Editor de Grafos/Figuras/Clase 4/Dibujo 4.pdf Graphic file (type pdf)
 <use ./Editor de Grafos/Figuras/Clase 4/Dibujo 4.pdf>
@@ -1921,7 +1921,7 @@ Package caption Warning: The option `hypcap=true' will be ignored for this
 See the caption package documentation for explanation.
 
 [21]
-<./Editor de Grafos/Figuras/Clase 4/Dibujo 5.pdf, id=797, 89.90869pt x 280.7472
+<./Editor de Grafos/Figuras/Clase 4/Dibujo 5.pdf, id=812, 89.90869pt x 280.7472
 4pt>
 File: ./Editor de Grafos/Figuras/Clase 4/Dibujo 5.pdf Graphic file (type pdf)
 <use ./Editor de Grafos/Figuras/Clase 4/Dibujo 5.pdf>
@@ -1944,7 +1944,7 @@ i/m/it/12 G\U/matha/m/n/12 qz\FML/fncmi/m/it/12 E\U/matha/m/n/12 p\FML/fncmi/m/
 it/12 T\U/matha/m/n/12 q$
  []
 
-<./Editor de Grafos/Figuras/Clase 4/Dibujo 6.pdf, id=847, 281.53096pt x 161.441
+<./Editor de Grafos/Figuras/Clase 4/Dibujo 6.pdf, id=862, 281.53096pt x 161.441
 88pt>
 File: ./Editor de Grafos/Figuras/Clase 4/Dibujo 6.pdf Graphic file (type pdf)
 <use ./Editor de Grafos/Figuras/Clase 4/Dibujo 6.pdf>
@@ -1963,7 +1963,7 @@ a-mos que $\FML/fncmi/m/it/12 G$ \T1/fnc/m/n/12 tie-ne a $\FML/fncmi/m/it/12 T\
 U/matha/m/n/12 r\FML/fncmi/m/it/12 v[]; [] ; v[]\U/matha/m/n/12 s$
  []
 
-<./Editor de Grafos/Figuras/Clase 5/Dibujo 1.pdf, id=890, 455.30101pt x 285.723
+<./Editor de Grafos/Figuras/Clase 5/Dibujo 1.pdf, id=906, 455.30101pt x 285.723
 43pt>
 File: ./Editor de Grafos/Figuras/Clase 5/Dibujo 1.pdf Graphic file (type pdf)
 <use ./Editor de Grafos/Figuras/Clase 5/Dibujo 1.pdf>
@@ -1985,7 +1985,7 @@ LaTeX Font Warning: Font shape `T1/fnc/m/scit' undefined
 (Font)              using `T1/fnc/m/sc' instead on input line 1157.
 
 [25 <./Editor de Grafos/Figuras/Clase 5/Dibujo 1.pdf>]
-<./Editor de Grafos/Figuras/Clase 5/Dibujo 2.pdf, id=922, 68.10837pt x 208.2314
+<./Editor de Grafos/Figuras/Clase 5/Dibujo 2.pdf, id=937, 68.10837pt x 208.2314
 9pt>
 File: ./Editor de Grafos/Figuras/Clase 5/Dibujo 2.pdf Graphic file (type pdf)
 <use ./Editor de Grafos/Figuras/Clase 5/Dibujo 2.pdf>
@@ -1999,7 +1999,7 @@ Package caption Warning: The option `hypcap=true' will be ignored for this
 See the caption package documentation for explanation.
 
 [26]
-<./Editor de Grafos/Figuras/Clase 5/Dibujo 3.pdf, id=929, 209.58301pt x 205.958
+<./Editor de Grafos/Figuras/Clase 5/Dibujo 3.pdf, id=944, 209.58301pt x 205.958
 31pt>
 File: ./Editor de Grafos/Figuras/Clase 5/Dibujo 3.pdf Graphic file (type pdf)
 <use ./Editor de Grafos/Figuras/Clase 5/Dibujo 3.pdf>
@@ -2019,7 +2019,7 @@ e-to con par-tes de ta-ma-�o $\FML/fncmi/m/it/12 n[]; n[]; [] ; n[]$ \T1/fnc/m/
 n/12 se de-no-ta $\FML/fncmi/m/it/12 K[]$\T1/fnc/m/n/12 . 
  []
 
-<./Editor de Grafos/Figuras/Clase 5/Dibujo 4.pdf, id=930, 157.2228pt x 208.4650
+<./Editor de Grafos/Figuras/Clase 5/Dibujo 4.pdf, id=945, 157.2228pt x 208.4650
 3pt>
 File: ./Editor de Grafos/Figuras/Clase 5/Dibujo 4.pdf Graphic file (type pdf)
 <use ./Editor de Grafos/Figuras/Clase 5/Dibujo 4.pdf>
@@ -2033,7 +2033,7 @@ See the caption package documentation for explanation.
 
 [27 <./Editor de Grafos/Figuras/Clase 5/Dibujo 2.pdf> <./Editor de Grafos/Figur
 as/Clase 5/Dibujo 3.pdf>]
-<./Editor de Grafos/Figuras/Clase 5/Dibujo 5.pdf, id=957, 268.48553pt x 280.404
+<./Editor de Grafos/Figuras/Clase 5/Dibujo 5.pdf, id=972, 268.48553pt x 280.404
 22pt>
 File: ./Editor de Grafos/Figuras/Clase 5/Dibujo 5.pdf Graphic file (type pdf)
 <use ./Editor de Grafos/Figuras/Clase 5/Dibujo 5.pdf>
@@ -2048,7 +2048,7 @@ See the caption package documentation for explanation.
 
 [28 <./Editor de Grafos/Figuras/Clase 5/Dibujo 4.pdf> <./Editor de Grafos/Figur
 as/Clase 5/Dibujo 5.pdf>]
-<./Editor de Grafos/Figuras/Clase 5/Dibujo 6.pdf, id=1018, 353.09454pt x 122.00
+<./Editor de Grafos/Figuras/Clase 5/Dibujo 6.pdf, id=1033, 353.09454pt x 122.00
 064pt>
 File: ./Editor de Grafos/Figuras/Clase 5/Dibujo 6.pdf Graphic file (type pdf)
 <use ./Editor de Grafos/Figuras/Clase 5/Dibujo 6.pdf>
@@ -2061,7 +2061,7 @@ Package caption Warning: The option `hypcap=true' will be ignored for this
 (caption)                particular \caption on input line 1226.
 See the caption package documentation for explanation.
 
-<./Editor de Grafos/Figuras/Clase 5/Dibujo 7.pdf, id=1019, 281.85298pt x 256.69
+<./Editor de Grafos/Figuras/Clase 5/Dibujo 7.pdf, id=1034, 281.85298pt x 256.69
 928pt>
 File: ./Editor de Grafos/Figuras/Clase 5/Dibujo 7.pdf Graphic file (type pdf)
 <use ./Editor de Grafos/Figuras/Clase 5/Dibujo 7.pdf>
@@ -2074,7 +2074,7 @@ Package caption Warning: The option `hypcap=true' will be ignored for this
 See the caption package documentation for explanation.
 
 [29 <./Editor de Grafos/Figuras/Clase 5/Dibujo 6.pdf>]
-<./Editor de Grafos/Figuras/Clase 5/Dibujo 8.pdf, id=1058, 303.1325pt x 238.892
+<./Editor de Grafos/Figuras/Clase 5/Dibujo 8.pdf, id=1073, 303.1325pt x 238.892
 5pt>
 File: ./Editor de Grafos/Figuras/Clase 5/Dibujo 8.pdf Graphic file (type pdf)
 <use ./Editor de Grafos/Figuras/Clase 5/Dibujo 8.pdf>
@@ -2089,7 +2089,7 @@ See the caption package documentation for explanation.
 
 [30 <./Editor de Grafos/Figuras/Clase 5/Dibujo 7.pdf> <./Editor de Grafos/Figur
 as/Clase 5/Dibujo 8.pdf>]
-<./Editor de Grafos/Figuras/Clase 5/Dibujo 9.pdf, id=1095, 196.77707pt x 178.41
+<./Editor de Grafos/Figuras/Clase 5/Dibujo 9.pdf, id=1110, 196.77707pt x 178.41
 656pt>
 File: ./Editor de Grafos/Figuras/Clase 5/Dibujo 9.pdf Graphic file (type pdf)
 <use ./Editor de Grafos/Figuras/Clase 5/Dibujo 9.pdf>
@@ -2103,7 +2103,7 @@ Package caption Warning: The option `hypcap=true' will be ignored for this
 See the caption package documentation for explanation.
 
 [31 <./Editor de Grafos/Figuras/Clase 5/Dibujo 9.pdf>]
-<./Editor de Grafos/Figuras/Clase 6/Dibujo 1.pdf, id=1111, 184.00914pt x 339.66
+<./Editor de Grafos/Figuras/Clase 6/Dibujo 1.pdf, id=1126, 184.00914pt x 339.66
 899pt>
 File: ./Editor de Grafos/Figuras/Clase 6/Dibujo 1.pdf Graphic file (type pdf)
 <use ./Editor de Grafos/Figuras/Clase 6/Dibujo 1.pdf>
@@ -2116,7 +2116,7 @@ Package caption Warning: The option `hypcap=true' will be ignored for this
 (caption)                particular \caption on input line 1309.
 See the caption package documentation for explanation.
 
-<./Editor de Grafos/Figuras/Clase 6/Dibujo 2.pdf, id=1112, 278.24028pt x 339.66
+<./Editor de Grafos/Figuras/Clase 6/Dibujo 2.pdf, id=1127, 278.24028pt x 339.66
 899pt>
 File: ./Editor de Grafos/Figuras/Clase 6/Dibujo 2.pdf Graphic file (type pdf)
 <use ./Editor de Grafos/Figuras/Clase 6/Dibujo 2.pdf>
@@ -2134,7 +2134,7 @@ Underfull \hbox (badness 5862) in paragraph at lines 1313--1313
 su-ce-der: $\FML/fncmi/m/it/12 P \T1/fnc/m/n/12 :
  []
 
-<./Editor de Grafos/Figuras/Clase 6/Dibujo 3.pdf, id=1124, 324.4375pt x 339.668
+<./Editor de Grafos/Figuras/Clase 6/Dibujo 3.pdf, id=1139, 324.4375pt x 339.668
 99pt>
 File: ./Editor de Grafos/Figuras/Clase 6/Dibujo 3.pdf Graphic file (type pdf)
 <use ./Editor de Grafos/Figuras/Clase 6/Dibujo 3.pdf>
@@ -2147,7 +2147,7 @@ Package caption Warning: The option `hypcap=true' will be ignored for this
 See the caption package documentation for explanation.
 
 [33 <./Editor de Grafos/Figuras/Clase 6/Dibujo 2.pdf>]
-<./Editor de Grafos/Figuras/Clase 6/Dibujo 4.pdf, id=1155, 354.12299pt x 214.18
+<./Editor de Grafos/Figuras/Clase 6/Dibujo 4.pdf, id=1170, 354.12299pt x 214.18
 065pt>
 File: ./Editor de Grafos/Figuras/Clase 6/Dibujo 4.pdf Graphic file (type pdf)
 <use ./Editor de Grafos/Figuras/Clase 6/Dibujo 4.pdf>
@@ -2161,7 +2161,7 @@ Package caption Warning: The option `hypcap=true' will be ignored for this
 See the caption package documentation for explanation.
 
 [34 <./Editor de Grafos/Figuras/Clase 6/Dibujo 3.pdf>]
-<./Editor de Grafos/Figuras/Clase 6/Dibujo 5.pdf, id=1200, 257.51218pt x 339.34
+<./Editor de Grafos/Figuras/Clase 6/Dibujo 5.pdf, id=1215, 257.51218pt x 339.34
 154pt>
 File: ./Editor de Grafos/Figuras/Clase 6/Dibujo 5.pdf Graphic file (type pdf)
 <use ./Editor de Grafos/Figuras/Clase 6/Dibujo 5.pdf>
@@ -2184,7 +2184,7 @@ m/n/12 q �
 
 [35 <./Editor de Grafos/Figuras/Clase 6/Dibujo 4.pdf> <./Editor de Grafos/Figur
 as/Clase 6/Dibujo 5.pdf>]
-<./Editor de Grafos/Figuras/Clase 7/Dibujo 1.pdf, id=1252, 230.40143pt x 339.34
+<./Editor de Grafos/Figuras/Clase 7/Dibujo 1.pdf, id=1267, 230.40143pt x 339.34
 154pt>
 File: ./Editor de Grafos/Figuras/Clase 7/Dibujo 1.pdf Graphic file (type pdf)
 <use ./Editor de Grafos/Figuras/Clase 7/Dibujo 1.pdf>
@@ -2198,7 +2198,7 @@ Package caption Warning: The option `hypcap=true' will be ignored for this
 See the caption package documentation for explanation.
 
 [36 <./Editor de Grafos/Figuras/Clase 7/Dibujo 1.pdf>]
-<./Editor de Grafos/Figuras/Clase 7/Dibujo 2.pdf, id=1287, 322.29173pt x 338.74
+<./Editor de Grafos/Figuras/Clase 7/Dibujo 2.pdf, id=1302, 322.29173pt x 338.74
 431pt>
 File: ./Editor de Grafos/Figuras/Clase 7/Dibujo 2.pdf Graphic file (type pdf)
 <use ./Editor de Grafos/Figuras/Clase 7/Dibujo 2.pdf>
@@ -2220,7 +2220,7 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 1416.
 
 [37 <./Editor de Grafos/Figuras/Clase 7/Dibujo 2.pdf>]
-<./Editor de Grafos/Figuras/Clase 7/Dibujo 3.pdf, id=1319, 439.71295pt x 339.66
+<./Editor de Grafos/Figuras/Clase 7/Dibujo 3.pdf, id=1334, 439.71295pt x 339.66
 899pt>
 File: ./Editor de Grafos/Figuras/Clase 7/Dibujo 3.pdf Graphic file (type pdf)
 <use ./Editor de Grafos/Figuras/Clase 7/Dibujo 3.pdf>
@@ -2233,7 +2233,7 @@ Package caption Warning: The option `hypcap=true' will be ignored for this
 (caption)                particular \caption on input line 1422.
 See the caption package documentation for explanation.
 
-<./Editor de Grafos/Figuras/Clase 7/Dibujo 4.pdf, id=1320, 455.30101pt x 82.085
+<./Editor de Grafos/Figuras/Clase 7/Dibujo 4.pdf, id=1335, 455.30101pt x 82.085
 16pt>
 File: ./Editor de Grafos/Figuras/Clase 7/Dibujo 4.pdf Graphic file (type pdf)
 <use ./Editor de Grafos/Figuras/Clase 7/Dibujo 4.pdf>
@@ -2245,7 +2245,7 @@ Package caption Warning: The option `hypcap=true' will be ignored for this
 (caption)                particular \caption on input line 1426.
 See the caption package documentation for explanation.
 
-<./Editor de Grafos/Figuras/Clase 7/Dibujo 5.pdf, id=1321, 383.2954pt x 339.668
+<./Editor de Grafos/Figuras/Clase 7/Dibujo 5.pdf, id=1336, 383.2954pt x 339.668
 99pt>
 File: ./Editor de Grafos/Figuras/Clase 7/Dibujo 5.pdf Graphic file (type pdf)
 <use ./Editor de Grafos/Figuras/Clase 7/Dibujo 5.pdf>
@@ -2259,7 +2259,7 @@ See the caption package documentation for explanation.
 
 [38 <./Editor de Grafos/Figuras/Clase 7/Dibujo 3.pdf> <./Editor de Grafos/Figur
 as/Clase 7/Dibujo 4.pdf>]
-<./Editor de Grafos/Figuras/Clase 7/Dibujo 6.pdf, id=1352, 358.13078pt x 339.34
+<./Editor de Grafos/Figuras/Clase 7/Dibujo 6.pdf, id=1367, 358.13078pt x 339.34
 154pt>
 File: ./Editor de Grafos/Figuras/Clase 7/Dibujo 6.pdf Graphic file (type pdf)
 <use ./Editor de Grafos/Figuras/Clase 7/Dibujo 6.pdf>
@@ -2273,7 +2273,7 @@ Package caption Warning: The option `hypcap=true' will be ignored for this
 See the caption package documentation for explanation.
 
 [39 <./Editor de Grafos/Figuras/Clase 7/Dibujo 5.pdf>]
-<./Editor de Grafos/Figuras/Clase 8/Dibujo 1.pdf, id=1363, 455.30101pt x 177.87
+<./Editor de Grafos/Figuras/Clase 8/Dibujo 1.pdf, id=1378, 455.30101pt x 177.87
 634pt>
 File: ./Editor de Grafos/Figuras/Clase 8/Dibujo 1.pdf Graphic file (type pdf)
 <use ./Editor de Grafos/Figuras/Clase 8/Dibujo 1.pdf>
@@ -2288,7 +2288,7 @@ See the caption package documentation for explanation.
 
 [40 <./Editor de Grafos/Figuras/Clase 7/Dibujo 6.pdf> <./Editor de Grafos/Figur
 as/Clase 8/Dibujo 1.pdf>]
-<./Editor de Grafos/Figuras/Clase 8/Dibujo 2.pdf, id=1407, 455.30101pt x 170.23
+<./Editor de Grafos/Figuras/Clase 8/Dibujo 2.pdf, id=1422, 455.30101pt x 170.23
 985pt>
 File: ./Editor de Grafos/Figuras/Clase 8/Dibujo 2.pdf Graphic file (type pdf)
 <use ./Editor de Grafos/Figuras/Clase 8/Dibujo 2.pdf>
@@ -2302,7 +2302,7 @@ Package caption Warning: The option `hypcap=true' will be ignored for this
 See the caption package documentation for explanation.
 
 [41 <./Editor de Grafos/Figuras/Clase 8/Dibujo 2.pdf>]
-<./Editor de Grafos/Figuras/Clase 8/Dibujo 3.pdf, id=1435, 455.30101pt x 261.70
+<./Editor de Grafos/Figuras/Clase 8/Dibujo 3.pdf, id=1450, 455.30101pt x 261.70
 206pt>
 File: ./Editor de Grafos/Figuras/Clase 8/Dibujo 3.pdf Graphic file (type pdf)
 <use ./Editor de Grafos/Figuras/Clase 8/Dibujo 3.pdf>
@@ -2316,7 +2316,7 @@ Package caption Warning: The option `hypcap=true' will be ignored for this
 See the caption package documentation for explanation.
 
 [42 <./Editor de Grafos/Figuras/Clase 8/Dibujo 3.pdf>]
-<./Editor de Grafos/Figuras/Clase 8/Dibujo 4.pdf, id=1466, 455.30101pt x 241.73
+<./Editor de Grafos/Figuras/Clase 8/Dibujo 4.pdf, id=1482, 455.30101pt x 241.73
 462pt>
 File: ./Editor de Grafos/Figuras/Clase 8/Dibujo 4.pdf Graphic file (type pdf)
 <use ./Editor de Grafos/Figuras/Clase 8/Dibujo 4.pdf>
@@ -2329,7 +2329,7 @@ Package caption Warning: The option `hypcap=true' will be ignored for this
 (caption)                particular \caption on input line 1542.
 See the caption package documentation for explanation.
 
-<./Editor de Grafos/Figuras/Clase 8/Dibujo 5.pdf, id=1467, 455.30101pt x 230.98
+<./Editor de Grafos/Figuras/Clase 8/Dibujo 5.pdf, id=1483, 455.30101pt x 230.98
 888pt>
 File: ./Editor de Grafos/Figuras/Clase 8/Dibujo 5.pdf Graphic file (type pdf)
 <use ./Editor de Grafos/Figuras/Clase 8/Dibujo 5.pdf>
@@ -2343,7 +2343,7 @@ See the caption package documentation for explanation.
 
 [43 <./Editor de Grafos/Figuras/Clase 8/Dibujo 4.pdf> <./Editor de Grafos/Figur
 as/Clase 8/Dibujo 5.pdf>]
-<./Editor de Grafos/Figuras/Clase 8/Dibujo 6.pdf, id=1509, 455.30101pt x 199.47
+<./Editor de Grafos/Figuras/Clase 8/Dibujo 6.pdf, id=1524, 455.30101pt x 199.47
 693pt>
 File: ./Editor de Grafos/Figuras/Clase 8/Dibujo 6.pdf Graphic file (type pdf)
 <use ./Editor de Grafos/Figuras/Clase 8/Dibujo 6.pdf>
@@ -2365,7 +2365,7 @@ LaTeX Font Warning: Font shape `T1/fnc/m/scit' undefined
 LaTeX Font Warning: Font shape `T1/fnc/m/scit' undefined
 (Font)              using `T1/fnc/m/sc' instead on input line 1594.
 
-<./Editor de Grafos/Figuras/Clase 8/Dibujo 7.pdf, id=1534, 455.1099pt x 303.538
+<./Editor de Grafos/Figuras/Clase 8/Dibujo 7.pdf, id=1549, 455.1099pt x 303.538
 99pt>
 File: ./Editor de Grafos/Figuras/Clase 8/Dibujo 7.pdf Graphic file (type pdf)
 <use ./Editor de Grafos/Figuras/Clase 8/Dibujo 7.pdf>
@@ -2377,7 +2377,7 @@ Package caption Warning: The option `hypcap=true' will be ignored for this
 (caption)                particular \caption on input line 1600.
 See the caption package documentation for explanation.
 
-<./Editor de Grafos/Figuras/Clase 8/Dibujo 8.pdf, id=1535, 455.30101pt x 254.28
+<./Editor de Grafos/Figuras/Clase 8/Dibujo 8.pdf, id=1550, 455.30101pt x 254.28
 986pt>
 File: ./Editor de Grafos/Figuras/Clase 8/Dibujo 8.pdf Graphic file (type pdf)
 <use ./Editor de Grafos/Figuras/Clase 8/Dibujo 8.pdf>
@@ -2390,7 +2390,7 @@ Package caption Warning: The option `hypcap=true' will be ignored for this
 See the caption package documentation for explanation.
 
 [45 <./Editor de Grafos/Figuras/Clase 8/Dibujo 7.pdf>]
-<./Editor de Grafos/Figuras/Clase 9/Dibujo 1.pdf, id=1562, 455.30101pt x 315.80
+<./Editor de Grafos/Figuras/Clase 9/Dibujo 1.pdf, id=1577, 455.30101pt x 315.80
 94pt>
 File: ./Editor de Grafos/Figuras/Clase 9/Dibujo 1.pdf Graphic file (type pdf)
 <use ./Editor de Grafos/Figuras/Clase 9/Dibujo 1.pdf>
@@ -2404,7 +2404,7 @@ Package caption Warning: The option `hypcap=true' will be ignored for this
 See the caption package documentation for explanation.
 
 [46 <./Editor de Grafos/Figuras/Clase 8/Dibujo 8.pdf>]
-<./Editor de Grafos/Figuras/Clase 9/Dibujo 2.pdf, id=1586, 455.30101pt x 175.26
+<./Editor de Grafos/Figuras/Clase 9/Dibujo 2.pdf, id=1601, 455.30101pt x 175.26
 088pt>
 File: ./Editor de Grafos/Figuras/Clase 9/Dibujo 2.pdf Graphic file (type pdf)
 <use ./Editor de Grafos/Figuras/Clase 9/Dibujo 2.pdf>
@@ -2427,7 +2427,7 @@ LaTeX Font Warning: Font shape `T1/fnc/m/scit' undefined
 
 [47 <./Editor de Grafos/Figuras/Clase 9/Dibujo 1.pdf> <./Editor de Grafos/Figur
 as/Clase 9/Dibujo 2.pdf>]
-<./Editor de Grafos/Figuras/Clase 10/Dibujo 1.pdf, id=1623, 455.30101pt x 169.2
+<./Editor de Grafos/Figuras/Clase 10/Dibujo 1.pdf, id=1638, 455.30101pt x 169.2
 4695pt>
 File: ./Editor de Grafos/Figuras/Clase 10/Dibujo 1.pdf Graphic file (type pdf)
 <use ./Editor de Grafos/Figuras/Clase 10/Dibujo 1.pdf>
@@ -2440,7 +2440,7 @@ Package caption Warning: The option `hypcap=true' will be ignored for this
 (caption)                particular \caption on input line 1671.
 See the caption package documentation for explanation.
 
-<./Editor de Grafos/Figuras/Clase 10/Dibujo 2.pdf, id=1624, 455.30101pt x 216.7
+<./Editor de Grafos/Figuras/Clase 10/Dibujo 2.pdf, id=1639, 455.30101pt x 216.7
 8082pt>
 File: ./Editor de Grafos/Figuras/Clase 10/Dibujo 2.pdf Graphic file (type pdf)
 <use ./Editor de Grafos/Figuras/Clase 10/Dibujo 2.pdf>
@@ -2453,7 +2453,7 @@ Package caption Warning: The option `hypcap=true' will be ignored for this
 See the caption package documentation for explanation.
 
 [48 <./Editor de Grafos/Figuras/Clase 10/Dibujo 1.pdf>]
-<./Editor de Grafos/Figuras/Clase 10/Dibujo 3.pdf, id=1650, 455.30101pt x 119.9
+<./Editor de Grafos/Figuras/Clase 10/Dibujo 3.pdf, id=1665, 455.30101pt x 119.9
 4185pt>
 File: ./Editor de Grafos/Figuras/Clase 10/Dibujo 3.pdf Graphic file (type pdf)
 <use ./Editor de Grafos/Figuras/Clase 10/Dibujo 3.pdf>
@@ -2466,7 +2466,7 @@ Package caption Warning: The option `hypcap=true' will be ignored for this
 (caption)                particular \caption on input line 1686.
 See the caption package documentation for explanation.
 
-<./Editor de Grafos/Figuras/Clase 10/Dibujo 4.pdf, id=1651, 455.30101pt x 142.8
+<./Editor de Grafos/Figuras/Clase 10/Dibujo 4.pdf, id=1666, 455.30101pt x 142.8
 814pt>
 File: ./Editor de Grafos/Figuras/Clase 10/Dibujo 4.pdf Graphic file (type pdf)
 <use ./Editor de Grafos/Figuras/Clase 10/Dibujo 4.pdf>
@@ -2478,7 +2478,7 @@ Package caption Warning: The option `hypcap=true' will be ignored for this
 (caption)                particular \caption on input line 1688.
 See the caption package documentation for explanation.
 
-<./Editor de Grafos/Figuras/Clase 10/Dibujo 5.pdf, id=1652, 455.30101pt x 248.9
+<./Editor de Grafos/Figuras/Clase 10/Dibujo 5.pdf, id=1667, 455.30101pt x 248.9
 3697pt>
 File: ./Editor de Grafos/Figuras/Clase 10/Dibujo 5.pdf Graphic file (type pdf)
 <use ./Editor de Grafos/Figuras/Clase 10/Dibujo 5.pdf>
@@ -2492,7 +2492,7 @@ See the caption package documentation for explanation.
 
 [49 <./Editor de Grafos/Figuras/Clase 10/Dibujo 2.pdf> <./Editor de Grafos/Figu
 ras/Clase 10/Dibujo 3.pdf> <./Editor de Grafos/Figuras/Clase 10/Dibujo 4.pdf>]
-<./Editor de Grafos/Figuras/Clase 10/Dibujo 6.pdf, id=1723, 455.30101pt x 213.9
+<./Editor de Grafos/Figuras/Clase 10/Dibujo 6.pdf, id=1738, 455.30101pt x 213.9
 1039pt>
 File: ./Editor de Grafos/Figuras/Clase 10/Dibujo 6.pdf Graphic file (type pdf)
 <use ./Editor de Grafos/Figuras/Clase 10/Dibujo 6.pdf>
@@ -2528,78 +2528,78 @@ LaTeX Warning: Reference `' on page 51 undefined on input line 1761.
 
 [51]
 
-LaTeX Warning: Reference `' on page 52 undefined on input line 1809.
+LaTeX Warning: Reference `' on page 52 undefined on input line 1802.
 
-<./Editor de Grafos/Figuras/Ejercicios/Dibujo 1.pdf, id=1772, 455.30101pt x 318
+<./Editor de Grafos/Figuras/Ejercicios/Dibujo 1.pdf, id=1789, 455.30101pt x 318
 .88486pt>
 File: ./Editor de Grafos/Figuras/Ejercicios/Dibujo 1.pdf Graphic file (type pdf
 )
 <use ./Editor de Grafos/Figuras/Ejercicios/Dibujo 1.pdf>
 Package pdftex.def Info: ./Editor de Grafos/Figuras/Ejercicios/Dibujo 1.pdf  us
-ed on input line 1838.
+ed on input line 1831.
 (pdftex.def)             Requested size: 455.2999pt x 318.88408pt.
 
-Overfull \hbox (28.50856pt too wide) in paragraph at lines 1838--1839
+Overfull \hbox (28.50856pt too wide) in paragraph at lines 1831--1832
  [][] 
  []
 
-<./Editor de Grafos/Figuras/Ejercicios/Dibujo 2.pdf, id=1773, 455.30101pt x 319
+[52]
+<./Editor de Grafos/Figuras/Ejercicios/Dibujo 2.pdf, id=1798, 455.30101pt x 319
 .30661pt>
 File: ./Editor de Grafos/Figuras/Ejercicios/Dibujo 2.pdf Graphic file (type pdf
 )
 <use ./Editor de Grafos/Figuras/Ejercicios/Dibujo 2.pdf>
 Package pdftex.def Info: ./Editor de Grafos/Figuras/Ejercicios/Dibujo 2.pdf  us
-ed on input line 1847.
+ed on input line 1840.
 (pdftex.def)             Requested size: 455.2999pt x 319.30582pt.
 
-Overfull \hbox (28.50856pt too wide) in paragraph at lines 1847--1851
+Overfull \hbox (28.50856pt too wide) in paragraph at lines 1840--1844
  [][] 
  []
 
-[52] [53 <./Editor de Grafos/Figuras/Ejercicios/Dibujo 1.pdf>] [54 <./Editor de
- Grafos/Figuras/Ejercicios/Dibujo 2.pdf>] [55] [56] [57] [58]
-<./Editor de Grafos/Figuras/Clase 11/Dibujo 1.pdf, id=1858, 206.93494pt x 339.3
+[53 <./Editor de Grafos/Figuras/Ejercicios/Dibujo 1.pdf>] [54 <./Editor de Graf
+os/Figuras/Ejercicios/Dibujo 2.pdf>] [55] [56] [57] [58]
+<./Editor de Grafos/Figuras/Clase 11/Dibujo 1.pdf, id=1875, 206.93494pt x 339.3
 4154pt>
 File: ./Editor de Grafos/Figuras/Clase 11/Dibujo 1.pdf Graphic file (type pdf)
 <use ./Editor de Grafos/Figuras/Clase 11/Dibujo 1.pdf>
 Package pdftex.def Info: ./Editor de Grafos/Figuras/Clase 11/Dibujo 1.pdf  used
- on input line 2082.
+ on input line 2075.
 (pdftex.def)             Requested size: 170.71393pt x 279.9602pt.
 
 
 Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 2082.
+(caption)                particular \caption on input line 2075.
 See the caption package documentation for explanation.
 
-<./Editor de Grafos/Figuras/Clase 11/Dibujo 2.pdf, id=1859, 455.30101pt x 218.8
+<./Editor de Grafos/Figuras/Clase 11/Dibujo 2.pdf, id=1876, 455.30101pt x 218.8
 1862pt>
 File: ./Editor de Grafos/Figuras/Clase 11/Dibujo 2.pdf Graphic file (type pdf)
 <use ./Editor de Grafos/Figuras/Clase 11/Dibujo 2.pdf>
 Package pdftex.def Info: ./Editor de Grafos/Figuras/Clase 11/Dibujo 2.pdf  used
- on input line 2087.
+ on input line 2080.
 (pdftex.def)             Requested size: 341.43436pt x 164.10019pt.
 
 Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 2087.
+(caption)                particular \caption on input line 2080.
 See the caption package documentation for explanation.
 
-[59 <./Editor de Grafos/Figuras/Clase 11/Dibujo 1.pdf> <./Editor de Grafos/Figu
-ras/Clase 11/Dibujo 2.pdf>]
-<./Editor de Grafos/Figuras/Clase 11/Dibujo 3.pdf, id=1893, 335.12054pt x 339.6
+[59 <./Editor de Grafos/Figuras/Clase 11/Dibujo 1.pdf>]
+<./Editor de Grafos/Figuras/Clase 11/Dibujo 3.pdf, id=1894, 335.12054pt x 339.6
 6899pt>
 File: ./Editor de Grafos/Figuras/Clase 11/Dibujo 3.pdf Graphic file (type pdf)
 <use ./Editor de Grafos/Figuras/Clase 11/Dibujo 3.pdf>
 Package pdftex.def Info: ./Editor de Grafos/Figuras/Clase 11/Dibujo 3.pdf  used
- on input line 2110.
+ on input line 2103.
 (pdftex.def)             Requested size: 341.43436pt x 346.09497pt.
 
 
 Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 2110.
+(caption)                particular \caption on input line 2103.
 See the caption package documentation for explanation.
 
-[60 <./Editor de Grafos/Figuras/Clase 11/Dibujo 3.pdf>]
-Overfull \hbox (4.31256pt too wide) in paragraph at lines 2135--2146
+[60 <./Editor de Grafos/Figuras/Clase 11/Dibujo 2.pdf>]
+Overfull \hbox (4.31256pt too wide) in paragraph at lines 2128--2139
 \T1/fnc/m/n/12 ces que sean ve-ci-nos $\FML/fncmi/m/it/12 x \U/matha/m/n/12 P \
 FML/fncmi/m/it/12 X$ \T1/fnc/m/n/12 e $\FML/fncmi/m/it/12 y \U/matha/m/n/12 P \
 FML/fncmi/m/it/12 Y$\T1/fnc/m/n/12 , lue-go con-si-de-ra-mos la $\FML/fncmi/m/i
@@ -2608,181 +2608,141 @@ cmi/m/it/12 x\U/matha/m/n/12 u\FML/fncmi/m/it/12 ; Y\U/matha/m/n/12 zt\FML/fncm
 i/m/it/12 y\U/matha/m/n/12 u$\T1/fnc/m/n/12 -
  []
 
-<./Editor de Grafos/Figuras/Clase 11/Dibujo 4.pdf, id=1912, 455.30101pt x 169.2
+[61 <./Editor de Grafos/Figuras/Clase 11/Dibujo 3.pdf>]
+<./Editor de Grafos/Figuras/Clase 11/Dibujo 4.pdf, id=1936, 455.30101pt x 169.2
 2575pt>
 File: ./Editor de Grafos/Figuras/Clase 11/Dibujo 4.pdf Graphic file (type pdf)
 <use ./Editor de Grafos/Figuras/Clase 11/Dibujo 4.pdf>
 Package pdftex.def Info: ./Editor de Grafos/Figuras/Clase 11/Dibujo 4.pdf  used
- on input line 2149.
+ on input line 2142.
 (pdftex.def)             Requested size: 341.43436pt x 126.90866pt.
 
+
 Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 2149.
+(caption)                particular \caption on input line 2142.
 See the caption package documentation for explanation.
 
-[61 <./Editor de Grafos/Figuras/Clase 11/Dibujo 4.pdf>]
-LaTeX Font Info:    Freeze math alphabet allocation in version normal.
-(Font)              Allocated math groups: 14 (local: 2) on input line 2205.
-LaTeX Font Info:    Undo math alphabet allocation in version normal on input li
-ne 2205.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 2205.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 2208.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 2212.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 2212.
-LaTeX Font Info:    Undo math alphabet allocation in version normal on input li
-ne 2215.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 2218.
-LaTeX Font Info:    Undo math alphabet allocation in version normal on input li
-ne 2218.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 2218.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 2218.
-LaTeX Font Info:    Undo math alphabet allocation in version normal on input li
-ne 2219.
-LaTeX Font Info:    Undo math alphabet allocation in version normal on input li
-ne 2221.
-<./Editor de Grafos/Figuras/Clase 11/Dibujo 5.pdf, id=1947, 455.30101pt x 168.8
+[62 <./Editor de Grafos/Figuras/Clase 11/Dibujo 4.pdf>]
+./Apuntes - GRAFOS.tex:2182: Misplaced alignment tab character &.
+<argument> ...rema del matrimonio estable - Gale &
+                                                   Shapley (1962))}
+l.2182 ...rimonio estable - Gale & Shapley (1962)]
+                                                  
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+<./Editor de Grafos/Figuras/Clase 11/Dibujo 5.pdf, id=1971, 455.30101pt x 168.8
 757pt>
 File: ./Editor de Grafos/Figuras/Clase 11/Dibujo 5.pdf Graphic file (type pdf)
 <use ./Editor de Grafos/Figuras/Clase 11/Dibujo 5.pdf>
 Package pdftex.def Info: ./Editor de Grafos/Figuras/Clase 11/Dibujo 5.pdf  used
- on input line 2225.
+ on input line 2206.
 (pdftex.def)             Requested size: 341.43436pt x 126.64613pt.
 
-
 Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 2225.
+(caption)                particular \caption on input line 2206.
 See the caption package documentation for explanation.
 
-LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 2225.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 2225.
-LaTeX Font Info:    Undo math alphabet allocation in version normal on input li
-ne 2225.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 2225.
-LaTeX Font Info:    Undo math alphabet allocation in version normal on input li
-ne 2225.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 2225.
-[62]
-LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 2225.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 2225.
-LaTeX Font Info:    Undo math alphabet allocation in version normal on input li
-ne 2225.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 2225.
-LaTeX Font Info:    Undo math alphabet allocation in version normal on input li
-ne 2225.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 2225.
+[63]
+LaTeX Font Info:    Freeze math alphabet allocation in version normal.
+(Font)              Allocated math groups: 14 (local: 2) on input line 2227.
 LaTeX Font Info:    Undo math alphabet allocation in version normal on input li
 ne 2227.
-LaTeX Font Info:    Undo math alphabet allocation in version normal on input li
-ne 2227.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2227.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
 ine 2230.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 2231.
+ine 2234.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 2231.
+ine 2234.
+LaTeX Font Info:    Undo math alphabet allocation in version normal on input li
+ne 2237.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 2231.
+ine 2240.
+LaTeX Font Info:    Undo math alphabet allocation in version normal on input li
+ne 2240.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 2231.
+ine 2240.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 2231.
-<./Editor de Grafos/Figuras/Clase 11/Dibujo 6.pdf, id=1957, 455.30101pt x 129.6
+ine 2240.
+LaTeX Font Info:    Undo math alphabet allocation in version normal on input li
+ne 2241.
+LaTeX Font Info:    Undo math alphabet allocation in version normal on input li
+ne 2243.
+<./Editor de Grafos/Figuras/Clase 11/Dibujo 6.pdf, id=1979, 455.30101pt x 129.6
 4706pt>
 File: ./Editor de Grafos/Figuras/Clase 11/Dibujo 6.pdf Graphic file (type pdf)
 <use ./Editor de Grafos/Figuras/Clase 11/Dibujo 6.pdf>
 Package pdftex.def Info: ./Editor de Grafos/Figuras/Clase 11/Dibujo 6.pdf  used
- on input line 2232.
+ on input line 2247.
 (pdftex.def)             Requested size: 341.43436pt x 97.22713pt.
 
 
 Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 2232.
+(caption)                particular \caption on input line 2247.
 See the caption package documentation for explanation.
 
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 2232.
+ine 2247.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 2232.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 2232.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 2232.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 2232.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 2232.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 2232.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 2232.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 2233.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 2233.
+ine 2247.
 LaTeX Font Info:    Undo math alphabet allocation in version normal on input li
-ne 2233.
+ne 2247.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 2233.
+ine 2247.
+LaTeX Font Info:    Undo math alphabet allocation in version normal on input li
+ne 2247.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 2233.
+ine 2247.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 2233.
+ine 2247.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 2233.
+ine 2247.
+LaTeX Font Info:    Undo math alphabet allocation in version normal on input li
+ne 2247.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 2233.
+ine 2247.
+LaTeX Font Info:    Undo math alphabet allocation in version normal on input li
+ne 2247.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 2233.
+ine 2247.
+LaTeX Font Info:    Undo math alphabet allocation in version normal on input li
+ne 2249.
+LaTeX Font Info:    Undo math alphabet allocation in version normal on input li
+ne 2249.
+[64 <./Editor de Grafos/Figuras/Clase 11/Dibujo 5.pdf> <./Editor de Grafos/Figu
+ras/Clase 11/Dibujo 6.pdf>]
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 2240.
-<./Editor de Grafos/Figuras/Clase 11/Dibujo 7.pdf, id=1958, 219.68245pt x 339.3
+ine 2252.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2253.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2253.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2253.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2253.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2253.
+<./Editor de Grafos/Figuras/Clase 11/Dibujo 7.pdf, id=2022, 219.68245pt x 339.3
 4154pt>
 File: ./Editor de Grafos/Figuras/Clase 11/Dibujo 7.pdf Graphic file (type pdf)
 <use ./Editor de Grafos/Figuras/Clase 11/Dibujo 7.pdf>
 Package pdftex.def Info: ./Editor de Grafos/Figuras/Clase 11/Dibujo 7.pdf  used
- on input line 2242.
-(pdftex.def)             Requested size: 213.39566pt x 329.64243pt.
+ on input line 2254.
+(pdftex.def)             Requested size: 341.43436pt x 527.47035pt.
+
 
 Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 2242.
+(caption)                particular \caption on input line 2254.
 See the caption package documentation for explanation.
 
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 2242.
-[63 <./Editor de Grafos/Figuras/Clase 11/Dibujo 5.pdf> <./Editor de Grafos/Figu
-ras/Clase 11/Dibujo 6.pdf>]
-LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 2242.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 2243.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 2243.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 2248.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 2248.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 2249.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 2252.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 2252.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input l
 ine 2254.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
 ine 2254.
@@ -2799,527 +2759,514 @@ ine 2254.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
 ine 2254.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 2254.
+ine 2255.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 2254.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 2254.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 2254.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 2254.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 2254.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 2254.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 2258.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 2260.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 2261.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 2266.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 2267.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 2267.
- [64 <./Editor de Grafos/Figuras/Clase 11/Dibujo 7.pdf>]
-LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 2273.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 2273.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 2273.
+ine 2255.
 LaTeX Font Info:    Undo math alphabet allocation in version normal on input li
-ne 2273.
+ne 2255.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 2273.
-LaTeX Font Info:    Undo math alphabet allocation in version normal on input li
-ne 2276.
-<./Editor de Grafos/Figuras/Clase 11/Dibujo 8.pdf, id=2014, 455.30101pt x 110.1
+ine 2255.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2255.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2255.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2255.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2255.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2255.
+[65 <./Editor de Grafos/Figuras/Clase 11/Dibujo 7.pdf>]
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2262.
+<./Editor de Grafos/Figuras/Clase 11/Dibujo 8.pdf, id=2038, 455.30101pt x 110.1
 4172pt>
 File: ./Editor de Grafos/Figuras/Clase 11/Dibujo 8.pdf Graphic file (type pdf)
 <use ./Editor de Grafos/Figuras/Clase 11/Dibujo 8.pdf>
 Package pdftex.def Info: ./Editor de Grafos/Figuras/Clase 11/Dibujo 8.pdf  used
- on input line 2277.
-(pdftex.def)             Requested size: 341.43436pt x 82.59935pt.
+ on input line 2264.
+(pdftex.def)             Requested size: 213.39566pt x 51.62207pt.
 
 
 Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 2277.
+(caption)                particular \caption on input line 2264.
 See the caption package documentation for explanation.
 
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 2277.
+ine 2264.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 2277.
+ine 2264.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 2277.
+ine 2265.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 2277.
+ine 2265.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 2277.
+ine 2270.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 2277.
+ine 2270.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 2277.
+ine 2271.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 2277.
+ine 2274.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 2278.
+ine 2274.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 2278.
+ine 2276.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 2278.
+ine 2276.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 2284.
+ine 2276.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 2284.
+ine 2276.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 2284.
+ine 2276.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2276.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2276.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2276.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2276.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2276.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2276.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2276.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2276.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2276.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2276.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2280.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2282.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2283.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
 ine 2288.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 2288.
+ine 2289.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 2288.
+ine 2289.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 2288.
+ine 2295.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 2290.
+ine 2295.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 2290.
+ine 2295.
+LaTeX Font Info:    Undo math alphabet allocation in version normal on input li
+ne 2295.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 2291.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 2294.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 2296.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 2296.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 2296.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 2296.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 2296.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 2296.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 2296.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 2296.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 2296.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 2296.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 2296.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 2296.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 2296.
-[65 <./Editor de Grafos/Figuras/Clase 11/Dibujo 8.pdf>]
-LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 2304.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 2304.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 2304.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 2306.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 2308.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 2308.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 2308.
-<./Editor de Grafos/Figuras/Clase 11/Dibujo 9.pdf, id=2032, 455.30101pt x 188.2
+ine 2295.
+[66 <./Editor de Grafos/Figuras/Clase 11/Dibujo 8.pdf>]
+LaTeX Font Info:    Undo math alphabet allocation in version normal on input li
+ne 2298.
+<./Editor de Grafos/Figuras/Clase 11/Dibujo 9.pdf, id=2055, 455.30101pt x 188.2
 7367pt>
 File: ./Editor de Grafos/Figuras/Clase 11/Dibujo 9.pdf Graphic file (type pdf)
 <use ./Editor de Grafos/Figuras/Clase 11/Dibujo 9.pdf>
 Package pdftex.def Info: ./Editor de Grafos/Figuras/Clase 11/Dibujo 9.pdf  used
- on input line 2309.
+ on input line 2299.
 (pdftex.def)             Requested size: 341.43436pt x 141.19339pt.
 
 
 Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 2309.
+(caption)                particular \caption on input line 2299.
 See the caption package documentation for explanation.
 
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 2312.
+ine 2299.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2299.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2299.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2299.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2299.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2299.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2299.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2299.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2300.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2300.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2300.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2306.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2306.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2306.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2310.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2310.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2310.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2310.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
 ine 2312.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
 ine 2312.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 2312.
+ine 2313.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 2315.
+ine 2316.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 2320.
+ine 2318.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 2320.
+ine 2318.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 2320.
+ine 2318.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 2322.
+ine 2318.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 2322.
+ine 2318.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 2322.
+ine 2318.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 2322.
+ine 2318.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 2327.
+ine 2318.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 2327.
+ine 2318.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2318.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2318.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2318.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2318.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2326.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2326.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2326.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
 ine 2328.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 2331.
+ine 2330.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 2331.
+ine 2330.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 2331.
+ine 2330.
+
+LaTeX Warning: File `"./Editor de Grafos/Figuras/Clase 11/Dibujo 10.pdf"' not f
+ound on input line 2331.
+
+
+./Apuntes - GRAFOS.tex:2331: Package pdftex.def Error: File `./Editor de Grafos
+/Figuras/Clase 11/Dibujo 10.pdf' not found: using draft setting.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.2331 \Dibujo{Ejemplo.}
+                        
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+LaTeX Font Info:    Trying to load font information for T1+cmtt on input line 2
+331.
+(/home/whitengine/texlive/2023/texmf-dist/tex/latex/base/t1cmtt.fd
+File: t1cmtt.fd 2022/07/10 v2.5l Standard LaTeX font definitions
+)
+
+Package caption Warning: The option `hypcap=true' will be ignored for this
+(caption)                particular \caption on input line 2331.
+See the caption package documentation for explanation.
+
+[67 <./Editor de Grafos/Figuras/Clase 11/Dibujo 9.pdf>]
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 2331.
+ine 2334.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 2331.
+ine 2334.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 2331.
+ine 2334.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 2331.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 2331.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 2331.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 2331.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 2331.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 2331.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 2331.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 2333.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 2333.
+ine 2334.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
 ine 2337.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 2340.
+ine 2342.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 2340.
+ine 2342.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 2340.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 2340.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 2340.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 2340.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 2340.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 2340.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 2340.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 2340.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 2340.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 2340.
-[66 <./Editor de Grafos/Figuras/Clase 11/Dibujo 9.pdf>]
+ine 2342.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
 ine 2344.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 2346.
+ine 2344.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 2347.
+ine 2344.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 2350.
+ine 2344.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 2350.
+ine 2349.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 2350.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 2350.
+ine 2349.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
 ine 2350.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 2350.
+ine 2353.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 2350.
+ine 2353.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 2350.
+ine 2353.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 2350.
+ine 2353.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 2350.
+ine 2353.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 2350.
+ine 2353.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 2350.
+ine 2353.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 2350.
+ine 2353.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 2350.
+ine 2353.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 2350.
+ine 2353.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 2350.
+ine 2353.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 2350.
+ine 2353.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 2350.
+ine 2353.
+ [68{/home/whitengine/texlive/2023/texmf-dist/fonts/enc/dvips/cm-super/cm-super
+-t1.enc}]
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 2350.
+ine 2355.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 2350.
+ine 2355.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 2350.
+ine 2359.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 2350.
+ine 2362.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 2360.
+ine 2362.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 2360.
+ine 2362.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 2360.
+ine 2362.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 2360.
+ine 2362.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 2360.
+ine 2362.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 2360.
+ine 2362.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 2361.
+ine 2362.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 2361.
+ine 2362.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 2367.
+ine 2362.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 2367.
+ine 2362.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 2367.
+ine 2362.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 2367.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 2367.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 2367.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 2367.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 2367.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 2367.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 2368.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 2368.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 2368.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 2368.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 2368.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 2368.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 2368.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 2368.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 2368.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 2368.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 2368.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 2368.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 2368.
+ine 2366.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
 ine 2368.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
 ine 2369.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 2370.
+ine 2372.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 2370.
+ine 2372.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 2370.
+ine 2372.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 2370.
- [67]
+ine 2372.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 2373.
+ine 2372.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 2373.
+ine 2372.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 2373.
+ine 2372.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 2373.
+ine 2372.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 2373.
+ine 2372.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 2373.
+ine 2372.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 2373.
+ine 2372.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 2373.
+ine 2372.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 2373.
+ine 2372.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 2373.
+ine 2372.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 2373.
+ine 2372.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 2373.
+ine 2372.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 2373.
+ine 2372.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 2373.
+ine 2372.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 2373.
+ine 2372.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 2373.
+ine 2372.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 2373.
+ine 2372.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 2373.
+ine 2372.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 2373.
+ine 2382.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 2373.
+ine 2382.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 2373.
+ine 2382.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 2373.
+ine 2382.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 2373.
+ine 2382.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 2373.
+ine 2382.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 2373.
+ine 2383.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 2373.
+ine 2383.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 2373.
+ine 2389.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 2373.
+ine 2389.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 2373.
+ine 2389.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 2373.
+ine 2389.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 2373.
+ine 2389.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 2373.
+ine 2389.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 2373.
+ine 2389.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 2374.
+ine 2389.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 2374.
+ine 2389.
+ [69]
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 2374.
+ine 2390.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 2374.
+ine 2390.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 2374.
+ine 2390.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 2374.
+ine 2390.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 2374.
+ine 2390.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 2374.
+ine 2390.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 2374.
+ine 2390.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 2374.
+ine 2390.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 2374.
+ine 2390.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 2374.
+ine 2390.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 2374.
+ine 2390.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 2381.
+ine 2390.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 2381.
+ine 2390.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 2381.
+ine 2390.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 2381.
+ine 2391.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 2384.
+ine 2392.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 2384.
+ine 2392.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 2384.
+ine 2392.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 2384.
+ine 2392.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 2386.
+ine 2395.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 2386.
+ine 2395.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 2386.
+ine 2395.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 2386.
+ine 2395.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 2386.
+ine 2395.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 2386.
+ine 2395.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 2388.
+ine 2395.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 2388.
+ine 2395.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 2388.
+ine 2395.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 2388.
+ine 2395.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 2388.
+ine 2395.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 2388.
+ine 2395.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 2388.
+ine 2395.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 2388.
+ine 2395.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 2388.
+ine 2395.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 2388.
+ine 2395.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 2388.
+ine 2395.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 2388.
+ine 2395.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 2388.
+ine 2395.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 2388.
+ine 2395.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 2393.
+ine 2395.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 2393.
+ine 2395.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 2393.
+ine 2395.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 2393.
+ine 2395.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 2393.
+ine 2395.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 2393.
+ine 2395.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 2393.
+ine 2395.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2395.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2395.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2395.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2395.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2395.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2395.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
 ine 2396.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
@@ -3347,337 +3294,368 @@ ine 2396.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
 ine 2396.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 2396.
+ine 2403.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 2396.
+ine 2403.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 2396.
+ine 2403.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 2396.
+ine 2403.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 2396.
+ine 2406.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 2396.
+ine 2406.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 2396.
+ine 2406.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 2396.
+ine 2406.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 2396.
+ine 2408.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 2396.
+ine 2408.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 2396.
+ine 2408.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 2396.
+ine 2408.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 2396.
+ine 2408.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 2396.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 2396.
- [68]
+ine 2408.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
 ine 2410.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 2411.
+ine 2410.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 2414.
+ine 2410.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 2414.
+ine 2410.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 2414.
+ine 2410.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 2414.
+ine 2410.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 2414.
+ine 2410.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 2414.
+ine 2410.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 2414.
+ine 2410.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 2414.
+ine 2410.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 2417.
+ine 2410.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 2419.
+ine 2410.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 2419.
+ine 2410.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 2419.
+ine 2410.
+ [70]
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 2419.
+ine 2415.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 2419.
+ine 2415.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 2422.
+ine 2415.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 2427.
+ine 2415.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 2429.
+ine 2415.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 2430.
+ine 2415.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 2433.
+ine 2415.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 2433.
+ine 2418.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 2433.
+ine 2418.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 2433.
+ine 2418.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 2433.
+ine 2418.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 2433.
+ine 2418.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 2433.
+ine 2418.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 2433.
+ine 2418.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 2433.
+ine 2418.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 2433.
+ine 2418.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 2433.
+ine 2418.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 2433.
+ine 2418.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2418.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2418.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2418.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2418.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2418.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2418.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2418.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2418.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2418.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2418.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2418.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2418.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2418.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2418.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2418.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2418.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2418.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2432.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
 ine 2433.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
 ine 2436.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 2439.
+ine 2436.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2436.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2436.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2436.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2436.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2436.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2436.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
 ine 2439.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 2439.
+ine 2441.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 2439.
+ine 2441.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 2439.
+ine 2441.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 2439.
+ine 2441.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 2439.
+ine 2441.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 2439.
+ine 2444.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 2439.
+ine 2449.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 2439.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 2439.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 2439.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 2439.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 2439.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 2439.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 2439.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 2439.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 2439.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 2439.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 2439.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 2439.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 2439.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 2439.
- [69]
-LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 2442.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 2443.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 2443.
+ine 2451.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
 ine 2452.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 2452.
+ine 2455.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 2452.
+ine 2455.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 2452.
+ine 2455.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 2452.
+ine 2455.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 2452.
+ine 2455.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 2454.
+ine 2455.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 2454.
+ine 2455.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 2454.
-<./Editor de Grafos/Figuras/Clase 12/Dibujo 1.pdf, id=2074, 387.94536pt x 339.3
+ine 2455.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2455.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2455.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2455.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2455.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2455.
+
+[71]
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2458.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2461.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2461.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2461.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2461.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2461.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2461.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2461.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2461.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2461.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2461.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2461.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2461.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2461.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2461.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2461.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2461.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2461.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2461.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2461.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2461.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2461.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2461.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2461.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2464.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2465.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2465.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2474.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2474.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2474.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2474.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2474.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2474.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2476.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2476.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2476.
+<./Editor de Grafos/Figuras/Clase 12/Dibujo 1.pdf, id=2105, 387.94536pt x 339.3
 4154pt>
 File: ./Editor de Grafos/Figuras/Clase 12/Dibujo 1.pdf Graphic file (type pdf)
 <use ./Editor de Grafos/Figuras/Clase 12/Dibujo 1.pdf>
 Package pdftex.def Info: ./Editor de Grafos/Figuras/Clase 12/Dibujo 1.pdf  used
- on input line 2457.
+ on input line 2479.
 (pdftex.def)             Requested size: 341.43436pt x 298.66289pt.
 
 
 Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 2457.
+(caption)                particular \caption on input line 2479.
 See the caption package documentation for explanation.
 
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 2457.
+ine 2479.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 2457.
+ine 2479.
+[72]
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 2457.
+ine 2479.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 2457.
+ine 2479.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 2459.
+ine 2481.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 2459.
+ine 2481.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 2459.
+ine 2481.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 2459.
+ine 2481.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 2459.
+ine 2481.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 2459.
+ine 2481.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 2459.
+ine 2481.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 2459.
+ine 2481.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 2459.
+ine 2481.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 2459.
+ine 2481.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 2462.
+ine 2484.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 2462.
+ine 2484.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 2462.
+ine 2484.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 2462.
+ine 2484.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 2462.
+ine 2484.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 2465.
+ine 2487.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 2465.
+ine 2487.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 2465.
+ine 2487.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 2465.
+ine 2487.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 2465.
+ine 2487.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 2465.
+ine 2487.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 2465.
+ine 2487.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 2465.
+ine 2487.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 2465.
+ine 2487.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 2465.
+ine 2487.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 2465.
+ine 2487.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 2465.
-[70 <./Editor de Grafos/Figuras/Clase 12/Dibujo 1.pdf>]
-<./Editor de Grafos/Figuras/Clase 12/Dibujo 2.pdf, id=2103, 455.30101pt x 332.6
+ine 2487.
+<./Editor de Grafos/Figuras/Clase 12/Dibujo 2.pdf, id=2113, 455.30101pt x 332.6
 6516pt>
 File: ./Editor de Grafos/Figuras/Clase 12/Dibujo 2.pdf Graphic file (type pdf)
 <use ./Editor de Grafos/Figuras/Clase 12/Dibujo 2.pdf>
 Package pdftex.def Info: ./Editor de Grafos/Figuras/Clase 12/Dibujo 2.pdf  used
- on input line 2466.
+ on input line 2488.
 (pdftex.def)             Requested size: 341.43436pt x 249.47795pt.
 
 
 Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 2466.
+(caption)                particular \caption on input line 2488.
 See the caption package documentation for explanation.
 
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 2466.
+ine 2488.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 2466.
+ine 2488.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 2466.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 2466.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 2466.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 2466.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 2467.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 2467.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 2467.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 2467.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 2467.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 2467.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 2467.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 2467.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 2467.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 2484.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 2484.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 2485.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 2485.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 2485.
-LaTeX Font Info:    Font shape `T1/fnc/b/n' will be
-(Font)              scaled to size 9.29993pt on input line 2485.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 2485.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 2485.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 2485.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 2485.
-[71 <./Editor de Grafos/Figuras/Clase 12/Dibujo 2.pdf>]
-LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 2486.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 2486.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 2486.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 2486.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 2486.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 2486.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 2486.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 2486.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 2487.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 2487.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 2487.
+ine 2488.
+[73 <./Editor de Grafos/Figuras/Clase 12/Dibujo 1.pdf>]
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
 ine 2488.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
@@ -3685,14 +3663,979 @@ ine 2488.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
 ine 2488.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 2488.
+ine 2489.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 2488.
+ine 2489.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 2488.
+ine 2489.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2489.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2489.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2489.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2489.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2489.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2489.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2493.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2493.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2493.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2493.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2493.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2493.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2493.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2493.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2496.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2496.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2496.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2496.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2500.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2500.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2500.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2500.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2500.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2500.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2500.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2500.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2504.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2504.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2504.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2504.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2504.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2504.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2504.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2504.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2507.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2507.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2507.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2507.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2507.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2507.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2507.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2507.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2507.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2507.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2507.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2507.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2507.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2507.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2507.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2507.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2507.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2511.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2513.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2513.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2513.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2514.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2514.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2514.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2514.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2514.
+ [74 <./Editor de Grafos/Figuras/Clase 12/Dibujo 2.pdf>]
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2518.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2518.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2518.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2518.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2518.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2518.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2518.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2518.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2518.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2518.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2518.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2518.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2518.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2518.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2518.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2518.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2518.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2518.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2518.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2518.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2518.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2518.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2518.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2518.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2518.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2518.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2518.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2523.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2523.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2523.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2523.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2523.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2523.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2523.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2523.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2523.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2523.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2523.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2523.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2523.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2523.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2523.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2523.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2523.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2530.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2530.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2530.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2530.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2538.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2538.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2538.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2538.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2538.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2538.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2538.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2538.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2538.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2538.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2538.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2538.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2538.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2538.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2538.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2538.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2538.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2540.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2540.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2540.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2540.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2540.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2540.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2540.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2540.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2540.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2540.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2540.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2541.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2541.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2541.
+ [75]
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2544.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2544.
 
-(./Editor de Grafos/Figuras/Clase 13/Dibujo 1.pdf_tex
-<./Editor de Grafos/Figuras/Clase 13//Dibujo 1.pdf, id=2123, page=1, 469.47046p
+
+LaTeX Font Warning: Font shape `T1/fnc/m/scit' undefined
+(Font)              using `T1/fnc/m/sc' instead on input line 2546.
+
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2546.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2546.
+
+LaTeX Font Warning: Font shape `T1/fnc/m/scit' undefined
+(Font)              using `T1/fnc/m/sc' instead on input line 2547.
+
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2547.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2547.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2547.
+
+LaTeX Font Warning: Font shape `T1/fnc/m/scit' undefined
+(Font)              using `T1/fnc/m/sc' instead on input line 2548.
+
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2548.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2548.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2555.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2555.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2555.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2555.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2555.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2555.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2555.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2555.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2555.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2555.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2558.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2558.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2558.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2558.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2558.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2558.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2558.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2558.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2558.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2558.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2558.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2558.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2558.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2558.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2558.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2558.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2558.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2558.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2558.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2558.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2558.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2558.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2558.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2558.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2558.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2558.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2558.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2558.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2563.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2563.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2563.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2563.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2563.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2563.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2563.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2563.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2563.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2563.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2563.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2563.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2563.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2563.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2563.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2563.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2563.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2563.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2563.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2563.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2563.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2563.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2563.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2563.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2563.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2563.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2563.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2563.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2566.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2566.
+[76]
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2572.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2572.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2572.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2572.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2572.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2573.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2573.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2573.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2573.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2575.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2575.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2576.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2576.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2576.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2576.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2576.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2576.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2576.
+
+
+LaTeX Warning: File `"./Editor de Grafos/Figuras/Clase 12/Dibujo 3.pdf"' not fo
+und on input line 2577.
+
+
+./Apuntes - GRAFOS.tex:2577: Package pdftex.def Error: File `./Editor de Grafos
+/Figuras/Clase 12/Dibujo 3.pdf' not found: using draft setting.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.2577 ...ilustración de la condición de Tutte.}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+Package caption Warning: The option `hypcap=true' will be ignored for this
+(caption)                particular \caption on input line 2577.
+See the caption package documentation for explanation.
+
+
+LaTeX Warning: Reference `eq:condicion de Tutte' on page 77 undefined on input 
+line 2579.
+
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2582.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2585.
+
+LaTeX Warning: Reference `eq:condicion de Tutte' on page 77 undefined on input 
+line 2586.
+
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2586.
+[77]
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2589.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2589.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2589.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2589.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2589.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2589.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2589.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2589.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2589.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2591.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2591.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2593.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2593.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2593.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2595.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2595.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2595.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2595.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2595.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2595.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2595.
+
+
+LaTeX Warning: Reference `eq:condicion de Tutte' on page 78 undefined on input 
+line 2595.
+
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2597.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2597.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2597.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2597.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2597.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2597.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2597.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2597.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2597.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2597.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2597.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2597.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2597.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2597.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2597.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2597.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2597.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2597.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2597.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2597.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2597.
+
+LaTeX Warning: File `"./Editor de Grafos/Figuras/Clase 12/Dibujo 4.pdf"' not fo
+und on input line 2599.
+
+
+./Apuntes - GRAFOS.tex:2599: Package pdftex.def Error: File `./Editor de Grafos
+/Figuras/Clase 12/Dibujo 4.pdf' not found: using draft setting.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.2599 ... una ilustración de la contradicción.}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+Package caption Warning: The option `hypcap=true' will be ignored for this
+(caption)                particular \caption on input line 2599.
+See the caption package documentation for explanation.
+
+[78]
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2601.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2601.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2601.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2601.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2601.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2601.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2601.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2601.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2601.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2601.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2601.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2601.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2601.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2601.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2601.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2601.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2601.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2601.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2601.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2601.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2601.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2601.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2601.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2601.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2601.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2601.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2601.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2601.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2601.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2601.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2605.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2605.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2608.
+
+
+LaTeX Warning: Reference `eq:condicion de Tutte' on page 79 undefined on input 
+line 2608.
+
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2608.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2608.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2608.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2608.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2608.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2608.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2608.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2608.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2612.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2612.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2612.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2612.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2612.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2612.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2612.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2612.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2612.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2612.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2612.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2612.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2612.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2612.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2612.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2612.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2612.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2612.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2613.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2614.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2614.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2614.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2614.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2614.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2614.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2614.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2614.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2614.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2614.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2614.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2614.
+[79]
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2621.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2621.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2621.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2623.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2623.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2623.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2623.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2623.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2623.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2623.
+
+./Apuntes - GRAFOS.tex:2623: Missing { inserted.
+<to be read again> 
+                   \egroup 
+l.2623 ...ce $c \in C$ adyacente a $s$ en $G$}}$.}
+                                                   contiene un matching que ...
+A left brace was mandatory here, so I've put one in.
+You might want to delete and/or insert some corrections
+so that I will find a matching right brace soon.
+(If you're confused by all this, try typing `I}' now.)
+
+./Apuntes - GRAFOS.tex:2623: Missing } inserted.
+<inserted text> 
+                }
+l.2623 ...ce $c \in C$ adyacente a $s$ en $G$}}$.}
+                                                   contiene un matching que ...
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2623.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2623.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2623.
+./Apuntes - GRAFOS.tex:2623: Undefined control sequence.
+<argument> ... con conjunto de vértices $S \ccup 
+                                                  \mathcal C_{G\setminus S}$...
+l.2623 ...ce $c \in C$ adyacente a $s$ en $G$}}$.}
+                                                   contiene un matching que ...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2623.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2623.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2623.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2623.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2623.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2623.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2623.
+
+LaTeX Warning: File `"./Editor de Grafos/Figuras/Clase 12/Dibujo 5.pdf"' not fo
+und on input line 2626.
+
+
+./Apuntes - GRAFOS.tex:2626: Package pdftex.def Error: File `./Editor de Grafos
+/Figuras/Clase 12/Dibujo 5.pdf' not found: using draft setting.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.2626 \Dibujo{Ilustración de grafo $G_S$.}
+                                            
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+Package caption Warning: The option `hypcap=true' will be ignored for this
+(caption)                particular \caption on input line 2626.
+See the caption package documentation for explanation.
+
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2626.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2626.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2629.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2629.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2631.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2631.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2632.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2634.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2634.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2634.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2637.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2637.
+
+LaTeX Warning: Reference `eq:condicion de Tutte' on page 80 undefined on input 
+line 2637.
+
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2637.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2637.
+[80]
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2666.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2666.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2667.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2667.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2667.
+LaTeX Font Info:    Font shape `T1/fnc/b/n' will be
+(Font)              scaled to size 9.29993pt on input line 2667.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2667.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2667.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2667.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2667.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2668.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2668.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2668.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2668.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2668.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2668.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2668.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2668.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2669.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2669.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2669.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2670.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2670.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2670.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2670.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2670.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2670.
+ (./Editor de Grafos/Figuras/Clase 13/Dibujo 1.pdf_tex
+<./Editor de Grafos/Figuras/Clase 13//Dibujo 1.pdf, id=2220, page=1, 469.47046p
 t x 249.95587pt>
 File: ./Editor de Grafos/Figuras/Clase 13//Dibujo 1.pdf Graphic file (type pdf)
 
@@ -3704,7 +4647,7 @@ LaTeX Font Info:    No math alphabet change to frozen version normal on input l
 ine 57.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
 ine 57.
-<./Editor de Grafos/Figuras/Clase 13//Dibujo 1.pdf, id=2124, page=2, 469.47046p
+<./Editor de Grafos/Figuras/Clase 13//Dibujo 1.pdf, id=2221, page=2, 469.47046p
 t x 249.95587pt>
 File: ./Editor de Grafos/Figuras/Clase 13//Dibujo 1.pdf Graphic file (type pdf)
 
@@ -3728,7 +4671,7 @@ LaTeX Font Info:    No math alphabet change to frozen version normal on input l
 ine 62.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
 ine 62.
-<./Editor de Grafos/Figuras/Clase 13//Dibujo 1.pdf, id=2125, page=3, 469.47046p
+<./Editor de Grafos/Figuras/Clase 13//Dibujo 1.pdf, id=2222, page=3, 469.47046p
 t x 249.95587pt>
 File: ./Editor de Grafos/Figuras/Clase 13//Dibujo 1.pdf Graphic file (type pdf)
 
@@ -3747,99 +4690,91 @@ ine 65.
 )
 
 Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 2492.
+(caption)                particular \caption on input line 2674.
 See the caption package documentation for explanation.
 
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 2492.
+ine 2674.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 2492.
+ine 2674.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 2492.
+ine 2674.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 2492.
+ine 2674.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 2492.
+ine 2674.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 2492.
+ine 2674.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 2492.
+ine 2674.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 2492.
+ine 2674.
+[81]
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 2492.
+ine 2674.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 2492.
+ine 2674.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 2492.
+ine 2674.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 2492.
+ine 2674.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 2492.
+ine 2674.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 2492.
+ine 2674.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 2492.
+ine 2674.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 2492.
+ine 2674.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 2495.
+ine 2677.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 2495.
+ine 2677.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 2495.
+ine 2677.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 2495.
+ine 2677.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 2495.
+ine 2677.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 2495.
+ine 2677.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 2495.
+ine 2677.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 2500.
+ine 2682.
+
 
 LaTeX Font Warning: Font shape `T1/fnc/m/scit' undefined
-(Font)              using `T1/fnc/m/sc' instead on input line 2502.
+(Font)              using `T1/fnc/m/sc' instead on input line 2684.
 
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 2502.
+ine 2684.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 2502.
+ine 2684.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 2502.
+ine 2684.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 2502.
-[72 <./Editor de Grafos/Figuras/Clase 13//Dibujo 1.pdf> <./Editor de Grafos/Fig
-uras/Clase 13//Dibujo 1.pdf
-
-pdfTeX warning: pdflatex (file ./Editor de Grafos/Figuras/Clase 13//Dibujo 1.pd
-f): PDF inclusion: multiple pdfs with page group included in a single page
-> <./Editor de Grafos/Figuras/Clase 13//Dibujo 1.pdf
-
-pdfTeX warning: pdflatex (file ./Editor de Grafos/Figuras/Clase 13//Dibujo 1.pd
-f): PDF inclusion: multiple pdfs with page group included in a single page
->]
+ine 2684.
 
 LaTeX Font Warning: Font shape `T1/fnc/m/scit' undefined
-(Font)              using `T1/fnc/m/sc' instead on input line 2503.
+(Font)              using `T1/fnc/m/sc' instead on input line 2685.
 
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 2503.
+ine 2685.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 2503.
+ine 2685.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 2503.
+ine 2685.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 2503.
+ine 2685.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 2503.
+ine 2685.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 2503.
+ine 2685.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 2503.
+ine 2685.
 (./Editor de Grafos/Figuras/Clase 13/Dibujo 2.pdf_tex
-<./Editor de Grafos/Figuras/Clase 13//Dibujo 2.pdf, id=2143, page=1, 469.88504p
+<./Editor de Grafos/Figuras/Clase 13//Dibujo 2.pdf, id=2235, page=1, 469.88504p
 t x 180.4443pt>
 File: ./Editor de Grafos/Figuras/Clase 13//Dibujo 2.pdf Graphic file (type pdf)
 
@@ -3874,31 +4809,45 @@ ine 62.
 )
 
 Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 2507.
+(caption)                particular \caption on input line 2689.
 See the caption package documentation for explanation.
 
+[82 <./Editor de Grafos/Figuras/Clase 13//Dibujo 1.pdf> <./Editor de Grafos/Fig
+uras/Clase 13//Dibujo 1.pdf
+
+pdfTeX warning: pdflatex (file ./Editor de Grafos/Figuras/Clase 13//Dibujo 1.pd
+f): PDF inclusion: multiple pdfs with page group included in a single page
+> <./Editor de Grafos/Figuras/Clase 13//Dibujo 1.pdf
+
+pdfTeX warning: pdflatex (file ./Editor de Grafos/Figuras/Clase 13//Dibujo 1.pd
+f): PDF inclusion: multiple pdfs with page group included in a single page
+> <./Editor de Grafos/Figuras/Clase 13//Dibujo 2.pdf
+
+pdfTeX warning: pdflatex (file ./Editor de Grafos/Figuras/Clase 13//Dibujo 2.pd
+f): PDF inclusion: multiple pdfs with page group included in a single page
+>]
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 2510.
+ine 2692.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 2510.
+ine 2692.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 2516.
+ine 2699.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 2518.
+ine 2701.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 2519.
+ine 2702.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 2519.
+ine 2702.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 2525.
+ine 2708.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 2525.
+ine 2708.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 2525.
+ine 2708.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 2528.
-(./Editor de Grafos/Figuras/Clase 13/Dibujo 3.pdf_tex
-<./Editor de Grafos/Figuras/Clase 13//Dibujo 3.pdf, id=2144, page=1, 254.3717pt
+ine 2711.
+ (./Editor de Grafos/Figuras/Clase 13/Dibujo 3.pdf_tex
+<./Editor de Grafos/Figuras/Clase 13//Dibujo 3.pdf, id=2249, page=1, 254.3717pt
  x 249.95587pt>
 File: ./Editor de Grafos/Figuras/Clase 13//Dibujo 3.pdf Graphic file (type pdf)
 
@@ -3925,24 +4874,282 @@ ine 60.
 )
 
 Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 2531.
+(caption)                particular \caption on input line 2714.
 See the caption package documentation for explanation.
 
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 2531.
+ine 2714.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 2531.
-[73 <./Editor de Grafos/Figuras/Clase 13//Dibujo 2.pdf> <./Editor de Grafos/Fig
-uras/Clase 13//Dibujo 3.pdf
+ine 2714.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2716.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2716.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2726.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2726.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2726.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2726.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2729.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2729.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2729.
 
-pdfTeX warning: pdflatex (file ./Editor de Grafos/Figuras/Clase 13//Dibujo 3.pd
-f): PDF inclusion: multiple pdfs with page group included in a single page
->]
+LaTeX Warning: File `"./Editor de Grafos/Figuras/Clase 14/Dibujo 1.pdf"' not fo
+und on input line 2731.
+
+
+./Apuntes - GRAFOS.tex:2731: Package pdftex.def Error: File `./Editor de Grafos
+/Figuras/Clase 14/Dibujo 1.pdf' not found: using draft setting.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.2731 \Dibujo{Ejemplo.}
+                        
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+Package caption Warning: The option `hypcap=true' will be ignored for this
+(caption)                particular \caption on input line 2731.
+See the caption package documentation for explanation.
+
+[83 <./Editor de Grafos/Figuras/Clase 13//Dibujo 3.pdf>]
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 2533.
+ine 2734.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 2533.
- (./Apendice/Apendice.tex [74]
+ine 2734.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2734.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2734.
+
+
+LaTeX Font Warning: Font shape `T1/fnc/m/scit' undefined
+(Font)              using `T1/fnc/m/sc' instead on input line 2736.
+
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2736.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2736.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2736.
+
+LaTeX Font Warning: Font shape `T1/fnc/m/scit' undefined
+(Font)              using `T1/fnc/m/sc' instead on input line 2737.
+
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2737.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2737.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2737.
+./Apuntes - GRAFOS.tex:2741: Undefined control sequence.
+l.2741 \Dijubo
+              {Ilustración del lema.}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2745.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2745.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2745.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2746.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2746.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2746.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2746.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2746.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2746.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2746.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2746.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2746.
+
+LaTeX Warning: File `"./Editor de Grafos/Figuras/Clase 14/Dibujo 2.pdf"' not fo
+und on input line 2750.
+
+
+./Apuntes - GRAFOS.tex:2750: Package pdftex.def Error: File `./Editor de Grafos
+/Figuras/Clase 14/Dibujo 2.pdf' not found: using draft setting.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.2750 \Dibujo{Ilustración de la prueba.}
+                                          
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+Package caption Warning: The option `hypcap=true' will be ignored for this
+(caption)                particular \caption on input line 2750.
+See the caption package documentation for explanation.
+
+[84]
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2753.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2753.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2753.
+
+
+LaTeX Font Warning: Font shape `T1/fnc/m/scit' undefined
+(Font)              using `T1/fnc/m/sc' instead on input line 2755.
+
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2755.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2755.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2755.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2755.
+
+LaTeX Font Warning: Font shape `T1/fnc/m/scit' undefined
+(Font)              using `T1/fnc/m/sc' instead on input line 2756.
+
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2756.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2756.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2756.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2756.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2756.
+
+LaTeX Warning: File `"./Editor de Grafos/Figuras/Clase 14/Dibujo 3.pdf"' not fo
+und on input line 2760.
+
+
+./Apuntes - GRAFOS.tex:2760: Package pdftex.def Error: File `./Editor de Grafos
+/Figuras/Clase 14/Dibujo 3.pdf' not found: using draft setting.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.2760 \Dibujo{Visulización del lema.}
+                                       
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+Package caption Warning: The option `hypcap=true' will be ignored for this
+(caption)                particular \caption on input line 2760.
+See the caption package documentation for explanation.
+
+[85]
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2763.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2763.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2771.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2771.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2771.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2771.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2773.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2774.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2777.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2777.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2777.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2777.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2777.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2777.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2779.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2779.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2779.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2779.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2779.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2779.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2779.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2779.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2779.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2779.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2779.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2779.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2779.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2779.
+
+
+LaTeX Warning: File `"./Editor de Grafos/Figuras/Clase 14/Dibujo 4.pdf"' not fo
+und on input line 2780.
+
+
+./Apuntes - GRAFOS.tex:2780: Package pdftex.def Error: File `./Editor de Grafos
+/Figuras/Clase 14/Dibujo 4.pdf' not found: using draft setting.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.2780 \Dibujo{Visualización.}
+                               
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+Package caption Warning: The option `hypcap=true' will be ignored for this
+(caption)                particular \caption on input line 2780.
+See the caption package documentation for explanation.
+
+[86]
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2784.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2785.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2785.
+ (./Apendice/Apendice.tex [87]
 Ap\'{e}ndice A.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
 ine 50.
@@ -4034,7 +5241,7 @@ LaTeX Font Info:    No math alphabet change to frozen version normal on input l
 ine 68.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
 ine 71.
-[75
+[88
 
 ]
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
@@ -4161,7 +5368,7 @@ LaTeX Font Info:    No math alphabet change to frozen version normal on input l
 ine 115.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
 ine 115.
- [76]
+ [89]
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
 ine 122.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
@@ -4248,7 +5455,7 @@ LaTeX Font Info:    No math alphabet change to frozen version normal on input l
 ine 156.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
 ine 156.
- [77]
+ [90]
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
 ine 159.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
@@ -4415,8 +5622,8 @@ LaTeX Font Info:    No math alphabet change to frozen version normal on input l
 ine 187.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
 ine 187.
- [78]
-<./Apendice/Figuras/Capitulo 1/Dibujo 1.pdf, id=2205, 455.30101pt x 250.76039pt
+ [91]
+<./Apendice/Figuras/Capitulo 1/Dibujo 1.pdf, id=2335, 455.30101pt x 250.76039pt
 >
 File: ./Apendice/Figuras/Capitulo 1/Dibujo 1.pdf Graphic file (type pdf)
 <use ./Apendice/Figuras/Capitulo 1/Dibujo 1.pdf>
@@ -4482,7 +5689,7 @@ LaTeX Font Info:    No math alphabet change to frozen version normal on input l
 ine 213.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
 ine 213.
-[79 <./Apendice/Figuras/Capitulo 1/Dibujo 1.pdf>]
+[92 <./Apendice/Figuras/Capitulo 1/Dibujo 1.pdf>]
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
 ine 215.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
@@ -4499,7 +5706,7 @@ LaTeX Font Info:    No math alphabet change to frozen version normal on input l
 ine 215.
 
 
-LaTeX Warning: Reference `' on page 80 undefined on input line 215.
+LaTeX Warning: Reference `' on page 93 undefined on input line 215.
 
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
 ine 215.
@@ -4659,7 +5866,7 @@ LaTeX Font Info:    No math alphabet change to frozen version normal on input l
 ine 257.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
 ine 257.
-[80]
+[93]
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
 ine 258.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
@@ -4782,8 +5989,8 @@ LaTeX Font Info:    No math alphabet change to frozen version normal on input l
 ine 315.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
 ine 315.
- [81]
-<./Apendice/Figuras/Capitulo 1/Dibujo 2.pdf, id=2247, 794.97pt x 614.295pt>
+ [94]
+<./Apendice/Figuras/Capitulo 1/Dibujo 2.pdf, id=2377, 794.97pt x 614.295pt>
 File: ./Apendice/Figuras/Capitulo 1/Dibujo 2.pdf Graphic file (type pdf)
 <use ./Apendice/Figuras/Capitulo 1/Dibujo 2.pdf>
 Package pdftex.def Info: ./Apendice/Figuras/Capitulo 1/Dibujo 2.pdf  used on in
@@ -4859,7 +6066,7 @@ LaTeX Font Info:    No math alphabet change to frozen version normal on input l
 ine 343.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
 ine 344.
- [82 <./Apendice/Figuras/Capitulo 1/Dibujo 2.pdf>]
+ [95 <./Apendice/Figuras/Capitulo 1/Dibujo 2.pdf>]
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
 ine 346.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
@@ -4892,7 +6099,7 @@ LaTeX Font Info:    No math alphabet change to frozen version normal on input l
 ine 355.
 
 
-LaTeX Warning: Reference `' on page 83 undefined on input line 355.
+LaTeX Warning: Reference `' on page 96 undefined on input line 355.
 
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
 ine 356.
@@ -4900,7 +6107,7 @@ LaTeX Font Info:    No math alphabet change to frozen version normal on input l
 ine 356.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
 ine 356.
-[83]
+[96]
 Ap\'{e}ndice B.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
 ine 373.
@@ -5039,7 +6246,7 @@ mi/m/it/12 x[]\U/matha/m/n/12 q ^^P \FML/fncmi/m/it/12 f\U/matha/m/n/12 p[]t\FM
 L/fncmi/m/it/12 x; x[]\U/matha/m/n/12 uq ^^P
  []
 
-[84
+[97
 
 ]
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
@@ -5170,7 +6377,7 @@ LaTeX Font Info:    No math alphabet change to frozen version normal on input l
 ine 455.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
 ine 457.
-) [85] (./Apuntes - GRAFOS.bbl) [86
+) [98] (./Apuntes - GRAFOS.bbl) [99
 
 ]
 (/home/enzo/Desktop/Doctorado Chile/Clases/2023/Primer semestre/Grafos/out/Apun
@@ -5179,22 +6386,26 @@ LaTeX Info: Redefining \. on input line 23.
 LaTeX Info: Redefining \% on input line 23.
 )
 
+LaTeX Font Warning: Size substitutions with differences
+(Font)              up to 0.43996pt have occurred.
+
+
 LaTeX Warning: There were undefined references.
 
 
 LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 
 Package rerunfilecheck Info: File `"Apuntes - GRAFOS".out' has not changed.
-(rerunfilecheck)             Checksum: 4F4A9D9688AE2319D001FCE454A2ED41;5200.
+(rerunfilecheck)             Checksum: A39CD2E513B31CCDD8DD942BDE8EE86C;5770.
  ) 
 Here is how much of TeX's memory you used:
- 30027 strings out of 476017
- 583520 string characters out of 5786780
- 1868666 words of memory out of 5000000
- 49410 multiletter control sequences out of 15000+600000
- 605519 words of font info for 197 fonts, out of 8000000 for 9000
+ 30444 strings out of 476017
+ 600771 string characters out of 5786780
+ 1870666 words of memory out of 5000000
+ 49725 multiletter control sequences out of 15000+600000
+ 615257 words of font info for 222 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 98i,13n,94p,1316b,995s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 98i,13n,94p,1552b,995s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
 pdfTeX warning (dest): name{theorem.1.6.6} has been referenced but does not exi
 st, replaced by a fixed one
@@ -5212,16 +6423,17 @@ xmf-dist/fonts/type1/public/mathabx-type1/matha8.pfb></home/whitengine/texlive/
 exlive/2023/texmf-dist/fonts/type1/public/mathabx-type1/mathb12.pfb></home/whit
 engine/texlive/2023/texmf-dist/fonts/type1/public/mathabx-type1/mathx10.pfb></h
 ome/whitengine/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/symbols/msam
-10.pfb></home/whitengine/texlive/2023/texmf-dist/fonts/type1/urw/ncntrsbk/uncb8
-a.pfb></home/whitengine/texlive/2023/texmf-dist/fonts/type1/urw/ncntrsbk/uncbi8
-a.pfb></home/whitengine/texlive/2023/texmf-dist/fonts/type1/urw/ncntrsbk/uncr8a
-.pfb></home/whitengine/texlive/2023/texmf-dist/fonts/type1/urw/ncntrsbk/uncri8a
-.pfb>
+10.pfb></home/whitengine/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sf
+tt1200.pfb></home/whitengine/texlive/2023/texmf-dist/fonts/type1/urw/ncntrsbk/u
+ncb8a.pfb></home/whitengine/texlive/2023/texmf-dist/fonts/type1/urw/ncntrsbk/un
+cbi8a.pfb></home/whitengine/texlive/2023/texmf-dist/fonts/type1/urw/ncntrsbk/un
+cr8a.pfb></home/whitengine/texlive/2023/texmf-dist/fonts/type1/urw/ncntrsbk/unc
+ri8a.pfb>
 Output written on "/home/enzo/Desktop/Doctorado Chile/Clases/2023/Primer semest
-re/Grafos/out/Apuntes - GRAFOS.pdf" (87 pages, 1156691 bytes).
+re/Grafos/out/Apuntes - GRAFOS.pdf" (100 pages, 1225484 bytes).
 PDF statistics:
- 2454 PDF objects out of 2487 (max. 8388607)
- 1507 compressed objects within 16 object streams
- 462 named destinations out of 1000 (max. 500000)
- 685 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 2602 PDF objects out of 2984 (max. 8388607)
+ 1639 compressed objects within 17 object streams
+ 527 named destinations out of 1000 (max. 500000)
+ 709 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -1294,7 +1294,7 @@ Veremos la demostración la clase siguiente.
 
 
 
-\begin{Theorem}
+\begin{Theorem}\label{th:paseo Euleriano si todos los vertices del multigrafo tienen grado par}
 Un multigrafo conexo es Euleriano si y solo si todos sus vértices tienen grado par.
 \end{Theorem}
 \begin{proof}
@@ -1769,20 +1769,13 @@ Comentario, el resultado es falso solo para $n = 2$. En efecto, veremos en la de
 y un camino de longitud uno no cumple pues $2 \delta = 2$ y $n = 2$ pero la longitud de cualquier sub camino o ciclo
 es a lo más uno.
 
-Procederemos por inducción en $\abs G = n$. Vale trivialmente para $n=1$; vimos que para $n=2$ es falso; pero para $n
-=3$ vale pues $G$ es un camino o un ciclo de longitud $3$ y aquí si vale la afirmación. En general, supongamos que es
- falso para algún $n \geq 4$, el cual podemos tomarlo mínimo. Sea $P$ un camino o ciclo de longitud máxima $m$ en $G$, notar que $m < 2 \delta (G), n$. Supongamos que $P$ es un camino, luego sus extremos no pueden ser adyacentes (por maximalidad de $P$), pero tampoco pueden tener tener vecinos
+Consideremos $P$ el camino de longitud máxima. Por maximalidad los vecinos de los extremos de $P$ tienen que estar en $P$. Si $G[P]$ forma un ciclo $C$ de longitud mayor a $P$, i.e. $G[C] = G[P]$ debe ser que
+\begin{enumerate}[(i)]
+\item $\Abs C = \abs G$ si $G = G[C]$. Luego en este caso se tiene que vale la afirmación;
+\item o si no, como $G$ es conexo existe un vértice $v \not \in V(C)$ adyacente a $C$. Más aún, todos sus vecinos deben estar en $C$, de lo contrario podíamos encontrar un camino más grande que $P$. Con lo cual $\delta (G) \leq d (v) \leq \Abs C / 2$ porque no puede haber dos vecinos de $v$ en $C$ ayacentes mediante una arista de $C$ por maximalidad de $C$. Luego en este caso también vale la afirmación.
+\end{enumerate}
 
-SEGUIR PENSANDO
- Sea $v \in G \setminus P$. Debe ser que todos sus vecinos son vértices de $P$. En efecto, completar...
- Luego, notar que si $x,y \in N_G(v)$ son distintos, entonces no pueden ser adyacentes por maximalidad de $P$, luego $P$ tiene logitud $ \geq 2 (\delta(G))$ si $v$ no tiene grado mínimo, con lo cual todos los vértices fuera de $P$ tienen grado $\delta(G)$ y además $P$ tiene longitud $\geq 2 (\delta(G)-1)$.
-
- Si $P$ es un ciclo la demostración es una versión más facil de la anterior y es análoga.
-
- Si $P$
-
-
-
+Por otro lado, si $G[P]$ no forma ciclos de longitud mayor a $P$, debe ser que los extremos de $P$ (digamos $x_1$ y $x_2$, que podemos suponer son distintos pues este caso es trivial) no son vecinos entre sí. Veamos que esto implica que $\Abs P \geq 2 \delta (G)$, para eso, basta ver que $\Abs P \geq d (x_1) + d (x_2)$. En efecto, ordenemos a los vecinos de $x_1$ en $P$: $V: v_1<v_2< \cdots < v_{d(x_1)}$; similarmente ordenamos los vecinos de $x_2$ en $P$: $W: w_1 < w_2 <\cdots < w_{d(x_2)}$. Notemos que un elemento de $v \in V$ no puede ser adyacente a un elemento $w \in W$ cuando $v > w$, pues podríamos construir un ciclo de longitud más grande que $P$: $w x_2 P v x_1 P w$. Luego con esta observación, probemos que el camino de $P$ generado por todos los vértices $x_i,y_j$ tiene longitud al menos $d(x_1) + d(x_2) -2$. Para eso, basta ver que este conjunto tiene al menos $d (x_1) + d(x_2) -1$ vértices. Sea $j_0$ el primer índice tal que $y_{j_0}$ coincide con un $x_i$, luego debe ser que para todo $y_j$ con $j > j_0$ tal que coincide con un $x_i$ no puede ser consecutivo a $y_{j-1}$ (por la observación de recién con $v = y_{j}$ y $w = y_{j-1}$), de hecho debe haber un vértice entre $y_{j-1}$ e $y_j$ que no sea ningún $x_i$: el consecutivo a $y_{j-1}$ por la observación anterior. Es decir, salvo por $y_{j_0}$ los $y_j$ son distintos a los $x_i$ o si coinciden con algún $x_i$ es porque hay un tercer vértice distinto de $x_i$ o $y_j$ que podemos contar en lugar de $y_j$.
 \end{solution}
 
 \begin{exercise}
@@ -2161,8 +2154,8 @@ Veamos la recíproca. Lo haremos por inducción en $\abs X =: n$. Si $n =1$ es t
  \end{enumerate}
 \end{proof}
 
-\begin{corollary}[König-Frobenius]
-Todo $X,Y$-bigrafo regular (no trivial) tiene un matching perfecto. En particular $\abs X = \abs Y$.
+\begin{corollary}[König-Frobenius]\label{corollary:König-Frobenius - todo bigrafo regular no trivial tiene un matching perfecto}
+Todo $X,Y$-bigrafo $(k \geq 1)$-regular tiene un matching perfecto. En particular $\abs X = \abs Y$.
 \end{corollary}
 \begin{proof}
     En un $X,Y$-bigrafo $k$-regular $G$, consideramos $S \subset X$. Veamos que $N(S) \geq S$. Antes, notemos que
@@ -2182,7 +2175,36 @@ Todo $X,Y$-bigrafo regular (no trivial) tiene un matching perfecto. En particula
 \end{proof}
 
 
+\subsection{Matchings con preferencias}
 
+En alguna aplicaciones a la vida real, los matchings suelen ser buscados con algún tipo de ``estabilidad''. Más formalmente, sea $(\leq_v)_{v \in V}$ una familia ordenes totales en $E(v)$: el \textbf{conjunto de preferencias} de $G$. Luego diremos que un matching $M$ de $G$ es \textbf{estable} si para toda arista $e \in E \setminus M$, existe una arista $f \in M$ tal que $e$ y $f$ ccomparten un vértice $v$ tal que $e <_v f$.
+
+ \begin{theorem}[El teorema del matrimonio estable - Gale & Shapley (1962)]
+ Para cualquier conjunto de preferencias $(\leq_v)_{v \in V}$ de un $X,Y$-bigrafo $G = (V,E)$. $G$ tiene un matching estable.
+ \end{theorem}
+ \begin{proof}
+ Llamemos a un mataching $M$ de $G$ \textbf{mejor} que un matching $M' \neq M$, si $M$ hace que todos los vérticces de $Y$ más felices que $M'$, más precisamente, si todo vértice $y \in Y$ incidente en una arista $f' \in M'$ es también incidente a algún $f \in M$ tal que $f' \leq_y f$. Construiremos una sucesión de matchings cada vez mejores. Como por cada vértice $y \in Y$, podemos mejorar su felicidad a lo más unas $d(y)$ veces, este procceso debe terminar eventualmente.
+
+Fijado un matching $M$, diremos que un vértice $x \in X$ es \textbf{aceptable} para $y \in Y$, si $e = xy \in E \setminus M$ y para cualquier arista $f \in M$ incidente en $y$ satisface $f <_y e$. Llamemos a $x \in X$ \textbf{feliz con $M$} si $x$ no está cubierto por $M$ o si la arista $f \in M$ que lo cubre satisface $f >_x e$ para toda arista $e = xy$ tal que $x$ es aceptable para $y$.
+
+Empezando con el matching vacío, construimos una sucesión de matchings que hagan felices a todos los vértices en $X$. Dados un matching $M$ que cumple esto, cconsideremos un vértice $x \in X$ que no está cubierto por $M$ pero aceptable para algún $y \in Y$ (Si $x$ no existe, la sucesión termina). Luego agregamos a $M$ la arista $xy$ máxima respecto del orden $\leq_x$ tal que $x$ es aceptable para $y$, y descartemos de $M$ cualquier otra arista de $y$.
+
+Claramente, todo matching en nuestra sucesión es mejor que las anteriores y mantiene a los vértices de $X$ felices, los cuales lo estaban desde el principio pues empezamos con el matching vacío. Con lo cual, la sucesión continua hasta que termina con algún mathinc $M$ que no tiene vvérticces sin cubrir en $X$ que sea aceptable para algún vecino en $Y$. Como todo vértice en $X$ es feliz con $M$, este matching es estable.
+\end{proof}
+
+
+\begin{definition}
+Llamamos a un subgrafo $k$-regular generador de un grafo $G$, un \textbf{k-factor}.
+\end{definition}
+
+\begin{corollary}[Petersen (1891)]
+Todo grafo $2k$-regular ($k \geq 1$) $G$ tiene un $2$-factor.
+\end{corollary}
+\begin{proof}
+Sin perdida de generalidad supongamos que $G$ es conexo. Por el Teorema \ref{th:paseo Euleriano si todos los vertices del multigrafo tienen grado par}, $G$ contiene un paseo Euleriano $v_0 e_0 \cdots e_{\ell -1} v_\ell$ con $v_0 = v_\ell$. Reemplacemos cada vértice $v$ por un par $(v^- , v^+)$, y cada arissta $e_i = v_i v_{i+1}$ por la arista $v_i^+ v_{i+1}^-$. Así obtenemos un grafo bipartito $G'$ que es $k$-regular, con lo cual el Corolario \ref{corollary:König-Frobenius - todo bigrafo regular no trivial tiene un matching perfecto} implica que tenemos un $1$-factor (i.e. un matching perfecto). Colapsando cada par $(v^-,v^+)$ de vuelta a su vértice original $v$, el $1$-factor de $G'$ se convierte en un $2$-factor de $G$.
+
+\Dibujo{Ver la pagina 41 del Diestel.}
+\end{proof}
 
 \subsection{Relaciones min-máx}
 
@@ -2467,6 +2489,166 @@ Acabamos de observar una de las implicaciones, veamos la vuelta. Supongamos que 
     Cada componente de $H$ alterna entre $M$ y $M'$, y por lo tanto sus ciclos son pares. Al tener $\abs{M'} > \abs M$ tiene que haber en $H$ una componente que no es ciclo. Más aún, alguna de las componentes que no son ciclos tiene que tener más aristas de $M'$ que de $M$. Por lo tanto, hay una componente que es camino que empieza y termina con aristas de $M'$. Esta componente nos da un camino $M$-aumentante, lo cual es imposible.
 \end{proof}
 
+\begin{obs}\label{obs}
+En general, sea $G$ un grafo con un matching máximo $M$, y sea $U$ el conjunto de vértices de $G$ que no están cubiertos por $M$. Luego si $u \in U$, implica que todos los vecinos de $u$ están cubiertos por $M$.
+\end{obs}
+\begin{proof}
+En efecto, pues de lo contrario, si $u ' \in U$ es un vecino de $u$, agregando la arista $uu'$ a $M$ obtendríamos un matching más grande.
+\end{proof}
+
+\begin{exercise}
+Sea $G$ un grafo con grado máximo $\Delta (G) = k$. Sea $M$ un matching máximo de $G$. Para $k \geq 3$, demuestre que el número de aristas que une vértices cubiertos por $M$ a vértices no cubiertos por $M$ es a lo más $(k-1) \abs M$.
+\end{exercise}
+
+\begin{solution}
+Sea $S$ el conjunto de aristas que unen vértices cubiertos por $M$ a vértices no cubiertos por $M$. Llamemos $U$ al conjunto de vértices que no están cubiertos por $M$. Tenemos que para todo $u \in U$ los vecinos de $u$ son todos vértices cubiertos por $M$ por la Observación \ref{obs}.
+
+\begin{definition}
+Sea $u \in U$ con $U$ como recién. Sea $e$ una arista de $M$ que tiene uno de sus extremos vecino a $u$. Si $e$ tiene alguno de sus extremos adyacente a $u$, diremos que $e$ es \textbf{vecina} de $u$ y diremos que $u$ es \textbf{vecino} de $e$. Diremos que $u$ es \textbf{compañero} de $e$ si es adyacente a ambos extremos de $e$. De lo contrario, diremos que es \textbf{no compañero}, y notaremos como $x_u$ al único vértice de $e$ adyacente a $u$.
+\end{definition}
+
+\begin{lemma}
+Para $e \in M$ fijo pueden ocurrir dos casos disjuntos:
+\begin{enumerate}
+\item $e$ tiene solamente un único vecino en $U$, el cual es compañero de $e$.
+\item Todos los vecinos $u \in U$ de $e$ son \textit{no compañeros} ($e$ podría no tener vecinos en $U$) adyacentes a un único extremo de $e$.
+\end{enumerate}
+\end{lemma}
+\begin{proof}
+Supongamos que $e \in M$ tiene algún vecino $u \in U$. Si $u$ es el único vecino, o estamos en el primer caso o estamos en el segundo. Si $u$ no es único, es decir, existe otro vértice $v \in U$ vecino de $e$, entonces si o si $u$ y $v$ deben ser ambos adyacentes al mismo vértice $x$ o $y$, donde $e = xy$. En efecto, de lo contrario si $u$ es adyacente a $x$ y $v$ es adyacente a $y$, entonces como $u,v$ no son extremos de ninguna arista de $M$, reemplazando la arista $e \in M$ por las aristas $xu$ e $yv$, obtenemos un matching más grande que $M$, absurdo. Esta misma demostración prueba que $u$ y $v$ no pueden tener más de un vecino que sea extremo de $e$, es decir, ambos son no compañeros. Con lo cual, si aplicamos este razonamiento a todos los vecinos de $e$ en $U$, deben ser todos no compañeros y adyacentes a un único extremo de $e$, i.e. estamos en el segundo caso.
+
+Es claro que estos dos casos son disjuntos.
+\end{proof}
+
+El lema anterior nos permite contar de la siguiente manera: para cada $e \in M$ nos fijamos si estamos en el caso 1. o en el caso 2. En el primer caso contamos solamente un vecino de $e$ en $U$, i.e. $2 \leq k-1$ aristas de $S$. En el segundo caso, todos los vecinos de $e =xy$ en $U$ son adyacentes a un único extremo $x$ o $y$, digamos $x$, luego $e$ puede tener a lo más $k-1$ vecinos en $U$ (no contamos a $y$), i.e. contamos $\leq k-1$ aristas de $S$. Juntando ambos casos disjuntos, nos queda que $\abs S \leq (k-1) \abs M$.
+\end{solution}
+
+
+
+
+\begin{exercise}
+Dos personas juegan un juego en un grafo: se alternan para elegir vértices $v_1,v_2, \ldots$ de modo que para todo $i \geq 2$, el vértice $v_i$ es adyacente al veŕtice $v_{i-1}$ y no ha sido escogido antes. El último jugador capaz de escoger un vértice gana.
+\begin{enumerate}[(a)]
+\item Demuestre que el segundo jugador tiene una estrategia ganadora si el grafo tiene un matching perfecto.
+\item Demuestre que el primer jugador tiene una estrategia ganadora si el grafo no posee un matching perfecto.
+\end{enumerate}
+\end{exercise}
+\begin{solution}
+\begin{enumerate}[(a)]
+\item Sea $M$ un matching perfecto de $G$. Afirmo que la estrategia ganadora del segundo jugador es elegir el extremo opuesto de la arista de $M$ cuyo extremo ha sido escogido por el primer jugador en el anterior turno. En efecto, supongamos que esta estrategia falló. Es decir, ocurrió una cantidad impar elecciones de vértices de $G$: $v_1, v_2, v_3, v_4, \ldots, v_{2k -1}$ para algún $k \in \naturals$ y $v_{2k-1}$ no tiene vecinos sin visitar. (Notar que $k \geq 2$, pues el grafo está cubierto por un conjunto de aristas no vacío $M$). Ahora, la estrategia del segundo jugador implica que las aristas $e_1 := v_1 v_2, e_2 := v_3 v_4 , \ldots, e_{k-1} := v_{2k-3} v_{2k-2}$ pertenecen al matching $M$. Luego $v_{2k-1}$ pertenece a una arista de $M$ distinta de $e_1, \ldots, e_{k-1}$, es decir, $v_{2k-1}$ tiene un vecino distinto sin escoger: el extremo opuesto de una arista de $M$ que cubre a $v_{2k-1}$, absurdo. Con lo cual, esta era una estrategia ganadora para el segundo jugador.
+
+ \item Sea $M$ un matching máximo de $G$, con $G$ sin matching perfecto. Sea $U$ el conjunto de vértices de $G$ que no están cubiertos por $M$. Notemos por $U_k$ al conjunto de vértices que no están cubiertos por las aristas de $M_k := M \cap E(G_k)$, donde $G_k$ es el grafo obtenido a partir de $G$ luego quitar todos los vértices escogidos por ambos jugadores previos al $k$-ésimo turno del primer jugador.
+  La estrategia del primer jugador será siempre elegir un vértice de $U_k$ en su $k$-ésimo turno. A priori no sabemos que siempre se pueda escoger un vértice de $U_k$. Sin embargo, veremos que efectivamente se puede. Más precisamente, probaremos por inducción la afirmación más fuerte:
+
+\begin{proposition}\label{proposicion}
+Para todo $k \geq 1$, se tiene que si el primer jugador no ganó en su $(k-1)$-ésimo turno, entonces
+\begin{enumerate}[(i)]
+\item $M_k$ es un matching máximo de $G_k$;
+\item Todos los vecinos de cualquier elemento $u$ de $U_k$ están cubiertos por una arista de $M_k$.
+\item El primer jugador puede escoger un vértice de $U_k$ en su $k$-ésimo turno.
+\end{enumerate}
+\end{proposition}
+
+Necesitamos un lema previo:
+
+\begin{lemma}\label{lema}
+ En general, si $M$ es un matching máximo de un grafo $G$, y $x$ es un extremo de una arista $e$ de $M$, e $y$ es un vértice adyacente a $x$ que no está cubierto por $M$. Entonces el grafo $G' = G \setminus \{x,y\}$ tiene a $M' = M \cap E(G')$ como matching máximo.
+\end{lemma}
+\begin{proof}
+ Supongamos que no, es decir que existe un matching $W$ de $G'$ con más aristas que $M'$, es decir $\abs {M'} \leq \abs W - 1$. Notar que $\abs {M'} = \abs M - 1$ porque borramos dos véŕtices $x,y$: donde $x$ solamente es extremo de una arista de $M$ por ser un matching, e $y$ no era extremo de ninguna arista de $M$ por cómo lo elegimos. Esto implica que $\alpha ' (G) - 1 \leq \abs W - 1$. Luego como $W$ también es un matching de $G$, debe ser que $\abs W \leq \alpha ' (G)$, con lo cual $\alpha ' (G) = \abs W$ y $W$ es un matching máximo de $G$. Sean $x$ y $e \in M$ como al principio. Por construcción de $W$, tenemos que $e = xy$ no está en $W$, más aún, esta arista es independiente de $W$, luego $W \cup \{e \}$ es un matching de $G$ de tamaño $\alpha ' (G) + 1$, absurdo. Esto prueba que $M'$ es un matching máximo de $G'$.
+\end{proof}
+
+Estamos ahora en condiciones de probar la Proposición \ref{proposicion}:
+\begin{proof}
+Si $k = 1$, como $M_k = M$, $G_k = G$ y $U_k = U$, no hay nada que probar en (i); (ii) se sigue inmediatamente de la Observación \ref{obs}; (iii) se sigue de que $G_k$ no tiene matching perfecto. En general, si el primer jugador no ganó en su $k$-ésimo turno, $M_{k+1}$ es igual a $M_k \cap E(G_{k+1})$, donde notemos que $G_{k+1} = G_k \setminus \{x_k, y_k\}$, y $x_k$ es el vértice escogido por el primer jugador en el $k$-ésimo turno $y_k$ el vértice (adyacente) escogido subsecuentemente por el segundo jugador, más aún, por hipótesis inductiva $x_k \in U_k$ es un vértice no cubierto por el matching máximo $M_k$ de $G_k$, con lo cual $y_k$ es adyacente a $x_k$ y está cubierto por una arista de $M_k$ y luego por el Lema \ref{lema} $M_{k+1}$ es un matching máximo de $G_{k+1}$. Esto prueba (i). Por la Observación \ref{obs}, los vecinos de todo $u \in U_{k+1}$ tienen que estar cubiertos por el matching máximo $M_{k+1}$, probando así (ii). Como $y_k$ esta cubierto por una arista de $M_k$, el otro extremo de esta arista puede ser escogido por el primer jugador, y además debe estar en $U_{k+1}$, pues la única arista de $M$ que incide en este extremo fue eliminado de $G_k$ (recordar que $M_{k+1} = M_k \cap E(G_k) = M \cap E(G_{k+1})$). Así, se sigue (iii).
+\end{proof}
+
+Finalmente, el último ítem de la Proposición \ref{proposicion} dice que si el primer jugador no ganó en su $k$-ésimo turno, luego puede escoger un vértice en su $(k+1)$-ésimo turno. Esto significa que el primer jugador siempre va a ser el último en escoger un vértice, es decir, cuando el juego eventualmente termine, el primer jugador ganará: la estrategia es ganadora.
+\end{enumerate}
+\end{solution}
+
+\subsection{Matchings en grafos generales}
+
+Dados un grafo $G$ llamemos $\mathcal C _G$ al conjunto de componentes conexas, y por $q(G)$ al número de sus componentes de orden impar. Si $G$ tiene un matching perfecto $M$, luego claramente tenemos
+\begin{equation}\label{eq:condicion de Tutte}
+q(G \setminus S) \leq \abs S \quad \forall S\subset V(G),
+\end{equation}
+ya que toda componente impar de $G \setminus S$ tiene que mandar una arista de $M$ en $S$: por paridad una de las aristas de $M$ tiene un extremo en la componente impar y el otro en $S$; claramente dos compoenentes no pueden estar asociadas de esta manera a un mismo vértice de $S$ porque $M$ es un matching.
+\Dibujo{Ver ilustración de la condición de Tutte.}
+
+Diremos que la ecuación \eqref{eq:condicion de Tutte} es la \textbf{condición de Tutte}. De hecho se tiene que esta condición es necesaria y suficiente:
+
+\begin{theorem}[Tutte (1947)]\label{th:teorema de Tutte}
+Un grafo $G$ tiene un matching perfecto si y solo si
+\[
+    q(G\setminus S) \leq \abs S \quad \forall S \subset V(G),
+\]
+es decir, se cumple la condición de Tutte \eqref{eq:condicion de Tutte} para todo $S \subset V(G)$.
+\end{theorem}
+\begin{proof}
+Recien vimos una implicación, con lo cual nos resta ver la implicación recíproca. Por el absurdo, supongamos que $G= (V,E)$ es un grafo sin matching perfecto, y supongamos que es arista-maximal con esta propiedad: esto es posible pues si $G'$ se obtiene a partir de $G$ agregando aristas y $S \subset V$ no cumple la condición de Tutte en $G'$, luego $S$ tampoco lo cumple en $G$, pues toda componente impar de $G' \setminus S$ es la unión de las componentes impares de $G \setminus S$, o sea que una de estas debe ser impar.
+
+Ahora, claramente si $G$ contiene un conjunto $S$ que no cumple la condición de Tutte, luego por arista-maximalidad y de la implicación del teorema que ya probamos:
+\begin{afirmacion}
+Todas las componentes de $G \setminus S$ son completas y todo vértice $s \in S$ es adyacente a todos los vértices de $G \setminus s$.
+\end{afirmacion}
+Pero recíprocamente, si un conjunto $S \subset V$ satisface la afirmación anterior, entonces $S$ o el conjunto vacío deben violar la condición de Tutte: Si $S$ no viola la condición de Tutte, podemos unir las componentes impares de $G \setminus S$ de manera disjunta con $S$ y emparejar a todos los vértices restantes formando un matching perfecto, salvo que $\abs G$ sea impar, en cuyo caso $\emptyset$ no cumple \eqref{eq:condicion de Tutte}.
+
+Con lo cual, si probamos que $G$ contiene un subconjunto $S$ que cumple la afirmación llegaremos a un absurdo. Sea $S$ el conjunto de vérticees que son adyacentes a todo otro vértice. Si $S$ no cumple la afirmación, es porque alguna componente de $G\setminus S$ tiene dos vértices $a,a'$ no adyacentes. Sean $a,b,c$ los primeros tres vértices en algún $a$-$a'$ camino de longitud mínima dentro de esta componente; entonces $ab,bc \in E$ pero $ac \not \in E$. Como $b \not \in S$, existe un vértice $d \in V$ tal que $bd \not \in E$. Por maximalidad de $G$, existe un matching $M_1$ que cubre $V$ en $G+ ac$, y otro matching $M_2$ que cubre a $V$ en $G + bd$.
+
+\Dibujo{Ver la pagina 42 para una ilustración de la contradicción.}
+
+Sea $P = d \cdots v$ un camino maximal en $G$ que empieza en $d$ con una arista de $M_1$ y que contiene alternadamente aristas de $M_1$ y $M_2$ como se ve en el dibujo de arriba. Si la última arista de $P$ se encuentra en $M_1$, entonces $v = b$, pues si no podríamos continuar $P$ y obtener un camino $M_2$-aumentante en $G + bd$. Escribamos entonces $C := P + bd$ en este caso. Por otro lado, si la última arista de $P$ yace en $M_2$, entonces por maximalidad de $P$ la $M_1$-arista en $v$ debe ser $ac$, con lo cual $v \in \{a, c \}$; en este caso escribamos $C:= d P v b d$. En cualquier caso, $C$ es un ciclo par donde las aristas se alternan afuera y adentro de $M_2$, y con su única arista fuera de $E$ es $bd$. Reemplazando en $M_2$ sus aristas en $C$ por las aristas de $C \setminus M_2$, obtenemos un matching perfecto de $G$ contenido en $E$, absurdo.
+\end{proof}
+
+\begin{corollary}
+Todo grafo $G = (V,E)$ $3$-regular sin puentes tiene un matching perfecto.
+\end{corollary}
+\begin{proof}
+Por el Teorema de Tutte, basta ver que todo $S \subset V$ cumple la condición \eqref{eq:condicion de Tutte}. En efecto, consideremos las componentes impares $C$ de $G\setminus S$. Como $G$ es $3$-regular, los grado en $G$ de los vértices en $C$ suman un número impar, pero solamente una cantidad par de esta suma proviene de aristas en $C$: tenemos la siguiente ecuación módulo $2$
+\begin{align*}
+1 &\equiv \sum_{v \in C} d_G (v)
+&= \left ( \sum_{v \in C}  d_C (v)\right) + \# \{\text{$C$-$S$ caminos}\},
+\end{align*}
+pero la sumatoria del lado derecho es par, pues recordemos que esta sumatoria es el doble de la cantidad de aristas de $C$.
+ Con lo cual, $G$ tiene un número impar de $S$-$C$ aristas, y por lo tanto tiene al menos $3$ de estas aristas ya que $G$ no tiene puentes. Consecuentemente el número de aristas entre $S$ y $G\setminus S$ es al menos $3 q (G\setminus S)$. Por otro lado, esta cantidad es a lo más $3 \abs S$, porque $G$ es $3$-regular. Juntando ambas cosas, nos queda $q ( G\setminus S) \leq \abs S$, como queríamos probar.
+\end{proof}
+
+
+\bigskip
+
+\begin{definition}
+Un grafo no vacío $G = (V,E)$ se llama \textbf{factor-crítico} si no tiene matching perfecto, pero para cada vértice $v \in G$, el grafo $G \setminus \{v\}$ tiene un matching perfecto.
+
+Llamamos a un conjunto de vértices $S \subset V$ matcheable con $\mathcal C_{G\setminus S}$ si el grafo bipartito $G_S$\footnote{, $G_S$ es el grafo creado a partir de $G$ por contracción de las componentes $C \in \mathcal_{G\setminus S}$ a vértices y borrando todas las aristas dentro de $S$. Formalmente, $G_S$ es el grafo con conjunto de vértices $S \ccup \mathcal C_{G\setminus S}$ y conjunto de aristas $\set{sC | \text{ existe un vértice $c \in C$ adyacente a $s$ en $G$}}$.} contiene un matching que cubre a $S$.
+\end{definition}
+
+\Dibujo{Ilustración de grafo $G_S$.}
+
+\begin{theorem}
+Todo grafo $G = (V,E)$ contiene un conjunto de vértices $S$ con las siguientes propiedades:
+\begin{enumerate}
+\item $S$ es matcheable con $\mathcal C _{G \setminus S}$;
+\item toda componente de $G\setminus S$ es factor-crítico.
+\end{enumerate}
+Más aún, dados un conjunto $S$ de esta forma, el grafo $G$ contiene un matching perfecto si y solo si $\abs S = \abs{\mathcal C_{G \setminus S}}$.
+\end{theorem}
+
+Para un grafo $G$, la afirmación del teorema de Tutte se sigue directamente de este resultado. En efecto, por (i) e (ii) tenemos que $\abs S \leq \abs{\mathcal C_{G\setminus S}} = q (G\setminus S)$ ya que los grafos factores-críticos tienen orden impar; con lo cual la condición \eqref{eq:condicion de Tutte} $q (G\setminus S) \leq \abs S$ implica $\abs S = \abs {\mathcal C _{G\setminus S}}$, y la existencia de un matching perfecto se sigue de la última afirmación del resultado.
+
+\begin{proof}
+
+\end{proof}
+
+
+
+
+
+
+
+
+
+
 
 
 %%%%%%%%%%%
@@ -2506,9 +2688,10 @@ Sean $P_1, P_2, P_3$ arcos disjuntos salvo en sus extremos, donde cualquier par 
 
 \Inkscape{Dos ilustraciones del lema.}
 
-\begin{lemma}
+\begin{lemma}\label{lema:arco tiene una sola cara}
 Para todo arco $P$, el conjunto $\reals^2 \setminus P$ tiene una sola región.
 \end{lemma}
+
 
 \bigskip
 
@@ -2534,17 +2717,73 @@ Es conveniente pensar al \textit{grafo plano} asosciado a un \textit{grafo plana
 
 
 
+%%%%%%%%%%%
+\Clase{18/05/23}   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%
 
 
+\begin{definition}
+Si $G$ es un grafo plano, llamamos \textbf{caras} a las regiones de $\reals \setminus G$. Al conjunto de caras de $G$ lo denotamos por $\mathcal F (G)$.
+\end{definition}
+
+Como trabajamos con grafos planos finitos, estos son acotados, es decir, existe una bola $B \subset \reals^2$ tal que $G \subset B$. Siempre va a haber una cara que contiene a $\reals^2 \setminus B$ y esa cara la llamamos \textbf{cara exterior}.
+
+\Dibujo{Ejemplo.}
+
+\begin{lemma}
+Sea $G$ un grafo plano, $f$ una de sus caras y $H$ un subgrafo de $G$. Entonces,
+\begin{enumerate}[(i)]
+\item $H$ tiene una cara $f'$ que contiene a $f$.
+\item Más aún, si la frontera de $f$ está en $H$, entonces $f' = f$.
+\end{enumerate}
+\end{lemma}
+
+\Dijubo{Ilustración del lema.}
+
+\begin{proof}
+\begin{enumerate}[(i)]
+\item Es claro que los puntos en $f$ son equivalentes en $\reals^2 \setminus H$; escojo $f'$ como la clase de equivalencia que los contiene.
+\item Todo arco entre $f$ y $f' \setminus f$ pasa por la frontera $X$ de $f$. Si $f' \setminus f \neq \emptyset$, entonces hay un arco dentro de $f'$ cuyos puntos en $X$ no están en $H$. Entonces $X \not \subset H$.
+\end{enumerate}
+\end{proof}
+
+\Dibujo{Ilustración de la prueba.}
+
+\begin{lemma}
+Sea $G$ un grafo plano y $e$ una arista de $G$. Entonces,
+\begin{enumerate}[(i)]
+\item Si $X$ es la frontera de una cara de $G$, luego o bien $e \subset X$ o se tiene que $X \cap I (e) = \emptyset$.
+\item Si $e$ está en un ciclo $C \subset G$, luego $e$ está en la frontera de exactamente dos caras de $G$, más aún, estas están contenidas en distintas caras de $C$.
+\end{enumerate}
+\end{lemma}
+
+\Dibujo{Visulización del lema.}
+
+\begin{proposition}
+Si $G$ es un grafo plano que corresponde a un árbol, $G$ tiene una sola cara.
+\end{proposition}
+\begin{proof}
+Se deduce del Lema \ref{lema:arco tiene una sola cara} dice que un arco genera una sola cara.
+\end{proof}
 
 
+\begin{theorem}[Fórmula de Euler]
+    Sea $G$ un grafo plano conexo con $n$ vértices, $m$ aristas y $f$ caras. Entonces, se tiene
+    \[
+            \boxed{n - m + f = 2.}
+    \]
+\end{theorem}
+\begin{proof}
+Fijemos $n$ y hacemos inducción en la cantidad de aristas $m$. Si $m \leq n -1$, entonces $G$ es un árbol y $m = n-1$; pero la proposición anterior implica que el árbol tiene una sola cara, y por lo tanto $n - m + f = n - (n-1) + 1 = 2$.
 
-
-
-
-
-
-
+Ahora, supongamos que $m \geq n$, entonces $G$ tiene una arista $e$ que está en un ciclo. Sea $G' = G \setminus e$. Por el lema anterior ítem (ii), $e$ está en la frontera de exactamente dos caras $f_1,f_2$ de $G$. Como los puntos en $I(e)$ de $G$. Como los puntos en $I(e)$ son equivalentes en $\reals^2 \setminus G'$, entonces hay una cara $f_e$ de $G'$ que contiene a $I(e)$.
+\Dibujo{Visualización.}
+Luego basta demostrar que
+\[
+    \mathcal F (G) \setminus \{f_1, f_2 \} = \mathcal F (G') \setminus \{f_e\},
+\]
+porque lluego $G'$ tiene exactamente una cara y una arista menos que $G$. Así obtenemos el resultado por hipótesis inductiva.
+\end{proof}
 
 
 
