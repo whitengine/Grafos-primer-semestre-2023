@@ -70,16 +70,17 @@ De manera la manera usual, para cualquier subespacio $\mathcal{F} \subset \mathc
     \mathcal{F}^\perp := \Set{D \in \mathcal{E}(G) | \langle F , D \rangle = 0, \\ \forall F \in \mathcal{F}}.
 \]
 Que es un subespacio. Se tiene que
-$$
+\begin{equation}\label{eq:formula de la dimension para los subsespacios ortogonales de E(G)}
 \dim \mathcal{F} + \dim \mathcal{F}^\perp = m.
-$$
+\end{equation}
+
 Pues se sigue de la demostración standard, ya que este producto es \textit{no degenerado}, es decír el morfismo de espacios vectoriales $F \mapsto \langle \cdot, F \rangle$ es inyectivo, luego la ecuación se sigue de álgebra lineal (estudiando el espacio dual).
 
 \begin{definition}
 El \textbf{espacio de ciclos} $\mathcal{C} = \mathcal{C}(G)$ es el subespacio de $\mathcal{E}(G)$ generado por todos los ciclos de $G$ (por sus aristas). La dimensión de este espacio se lo llama a veces \textbf{número ciclomático} de $G$.
 \end{definition}
 
-\begin{proposition}
+\begin{proposition}\label{proposition:apendice - definiciones equivalentes de elemento del subespacio de ciclos}
 Las siguientes afiirmacaiones son equivalentes para conjuntos de aristas $D \subset E$:
 \begin{enumerate}[1.]
 \item $D \in \mathcal{C} (G)$;
@@ -99,7 +100,7 @@ Un conjunto $F$ de aristas se dice un \textbf{corte}\footnote{No vamos a incluir
 \end{definition}
 
 \begin{proposition}
-Junto con el conjunto vacío $\emptyset$, los cortes en $G$ forman un subespacio $\mathcal B = \mathcal B ( G) \subset \mathcal{E}(G)$. Este espacio está generado por los cortes de la forma $E(v)$ ( es decir los conjuntos de aristas incidentes a un vértice).
+Junto con el conjunto vacío $\emptyset$, los cortes en $G$ forman un subespacio $\mathcal B = \mathcal B ( G) \subset \mathcal{E}(G)$. Este espacio está generado por los cortes de la forma $E(v)$ (es decir los conjuntos de aristas incidentes a un vértice).
 \end{proposition}
 \begin{proof}
 Sea $\mathcal B$ el subespacio generado por los cortes de la forma $E(v)$ en $\mathcal{E} (G)$. Todo corte de $G$, con partición $\{ V_1 , V_2 \}$, coincide con $\sum_{v \in V_1} E(v)$ y por lo tanto está en $\mathcal{B}$. En efecto, el conjunto $\sum_{v \in V_1} E(v)$ es la diferencia simétrica de los conjuntos $E(v)$, i.e. las aristas que están en algún $E(v), v  \in V_1$ pero no en todos, es decir, las aristas que inciden en un vértice de $V_1$ y que su otro extremo no puede estár en $V_1$, es decir tiene que estár en $V_2$. Recíprocamente, todo conjunto $\sum_{u \in U}E(u) \in \mathcal{B}$ es vacío, por ejemplo si $U \in \{ \emptyset , V \}$, o es el corte $E(U, V \setminus U)$ (mismo razonamiento de antes).
@@ -163,16 +164,16 @@ $$
 para todo $1 \leq i \leq k(1)$ fijo. Hay que verificar que estos son disjuntos entre si, y su unión da $E(V_1,V_2)$, y además que son enlaces (basta ver que su partición induce subgrafos conexos). En efecto, $E(V_1,V_2)$ está claramente contenido en su unión; recíprocamente, las aristas de $E(C_i^1 \cup N (C_i^1)\cap V_2, *)$ están en $E(V_1,V_2)$ pues hay dos posibilidades: o la arista está en $E(C_i^1, C_j^2)$ con $C_j^2 \cap N (C_i^1) = \emptyset$ o está en $E(C_j^2,C_{i'}^1)$. Por contrucción son enlaces porque cada parte de la partición es un subgrafo inducido conexo, pues la parte $\bigcup_{C_j^2 \cap N(C_i^1) = \emptyset} C_j^2 \cup \bigcup_{C_k^1 \neq C_i^1} C_{k}^1$ tiene que ser conexa porque $G$ lo es y las $C_j^i$ con $i$ fijo no están conectadas entre sí porque son las componentes de $V_i$. Finalmente, tienen que ser claramente disjuntas.
 \end{solution}
 
-\begin{theorem}
+\begin{theorem}\label{th:apendice subespacio de ciclos y subespacio de cortes son mutuamente ortogonales entre si}
 El espacio de ciclos $\mathcal{C}(G)$ y el espacio de cortes $\mathcal{B}(G)$ de cualquier grafo satisfacen
 \[
-    \mathcal C = \mathcal B^{perp} \quad \text{y} \quad \mathcal B = \mathcal C^{\perp}.
+    \mathcal C = \mathcal B^{\perp} \quad \text{y} \quad \mathcal B = \mathcal C^{\perp}.
 \]
 \end{theorem}
 \begin{proof}
 Consideremos un grafo $G = (V,E)$. Claramente todo ciclo en $G$ tiene un número par de aristas en cada corte, luego los ciclos son ortogonales a los cortes, es decir
 $$
-\mathcal{C}(B) \subset \mathcal{B}(G)^\perp \quad \text{y} \quad \mathcal(B)(G)  \subset \mathcal{C}(G)^\perp.
+\mathcal{C}(B) \subset \mathcal{B}(G)^\perp \quad \text{y} \quad \mathcal B (G)  \subset \mathcal{C}(G)^\perp.
 $$
 
 Para probar $\mathcal{B}(G)^\perp \subset \mathcal C$ hay que usar la anteúltima proposición que caracteriza los vectores del subespacio de ciclos, es decir $F \not \in \mathcal{C}(G)$ si y solo si tiene un vértice incidente con un número impar de aristas en $F$. Luego $\langle E(v), F \rangle = 1$, entonces como $E(v) \in \mathcal{B}(G)$ se sigue que $F \not \in \mathcal{B}(G)^\perp$. Esto termina de probar que $\mathcal C = \mathcal B ^\perp$ en $G$.
@@ -212,7 +213,7 @@ $$
 Análogamente, lo mismo sucede para un subconjunto de ciclos sfundamentales $\{ C_{e_1}, \ldots, C_{e_s} \}$.
 Con lo cual los cortes fundamentales y los ciclos fundamentales son, respectivamente, conjuntos linealmente independientes en $\mathcal B = \mathcal B (G)$ y $\mathcal C  = \mathcal C (G)$.
 
-Veamos ahora que los ciclos fundamentales generan a un ciclo $C$ arbitrario. Por nuestra observación inicial, $D := C + \sum_{e \in C \setminus T} C_e$, es decir a $C$ le estamos quitando todas las aristas fuera de $T$, es un elemento de $\mathcal C$, que no contiene ningúna arista fuera de $T$, i.e. está contenido en $T$. Pero la Proposición \ref{} los elementos de $\mathcal C$ son unión disjunta de ciclos, pero como $T$ es aciclico, la única opción es que sea el conjunto $\emptyset$. En consecuencia $D = \emptyset$ y en particular $C = \sum_{e \in C \setminus T} C_e$.
+Veamos ahora que los ciclos fundamentales generan a un ciclo $C$ arbitrario. Por nuestra observación inicial, $D := C + \sum_{e \in C \setminus T} C_e$, es decir a $C$ le estamos quitando todas las aristas fuera de $T$, es un elemento de $\mathcal C$, que no contiene ningúna arista fuera de $T$, i.e. está contenido en $T$. Pero por el ítem 2. de la Proposición \ref{proposition:apendice - definiciones equivalentes de elemento del subespacio de ciclos}, los elementos de $\mathcal C$ son unión disjunta de ciclos, pero como $T$ es aciclico, la única opción es que sea el conjunto $\emptyset$. En consecuencia $D = \emptyset$ y en particular $C = \sum_{e \in C \setminus T} C_e$.
 
 Similarmente, todo corte $D$ es la suma de cortes fundamentales. En efecto, el elemento $D + \sum_{f \in D \cap T} D_f$ de $\mathcal B$ no contiene aristas en $T$. Así es, pues si $e \in (E(G) \setminus E(T)) \cap (D + \sum_{f \in D \cap T} D_f)$, entonces por la observación inicial $C_e \cap (D + \sum_{f \in D \cap T} D_f) = \{e\}$ ya que la única arista extra $g$ que podría aparecer debería estar en $T$ pues $C_e$ de lo contrario $g \in C_g \cap C_e$, por otro lado $g$ está en $D$ o en algún $D_f$; por un lado si está en $D$ luego está en un único $D_f$ por la observación inicial, es decir no está en $D + \sum_{f \in D \cap T} D_f$, por otro lado si no oestá en $D$, no puede estar en ningún $D_f$ con $f \in D \cap T$ pues $D_f$ contiene a un único corte fundamental. En resumen, $D + \sum_{f \in D \cap T} D_f$ es vacío. Es decir, $D = \sum_{f \in D \cap T} D_f$.
 \item Por un ladod hay $n-1$ cortes fundamentales, pues hay uno por cada arista del arbol generador $T$ de $G$, el cual tiene $n$ vértices (usamos que los grafos conexos de $n$ vértices tienen $n-1$ aristas si y solo si son árboles). Por otro lado, como vimos que $\mathcal C (G) = \mathcal B (G)^\perp$ y que para todo subespacio $V \subset \mathcal \epsilon (G)$ se tiene $\dim V + \dim V^\perp = \dim \mathcal E (G) = m$, se sigue que $\dim \mathcal C (G) = m-n+1$.
@@ -320,11 +321,11 @@ Un grafo es entonces un multigrafo sin bucles ni aristas múltiples. De manera s
  más complicado (por ejemplo dualidad de planos). Para multigrafos usaremos la misma terminología que vimos para
  grafos, pues estas definiciónes se trasladan de manera obvia. Por ejemplo, ver la Figura \ref{Fig 2 - Apendice 1}.
 
- \begin{center}
- \begin{figure}
-    \includegraphics[width=0.7\linewidth]{"./Apendice/Figuras/Capitulo
-    1/Dibujo 2"}
-    \caption{Contración de la arista $e$ en un multigrafo $G$.}
+\begin{center}
+\begin{figure}
+\input{"./Apendice/Figuras/Capitulo
+    1/Dibujo 2.pdf_tex"}
+\caption{Contracción de la arista $e$ en un multigrafo $G$.}
 \end{figure}
 \label{Fig 2 - Apendice 1}
 \end{center}
@@ -352,7 +353,7 @@ las aristas paralelas a $e$ se convierten en bucles de $v_e$, mientras que las a
   Si $v$ es un vértice de grado $2$ en un multigrafo $G$, luego \textbf{suprimir} $v$ significa quitarlo y agregar
   una arista entre sus dos vecinos. (Si dos aristas incidentes son identicas, i.e. forman un bucle en $v$, no
   agregamos ninguna arista y solo obtenemos $G \setminus v$. Si ambas aristas van al mismo vértice $w \neq v$, la
-  arista agregada será entonces un bucle en $w$. Ver la Figura \ref{}.) Como los grados de todos los vértices
+  arista agregada será entonces un bucle en $w$. Ver la Figura \ref{Fig 2 - Apendice 1}.) Como los grados de todos los vértices
   distintos de $v$ permanecen inmutados cuando $v$ es suprimido, suprimir varios vértices de $G$ siempre nos dará un
   multigrafo bien definido, que es independiente del orden escogido para suprimir los vértices.
 

@@ -1,0 +1,21 @@
+\begin{thebibliography}{Edm91}
+
+\bibitem[Die]{diestelGraphTheory}
+Reinhard Diestel.
+\newblock {\em Graph theory}.
+\newblock Graduate Texts in Mathematics. Springer, 5 edition.
+
+\bibitem[Edm91]{edmonds1991glimpseOfHeaven}
+J~Edmonds.
+\newblock A glimpse of heaven in: History of mathematical programming: A
+  collection of personal reminiscences (jk lenstra, ahg rinnoy kan \& a.
+  schrijver, 1991.
+
+\bibitem[MV80]{micaliSilvioVazirani1980MaximumMatching}
+Silvio Micali and Vijay~V Vazirani.
+\newblock An o (v| v| c| e|) algoithm for finding maximum matching in general
+  graphs.
+\newblock In {\em 21st Annual Symposium on Foundations of Computer Science
+  (sfcs 1980)}, pages 17--27. IEEE, 1980.
+
+\end{thebibliography}

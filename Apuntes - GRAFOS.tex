@@ -15,9 +15,11 @@
 %\subfile{}
 
 
+
 \usepackage{graphicx}
 
-\graphicspath{{./Editor de Grafos/Figuras/Clase 13/}} %esto es para que encuentre las figuras hechas con pdf_tex en inkscape
+\graphicspath{{./Apendice/Figuras/Capitulo
+    1/}{./Editor de Grafos/Figuras/Clase 11/}{./Editor de Grafos/Figuras/Clase 12/}{./Editor de Grafos/Figuras/Clase 13/}{./Editor de Grafos/Figuras/Clase 14/}{./Editor de Grafos/Figuras/Clase 15/}} %esto es para que encuentre las figuras hechas con pdf_tex en inkscape
 
 \usepackage{framed}
 \usepackage[dvipsnames]{xcolor} %agrega mas colores para xcolor.
@@ -845,7 +847,7 @@ Similarmente, podemos acotar el orden de $G$ por abajo, si es que podemos contro
                 \end{cases}
 \]
 
-\begin{theorem}[Versión débil]\footnote{La versión fuerte de este teorema, por Alon, Hoory and Linial, 2002, dice que
+\begin{theorem}[Versión débil]\label{th:version debil del teorema de Alon, Hoory y Lineal en 2002}\footnote{La versión fuerte de este teorema, por Alon, Hoory and Linial, 2002, dice que
  si $d(G) \geq d \geq 2$ y $g(G) \geq g \in \naturals$, entonces $\abs G \geq n_0 (d,g)$.}
 Sea $G$ un grafo con $\delta (G) \geq d \geq 2$ y $g(G) \geq g \in \naturals$. Entonces
 \[
@@ -873,10 +875,10 @@ $$
 \item[Caso $g = 2 r$] Analogo.
 \end{enumerate}
 
-La última afirmación vale, pues sea $d = d(G)/2 = \epsilon (G)$, luego por la Proposición \ref{}, existe un subgrafo $H$ de $G$ tal que $\delta (G) > d$, y por lo tanto aplicando este teorema a $H$ se tiene que $\abs G \geq \abs H \geq n_0 (\delta(H),g(H))$, pero como $\delta (H) > d$ y $g(H) \geq g(G) = g$, y $n_0$ es creciente en ambas variables, se sigue que $\abs G \geq n_0 (d,g)$.
+La última afirmación vale, pues sea $d = d(G)/2 = \epsilon (G)$, luego por la Proposición \ref{prop:ultima proposicion de la clase anterior a caminos y ciclos}, existe un subgrafo $H$ de $G$ tal que $\delta (G) > d$, y por lo tanto aplicando este teorema a $H$ se tiene que $\abs G \geq \abs H \geq n_0 (\delta(H),g(H))$, pero como $\delta (H) > d$ y $g(H) \geq g(G) = g$, y $n_0$ es creciente en ambas variables, se sigue que $\abs G \geq n_0 (d,g)$.
 
 \end{proof}
-\begin{corollary}
+\begin{corollary}\label{corolario:si delta(G) geq 3, entonces g(G) < 2 log_2 abs G}
 Si $\delta(G) \geq 3$, entonces $g(G) < 2 \log_2 \abs G$.
 \end{corollary}
 \begin{proof}
@@ -1758,7 +1760,7 @@ Probar que los grafos de cintura $\geq 5$ y orden $n$ tienen $\delta = o (n)$. E
     $$
     n = \abs G \geq n_0 ( \delta, 5) = 1 + \delta (1 + (\delta -1)) = 1 + \delta^2
     $$
-    por el Teorema débil \ref{}, si $\delta \geq 2$.
+    por el Teorema débil \ref{th:version debil del teorema de Alon, Hoory y Lineal en 2002}, si $\delta \geq 2$.
 \end{solution}
 
 \begin{exercise}
@@ -1799,7 +1801,7 @@ e$ tal que $F + e$ es nuevamente un bosque.
 \begin{solution}
     En efecto, si $F$ tuviera más de una componente, entonces cualquier arista $e \in F'$ con extremo en ambas
     funcionaría. Luego supongamos que $F'$ no tiene aristas que conectan ningúna componente de $F$, es decir por
-    inducción en $\Abs F$ se sigue el resultado. Luego supongamos que $F$ es conexo, es decir es un árbol, como $\Abs {F'} = \abs {F'}- \# \text{componentes}$, se sigue de la desigualdad del enunciado que $F'$ también es conexo. Ahora si consideramos el grafo $G = F + F$, este grafo tiene dos árboles generadores $F$ y $F'$. Si $F$ y $F'$ tuvieran una arista en común, luego el resultado se sigue. De lo contrario, tendríamos que por cada arista $e \in F'$, tenemos un ciclo en $T+e$, es decir un ciclo fundamental $C_e$. Pero por la Proposición \ref{}:
+    inducción en $\Abs F$ se sigue el resultado. Luego supongamos que $F$ es conexo, es decir es un árbol, como $\Abs {F'} = \abs {F'}- \# \text{componentes}$, se sigue de la desigualdad del enunciado que $F'$ también es conexo. Ahora si consideramos el grafo $G = F + F$, este grafo tiene dos árboles generadores $F$ y $F'$. Si $F$ y $F'$ tuvieran una arista en común, luego el resultado se sigue. De lo contrario, tendríamos que por cada arista $e \in F'$, tenemos un ciclo en $T+e$, es decir un ciclo fundamental $C_e$. Pero por la Ecuación \eqref{eq:formula de la dimension para los subsespacios ortogonales de E(G)} aplicada al subespacio de cortes $\mathcal B (G)$ y usando el Teorema \ref{th:apendice subespacio de ciclos y subespacio de cortes son mutuamente ortogonales entre si}:
     \[
     \Abs F + \Abs {F'} = \dim \mathcal E (G) = n -1 + \dim \mathcal C (G)
     \]
@@ -2179,7 +2181,7 @@ Todo $X,Y$-bigrafo $(k \geq 1)$-regular tiene un matching perfecto. En particula
 
 En alguna aplicaciones a la vida real, los matchings suelen ser buscados con algún tipo de ``estabilidad''. Más formalmente, sea $(\leq_v)_{v \in V}$ una familia ordenes totales en $E(v)$: el \textbf{conjunto de preferencias} de $G$. Luego diremos que un matching $M$ de $G$ es \textbf{estable} si para toda arista $e \in E \setminus M$, existe una arista $f \in M$ tal que $e$ y $f$ ccomparten un vértice $v$ tal que $e <_v f$.
 
- \begin{theorem}[El teorema del matrimonio estable - Gale & Shapley (1962)]
+ \begin{theorem}[El teorema del matrimonio estable - Gale \& Shapley (1962)]
  Para cualquier conjunto de preferencias $(\leq_v)_{v \in V}$ de un $X,Y$-bigrafo $G = (V,E)$. $G$ tiene un matching estable.
  \end{theorem}
  \begin{proof}
@@ -2203,7 +2205,7 @@ Todo grafo $2k$-regular ($k \geq 1$) $G$ tiene un $2$-factor.
 \begin{proof}
 Sin perdida de generalidad supongamos que $G$ es conexo. Por el Teorema \ref{th:paseo Euleriano si todos los vertices del multigrafo tienen grado par}, $G$ contiene un paseo Euleriano $v_0 e_0 \cdots e_{\ell -1} v_\ell$ con $v_0 = v_\ell$. Reemplacemos cada vértice $v$ por un par $(v^- , v^+)$, y cada arissta $e_i = v_i v_{i+1}$ por la arista $v_i^+ v_{i+1}^-$. Así obtenemos un grafo bipartito $G'$ que es $k$-regular, con lo cual el Corolario \ref{corollary:König-Frobenius - todo bigrafo regular no trivial tiene un matching perfecto} implica que tenemos un $1$-factor (i.e. un matching perfecto). Colapsando cada par $(v^-,v^+)$ de vuelta a su vértice original $v$, el $1$-factor de $G'$ se convierte en un $2$-factor de $G$.
 
-\Dibujo{Ver la pagina 41 del Diestel.}
+\Inkscape{Partiendo el vértice $v$ en $v^-$ y $v^+$.}
 \end{proof}
 
 \subsection{Relaciones min-máx}
@@ -2574,7 +2576,7 @@ Dados un grafo $G$ llamemos $\mathcal C _G$ al conjunto de componentes conexas, 
 q(G \setminus S) \leq \abs S \quad \forall S\subset V(G),
 \end{equation}
 ya que toda componente impar de $G \setminus S$ tiene que mandar una arista de $M$ en $S$: por paridad una de las aristas de $M$ tiene un extremo en la componente impar y el otro en $S$; claramente dos compoenentes no pueden estar asociadas de esta manera a un mismo vértice de $S$ porque $M$ es un matching.
-\Dibujo{Ver ilustración de la condición de Tutte.}
+\Inkscape[0.6]{Ilustración de la condición de Tutte, de un conjunto \yellow{$S$} con \green{$q(G \setminus S) = 3$} componentes impares en $G\setminus S$, luego se cumple la condición de Tutte pues \yellow{$\abs S = 5$}.}
 
 Diremos que la ecuación \eqref{eq:condicion de Tutte} es la \textbf{condición de Tutte}. De hecho se tiene que esta condición es necesaria y suficiente:
 
@@ -2596,7 +2598,7 @@ Pero recíprocamente, si un conjunto $S \subset V$ satisface la afirmación ante
 
 Con lo cual, si probamos que $G$ contiene un subconjunto $S$ que cumple la afirmación llegaremos a un absurdo. Sea $S$ el conjunto de vérticees que son adyacentes a todo otro vértice. Si $S$ no cumple la afirmación, es porque alguna componente de $G\setminus S$ tiene dos vértices $a,a'$ no adyacentes. Sean $a,b,c$ los primeros tres vértices en algún $a$-$a'$ camino de longitud mínima dentro de esta componente; entonces $ab,bc \in E$ pero $ac \not \in E$. Como $b \not \in S$, existe un vértice $d \in V$ tal que $bd \not \in E$. Por maximalidad de $G$, existe un matching $M_1$ que cubre $V$ en $G+ ac$, y otro matching $M_2$ que cubre a $V$ en $G + bd$.
 
-\Dibujo{Ver la pagina 42 para una ilustración de la contradicción.}
+\Inkscape[.8]{Ver la pagina 42 para una ilustración de la contradicción.}
 
 Sea $P = d \cdots v$ un camino maximal en $G$ que empieza en $d$ con una arista de $M_1$ y que contiene alternadamente aristas de $M_1$ y $M_2$ como se ve en el dibujo de arriba. Si la última arista de $P$ se encuentra en $M_1$, entonces $v = b$, pues si no podríamos continuar $P$ y obtener un camino $M_2$-aumentante en $G + bd$. Escribamos entonces $C := P + bd$ en este caso. Por otro lado, si la última arista de $P$ yace en $M_2$, entonces por maximalidad de $P$ la $M_1$-arista en $v$ debe ser $ac$, con lo cual $v \in \{a, c \}$; en este caso escribamos $C:= d P v b d$. En cualquier caso, $C$ es un ciclo par donde las aristas se alternan afuera y adentro de $M_2$, y con su única arista fuera de $E$ es $bd$. Reemplazando en $M_2$ sus aristas en $C$ por las aristas de $C \setminus M_2$, obtenemos un matching perfecto de $G$ contenido en $E$, absurdo.
 \end{proof}
@@ -2607,7 +2609,7 @@ Todo grafo $G = (V,E)$ $3$-regular sin puentes tiene un matching perfecto.
 \begin{proof}
 Por el Teorema de Tutte, basta ver que todo $S \subset V$ cumple la condición \eqref{eq:condicion de Tutte}. En efecto, consideremos las componentes impares $C$ de $G\setminus S$. Como $G$ es $3$-regular, los grado en $G$ de los vértices en $C$ suman un número impar, pero solamente una cantidad par de esta suma proviene de aristas en $C$: tenemos la siguiente ecuación módulo $2$
 \begin{align*}
-1 &\equiv \sum_{v \in C} d_G (v)
+1 &\equiv \sum_{v \in C} d_G (v)\\
 &= \left ( \sum_{v \in C}  d_C (v)\right) + \# \{\text{$C$-$S$ caminos}\},
 \end{align*}
 pero la sumatoria del lado derecho es par, pues recordemos que esta sumatoria es el doble de la cantidad de aristas de $C$.
@@ -2620,10 +2622,10 @@ pero la sumatoria del lado derecho es par, pues recordemos que esta sumatoria es
 \begin{definition}
 Un grafo no vacío $G = (V,E)$ se llama \textbf{factor-crítico} si no tiene matching perfecto, pero para cada vértice $v \in G$, el grafo $G \setminus \{v\}$ tiene un matching perfecto.
 
-Llamamos a un conjunto de vértices $S \subset V$ matcheable con $\mathcal C_{G\setminus S}$ si el grafo bipartito $G_S$\footnote{, $G_S$ es el grafo creado a partir de $G$ por contracción de las componentes $C \in \mathcal_{G\setminus S}$ a vértices y borrando todas las aristas dentro de $S$. Formalmente, $G_S$ es el grafo con conjunto de vértices $S \ccup \mathcal C_{G\setminus S}$ y conjunto de aristas $\set{sC | \text{ existe un vértice $c \in C$ adyacente a $s$ en $G$}}$.} contiene un matching que cubre a $S$.
+Llamamos a un conjunto de vértices $S \subset V$ matcheable con $\mathcal C_{G \setminus S}$ si el grafo bipartito $G_S$\footnote{$G_S$ es el grafo creado a partir de $G$ por contracción de las componentes $C \in \mathcal C_{G \setminus S}$ a vértices y borrando todas las aristas dentro de $S$. Formalmente, $G_S$ es el grafo con conjunto de vértices $S \cup \mathcal C_{G \setminus S}$ y conjunto de aristas $\set{sC | \text{ existe un vértice $c \in C$ adyacente a $s$ en $G$}}$.} contiene un matching que cubre a $S$.
 \end{definition}
 
-\Dibujo{Ilustración de grafo $G_S$.}
+\Inkscape{Ilustración cómo se ve el grafo $G_S$ construido a partir de \yellow{$S$}.}
 
 \begin{theorem}
 Todo grafo $G = (V,E)$ contiene un conjunto de vértices $S$ con las siguientes propiedades:
@@ -2637,10 +2639,130 @@ Más aún, dados un conjunto $S$ de esta forma, el grafo $G$ contiene un matchin
 Para un grafo $G$, la afirmación del teorema de Tutte se sigue directamente de este resultado. En efecto, por (i) e (ii) tenemos que $\abs S \leq \abs{\mathcal C_{G\setminus S}} = q (G\setminus S)$ ya que los grafos factores-críticos tienen orden impar; con lo cual la condición \eqref{eq:condicion de Tutte} $q (G\setminus S) \leq \abs S$ implica $\abs S = \abs {\mathcal C _{G\setminus S}}$, y la existencia de un matching perfecto se sigue de la última afirmación del resultado.
 
 \begin{proof}
+Notemos que la última afirmación del teorema se sigue de los ítems (i) y (ii): como $\abs S \leq \abs {\mathcal C _{G \setminus S}} = q(G \setminus S)$ porque todas las componentes de $G\setminus S$ son impares al ser factores críticos, se sigue que si $G$ tiene un matching perfecto, luego $q (G\setminus S) \leq \abs S$ y por lo tanto $\abs S = \abs {\mathcal C _{G\setminus S}}$; recíprocamente, si $\abs S = \abs {\mathcal C _{G \setminus S}}$, luego existe un matching perfecto de los ítems (i) y (ii).
 
+Ahora probaremos la existencia de $S$ por inducción en $\abs G$. Si $\abs G = 0$ podemos tomar $S = \emptyset$. En general, supongamos que $\abs G > 0$.
+
+Consideremos los conjuntos $T \subset V$ para los cuales no se cumple la condición \eqref{eq:condicion de Tutte} y
+\[
+    d(T) := d_G (T) := q(G \setminus T) - \abs T
+\]
+es máximo; tomemos un conjunto $T$, llamado $S$, de cardinal máximo. Observemos sque $d(S) \geq d(\emptyset) \geq 0$.
+
+Veamos primero que todas las componentes $C \in \mathcal C_{G \setminus S}$ son impares. En efecto, si $\abs C$ es par, podemos tomar $c \in C$ y considerar $T := S \cup \{c\}$. Como $C \setminus \{c\}$ tiene orden impar, debe tener al menos una componente impar, la cual también es componente de $G \setminus T$. Así,
+\[
+    q(G\setminus T) \neq q(G \setminus S) + 1 \quad \text{mientras que} \quad \abs T = \abs S + 1,
+\]
+con lo cual $d(T) \geq d(S)$ contradiciendo la elección de $S$ de tamaño máximo.
+
+Luego probaremos la afirmación (ii), eso es que todo $C \in \mathcal C _{G \setminus S}$ tiene un factor crítico. Supongamos que no, es decir, existen $C\in \mathcal C _{G \setminus S}$ y $c \in C$ tales que $C' := C \setminus \{c\}$ no tiene matching perfecto. Por la hipótesis inductiva, y la observación anterior, en donde vimos que este teorema implica el Teorema de Tutte \ref{th:teorema de Tutte}, existe un conjutno $S' \subset V(C')$ tal que
+\[
+    q(C' \setminus S') > \abs {S'}.
+\]
+Como $\abs C$ es impar, $\abs{C'}$ es par, las cantidades $q(C' \setminus S')$ y $\abs{S'}$ son ambos pares o impares, con lo cual difieren por al menos $2$ unidades, i.e.
+\[
+    q(C' \setminus S') \geq \abs {S'} + 2
+\]
+y $d_{C'} (S') \neq 2$. Tomemos $T := S \cup \{c\} \cup S'$, cumple:
+\[
+    d(T) \geq (q(G \setminus S) - 1 + q(C' \setminus S')) - (\abs S + 1 + \abs{S'})  \geq d(S) - 1 - 1 + d_{C'} (S') \geq d(S),
+\]
+donde el primer $-1$ proviene de que perdimos la componente impar $C$ y el segundo $-1$ proviene de incluir a $c$ en $T$. Nuevamente, esto contradice la elección de $S$.
+
+Finalmente, nos queda probar que $S$ es matcheable con $\mathcal C _{G \setminus S}$. Si no lo fuera, entonces por el Teorema \ref{th:teorema de Hall} aplicado al grafo bipartito $G_S$, existe un conjunto $S' \subset S$ con más vértices que vecinos, es decir, $S'$ tiene menos aristas que componentes de $\mathcal C_{G \setminus S}$. Debido a que las componentes no adyacentes a $S'$ son también componentes de $G \setminus (S \setminus S')$, y de que al quitar los vértices $S'$ de $S$ nos quedan también las componentes, el conjunto $T = S \setminus S'$ satisface
+\[
+    d(T) \geq (q(G \setminus S) - \abs{N_{G_S} (S')}) - (\abs S - \abs S') > d(S),
+\]
+contradiciendo la elección de $S$.
+\end{proof}
+
+Podemos caracterizar a los matchings máximos de un grafo $G$ conociendo al conjunto $S$ del teorema de arriba. Sea $M$ un matching en $G$ y sea $\mathcal C := \mathcal C_{G \setminus S}$. Denotemos $k_S$ al número de aristas en $M$ que cubren a algún vértice de $S$, y $k_{\mathcal C}$ al número de aristas de $M$ con ambos extremos en $G \setminus S$. Tenemos que
+
+\begin{proposition}
+Todo matching $M$ cumple
+\begin{equation}\label{eq:matching condition 1}
+k_S \leq \abs S \quad \text{y} \quad k_{\mathcal C} \leq \frac{\abs V - \abs S - \abs {\mathcal{C}}}{2}.
+\end{equation}
+Más aún, $M$ es un matching máximo si y solo si se alcanzan ambas igualdades.
+\end{proposition}
+\begin{proof}
+Primero veamos que todo matching cumple \eqref{eq:matching condition 1}. Por un lado, claramente vale la primera desigualdad. Por otro lado, como todos los $C \in \mathcal{C}$ son impares, alguno de sus vértices no es incidente con una arista de $M$, así contando vértices cubiertos por $M$ en $G\setminus S$, vale la segunda desigualdad.
+
+Más aún, existe un matching $M_0$ que cumple las igualdades en \eqref{eq:matching condition 1}: Tomemos $\abs S$ aristas entre $S \bigcup \mathcal C$ gracias a (i), y luego usemos (ii) para encontrar un un conjunto de $\frac{\abs C-1}{2}$ aristas en cada componente $C \in \mathcal C$. Así, $M_0$ tiene
+\[
+    \abs{M_0} = \abs S + \frac{\abs V - \abs S - \abs {\mathcal{C}}}{2}
+\]
+aristas. Esto implica junto con \eqref{eq:matching condition 1} que todo matching máximo tiene que cumplir las igualdades en \eqref{eq:matching condition 1}.
+
+Recíprocamente, si $M$ cumple las igualdades en \eqref{eq:matching condition 1}, entonces $k_S = \abs S$ implica que todo vértice $s \in S$ tiene una arista $st \in M$ con $t \in G \setminus S$, y por $k_\mathcal{C} = \frac{\abs V - \abs S - \abs{\mathcal{C}}}{2}$ se tiene que $M$ tiene exactamente $\frac{\abs C - 1}{2}$ aristas en $C$ para cada $C \in \mathcal{C}$. Como estas últimas aristas solamente no cubren a un vértice en $C$, el extremo $t$ de cada arista $st$, debe caer en una ditinta componente $C$ para cada distinto $s$. Con lo cual $M$ tiene el mismo cardinal que el matching máximo $M_0$.
 \end{proof}
 
 
+
+
+
+
+\begin{remark}
+Existe algorítmos polinomiales para encontrar matchings máximos en un grafo. Más precisamente, el ``blossom algorithm'' desarrollado por Jack Edmonds en 1961\footnote{Ver \cite{edmonds1991glimpseOfHeaven}.} corre en tiempo $O (\abs E \abs V^2)$ donde $G = (V,E)$. Existe un algorítmo más eficiente, obtenido por Micali y Vazirani\footnote{Ver \cite{micaliSilvioVazirani1980MaximumMatching}.}, qu ecorre en tiempo $O(\abs E \sqrt{\abs V})$, pero es mucho más complicado.
+\end{remark}
+
+
+\subsection{The Erdös-Pósa theorem}
+
+Estamos motivados ahora de generalizar los teoremas de König y Hall: dados una clase de grafos $\mathcal H$, nos gustaría encontrar una función $f : \naturals \rightarrow \naturals$ independiente de cualquier grafo $G$, tal que $G$ tiene $k$ subgrafos disjuntos isomorfos a un grafo de $\mathcal H$ o tiene un subconjunto con a lo más $f(k)$ vértices que cubren los subgrafos de $G$ pertenecientes a $\mathcal H$. Si existe una función $f$ para $\mathcal H$ que cumple lo anteriormente mencionado, decimios que $\mathcal H$ tiene la \textbf{propiedad de Erdös-Pósa}.
+
+\begin{Warning}
+En lo que sigue, usamos la notación del diestal ``$\log$'' que creo que se refiere al logarítmo en base $2$.
+\end{Warning}
+
+\begin{lemma}
+Sea $k \in \naturals$, y $H$ un multigrafo $3$-regular. Si $\abs H \geq s_k$, entonces $H$ contiene $k$ ciclos disjuntos. Donde
+\begin{align*}
+    s_k := \begin{cases}
+    4kr_k & \text{ si $k \geq 2$,}\\
+    1 & \text{ si $k \leq 1$}
+    \end{cases} \quad \text{donde} \quad r_k := \log k + \log \log k + 4.
+\end{align*}
+\end{lemma}
+\begin{proof}
+Haremos inducción en $k$. Si $k \leq 1$, la afirmación es trivial, con lo cual supongamos que $k \geq 2$. Sea $C$ el ciclo mas corto en $H$.
+
+Veamos primer que $H \setminus C$ contiene una subdivisión de un multigrafo $3$-regular $H'$ con $\abs{H'}\geq \abs H  - 2 \abs C$. Sea $m$ el número de aristas entre $C$ y $H \setminus C$. Como $H$ es $3$-regular y $d (C) = 2$, tenemos que $m \leq \abs C$. Ahora consideramos biparticiones $\{V_1, V_2\}$ de $V(H)$, empezando con $V_1 := V(C)$ (eventualmente permitiremos que $V_2$ sea vacío). Si $H[V_2]$ tiene un vértice de grado a lo más $1$, movemos este vértice a $V_1$, obteniendo una nueva partición $\{V_1,V_2\}$ con menos aristas que antes. Supongamos que podemos realizar una sucesión con $n$ pasos, pero no más. Luego la partición final $\{V_1,V_2\}$ tiene a lo más $m - n$ aristas. Y $H[V_2]$ tiene a lo más $m-n$ vértices de grado $< 3$, ya que cada una de estas incide en una arista de cruce entre $V_1$ y $V_2$. De hecho, estos vértices tienen grado exactamente $2$ en $H[V_2]$, pues no podemos mover más vértices a $V_1$. Sea $H'$ el multigrafo $3$-regular obtenido a partir de $H[V_2]$ luego de eliminar estos vértices de grado $<3$. Tenemos que
+\[
+    \abs{H'} \geq \abs H - \abs C - n - (m-n) \geq \abs H - 2 \abs C,
+\]
+como queríamos.
+
+Para finalizar la demostración, basta ver que $\abs {H'} \geq s_{k-1}$. Ya que $\abs C \leq 2 \log \abs H$ por el Corolario \ref{corolario:si delta(G) geq 3, entonces g(G) < 2 log_2 abs G} (vale dx), y $\abs H \geq s_k \geq 6$, tenemos
+\[
+    \abs{H'} \geq \abs H - 2 \abs C \geq \abs H - 4 \log \abs H \geq s_k - 4 \log s_k.
+\]
+(En la última desigualdad usamos que la función $x \mapsto x - 4 \log x $ es creciente para todo $x \geq 6$.) Así, basta ver que $s_k - 4 \log s_k \geq s_{k-1}$. En efecto, si $k = 2$ es claro, luego supongamos que $k \geq 3$. Entonces $r_k \leq 4 \log k$ para $k \geq 4$, y el caso $k = 3$ es fácil. Consecuentemente,
+\begin{align*}
+s_k - 4 \log s_k &= 4(k-1) r_k + 4 \log k + 4 \log \log k + 16 - (8+ 4 \log k + 4 \log r_k) \\
+&\geq s_{k-1} + 4 \log \log k + 8 - 4 \log (4 \log k) = s_{k-1}.
+\end{align*}
+\end{proof}
+
+
+
+\begin{theorem}[Erdös \& Pósa (1965)]
+Existe una función $f : \naturals \rightarrow \naturals$ tal que, dados cualquier $k \in \naturals$, todo grafo contiene $k$ ciclos disjuntos o un conjunto de a lo más $f(k)$ vértices cubriendo todos sus ciclos.
+\end{theorem}
+\begin{proof}
+Veamos que vale para $f(k):= \lfloor s_k + k - 1 \rfloor$. Sea $k$ fijo, y $G$ un grafo. Podemos suponer que $G$ contiene un ciclo, y luego tiene un subgrafo maximal $H$ en  el cual todo vértice tiene grado $2$ o $3$. Sea $U$ su conjunto vértices de grado $3$.
+
+Sea $\mathcal C$ el conjunto de todos sus ciclos en $G$ que que no intersecan a $U$, pero que intersecan a $H$ en exactamente un vérticce. Sea $Z\subset v(H) \setminus U$ el conjunto de estos vértices. Para cada $z \in Z$ elegimos un ciclo $C_z \in \mathcal C$ que interseca a $H$ en $z$, y escribamos $\mathcal C ' := \set{C_z | z \in Z}$. Por maximalidad de $H$, los ciclos en $\mathcal C'$ son disjuntos.
+
+Sea $\mathcal D$ el conjunto de las componentes $2$-regulares de $H$ que no intersecan $Z$. Luego $\mathcal C' \cup \mathcal D$ es otro conjunto de ciclos disjuntos. Si $\abs{\mathcal C ' \cup \mathcal D} \geq k$, terminamos. De lo contrario, podemos agregar a $Z$ un vértice de cada ciclo en $\mathcal D$ y obtener un conjunto $X$ de a lo más $k-1$ vértices que intersecan a todos los ciclos en $\mathcal C$ y a todas las componentes $2$-regulares de $H$. Ahora consideremos cualquier ciclo de $G$ que no interseca $X$. Por maximalidad de $H$, interseca $H$. Sin embargo, no es una componente conexa de $H$, no está en $\mathcal C$, y no contiene un $H$-camino entre distintos vértices fuera de $U$ (por maximalidad de $H$). Así que este ciclo interseca $U$.
+
+Esto prueba que todo ciclo de $G$ interseca a $X \cup U$. Como $\abs X \leq k-1$, basta probar que $\abs U < s_k$ a menos que $H$ contenga $k$ ciclos disjuntos. Pero esto se sigue del lema anterior aprlicado al multigrafo obtenido de $H$ luego de suprimir sus vértices de grado $2$ (puede quedar un multigrafo).
+\end{proof}
+
+
+
+
+\subsection{Empaquetamiento de árboles y arboricidad}
 
 
 
@@ -2728,7 +2850,7 @@ Si $G$ es un grafo plano, llamamos \textbf{caras} a las regiones de $\reals \set
 
 Como trabajamos con grafos planos finitos, estos son acotados, es decir, existe una bola $B \subset \reals^2$ tal que $G \subset B$. Siempre va a haber una cara que contiene a $\reals^2 \setminus B$ y esa cara la llamamos \textbf{cara exterior}.
 
-\Dibujo{Ejemplo.}
+\Inkscape{Grafo plano $G$ contenido en una bola $B$, con caras \gray{$f_1$},\purple{$f_2$},\red{$f_3$},\yellow{$f_4$}. La cara exterior $f_1$ contiene a \gray{$B$}.}
 
 \begin{lemma}
 Sea $G$ un grafo plano, $f$ una de sus caras y $H$ un subgrafo de $G$. Entonces,
@@ -2738,7 +2860,7 @@ Sea $G$ un grafo plano, $f$ una de sus caras y $H$ un subgrafo de $G$. Entonces,
 \end{enumerate}
 \end{lemma}
 
-\Dijubo{Ilustración del lema.}
+\Inkscape{Del lado izquierdo un ejemplo del ítem (i), y del derecho uno del ítem (ii).}
 
 \begin{proof}
 \begin{enumerate}[(i)]
@@ -2746,8 +2868,6 @@ Sea $G$ un grafo plano, $f$ una de sus caras y $H$ un subgrafo de $G$. Entonces,
 \item Todo arco entre $f$ y $f' \setminus f$ pasa por la frontera $X$ de $f$. Si $f' \setminus f \neq \emptyset$, entonces hay un arco dentro de $f'$ cuyos puntos en $X$ no están en $H$. Entonces $X \not \subset H$.
 \end{enumerate}
 \end{proof}
-
-\Dibujo{Ilustración de la prueba.}
 
 \begin{lemma}
 Sea $G$ un grafo plano y $e$ una arista de $G$. Entonces,
@@ -2757,7 +2877,7 @@ Sea $G$ un grafo plano y $e$ una arista de $G$. Entonces,
 \end{enumerate}
 \end{lemma}
 
-\Dibujo{Visulización del lema.}
+\Inkscape{Del lado izquierdo tenemos una ilustración del ítem (i), con una arista $e$ contenida en la frontera \yellow{$X_1$} pero no en la frontera \red{$f_2$}. Del lado derecho se ilustra el ítem (ii), con una arista en un ciclo \red{$C$} también contenida en las caras $f_1$ y $f_2$ de $G$, las cuales están contenidas en las dos caras de $C$ la \gray{exterior} y la \red{interior}.}
 
 \begin{proposition}
 Si $G$ es un grafo plano que corresponde a un árbol, $G$ tiene una sola cara.
@@ -2777,12 +2897,12 @@ Se deduce del Lema \ref{lema:arco tiene una sola cara} dice que un arco genera u
 Fijemos $n$ y hacemos inducción en la cantidad de aristas $m$. Si $m \leq n -1$, entonces $G$ es un árbol y $m = n-1$; pero la proposición anterior implica que el árbol tiene una sola cara, y por lo tanto $n - m + f = n - (n-1) + 1 = 2$.
 
 Ahora, supongamos que $m \geq n$, entonces $G$ tiene una arista $e$ que está en un ciclo. Sea $G' = G \setminus e$. Por el lema anterior ítem (ii), $e$ está en la frontera de exactamente dos caras $f_1,f_2$ de $G$. Como los puntos en $I(e)$ de $G$. Como los puntos en $I(e)$ son equivalentes en $\reals^2 \setminus G'$, entonces hay una cara $f_e$ de $G'$ que contiene a $I(e)$.
-\Dibujo{Visualización.}
+
 Luego basta demostrar que
 \[
     \mathcal F (G) \setminus \{f_1, f_2 \} = \mathcal F (G') \setminus \{f_e\},
 \]
-porque lluego $G'$ tiene exactamente una cara y una arista menos que $G$. Así obtenemos el resultado por hipótesis inductiva.
+porque luego $G'$ tiene exactamente una cara y una arista menos que $G$. Así obtenemos el resultado por hipótesis inductiva.
 \end{proof}
 
 
@@ -2810,7 +2930,7 @@ porque lluego $G'$ tiene exactamente una cara y una arista menos que $G$. Así o
 \newpage
 
 \bibliographystyle{alpha}
-\bibliography{BibliografiaGRAFOS}{}
+\bibliography{BibliografiaGRAFOS.bib}{}
 %--------------------------------
 
 
