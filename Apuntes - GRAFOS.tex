@@ -2863,6 +2863,8 @@ Para todo arco $P$, el conjunto $\reals^2 \setminus P$ tiene una sola región.
 \end{lemma}
 
 
+
+
 \bigskip
 
 \begin{definition}
@@ -2964,10 +2966,72 @@ porque luego $G'$ tiene exactamente una cara y una arista menos que $G$. Así ob
 
 Recordemos la \textit{subdivisión} de un grafo que aparece al principio de \ref{subsection: subdivisiones}.
 
+\subsubsection{Operaciones que conocemos}
 
+\begin{enumerate}
+\item[Subgrafo inducido:] remover vértices.
+\item[Subgrafo:] remover vértices y aristas.
+\item[Menor:] remover vérties, aristas, y contraer aristas.
+\item[Menor topológico:] remover vértices, aristas, y \textbf{contraer vértices} de grado $2$.
+\end{enumerate}
 
+Contraer un vértice $w$ de grado $2$ quiere decir que lo quitamos, pero si $u,v$ eran sus vecinos de $w$, entonces nuestro nuevo grafo tiene a $u$ y $v$ como vecinos. Notar que esto es lo mismo que contraer una de las dos aristas que inciden en $w$.
+\Dibujo[Ejemplo de contracción de un vértice $w$.]
 
+\subsubsection{Otra perspectiva con respecto a los menores}
 
+\begin{definition}
+Sean $G,H$ dos grafos. Decimos que $G$ contiene un \textbf{modelo} de $H$, si $V(G)$ admite una partición $\{v_x | x \in V(H)\}$ en subconjuntos que inducen subgrafos conexos y tal que vértices $x,y \in V(H)$ son adyacentes en $H$ si y solo si $G$ contiene una arista entre $V_x$ y $V_y$.
+\end{definition}
+
+\Dibujo{}
+
+Si $F$ es un grafo que contiene como subgrafo a un modelo de $H$, entonces decimos que $H$ es \textbf{menor} de $F$.
+
+\begin{proposition}
+Tenemos que
+\begin{enumerate}[(i)]
+\item Todo menor topológico de un grafo también es un menor.
+\item Todo menor $H$ con $\Delta (H) \leq 3$ de un grafo es también un menor topológico.
+\end{enumerate}
+\end{proposition}
+
+\Dibujo{}
+
+\subsubsection{Retomando grafos planos}
+
+\begin{theorem}[Fórmula de Euler]
+Sea $G$ un grafo plano conexo con $n$ vértices, $m$ aristas, y $f$ caras. Se tiene
+\[
+    n-m + f = 2.
+\]
+\end{theorem}
+
+\begin{definition}
+Un grafo plano es \textbf{maximal plano} si al agregar cualquier arista, deja de ser plano.
+
+Un grafo plano es una \textbf{triangulación} si todas sus caras tienen por frontera un triángulo.
+\end{definition}
+
+Estas dos definiciones son equivalentes:
+
+\begin{proposition}
+Un grafo es maximial plano si y solo si es una triangulación.
+\end{proposition}
+
+\begin{corollary}
+Un grafo plano con $n \geq 3$ vértices tiene a lo más $3n - 6$ aristas. Más aún, toda triangulación con $n$ vértices tiene exactamente $3n-6$ aristas; es decir, un grafo plano es una triangulación si y solo si tiene $3n-6$ aristas.
+\end{corollary}
+\begin{proof}
+Basta demostrar la segunda afirmación gracias a la proposición anterior. En una triangulación, cada cara tiene $3$ aristas en su frontera y cada arista está en la frontera de exactamente dos caras (por el lemma \ref{}). Consideramos ahora el $X,Y$-bigrafo considerando los conjuntos de vértices $X = E(G)$ e $Y = \mathcal F (G)$, donde $ef$ es una arista ($e \in E(G)$, $f \in \mathcal F (G)$) si y solo si $e$ está en la frontera de $f$.
+
+\Dibujo{Ejemplo}
+
+El número de aristas de este grafo bipartito es justamente $2 \abs {E(G)} = 3 \abs{\mathcal F(G)}$. Pero esto nos dice que, usando la fórmula de Euler, i.e. reemplazando $f = \frac 2 3 m$ :
+\[
+    n - m + \frac 2 3 m = 2 \quad \Leftrightarrow \quad m = 3 n - 6.
+\]
+\end{proof}
 
 
 

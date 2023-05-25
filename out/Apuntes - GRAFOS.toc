@@ -36,7 +36,10 @@
 \contentsline {subsubsection}{Prerequisitos topológicos}{85}{section*.5}%
 \contentsline {section}{\numberline {1.15}Clase 14: 18/05/23}{87}{section.1.15}%
 \contentsline {section}{\numberline {1.16}Clase 15: 25/05/23}{90}{section.1.16}%
-\contentsline {chapter}{\numberline {A}Primera parte de la materia (primer capítulo del Diestel)}{91}{appendix.Alph1}%
-\contentsline {section}{\numberline {A.1}}{91}{section.Alph1.1}%
-\contentsline {section}{\numberline {A.2}}{97}{section.Alph1.2}%
-\contentsline {chapter}{\numberline {B}Orden parcial completo-dirigido y teorema del punto fijo de Kleene}{100}{appendix.Alph2}%
+\contentsline {subsubsection}{Operaciones que conocemos}{90}{section*.6}%
+\contentsline {subsubsection}{Otra perspectiva con respecto a los menores}{90}{section*.7}%
+\contentsline {subsubsection}{Retomando grafos planos}{91}{section*.8}%
+\contentsline {chapter}{\numberline {A}Primera parte de la materia (primer capítulo del Diestel)}{93}{appendix.Alph1}%
+\contentsline {section}{\numberline {A.1}}{93}{section.Alph1.1}%
+\contentsline {section}{\numberline {A.2}}{99}{section.Alph1.2}%
+\contentsline {chapter}{\numberline {B}Orden parcial completo-dirigido y teorema del punto fijo de Kleene}{102}{appendix.Alph2}%
