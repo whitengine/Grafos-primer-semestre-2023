@@ -30,12 +30,13 @@
 \contentsline {subsection}{\numberline {1.13.1}Caminos aumentantes}{73}{subsection.1.13.1}%
 \contentsline {subsection}{\numberline {1.13.2}Matchings en grafos generales}{77}{subsection.1.13.2}%
 \contentsline {subsection}{\numberline {1.13.3}The Erdös-Pósa theorem}{82}{subsection.1.13.3}%
-\contentsline {subsection}{\numberline {1.13.4}Empaquetamiento de árboles y arboricidad}{84}{subsection.1.13.4}%
-\contentsline {section}{\numberline {1.14}Clase 13: 15/05/23}{84}{section.1.14}%
-\contentsline {subsection}{\numberline {1.14.1}Grafos planares}{84}{subsection.1.14.1}%
-\contentsline {subsubsection}{Prerequisitos topológicos}{84}{section*.5}%
-\contentsline {section}{\numberline {1.15}Clase 14: 18/05/23}{86}{section.1.15}%
-\contentsline {chapter}{\numberline {A}Primera parte de la materia (primer capítulo del Diestel)}{89}{appendix.Alph1}%
-\contentsline {section}{\numberline {A.1}}{89}{section.Alph1.1}%
-\contentsline {section}{\numberline {A.2}}{95}{section.Alph1.2}%
-\contentsline {chapter}{\numberline {B}Orden parcial completo-dirigido y teorema del punto fijo de Kleene}{98}{appendix.Alph2}%
+\contentsline {subsection}{\numberline {1.13.4}Empaquetamiento de árboles y arboricidad}{83}{subsection.1.13.4}%
+\contentsline {section}{\numberline {1.14}Clase 13: 15/05/23}{85}{section.1.14}%
+\contentsline {subsection}{\numberline {1.14.1}Grafos planares}{85}{subsection.1.14.1}%
+\contentsline {subsubsection}{Prerequisitos topológicos}{85}{section*.5}%
+\contentsline {section}{\numberline {1.15}Clase 14: 18/05/23}{87}{section.1.15}%
+\contentsline {section}{\numberline {1.16}Clase 15: 25/05/23}{90}{section.1.16}%
+\contentsline {chapter}{\numberline {A}Primera parte de la materia (primer capítulo del Diestel)}{91}{appendix.Alph1}%
+\contentsline {section}{\numberline {A.1}}{91}{section.Alph1.1}%
+\contentsline {section}{\numberline {A.2}}{97}{section.Alph1.2}%
+\contentsline {chapter}{\numberline {B}Orden parcial completo-dirigido y teorema del punto fijo de Kleene}{100}{appendix.Alph2}%

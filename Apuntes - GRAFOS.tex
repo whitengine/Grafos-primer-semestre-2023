@@ -1545,7 +1545,7 @@ Los subgrafos y contracciones de $G$ son \textit{menores} de $G$. No necesariame
 \end{example}
 
 
-\subsection{subdivisiones}
+\subsection{subdivisiones}\label{subsection: subdivisiones}
 
 Sea $X$ un grafo fijo.
 
@@ -2764,11 +2764,59 @@ Esto prueba que todo ciclo de $G$ interseca a $X \cup U$. Como $\abs X \leq k-1$
 
 \subsection{Empaquetamiento de árboles y arboricidad}
 
+El problema de encontrar la máxima cantidad de árboles disjuntos en un grafo o la mínima cantidad de árboles que cubren es un problema clásico, el cual resolveremos como corolario de una unificación reciente, obtenida por Bowler y Carmesin: el Teorema de packing-covering.
 
+La motivación de encontrar $k$ subárboles arista-disjuntos en un grafo, es que permite una aplicación en la vida real: si tu computadora tiene guardado en su memoria estos árboles, rápidamente puede encontrar, de manera canónica, $k$ caminos arista disjuntos entre dos vértices dados.
 
+\begin{definition}
+Sea $G$ un grafo con una partición de sus vérticces $V(G)$ en $r$ conjuntos, cada uno generando un arbol de $G$. Llamamos \textbf{cross-edge}, a las aristas de $G$ cuyos extremos yacen en distintos conjuntos de la partición.
+\end{definition}
 
+\begin{obs}
+Sea $G$ un grafo con $k$ árboles arista disjuntos generadores de $G$. Sea $U_1, \ldots, U_r$ una partición de $V(G)$ en $r$ cconjuntos. Entoncces todo árbol generador $T$ de $G$ tiene al menos $r-1$ \textit{cross-edges}, con lo cual, $G$ tiene al menos $k(r-1)$ cross-edges.
+\end{obs}
+\begin{proof}
+En efecto, por inducción en la cantidad de vértices de $G$, el caso base es trivial, en general tomamos una hoja $h \in T$, y supongamos sin pérdida de generalidad que $h \in U_1$, y supongamos que $r >1$ pues si no la afirmación es trivial. Entonces consideramos $G' := G\setminus \{h\}$, que tiene una partición $U_1 \setminus \{h\}, U_2, \ldots, U_r$ luego como $T\setminus \{h\}$ es un árbol generador podemos aplicar hipótesis inductiva. Si $U_1 \setminus \{h\} = \emptyset$, entonces tenemos al menos $r-2$ cross-edges en $G'$, luego $r-1$ en $G$, pues la arista $hv$ con $v$ el único vecino de $h$ en $T$ es un cross-edge; pero si $U_1 \setminus \{h\}$ es no vacío, entonces por hipótesis inductiva $G'$, y por lo tanto $G$, tiene al menos $r-1$ cross-edges.
+\end{proof}
+La observación no solo es necesaria, si no también es suficiente:
 
+\begin{theorem}[Nash-Williams (1961); Tutte (1961)]
+Un multigrafo contiene $k$ árboles generadores arista-disjuntos si y solo si toda partición $P = \{U_1,U_2,\ldots,U_r$ de los vértices de tiene al menos $k(r-1)$ cross-edges.
+\end{theorem}
 
+\begin{remark}
+El teorema equivale a cambiar la partición $P$ por una partición en conjuntos conexos. En efecto, cualquier partición se puede refinar en una partición en conjuntos de vértices que inducen subgrafos conexos: por cada $U \in P$, consideramos la partición en las componentes conexas de $G[U]$. Luego, los cros-edges deben inducir cross-edges de la partición original, pues si $V,V'$ son dos componentes conexas de $U \in P$, no pueden tener aristas que las unan.
+
+Así, el teorema dice que un multigrafo $G$ tiene $k$ árboles generadores disjuntos si y solo si sus contracciones por $r$ menores tienen al menos $k(r-1)$ aristas.
+\end{remark}
+
+\begin{corollary}
+Todo multigrafo $G$ que es $2k$-arista conexo tiene $k$ árboles generadores disjuntos.
+\end{corollary}
+\begin{proof}
+Entre cada par de conjuntos $U_i,U_j \in P$ hay al menos $2k$ aristas que conectan a ambos. Con lo cual, $G$ tiene al menos $\binom r 2 2k = r (r-1) k$ cross-edges. Así, se sigue el resultado del teorema anterior.
+\end{proof}
+
+\begin{definition}
+Decimos que un conjunto $\{H_i\}_{i}$ de un subgrafos de un multigrafo $G$ forma una \textbf{descomposición en aristas} de $G$ si $\{E(H_i)\}_i$ particiona $E(G)$.
+\end{definition}
+En esta terminología, el objetivo de esta sección es reponder la pregunta: ¿cuántos subgrafos generadores que forman una descomposición en aristas tiene un multigrafo $G$?
+
+Como un subgrafo conexo es generador si y solo si interseca todos los enlaces de $G$, la pregunta anterior tiene una pregunta dual: ¿cuál es la mínima cantidad de subgrafos \textbf{few-acyclic} (i.e. su comlemento interseca a todos los circuitos) podemos descomponer en aristas a $G$?
+
+\begin{definition}
+Diremos que una familia de grafos \textbf{cubre sus aristas}, si toda arista de $G$ yace en al menos uno de estos grafos.
+\end{definition}
+Nuestro problema dual se traduce entonces a encontrar cuáles son los multigrafos $G$ a los que se les pueden cubrir sus aristas por a lo más $K$ árboles.
+
+\begin{obs}
+Necesariamente, todo subconjunto $U \subset V(G)$, induce a lo más $k(\abs U -1)$ aristas, no más de $\abs U -1$ por cada árbol. Dualmente, no hay manera de ``eliminar'' menores de $G$, de manera que nos quede un grafo con demasiadas aaristas para ser cubiertas por $K$ árboles
+\end{obs}
+La observación no solo es necesaria, si no también es suficiente:
+
+\begin{theorem}
+Las aristas de un multigrafo $G = (V,E)$ se pueden cubrir por a lo más $K$ árboles si y solo si $\Abs {G[U]} \leq k (\abs U - 1)$ para todo subconjunto no vacío $U \subset V$.
+\end{theorem}
 
 
 
@@ -2904,6 +2952,34 @@ Luego basta demostrar que
 \]
 porque luego $G'$ tiene exactamente una cara y una arista menos que $G$. Así obtenemos el resultado por hipótesis inductiva.
 \end{proof}
+
+
+
+
+
+%%%%%%%%%%%
+\Clase{25/05/23}   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%
+
+
+Recordemos la \textit{subdivisión} de un grafo que aparece al principio de \ref{subsection: subdivisiones}.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
