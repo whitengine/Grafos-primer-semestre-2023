@@ -18,7 +18,7 @@
 \contentsline {section}{\numberline {1.8}Clase 8: 06/04/23}{41}{section.1.8}%
 \contentsline {subsection}{\numberline {1.8.1}Contracciones y menores}{43}{subsection.1.8.1}%
 \contentsline {subsection}{\numberline {1.8.2}subdivisiones}{44}{subsection.1.8.2}%
-\contentsline {section}{\numberline {1.9}Clase 9: 17/04/23}{47}{section.1.9}%
+\contentsline {section}{\numberline {1.9}Clase 9: 17/04/23}{48}{section.1.9}%
 \contentsline {subsection}{\numberline {1.9.1}}{49}{subsection.1.9.1}%
 \contentsline {section}{\numberline {1.10}Clase 10: 20/04/23}{49}{section.1.10}%
 \contentsline {section}{\numberline {1.11}Ejercicios}{52}{section.1.11}%
@@ -31,15 +31,16 @@
 \contentsline {subsection}{\numberline {1.13.2}Matchings en grafos generales}{77}{subsection.1.13.2}%
 \contentsline {subsection}{\numberline {1.13.3}The Erdös-Pósa theorem}{82}{subsection.1.13.3}%
 \contentsline {subsection}{\numberline {1.13.4}Empaquetamiento de árboles y arboricidad}{83}{subsection.1.13.4}%
-\contentsline {section}{\numberline {1.14}Clase 13: 15/05/23}{85}{section.1.14}%
-\contentsline {subsection}{\numberline {1.14.1}Grafos planares}{85}{subsection.1.14.1}%
-\contentsline {subsubsection}{Prerequisitos topológicos}{85}{section*.5}%
-\contentsline {section}{\numberline {1.15}Clase 14: 18/05/23}{87}{section.1.15}%
-\contentsline {section}{\numberline {1.16}Clase 15: 25/05/23}{90}{section.1.16}%
-\contentsline {subsubsection}{Operaciones que conocemos}{90}{section*.6}%
-\contentsline {subsubsection}{Otra perspectiva con respecto a los menores}{90}{section*.7}%
-\contentsline {subsubsection}{Retomando grafos planos}{91}{section*.8}%
-\contentsline {chapter}{\numberline {A}Primera parte de la materia (primer capítulo del Diestel)}{93}{appendix.Alph1}%
-\contentsline {section}{\numberline {A.1}}{93}{section.Alph1.1}%
-\contentsline {section}{\numberline {A.2}}{99}{section.Alph1.2}%
-\contentsline {chapter}{\numberline {B}Orden parcial completo-dirigido y teorema del punto fijo de Kleene}{102}{appendix.Alph2}%
+\contentsline {section}{\numberline {1.14}Clase 13: 15/05/23}{87}{section.1.14}%
+\contentsline {subsection}{\numberline {1.14.1}Grafos planares}{87}{subsection.1.14.1}%
+\contentsline {subsubsection}{Prerequisitos topológicos}{87}{section*.5}%
+\contentsline {section}{\numberline {1.15}Clase 14: 18/05/23}{89}{section.1.15}%
+\contentsline {section}{\numberline {1.16}Clase 15: 25/05/23}{91}{section.1.16}%
+\contentsline {subsubsection}{\underline {Operaciones que conocemos}}{92}{section*.6}%
+\contentsline {subsubsection}{\underline {Otra perspectiva con respecto a los menores}}{93}{section*.7}%
+\contentsline {subsubsection}{\underline {Retomando grafos planos}}{94}{section*.8}%
+\contentsline {section}{\numberline {1.17}Clase 16: 26/05/23}{95}{section.1.17}%
+\contentsline {chapter}{\numberline {A}Primera parte de la materia (primer capítulo del Diestel)}{98}{appendix.Alph1}%
+\contentsline {section}{\numberline {A.1}}{98}{section.Alph1.1}%
+\contentsline {section}{\numberline {A.2}}{104}{section.Alph1.2}%
+\contentsline {chapter}{\numberline {B}Orden parcial completo-dirigido y teorema del punto fijo de Kleene}{107}{appendix.Alph2}%

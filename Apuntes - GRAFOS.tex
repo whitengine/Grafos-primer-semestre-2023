@@ -419,6 +419,7 @@
 \end{center}
 }
 
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \title{Apuntes - GRAFOS}
@@ -1559,7 +1560,7 @@ Si un grafo $Y$ contiene a $TX$ como subgrafo, diremos que $X$ es una \textbf{me
 \end{definition}
 Notar que los vértices subdivisores tienen grado $2$ y los vértices de ramificación no cambian de grado.
 
-\Dibujo{De izquierda a derecha, tenemos la construcción prograsia de $X$, luego le agregamos \red{vértices subdivisores} formando $TX$, y finalmente ilustramos un ejemplo de grafo $Y$ con $X$ como menor topológico.}
+\Inkscape{De izquierda a derecha, tenemos la construcción prograsia de $X$, luego le agregamos \red{vértices subdivisores} formando $TX$, y finalmente ilustramos un ejemplo de grafo $Y$ con $X$ como menor topológico.}
 
 
 
@@ -2764,16 +2765,16 @@ Esto prueba que todo ciclo de $G$ interseca a $X \cup U$. Como $\abs X \leq k-1$
 
 \subsection{Empaquetamiento de árboles y arboricidad}
 
-El problema de encontrar la máxima cantidad de árboles disjuntos en un grafo o la mínima cantidad de árboles que cubren es un problema clásico, el cual resolveremos como corolario de una unificación reciente, obtenida por Bowler y Carmesin: el Teorema de packing-covering.
+El problema de encontrar la máxima cantidad de árboles arista-disjuntos en un grafo o la mínima cantidad de árboles que cubren las aristas es un problema clásico, el cual resolveremos como corolario de una unificación reciente, obtenida por Bowler y Carmesin: el Teorema de packing-covering.
 
 La motivación de encontrar $k$ subárboles arista-disjuntos en un grafo, es que permite una aplicación en la vida real: si tu computadora tiene guardado en su memoria estos árboles, rápidamente puede encontrar, de manera canónica, $k$ caminos arista disjuntos entre dos vértices dados.
 
 \begin{definition}
-Sea $G$ un grafo con una partición de sus vérticces $V(G)$ en $r$ conjuntos, cada uno generando un arbol de $G$. Llamamos \textbf{cross-edge}, a las aristas de $G$ cuyos extremos yacen en distintos conjuntos de la partición.
+Sea $G$ un grafo con una partición de sus vérticces $V(G)$ en $r$ conjuntos, cada uno generando un árbol de $G$. Llamamos \textbf{cross-edge}, a las aristas de $G$ cuyos extremos yacen en distintos conjuntos de la partición.
 \end{definition}
 
 \begin{obs}
-Sea $G$ un grafo con $k$ árboles arista disjuntos generadores de $G$. Sea $U_1, \ldots, U_r$ una partición de $V(G)$ en $r$ cconjuntos. Entoncces todo árbol generador $T$ de $G$ tiene al menos $r-1$ \textit{cross-edges}, con lo cual, $G$ tiene al menos $k(r-1)$ cross-edges.
+Sea $G$ un grafo con $k$ árboles arista disjuntos generadores de $G$. Sea $U_1, \ldots, U_r$ una partición de $V(G)$ en $r$ conjuntos. Entoncces todo árbol generador $T$ de $G$ tiene al menos $r-1$ \textit{cross-edges}, con lo cual, $G$ tiene al menos $k(r-1)$ cross-edges.
 \end{obs}
 \begin{proof}
 En efecto, por inducción en la cantidad de vértices de $G$, el caso base es trivial, en general tomamos una hoja $h \in T$, y supongamos sin pérdida de generalidad que $h \in U_1$, y supongamos que $r >1$ pues si no la afirmación es trivial. Entonces consideramos $G' := G\setminus \{h\}$, que tiene una partición $U_1 \setminus \{h\}, U_2, \ldots, U_r$ luego como $T\setminus \{h\}$ es un árbol generador podemos aplicar hipótesis inductiva. Si $U_1 \setminus \{h\} = \emptyset$, entonces tenemos al menos $r-2$ cross-edges en $G'$, luego $r-1$ en $G$, pues la arista $hv$ con $v$ el único vecino de $h$ en $T$ es un cross-edge; pero si $U_1 \setminus \{h\}$ es no vacío, entonces por hipótesis inductiva $G'$, y por lo tanto $G$, tiene al menos $r-1$ cross-edges.
@@ -2781,7 +2782,7 @@ En efecto, por inducción en la cantidad de vértices de $G$, el caso base es tr
 La observación no solo es necesaria, si no también es suficiente:
 
 \begin{theorem}[Nash-Williams (1961); Tutte (1961)]
-Un multigrafo contiene $k$ árboles generadores arista-disjuntos si y solo si toda partición $P = \{U_1,U_2,\ldots,U_r$ de los vértices de tiene al menos $k(r-1)$ cross-edges.
+Un multigrafo contiene $k$ árboles generadores arista-disjuntos si y solo si toda partición $P = \{U_1,U_2,\ldots,U_r\}$ de los vértices de tiene al menos $k(r-1)$ cross-edges.
 \end{theorem}
 
 \begin{remark}
@@ -2794,7 +2795,7 @@ Así, el teorema dice que un multigrafo $G$ tiene $k$ árboles generadores disju
 Todo multigrafo $G$ que es $2k$-arista conexo tiene $k$ árboles generadores disjuntos.
 \end{corollary}
 \begin{proof}
-Entre cada par de conjuntos $U_i,U_j \in P$ hay al menos $2k$ aristas que conectan a ambos. Con lo cual, $G$ tiene al menos $\binom r 2 2k = r (r-1) k$ cross-edges. Así, se sigue el resultado del teorema anterior.
+Saliendo de cada conjunto $U_i$ tienen que salir al menos $2k$ cross-edges, pues $G$ es $2k$-arista conexo (estamos suponiendo que $r > 1$ pues si no es trivial). Con lo cual, $G$ tiene al menos $\frac 1 2 \sum_{i = 1}^r 2k = k r$ cross-edges (consideramos el grafo obtenido luego de contraer cada $U_i$ en un solo vértice y estimamos inferiormente el grado total). Así, se sigue el resultado del teorema anterior.
 \end{proof}
 
 \begin{definition}
@@ -2814,9 +2815,78 @@ Necesariamente, todo subconjunto $U \subset V(G)$, induce a lo más $k(\abs U -1
 \end{obs}
 La observación no solo es necesaria, si no también es suficiente:
 
-\begin{theorem}
+\begin{theorem}[Nash-Williams (1964)]\label{th:nash-williams-arboricidad}
 Las aristas de un multigrafo $G = (V,E)$ se pueden cubrir por a lo más $K$ árboles si y solo si $\Abs {G[U]} \leq k (\abs U - 1)$ para todo subconjunto no vacío $U \subset V$.
 \end{theorem}
+
+\begin{definition}
+El menor número de árboles que puede cubrir las aristas de un grafo es la \textbf{arboricidad}.
+\end{definition}
+ Por el Teorema anterior \ref{th:nash-williams-arboricidad}, la arboricidad de un grafo mide la densidad máxima local: un grafo tiene poca arboricidad si y solo si es ``nunca denso'' en el sentido de que no tiene subgrafos $H$ con $\epsilon (H)$ grande.
+
+\begin{theorem}[Bowler \& Carmesin (2015)]\label{th:packing-covering theorem - Bowler - Carmesin - 2015}
+Para todo multigrafo conexo $G = (V,E)$ y todo $k \in \naturals$, existe una partición $P$ de $V$ tal que todo $G[U]$ con $U \in P$ tiene $k$ árboles generadores disjuntos y las aristas de $G/P$ (el grafo contraido: aristas entre dos conjuntos $U,U' \in P$ se vuelven aristas paralelas en $G/P$) pueden cubrirse con $k$ árboles generadores.
+\end{theorem}
+\begin{proof}
+\begin{notation}
+Sea $T$ un árbol generador de $G$, $e$ una cuerda, y $f \in E(T)$ una arista en el ciclo fundamental $C_e$. Entonces $T' = T + e - f$ es otro árbol generador: por el Corolario \ref{}, pues $T'$ es conexo y tiene el mismo número de aristas que $T$. Decimos que $T'$ es obtenido de $T$ al \textbf{intercambiar} $f$ por $e$.
+
+Ahora, sea $\mathcal{T} = \{T_1,\ldots, T_k\}$ una familia de árboles generadores de $G$. llamemos a una sucesión $e_0, \ldots, e_n$ de aristas una \textbf{cadena de intercambios} para $\mathcal{T}$ \textbf{empezando} en $e_0$ si $e_n$ no yace en inguno de estos árboles, pero para todo $i < n$ existe $j = j(i)$ tal que $e_i \in T_J$ mientras que $e_{i+1}$ es una cuerda de $T_j$ cuyo ciclo fundamental con respecto de $T_j$ contiene a $e_i$.
+
+Escribamos $E(\mathcal{T})  = \bigcup \{ E(T) | T \in \mathcal{T} \}$ para una familia.
+\end{notation}
+
+\begin{lemma}
+Si $e_0$ comienza una cadena de intercambios para $\mathcal{T}$ y yace en dos de sus árboles, luego existe unau familia $\mathcal{T} '$ de $k$ árboles generadores de $G$ tales que $E(\mathcal{T}) \subsetneq E(\mathcal{T} ')$.
+\end{lemma}
+\begin{proof}
+Tomemos una cadena de intercambios $e_0,\ldots, e_n$ de longitud mínima para $\mathcal T$ que empiece en $e_0$. Entonces ninguno de los $e_i$ yace en el ciclo fundamental, con respecto de cualquier árbol en $\mathcal T$, para cualquier $e_\ell$ con $\ell > i + 1$: de lo contrario podríamos acortar la secuencia saltando de $e_i$ en $e_\ell$ o $e_{\ell+1}$.
+
+Ahora, empezando con $\mathcal T ^0 = \mathcal T$, definimos $\mathcal T^{i+1}$ recursivamente para $i = 0, \ldots, n-1$ reemplazando en $\mathcal T^i = \{ T_1^i , \ldots, T_k^i$ el árbol $T_j^i$ por $T_j^i + e_{i+1} - e_i =: T_j^{i+1}$ para $j = j(i)$. Notar que para $j = j(i)$ la minimalidad de nuestra secuencia implica que toda arista $e$ de $T_j$ en su ciclo fundamental para $e_{i+1}$ está todavía en $T_j^i$: de lo contrario $e = e_{i'}$ para algún $i' < i$, obteniendo una contradicción para $\ell := i+1 > i' + 1$. Así, si $T_j^i$ es un árbol generador de $G$, lo cual podemos asumir inductivamente, implica que $T_j^{i+1}$ también lo es.
+
+Claramente, $\mathcal T ' := \{ T_1^n , \ldots, T_k^n \}$ cumple $E(\mathcal T ') = E(\mathcal T) \cup \{e_n\}$.
+\end{proof}
+
+Ahora estamos en condiciones de probar el teorema. Sea $\mathcal T =   \{T_1,\ldots, T_k\}$ una familia de $k$ árboles generadores de $G$, elegidos de manera que $E(\mathcal T)$ es maximal. Sea $D$ el conjunto de tudas sus aristas en $G$ que empiezan una cadena de intercambios para $\mathcal T$. Estas incluyen todas las aristas que no están en $E(\mathcal T)$, pues estas forman cadenas de intercambio con una sola arista. Sea $P$ la partición de $V$ en sus conjuntos de vértices de las componentes conexas de $(V,D)$.
+
+Para la afirmación de la parte de packing del teorema, sea $U \in P$. Para todo $j = 1, \ldots, k$ sea $S_j$ el subgrafo de $T_j [U]$ formado por sus aristas en $D$. Estos árboles $S_j$ son arista disjuntos, pues por maxximalidad de $\mathcal T$ y el lema anterior, ninguna arista en $D$ yace en más de un $T_j$. Veamos que los $S_j$ son conexos.
+
+En efecto, como las aristas de $D$ forman un submultigrafo conexo en $U$, basta probar que para cada aristas $uu'\in D$ con $u,u' \in U$ existe un $u$-$u'$ camino en $S_j$. Es claro que si $uu'$ yace en $T_j$, luego yace en $S_j$. Si no, entonces existe un camino $uT_j u'$ que sigue teniendo sus aristas $e \in D$, y por lo tanto yace en $S_j$: si $e_0, \ldots, e_n$ es un intercambio de cadenas tal que $e_0 = uu' \in D$, entonces $e, e_0, \ldots, e_n$ es un intercambio de cadenas poniendo $e \in D$, pues $e$ yace en el ciclo fundamental de $e_0$ respecto de $T_j$.
+
+Como todo $T_j$ induce subgrafos conexos $S_j$ en los conjuntos de la partición $P$, contrayendo estos $S_j$ convierte los $T_j$ en árboles generadores $T_j'$ de $G/P$. Estos $T_j'$ cubren todas las aristas de $G/P$, ya que $E \setminus E(\mathcal T) \subset D$.
+
+\end{proof}
+
+\begin{proof}[(Nash-Williams; Tutte)]
+Supongamos que un multigrafo $G$ tiene al menos $k (\abs P -1)$ cross-edges por ccada partición $P$ de $V(G)$. Sea $P$ la partición del Teorema \ref{th:packing-covering theorem - Bowler - Carmesin - 2015}. Por el teorema, $G/P$ tiene $k$ árboles generadores que cubren sus aristas. Como $\Abs {G/P} \geq k(\abs P -1)$, deben ser arista disjuntos. Combinandolas con los árboles generadores arista-disjuntos de $G[U]$ que también son provistos por el Teorema \ref{th:packing-covering theorem - Bowler - Carmesin - 2015}, obtenemos los $K$ árboles generadores de $G$ que buscabamos.
+\end{proof}
+
+\begin{proof}[(Nash-Williams)]
+Supongamos que todo $U\subset V$ induce a lo más $k (\abs U - 1)$ aristas en $G$. Sea $C$ una componente de $G$, y $P$ la partición de $V(C)$ provista por el Teorema \ref{th:packing-covering theorem - Bowler - Carmesin - 2015}. Para cada $U \in P$, cada uno de los $k$ árboles generadores arista disjuntos de $G[U]$ que provee el teorema tiene $\abs U -1$ aristas, con lo cual todas las aristas de $G[U]$ yacen en estos árboles. Combinando estos árboles con los árboles generadores de $C/P$ que cubren todas sus aristas (provisto por el teorema) obtenemos $k$ árboles generadores de $C$ que cubren todas sus aristas. Estos se pueden combinar en $k$ árboles que cubren las aristas de $G$. Solo falta agregar aristas para convertir estos nosques en los $k$ árboles deseados.
+
+\end{proof}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -2895,7 +2965,7 @@ Es conveniente pensar al \textit{grafo plano} asosciado a un \textit{grafo plana
 
 
 \begin{definition}
-Si $G$ es un grafo plano, llamamos \textbf{caras} a las regiones de $\reals \setminus G$. Al conjunto de caras de $G$ lo denotamos por $\mathcal F (G)$.
+Si $G$ es un grafo plano, llamamos \textbf{caras} a las regiones de $\reals \setminus G$. Al conjunto de caras de $G$ lo denotamos por $F (G)$.
 \end{definition}
 
 Como trabajamos con grafos planos finitos, estos son acotados, es decir, existe una bola $B \subset \reals^2$ tal que $G \subset B$. Siempre va a haber una cara que contiene a $\reals^2 \setminus B$ y esa cara la llamamos \textbf{cara exterior}.
@@ -2919,7 +2989,7 @@ Sea $G$ un grafo plano, $f$ una de sus caras y $H$ un subgrafo de $G$. Entonces,
 \end{enumerate}
 \end{proof}
 
-\begin{lemma}
+\begin{lemma}\label{lema:grafos planos - una arista está en la frontera de una cara o no interseca con el interior de una arista - una arista esta en la frontera de un ciclo luego esta en dos caras de G y en dos caras distintas de C}
 Sea $G$ un grafo plano y $e$ una arista de $G$. Entonces,
 \begin{enumerate}[(i)]
 \item Si $X$ es la frontera de una cara de $G$, luego o bien $e \subset X$ o se tiene que $X \cap I (e) = \emptyset$.
@@ -2950,7 +3020,7 @@ Ahora, supongamos que $m \geq n$, entonces $G$ tiene una arista $e$ que está en
 
 Luego basta demostrar que
 \[
-    \mathcal F (G) \setminus \{f_1, f_2 \} = \mathcal F (G') \setminus \{f_e\},
+    F (G) \setminus \{f_1, f_2 \} = F (G') \setminus \{f_e\},
 \]
 porque luego $G'$ tiene exactamente una cara y una arista menos que $G$. Así obtenemos el resultado por hipótesis inductiva.
 \end{proof}
@@ -2964,31 +3034,37 @@ porque luego $G'$ tiene exactamente una cara y una arista menos que $G$. Así ob
 %%%%%%%%%%%
 
 
-Recordemos la \textit{subdivisión} de un grafo que aparece al principio de \ref{subsection: subdivisiones}.
-
-\subsubsection{Operaciones que conocemos}
-
-\begin{enumerate}
-\item[Subgrafo inducido:] remover vértices.
-\item[Subgrafo:] remover vértices y aristas.
-\item[Menor:] remover vérties, aristas, y contraer aristas.
-\item[Menor topológico:] remover vértices, aristas, y \textbf{contraer vértices} de grado $2$.
-\end{enumerate}
-
-Contraer un vértice $w$ de grado $2$ quiere decir que lo quitamos, pero si $u,v$ eran sus vecinos de $w$, entonces nuestro nuevo grafo tiene a $u$ y $v$ como vecinos. Notar que esto es lo mismo que contraer una de las dos aristas que inciden en $w$.
-\Dibujo[Ejemplo de contracción de un vértice $w$.]
-
-\subsubsection{Otra perspectiva con respecto a los menores}
-
 \begin{definition}
-Sean $G,H$ dos grafos. Decimos que $G$ contiene un \textbf{modelo} de $H$, si $V(G)$ admite una partición $\{v_x | x \in V(H)\}$ en subconjuntos que inducen subgrafos conexos y tal que vértices $x,y \in V(H)$ son adyacentes en $H$ si y solo si $G$ contiene una arista entre $V_x$ y $V_y$.
+Llamamos \textbf{subdivisión} de $G$ a cualquier grafo $H$ que se obtiene luego de \textit{subdividir} algunas aristas de $G$ y dibujando encima nuevos vértices. Más precisamente, reemplazamos las aristas de $G$ por caminos entre sus extremos, de manera que los interiores de estos caminos son disjuntos y tampoco intersecan a $V(G)$, salvo en los extremos.
+
+Si un grafo $X$ contiene un subgrafo $H$ obtenido luego de subdividir a $G$, diremos que $G$ es un \textbf{menor topológico} de $X$.
 \end{definition}
 
-\Dibujo{}
+\Inkscape{De izquierda a derecha, tenemos la construcción progresiva: primero $G$, luego creamos \red{vértices subdivisores} formando $H$, y finalmente ilustramos un ejemplo de grafo $X$ con $G$ como menor topológico.}
+
+\subsubsection{\underline{Operaciones que conocemos}}
+
+\begin{enumerate}
+\item[\underline {\textit{Subgrafo inducido:}}] remover vértices.
+\item[\underline {\textit{Subgrafo:}}] remover vértices y aristas.
+\item[\underline {\textit{Menor:}}] remover vérties, aristas, y contraer aristas.
+\item[\underline {\textit{Menor topológico:}}] remover vértices, aristas, y \textbf{contraer vértices} de grado $2$.
+\end{enumerate}
+
+Contraer un vértice $v$ de grado $2$ quiere decir que lo quitamos, pero si $u,w$ eran sus vecinos de $v$, entonces nuestro nuevo grafo tiene a $u$ y $w$ como vecinos. Equivalentemente, es lo mismo que contraer una de las dos aristas que inciden en $v$.
+\Inkscape{Ejemplo de contracción de un vértice $v$.}
+
+\subsubsection{\underline{Otra perspectiva con respecto a los menores}}
+
+\begin{definition}
+Sean $G,H$ dos grafos. Decimos que $G$ contiene un \textbf{modelo} de $H$, si $V(G)$ admite una partición $\{V_x | x \in V(H)\}$ en subconjuntos que inducen subgrafos conexos tales que dos vértices $x,y \in V(H)$ son adyacentes en $H$ si y solo si $G$ contiene una arista entre $V_x$ y $V_y$.
+\end{definition}
+
+\Inkscape{A la izquierda un grafo $H$, y a la derecha un grafo $G$ que contiene un modelo de $H$.}
 
 Si $F$ es un grafo que contiene como subgrafo a un modelo de $H$, entonces decimos que $H$ es \textbf{menor} de $F$.
 
-\begin{proposition}
+\begin{proposition}\label{proposition:relaciones entre menor y menor topologico}
 Tenemos que
 \begin{enumerate}[(i)]
 \item Todo menor topológico de un grafo también es un menor.
@@ -2996,10 +3072,9 @@ Tenemos que
 \end{enumerate}
 \end{proposition}
 
-\Dibujo{}
+\subsubsection{\underline{Retomando grafos planos}}
 
-\subsubsection{Retomando grafos planos}
-
+Recordemos la Fórmula de Euler:
 \begin{theorem}[Fórmula de Euler]
 Sea $G$ un grafo plano conexo con $n$ vértices, $m$ aristas, y $f$ caras. Se tiene
 \[
@@ -3020,14 +3095,14 @@ Un grafo es maximial plano si y solo si es una triangulación.
 \end{proposition}
 
 \begin{corollary}
-Un grafo plano con $n \geq 3$ vértices tiene a lo más $3n - 6$ aristas. Más aún, toda triangulación con $n$ vértices tiene exactamente $3n-6$ aristas; es decir, un grafo plano es una triangulación si y solo si tiene $3n-6$ aristas.
+Un grafo plano $G$ con $n \geq 3$ vértices tiene a lo más $3n - 6$ aristas. Más aún, toda triangulación con $n$ vértices tiene exactamente $3n-6$ aristas; es decir, un grafo plano es una triangulación si y solo si tiene exactamente $3n-6$ aristas.
 \end{corollary}
 \begin{proof}
-Basta demostrar la segunda afirmación gracias a la proposición anterior. En una triangulación, cada cara tiene $3$ aristas en su frontera y cada arista está en la frontera de exactamente dos caras (por el lemma \ref{}). Consideramos ahora el $X,Y$-bigrafo considerando los conjuntos de vértices $X = E(G)$ e $Y = \mathcal F (G)$, donde $ef$ es una arista ($e \in E(G)$, $f \in \mathcal F (G)$) si y solo si $e$ está en la frontera de $f$.
+Basta demostrar la segunda afirmación gracias a la proposición anterior. En una triangulación, cada cara tiene $3$ aristas en su frontera y cada arista está en la frontera de exactamente dos caras (por el segundo ítem del Lema \ref{lema:grafos planos - una arista está en la frontera de una cara o no interseca con el interior de una arista - una arista esta en la frontera de un ciclo luego esta en dos caras de G y en dos caras distintas de C}). Consideramos ahora el $X,Y$-bigrafo que tiene los conjuntos de vértices $X := E(G)$ e $Y := F (G)$, donde $ef$ es una arista ($e \in E(G)$, $f \in F (G)$) si y solo si $e$ está en la frontera de $f$.
 
-\Dibujo{Ejemplo}
+\Inkscape{Ejemplo de grafo bipartito obtenido a partir de una triangulación $G$.}
 
-El número de aristas de este grafo bipartito es justamente $2 \abs {E(G)} = 3 \abs{\mathcal F(G)}$. Pero esto nos dice que, usando la fórmula de Euler, i.e. reemplazando $f = \frac 2 3 m$ :
+Notar que el número de aristas de este grafo bipartito es justamente $2 \abs {E(G)} = 3 \abs{F(G)}$. Luego reemplazando $f = \frac 2 3 m$ en la fórmula de Euler:
 \[
     n - m + \frac 2 3 m = 2 \quad \Leftrightarrow \quad m = 3 n - 6.
 \]
@@ -3036,8 +3111,47 @@ El número de aristas de este grafo bipartito es justamente $2 \abs {E(G)} = 3 \
 
 
 
+%%%%%%%%%%%
+\Clase{26/05/23}   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%
 
+\begin{example}
+El grafo $G := K_{3,3}$ no es plano. En efecto, al ser bipartito todos los ciclos son pares, luego si tuviera un grafo plano correspondiente, las fronteras de sus caras van a ser de largo al menos $4$, pues las fronteras de un grafo plano siempre forman un ciclo (si es que el grafo plano tiene más de una cara). Como en la demostración del corolario anterior, construimos el $X,Y$-bigrafo asosciado al grafo plano con $X = E(K_{3,3})$ e $Y = F(K_{3,3})$. Pero como en la demostración del corolario, el grafo bipartito tiene $2 \abs E (G)$ aristas y almenos $4 \abs F$ caras. Llamemos $n,m,f$ al número de vértices, aristas, y caras de $G$, respectivamente. Así, la desigualdad anterior se traduce a que $2 f \leq m$. Con lo cual, aplicando el Teorema de Euler:
+\begin{array}{ccc}
+    $2 = n - m + f$ & $\leq n - m + \frac m 2$ & $\quad (2 f \leq m)$ \\
+                    & $\leq \frac 3 2$ & $\quad (n = 6, m = 9)$,
+\end{array}
+absurdo.
+\end{example}
 
+\begin{obs}
+Si un grafo no es plano, entonces sus subdivisiones tampoco, porque quitar subdivisiones de un grafo plano te devuelve un grafo plano.
+\end{obs}
+
+\begin{example}
+Como $K_5$ y $K_{3,3}$ no son planares, tampoco lo son sus subdivisiones. Con lo cual, si $G$ es un grafo plano entonces $G$ no contiene ni a $K_5$ ni a $K_{3,3}$ como subdivisión. De hecho, vale la recíproca:
+\end{example}
+
+\begin{theorem}
+Un grafo es planar si y solo si no contiene a $K_5$ o $K_{3,3}$ como subdivisión.
+\end{theorem}
+
+\begin{lemma}
+Un grafo contiene a $K_5$ o $K_{3,3}$ como menor si y solo si contiene a $K_5$ o $K_3,3$ como subdivisión.
+\end{lemma}
+Con lo cual, el teorema anterior equivale a pedir que contenga a estos grafos como menor.
+\begin{proof}
+\begin{enumerate}
+\item[($\Leftarrow$)] Esta implicancia es gratis pues una subdivisión es un menor topológico, y en particular es menor.
+\item[($\Rightarrow$)] Por el segundo ítem de la Proposición \ref{proposition:relaciones entre menor y menor topologico} si $G$ contiene un grafo $H$ con $\Delta (H) \leq 3$, entonces $G$ contiene a $H$ como subdivisión (i.e. $H$ es un menor topológico de $G$). Entonces nos basta demostra que $G$ contiene a $K_5$ como menor, entonces contiene a $K_5$ o a $K_{3,3}$ como subdivisión. Supongamos que $G$ contiene a $K_5$ como menor y tomo como modelo de $K_5$ en $G$ que sea minimal con respecto a las aristas, es decir, si particionamos los vértices del modelo como $V_x$ con $x \in K_5$, las aristas en $V_x$ son mínimas tal que es conexo, es decir, es un árbol, y entre cada $V_x, V_y$ con $x\neq y \in K_5$ hay una única arista.
+
+\Dibujo{Ilustración del modelo.}
+
+Si consideramos el grafo inducido por $V_x$ y las cuatro aristas que salen de él, obtengo un árbol $T_x$. Si cada $T_x$ fuese una subdivisión de un $K_{1,4}$
+\Dibujo{}
+entonces ya tenemos la subdivisión de $K_5$. Luego supongamos que no sucede, es decir, existe un $V_x$ tal que $T_x$ no es subdivisión de $K_{1,4}$. Entonces tiene dos vértices de grado $3$. Tomo esos dos vértices como extremos como extremos de su subdivisión y junto con otros extremos en las otras bolsas obtengo una subdivisión de grafo que contiene a $K_{3,3}$
+\end{enumerate}
+\end{proof}
 
 
 
