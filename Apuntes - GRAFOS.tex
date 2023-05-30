@@ -361,6 +361,8 @@
 %Defecto:
 \newcommand{\defecto}[1]{\mathrm{df}(#1)}
 
+%Conjunto de últimos vértices de una familia \mathcal P de caminos dirigidos: \ter{\mathcal P}
+\newcommand{\ter}[1]{\operatorname{ter} (#1)}
 
 
 
@@ -625,7 +627,7 @@ $$
 $$
 \end{Obs}
 
-\begin{Proposition}
+\begin{Proposition}\label{proposicion:el numero de vertices de grado impar es siempre par}
 El número de vértices de grado impar en un grafo siempre par.
 \end{Proposition}
 \begin{proof}
@@ -1102,7 +1104,7 @@ Por la Proposición \ref{prop: todo grafo conexo se puede enumerar de manera que
 %%%%%%%%%%%
 
 
-\begin{corollary}
+\begin{corollary}\label{corolario:todo grafo conexo de n vertices es un arbol si y solo si tiene n-1 aristas}
 Un grafo de $n$ vértices conexo es un árbol si y solo si tiene $n-1$ aristas.
 \end{corollary}
 \begin{proof}
@@ -1121,7 +1123,7 @@ Tiene un árbol generador, que debe tener $n-1$ aristas.
 \end{proof}
 
 \begin{corollary}
-Si $T$ es un arbol y $G$ es un grafo con $\delta (G) \geq \abs T -1$, entonces $T \subset G$, es decir $G$ tiene un subgrafo isomorfo a $T$.
+Si $T$ es un árbol y $G$ es un grafo con $\delta (G) \geq \abs T -1$, entonces $T \subset G$, es decir $G$ tiene un subgrafo isomorfo a $T$.
 \end{corollary}
 \begin{proof}
 Sea $v_1,\ldots,v_n$ con $n = \abs T$, una numeración de los vértices de $T$ tal que $v_i, i \geq 2$ es una hoja de $T[v_1,\ldots,v_{i-1}]$. Haremos inducción en estos vértices. El caso base es trivial. Veamos el paso inductivo: supongamos que $G$ tiene a $T[v_1,\ldots,v_{i-1}]$ como subgrafo con $i\leq n$, entonces como $\delta (G) \geq n-1$, tenemos que $v_j, 1 \leq j \leq i-1$ (el único vecino de $v_i$) tiene al menos $\delta(G) \geq n-1$ vecinos en $G$, es decir, tiene un vecino que no está en $T[v_1,\ldots, v_{i-1}]$, luego agregamos a ese vértice como $v_i$ junto con la arista que le corresponde a $v_j$.
@@ -1151,7 +1153,7 @@ Un árbol enraigado $T$ contenido en un grafo $G$ se dice \textbf{normal} en $G$
 
 \Dibujo{Un \brown{árbol} generador normal con raíz \darkgreen{r} de un grafo $G$.}
 
-Un arbol normal puede ser una herramienta realmente útil para examinar la estructura de su grafo subyacente, ya que este grafo refleja las propiedades de separación de $T$:
+Un árbol normal puede ser una herramienta realmente útil para examinar la estructura de su grafo subyacente, ya que este grafo refleja las propiedades de separación de $T$:
 
 \begin{lemma}
 Sea $T$ un árbol normal en $G$. Tenemos que:
@@ -1184,7 +1186,7 @@ por $r$.
 \begin{proof}
 Sea $G$ un grafo conexo y $r \in G$ un vértice fijo. Sea $T$ un árbol normal maximal con raíz $r$, veamos que $V(T) = V(G)$, i.e. genera $G$..
 
-Supongamos por el absurdo que no, y sea $C$ una componente conexa de $G \setminus T$. Como $T$ es normal, la vecindad $N_G (C)$ (que está contenida en $T$) es una cadena en $T$, obviamente porque $C$ permite construir $T$-caminos entre cualquier par de vértices de $N_G(C)$. Sea $x$ su máximo elemento (recordemos que estamos en una cadena), y sea $y \in C$ adyacente a $x$. Sea $T'$ el arbol obtenido de $T$ agregando la arista $yx$; el orden de árbol de $T'$ extiende al de $T$. Veamos que $T'$ también es normal en $G$, contradiciendo maximalida.
+Supongamos por el absurdo que no, y sea $C$ una componente conexa de $G \setminus T$. Como $T$ es normal, la vecindad $N_G (C)$ (que está contenida en $T$) es una cadena en $T$, obviamente porque $C$ permite construir $T$-caminos entre cualquier par de vértices de $N_G(C)$. Sea $x$ su máximo elemento (recordemos que estamos en una cadena), y sea $y \in C$ adyacente a $x$. Sea $T'$ el árbol obtenido de $T$ agregando la arista $yx$; el orden de árbol de $T'$ extiende al de $T$. Veamos que $T'$ también es normal en $G$, contradiciendo maximalida.
 
 Sea $P$ un $T'$-camino en $G$. Si sus extremos están en $T$, luego son comparables con el orden de $T$, y por lo tanto por el de $T'$ también, ya que $P$ es un $T$-camino también porque $T \subset T'$ y $T$ es normal. Si alguno de los extremos de $P$ fuera $y$, tenemos que $P \subset C$ salvo por su otro extremo $z$, que yace en $N_G(C)$. Como $x$ era máximo, tenemos que $z \leq x$. Luego $z,y$ serán comparables si vemos que $x < y$, es decir que $x \in r T' y$. Lo cual es claro ya que $y$ es una hoja de $T'$ con vecinon $x$.
 \end{proof}
@@ -1789,7 +1791,7 @@ Sean $\alpha, \beta$ dos invariantes de grafos en $\naturals$.
 Probar que todo árbol $T$ tiene al menos $\Delta (T)$ hojas.
 \end{exercise}
 \begin{proof}
-En efecto, fijemos una raíz $r$ con $d (r) = \Delta (t)$. Afirmamos que hay una hoja distinta por cada vecinos de $r$, más aún, estos son los elementos maximales en el orden de arbol con raíz $r$. Y hay al menos $d(r)$ de estos, tomand el máximo de cada conjuntos $w^{\geq} := \{ v \in T | v \geq w \}$, con $w \in N_T (r)$. Son distintos, pues de lo contrario, sean $m_1$ al mínimo vértice de $w_1^{\geq}$ y $m_2$ el de $w_2^{\geq}$ tales que no son más grandes que $w_2$ y $w_1$ respectivamente. En particular, existe $m \geq w_1,w_2$. Luego tenemos un ciclo $r <  w_1 < \cdots < m_1 < m > m_2 > \cdots > w_2 > r$, lo cual es imposible.
+En efecto, fijemos una raíz $r$ con $d (r) = \Delta (t)$. Afirmamos que hay una hoja distinta por cada vecinos de $r$, más aún, estos son los elementos maximales en el orden de árbol con raíz $r$. Y hay al menos $d(r)$ de estos, tomand el máximo de cada conjuntos $w^{\geq} := \{ v \in T | v \geq w \}$, con $w \in N_T (r)$. Son distintos, pues de lo contrario, sean $m_1$ al mínimo vértice de $w_1^{\geq}$ y $m_2$ el de $w_2^{\geq}$ tales que no son más grandes que $w_2$ y $w_1$ respectivamente. En particular, existe $m \geq w_1,w_2$. Luego tenemos un ciclo $r <  w_1 < \cdots < m_1 < m > m_2 > \cdots > w_2 > r$, lo cual es imposible.
 \end{proof}
 
 
@@ -1904,10 +1906,10 @@ de $G$, priorizando movernos a un vértice que no hayamos visitado aún. Si no h
   \end{enumerate}
  \end{solution}
 
- \begin{exercise}
+ \begin{exercise}\label{ejercicio:ejercicio sobre interseccion de subarboles en un arbol con dos items}
      Sea $\mathcal T$ un conjunto de subárboles de un árbol $T$, y $k \in \naturals$.
      \begin{enumerate}[(i)]
-     \item Mostrar que si los árboles de $\mathcal T$ son disjuntos dos a dos, entonces $\bigcap_{S \in \mathcal T} S \neq \emptyset$.
+     \item Mostrar que si los árboles de $\mathcal T$ no son disjuntos dos a dos, entonces $\bigcap_{S \in \mathcal T} S \neq \emptyset$.
      \item Mostrar que o $\mathcal T$ tiene $k$ árboles disjuntos o existe un conjunto de a lo sumo $k-1$ vérticces
      de $T$ en $\bigcap_{S \in \mathcal T} S$.
      \end{enumerate}
@@ -1950,7 +1952,7 @@ control que ``tan lejos está de tener supremo'': a lo más $k-1$, pues si fuera
 
 
 
-\begin{exercise}\label{ejercicio:todo automorfismo de un arbol tiene un vertice o arista fijos}
+\begin{exercise}\label{ejercicio:todo automorfismo de un árbol tiene un vertice o arista fijos}
     Probar que todo automorfismo de un árbol fija un vértice o una arista.
 \end{exercise}
 \begin{solution}
@@ -1970,7 +1972,7 @@ control que ``tan lejos está de tener supremo'': a lo más $k-1$, pues si fuera
      de cada árbol generador son precisamente los enlaces del grafo.
 \end{exercise}
 \begin{solution}
-    Por un lado, un corte de $G$ tiene que tener una arista de cada árbol generador, pues el arbol es conexo y no se
+    Por un lado, un corte de $G$ tiene que tener una arista de cada árbol generador, pues el árbol es conexo y no se
     puede separar por las partes que inducen el corte; luego los enlaces son minimales con esta propiedad. Por otro
     lado, lo anterior implica que los conjuntos de aristas minimales con esta propiedad, cumplen que si son cortes
     entonces son enlaces. Luego basta probar que estos conjuntos son cortes. En efecto, sea $E$ un conjunto de
@@ -2086,25 +2088,6 @@ En particular, el ejemplo anterior muestra que todo grafo con un par vértices d
 , no puede tener un matching perfecto.
 \end{remark}
 
-\begin{obs}
-Sea $T$ un árbol. Luego $T$ tiene un matching perfecto si y solo si la distancia entre cualquier par de hojas es impar.
-\end{obs}
-\begin{proof}
-En efecto, la noción dual de que un árbol $T$ tenga un matching perfecto, es que podamos pintar el grafo
-línea $L(T)$ (que
-también es un árbol en este caso) con dos colores: \red{rojo} y \blue{azul}, el primero para representar las aristas
-que no
-pertencen al matching y el segundo para las que sí, de manera que partiendo de cualquier hoja podamos llegar a
-otra hoja pintando la primera de \blue{azul} y luego intercalando colores llegar a la otra hoja, nuevamente de color
-\blue{azul}.
-Es decir, entre dos hojas de color \blue{azul} el único camino que las une debe tener longitud par (estamos pensando
-en el grafo de línea $L(T)$).
-Ahora, esto se traduce al grafo $T$ cambiándo la paridad, pues la distancia entre dos hojas de $T$ disminuye en uno
-cuando miramos el camino que las une en $L(G)$.
-
-\Dibujo{Los ejemplos de grafos de línea de dos árboles distintos, uno sí tiene un matching perfecto y el otro no,
-pues el primero tiene distancia par entre cualquier par de hojas pero el otro no.}
-\end{proof}
 
 
 Sea $G = (X \sqcup Y, E)$ un grafo bipartito (hablamos de un \textbf{$X,Y$-bigrafo}). Si $G$ tiene un matching de
@@ -2233,7 +2216,7 @@ En un grafo $G$ con un matching $M$ de tamaño $m$, tenemos que $2 m \leq \abs G
     \]
 \end{definition}
 
-\begin{corollary}[Fórmula del defecto]
+\begin{corollary}[Fórmula del defecto]\label{corollary:formula del defecto}
 En un $X,Y$-bigrafo $G$, se tiene
 \[
     \alpha ' (G) = \min_{S \subset X} \{ \abs X - \defecto{S} \}.
@@ -2604,7 +2587,7 @@ Con lo cual, si probamos que $G$ contiene un subconjunto $S$ que cumple la afirm
 Sea $P = d \cdots v$ un camino maximal en $G$ que empieza en $d$ con una arista de $M_1$ y que contiene alternadamente aristas de $M_1$ y $M_2$ como se ve en el dibujo de arriba. Si la última arista de $P$ se encuentra en $M_1$, entonces $v = b$, pues si no podríamos continuar $P$ y obtener un camino $M_2$-aumentante en $G + bd$. Escribamos entonces $C := P + bd$ en este caso. Por otro lado, si la última arista de $P$ yace en $M_2$, entonces por maximalidad de $P$ la $M_1$-arista en $v$ debe ser $ac$, con lo cual $v \in \{a, c \}$; en este caso escribamos $C:= d P v b d$. En cualquier caso, $C$ es un ciclo par donde las aristas se alternan afuera y adentro de $M_2$, y con su única arista fuera de $E$ es $bd$. Reemplazando en $M_2$ sus aristas en $C$ por las aristas de $C \setminus M_2$, obtenemos un matching perfecto de $G$ contenido en $E$, absurdo.
 \end{proof}
 
-\begin{corollary}
+\begin{corollary}\label{corolario:todo grafo 3-regular tiene un matching perfecto}
 Todo grafo $G = (V,E)$ $3$-regular sin puentes tiene un matching perfecto.
 \end{corollary}
 \begin{proof}
@@ -2628,7 +2611,7 @@ Llamamos a un conjunto de vértices $S \subset V$ matcheable con $\mathcal C_{G 
 
 \Inkscape{Ilustración cómo se ve el grafo $G_S$ construido a partir de \yellow{$S$}.}
 
-\begin{theorem}
+\begin{theorem}\label{th:teorema del conjunto S con componentes del complemento factores criticos impares, con la propiedad de que caracteriza si el grafo tiene matching perfecto o no.}
 Todo grafo $G = (V,E)$ contiene un conjunto de vértices $S$ con las siguientes propiedades:
 \begin{enumerate}
 \item $S$ es matcheable con $\mathcal C _{G \setminus S}$;
@@ -2707,6 +2690,35 @@ Recíprocamente, si $M$ cumple las igualdades en \eqref{eq:matching condition 1}
 Existe algorítmos polinomiales para encontrar matchings máximos en un grafo. Más precisamente, el ``blossom algorithm'' desarrollado por Jack Edmonds en 1961\footnote{Ver \cite{edmonds1991glimpseOfHeaven}.} corre en tiempo $O (\abs E \abs V^2)$ donde $G = (V,E)$. Existe un algorítmo más eficiente, obtenido por Micali y Vazirani\footnote{Ver \cite{micaliSilvioVazirani1980MaximumMatching}.}, qu ecorre en tiempo $O(\abs E \sqrt{\abs V})$, pero es mucho más complicado.
 \end{remark}
 
+\bigskip
+
+\begin{definition}\label{def:condicion de Tutte debil}
+Decimos que $G$ cumple la \textbf{condición de Tutte débil} si para $S \subset V(G)$ tal que $\abs S \leq 1$, hay a lo más una componente impar en $\mathcal C _{G \setminus \{x\}}$. En particular tomando $S = \emptyset$, $G$ tiene que tener orden par, no tiene vértices aislados y porlotanto tiene almenos una arista.
+\end{definition}
+
+\begin{exercise}
+Probar que las siguientes clases de grafos cumplen la Condición de Tutte débil \ref{def:condicion de Tutte debil} si y solo si tienen un matching perfecto:
+\begin{enumerate}[(i)]
+\item Los árboles.
+\item Los bosques.
+\item Los $X,Y$-bigrafos con $\abs X = \abs Y$.
+\end{enumerate}
+\end{exercise}
+\begin{solution}
+Como el Teorema de Tutte \ref{th:teorema de Tutte} dice que un grafo con matching perfecto cumple la condición de Tutte \eqref{eq:condicion de Tutte}, en particular se cumple la condición débil, luego solo necesitamos probar la recíproca.
+
+Como los primeros son un caso particular de grafos bipartitos, basta con probar la última afirmación. De todas formas, como no estoy seguro de que esté bien la demostración para grafos bipartitos, daré una demostración diferente que sirve para bosques (el cual implica el de árboles)
+
+\begin{enumerate}[(i)]
+\item[\textit{Caso bosques:}] Por inducción en la cantidad de vértices $n$ de un bosque $T$. Recordemos que $n$ tiene que ser par y $G$ tiene que tener almenos una arista, luego los casos $n = 2,3$ son triviales. En general para $n \geq 4$, si $x \in G$ es una hoja con un padre $y$, consideramos el bosque $T' = T \setminus \{x,y\}$. Este nuevo bosque sigue cumpliendo la condición de Tutte débil \ref{def:condicion de Tutte debil}. En efecto, sea $z \in T'$, las componentes conexas de $T' \setminus \{z\}$ de orden impar son a lo más la cantidad de componentes impares de $T \setminus \{z\}$, pues como no hay ciclos en $T$, $x$ e $y$ son adyacentes como mucho a una componente de $T' \setminus \{z\}$, luego por la condición débil, $T' \setminus \{z\}$ tiene a lo más una componente impar. Como $z\in T'$ era arbitrario, podemos aplicar hipótesis inductiva con $ \abs{T'} = n -2 \geq 2$, luego $T'$ tiene matching perfecto, con lo cual agregando la arista $xy$ obtenemos un matching perfecto de $T$.
+\item[\textit{Caso $X,Y$-bigrafos:}] Por la condición de Tutte débil \ref{def:condicion de Tutte debil}, existe un subconjunto $S \subset X$ que tiene almenos un vecino, i.e. cumple la condición de Hall \eqref{eq:condicion de Hall}, luego tomemos $S$ de tamaño máximo tal que cumple la condición (en particular es no trivial). Supongamos por el absurdo que no tenemos un matching perfecto, es decir que $S \subsetneq X$. Sea $x \in X \setminus S$ arbitrario. Por maximalidad de $S$, tenemos que $\abs S = \abs N (S) \subset Y$, más aún, $N (x) \subset S$, i.e. los vértices de $Y \setminus N(S)$ son aislados. Como $\abs X = \abs Y$, debe haber almenos un $y \in Y \setminus N(S)$, sin embargo $G$ no tiene vértices aislados, absurdo.
+
+\Inkscape{Ilustración del absurdo en un bigrafo que cumple la condición débil.}
+\end{enumerate}
+\end{solution}
+
+
+
 
 \subsection{The Erdös-Pósa theorem}
 
@@ -2747,6 +2759,7 @@ s_k - 4 \log s_k &= 4(k-1) r_k + 4 \log k + 4 \log \log k + 16 - (8+ 4 \log k + 
 
 
 
+
 \begin{theorem}[Erdös \& Pósa (1965)]
 Existe una función $f : \naturals \rightarrow \naturals$ tal que, dados cualquier $k \in \naturals$, todo grafo contiene $k$ ciclos disjuntos o un conjunto de a lo más $f(k)$ vértices cubriendo todos sus ciclos.
 \end{theorem}
@@ -2781,7 +2794,7 @@ En efecto, por inducción en la cantidad de vértices de $G$, el caso base es tr
 \end{proof}
 La observación no solo es necesaria, si no también es suficiente:
 
-\begin{theorem}[Nash-Williams (1961); Tutte (1961)]
+\begin{theorem}[Nash-Williams (1961); Tutte (1961)]\label{th:Nash-williams y Tutte - todo multigrafo con $k$ arboles generadores arista disjuntos si y solo si toda particion tiene almenos k (P-1) elementos}
 Un multigrafo contiene $k$ árboles generadores arista-disjuntos si y solo si toda partición $P = \{U_1,U_2,\ldots,U_r\}$ de los vértices de tiene al menos $k(r-1)$ cross-edges.
 \end{theorem}
 
@@ -2806,17 +2819,17 @@ En esta terminología, el objetivo de esta sección es reponder la pregunta: ¿c
 Como un subgrafo conexo es generador si y solo si interseca todos los enlaces de $G$, la pregunta anterior tiene una pregunta dual: ¿cuál es la mínima cantidad de subgrafos \textbf{few-acyclic} (i.e. su comlemento interseca a todos los circuitos) podemos descomponer en aristas a $G$?
 
 \begin{definition}
-Diremos que una familia de grafos \textbf{cubre sus aristas}, si toda arista de $G$ yace en al menos uno de estos grafos.
+Diremos que una familia de grafos \textbf{cubre sus aristas}, si toda arista de $G$ yacen en al menos uno de estos grafos.
 \end{definition}
-Nuestro problema dual se traduce entonces a encontrar cuáles son los multigrafos $G$ a los que se les pueden cubrir sus aristas por a lo más $K$ árboles.
+Nuestro problema dual se traduce entonces a encontrar cuáles son los multigrafos $G$ a los que se les pueden cubrir sus aristas por a lo más $k$ árboles.
 
 \begin{obs}
-Necesariamente, todo subconjunto $U \subset V(G)$, induce a lo más $k(\abs U -1)$ aristas, no más de $\abs U -1$ por cada árbol. Dualmente, no hay manera de ``eliminar'' menores de $G$, de manera que nos quede un grafo con demasiadas aaristas para ser cubiertas por $K$ árboles
+Necesariamente, todo subconjunto $U \subset V(G)$, induce a lo más $k(\abs U -1)$ aristas, no más de $\abs U -1$ por cada árbol. Dualmente, no hay manera de ``eliminar'' menores de $G$, de manera que nos quede un grafo con demasiadas aristas para ser cubiertas por $k$ árboles
 \end{obs}
 La observación no solo es necesaria, si no también es suficiente:
 
 \begin{theorem}[Nash-Williams (1964)]\label{th:nash-williams-arboricidad}
-Las aristas de un multigrafo $G = (V,E)$ se pueden cubrir por a lo más $K$ árboles si y solo si $\Abs {G[U]} \leq k (\abs U - 1)$ para todo subconjunto no vacío $U \subset V$.
+Las aristas de un multigrafo $G = (V,E)$ se pueden cubrir por a lo más $k$ árboles si y solo si $\Abs {G[U]} \leq k (\abs U - 1)$ para todo subconjunto no vacío $U \subset V$.
 \end{theorem}
 
 \begin{definition}
@@ -2825,31 +2838,31 @@ El menor número de árboles que puede cubrir las aristas de un grafo es la \tex
  Por el Teorema anterior \ref{th:nash-williams-arboricidad}, la arboricidad de un grafo mide la densidad máxima local: un grafo tiene poca arboricidad si y solo si es ``nunca denso'' en el sentido de que no tiene subgrafos $H$ con $\epsilon (H)$ grande.
 
 \begin{theorem}[Bowler \& Carmesin (2015)]\label{th:packing-covering theorem - Bowler - Carmesin - 2015}
-Para todo multigrafo conexo $G = (V,E)$ y todo $k \in \naturals$, existe una partición $P$ de $V$ tal que todo $G[U]$ con $U \in P$ tiene $k$ árboles generadores disjuntos y las aristas de $G/P$ (el grafo contraido: aristas entre dos conjuntos $U,U' \in P$ se vuelven aristas paralelas en $G/P$) pueden cubrirse con $k$ árboles generadores.
+Para todo multigrafo conexo $G = (V,E)$ y todo $k \in \naturals$, existe una partición $P$ de $V$ tal que todo $G[U]$ con $U \in P$ tiene $k$ árboles generadores arista-disjuntos y las aristas de $G/P$ (el grafo contraido: aristas entre dos conjuntos $U,U' \in P$ se vuelven aristas paralelas en $G/P$) pueden cubrirse con $k$ árboles generadores.
 \end{theorem}
 \begin{proof}
 \begin{notation}
-Sea $T$ un árbol generador de $G$, $e$ una cuerda, y $f \in E(T)$ una arista en el ciclo fundamental $C_e$. Entonces $T' = T + e - f$ es otro árbol generador: por el Corolario \ref{}, pues $T'$ es conexo y tiene el mismo número de aristas que $T$. Decimos que $T'$ es obtenido de $T$ al \textbf{intercambiar} $f$ por $e$.
+Sea $T$ un árbol generador de $G$, $e$ una cuerda, y $f \in E(T)$ una arista en el ciclo fundamental $C_e$. Entonces $T' = T + e - f$ es otro árbol generador: por el Corolario \ref{corolario:todo grafo conexo de n vertices es un arbol si y solo si tiene n-1 aristas}, pues $T'$ es conexo y tiene el mismo número de aristas que $T$. Decimos que $T'$ es obtenido de $T$ al \textbf{intercambiar} $f$ por $e$.
 
-Ahora, sea $\mathcal{T} = \{T_1,\ldots, T_k\}$ una familia de árboles generadores de $G$. llamemos a una sucesión $e_0, \ldots, e_n$ de aristas una \textbf{cadena de intercambios} para $\mathcal{T}$ \textbf{empezando} en $e_0$ si $e_n$ no yace en inguno de estos árboles, pero para todo $i < n$ existe $j = j(i)$ tal que $e_i \in T_J$ mientras que $e_{i+1}$ es una cuerda de $T_j$ cuyo ciclo fundamental con respecto de $T_j$ contiene a $e_i$.
+Ahora, sea $\mathcal{T} = \{T_1,\ldots, T_k\}$ una familia de árboles generadores de $G$. Llamemos a una sucesión $e_0, \ldots, e_n$ de aristas una \textbf{cadena de intercambios} para $\mathcal{T}$ \textbf{empezando} en $e_0$ si $e_n$ no yace en inguno de estos árboles, pero para todo $i < n$ existe $j = j(i)$ tal que $e_i \in T_j$ mientras que $e_{i+1}$ es una cuerda de $T_j$ cuyo ciclo fundamental con respecto de $T_j$ contiene a $e_i$.
 
 Escribamos $E(\mathcal{T})  = \bigcup \{ E(T) | T \in \mathcal{T} \}$ para una familia.
 \end{notation}
 
 \begin{lemma}
-Si $e_0$ comienza una cadena de intercambios para $\mathcal{T}$ y yace en dos de sus árboles, luego existe unau familia $\mathcal{T} '$ de $k$ árboles generadores de $G$ tales que $E(\mathcal{T}) \subsetneq E(\mathcal{T} ')$.
+Si $e_0$ comienza una cadena de intercambios para $\mathcal{T}= \{T_1,\ldots, T_k\}$ y yace en dos de sus árboles, luego existe una familia $\mathcal{T} '$ de $k$ árboles generadores de $G$ tal que $E(\mathcal{T}) \subsetneq E(\mathcal{T} ')$.
 \end{lemma}
 \begin{proof}
 Tomemos una cadena de intercambios $e_0,\ldots, e_n$ de longitud mínima para $\mathcal T$ que empiece en $e_0$. Entonces ninguno de los $e_i$ yace en el ciclo fundamental, con respecto de cualquier árbol en $\mathcal T$, para cualquier $e_\ell$ con $\ell > i + 1$: de lo contrario podríamos acortar la secuencia saltando de $e_i$ en $e_\ell$ o $e_{\ell+1}$.
 
-Ahora, empezando con $\mathcal T ^0 = \mathcal T$, definimos $\mathcal T^{i+1}$ recursivamente para $i = 0, \ldots, n-1$ reemplazando en $\mathcal T^i = \{ T_1^i , \ldots, T_k^i$ el árbol $T_j^i$ por $T_j^i + e_{i+1} - e_i =: T_j^{i+1}$ para $j = j(i)$. Notar que para $j = j(i)$ la minimalidad de nuestra secuencia implica que toda arista $e$ de $T_j$ en su ciclo fundamental para $e_{i+1}$ está todavía en $T_j^i$: de lo contrario $e = e_{i'}$ para algún $i' < i$, obteniendo una contradicción para $\ell := i+1 > i' + 1$. Así, si $T_j^i$ es un árbol generador de $G$, lo cual podemos asumir inductivamente, implica que $T_j^{i+1}$ también lo es.
+Ahora, empezando con $\mathcal T ^0 = \mathcal T$, definimos $\mathcal T^{i+1}$ recursivamente para $i = 0, \ldots, n-1$ reemplazando en $\mathcal T^i = \{ T_1^i , \ldots, T_k^i\}$ el árbol $T_j^i$ por $T_j^i + e_{i+1} - e_i =: T_j^{i+1}$ para $j = j(i)$. Notar que para $j = j(i)$ la minimalidad de nuestra secuencia implica que toda arista $e$ de $T_j$ en su ciclo fundamental para $e_{i+1}$ está todavía en $T_j^i$: de lo contrario $e = e_{i'}$ para algún $i' < i$, obteniendo una contradicción para $\ell := i+1 > i' + 1$. Así, si $T_j^i$ es un árbol generador de $G$, lo cual podemos asumir inductivamente, implica que $T_j^{i+1}$ también lo es.
 
 Claramente, $\mathcal T ' := \{ T_1^n , \ldots, T_k^n \}$ cumple $E(\mathcal T ') = E(\mathcal T) \cup \{e_n\}$.
 \end{proof}
 
-Ahora estamos en condiciones de probar el teorema. Sea $\mathcal T =   \{T_1,\ldots, T_k\}$ una familia de $k$ árboles generadores de $G$, elegidos de manera que $E(\mathcal T)$ es maximal. Sea $D$ el conjunto de tudas sus aristas en $G$ que empiezan una cadena de intercambios para $\mathcal T$. Estas incluyen todas las aristas que no están en $E(\mathcal T)$, pues estas forman cadenas de intercambio con una sola arista. Sea $P$ la partición de $V$ en sus conjuntos de vértices de las componentes conexas de $(V,D)$.
+Ahora estamos en condiciones de probar el teorema. Sea $\mathcal T =   \{T_1,\ldots, T_k\}$ una familia de $k$ árboles generadores de $G$, elegidos de manera que $E(\mathcal T)$ es maximal. Sea $D$ el conjunto de todas sus aristas en $G$ que empiezan una cadena de intercambios para $\mathcal T$. Estas incluyen todas las aristas que no están en $E(\mathcal T)$, pues estas forman cadenas de intercambio con una sola arista. Sea $P$ la partición de $V$ en sus conjuntos de vértices de las componentes conexas de $(V,D)$.
 
-Para la afirmación de la parte de packing del teorema, sea $U \in P$. Para todo $j = 1, \ldots, k$ sea $S_j$ el subgrafo de $T_j [U]$ formado por sus aristas en $D$. Estos árboles $S_j$ son arista disjuntos, pues por maxximalidad de $\mathcal T$ y el lema anterior, ninguna arista en $D$ yace en más de un $T_j$. Veamos que los $S_j$ son conexos.
+Para la afirmación de la parte de packing del teorema, sea $U \in P$. Para todo $j = 1, \ldots, k$ sea $S_j$ el subgrafo de $T_j [U]$ formado por sus aristas en $D$. Estos bosques $S_j$ son arista disjuntos, pues por maximalidad de $\mathcal T$ y el lema anterior, ninguna arista en $D$ yace en más de un $T_j$. Veamos que los $S_j$ son conexos, i.e. árboles.
 
 En efecto, como las aristas de $D$ forman un submultigrafo conexo en $U$, basta probar que para cada aristas $uu'\in D$ con $u,u' \in U$ existe un $u$-$u'$ camino en $S_j$. Es claro que si $uu'$ yace en $T_j$, luego yace en $S_j$. Si no, entonces existe un camino $uT_j u'$ que sigue teniendo sus aristas $e \in D$, y por lo tanto yace en $S_j$: si $e_0, \ldots, e_n$ es un intercambio de cadenas tal que $e_0 = uu' \in D$, entonces $e, e_0, \ldots, e_n$ es un intercambio de cadenas poniendo $e \in D$, pues $e$ yace en el ciclo fundamental de $e_0$ respecto de $T_j$.
 
@@ -2858,7 +2871,7 @@ Como todo $T_j$ induce subgrafos conexos $S_j$ en los conjuntos de la partición
 \end{proof}
 
 \begin{proof}[(Nash-Williams; Tutte)]
-Supongamos que un multigrafo $G$ tiene al menos $k (\abs P -1)$ cross-edges por ccada partición $P$ de $V(G)$. Sea $P$ la partición del Teorema \ref{th:packing-covering theorem - Bowler - Carmesin - 2015}. Por el teorema, $G/P$ tiene $k$ árboles generadores que cubren sus aristas. Como $\Abs {G/P} \geq k(\abs P -1)$, deben ser arista disjuntos. Combinandolas con los árboles generadores arista-disjuntos de $G[U]$ que también son provistos por el Teorema \ref{th:packing-covering theorem - Bowler - Carmesin - 2015}, obtenemos los $K$ árboles generadores de $G$ que buscabamos.
+Supongamos que un multigrafo $G$ tiene al menos $k (\abs P -1)$ cross-edges por cada partición $P$ de $V(G)$. Sea $P$ la partición del Teorema \ref{th:packing-covering theorem - Bowler - Carmesin - 2015}. Por el teorema, $G/P$ tiene $k$ árboles generadores que cubren sus aristas. Como $\Abs {G/P} \geq k(\abs P -1)$, deben ser arista disjuntos. Combinandolas con los árboles generadores arista-disjuntos de $G[U]$ que también son provistos por el Teorema \ref{th:packing-covering theorem - Bowler - Carmesin - 2015}, obtenemos los $k$ árboles generadores de $G$ que buscabamos.
 \end{proof}
 
 \begin{proof}[(Nash-Williams)]
@@ -2869,15 +2882,228 @@ Supongamos que todo $U\subset V$ induce a lo más $k (\abs U - 1)$ aristas en $G
 
 
 
+\subsection{Cubrimiento por caminos}
+
+Estamos motivados en esta subsección a responder la pregunta: ¿cuántos caminos en un grafo dirigido bastan para cubrir todos los vértices?
+
+\begin{definition}
+Un \textbf{camino dirigido} en un grafo dirigido $P \neq \emptyset$ cuyos distintos vértices $x_0,\ldots,x_k$ y aristas $e_0, \ldots, e_{k-1}$ tales que $e_i$ es una arista dirigida de $x_i$ en $x_{i+1}$, para todo $i < k$. En esta sección nos referiremos con camino a un camino dirigido.
+
+Llamamos a $x_k$ el \textbf{último vértice} de $P$, y cuando $\mathcal P$ es un conjunto de caminos dirigidos, escribimos por $\ter {\mathcal P}$ al conjunto de los últimos vértices.
+
+Un \textbf{cubrimiento por caminos} en un grafo dirigido es un conjunto de caminos disjuntos en $G$ que juntos cubren todos los vértices de $G$.
+\end{definition}
+
+
+
+\begin{theorem}[Gallai \& Milgram (1960)]\label{th:Gallai-Milgram - todo grafo dirigido tiene un cubrimiento por caminos dirigidos con un conjunto independiente formado por un elemento de cada camino}
+Todo grafo dirigido $G$ tiene un cubrimiento por caminos $\mathcal P$ y un conjunto independiente $\{v_P | P \in \mathcal P \}$ de vértices tales que $v_P \in P$ para todo $P \in P$
+\end{theorem}
+\begin{proof}
+Claramente $G$ tiene un cubrimiento de caminos, i.e. el cubrimiento por caminos triviales. Probaremos por inducción en $\abs G$ que para cada cubrimiento por caminos $\mathcal P = \{P_1, \ldots, P_m\}$ con $\ter {\mathcal{P}}$ minimal, existe un conjunto $\{v_P | P \in \mathcal P\}$ de vértices independientes como buscabamos. Para cada $i$, escribamos $v_i$ para el último vértice de $P_i$.
+
+Si $\ter {\mathcal{P}} = \{v_1, \ldots, v_m \}$ es independiente, no hay nada que probar, luego supongamos que $G$ tiene una arista de $v_2$ en $v_1$. Como $P_2 v_2 v_1$ es nuevamente un camino, la minimalidad de $\ter {\mathcal{P}}$ implica que $v_1$ no es el único vértice de $P_1$; sea $v$ el vértice que precede a $v_1$ en $P_1$. Entonces $\mathcal P ' := \{ P_1 v , P_2, \ldots, P_m \}$ es un cubrimiento por caminos de $G' := G \setminus {v_1}$.
+
+\Inkscape{Cubrimiento por caminos de $G$ y $G'$.}
+
+ Claramente, cualquier otro conjunto independiente de representantes para $\mathcal P'$ en $G'$ va a funcionar para $\mathcal P$ en $G$, con lo cual solo tenemos que verificar que podemos aplicar la hipótesis inductiva en $\mathcal P '$. Así, basta ver que $\ter {\mathcal{P}'} = \{v,v_2,\ldots,v_m\}$ es minimal respecto a los conjuntos de últimos vertices de cubrimientos por caminos de $G'$.
+
+Supongamos por el absurdo que no, es decir, que $G'$ tiene un cubrimiento por caminos $\mathcal {P}''$ con $\ter {\mathcal{P}''} \subsetneq \ter {\mathcal{P}'}$. Si un camino $P \in {\mathcal{P}''}$ termina en $v$, podemos reemplazar $P$ en ${\mathcal{P}''}$ por $P v v_1$ y así obtener un cubrimiento por caminos de $G$ cuyo conjunto de últimos vértices es un subconjunto propio de $\ter {\mathcal{P}}$, contradiciendo la elección de ${\mathcal{P}}$. Si $P \in {\mathcal{P}''}$ es un camino que termina en $v_2$, pero ninguno en $v$, podemos similarmente reemplazar $P$ en ${\mathcal{P}''}$ por $Pv_2v_1$, contradiciendo la minimalidad de $\ter {\mathcal{P}}$. Consecuentemente, ${\mathcal{P}''} \subset \{ v_3,\ldots, v_m \}$. Pero ahora ${\mathcal{P}''}$ y el camino trivial $\{v_1\}$ juntos forman un cubrimiento por caminos de $G$, contradiciendo la minimalidad de $\ter {\mathcal{P}}$.
+\end{proof}
+
+\begin{definition}
+Sea $(G, \leq)$ un conjunto parcialmente ordenado. Decimos que es una \textbf{cadena} si sus elementos son comparables dos a dos; decimos que es una \textbf{anticadena} si no son comparables dos a dos.
+\end{definition}
+
+\begin{corollary}[Teorema de Dilworth (1950)]\label{corolario:teorema de Dilworth}
+En todo conjunto finito parcialmente ordenado $(G, \leq)$, el mínimo número de cadenas que cubre $G$ es igual al máximo número de anticadenes en $G$.
+\end{corollary}
+\begin{proof}
+Si $A$ es una anticadena de $G$ de máxima cardinalidad, entonces claramente $G$ no puede ser cubierto por menos de $\abs A$ cadenas. El hecho de que $\abs A$ cadenas bastan se sigue del teorema anterior aplicado al grafo $G$ con aristas dirigidas $\{(x,y) | x < y \}$.
+\end{proof}
 
 
 
 
 
 
+\subsection{Ejercicios}
+
+\begin{exercise}
+Probar que si existen funciones inyectivas $f: A \rightarrow B$ y $g : B \rightarrow A$ entre dos conjuntos infinitos, entonces existe una biyección entre $A \rightarrow B$.
+\end{exercise}
+\begin{solution}
+Consideremos el $A,B$-bigrafo $G$ donde $ab$ con $a \in A$, $b \in B$ es una arista si y solo si $b = f(a)$ o $a = g(b)$. Luego basta ver que existe una biyección inducida por cada componente conexa del grafo. Notar que cada componente es a lo sumo numerable. Sea $a \in A$ en una componente de $G$, digamos $C$, el cual es un $A',B'$ grafo bipartito.
+
+Si $C$ es finito, luego como $A'$ cumple la condición de Hall \ref{eq:condicion de Hall} para cualquier subconjunto pues $f$ es inyectiva, existe un matching perfecto que lo cubre y así $\abs {A'} \leq \abs{B'}$; similarmente como $g$ es inyectiva tenemos que $\abs {B'} \leq \abs {A'}$.
+
+Si $C$ es infinito (numerable), tenemos que los vértices son $x_0 = a, x_1 = f(a), x_2 = g(x_1), x_3 = f(x_2), \ldots $. Luego definimos una biyección $h: A' \rightarrow B'$ en $C$ dada por
+$h(a') = f(a')$, la cual claramente es inyectiva, por ser la restricción de $f$, y además es sobreyectiva.
+\end{solution}
+
+\begin{exercise}
+Sea $k$ un entero y $A$ un conjunto finito. Probar que dadas dos particiones $P^i = \{A^i_1, \ldots, A^i_r\}$ para $i = 1,2$ en subconjuntos de $k$ elementos de $A$, existe una elección de representantes $a_1, \ldots, a_r$ de los conjuntos de $P_1$ y $P_2$.\footnote{Un conjunto de representantes de una partición es un conjunto de elementos, cada único perteneciente a un único conjunto de la partición, y todos los conjuntos tienen algún elemento.}
+\end{exercise}
+\begin{solution}
+Consideremos el $X,Y$-bigrafo dado por $X= P^1$ e $Y = P^2$, donde $A^1_i A^2_j$ es una arista si y solo si $A^1_i \cap A^2_j \neq \emptyset$. Este grafo cumple la condición de Hall \ref{eq:condicion de Hall}, en efecto, sea $S \subset X$, entonces el subconjunto $\bigcup_{A^1_j \in S} A^1_j$ de $A$ tiene $k \abs S$ elementos, y por lo tanto, debe haber almenos $\abs S$ conjuntos de la partición $P^2$ que contengan a estos vértices, es decir, $\abs S \leq \abs {N(S)}$. Por lo tanto, el Teorema de Hall \ref{th:teorema de Hall} garantiza la existencia de un matching que cubre a $X$, el cual debe cubrir a $Y$ pues $\abs X = \abs Y$.
+
+Escribimos $M = \{e_1,\ldots,e_r\}$ a este matching. Así, podemos tomar un conjunto de representantes $x_1,x_2,\ldots,x_r$ tal que $x_i$ pertenece a ambos conjuntos de las particiones que constituyen los extremos de la arista $e_i \in M$.
+\end{solution}
+
+\begin{exercise}
+Sea $A$ un conjunto finito con subconjuntos $A_1,\ldots,A_n$, y sean $d_1,\ldots,d_n \in \naturals$. Mostrar que existen subconjuntos disjuntos $D_k \subset A_k$, con $\abs{D_k} = d_k$ para todo $1 \leq k \leq n$ si y solo si
+\[
+    \lvert \bigcup_{i \in I} A_i \rvert \geq \sum_{i \in I} d_i
+\]
+para todo $I \subset \{1, \ldots, n\}$.
+\end{exercise}
+
+\begin{solution}
+Consideremos el $X,Y$-bigrafo tal que $X = A$ e $Y$ el conjunto con $d_i$ copias de $A_i$ para cada $i = 1, \ldots, n$, donde $d$ tiene una arista con todas las copias de $A_i$ si $d \in A_i$. Luego tenemos un matching que cubre a $Y$ por el Teorema de Hall \ref{th:teorema de Hall}. En efecto, para todo $S \subset Y$ se tiene que $\abs S \leq \sum_{i \in I} d_i$ donde $I$ es el conjunto de índices $j$ tal que aparece alguna copia de $A_j$ en $S$; con lo cual,
+\[
+    \abs S \leq \sum_{i \in I} d_i \leq \lvert \bigcup_{i \in I} A_i \rvert = \abs{N(S)}.
+\]
+Así, hay un matching que cubre a $Y$, luego tomando por cada copia $A_i$ un elemento de $A$, podemos construir $D_i \subset A_i$ de $d_i$ elementos, tales que $D_i \cap D_j = \emptyset$ para todo $i \neq j$.
+\end{solution}
 
 
 
+
+\begin{exercise}
+Sea $G$ un grafo bipartito con bipartición $\{A,B\}$. Supongamos que $\delta (G) \geq 1$ y que $d(a) \geq d(b)$ para toda arista $ab$ con $a \in A$. Probar que $G$ contiene un matching que cubre a $A$.
+\end{exercise}
+\begin{solution}
+Supongamos que no hay matching que cubra $A$, es decir, existe un subconjunto $S \subsetneq A$ de cardinal máximo tal que cumple la condición de Hall \ref{eq:condicion de Hall}; notar que $\abs S \geq 1$ pues $\delta \geq 1$. Sea $a \in A \setminus S$, por maximalidad los vecinos de $a$ están en $N(S) = B$. Más aún, por maximalidad $\abs S = \abs {N(S)} = \abs B$, si no $S \cup \{x\}$ seguiría cumpliendo la condición de Hall. Sea $M = \{s_1 t_1,\ldots, s_{r t_r} \}$ el matching de $S$ con $N(S)$, tenemos que
+\begin{align*}
+    2 \abs {E(G)} &= \sum_{x \in A} d(x) + \sum_{y \in B} d(y)\\
+                &> \sum_{x \in S} d(x) + \sum_{y \in B} d(y) \\
+                &= \sum_{i = 1}^r d(s_i) + d(t_r)\\
+                &\geq 2 \sum_{y \in Y} d(y).
+\end{align*}
+Con lo cual, $\abs \{E(G)\} > \sum_{y \in Y} d(y)$, lo cual es imposible porque todas las aristas de $G$ inciden en $Y$.
+\end{solution}
+
+\begin{definition}
+Decimos que un grafo $G$ es \textbf{vértice-transitivo} si para todo par de vértices $v,w\in G$ existe un automorfismo de $G$ tal que $v \mapsto w$.
+\end{definition}
+
+\begin{exercise}
+Probar que todo grafo conexo transitivo de orden par contiene un matching perfecto.
+\end{exercise}
+\begin{solution}
+Por el Teorema \ref{th:teorema del conjunto S con componentes del complemento factores criticos impares, con la propiedad de que caracteriza si el grafo tiene matching perfecto o no.} existe un conjunto $S$ que nos caracteriza si $G$ tiene matching perfecto. Sea $M$ un matching máximo, y supongamos que no es perfecto, es decir, existe $v \in G$ que no está cubierto por $M$. Sín perdida de generalidad, mandando $v$ a un elemento de $S$ vía un automorfismo, podemos suponer que $v \in S$. (Notar que $S \neq \emptyset$ porque $G$ es conexo y de orden par).
+
+Ahora, el grafo $S$ tiene la propiedad de que el bigrafo inducido $G_S$ es matcheable, en particular $v$ tiene un vecino $u$ en alguna componente $C \in \mathcal C _{G \setminus S}$. El teorema nos dice que $C$ es factor-crítico, es decir $C \setminus \{u\}$ tiene un matching perfecto. Quitando las aristas de $M$ que inciden en $C$ (las cuales son exactamente las que inciden en $C \setminus \{u\}$ pues $v$ no está cubierto por $M$) y cambiándolas por las aristas de un matching de $C \setminus \{u\}$ obtenemos un nuevo matching con igual o más aristas que antes, luego por maximidad era de igual cardinalidad, i.e. $M$ cubría a $C \setminus \{u\}$. Pero esto nos dice que $M \cup \{ v u \}$ es un matching de tamaño más grande; absurdo.
+\end{solution}
+
+\begin{exercise}
+Encontrar un grafo $3$-regular sin matching perfecto.
+\end{exercise}
+\begin{solution}
+Por el Corolario \ref{corolario:todo grafo 3-regular sin puentes tiene un matching perfecto} un matching perfecto, con lo cual un contraejemplo tiene que tener un puente. El grafo $3$ regular más chico es $K_4$. Notar que podemos contruir grafos $3$-regulares agarrando uno $3$-regular, agregar una subdivisión y conectar ese vértice por un puente a otro grafo $3$-regular. Notar que los grafos $3$ regulares tienen una cantidad de vértices par por la Proposición \ref{proposicion:el numero de vertices de grado impar es siempre par}. Con lo cual, nuestra construcción si tiene un puente no debería conectar directamente dos grafos $3$-regulares, pues quitar esos vértices no nos llevaría a un absurdo: queremos quitar un conjunto de $S$ vértices tal que $\abs S < q (G \setminus S)$. Así, la mejor idea que tenemos es que el puente tenga un extremo que conecte con \textit{tres} grafos $3$-regulares. En efecto, el contraejemplo más simeple que se nos ocurres es:
+
+\Dibujo[0.6]{Grafo $3$-regular con tres puentes que no tiene matching perfecto, pues viola la Condición de Tutte \eqref{eq:condicion de Tutte}: considerar el singleton $S$ dado por \red{$\{v\}$} (ver el Teorema \ref{th:teorema de Tutte}.)}
+\end{solution}
+
+\begin{exercise}
+Sea $T$ un árbol y $\mathcal T$ un conjunto de subárboles de $T$. Probar que el máximo número de árboles disjuntos en $\mathcal T$ es igual al menor cardinal de un conjunto $X$ de vértices tal que $T \setminus X$ no contiene ningún arbol de $\mathcal T$.
+\end{exercise}
+\begin{solution}
+Notar que $X$ posee la propiedad de que $T \setminus X$ no contiene ningún árbo de $\mathcal T$ si y solo si $X$ intereseca a todos los árboles de $\mathcal T$. Además, el segundo ítem del Ejercicio \ref{ejercicio:ejercicio sobre interseccion de subarboles en un arbol con dos items} dice que existe un conjunto con a lo más $k$ vértices intersecando todos los árboles de $\mathcal T$, luego si $m$ es el mínimo cardinal que puede tener $X$, se sigue que $m \leq k$. Para la desigualdad recíproca, $X$ tiene que tener almenos un vértice de cada uno de los $k$ árboles disjuntos, con lo cual $k \leq \abs X = m$.
+\end{solution}
+
+\begin{exercise}
+Sea $\alpha (G)$ la máxima cantidad de vértices independientes. Probar que $G$ puede ser cubierto por a lo más $\alpha (G)$ subgrafos disjuntos, cada uno isomorfo a un ciclo, a un $1$-camino, o un vértice.
+\end{exercise}
+\begin{solution}
+Veamos primero que existe un subgrafo $H$ de $G$ de tipo $\mathcal H$, con la propiedad de que tiene un vértice $v\in H$ que no es adyacente a ningún vértice de $G \setminus H$. Consideremos el camino $P : x_0, \ldots, x_k$ con $k\geq 0$ de longitud máxima en $G$. Entonces $v = x_0$ funciona: si no tiene vecinos es obvio porque podemos tomar $x_0$, si su único vecino es $x_1$ ganamos, y si tiene un vecino distinto de $x_1$, digamos $x_i$ con $i > 1$ máximo, entoncces $x_0$ está en el ciclo $x_0 x_1 \ldots x_i x_0$ y no tiene vecinos afuera de este.
+
+Denotemos por $m(G)$ el mínimo cardinal de un cubrimiento por subgrafos disjuntos de tipo $\mathcal H$ de un grafo $G$.
+
+\begin{lemma}
+Tenemos que \begin{enumerate}[(i)]
+\item $\alpha (G\setminus H) + 1 \leq \alpha (G)$;
+\item $m(G) \leq m(G\setminus H) + 1$.
+\end{enumerate}
+\end{lemma}
+\begin{proof}
+\begin{enumerate}[(i)]
+\end{enumerate}
+\item Tomemos un conjunto de vértices aislados de tamaño máximo $\alpha (G \setminus H)$ en $G \setminus H$, luego como ese conjunto junto con $v \in H$ es aislado en $G$ se sigue que $\alpha (G \setminus H) + 1 \leq \alha (G)$.
+
+\item Como $m(G) \no \leq m(G \setminus H)$, tenemos que $m(G\setminus H) +1 \leq m(G)$. Por otro lado, si agarramos un cubrimiento por subgrafos disjuntos de tipo $\mathcal H$ de $G \setminus H$ y le agregamos $H$, obtenemos un cubrimiento disjunto de $G$, luego $m(G\setminus H) + 1 \geq m(G)$.
+\end{proof}
+
+Luego por el lema anterior, y aplicando hipótesis inductiva a $G \setminus H$, tenemos que
+\[
+    m(G) \leq m(G\setminus H) + 1 = \alpha (G\setminus H) + 1 \leq \alpha (G).
+\]
+\end{solution}
+
+
+
+
+\begin{exercise}
+Probar que si $G$ tiene dos árboles arista disjuntos que generan $G$, entonces tiene un subgrafo conexo generador, tal que todos sus vértices tienen grado par.
+\end{exercise}
+\begin{solution}
+Por el Teorema \ref{th:Nash-williams y Tutte - todo multigrafo con $k$ arboles generadores arista disjuntos si y solo si toda particion tiene almenos k (P-1) elementos}, toda partición $P$ de los vértices de $G$ tiene almenos $2(\abs P -1)$ cross-edges. Luego para todo $x \in G$, considerando la partición $\{ \{x\}, V(G) \setminus \{x\} \}$ vemos que $x$ tiene almenos dos vecinos, i.e. $\delta (G) \geq 2$.
+
+Consideremos el conjunto de subgrafos conexos de $G$ cuyos vértices tienen todos grado par. Y tomemos $H$ máximo con esta propiedad. Debemos ver que existe almenos un grafo $H$ y que el de tamaño máximo genera $G$. Que $G$ tiene un subgrafo conexo de orden par se sigue de que podemos tomar cualquier subciclo; si no tiene subciclos, entonces $G$ es un árbol, luego no puede tener dos árboles arista disjuntos que lo generen (solo hay uno: si mismo).
+
+Supongamos que $H$ no genera $G$, es decir, $H \subsetneq G$. Particionamos $G$ en dos conjuntos de vétices: $V(G) \setminus V(H)$ y $V(H)$. El teorema nos dice que hay almenos $2$ cross-edges. Sea $v \in H$ adyacente a un vértice $x$ fuera de $H$. Notemos que la arista $e = v x$ no está en uno de los dos árboles generadores, pues son arista disjuntos, digamos que no está en $T$, entonces forma un ciclo fundamental $C_e$; así el grafo obtenido por agregar los vértices del ciclo a $H$ es un grafo más grande con grados par. Absurdo, debe ser que $H$ generaba $G$.
+
+Un comentario antes, hay que ser más rigurosos a la hora de ``agregar'' un ciclo a $H$, de manera que todos los vértices sigan teniendo grado par. Sea $C$ un ciclo, si $x$ es un vértce fuera de $H$ en $C$, luego agregamos las aristas de $C$ solamente, y nos queda $x$ de grado $2$. $x$ es un vértice de $H$ entre dos vércies afuera no pasa nada, pues su grado aumenta en $2$. Sin embargo, puede haber problemas si $x,y \in H \cap C$ son adyacentes en $H$, pues no podemos agregar ninguna arista. Sin embargo, podemos quitar la arista $xy$ de $H$ y resolver el problema del grado par: sigue quedando conexo pues $e=xy$ no es el único camino camino que los une en $H$, pues podemos agregar las aristas de un camino en un árbol generador que no contenga a $e$
+\end{solution}
+
+Si todos los vértices de $G$ tienen grado par entonces ganamos. Si no, tiene una cantidad impar de vértices de grado impar.
+
+Por inducción en la cantidad de aristas de $G$, podemos asumir que todas las aristas de $G$ están cubiertas por las aristas de $T_1,T_2$ los árboles generadores aristas-disjuntos de $G$. Luego por ele Teorema \ref{Nash-Williams 1964} todo subconjunto no vacío $U$ tiene que $\Abs {G[U]} \leq 2(\abs U -1 )$. En particular podemos tomar $H$ con una catindad máxima de aristas, luego $2 E(H) = \sum_{x \in H} d_H (x)$ implica que $\abs H \delta (H) / 2 \leq \abs{E(H)} \leq \Abs{ G[H]} \leq 2 \abs H - 2$, luego $\delta (H) = 2$.
+
+Si $v \in H$ es un vértice con $\delta (H) = 2$. Podemos hacer inducción si $d_G (v) = d_H (v) = 2$.
+
+
+
+Hagámoslo por inducción en el orden $n$ de $G$. Si $n = 1$ no hay nada que probar. En general, tomamos un vértice $v \in G$, debe ser que $d(v) \geq 2$, pues podemos considerar la partición $\{\{v\}, V(G) \setminus \{ v\} \}$ la cual debe tener almenos dos edge-crissings por el Corolario \ref{}. Consideremos entonces el grafo $G[G\setminus \{v\}]$, por el Teorema \ref{th:packing-covering theorem - Bowler - Carmesin - 2015} existe una partición $P$ de este grafo tal que cada $U \in P$ induce un grafo con dos árboles generadores arista-disjuntos y las aristas de $G/P$ (multigrafo) estan cubiertas por $2$ árboles.
+
+Por hipótesis inductiva, los grafos inducidos por $U \in P$ en $G[G\setminus \{v\}]$ tienen un subgrafo conexo generador con todos los grados de sus vértices par. Ahora, dos vértices de $G/P$ están conectados
+
+
+
+Ahora, consideremos la partición $P$ de longitud mínima $>1$ de los vértices de $G$, tal que $G[U]$ por cada $U\in P$ está generado por dos árboles disjuntos. Luego por el Corolario \ref{} la cantidad de cross-edges entre particiones es $\geq 2 (\abs P -1)$, con lo cual existen dos $U,U' \in P$ con dos aristas entre ellos. Veamos entonces que $U'' = U \cup U'$ cumple que tiene un subgrafo conexo generador de grados pares, lo cual es imposible pues podríamos cambiar $U,U'$ por $U''$ y obtener una partición más chica, contradiciendo la minimalidad de $P$.
+
+Consideremos el subgrafo inducido $H$ de $G$ generado por dos árboles arista-disjuntos de tamaño máximo tal que $H \subsetneq G$: si $G$ no cumple esta propiedad luego tiene almenos un $H$ de esta forma. Luego $G \setminus H$ también está particionada por grafos generados por dos árboles arista disjuntos. Si $H$ tiene dos aristas en $G \setminus H$ entonces podemos agrandar $H$, y si no podemos achicar la particion de $G \setminus H$. Así podemos asumir que $G \setminus H$ tiene una partición de un solo elento, luego $H$ y $G \setminus H$ tienen dos aristas entre ellos por el Corolario \ref{}, absurdo.
+
+Particionemos a $G$ por una partición de longitud mínima tal que $U \in P$ induce un grafo generado por dos árboles disjuntos y tiene la propiedad de estar generado
+
+
+\begin{exercise}
+Probar que un conjunto parcialmente ordenado $(G,\leq)$ con almenos $rs+1$ elementos contiene una cadena de tamaño $r+1$ o una anticadena de tamaño $s+1$.
+\end{exercise}
+\begin{solution}
+Supongamos que no, es decir, que las cadenas tienen tamaño $\leq r$ y las anticadenas tamaño $\leq s$. Por el Teorema \ref{th:Gallai-Milgram - todo grafo dirigido tiene un cubrimiento por caminos dirigidos con un conjunto independiente formado por un elemento de cada camino} aplicado al grafo obvio inducido por el orden parcial tiene un cubrimiento por caminos dirigidos $\mathcal P$ y un conjunto independiente (i.e. una anticadena) $\{x_P\}_{P \in \mathcal P}$. Así, $\abs G \leq r s < rs +1$, absurdo.
+\end{solution}
+
+\begin{exercise}
+Probar la siguiente versión dual del Teorema de Dilworth \ref{corolario:teorema de Dilworth}: en un conjunto parcialmente ordenado $(G, \leq)$, el mínimo número de anticadenas cuya unión de $G$ es igual al máximo cardinal de una cadena en $G$.
+\end{exercise}
+\begin{solution}
+Pensemos a $G$ como un grafo dirigido de la manera obvia.
+Sea $k$ el cardinal de un conjunto de anticadenas de tamaño mínimo cuya unión de $G$. Sea $P$ una cadena de tamaño máximo $m$, entonoces claramente cada vértice de $P$ está en una anticadena, y una anticadena no puede cubrir más de un vértice de $P$, así $m \leq k$.
+
+Consideremos el conjunto $\mathcap P$ de los caminos dirigidos de tamaño máximo $m$ en $G$. Luego el conjunto $S = \ter {\mathcal P}$ es un conjunto de vértices independientes (i.e. una anticadena), por maximalidad de los caminos. Consideremos entonces el grafo dirigido $G' = G \setminus S$, donde los caminos de tamaño máximo tienen a lo más $m-1$ vértices. Haciendo inducción en el cardinal de $G$, se tiene que hay un conjunto de anticadenas que cubre $G'$ de a lo más $m-1$ anticadenas. Luego este conjunto, junuto con $S$ obtenemos un conjunto de a lo más $m$ anticadenas que cubre a $G$, i.e. $k \leq m$.
+\end{solution}
+
+\begin{exercise}
+Encontrar un conjunto parcialmente ordenado anticadenas infinitas pero que no es la únión de finitas cadenas.
+\end{exercise}
+\begin{solution}
+Considerar el orden parcial inducido por el siguiente grafo dirigido infinito:
+\Inkscape{Grafo dirigido infinito. En \purple{violeta} se ilustra $A_3$.}
+Formalmente, exte es el conjunto dirigido $\{x_{i, j}\}_{i,j \in \naturals}$ tal que $x_{i,j} \leq x_{i',j'}$ si y solo si $i \leq i'$ y $j \leq j'$. Notemos que no puede tener una anticadena infinita. En efecto, sea $A=\{x_{i,j}\}_{i \in I, j \in J}$ una anticadena infinita. Si $I$ e $J$ son infinitos, luego claramente para algún $x^0 = x_{i_0,j_0} \in A$ existe $x^1 = x_{i_1,j_1} \in A$ con $i_0 \leq i_1$ y $j_0 \leq j_1$, i.e. $x^0 \leq x^1$, absurdo. Por otro lado, podemos suponer por simetría que $I$ es infinito, pero que $J$ es finito, digamos $J \subset \{1, \ldots, k\}$. Como hay infinitos elementos en $A$, debe haber almenos dos elementos distintos $x = x_{i,j}$, $x' = x_{i',j'}$ en $A$ con $j = j'$, con lo cual $x < x'$ o $x ' < x$, absurdo.
+
+Observemos que también este orden parcial tiene anticadenas de cardinal $k$ para todo $k \in \naturals$. En efecto, considerar los conjuntos $A_k = \{x_{k-j + 1, j\}_{j = 1}^k$. En particular, no pueden existir cubrimientos por finitas cadenas: si cubrimos al grafo dirigido con $l$ cadenas, tenemos que $k = \abs {A_k} \leq l$ para todo $k \in \naturals$, pues $A_k$ es una anticadena (cada cadena contiene a lo más un elemento).
+\end{solution}
 
 
 
@@ -3094,7 +3320,7 @@ Estas dos definiciones son equivalentes:
 Un grafo es maximial plano si y solo si es una triangulación.
 \end{proposition}
 
-\begin{corollary}
+\begin{corollary}\label{corolario:un grafo plano con n > 2 vertices tiene a lo mas 3n - 6 aristas}
 Un grafo plano $G$ con $n \geq 3$ vértices tiene a lo más $3n - 6$ aristas. Más aún, toda triangulación con $n$ vértices tiene exactamente $3n-6$ aristas; es decir, un grafo plano es una triangulación si y solo si tiene exactamente $3n-6$ aristas.
 \end{corollary}
 \begin{proof}
@@ -3116,20 +3342,26 @@ Notar que el número de aristas de este grafo bipartito es justamente $2 \abs {E
 %%%%%%%%%%%
 
 \begin{example}
-El grafo $G := K_{3,3}$ no es plano. En efecto, al ser bipartito todos los ciclos son pares, luego si tuviera un grafo plano correspondiente, las fronteras de sus caras van a ser de largo al menos $4$, pues las fronteras de un grafo plano siempre forman un ciclo (si es que el grafo plano tiene más de una cara). Como en la demostración del corolario anterior, construimos el $X,Y$-bigrafo asosciado al grafo plano con $X = E(K_{3,3})$ e $Y = F(K_{3,3})$. Pero como en la demostración del corolario, el grafo bipartito tiene $2 \abs E (G)$ aristas y almenos $4 \abs F$ caras. Llamemos $n,m,f$ al número de vértices, aristas, y caras de $G$, respectivamente. Así, la desigualdad anterior se traduce a que $2 f \leq m$. Con lo cual, aplicando el Teorema de Euler:
-\begin{array}{ccc}
-    $2 = n - m + f$ & $\leq n - m + \frac m 2$ & $\quad (2 f \leq m)$ \\
-                    & $\leq \frac 3 2$ & $\quad (n = 6, m = 9)$,
-\end{array}
+El grafo $G := K_5$ no es planar. En efecto, tiene $n= 5$ vértices y $m = \binom 5 2 = 10$ aristas, pero el Corolario \ref{corolario:un grafo plano con n > 2 vertices tiene a lo mas 3n - 6 aristas} dice que si $G$ fuera planar, su grafo plano correspondiente tendría $10 \leq 9$ aristas, absurdo.
+\end{example}
+
+\begin{example}
+El grafo $G := K_{3,3}$ no es planar. En efecto, al ser bipartito todos los ciclos son pares, luego si tuviera un grafo plano correspondiente, las fronteras de sus caras van a ser de largo al menos $4$, pues las fronteras de un grafo plano siempre forman un ciclo (si es que el grafo plano tiene más de una cara). Como en la demostración del último corolario de la clase anterior \ref{corolario:un grafo plano con n > 2 vertices tiene a lo mas 3n - 6 aristas}, construimos el $X,Y$-bigrafo asosciado al grafo plano con $X = E(K_{3,3})$ e $Y = F(K_{3,3})$. Pero similarmente a la demostración de dicho corolario, inspeccionando este grafo bipartito, vemos que tiene $2 \abs E (G)$ aristas y almenos $4 \abs F$ caras. Llamemos $n,m,f$ al número de vértices, aristas, y caras de $G$, respectivamente. Así, la desigualdad anterior se traduce a que $2 f \leq m$. Con lo cual, aplicando el Teorema de Euler y reemplazando los valores de $n$ y $m$ de $G = K_{3,3}$:
+\[
+    \begin{array}{lllll}
+    2 = n - m + f & \leq & n - m + \frac m 2 & \quad & (2 f \leq m), \\
+                    & \leq & \frac 3 2 & \quad & (n = 6, m = 9),
+    \end{array}
+\]
 absurdo.
 \end{example}
 
 \begin{obs}
-Si un grafo no es plano, entonces sus subdivisiones tampoco, porque quitar subdivisiones de un grafo plano te devuelve un grafo plano.
+Si un grafo $H$ no es planar, entonces los grafos que contienen una subdivisión de $H$ tampoco, porque quitar subdivisiones y eliminar vértices de un grafo planar te devuelve un grafo planar.
 \end{obs}
 
 \begin{example}
-Como $K_5$ y $K_{3,3}$ no son planares, tampoco lo son sus subdivisiones. Con lo cual, si $G$ es un grafo plano entonces $G$ no contiene ni a $K_5$ ni a $K_{3,3}$ como subdivisión. De hecho, vale la recíproca:
+Como $K_5$ y $K_{3,3}$ no son planares, tampoco lo son los grafos que contienen subdivisiones de estos. Con lo cual, si $G$ es un grafo planar entonces $G$ no contiene ni a $K_5$ ni a $K_{3,3}$ como subdivisión. De hecho, vale la recíproca:
 \end{example}
 
 \begin{theorem}
@@ -3137,19 +3369,18 @@ Un grafo es planar si y solo si no contiene a $K_5$ o $K_{3,3}$ como subdivisió
 \end{theorem}
 
 \begin{lemma}
-Un grafo contiene a $K_5$ o $K_{3,3}$ como menor si y solo si contiene a $K_5$ o $K_3,3$ como subdivisión.
+Un grafo contiene a $K_5$ o $K_{3,3}$ como menor si y solo si contiene a $K_5$ o $K_3,3$ como subdivisión (i.e. como menor topológico).
 \end{lemma}
 Con lo cual, el teorema anterior equivale a pedir que contenga a estos grafos como menor.
 \begin{proof}
 \begin{enumerate}
-\item[($\Leftarrow$)] Esta implicancia es gratis pues una subdivisión es un menor topológico, y en particular es menor.
-\item[($\Rightarrow$)] Por el segundo ítem de la Proposición \ref{proposition:relaciones entre menor y menor topologico} si $G$ contiene un grafo $H$ con $\Delta (H) \leq 3$, entonces $G$ contiene a $H$ como subdivisión (i.e. $H$ es un menor topológico de $G$). Entonces nos basta demostra que $G$ contiene a $K_5$ como menor, entonces contiene a $K_5$ o a $K_{3,3}$ como subdivisión. Supongamos que $G$ contiene a $K_5$ como menor y tomo como modelo de $K_5$ en $G$ que sea minimal con respecto a las aristas, es decir, si particionamos los vértices del modelo como $V_x$ con $x \in K_5$, las aristas en $V_x$ son mínimas tal que es conexo, es decir, es un árbol, y entre cada $V_x, V_y$ con $x\neq y \in K_5$ hay una única arista.
-
-\Dibujo{Ilustración del modelo.}
-
-Si consideramos el grafo inducido por $V_x$ y las cuatro aristas que salen de él, obtengo un árbol $T_x$. Si cada $T_x$ fuese una subdivisión de un $K_{1,4}$
-\Dibujo{}
-entonces ya tenemos la subdivisión de $K_5$. Luego supongamos que no sucede, es decir, existe un $V_x$ tal que $T_x$ no es subdivisión de $K_{1,4}$. Entonces tiene dos vértices de grado $3$. Tomo esos dos vértices como extremos como extremos de su subdivisión y junto con otros extremos en las otras bolsas obtengo una subdivisión de grafo que contiene a $K_{3,3}$
+\item[($\Leftarrow$)] Esta implicancia es gratis pues una subdivisión es un menor topológico, y en particular es menor (ver el primer ítem de la Proposición \ref{proposition:relaciones entre menor y menor topologico}).
+\item[($\Rightarrow$)] Por el segundo ítem de la Proposición \ref{proposition:relaciones entre menor y menor topologico} si $G$ contiene un grafo $H$ con $\Delta (H) \leq 3$, entonces $G$ contiene a $H$ como subdivisión. Entonces nos basta demostrar que si $G$ contiene a $K_5$ como menor, entonces contiene a $K_5$ o a $K_{3,3}$ como subdivisión. Supongamos que $G$ contiene a $K_5$ como menor y tomo como modelo de $K_5$ en $G$ que sea minimal con respecto a las aristas, es decir, si particionamos los vértices del modelo como $V_x$ con $x \in K_5$, las aristas en $V_x$ son mínimas tal que es conexo, es decir, es un árbol, y entre cada $V_x, V_y$ con $x\neq y \in K_5$ hay una única arista.
+\Inkscape{Ilustración del modelo de $K_5$.}
+Si consideramos el grafo inducido por $V_x$ y las cuatro aristas que salen de él incluyendo un vértie de cada $V_y$ con $y \neq x$, obtengo un árbol $T_x$. Nuevamente por minimalidad, el árbol $T_x$ tiene exactamente $4$ hojas. Si cada $T_x$ fuese una subdivisión de un $K_{1,4}$ entonces ya tenemos la subdivisión de $K_5$.
+\Inkscape{Dibujo de $K_{1,4}$.}
+Luego supongamos que no sucede, es decir, existe un $V_x$ tal que $T_x$ no es subdivisión de $K_{1,4}$. Entonces tiene exactamente dos vértices de grado $3$. Tomo esos dos vértices como extremos de su subdivisión y junto con otros extremos en los otros $V_y$ con $y \neq x$ obtengo una subdivisión de grafo que contiene a $K_{3,3}$.
+\Inkscape[0.8]{Ilustración: los dos vértices de grado $3$ en $V_x$ de color \blue{azul}.}
 \end{enumerate}
 \end{proof}
 
