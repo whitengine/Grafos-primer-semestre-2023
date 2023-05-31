@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.4.11)  30 MAY 2023 11:05
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.4.11)  31 MAY 2023 01:55
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -6796,13 +6796,25 @@ ine 3077.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
 ine 3077.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 3081.
+ine 3084.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 3081.
+ine 3084.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 3081.
+ine 3084.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 3081.
+ine 3084.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 3084.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 3084.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 3084.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 3084.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 3084.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 3084.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
 ine 3084.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
@@ -6820,32 +6832,688 @@ LaTeX Font Info:    No math alphabet change to frozen version normal on input l
 ine 3088.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
 ine 3088.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 3088.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 3088.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 3088.
 
-Overfull \hbox (5.8676pt too wide) in paragraph at lines 3088--3089
-[][]\T1/fnc/b/n/12 Ejercicio 1.13.53. []\T1/fnc/m/n/12 Pro-bar la si-guien-te v
-er-siÛn dual del Teo-re-ma de Dil-worth [][]1.13.40[][]:
+
+LaTeX Warning: Reference `' on page 93 undefined on input line 3088.
+
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 3090.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 3090.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 3090.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 3090.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 3090.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 3090.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 3090.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 3090.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 3090.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 3090.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 3090.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 3090.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 3090.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 3090.
+./Apuntes - GRAFOS.tex:3090: Missing $ inserted.
+<inserted text> 
+                $
+l.3090 ...t \in W, x_1 ,\ldots, x_r \in W$ (r \geq
+                                                   2)?
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+./Apuntes - GRAFOS.tex:3092: Missing $ inserted.
+<inserted text> 
+                $
+l.3092 \item
+            [Caso $y_1 \neq y_2$:]
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+./Apuntes - GRAFOS.tex:3092: Missing \endgroup inserted.
+<inserted text> 
+                \endgroup 
+l.3092 \item
+            [Caso $y_1 \neq y_2$:]
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 3092.
+./Apuntes - GRAFOS.tex:3092: Undefined control sequence.
+\enit@enumerate@i ...nit@negwidth }\enit@keyfirst 
+                                                  \fi 
+l.3092 \item
+            [Caso $y_1 \neq y_2$:]
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+./Apuntes - GRAFOS.tex:3092: LaTeX Error: Lonely \item--perhaps a missing list 
+environment.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.3092 \item[Caso $y_1 \neq y_2$:]
+                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+Underfull \hbox (badness 10000) detected at line 3092
+[][]
+ []
+
+
+./Apuntes - GRAFOS.tex:3093: LaTeX Error: Lonely \item--perhaps a missing list 
+environment.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.3093 \item[Caso $y_1 = y_2$:]
+                               
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+Underfull \hbox (badness 10000) detected at line 3093
+[][]
+ []
+
+./Apuntes - GRAFOS.tex:3094: Undefined control sequence.
+\enit@endenumerate ->\enit@after 
+                                 \endlist \ifx \enit@series \relax \else \if...
+l.3094 \end{enumerate}
+                      
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./Apuntes - GRAFOS.tex:3094: Undefined control sequence.
+\enit@endenumerate ...\else \ifnum \enit@resuming 
+                                                  =\@ne \enit@setresumekeys ...
+l.3094 \end{enumerate}
+                      
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./Apuntes - GRAFOS.tex:3094: Missing number, treated as zero.
+<to be read again> 
+                   =
+l.3094 \end{enumerate}
+                      
+A number should have been here; I inserted `0'.
+(If you can't figure out why I needed to see a number,
+look up `weird error' in the index to The TeXbook.)
+
+./Apuntes - GRAFOS.tex:3094: Undefined control sequence.
+\enit@setresumekeys ...xpandafter {\enit@savekeys 
+                                                  }\xdef \enit@afterlist {#2...
+l.3094 \end{enumerate}
+                      
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./Apuntes - GRAFOS.tex:3094: Undefined control sequence.
+\enit@setresumekeys ...it@toks }\ifnum \enit@type 
+                                                  =\z@ #3\def \enit@noexcs {...
+l.3094 \end{enumerate}
+                      
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./Apuntes - GRAFOS.tex:3094: Missing number, treated as zero.
+<to be read again> 
+                   =
+l.3094 \end{enumerate}
+                      
+A number should have been here; I inserted `0'.
+(If you can't figure out why I needed to see a number,
+look up `weird error' in the index to The TeXbook.)
+
+./Apuntes - GRAFOS.tex:3094: Undefined control sequence.
+<argument> enit@resume@series@\enit@series 
+                                           
+l.3094 \end{enumerate}
+                      
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./Apuntes - GRAFOS.tex:3094: Undefined control sequence.
+\enit@setresumekeys ...me@#1}{\csname c@\@listctr 
+                                                  \endcsname \the \csname c@...
+l.3094 \end{enumerate}
+                      
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./Apuntes - GRAFOS.tex:3094: Undefined control sequence.
+\enit@setresumekeys ...e \the \csname c@\@listctr 
+                                                  \endcsname }\fi }
+l.3094 \end{enumerate}
+                      
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./Apuntes - GRAFOS.tex:3094: You can't use `\relax' after \the.
+<recently read> \c@ 
+                    
+l.3094 \end{enumerate}
+                      
+I'm forgetting what you said and using zero instead.
+
+./Apuntes - GRAFOS.tex:3094: Undefined control sequence.
+\enit@endenumerate ...t \fi \ifnum \enit@resuming 
+                                                  =\thr@@ \enit@setresumekey...
+l.3094 \end{enumerate}
+                      
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./Apuntes - GRAFOS.tex:3094: Missing number, treated as zero.
+<to be read again> 
+                   =
+l.3094 \end{enumerate}
+                      
+A number should have been here; I inserted `0'.
+(If you can't figure out why I needed to see a number,
+look up `weird error' in the index to The TeXbook.)
+
+./Apuntes - GRAFOS.tex:3094: Undefined control sequence.
+\enit@setresumekeys ...xpandafter {\enit@savekeys 
+                                                  }\xdef \enit@afterlist {#2...
+l.3094 \end{enumerate}
+                      
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./Apuntes - GRAFOS.tex:3094: Undefined control sequence.
+\enit@setresumekeys ...it@toks }\ifnum \enit@type 
+                                                  =\z@ #3\def \enit@noexcs {...
+l.3094 \end{enumerate}
+                      
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./Apuntes - GRAFOS.tex:3094: Missing number, treated as zero.
+<to be read again> 
+                   =
+l.3094 \end{enumerate}
+                      
+A number should have been here; I inserted `0'.
+(If you can't figure out why I needed to see a number,
+look up `weird error' in the index to The TeXbook.)
+
+./Apuntes - GRAFOS.tex:3094: Undefined control sequence.
+\enit@setresumekeys ...me@#1}{\csname c@\@listctr 
+                                                  \endcsname \the \csname c@...
+l.3094 \end{enumerate}
+                      
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./Apuntes - GRAFOS.tex:3094: Undefined control sequence.
+\enit@setresumekeys ...e \the \csname c@\@listctr 
+                                                  \endcsname }\fi }
+l.3094 \end{enumerate}
+                      
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./Apuntes - GRAFOS.tex:3094: You can't use `\relax' after \the.
+<recently read> \c@ 
+                    
+l.3094 \end{enumerate}
+                      
+I'm forgetting what you said and using zero instead.
+
+
+./Apuntes - GRAFOS.tex:3094: LaTeX Error: \begin{document} ended by \end{enumer
+ate}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.3094 \end{enumerate}
+                      
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+./Apuntes - GRAFOS.tex:3094: Extra \endgroup.
+<recently read> \endgroup 
+                          
+l.3094 \end{enumerate}
+                      
+Things are pretty mixed up, but I think the worst is over.
+
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 3095.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 3095.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 3095.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 3095.
+
+LaTeX Warning: Reference `,' on page 93 undefined on input line 3095.
+
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 3095.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 3095.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 3097.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 3097.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 3097.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 3097.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 3097.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 3097.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 3097.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 3097.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 3098.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 3098.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 3098.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 3098.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 3098.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 3098.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 3098.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 3098.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 3098.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 3098.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 3098.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 3098.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 3098.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 3098.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 3098.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 3101.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 3101.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 3101.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 3101.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 3101.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 3101.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 3101.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 3101.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 3101.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 3101.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 3101.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 3101.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 3101.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 3101.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 3101.
+
+LaTeX Warning: Reference `' on page 93 undefined on input line 3101.
+
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 3101.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 3101.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 3101.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 3101.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 3101.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 3101.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 3101.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 3101.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 3101.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 3104.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 3104.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 3104.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 3104.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 3104.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 3104.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 3104.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 3104.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 3104.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 3104.
+[93]
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 3105.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 3105.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 3105.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 3105.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 3105.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 3112.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 3112.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 3112.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 3112.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 3112.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 3112.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 3112.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 3112.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 3117.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 3117.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 3117.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 3117.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 3117.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 3117.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 3117.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 3117.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 3117.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 3117.
+
+
+LaTeX Warning: Command \' invalid in math mode on input line 3117.
+
+
+LaTeX Warning: Command \' invalid in math mode on input line 3117.
+
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 3117.
+./Apuntes - GRAFOS.tex:3117: Missing $ inserted.
+<inserted text> 
+                $
+l.3117 ...nus S (podr√≠a ser vac√≠o) con $S = \{s_
+                                                  1,\ldots,s_r\}, el Corolar...
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 3117.
+
+LaTeX Warning: Reference `' on page 94 undefined on input line 3117.
+
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 3117.
+./Apuntes - GRAFOS.tex:3117: Missing $ inserted.
+<inserted text> 
+                $
+l.3117 ...ay suficientes cross-edges, i.e. $\abs S
+                                                   \leq \abs {N(S)}$. Luego ...
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 3117.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 3117.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 3117.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 3117.
+
+Overfull \hbox (118.20987pt too wide) in paragraph at lines 3117--3118
+\FML/fncmi/m/it/12 s[]; [] ; s[]; V\U/matha/m/n/12 p\FML/fncmi/m/it/12 G\U/math
+a/m/n/12 qz\FML/fncmi/m/it/12 S\U/matha/m/n/12 p\FML/fncmi/m/it/12 podr\T1/fnc/
+m/n/12 Ì\FML/fncmi/m/it/12 aservac\T1/fnc/m/n/12 Ì\FML/fncmi/m/it/12 o\U/matha/
+m/n/12 q\FML/fncmi/m/it/12 con$\T1/fnc/m/n/12 S = {s$[]\FML/fncmi/m/it/12 ; [] 
+; s[]\U/matha/m/n/12 u\FML/fncmi/m/it/12 ; elCorolario[]dicequehaysuficientescr
+oss \U/matha/m/n/12 ^^A
  []
 
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 3091.
+ine 3119.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 3092.
+ine 3119.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 3092.
+ine 3119.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 3092.
+ine 3119.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 3092.
+ine 3119.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 3092.
+ine 3119.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 3092.
+ine 3119.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 3092.
-./Apuntes - GRAFOS.tex:3094: Undefined control sequence.
+ine 3119.
+
+LaTeX Warning: Reference `' on page 94 undefined on input line 3119.
+
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 3119.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 3119.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 3128.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 3128.
+
+LaTeX Warning: Reference `ejercicio:todo grafo es 2 arista conexo si y solo si 
+tiene una orientacion fuertemente conexa' on page 94 undefined on input line 31
+30.
+
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 3130.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 3130.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 3133.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 3133.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 3133.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 3133.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 3133.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 3133.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 3133.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 3133.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 3133.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 3133.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 3133.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 3133.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 3133.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 3133.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 3133.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 3133.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 3133.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 3133.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 3133.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 3135.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 3135.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 3135.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 3135.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 3135.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 3135.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 3135.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 3135.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 3141.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 3141.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 3141.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 3141.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 3144.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 3144.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 3144.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 3144.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 3144.
+[94]
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 3148.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 3148.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 3148.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 3151.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 3152.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 3152.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 3152.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 3152.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 3152.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 3152.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 3152.
+
+./Apuntes - GRAFOS.tex:3154: Undefined control sequence.
 <recently read> \mathcap 
                          
-l.3094 Consideremos el conjunto $\mathcap
+l.3154 Consideremos el conjunto $\mathcap
                                           P$ de los caminos dirigidos de tam...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -6854,31 +7522,31 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 3094.
+ine 3154.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 3094.
+ine 3154.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 3094.
+ine 3154.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 3094.
+ine 3154.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 3094.
+ine 3154.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 3094.
+ine 3154.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 3094.
+ine 3154.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 3094.
+ine 3154.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 3094.
+ine 3154.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 3094.
+ine 3154.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 3094.
+ine 3154.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 3094.
+ine 3154.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 3094.
+ine 3154.
 
 ! LaTeX Error: File `./Editor de Grafos/Figuras/Clase 12/Dibujo 9.pdf_tex' not 
 found.
@@ -6887,21 +7555,21 @@ Type X to quit or <RETURN> to proceed,
 or enter new name. (Default extension: pdf_tex)
 
 Enter file name: 
-./Apuntes - GRAFOS.tex:3102: Emergency stop.
+./Apuntes - GRAFOS.tex:3162: Emergency stop.
 <read *> 
          
-l.3102 .... En \purple{violeta} se ilustra $A_3$.}
+l.3162 .... En \purple{violeta} se ilustra $A_3$.}
                                                   ^^M
 *** (cannot \read from terminal in nonstop modes)
 
  
 Here is how much of TeX's memory you used:
- 30123 strings out of 476017
- 587247 string characters out of 5786780
+ 30136 strings out of 476017
+ 587489 string characters out of 5786780
  1869666 words of memory out of 5000000
- 49488 multiletter control sequences out of 15000+600000
- 610964 words of font info for 218 fonts, out of 8000000 for 9000
+ 49497 multiletter control sequences out of 15000+600000
+ 613270 words of font info for 220 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  98i,19n,94p,1552b,995s stack positions out of 10000i,1000n,20000p,200000b,200000s
-./Apuntes - GRAFOS.tex:3102:  ==> Fatal error occurred, no output PDF file prod
+./Apuntes - GRAFOS.tex:3162:  ==> Fatal error occurred, no output PDF file prod
 uced!

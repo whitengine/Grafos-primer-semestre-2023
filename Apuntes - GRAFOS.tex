@@ -1812,8 +1812,8 @@ e$ tal que $F + e$ es nuevamente un bosque.
     álogamente, $\dim \mathcal C (G) = \Abs {F} < \Abs {F'}$, imposible.
 \end{solution}
 
-\begin{exercise}
-    Probar que todo grafo es $2$-arista-conexo, si y solo si, tiene una orientación \textbf{fuertemente conexa}, es
+\begin{exercise}\label{ejercicio:todo grafo es 2 arista conexo si y solo si tiene una orientacion fuertemente conexa}
+    Probar que todo grafo es $2$-arista-conexo si y solo si tiene una orientación \textbf{fuertemente conexa}, es
     decir, tiene una orientación en la cual para todo par de vértices $x,y$ existe un camino dirigido $\overset{
     \rightarrow}{P}$ con dirección de $x$ hacia $y$.
 \end{exercise}
@@ -3075,6 +3075,66 @@ Ahora, consideremos la partición $P$ de longitud mínima $>1$ de los vértices 
 Consideremos el subgrafo inducido $H$ de $G$ generado por dos árboles arista-disjuntos de tamaño máximo tal que $H \subsetneq G$: si $G$ no cumple esta propiedad luego tiene almenos un $H$ de esta forma. Luego $G \setminus H$ también está particionada por grafos generados por dos árboles arista disjuntos. Si $H$ tiene dos aristas en $G \setminus H$ entonces podemos agrandar $H$, y si no podemos achicar la particion de $G \setminus H$. Así podemos asumir que $G \setminus H$ tiene una partición de un solo elento, luego $H$ y $G \setminus H$ tienen dos aristas entre ellos por el Corolario \ref{}, absurdo.
 
 Particionemos a $G$ por una partición de longitud mínima tal que $U \in P$ induce un grafo generado por dos árboles disjuntos y tiene la propiedad de estar generado
+
+
+
+
+
+
+Haremos inducción en el orden $n$ de $G$. Si $n=1$ no hay nada que probar. En general, si $n > 1$ podemos elegir $v \in G$ y considerar $G' = G \setminus \{v\}$. Tenemos que quizá $G'$ no tiene dos árboles arista disjuntos generadores, pero si existe una partición de vértices $P$ de $G'$ tal que cada grafo inducido $G'[U]$ con $U \in P$ tiene dos árboles arista disjuntos generadores. En efecto, si $T_1,T_2$ son los árboles generadores arista disjuntos de $G$, entonces $T_1$ restringido a $G'$ se despompone en componentes conexas, a su véz, los vértices de estas componentes se pueden
+
+
+
+Consideremos un paseo cerrado $W$ en $G$ con la máxima cantidad de vértices (hay almenos un paseo cerrado, pues cualquier ciclo sirve: $G$ debe tener ciclos, de lo contrario es un árbol y por lo tanto no puede tener $2$ árboles generadores arista disjuntos). Si pasa por todos los vértices entonces ganamos porque este es un subgrafo con todos los vértices de grado par. Luego supongamos que no, es decir, podemos particionar los vértices de $G$ en dos: $V(W), V(G \setminus W)$, con lo cual el Corolario \ref{} nos garantiza que hay almenos dos cross-edges.
+
+Sea $x \in W$ adyacente a $z \in G \setminus W$; como $e = xz$ no pertenece al conjunto de aristas de alguno de los dos árboles arista disjuntos que generan $G$, existe un ciclo fundamental $C_e : x z y_1 y_2 \cdots y_r x$ donde todas las aristas (salvo $e$) están, digamos, en $T$. Cambiemos la caminata $W$ por los vértices de $W$ junto con los de $C_e$ y agregamos las aristas de $C_e$ que no estén en $W$. Pero qué pasa si tenemos la secuencia $y_1 x_1 \ldots x_r y_2$ con $y_1,y_2 \not \in W, x_1 ,\ldots, x_r \in W$ (r \geq 2)?
+\begin{enumerate}
+\item[Caso $y_1 \neq y_2$:]
+\item[Caso $y_1 = y_2$:]
+\end{enumerate}
+Particionando los vértices de $G$ en $W$ y las componentes conexas $C_i$ de $G \setminus W$, y aplicando el Corolario \ref, sabemos que $2r$ cross-edges, i.e. hay almenos dos aristas entre una componente y $W$.
+\begin{enumerate}
+\item[Caso 1:] Las dos aristas salen de $v \in W$ y tienen extremos $y_1,y_2$. Como $C_i$ es una componente, existe un camino $P$ entre $y_1,y_2$ que es disjunto de $W$. Luego podemos agrandar $W$ haciendo $W y_1 P y_2 W$. Absurdo.
+\item[Caso 2:] Las dos aristas salen de vértices distintos, separados por un puente $p$ en $H$. Particionamos entonces los vértices de $H$ en $H_1$ y $H_2$, dados por las componentes de $H - p$. Nuevamente, considerando la partición $H_1,H_2, C_i$ de los vértices de $G$, tenemos que hay almenos dos cross-edges entre algunos de los $H_j$ y $C_i$. Si estamos en el Caso $1$ con $H_j$ en vez de $H$ ganamos. Si no, volvemos a repetir el Caso $2$, ahora con un subgrafo más chico. Eventualmente no podemos particionar mas a $H$ y obtenemos un absurdo.
+\end{enumerate}
+
+En conclusión, particionando a $H$ en sus componentes puente $H_1, \ldots, H_s$\footnote{No sé si existe una mejor terminología, pero lo que estamos haciendo es que si $x,y$ son extremos de un puente $p$ en $H$, entonces $H$ ser particiona en dos componentes conexas de $H - xy$; repitendo recursivamente este razonamiento, podemos particionar a $H$ en subgrafos conexos sin puentes, i.e. $2$-arista-conexos.} y a $G \setminus H$ en sus componentes conexas $C_1, \ldots, C_r$. Consideramos la partición de los vértices de $G$ por $\{H_1, \ldots, H_s, C_1, \ldots, C_r\}$, con lo cual el Corolario \ref{} implica que hay almenos $2 (r+ s - 1)$ cross-edges, de los cuales ya sabemos que los únicos entre conjuntos $H_i$ son los $s-1$ puentes, y que entre dos $C_j$ no hay, es decir, los restantes $2r - 1 + s$ cross-edges son entre $H_i$ y $C_j$, luego hay un $H_i =: H'$ con dos cross-edges con un $C_j =: C$. Ahora, pueden ocurrir dos casos:
+
+\begin{enumerate}
+\item[Caso 1:] Las dos aristas salen de $v \in H'$ y tienen extremos $y_1,y_2$ en $C$. Como $C$ es conexo, existe un camino $P$ entre $y_1,y_2$ contenido en $C$, en particular disjunto con $H'$. Luego podemos agrandar $H$ agregando $v y_1 P y_2 v$.
+\item[Caso 2:] Las dos aristas salen de vértices distintos $v$ y $w$ en $H'$. Tanto en el caso en el que ambos extremos de los cross-edges caigan en vértices distintos de $C$ o iguales, existe un camino entre estos (quizás de longitud $0$), luego agregando este camino junto con los dos cross-edges y eliminandoo las
+\end{enumerate}
+
+
+
+
+
+Consideremos el grafo $G'$ dado por los vértices de $G$ unión las aristas de los árboles generadores disjuntos. Basta tomar $H$ como un paseo cerrado por todos los vérticeces de $G'$. Como existe almenos un paseo cerrado en $G'$, podemos tomar uno, digamos $W$, de longitud máxima. Si cubrimos todos los vértices de $G'$ ganamos. Si no, consideremos $G'' = G' - $
+
+
+
+
+Consideremos el $X,Y$-bigrafo $B$ donde $X$ e $Y$ son los vértices de $G$, donde si $x \in X$ e $y \in Y$ tienen una arista si $xy \in E(T_1)$ o si $xy \in E(T_2)$. Cumple la condición de Hall \eqref{eq:condicion de Hall}, pues considerando la partición de $V(G)$ dada por $s_1,\ldots, s_r,V(G) \setminus S (podría ser vacío) con $S = \{s_1,\ldots,s_r\}, el Corolario \ref{} dice que hay suficientes cross-edges, i.e. $\abs S \leq \abs {N(S)}$. Luego por el Teorema de Hall \ref{th:teorema de Hall} existe un matching  que cubre a $X$, el cual es un matching perfecto de $B$ ya que $\abs X = \abs G = \abs Y$.
+
+Con lo cual, consideramos el grafo $H$ generador de $G$ formado por las aristas de matching. Notar que cada vértice tendrá grado $2$, pues si $v \in G$, no existe la arista $vv$ en $B$. Falta ver que es conexo. En efecto, si no lo fuera, particionando $V(G)$ en las componentes conexas de $H$, que por el Corolario \ref{} tiene almenos dos cross-edges entre dos particiones... Creo que la preguntra de ver que $H$ es conexo equivale a ver que los vértices de $B$ se pueden cubrir con ciclos.
+
+
+
+
+
+
+
+\begin{exercise}
+Probar que todo grafo $G$ con $2$ árboles generadores arista-disjuntos es fuertemente conexa.
+
+En particular, el Ejercicio \ref{ejercicio:todo grafo es 2 arista conexo si y solo si tiene una orientacion fuertemente conexa} implica que $G$ es $2$-arista-conexo.
+\end{exercise}
+\begin{solution}
+Sean $T_1, T_2$ los respectivos árboles generadores arista-dijuntos, y sea $r_1$ una raíz de $T_1$. Fijemos $r_2 := r_1$ como raíz de $T_2$. Luego orientamos las aristas de $T_1$ respecto al orden opuesto inducido por $r_1$, es decir, si $xy$ es una arista de $T_1$ con $x \leq_{T_1} y$, ponemos $y$ como el comienzo y $x$ como el final de la arista. De manera opuesta, orientamos las aristas de $T_2$ respecto del orden raíz, es decir, esta vez si $xy$ es una arista de $T_2$ con $x\leq_{T_2} y$ entonces $x$ es el comienzo e $y$ el final de la arista. El resto de las aristas de $G$ se les da unan orientación arbitraria.
+
+Así, $G$ obtuvo una orientación, veamos que además es fuertemente conexa, es decir, que para todo $x,y \in G$ existe un camino orientado entre ambos. En efecto, tenemos un camino orientado de $x$ hacia $r_1$ en $T_1$ y luego lo concatenamos con el camino de $r_1 = r_2$ hacia $y$ en $T_2$.
+\end{solution}
+
 
 
 \begin{exercise}
