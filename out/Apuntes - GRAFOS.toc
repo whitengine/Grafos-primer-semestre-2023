@@ -41,10 +41,11 @@
 \contentsline {subsubsection}{\underline {Operaciones que conocemos}}{102}{section*.6}%
 \contentsline {subsubsection}{\underline {Otra perspectiva con respecto a los menores}}{103}{section*.7}%
 \contentsline {subsubsection}{\underline {Retomando grafos planos}}{104}{section*.8}%
-\contentsline {section}{\numberline {1.17}Clase 16: 26/05/23}{105}{section.1.17}%
-\contentsline {section}{\numberline {1.18}Clase 17: 02/06/23}{107}{section.1.18}%
-\contentsline {subsection}{\numberline {1.18.1}Coloreo de Grafos}{107}{subsection.1.18.1}%
-\contentsline {chapter}{\numberline {A}Primera parte de la materia (primer capítulo del Diestel)}{111}{appendix.Alph1}%
-\contentsline {section}{\numberline {A.1}}{111}{section.Alph1.1}%
-\contentsline {section}{\numberline {A.2}}{117}{section.Alph1.2}%
-\contentsline {chapter}{\numberline {B}Orden parcial completo-dirigido y teorema del punto fijo de Kleene}{120}{appendix.Alph2}%
+\contentsline {section}{\numberline {1.17}Clase 16: 26/05/23}{106}{section.1.17}%
+\contentsline {section}{\numberline {1.18}Clase 17: 02/06/23}{108}{section.1.18}%
+\contentsline {subsection}{\numberline {1.18.1}Coloreo de Grafos}{108}{subsection.1.18.1}%
+\contentsline {section}{\numberline {1.19}Clase 18: 05/06/23}{112}{section.1.19}%
+\contentsline {chapter}{\numberline {A}Primera parte de la materia (primer capítulo del Diestel)}{113}{appendix.Alph1}%
+\contentsline {section}{\numberline {A.1}}{113}{section.Alph1.1}%
+\contentsline {section}{\numberline {A.2}}{119}{section.Alph1.2}%
+\contentsline {chapter}{\numberline {B}Orden parcial completo-dirigido y teorema del punto fijo de Kleene}{122}{appendix.Alph2}%

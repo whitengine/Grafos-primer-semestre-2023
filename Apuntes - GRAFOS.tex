@@ -3234,9 +3234,9 @@ Ahora, tomemos otro punto $x_1 \in I(e)$. Sea $P$ un arco de $x_0$ en $x_1$ cont
 
 \Inkscape{Del lado izquierdo tenemos una ilustración del ítem (i), con una arista $e$ contenida en la frontera \yellow{$X_1$} pero no en la frontera \red{$f_2$}. Del lado derecho se ilustra el ítem (ii), con una arista en un ciclo \red{$C$} también contenida en las caras $f_1$ y $f_2$ de $G$, las cuales están contenidas en las dos caras de $C$ la \gray{exterior} y la \red{interior}.}
 
-\begin{corolario}
+\begin{corollary}
 La frontera de una cara siempre es el conjunto de puntos de un subgrafo.
-\end{corolario}
+\end{corollary}
 
 \begin{definition}
 El subgrafo de $G$ cuyos puntos son la frontera de una cara $f$ se dice la \textbf{frontera} de $f$, denotada por $G[f]$. Una cara se dice \textbf{incidente} a los vértices y aristas de su frontera.
@@ -3246,7 +3246,7 @@ El subgrafo de $G$ cuyos puntos son la frontera de una cara $f$ se dice la \text
 Por el segundo ítem del Lema \ref{lema:grafos planos - una arista está en la frontera de una cara o no interseca con el interior de una arista - una arista esta en la frontera de un ciclo luego esta en dos caras de G y en dos caras distintas de C}, toda cara de $G$ es también la cara de su frontera.
 \end{obs}
 
-\begin{proposition}
+\begin{proposition}\label{proposition:un arbol plano tiene una sola cara}
 Si $G$ es un grafo plano que corresponde a un árbol, $G$ tiene una sola cara.
 \end{proposition}
 \begin{proof}
@@ -3261,7 +3261,7 @@ Si un grafo plano tiene almenos dos caras distintas con la misma frontera, enton
 Sea $G$ un grafo plano, y $H \subset G$ la frontera de dos caras distintas $f_1, f_2$ de $G$. Como $f_1$ y $f_2$ son también las caras de $H$, la proposición anterior implica que $H$ contiene un ciclo $C$. Por el segundo ítem del Lema \ref{lema:grafos planos - una arista está en la frontera de una cara o no interseca con el interior de una arista - una arista esta en la frontera de un ciclo luego esta en dos caras de G y en dos caras distintas de C}, $f_1$ y $f_2$ están contenidos en diferentes caras de $C$. Como $f_1$ y $f_2$ ambas tienen toda la frontera de $H$, esto implica que $H = C$: cualquier otro vértice o arista de $H$ caería en alguna de las caras de $C$ y por lo tanto no en la frontera del otro. Así, $f_1$ y $f_2$ son caras distintas de $C$. Como $C$ tiene solo dos caras, se sigue que $f_1 \cup C \cup f_2 = \reals 2$ y por lo tanto $G = C$.
 \end{proof}
 
-\begin{proposition}
+\begin{proposition}\label{proposicion:un grafo plano 2-conexo tiene todas sus caras con frontera un ciclo}
 En un grafo plano $2$-conexo, todas las caras tienen un ciclo por frontera.
 \end{proposition}
 \begin{proof}
@@ -3269,7 +3269,7 @@ Sea $f$ una cara de $G$. Probaremos por inducción en $\Abs G$ que $G[f]$ es un 
 
 Por la Proposición \ref{prop:un grafo es 2-conexo si y solo si se construye a partir de un grafo 2-conexo union un H-camino}, existe un grafo plano $2$-conexo $H \subset G$ y un $H$-camino $P$ tal que $G = H \cup P$. El interior de $P$ yace en una cara $f'$ de $H$, con lo cual, por hipótesis inductiva esta es frontera de un ciclo $C$.
 
-Si $G[f] \subset H$, entonces $f$ también es una cara de $H$ (segundo ítem del Lema \ref{lema:clase 18 05 23 - lema 1}, luego se sigue por hiṕotesis inductiva. Si $G[f] \not \subset H$, entonces $G[f]$ interseca $P \setminus H$, con lo cual $f \subset f'$ y $G[f] \subset C \cup P$. Por el segundo ítem del Lema \ref{lema:clase 18 05 23 - lema 1}, deducimos que $f$ es una cara de $C \cup P$, y por lo tanto tiene como frontera un ciclo (primer ítem del Lema \ref{lema:tres arcos disjuntos forman 3 componentes}).
+Si $G[f] \subset H$, entonces $f$ también es una cara de $H$ (segundo ítem del Lema \ref{lema:clase 18 05 23 - lema 1}, luego se sigue por hipótesis inductiva. Si $G[f] \not \subset H$, entonces $G[f]$ interseca $P \setminus H$, con lo cual $f \subset f'$ y $G[f] \subset C \cup P$. Por el segundo ítem del Lema \ref{lema:clase 18 05 23 - lema 1}, deducimos que $f$ es una cara de $C \cup P$, y por lo tanto tiene como frontera un ciclo (primer ítem del Lema \ref{lema:tres arcos disjuntos forman 3 componentes}).
 \end{proof}
 
 \begin{proposition}
@@ -3290,15 +3290,18 @@ Sea $G$ un grafo plano conexo con $n$ vértices, $m$ aristas y $f$ caras. Entonc
 \]
 \end{theorem}
 \begin{proof}
-Fijemos $n$ y hacemos inducción en la cantidad de aristas $m$. Si $m \leq n -1$, entonces $G$ es un árbol y $m = n-1$; pero la proposición anterior implica que el árbol tiene una sola cara, y por lo tanto $n - m + f = n - (n-1) + 1 = 2$.
+Fijemos $n$ y hacemos inducción en la cantidad de aristas $m$. Si $m \leq n -1$, entonces $G$ es un árbol y $m = n-1$; pero la Proposición \ref{proposition:un arbol plano tiene una sola cara}, el árbol tiene una sola cara, y por lo tanto $n - m + f = n - (n-1) + 1 = 2$.
 
-Ahora, supongamos que $m \geq n$, entonces $G$ tiene una arista $e$ que está en un ciclo. Sea $G' = G \setminus e$. Por el lema anterior ítem (ii), $e$ está en la frontera de exactamente dos caras $f_1,f_2$ de $G$. Como los puntos en $I(e)$ de $G$. Como los puntos en $I(e)$ son equivalentes en $\reals^2 \setminus G'$, entonces hay una cara $f_e$ de $G'$ que contiene a $I(e)$.
-
+Ahora, supongamos que $m \geq n$, entonces $G$ tiene una arista $e$ que está en un ciclo. Sea $G' = G \setminus e$. Por el ítem (ii) Lema \ref{lema:grafos planos - una arista está en la frontera de una cara o no interseca con el interior de una arista - una arista esta en la frontera de un ciclo luego esta en dos caras de G y en dos caras distintas de C} $e$ yace en la frontera de exactamente dos caras $f_1,f_2$ de $G$, y como lo spuntos de $I(e)$ son todos equivalentes en $\reals^2 \setminus G'$, existe entonces una cara $f_e$ de $G'$ que contiene a $I(e)$.
 Luego basta demostrar que
 \[
     F (G) \setminus \{f_1, f_2 \} = F (G') \setminus \{f_e\},
 \]
-porque luego $G'$ tiene exactamente una cara y una arista menos que $G$. Así obtenemos el resultado por hipótesis inductiva.
+ya que $G'$ tiene exactamente una cara y una arista menos que $G$. Así obtendríamos el resultado por hipótesis inductiva.
+
+Por un lado, si $f \in F(G) \setminus \{f_1,f_2\}$, por el ítem (i) Lema \ref{lema:grafos planos - una arista está en la frontera de una cara o no interseca con el interior de una arista - una arista esta en la frontera de un ciclo luego esta en dos caras de G y en dos caras distintas de C} tenemos que $G[f] \subset G \setminus I(e) = G'$, y por lo tanto $f \in F(G')$ por el segundo ítem del Lema \ref{lema:clase 18 05 23 - lema 1}. Claramente $f \neq f_e$, y así iprobamos una inclusión.
+
+Recíprocamente, sea $f' \in F(G') \setminus \{f_e\}$. Claramente $f' \neq f_1, f_2$ y $f' \cap I(e) = \emptyset$. Entonces, dados dos puntos de $f'$, estos yacen en $\reals^2 \setminus G$ y por lo tanto son equivalentes allí, i.e. $G$ tiene una cara $f$ conteniendo a $f'$. Por el ítem (i) del Lema \ref{lema:clase 18 05 23 - lema 1}, tenemos que sin embargo $f$ yace dentro de una cara $f''$ de $G'$. Así, $f' \subset f \subset f''$ y luego $f' = f = f''$, pues ambas $f'$ y $f''$ son caras de $G'$.
 \end{proof}
 
 
@@ -3370,8 +3373,16 @@ Estas dos definiciones son equivalentes:
 Un grafo es maximial plano (de orden $\geq 3$) si y solo si es una triangulación.
 \end{proposition}
 \begin{proof}
+Es fácil de ver que si todas las caras de $G$ tienen como frontera un triángulo, entonces $G$ es maximalmente plano. En efecto, agregar una arista $e$, haría que su interior estuviera adentro de una cara de $G$ y sus extremos en la frontera de dicha cara. Con lo cual sus extremos ya eran adyacentes en $G$, incumpliendo la definición de grafo plano.
 
+Recíprocamente, supongamos que $G$ es maximalmente plano y sea $f \in F(G)$ una cara; escribamos $H := G[f]$. Como $G$ es maximal como grafo plano, $G[H]$ es completo: todo par de vértices que no son adyacentes en $G$ se podrían unir por un arco con interior dentro de $f$, extensiendo a $G$ a un grafo plano con más aristas, absurdo. Así $G [H] = K_n$ para algún $n$ (sin embargo, todavía no sabemos qué aristas de $G[H]$ están en $H$).
+
+Veamos primero que $H$ contiene un ciclo. De lo contrario, $G \setminus H \neq \emptyset$, pues $G \supset K_n$ para $n \geq 3$ o $H$ tiene menos de tres vértices pero $\abs G \geq 3$. Por otro lado, tendríamos que $f \cup H = \reals^2$ por la Proposición \ref{proposition:un arbol plano tiene una sola cara} y luego $G = H$, absurdo.
+
+Así, como $H$ contiene un ciclo, basta probar que $n \leq 3$: en efecto, $H = K_3$. Luego, supongamos que $n \geq 4$, y sea $C = v_1 v_2 v_3 v_4 v_1$ un ciclo en $G[H] = K_n$. Como $C \subset G$, nuestra cara (de $G$) $f$ está contenida en una cara $f_C$ de $C$; sea $f'_C$ la otra cara de $C$. Como los vértices $v_1$ y $v_3$ yacen en la frontera de $f$, se pueden unir por un arco cuyo interior yace dentro de $f_C$ y no interseca $G$. Luego por el segundo ítem del Lema \ref{lema:tres arcos disjuntos forman 3 componentes}, la arista plana $v_2 v_4$ de $G[H]$ tiene su interior dentro de $f'_C$ en véz de $f_C$ (ver el siguiente dibujo). Análogamente, como $v_2, v_4 \in G[f]$, la arista $v_{1}v_3$ yace dentro de $f'_C$. Pero las aristas $v_{1}v_3$ y $v_2 v_4$ son disjuntas, contradiciendo el segundo ítem del Lema \ref{lema:tres arcos disjuntos forman 3 componentes}.
 \end{proof}
+
+\Inkscape{La arista $v_{2}v_4$ de $G$ yace dentro de la cara $f_C'$.}
 
 
 \begin{corollary}\label{corolario:un grafo plano con n > 2 vertices tiene a lo mas 3n - 6 aristas}
@@ -3400,7 +3411,7 @@ El grafo $G := K_5$ no es planar. En efecto, tiene $n= 5$ vértices y $m = \bino
 \end{example}
 
 \begin{example}
-El grafo $G := K_{3,3}$ no es planar. En efecto, al ser bipartito todos los ciclos son pares, luego si tuviera un grafo plano correspondiente, las fronteras de sus caras van a ser de largo al menos $4$, pues las fronteras de un grafo plano siempre forman un ciclo (si es que el grafo plano tiene más de una cara). Como en la demostración del último corolario de la clase anterior \ref{corolario:un grafo plano con n > 2 vertices tiene a lo mas 3n - 6 aristas}, construimos el $X,Y$-bigrafo asosciado al grafo plano con $X = E(K_{3,3})$ e $Y = F(K_{3,3})$. Pero similarmente a la demostración de dicho corolario, inspeccionando este grafo bipartito, vemos que tiene $2 \abs E (G)$ aristas y almenos $4 \abs F$ caras. Llamemos $n,m,f$ al número de vértices, aristas, y caras de $G$, respectivamente. Así, la desigualdad anterior se traduce a que $2 f \leq m$. Con lo cual, aplicando el Teorema de Euler y reemplazando los valores de $n$ y $m$ de $G = K_{3,3}$:
+El grafo $G := K_{3,3}$ no es planar. En efecto, al ser bipartito todos los ciclos son pares, luego si tuviera un grafo plano correspondiente, las fronteras de sus caras van a ser de largo al menos $4$, por la Proposición \ref{proposicion:un grafo plano 2-conexo tiene todas sus caras con frontera un ciclo}. Como en la demostración del último corolario de la clase anterior \ref{corolario:un grafo plano con n > 2 vertices tiene a lo mas 3n - 6 aristas}, construimos el $X,Y$-bigrafo asosciado al grafo plano con $X = E(K_{3,3})$ e $Y = F(K_{3,3})$. Pero similarmente a la demostración de dicho corolario, inspeccionando este grafo bipartito, vemos que tiene $2 \abs E (G)$ aristas y almenos $4 \abs F$ caras. Llamemos $n,m,f$ al número de vértices, aristas, y caras de $G$, respectivamente. Así, la desigualdad anterior se traduce a que $2 f \leq m$. Con lo cual, aplicando el Teorema de Euler y reemplazando los valores de $n$ y $m$ de $G = K_{3,3}$:
 \[
     \begin{array}{lllll}
     2 = n - m + f & \leq & n - m + \frac m 2 & \quad & (2 f \leq m), \\
@@ -3468,7 +3479,7 @@ $c$ es un \textbf{$k$-coloreo} si $c : V \rightarrow \{1, \ldots, k\}$.
 El \textbf{número cromático} de $G$, denotado por $\chi (G)$, es el menor $k \geq 1$ tal que existe un $k$-coloreo en $G$.
 \end{definition}
 
-\Dibujo{Coloreamos los vértices de $G$ con \red{rojo}, \blue{azul} y \green{verde}. Notar que el $3$-ciclo solo se puede pintar con almenos $3$ colores; así, $\chi (G) = 3$}
+\Inkscape{Coloreamos los vértices de $G$ con \red{rojo}, \blue{azul} y \yellow{amarillo}. Notar que el $3$-ciclo solo se puede pintar con almenos $3$ colores; así, $\chi (G) = 3$}
 
 Notar que un $k$-coloreo es una partición de $G$ en $k$-conjuntos independientes, es decir, todo grafo $k$-coloreable es $k$-partito. A estos conjuntos los llamamos \textbf{clases de colores}.
 
@@ -3478,9 +3489,9 @@ Los grafos $2$-coloreables no triviales son los grafos bipartitos.
 
 Una pregunta natural es cómo encontrar el número cromático de un grafo. Sin embargo es un problema difícil: \textit{$P$-completo}. Aún así, lo primero que podemos intentar hacer es acotar esté número.
 
-\begin{proposición}
+\begin{proposition}
 Todo grafo $G$ con $m$ aristas cumple $$\chi (G) \leq \frac 1 2 + \sqrt{2m + \frac 1 4}$$.
-\end{proposición}
+\end{proposition}
 \begin{proof}
 Sea $c$ un coloreo de $C$ con $k = \chi (G)$ colores. Entonces entre cada par de colores hay almenos una aristas: si no, las dos clases formarían un conjunto independiente. Entonces $m  \geq k 2 = \frac 1 2 k (k-1)$, y despejando $k$ se obtiene la desigualdad.
 \end{proof}
@@ -3489,9 +3500,9 @@ Notar que esta cota no es muy buena: por ejemplo una estrella $K_{1,m}$ tiene ta
 Una manera más sencilla de obtener un coloreo con ``pocos'' colores es la siguiente:
 
 \begin{proposition}[Algoritmo glotón]\label{prop:algoritmo gloton}
-El número cromático de un grafo $G$ es a lo más
+El número cromático de un grafo $G$ cumple la siguiente desigualdad:
 \[
-    \Delta (G) + 1.
+    \chi (G) \leq \Delta (G) + 1.
 \]
 \end{proposition}
 \begin{proof}
@@ -3500,22 +3511,31 @@ Numeremos los vértices de un grafo $G$ de la siguiente manera: $v_1, \ldots, v_
 En el peor de los casos, $v_i$ tiene grado máximo $\Delta (G)$ y todos sus vecinos son los $v_j$ con $j < i$, y además todos tienen colores diferentes. Con lo cual, necesitaremos a lo más $\Delta (G) + 1$ colores para colorear a $G$, i.e. $\chi (G) \leq \Delta (G) + 1$.
 \end{proof}
 
-\Dibujo{Ilustración}
+\Inkscape{Ilustración del algorítmo glotón.}
 
 A veces esto es lo mejor que se puede hacer:
 \begin{proposition}
-Esta cota se cumple con igualdad si y solo si $G$ es
+Esta cota se cumple con igualdad para un grafo $G$ conexo si y solo si es alguno de los siguientes grafos:
 \begin{enumerate}[(i)]
 \item Ciclo impar $C_{2n+1}$.
 \item Grafo completo $K_n$.
 \end{enumerate}
 \end{proposition}
+\begin{proof}
+Es claro que estos grafos cumplen la igualdad.
+
+Para la recíproca, haremos inducción en $\Delta (G)$. Cuando es $0$ es $K_1$, cuando es $1$ es $K_2$, cuando es $2$ entonces $G$ es un árbol o es un ciclo luego estos son $2$-coloreables si y solo si son bipartitos, o sea que $G$ tiene que ser un ciclo impar. En general, si $\Delta (G) \geq 3$ quitamos un vértice de grado máximo $v$ y $G' = G \setminus \{v\}$ reduce su grado máximo, entonces $\chi (G') = (\Delta (G)- 1) + 1$, luego por hipótesis inductiva $G$ es un $K_n$ o $C_{2n+1}$. En el primer caso, como $\chi (K_n) = n = \Delta (G)$, tenemos que $v$ es vecino a todos los vértices de $K_n$, es decir, $G = K_{n+1}$. En el otro caso, $\chi (C_{2n+1}) = 3 = \Delta (G)$, es decir, $\chi (G) = 4$, sin embargo $v$ es vecino de solo $3$ vértices de $C_{2n+1}$. Si $n = 1$, entonces $G$ es $K_4$; si $n > 1$, entonces podemos pintar los tres vecinos de $v$ en $C_{2n+1}$ de dos colores, digamos $1,2$ con lo cual a $v$ lo pintamos de color $3$, y así pintamos el resto de $C_{2n+1}$ con tres colores, sin embargo $\chi (G) = 4$, absurdo.
+
+Si $G'$ sigue teniendo $\delta(G') = \delta (G) = \Delta$, haremos inducción en la cantidad de vértices $v$ de $G$ tal que $\Delta = d(v)$. El caso $1$ vértice lo vimos recién. Sean $v_1, \ldots, v_r$ lo vértices de
+
+En general si hay otros vértices $w_1, \ldots, w_r$ además de $v$ de grado $\Delta$ en $G$, consideramos $G' = G \setminus \{w_1, \ldots, w_r\}$. Notar que si $\chi (G) = \Delta + 1$, entonces podemos probar fácilmente por inducción en $r$ que $\chi (G') = \chi (G)$, pues si $G \setminus \{w\}$ disminuye en número cromático con $d(w) = \Delta$, es porque $w$ era vecino de un vértice $v'$ de grado máximo $\Delta$, y entonces podemos pintar a $G$ con $\Delta < \chi(G)$ colores en el peor de los casos, absurdo. Así, $G'= G \setminus \{w_1, \ldots, w_r\}$ es isomorfo a $K_n$ con $n = \chi (G)$: mirar con detalle el caso un solo vértice de grado máximo del párrafo anterior. Como $\chi (G) = \Delta + 1$, vemos facilmente que podemos seguir pintando a $G$ con $n$ colores, pues coloreamos $G'$ con $n$ colores y los $w_i$ se pueden pintar con esos colores ya que tienen $n-1$ vecinos en $G$.
+\end{proof}
 
 Sin embargo, podemos hacer algo un poco mejor: cuando llegamos al vértice $v_i$ necesitamos a lo más $d_{G[v_1,\ldots,v_{i-1}]}(v_i) + 1$ colores en lugar de $\Delta (G) + 1$. Con lo cual, para mejorar la cota anterior conviene elegir un orden de los vértices de $G$ que minimice estos grados.
 
 
 \begin{definition}
-El \textbf{número de coloreo} de $G$ es
+El \textbf{número de coloreo} de $G$ es la cantidad:
 \[
     \col G := \min_{G = \{v_i\}_{i = 1}^n} \max_{i \leq i \leq n} d_{G [v_1, \ldots, v_{i-1}]} (v_i) + 1 ,
 \]
@@ -3549,7 +3569,7 @@ Recíprocamente, notemos que para todo $H \subset G$, se tiene que
 ¿Qué pasa en el caso de los grafos $G$ planares?
 
 \begin{proposition}
-Todo grafo planar tien
+Todo grafo planar cumple
 \[
     \col G \leq 6.
 \]
@@ -3565,17 +3585,45 @@ Con lo cual, como todo subgrafo $H$ de un grafo planar es planar, la proposició
 \]
 En particular,
 \[
-    \chi G \leq 6
+    \chi (G) \leq 6
 \]
 para todo grafo planar.
 \end{proof}
 
 
+%%%%%%%%%%%
+\Clase{05/06/23}   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%
 
 
+El siguiente teorema fue conjeturado en $1852$; demostrado en $1976$ por Appel, Hacken y Koch; redemostrado de manera más corta por Robertson , Sanders, Seymer, Thomas.
+\begin{theorem}[Teorema de los cuatro colores]
+Todo grafo planar es $4$-coloreable.
+\end{theorem}
 
 
+\begin{proposition}
+Todo grafo planar es $5$-coloreable.
+\end{proposition}
+\begin{proof}
+Usamos inducción en el número de vértices $n$. Si $n \leq 5$, trivial.
 
+Sea $G$ planar con $n \geq 6$ vértices y $m$ aristas. Sabemos que $m \leq 3n -6$, entonces el grado promedio de $G$ cumple
+\[
+    d(G) = \frac{2 m}{n} \leq 2 \frac{3n - 6}{n} < 6.
+\]
+Como $d(G) < 6$, hay un vértice de grado $\leq 5$, digamos $v$.
+
+Por inducción, el grafo $H := G \setminus \{v\}$ (planar) tiene un coloreo $c : V(H) \rightarrow \{1, \ldots, 5\}$. Si $c$ utiliza a lo más $4$ colores en el vecindario de $v$, podemos utilizar un quinto color para colorear $v$, así $G$ es $5$-coloreable. Luego podemos asumir que $v$ tiene exactamente $5$ vecinos en $H$.
+
+Supongamos que $G$ está dibujado en el plano y $B$ es un disco con centro $v$, tan chico que solo toca los cinco arcos que conectan $v$ con sus vecinos. Enumeremos a estos arcos según su posición cíclica en $B$: $s_1, s_2, \ldots, s_5$ y llamo $v_i$ al vecino de $v$ que es extremo de $s_i$. Sin pérdida de generalidad, podemos asumir que $c(v_i) = i$.
+
+Primero observemos que todo $v_1,v_3$-camino $P \subset H \setminus \{v_2, v_4\}$ separa a $v_2$ de $v_4$ en $H$. En efecto, esto ocurre si y solo si el ciclo $C = v v_1 P v_3 v$ separa a $v_2$ de $v_4$, y para ver esto basta ver que $v_2$ y $v_4$ están en caras distintas de $C$ (no es difícil).
+
+\Dibujo{}
+
+Dados $i,j \in \{1, \ldots, 5\}$, sea $H_{i,j}$ el subgrafo de $H$ inducido por el vértice de color $i$ y $j$. Veamos que la componente $C_1$ de $H_{1,3}$ que contiene a $v_1$, contiene también a $v_3$.
+\end{proof}
 
 
 

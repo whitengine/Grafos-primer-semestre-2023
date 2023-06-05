@@ -190,6 +190,8 @@
 \newlabel{lema:grafos planos - una arista está en la frontera de una cara o no interseca con el interior de una arista - una arista esta en la frontera de un ciclo luego esta en dos caras de G y en dos caras distintas de C}{{1.15.3}{98}{}{theorem.1.15.3}{}}
 \@writefile{lof}{\contentsline {figure}{\numberline {1.15.86}{\ignorespaces Un arco de $y$ hacia $B_0$, cercano a $P$.\relax }}{99}{figure.1.86}\protected@file@percent }
 \@writefile{lof}{\contentsline {figure}{\numberline {1.15.87}{\ignorespaces Del lado izquierdo tenemos una ilustración del ítem (i), con una arista $e$ contenida en la frontera \textcolor {yellow!80!Black}{$X_1$} pero no en la frontera \textcolor {BrickRed}{$f_2$}. Del lado derecho se ilustra el ítem (ii), con una arista en un ciclo \textcolor {BrickRed}{$C$} también contenida en las caras $f_1$ y $f_2$ de $G$, las cuales están contenidas en las dos caras de $C$ la \textcolor {Gray}{exterior} y la \textcolor {BrickRed}{interior}.\relax }}{100}{figure.1.87}\protected@file@percent }
+\newlabel{proposition:un arbol plano tiene una sola cara}{{1.15.7}{100}{}{theorem.1.15.7}{}}
+\newlabel{proposicion:un grafo plano 2-conexo tiene todas sus caras con frontera un ciclo}{{1.15.9}{101}{}{theorem.1.15.9}{}}
 \@writefile{toc}{\contentsline {section}{\numberline {1.16}Clase 15: 25/05/23}{102}{section.1.16}\protected@file@percent }
 \@writefile{lof}{\contentsline {figure}{\numberline {1.16.88}{\ignorespaces De izquierda a derecha, tenemos la construcción progresiva: primero $G$, luego creamos \textcolor {BrickRed}{vértices subdivisores} formando $H$, y finalmente ilustramos un ejemplo de grafo $X$ con $G$ como menor topológico.\relax }}{102}{figure.1.88}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsubsection}{\underline  {Operaciones que conocemos}}{102}{section*.6}\protected@file@percent }
@@ -198,35 +200,37 @@
 \@writefile{lof}{\contentsline {figure}{\numberline {1.16.90}{\ignorespaces A la izquierda un grafo $H$, y a la derecha un grafo $G$ que contiene un modelo de $H$.\relax }}{103}{figure.1.90}\protected@file@percent }
 \newlabel{proposition:relaciones entre menor y menor topologico}{{1.16.3}{103}{}{theorem.1.16.3}{}}
 \@writefile{toc}{\contentsline {subsubsection}{\underline  {Retomando grafos planos}}{104}{section*.8}\protected@file@percent }
-\newlabel{corolario:un grafo plano con n > 2 vertices tiene a lo mas 3n - 6 aristas}{{1.16.7}{104}{}{theorem.1.16.7}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {1.16.91}{\ignorespaces Ejemplo de grafo bipartito obtenido a partir de una triangulación $G$.\relax }}{104}{figure.1.91}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {1.17}Clase 16: 26/05/23}{105}{section.1.17}\protected@file@percent }
-\@writefile{lof}{\contentsline {figure}{\numberline {1.17.92}{\ignorespaces Ilustración del modelo de $K_5$.\relax }}{106}{figure.1.92}\protected@file@percent }
-\@writefile{lof}{\contentsline {figure}{\numberline {1.17.93}{\ignorespaces Dibujo de $K_{1,4}$.\relax }}{106}{figure.1.93}\protected@file@percent }
-\@writefile{lof}{\contentsline {figure}{\numberline {1.17.94}{\ignorespaces Ilustración: los dos vértices de grado $3$ en $V_x$ de color \textcolor {Cyan}{azul}.\relax }}{107}{figure.1.94}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {1.18}Clase 17: 02/06/23}{107}{section.1.18}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {1.18.1}Coloreo de Grafos}{107}{subsection.1.18.1}\protected@file@percent }
-\@writefile{lof}{\contentsline {figure}{\numberline {1.18.95}{\ignorespaces Coloreamos los vértices de $G$ con \textcolor {BrickRed}{rojo}, \textcolor {Cyan}{azul} y \textcolor {SpringGreen}{verde}. Notar que el $3$-ciclo solo se puede pintar con almenos $3$ colores; así, $\chi (G) = 3$\relax }}{108}{figure.1.95}\protected@file@percent }
-\newlabel{prop:algoritmo gloton}{{1.18.3}{109}{Algoritmo glotón}{theorem.1.18.3}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {1.18.96}{\ignorespaces Ilustración\relax }}{109}{figure.1.96}\protected@file@percent }
-\@writefile{toc}{\contentsline {chapter}{\numberline {A}Primera parte de la materia (primer capítulo del Diestel)}{111}{appendix.Alph1}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {1.16.91}{\ignorespaces La arista $v_{2}v_4$ de $G$ yace dentro de la cara $f_C'$.\relax }}{105}{figure.1.91}\protected@file@percent }
+\newlabel{corolario:un grafo plano con n > 2 vertices tiene a lo mas 3n - 6 aristas}{{1.16.7}{105}{}{theorem.1.16.7}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {1.16.92}{\ignorespaces Ejemplo de grafo bipartito obtenido a partir de una triangulación $G$.\relax }}{105}{figure.1.92}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {1.17}Clase 16: 26/05/23}{106}{section.1.17}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {1.17.93}{\ignorespaces Ilustración del modelo de $K_5$.\relax }}{107}{figure.1.93}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {1.17.94}{\ignorespaces Dibujo de $K_{1,4}$.\relax }}{107}{figure.1.94}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {1.17.95}{\ignorespaces Ilustración: los dos vértices de grado $3$ en $V_x$ de color \textcolor {Cyan}{azul}.\relax }}{108}{figure.1.95}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {1.18}Clase 17: 02/06/23}{108}{section.1.18}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {1.18.1}Coloreo de Grafos}{108}{subsection.1.18.1}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {1.18.96}{\ignorespaces Coloreamos los vértices de $G$ con \textcolor {BrickRed}{rojo}, \textcolor {Cyan}{azul} y \textcolor {yellow!80!Black}{amarillo}. Notar que el $3$-ciclo solo se puede pintar con almenos $3$ colores; así, $\chi (G) = 3$\relax }}{109}{figure.1.96}\protected@file@percent }
+\newlabel{prop:algoritmo gloton}{{1.18.4}{109}{Algoritmo glotón}{theorem.1.18.4}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {1.18.97}{\ignorespaces Ilustración del algorítmo glotón.\relax }}{110}{figure.1.97}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {1.19}Clase 18: 05/06/23}{112}{section.1.19}\protected@file@percent }
+\@writefile{toc}{\contentsline {chapter}{\numberline {A}Primera parte de la materia (primer capítulo del Diestel)}{113}{appendix.Alph1}\protected@file@percent }
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
-\@writefile{toc}{\contentsline {section}{\numberline {A.1}}{111}{section.Alph1.1}\protected@file@percent }
-\newlabel{eq:formula de la dimension para los subsespacios ortogonales de E(G)}{{A.1}{112}{}{equation.Alph1.1.1}{}}
-\newlabel{proposition:apendice - definiciones equivalentes de elemento del subespacio de ciclos}{{A.1.4}{112}{}{theorem.Alph1.1.4}{}}
-\newlabel{th:apendice subespacio de ciclos y subespacio de cortes son mutuamente ortogonales entre si}{{A.1.13}{114}{}{theorem.Alph1.1.13}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {A.1.1}{\ignorespaces Ejemplo: El ciclo fundamental \textcolor {BrickRed}{$C_e$}, y el corte fundamental \textcolor {Cyan}{$D_f$}.\relax }}{115}{figure.caption.9}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {A.2}}{117}{section.Alph1.2}\protected@file@percent }
-\@writefile{lof}{\contentsline {figure}{\numberline {A.2.2}{\ignorespaces Contracción de la arista $e$ en un multigrafo $G$.\relax }}{118}{figure.caption.10}\protected@file@percent }
-\newlabel{Fig 2 - Apendice 1}{{A.2}{118}{}{figure.caption.10}{}}
-\@writefile{toc}{\contentsline {chapter}{\numberline {B}Orden parcial completo-dirigido y teorema del punto fijo de Kleene}{120}{appendix.Alph2}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {A.1}}{113}{section.Alph1.1}\protected@file@percent }
+\newlabel{eq:formula de la dimension para los subsespacios ortogonales de E(G)}{{A.1}{114}{}{equation.Alph1.1.1}{}}
+\newlabel{proposition:apendice - definiciones equivalentes de elemento del subespacio de ciclos}{{A.1.4}{114}{}{theorem.Alph1.1.4}{}}
+\newlabel{th:apendice subespacio de ciclos y subespacio de cortes son mutuamente ortogonales entre si}{{A.1.13}{116}{}{theorem.Alph1.1.13}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {A.1.1}{\ignorespaces Ejemplo: El ciclo fundamental \textcolor {BrickRed}{$C_e$}, y el corte fundamental \textcolor {Cyan}{$D_f$}.\relax }}{117}{figure.caption.9}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {A.2}}{119}{section.Alph1.2}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {A.2.2}{\ignorespaces Contracción de la arista $e$ en un multigrafo $G$.\relax }}{120}{figure.caption.10}\protected@file@percent }
+\newlabel{Fig 2 - Apendice 1}{{A.2}{120}{}{figure.caption.10}{}}
+\@writefile{toc}{\contentsline {chapter}{\numberline {B}Orden parcial completo-dirigido y teorema del punto fijo de Kleene}{122}{appendix.Alph2}\protected@file@percent }
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
-\newlabel{apendice:orden parcial completo -dirigido y teorema del punto fijo de Kleene}{{B}{120}{Orden parcial completo-dirigido y teorema del punto fijo de Kleene}{appendix.Alph2}{}}
+\newlabel{apendice:orden parcial completo -dirigido y teorema del punto fijo de Kleene}{{B}{122}{Orden parcial completo-dirigido y teorema del punto fijo de Kleene}{appendix.Alph2}{}}
 \bibstyle{alpha}
 \bibdata{BibliografiaGRAFOS.bib}
 \bibcite{diestelGraphTheory}{Die}
 \bibcite{edmonds1991glimpseOfHeaven}{Edm91}
 \bibcite{micaliSilvioVazirani1980MaximumMatching}{MV80}
-\gdef \@abspage@last{123}
+\gdef \@abspage@last{125}
