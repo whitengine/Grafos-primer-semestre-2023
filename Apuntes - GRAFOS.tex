@@ -3618,12 +3618,16 @@ Por inducción, el grafo $H := G \setminus \{v\}$ (planar) tiene un coloreo $c :
 
 Supongamos que $G$ está dibujado en el plano y $B$ es un disco con centro $v$, tan chico que solo toca los cinco arcos que conectan $v$ con sus vecinos. Enumeremos a estos arcos según su posición cíclica en $B$: $s_1, s_2, \ldots, s_5$ y llamo $v_i$ al vecino de $v$ que es extremo de $s_i$. Sin pérdida de generalidad, podemos asumir que $c(v_i) = i$.
 
-Primero observemos que todo $v_1,v_3$-camino $P \subset H \setminus \{v_2, v_4\}$ separa a $v_2$ de $v_4$ en $H$. En efecto, esto ocurre si y solo si el ciclo $C = v v_1 P v_3 v$ separa a $v_2$ de $v_4$, y para ver esto basta ver que $v_2$ y $v_4$ están en caras distintas de $C$ (no es difícil).
+Primero observemos que todo $v_1,v_3$-camino $P \subset H \setminus \{v_2, v_4\}$ separa (topológicamente) a $v_2$ de $v_4$ en $H$. En efecto, esto ocurre si y solo si el ciclo $C = v v_1 P v_3 v$ separa a $v_2$ de $v_4$, y para ver esto basta ver que $v_2$ y $v_4$ están en caras distintas de $C$ (no es difícil).
 
 \Dibujo{}
 
-Dados $i,j \in \{1, \ldots, 5\}$, sea $H_{i,j}$ el subgrafo de $H$ inducido por el vértice de color $i$ y $j$. Veamos que la componente $C_1$ de $H_{1,3}$ que contiene a $v_1$, contiene también a $v_3$.
+Dados $i,j \in \{1, \ldots, 5\}$, sea $H_{i,j}$ el subgrafo de $H$ inducido por el vértice de color $i$ y $j$. Veamos que la componente $C_1$ de $H_{1,3}$ que contiene a $v_1$, contiene también a $v_3$ (o si no ganamos). En efecto, si no fuese así, intercambiamos los colores $1$ y $3$ de la componente $C_1$ y obtenemos otro coloreo de $H$ en el cual no aparece el color $1$ en el vecindario de $v$. Así podemos colorear a $v$ con $1$ y $G$ es $5$-coloreable. Así, podemos asumir que $H_{1,3}$ contiene un $v_1, v_3$-camino y como hemos visto, este camino separa a $v_2$ de $v_4$. Ahora, considero la componente $C_2$ de $H_{2,3}$ que contiene a $v_2$. Como $P \cap H_{2,3} = \emptyset$, la componente $C_2 $ no contiene a $v_4$. Así podemos intercambiar los colores $2$ y $3$ en $C_2$, obteniendo un nuevo coloreo de $H$ donde el color $2$ no aparece en el vecindario de $v$. Con lo cual, podemos extener este coloreo de $H$ a un $5$-coloreo de $G$: coloreamos a $v$ con color $2$.
 \end{proof}
+
+\begin{Teorema}[Grotzsch (1959)]
+Todo grafo planar sin triángulos es $3$-coloreable.
+\end{Teorema}
 
 
 
