@@ -3632,6 +3632,51 @@ Todo grafo planar sin triángulos es $3$-coloreable.
 
 
 
+%%%%%%%%%%%
+\Clase{08/06/23}   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%
+
+
+\begin{theorem}[Brooks (1941)]
+Sea $G$ un grafo conexo. Si $G$ no es completo ni es un ciclo impar, entonces
+\[
+    \chi (G) \leq \Delta (G).
+\]
+\end{theorem}
+\begin{proof}
+Haremos inducción en $\abs G$. Si $\Delta (G) \leq 2$, entonces $G$ es un camino o un ciclo pues $G$ es conexo y es fácil de ver que la afirmación se cumple.
+
+\Dibujo{HACER UNA TABLA CON LAS POSIBILIDADES}
+
+Entonces supongamos que $\Delta := \Delta (G) \geq 3$. Sea $v \in G$ y $H := G \setminus \{v\}$. Veamos que $\chi (H) \leq \Delta$. Tenemos dos casos:
+\begin{enumerate}
+\item Si $H$ no es un completo ni un ciclo impar entonces por hipótesis inductiva (supongamos que $H$ es conexo, si no utilizando un argumento de cadenas de kempen podríamos encontrar un coloreo más chico de $G$) tenemos que $\chi (H) \leq \Delta (H) \leq \Delta$.
+\item Si no, $\chi (H) = \Delta (H) + 1$, pero si $H$ es un completo o un ciclo impar, tenemos que es regular, en particular, si $w \in H$ es un vecino de $v$ ($G$ es conexo) tiene grado $\Delta (H)$ en $H$ y por lo tanto, $w$ tiene grado $d_G (w) = \Delta (H) + 1 \leq \Delta$. Es decir, $\chi (G) \leq \Delta$.
+\end{enumerate}
+Podemos suponer que $\chi (H) = \Delta$, si no $G$ sería $\Delta$-coloreable y la desigualdad se seguiría. Más aún, si los vecinos de $v$ (están en $H$) están coloreados por $< \Delta$ colores, podríamos extender el coloreo de $H$ a uno de $G$. Luego supongamos que $d_G (v) = \Delta$, y de hecho que todos sus vecinos tienen un color distinto.
+
+Dado un $\Delta$-coloreo de $H$, sean $v_i$ los vecinos de $v$ de color $i$ para todo $i = 1 , \ldots, \Delta$. Para $i \neq j$ consideremos $H_{i,j}$ el subgrafo de $H$ inducido por los vértices coloreados con colores $i,j$. Supongamos que para todo $i \neq j$, los vértices $v_i$ y $v_j$ están en una misma componente de $H_{i,j}$ la cual llamamos $C_{i,j}$. (Si esto no pasara podríamos intercambiar los colores $i,j$ de una componente de $H_{i,j}$ que contenga a $v_i$, lo cual no afectaría el color de $v_j$, así $H$ sería $\Delta$-coloreable de tal manera que los vecinos de $v$ están coloreados con $\Delta -1$ colores: todos menos el $i$-ésimo color).
+
+Notar que $d_H (v_i) = \Delta - 1$, pues $v_i$ debe tener almenos esa cantidad de vecinos todos de distinto color (si no podríamos recolorearlo y utilizar menos colores en el vecindario de $v$). Probemos que $C_{i,j}$ es un camino. Primero, acabamos de ver que $v_i$ y $v_j$ tienen un solo vecino en $C_{i,j}$ (pues hay una biyección entre los colores y los vecinos de cada vértice). Con lo cual, nos falta ver que $C_{i,j}$ no tiene vértices de grado $3$, supongamos por el absurdo que si existe un vértice así, digamos $u$. Entonces como $u$ tiene $3$ vecinos del mismo color, debe ser que su vecindario en $H$ usa a lo más $\Delta - 2$ colores, i.e., podemos cambiar el color de $u$ al que no se usa en su vecindario y así desconectamos $C_{i,j}$ y podemos $\Delta$-colorear a $G$ como antes.
+
+Para $i,j,k$ distintos, los caminos $C_{i,j}$ y $C_{i,k}$ se intersectan solo en $v_i$. En efecto, si existiera $u \in C_{i,j} \cap C_{i,k} \setminus \{v_i\}$, entonces $u$ tiene almenos $4$ vecinos pintados con a lo más $2$ colores (ver el siguiende diagrama), luego el vecindario de $u$ en $H$ tiene a lo más $\Delta -2$ colores y podríamos recolorearlo, separando las cadenas de Kempen y extendiendo un $\Delta$-coloreo a $G$.
+
+ICOMPLETO SIGUE LA PROXIMA CLASE.
+
+\end{proof}
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
