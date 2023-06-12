@@ -361,7 +361,7 @@
 
 
 
-\title{Entrega 6 - GRAFOS}
+\title{Entrega 5 - GRAFOS}
 \author{Enzo Giannotta}
 
 
@@ -385,24 +385,41 @@
 
 \begin{solution}
 \begin{enumerate}
-\item Construiremos una familia de grafos bipartitos $\mathbf{B}_n, n \geq 2$ de $2n$ vértices con los vértices ordenados de cierta manera que el algoritmo glotón use $n$ colores. Llamamos $A_n, B_n$ a una partición de los vértices de manera que cada partición tiene sus vértices independientes, con $\abs {A_n} = n = \abs {B_n}$. Cuando $n = 2$, consideramos $A_2 = {a_1, a_2}, B_2 = \{b_1, b_2\}$ y agregamos una arista para cada par $a,b$ con $a \in A_2, b \in B_2$. Por último ordenamos, $v_1 = a_1, v_2 = b_1, v_3 = a_2, v_4 = b_2$. Luego el algorítmo glotón pinta a los vértices $v_i$ con dos colores: $1,2,1,2$. Notar que este orden hace que el algorítmo glotón pinte con $2$ colores tanto $A_2$ como $B_2$.
+\item Construiremos una familia de grafos bipartitos $\mathbf{B}_n, n \geq 2$ de $2n$ vértices con los vértices ordenados de cierta manera que el algoritmo glotón use $n$ colores. Llamamos $A_n, B_n$ a una partición de los vértices de manera que cada partición tiene sus vértices independientes, con $\abs {A_n} = n = \abs {B_n}$. Cuando $n = 2$, consideramos $A_2 = \{a_1, a_2\}, B_2 = \{b_1, b_2\}$ y agregamos una arista $ab$ para cada $a \in A_2, b \in B_2$. Por último ordenamos, $v_1 = a_1, v_2 = b_1, v_3 = a_2, v_4 = b_2$. Luego el algorítmo glotón pinta a los vértices $v_i$ con dos colores: $1,2,1,2$. Notar que este orden hace que el algorítmo glotón pinte con $2$ colores tanto $A_2$ como $B_2$.
 
 Supongamos ahora que hemos construido $\mathbf{B}_n$ y ordenado sus vértices como $v_1, \ldots, v_{2n}$ y más aún, que el algorítmo glotón pintó con $n$ colores distintos $A_n$ y lo mismo para $B_n$. Construimos $\mathbf{B}_{n+1}$ agregando a $\mathbf{B}_{n}$ dos vértices $a_{n+1}$ y $b_{n+1}$, más específicamente: $A_{n+1} := A_n \cup \{a_{n+1}\}$ y $B_{n+1} := b_n \cup \{b_{n+1} \}$. Por último, agregamos aristas $a_{n+1} b$ para todo $b \in B_n$ y $a b_{n+1}$ para todo $a \in A_n$. Ahora, ordenamos $v_1, \ldots, v_{2n}$ como el orden de los vértices de $\mathbf{B}_n$ y luego tomamos $v_{2n+1} := a_{n+1}, v_{2n+2} := b_{n+1}$. Notar que este orden pinta cada conjunto de la partición $A_{n+1}, B_{n+1}$ con $n + 1$ colores, en efecto, por hipótesis inductiva el algoritmo glotón pinta $v_1, \ldots, v_{2n}$ de tal manera que $A_n$ y $B_n$ usan $n$ colores, luego $v_{2n + 1 } = a_{n+1}$ lo pinta de color $n+1$ porque es adyacente a todos los vértices de $B_n$ y análogamente para $v_{2n + 2} = b_{n+1}$ (notar que $b_{n+1}$ no es adyacente a $a_{n+1}$).
+
+Es claro que $\mathbf{B}_n$ es siempre bipartito.
 \item Veamos que los grafos $3$-críticos son los ciclos impares. Claramente los ciclos impares son $3$-coloreables y si sacamos cualquier vértice, tiene número cromático a lo más $2$, por ser camino.
 
-Recíprocamente, supongamos que $G$ es un grafo $3$-crítico. $G$ tiene un ciclo impar porque si no sería bipartito, i.e. $2$-coloreable. Más aún, todo vértice tiene que ser un vértice de este ciclo, de lo contrario quitarlo nos daría un grafo a lo más $2$-coloreable, pero ese coloreo serviría para colorear un ciclo impar, imposible. En otras palabras, $G$ es un grafo generado por un ciclo impar $C$, veamos a su vez que $G[C] = C$. En efecto, si hubiera una cuerda $x y$ de $C$ en $G$, entonces la cuerda forma dos subciclos $C_1, C_2 \subsetneq G$ tales que $V(C_1) \cup V (C_2) = V(C)$ (ver la siguiente ilustración). Como $C$ tiene orden impar, alguno de los subciclos $C_1$ o $C_2$ también tiene que tener orden impar, digamos $C_1$; con lo cual, $G \setminus \{w\}$ para cualquier $w \in V(G) \setminus V(C_1)$, no puede tener un $1,2$-coloreo porque contiene un subciclo impar: $C_1$, absurdo.
+Recíprocamente, supongamos que $G$ es un grafo $3$-crítico. $G$ tiene un ciclo impar porque si no sería bipartito, i.e. $2$-coloreable. Más aún, todo vértice tiene que ser un vértice de este ciclo, de lo contrario quitarlo nos daría un grafo a lo más $2$-coloreable, pero ese coloreo serviría para colorear un ciclo impar, imposible. En otras palabras, $G$ es un grafo generado por un ciclo impar $C$, finalmente veamos que $G[C] = C$ (y por lo tanto $G = C$). En efecto, si hubiera una cuerda $x y$ de $C$ en $G$, entonces la cuerda forma dos subciclos $C_1, C_2 \subsetneq G$ tales que $V(C_1) \cup V (C_2) = V(C)$ (ver la siguiente ilustración). Como $C$ tiene orden impar, alguno de los subciclos $C_1$ o $C_2$ también tiene que tener orden impar, digamos $C_1$; con lo cual, $ G' = G \setminus \{w\}$ para cualquier $w \in V(G) \setminus V(C_1)$ no puede tener $\chi (G') \leq 2$ porque contiene un subciclo impar: $C_1$, contradiciendo que $G$ es $3$-crítico.
 
 \begin{center}
 \includegraphics[width=0.5\columnwidth]{"./Dibujo 3.pdf"}
-\captionof{figure}{Ilustración de una cuerda $xy$ en un grafo $G$ generado por un ciclo impar.}
+\captionof{figure}{Ilustración de una cuerda $xy$ en un grafo $G$ generado por un ciclo impar. Los vértices \purple{violeta} representan el subciclo impar $C_1$.}
 \end{center}
 \end{enumerate}
 \end{solution}
 
 
 
+\newpage
 
 
+\begin{exercise}
+Calcule el número cromático de un grafo en términos del número cromático de sus bloques.
+
+\textbf{Respuesta:} $\boxed{\chi (G) = \max_{\substack{B \subset G \\ \text{$B$ bloque}}} \chi (B).}$
+\end{exercise}
+\begin{solution}
+Afirmación: el número cromático de un grafo $G$ es $\max_B \chi (B) =:m$, donde recorremos todos los bloques $B \subset G$.
+
+Sin pérdida de generalidad, podemos asumir que $G$ es conexo. Por un lado, como un $\chi (G)$-coloreo sirve para todo $B$, tenemos que $\max_B \chi (B) \leq \chi (G)$. Probaremos ahora la desigualdad recíproca.
+
+Proseguiremos por inducción en la cantidad de vértices $b$ del árbol bloque de $G$. Si $b = 1$ no hay nada que probar. En general, supongamos que $b > 1$ y consideremos un bloque $B$ que corresponda a una hoja del árbol (notar que el grafo bloque nunca tiene hojas que sean vértices de corte de $G$). Consideremos $G' = G/B$, su grafo bloque tiene menos vértices pues como $b > 1$, $B$ no puede ser un solo vértice. Los grafos bloques de $G'$ son los grafos bloques de $G$ exceptuando $B$, luego por hipótesis inductiva $\chi (G') = \max_{B' \neq B} \chi (B')$.
+
+Ahora, podemos combinar el coloreo de $B$ con el de $G'$: sea $v \in B$ el único vértice de corte de $G$ contenido en $B$ ($B$ es una hoja del grafo bloque), y denotemos con el mismo nombre al vértice de $G'$ obtenido por contraer $B$. Coloreamos $B$ con $\chi (B)$ colores y lo juntamos con un $\chi (G')$-coloreo de $G'$, simplemente permutamos los colores de $B$, de ser necesario, para que $v$ tenga el mismo color en $B$ y en $G'$. Este coloreo de $G$ usa $\max \{ \chi (B), \chi (G') \} = m$ colores. Así, $\chi (G) \leq m$, como queríamos demostrar.
+\end{solution}
 
 
 

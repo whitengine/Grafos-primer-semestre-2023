@@ -1607,7 +1607,7 @@ Veamos solo (ii), el primer ítem es obvio. En efecto, $IX$ es el grafo que se o
 Ahora que conocemos todas las relaciones standard entre grafos, podemos definir lo qu esignifica embeber a un grafo en otro.
 
 \begin{definition}
-Básicamente, una \textbf{inmersión} (o \textbf{embedding} en inglés) de $H$ en $G$ es un mapa inyectivo $\varphi : V(H) \rightarrow V(G)$ tal que preserva la estructura en la que estamos interesados. Con lo cual, $\varphi$ embebe a $H$ en $G$ c omo un subgrafo si preserva la adyacencia entre vértices, y como subgrafo inducido si preserva tanto la adyacencia como la no adyacencia. Si $\varphi$ está definido también en $E(H)$ como en $V(H)$ y manda $xy$ en caminos independientes de $G$ entre $\varphi (x)$ y $\varphi (y)$, decimos que $\varphi$ embebe a $H$ en $G$ como un menor topológico. Similarmente, decimos que es una inmesión de $H$ en $G$ como un menor, si mapea a $V(H)$ en conjuntos disjuntos de vértices en $G$ conexos, de manera que $G$ tiene una arista entre los conjuntos $\varphi (x)$ y $\varphi (y)$ siempre que $xy$ es una arisda de $H$. Más varíantes existen, pero depende del contexto en el que estemos; por ejemplo, se pueden definir de manera obvia las inmersiones de 'subgrafos generadores', y 'menores inducidas', etc.
+Básicamente, una \textbf{inmersión} (o \textbf{embedding} en inglés) de $H$ en $G$ es un mapa inyectivo $\varphi : V(H) \rightarrow V(G)$ tal que preserva la estructura en la que estamos interesados. Con lo cual, $\varphi$ embebe a $H$ en $G$ como un subgrafo si preserva la adyacencia entre vértices, y como subgrafo inducido si preserva tanto la adyacencia como la no adyacencia. Si $\varphi$ está definido también en $E(H)$ como en $V(H)$ y manda $xy$ en caminos independientes de $G$ entre $\varphi (x)$ y $\varphi (y)$, decimos que $\varphi$ embebe a $H$ en $G$ como un menor topológico. Similarmente, decimos que es una inmesión de $H$ en $G$ como un menor, si mapea a $V(H)$ en conjuntos disjuntos de vértices en $G$ conexos, de manera que $G$ tiene una arista entre los conjuntos $\varphi (x)$ y $\varphi (y)$ siempre que $xy$ es una arisda de $H$. Más varíantes existen, pero depende del contexto en el que estemos; por ejemplo, se pueden definir de manera obvia las inmersiones de 'subgrafos generadores', y 'menores inducidas', etc.
 \end{definition}
 
 %%%%%%%%%%%
@@ -1616,7 +1616,7 @@ Básicamente, una \textbf{inmersión} (o \textbf{embedding} en inglés) de $H$ e
 %%%%%%%%%%%
 
 
-\begin{lemma}
+\begin{lemma}\label{lema:todo grafo 3-conexo distinto de K_4 tiene una arista e tal que G/e es nuevamente 3-conexo}
 Todo grafo $3$-conexo, distinto de $K_4$, tiene una arista $e$ tal que $G/e$ es $3$-conexo.
 \end{lemma}
 \begin{proof}
@@ -3010,7 +3010,7 @@ Notar que $X$ posee la propiedad de que $T \setminus X$ no contiene ningún árb
 Sea $\alpha (G)$ la máxima cantidad de vértices independientes. Probar que $G$ puede ser cubierto por a lo más $\alpha (G)$ subgrafos disjuntos, cada uno isomorfo a un ciclo, a un $1$-camino, o un vértice.
 \end{exercise}
 \begin{solution}
-Veamos primero que existe un subgrafo $H$ de $G$ de tipo $\mathcal H$, con la propiedad de que tiene un vértice $v\in H$ que no es adyacente a ningún vértice de $G \setminus H$. Consideremos el camino $P : x_0, \ldots, x_k$ con $k\geq 0$ de longitud máxima en $G$. Entonces $v = x_0$ funciona: si no tiene vecinos es obvio porque podemos tomar $x_0$, si su único vecino es $x_1$ ganamos, y si tiene un vecino distinto de $x_1$, digamos $x_i$ con $i > 1$ máximo, entoncces $x_0$ está en el ciclo $x_0 x_1 \ldots x_i x_0$ y no tiene vecinos afuera de este.
+Veamos primero que existe un subgrafo $H$ de $G$ de tipo $\mathcal H$, con la propiedad de que tiene un vértice $v\in H$ que no es adyacente a ningún vértice de $G \setminus H$. Consideremos el camino $P : x_0, \ldots, x_k$ con $k\geq 0$ de longitud máxima en $G$. Entonces $v = x_0$ funciona: si no tiene vecinos es obvio porque podemos tomar $x_0$, si su único vecino es $x_1$ ganamos, y si tiene un vecino distinto de $x_1$, digamos $x_i$ con $i > 1$ máximo, entonces $x_0$ está en el ciclo $x_0 x_1 \ldots x_i x_0$ y no tiene vecinos afuera de este.
 
 Denotemos por $m(G)$ el mínimo cardinal de un cubrimiento por subgrafos disjuntos de tipo $\mathcal H$ de un grafo $G$.
 
@@ -3150,7 +3150,7 @@ Un par de definiciones extras que serán útiles para entender partes que no vim
 
 Sea $\pi : S^2 \setminus \{(0,0,1)\} \rightarrow \reals^2$ la proyección estereográfica de la esfera en el plano. Sea $P \subset \reals^2$ un polígono y $O$ su región acotada de $\reals^2 \setminus P$, llamamos \textbf{círculo en $S^2$} a $C := \pi^{-1}(P)$, y \textbf{regiones de $S^2 \setminus C$} a los conjuntos $\pi^{-1} (O)$ y $S^2 \setminus \pi^{-1} ( P \cup O)$.
 
-\begin{theorem}
+\begin{theorem}\label{theorem:un homeomorfismo entre dos circulos de S2 se puede extender a un homoemorfismo entre regiones}
 Sea $\varphi : C_1 \rightarrow C_2$ un homeomorfismo entre dos círculos en $S^2$, sea $O_1$ una región de $S^2 \setminus C_1$, y sea $O_2$ una región de $S^2 \setminus C_2$. Entonces $\varphi$ se puede extender a un homeomorfismo de $C_1 \cup O_1 \rightarrow C_2 \cup O_2$.
 \end{theorem}
 
@@ -3254,7 +3254,7 @@ Se deduce del Lema \ref{lema:arco tiene una sola cara} haciendo inducción en la
 \end{proof}
 
 
-\begin{lemma}
+\begin{lemma}\label{lema:si un grafo plano tiene almenso dos caras con la misma frontera, entonces es un ciclo}
 Si un grafo plano tiene almenos dos caras distintas con la misma frontera, entonces el grafo es un ciclo.
 \end{lemma}
 \begin{proof}
@@ -3272,7 +3272,7 @@ Por la Proposición \ref{prop:un grafo es 2-conexo si y solo si se construye a p
 Si $G[f] \subset H$, entonces $f$ también es una cara de $H$ (segundo ítem del Lema \ref{lema:clase 18 05 23 - lema 1}, luego se sigue por hipótesis inductiva. Si $G[f] \not \subset H$, entonces $G[f]$ interseca $P \setminus H$, con lo cual $f \subset f'$ y $G[f] \subset C \cup P$. Por el segundo ítem del Lema \ref{lema:clase 18 05 23 - lema 1}, deducimos que $f$ es una cara de $C \cup P$, y por lo tanto tiene como frontera un ciclo (primer ítem del Lema \ref{lema:tres arcos disjuntos forman 3 componentes}).
 \end{proof}
 
-\begin{proposition}
+\begin{proposition}\label{proposition:las fronteras de las caras de un grafo plano 3-conexo son precisamente sus ciclos inducidos que no separan}
 Las fronteras de las caras de un grafo plano $3$-conexo son precisamente sus ciclos inducidos que no separan (es decir, que $G \setminus C$ sigue siendo conexo).
 \end{proposition}
 \begin{proof}
@@ -3369,7 +3369,7 @@ Un grafo plano es una \textbf{triangulación} si todas sus caras tienen por fron
 
 Estas dos definiciones son equivalentes:
 
-\begin{proposition}
+\begin{proposition}\label{proposition:un grafo es maximalmente plano si y solo si es una triangulacion}
 Un grafo es maximial plano (de orden $\geq 3$) si y solo si es una triangulación.
 \end{proposition}
 \begin{proof}
@@ -3398,6 +3398,148 @@ Notar que el número de aristas de este grafo bipartito es justamente $2 \abs {E
     n - m + \frac 2 3 m = 2 \quad \Leftrightarrow \quad m = 3 n - 6.
 \]
 \end{proof}
+
+\begin{definition}
+Decimos que un grafo planar $G$ es \textbf{maximalmente plano}, si es planar pero no se le puede agregar una arista nueva (sin agregar vértices) tal que sigue siendo planar.
+\end{definition}
+
+El grafo plano de un grafo maximalmente plano $G$ es maximalmente planar, no es obvio valga la recíproca: que un dibujo no se le pueda agregar aristas de manera que siga siendo plano implica que su grafo tampoco.
+
+\begin{proposition}
+Un grafo maximalmente plano es maximalmente planar.
+\end{proposition}
+\begin{proof}
+Esto es un corolario directo de la Proposición \ref{proposition:un grafo es maximalmente plano si y solo si es una triangulacion}.
+\end{proof}
+
+
+
+\subsection{Dibujos}
+
+\begin{definition}
+Una inmersión en el plano de un grafo $G$ (también llamado \textbf{inmersión planar}) es un isomorfismo entre $G$ y un grafo plano $H$. Llamaremos \textbf{dibujo} (de $G$) a $H$.
+\end{definition}
+
+Investigaremos como pueden diferir dos inmersiones planares de un grafo.
+
+Consideremos un isomorfismo abstracto $\sigma : V \rightarrow V'$ entre dos grafos planos $H = (V,E)$ y $H' = (V', E')$, con conjuntos de caras $F := F(H)$ y $F' := F(H')$.
+
+\begin{definition}
+\begin{enumerate}[(1)]
+\item Sea $\pi : \mathbb{S}^2 \setminus \{(0,0,1)\} \rightarrow \reals^2$ la proyección estereográfica. Diremos que $\sigma : V \rightarrow V'$ es un \textbf{isomorfismo topológico} entre los grafos planos $H$ y $H'$, si existe un homeomorfismo $\varphi : \mathbb{S}^2 \rightarrow \mathbb{S}^2$ tal que $\psi := \pi \circ \varphi \circ \pi^{-1}$ induce $\sigma$ en $V \cup E$. Más formalmente, pedimos que $\psi$ y $\sigma$ coincidan en $V$ y que toda arista plana $xy \in H$ sea mapeado en la arista plana $\sigma (x) \sigma (y) \in H'$. ($\varphi$ puede no dejar fijo a $(0,0,1) \in \mathbb{S}^2$, solo en este caso $\psi$ no está bien definido en $\pi (\varphi^{-1} (0,0,1))$.)
+\end{enumerate}
+\end{definition}
+
+Un isomorfismo topológico no distingue entre caras interiores y caras exteriores: sea $\varphi$ una rotación de $\mathbb{S}^2$ que manda la $\pi^{-1}$-imagen de un punto de una cara interior de $H$ al polo norte $(0,0,1)$ de $\mathbb{S}^2$, entonces $\psi$ manda el resto de esta cara a una cara exterior $\psi (H)$. (Para que las aristass de $\psi (H)$ sigan siendo lineales a trozos, se debe ajustar ligeramente $\varphi$.)
+
+\begin{obs}
+Notar que un isomorfismo topológico $\sigma$, salvo quizás un par de puntos indefinidos de $\psi$ o $\psi^{-1}$, $\psi$ mapea caras de $H$ en caras de $H'$, pues preserva componentes. De esta manera, $\sigma$ induce una biyección natural $\sigma : V \cup E \cup F \rightarrow V' \cup E' \cup F'$ que preserva incidencia de vértices, aristas y caras.
+\end{obs}
+
+
+\Inkscape{Dos dibujos de grafos no topológicamente isomorfos: $H$ tiene una cara con $6$ aristas incidentes, pero $H'$ no.}
+
+\begin{definition}
+\begin{enumerate}[(2)]
+\item Diremos que $\sigma$ es un \textbf{isomorfismo ccombinatorio} de grafos planos $H$ y $H'$ si se puede extender a una biyección $\sigma : V \cup E \cup F \rightarrow V' \cup E' \cup F'$, que preserva incidencia de vértices con aristas, y de vértices y aristas con caras. Más formalmente, pedimos que un vértice o arista $x \in H$ está en la frontera de una cara $ f \in F$ si y solo si $\sigma (x)$ está en la frontera de la cara $\sigma (f)$.
+\item Diremos que $\sigma$ es un \textbf{isomorfismo grafo-teórico} de grafos planos $H$ y $H'$ si
+\[
+    \Set{ \sigma (H [f]) | f \in F} = \Set{ \sigma (H' [f']) | f' \in F'},
+\]
+es decir, ``preserva fronteras de caras''.
+\end{enumerate}
+\end{definition}
+
+\begin{obs}
+Tenemos las implicaciones obvias para un isomorfismo $\sigma : V \rightarrow V'$:
+\[
+    \text{topológico} \quad \Rightarrow \quad \text{combinatorio} \quad \Rightarrow \quad \text{grafo-teorético}.
+\]
+\end{obs}
+
+\begin{example}\label{ejemplo:dos dibujo combinatorialmente isomorfos pero no topológicamente}
+Ilustremos un ejemplo donde dos dibujos son combinatorialmente isomorfos pero no topológicamente:
+
+\Inkscape{Dos dibujos $H$ y $H'$ de un grafo que son combinatorialmente isomorfos, pero no topológicamente.}
+
+En efecto, si lo fueran, claramente tiene que mandar las aristas $xy$ y $x z$ en $x'y'$ y $x' z'$, pues preserva grados de los vértices y aristas. Pero si conectamos $y$ con $z$ mediante un arco $P$, este se traduce en un ciclo de $H'$ agregando un arco $P'$ entre $y'$ y $z'$; llamemos a estos nuevos grafos planos $\tilde H$ y $\tilde H'$, los cuales son topológicamente equivalentes.
+
+Tenemos que $u$ y $v$ son vértices que son equivalentes a distintas componentes de $\reals^2 \setminus \tilde H$, luego este isomorfismo topológico tiene que preservar lo mismo. Más precisamente, tenemos que $u \mapsto u'$ y $v \mapsto v'$; y $u',v'$ deberían estar en distintas componentes de $\reals^2 \setminus \tilde H '$. Esto no es verdad pues mirando una bola abierta $B$ alrededor de $x'$ lo suficientemente chico para que no interseque el arco nuevo que agregamos entre $y'$ y $z'$, tenemos que los puntos entre $x'$ y $v'$ son equivalentes a los puntos entre $x'$ y $u'$ dentro de $B$; como $P'$ no interseca el camino $x'$-$u'$ todos estos puntos son equivalentes entre sí con estos puntos dentre de $B$ sin intersecar $P'$, análogamente para el camino plano $x'$-$v'$. Como las clases de equivalencia de puntos de $B \cap \reals^2 \setminus \tilde H'$, se sigue que $u'$ y $v'$ son equivalentes en esta componente, absurdo.
+
+\Inkscape{Ilustración de $\tilde H$ y $\tilde H'$.}
+\end{example}
+
+El siguiente teorema nos dice que en la mayoría de los casos estas tres definiciones coinciden:
+\begin{theorem}
+\begin{enumerate}
+\item Todo isomorfismo grafo-teorético entre dos grafos planos es combinatorio. Su extensión a una cara es única si y solo si el grafo subyacente no es un ciclo.
+\item Todo isomorfismo combinatorio entre dos grafos planos $2$-conexos es topológico.
+\end{enumerate}
+\end{theorem}
+\begin{proof}
+Sean $H = (V,E)$ y $H' = (V', E')$ dos grafos planos con $F = F(H)$ y $F' = F(H')$, y $\sigma : V \rightarrow V'$ un isomorfismo entre dos grafos abstractos. Extendamos $\sigma$ a un mapa $V \cup E \rightarrow V' \cup E'$ poniendo $\sigma (xy) := \sigma (x) \sigma (y)$.
+
+\begin{enumerate}
+\item Si $H$ es un ciclo, la afirmación se sigue del Teorema de la curva de Jordan \ref{th:teorema de la curva de Jordan para poligonos}. Supongamos ahora que $H$ no es un ciclo. Sean $\mathfrak B, \mathfrak B'$ los conjuntos de todas las fronteras de caras en $H$ y $H'$, respectivamente. Si $\sigma$ es un isomorfismo de grafos-teorético, entonces el mapa $B \mapsto \sigma (B)$ es una biyección entre $\mathfrak B$ y $\mathfrak B'$. Por el Lema \ref{lema:si un grafo plano tiene almenso dos caras con la misma frontera, entonces es un ciclo}, el mapa $f \mapsto H[f]$ es una biyección entre $F$ y $\mathfrak B$, similarmente para $F'$ y $\mathfrak B'$. La composición de estas tres biyecciones es una biyección entre $F$ y $F'$, la cual podemos tomar como $\sigma : F \rightarrow F'$. Por construcción, extiende $\sigma$ a $V \cup E \cup F$ y preserva incidencias, además es único con esta propiedad, con lo cual $\sigma$ es en efecto un isomorfismo combinatorio.
+
+\item Supongamos que $H$ es $2$-conexo, y que $\sigma$ es un isomorfismo combinatorio. Construyamos un homeomorfismo $\varphi : \mathbb{S}^2 \rightarrow \mathbb{S}^2$ el cual, para cada vértice o arita plana $x \in H$, manda $\pi^{-1} (x)$ en $\pi^{-1} (\sigma (x))$. Como $\sigma$ es un isomorfismo combinatorio, $\tilde \sigma : \pi^{-1} \circ \sigma \circ \pi$ es una biyección que preserva incidencias de vértices, aristas y caras de $\tilde H := \pi^{-1} (H)$ con los vértices, aristas y caras de $\tilde H ' := \pi^{-1} (H')$.
+
+Construimos $\varphi$ en tres pasos. Primero definamos $\varphi$ en el conjunto de vértices de $\tilde H$ por $\varphi (x): \tilde \sigma (x)$ para todo $x \in V(\tilde H)$. Trivialmente esto es un homeomorfismo entre $V(\tilde H)$ y $V (\tilde H ')$.
+
+Segundo, extendemos $\varphi$ como un homeomorfismo entre $\tilde H$ y $\tilde H '$ que induce $\tilde \sigma$ en $V(\tilde H) \cup E(\tilde H)$. Podemos lograrlo arista por arista de la siguiente manera. Toda arista $xy \in \tilde H$ es homeomorfa a la arista $\tilde \sigma (xy) = \varphi (x) \varphi (y)$ de $\tilde H'$, vía un homeomorfismo que manda $x$ en $\varphi (x)$ e $y$ en $\varphi (y)$. Luego la unión de estos homeomorfismos, uno por cada arista de $\tilde H$, es en efecto un homeomorfismo entre $\tilde H$ y $\tilde H '$; lo único que faltaría probar es la continuidad en los vértices donde los homeomorfismos se solapan, esto es cierto ya que ambos grafos y sus aristas individuales tienen la topología subespacio de $\reals^3$. \footnote{
+Más en general, el Lema del Pegado dice que si $X = \bigcup_{i = 1}^n X_i$ es un espacio topológico que es unión de finitos conjuntos cerrados (infinitos conjuntos abiertos) $X_i$ de $X$, luego si existen funciones continuas $f_i : X_i \rightarrow Y$, se pueden ``pegar'' en una función continua $f : X \rightarrow Y$, siempre y cuando $f_i(x) = f_j(x)$ para todo $i,j$ tales que $x \in X_i \cap X_j$.
+}
+
+Por último, extendemos $\varphi : \tilde H \rightarrow \tilde H '$ a todo $\mathbb{S}^2$. Esto se puede lograr de manera análoga al paso anterior, cara a cara. Por la Proposición \ref{proposicion:un grafo plano 2-conexo tiene todas sus caras con frontera un ciclo}, todas las fronteras de las caras en $\tilde H$ y $\tilde H '$ son ciclos. Ahora si $f$ es una cara de $\tilde H$ y $C$ es su frontera, entonces $\tilde \sigma (C) = \bigcup \Set{ \tilde \sigma (e) | e \in E ( C)}$ es frontera de la cara $\tilde \sigma (f)$ de $\tilde H '$. Por el Teorema \ref{theorem:un homeomorfismo entre dos circulos de S2 se puede extender a un homoemorfismo entre regiones}, podemos entonces extender el homeomorfismo $\varphi : C \rightarrow \tilde \sigma (C)$ definido hasta el momento a un homeomorfismo de $C \cup f$ en $\tilde \sigma (C) \cup \tilde \sigma (f)$. Finalmente, tomamos la uninón de todos estos homeomorfismos, uno por cada cara de $f$ en $\tilde H$, como nuestro homeomorfismo $\varphi : \mathbb{S}^2 \rightarrow \mathbb{S}^2$ que buscabamos; claramente es continuo (lema del pegado).
+\end{enumerate}
+\end{proof}
+
+
+\begin{definition}
+Sean $\rho, \rho '$ dos inmersiones planares de un grafo $G$, decimos que son \textbf{topológicamente} (respectivamente, \textbf{combinatorialmente}) \textbf{equivalentes} si $\rho ' \circ \rho^{-1}$ es un isomorfismo topológico (respectivamente, combinatorio) entre los dibujos $\rho (G)$ y $\rho ' (G)$.
+
+Esto forma una relación de equivalencia en el conjunto de inmersiones planas de un grafo $G$.
+\end{definition}
+Si $G$ es $2$-conexo, entonces el teorema anterior nos dice que ambas definiciones son equivalentes.
+
+\begin{remark}
+Dos dibujos de un grafo $G$ pueden ser topológicamente isomorfos, pero que las inmersiones planas no sean equivalentes.
+
+En efecto, consideremos los siguientes dibujos $H$ y $H'$ ilustrados en la siguiente figuras:
+
+\Inkscape{Ilustración de $H$ y $H'$.}
+
+Donde $G$ es la estrella $K_{1,4}$. Claramente son topológicamente equivalentes: la identidad funciona. Sin embargo, consideremos las inmersiones planas
+\[
+\begin{tabular}{lllllllll}
+$\rho :$ & $G\longrightarrow H$ & & & & $\rho ' :$ & $G\longrightarrow H'$ \\
+&$0\longmapsto 0$ & & & & &$0\longmapsto 0$ \\
+&$1\longmapsto 1$ & & & & &$1\longmapsto 3$ \\
+&$2\longmapsto 2$ & & & & &$2\longmapsto 1$ \\
+&$3\longmapsto 3$ & & & & &$3\longmapsto 4$ \\
+&$4\longmapsto 4$ & & & & &$4\longmapsto 2$
+\end{tabular}
+\]
+Luego $\rho ' \circ \rho$ no es un homeomorfismo topológico porque ``cambia el orden en el que aparecen los vértices alrededor de $0$''. Con más detalle, esta misma idea se explotó en la demostración del Ejemplo \ref{ejemplo:dos dibujo combinatorialmente isomorfos pero no topológicamente} para probar que no podía haber un homeomorfismo: un arco $P$ en $\reals^2 \setminus H$ que une los vértices $1$ y $3$ de $H$ es mapeado homeomorficamente a un arco $P'$ entre $1$ y $3$ de $H'$, sin embargo, los vértices $2$ y $4$ no son equivalentes en $\reals^2 \setminus (H \cup P)$ mientras que si lo son en $\reals^2 \setminus (H' \cup P')$, luego $\rho ' \circ \rho$ no puede ser un homeomorfismo.
+\end{remark}
+
+\begin{theorem}[Whitney (1933)]
+Todas las inmersiones planas de un grafo $3$-conexo son equivalentes entre sí.
+\end{theorem}
+\begin{proof}
+Sea $G$ un grafo $3$-conexo con inmersiones planas $\rho : G \rightarrow H$ y $\rho' : G \rightarrow H'$. Por el Teorema anterior basta probar que $\rho' \circ \rho^{-1}$ es un isomorfismo grafo-teorético, i.e., $\rho(C)$ tiene como frontera una cara de $H$ si y solo si $\rho ' (C)$ tiene como frontera una cara de $H'$, para todo subgrafo $C \subset G$. Esto se sigue inmediatamente de la Proposición \ref{proposition:las fronteras de las caras de un grafo plano 3-conexo son precisamente sus ciclos inducidos que no separan}.
+\end{proof}
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -3429,10 +3571,6 @@ Si un grafo $H$ no es planar, entonces los grafos que contienen una subdivisión
 Como $K_5$ y $K_{3,3}$ no son planares, tampoco lo son los grafos que contienen subdivisiones de estos. Con lo cual, si $G$ es un grafo planar entonces $G$ no contiene ni a $K_5$ ni a $K_{3,3}$ como subdivisión. De hecho, vale la recíproca:
 \end{example}
 
-\begin{theorem}
-Un grafo es planar si y solo si no contiene a $K_5$ o $K_{3,3}$ como subdivisión.
-\end{theorem}
-
 \begin{lemma}
 Un grafo contiene a $K_5$ o $K_{3,3}$ como menor si y solo si contiene a $K_5$ o $K_3,3$ como subdivisión (i.e. como menor topológico).
 \end{lemma}
@@ -3450,8 +3588,41 @@ Luego supongamos que no sucede, es decir, existe un $V_x$ tal que $T_x$ no es su
 \end{proof}
 
 
+\subsection{Teorema de Kuratowski}
 
+Al final de esta subsección probaremos el Teorema de Kuratowski. Para eso, probaremos primero el resultado para grafos $3$-conexos. Requeriremos una serie de lemas.
 
+\begin{lemma}\label{lema:teorema de Kuratowski - lema 1}
+Todo grafo $3$-conexo $G$ sin $K^5$ ni $K_{3,3}$ como menor es planar.
+\end{lemma}
+\begin{proof}
+Haremos inducción en $\abs G$. Para $\abs G = 4$ tenemos que $G = K_4$, y la afirmación vale. Supongamos ahora que $\abs G > 4$. Por el Lema \ref{lema:todo grafo 3-conexo distinto de K_4 tiene una arista e tal que G/e es nuevamente 3-conexo}, $G$ tiene una arista $xy$ tal que $G/xy$ no tiene a $K_5$ o o$K_{3,3}$ como menor. Por hipótesis inductiva, $G/xy$ tiene un dibujo $\tilde G$ en el plano. Sea $f$la cara de $\tilde G \setminus v_{xy}$ que contiene el punto $v_{xy}$ y sea $C$ la frontera de $f$. Sea $X := N_G (x) \setminus \{y\}$ e $Y := N_G (y) \setminus \{x \}$; luego $X \cup Y \subset V(C)$, pues $v_{xy} \in f$. Claramente,
+\[
+    \tilde G ' := \tilde G \setminus \{ v_{xy} v | v \in Y \setminus X \}
+\]
+se puede ver como un dibujo de $G \setminus y$, en donde el vértice $x$ es representado por un punto $v_{xy}$ (ver el siguiente dibujo). Nuestro objetivo es agregar $y$ a este dibujo de manera que obtengamus un dibujo de $G$.
+
+\Inkscape{$\tilde G '$ como dibujo de $G \setminus \{y\}$: el vértice $x$ está representado por un punto $v_{xy}$.}
+
+Como $\tilde G$ es $3$-conexo, $\tilde G \setminus \{v_{xy}\}$ es $2$-conexo, con lo cual $C$ es un ciclo (Proposición \ref{lema:todo grafo 3-conexo distinto de K_4 tiene una arista e tal que G/e es nuevamente 3-conexo}). Sean $x_1, \ldots, x_k$ una numeración de los vértices en $X$ a lo largo de este ciclo, y sea $P_i = x_i \cdots x_{i+1}$ los $X$-caminos en $C$ entre ellos ($i = 1, \ldots, k$; con $x_{k+1} := x_1$). Veamos que $Y \subset V(P_i)$ para algún $i$. Supongamos que no. Si $y$ tiene un vecino $y' \in I(P_i)$ para algún $i$, tiene entonces otro vecino $y'' \in C \setminus P_i$, y estos están separados en $C$ por $x' := x_i$ y $x'' := x_{i+1}$. Si $Y \subset X$ y $\abs{Y \cap X} \leq 2$, entonces $y$ tiene exactamente dos vecinos $y', y''$ en $C$ pero no en el mismo $P_i$, así, nuevamente $y'$ e $y''$ están separados en $C$ por dos vértices $x',x'' \in X$. En cualquier caso, $x,y',y''$ e $y,x',x''$ son los vértices de ramificación de un $T K_{3,3}$ en $G$, absurdo. El único caso restante es que $y$, $x$ tengan tres vecinos en común en $C$. Luego estos forman un $T K_5$ con $x$ e $y$, otra vez absurdo.
+
+Fijemos $i$ de manera que $Y \subset P_i$. El conjunto $C \setminus P_i$ está contenido en una de estas dos caras del ciclo $C_i := x x_i P_i x_{i+1} x$; denotemos a la otra cara de $C_i$ por $f_i$. Como $f_i$ contiene puntos de $f$ (cercanos a $x$) pero no puntos en la frontera $C$, tenemos que $f_i \subset f$. Más aún, las aristas planas $x x_j$ con $j \not \in \{ i, i+1 \}$ intersecan $C_i$ solo en $x$ y terminan afuera de $f_i$ en $C \setminus P_i$, así, $f_i$ no interseca ninguna de estas aristas. Consecuentemente, $f_i \subset \reals^2 \setminus \tilde G'$, eso es, $f_i$ está contenido en (y por lo tanto es igual) a la cara de $\tilde G '$. Podemos entonces extender $\tilde G '$ a un dibujo de $G$ reemplazando $y$ y sus aristas incidentes en $f_i$
+\end{proof}
+
+\begin{lemma}\label{lema:teorema de Kuratowski - lema 2}
+
+\end{lemma}
+
+\begin{lemma}\label{lema:teorema de Kuratowski - lema 3}
+
+\end{lemma}
+
+\begin{theorem}[Kuratowski (1930), Wagner (1937)]
+Un grafo es planar si y solo si no contiene a $K_5$ o $K_{3,3}$ como subdivisión.
+\end{theorem}
+\begin{proof}
+
+\end{proof}
 
 
 
@@ -3522,13 +3693,7 @@ Esta cota se cumple con igualdad para un grafo $G$ conexo si y solo si es alguno
 \end{enumerate}
 \end{proposition}
 \begin{proof}
-Es claro que estos grafos cumplen la igualdad.
-
-Para la recíproca, haremos inducción en $\Delta (G)$. Cuando es $0$ es $K_1$, cuando es $1$ es $K_2$, cuando es $2$ entonces $G$ es un árbol o es un ciclo luego estos son $2$-coloreables si y solo si son bipartitos, o sea que $G$ tiene que ser un ciclo impar. En general, si $\Delta (G) \geq 3$ quitamos un vértice de grado máximo $v$ y $G' = G \setminus \{v\}$ reduce su grado máximo, entonces $\chi (G') = (\Delta (G)- 1) + 1$, luego por hipótesis inductiva $G$ es un $K_n$ o $C_{2n+1}$. En el primer caso, como $\chi (K_n) = n = \Delta (G)$, tenemos que $v$ es vecino a todos los vértices de $K_n$, es decir, $G = K_{n+1}$. En el otro caso, $\chi (C_{2n+1}) = 3 = \Delta (G)$, es decir, $\chi (G) = 4$, sin embargo $v$ es vecino de solo $3$ vértices de $C_{2n+1}$. Si $n = 1$, entonces $G$ es $K_4$; si $n > 1$, entonces podemos pintar los tres vecinos de $v$ en $C_{2n+1}$ de dos colores, digamos $1,2$ con lo cual a $v$ lo pintamos de color $3$, y así pintamos el resto de $C_{2n+1}$ con tres colores, sin embargo $\chi (G) = 4$, absurdo.
-
-Si $G'$ sigue teniendo $\delta(G') = \delta (G) = \Delta$, haremos inducción en la cantidad de vértices $v$ de $G$ tal que $\Delta = d(v)$. El caso $1$ vértice lo vimos recién. Sean $v_1, \ldots, v_r$ lo vértices de
-
-En general si hay otros vértices $w_1, \ldots, w_r$ además de $v$ de grado $\Delta$ en $G$, consideramos $G' = G \setminus \{w_1, \ldots, w_r\}$. Notar que si $\chi (G) = \Delta + 1$, entonces podemos probar fácilmente por inducción en $r$ que $\chi (G') = \chi (G)$, pues si $G \setminus \{w\}$ disminuye en número cromático con $d(w) = \Delta$, es porque $w$ era vecino de un vértice $v'$ de grado máximo $\Delta$, y entonces podemos pintar a $G$ con $\Delta < \chi(G)$ colores en el peor de los casos, absurdo. Así, $G'= G \setminus \{w_1, \ldots, w_r\}$ es isomorfo a $K_n$ con $n = \chi (G)$: mirar con detalle el caso un solo vértice de grado máximo del párrafo anterior. Como $\chi (G) = \Delta + 1$, vemos facilmente que podemos seguir pintando a $G$ con $n$ colores, pues coloreamos $G'$ con $n$ colores y los $w_i$ se pueden pintar con esos colores ya que tienen $n-1$ vecinos en $G$.
+Que los ciclos impares y los grafos completos cumplen la igualdad es claro. Ver que son los únicos es más difícil: el Teorema de Brooks \ref{th:brooks - un grafo conexo no completo ni ciclo impar luego chi(G) <= Delta(G)} junto con su demostración se verán más adelante.
 \end{proof}
 
 Sin embargo, podemos hacer algo un poco mejor: cuando llegamos al vértice $v_i$ necesitamos a lo más $d_{G[v_1,\ldots,v_{i-1}]}(v_i) + 1$ colores en lugar de $\Delta (G) + 1$. Con lo cual, para mejorar la cota anterior conviene elegir un orden de los vértices de $G$ que minimice estos grados.
@@ -3614,20 +3779,20 @@ Sea $G$ planar con $n \geq 6$ vértices y $m$ aristas. Sabemos que $m \leq 3n -6
 \]
 Como $d(G) < 6$, hay un vértice de grado $\leq 5$, digamos $v$.
 
-Por inducción, el grafo $H := G \setminus \{v\}$ (planar) tiene un coloreo $c : V(H) \rightarrow \{1, \ldots, 5\}$. Si $c$ utiliza a lo más $4$ colores en el vecindario de $v$, podemos utilizar un quinto color para colorear $v$, así $G$ es $5$-coloreable. Luego podemos asumir que $v$ tiene exactamente $5$ vecinos en $H$.
+Por inducción, el grafo $H := G \setminus \{v\}$ (planar) tiene un coloreo $c : V(H) \rightarrow \{1, \ldots, 5\}$. Si $c$ utiliza a lo más $4$ colores en el vecindario de $v$, podemos utilizar un quinto color para colorear $v$, así $G$ es $5$-coloreable. Luego podemos asumir que $v$ tiene exactamente $5$ vecinos en $H$ (todos de distinto color).
 
 Supongamos que $G$ está dibujado en el plano y $B$ es un disco con centro $v$, tan chico que solo toca los cinco arcos que conectan $v$ con sus vecinos. Enumeremos a estos arcos según su posición cíclica en $B$: $s_1, s_2, \ldots, s_5$ y llamo $v_i$ al vecino de $v$ que es extremo de $s_i$. Sin pérdida de generalidad, podemos asumir que $c(v_i) = i$.
 
 Primero observemos que todo $v_1,v_3$-camino $P \subset H \setminus \{v_2, v_4\}$ separa (topológicamente) a $v_2$ de $v_4$ en $H$. En efecto, esto ocurre si y solo si el ciclo $C = v v_1 P v_3 v$ separa a $v_2$ de $v_4$, y para ver esto basta ver que $v_2$ y $v_4$ están en caras distintas de $C$ (no es difícil).
 
-\Dibujo{}
+\Inkscape{Ilustración de la demostración.}
 
-Dados $i,j \in \{1, \ldots, 5\}$, sea $H_{i,j}$ el subgrafo de $H$ inducido por el vértice de color $i$ y $j$. Veamos que la componente $C_1$ de $H_{1,3}$ que contiene a $v_1$, contiene también a $v_3$ (o si no ganamos). En efecto, si no fuese así, intercambiamos los colores $1$ y $3$ de la componente $C_1$ y obtenemos otro coloreo de $H$ en el cual no aparece el color $1$ en el vecindario de $v$. Así podemos colorear a $v$ con $1$ y $G$ es $5$-coloreable. Así, podemos asumir que $H_{1,3}$ contiene un $v_1, v_3$-camino y como hemos visto, este camino separa a $v_2$ de $v_4$. Ahora, considero la componente $C_2$ de $H_{2,3}$ que contiene a $v_2$. Como $P \cap H_{2,3} = \emptyset$, la componente $C_2 $ no contiene a $v_4$. Así podemos intercambiar los colores $2$ y $3$ en $C_2$, obteniendo un nuevo coloreo de $H$ donde el color $2$ no aparece en el vecindario de $v$. Con lo cual, podemos extener este coloreo de $H$ a un $5$-coloreo de $G$: coloreamos a $v$ con color $2$.
+Dados $i,j \in \{1, \ldots, 5\}$, sea $H_{i,j}$ el subgrafo de $H$ inducido por los vértices de color $i$ y $j$. Veamos que la componente $C_1$ de $H_{1,3}$ que contiene a $v_1$, contiene también a $v_3$ (o si no ganamos). En efecto, si no fuese así, intercambiamos los colores $1$ y $3$ de la componente $C_1$ y obtenemos otro coloreo de $H$ en el cual no aparece el color $1$ en el vecindario de $v$. Así podemos colorear a $v$ con $1$ y $G$ es $5$-coloreable. Podemos asumir entonces que $H_{1,3}$ contiene un $v_1, v_3$-camino y como hemos visto, este camino separa a $v_2$ de $v_4$. Ahora, considero la componente $C_2$ de $H_{2,3}$ que contiene a $v_2$. Como $P \cap H_{2,3} = \emptyset$, la componente $C_2 $ no contiene a $v_4$. Así podemos intercambiar los colores $2$ y $3$ en $C_2$, obteniendo un nuevo coloreo de $H$ donde el color $2$ no aparece en el vecindario de $v$. Con lo cual, podemos extener este coloreo de $H$ a un $5$-coloreo de $G$: coloreamos a $v$ con color $2$.
 \end{proof}
 
-\begin{Teorema}[Grotzsch (1959)]
+\begin{theorem}[Grotzsch (1959)]
 Todo grafo planar sin triángulos es $3$-coloreable.
-\end{Teorema}
+\end{theorem}
 
 
 
@@ -3637,33 +3802,144 @@ Todo grafo planar sin triángulos es $3$-coloreable.
 %%%%%%%%%%%
 
 
-\begin{theorem}[Brooks (1941)]
+\begin{theorem}[Brooks (1941)]\label{th:brooks - un grafo conexo no completo ni ciclo impar luego chi(G) <= Delta(G)}
 Sea $G$ un grafo conexo. Si $G$ no es completo ni es un ciclo impar, entonces
 \[
     \chi (G) \leq \Delta (G).
 \]
 \end{theorem}
 \begin{proof}
-Haremos inducción en $\abs G$. Si $\Delta (G) \leq 2$, entonces $G$ es un camino o un ciclo pues $G$ es conexo y es fácil de ver que la afirmación se cumple.
-
-\Dibujo{HACER UNA TABLA CON LAS POSIBILIDADES}
+Haremos inducción en $\abs G$. Si $\Delta (G) \leq 2$, entonces $G$ es un camino o un ciclo par pues $G$ es conexo y es fácil de ver que la afirmación se cumple..
 
 Entonces supongamos que $\Delta := \Delta (G) \geq 3$. Sea $v \in G$ y $H := G \setminus \{v\}$. Veamos que $\chi (H) \leq \Delta$. Tenemos dos casos:
 \begin{enumerate}
 \item Si $H$ no es un completo ni un ciclo impar entonces por hipótesis inductiva (supongamos que $H$ es conexo, si no utilizando un argumento de cadenas de kempen podríamos encontrar un coloreo más chico de $G$) tenemos que $\chi (H) \leq \Delta (H) \leq \Delta$.
 \item Si no, $\chi (H) = \Delta (H) + 1$, pero si $H$ es un completo o un ciclo impar, tenemos que es regular, en particular, si $w \in H$ es un vecino de $v$ ($G$ es conexo) tiene grado $\Delta (H)$ en $H$ y por lo tanto, $w$ tiene grado $d_G (w) = \Delta (H) + 1 \leq \Delta$. Es decir, $\chi (G) \leq \Delta$.
 \end{enumerate}
-Podemos suponer que $\chi (H) = \Delta$, si no $G$ sería $\Delta$-coloreable y la desigualdad se seguiría. Más aún, si los vecinos de $v$ (están en $H$) están coloreados por $< \Delta$ colores, podríamos extender el coloreo de $H$ a uno de $G$. Luego supongamos que $d_G (v) = \Delta$, y de hecho que todos sus vecinos tienen un color distinto.
+Podemos suponer que $\chi (H) = \Delta$, si no $G$ sería $\Delta$-coloreable y la desigualdad se seguiría. Más aún, si los vecinos de $v$ (están en $H$) están coloreados por $< \Delta$ colores, podríamos extender el coloreo de $H$ a uno de $G$. Luego supongamos que $d_G (v) = \Delta$, y de hecho supongamos que todos sus vecinos tienen un color distinto.
 
 Dado un $\Delta$-coloreo de $H$, sean $v_i$ los vecinos de $v$ de color $i$ para todo $i = 1 , \ldots, \Delta$. Para $i \neq j$ consideremos $H_{i,j}$ el subgrafo de $H$ inducido por los vértices coloreados con colores $i,j$. Supongamos que para todo $i \neq j$, los vértices $v_i$ y $v_j$ están en una misma componente de $H_{i,j}$ la cual llamamos $C_{i,j}$. (Si esto no pasara podríamos intercambiar los colores $i,j$ de una componente de $H_{i,j}$ que contenga a $v_i$, lo cual no afectaría el color de $v_j$, así $H$ sería $\Delta$-coloreable de tal manera que los vecinos de $v$ están coloreados con $\Delta -1$ colores: todos menos el $i$-ésimo color).
+
+\Inkscape{Ilustración de un grafo $H$ que es $\Delta = 4$-coloreable y $v$ afuera de $H$ tiene $4$ vecinos pintados de color: $1,2,3,4$. Si la componente $C_{1,3}$ no fuera un camino, podríamos extender el $\Delta$-coloreo de $H$ a $v$.}
 
 Notar que $d_H (v_i) = \Delta - 1$, pues $v_i$ debe tener almenos esa cantidad de vecinos todos de distinto color (si no podríamos recolorearlo y utilizar menos colores en el vecindario de $v$). Probemos que $C_{i,j}$ es un camino. Primero, acabamos de ver que $v_i$ y $v_j$ tienen un solo vecino en $C_{i,j}$ (pues hay una biyección entre los colores y los vecinos de cada vértice). Con lo cual, nos falta ver que $C_{i,j}$ no tiene vértices de grado $3$, supongamos por el absurdo que si existe un vértice así, digamos $u$. Entonces como $u$ tiene $3$ vecinos del mismo color, debe ser que su vecindario en $H$ usa a lo más $\Delta - 2$ colores, i.e., podemos cambiar el color de $u$ al que no se usa en su vecindario y así desconectamos $C_{i,j}$ y podemos $\Delta$-colorear a $G$ como antes.
 
 Para $i,j,k$ distintos, los caminos $C_{i,j}$ y $C_{i,k}$ se intersectan solo en $v_i$. En efecto, si existiera $u \in C_{i,j} \cap C_{i,k} \setminus \{v_i\}$, entonces $u$ tiene almenos $4$ vecinos pintados con a lo más $2$ colores (ver el siguiende diagrama), luego el vecindario de $u$ en $H$ tiene a lo más $\Delta -2$ colores y podríamos recolorearlo, separando las cadenas de Kempen y extendiendo un $\Delta$-coloreo a $G$.
 
-ICOMPLETO SIGUE LA PROXIMA CLASE.
+\Inkscape{Diagrama de dos caminos $C_{i,j}$ y $C_{i,k}$ que se intersecan en un vértice distinto de $v_i$.}
+
+\red{INCOMPLETO SIGUE LA PROXIMA CLASE.}
 
 \end{proof}
+
+
+
+
+
+
+
+
+%%%%%%%%%%%
+\Clase{12/06/23}   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%
+
+Todo grafo $G$ cumple que
+\[
+    \chi (G) \leq \col{G} = \max \{ \delta(H) | H \subset G \} +1
+\]
+y
+\[
+    \chi (G) \leq \Delta (G) + 1.
+\]
+Estas cotas nos dan condiciones \underline{necesarias} para que un grafo tenga número cromático alto. Si $\chi (G) \geq k$ entonces $\Delta (G) \geq k -1$ y $G$ tiene un subgrafo de grado mínimo $k-1$.
+
+Sin embargo, es fácil ver que estas condiciones no son \underline{suficientes}, por ejemplo, considerar un bipartito completo \textbf{balanceado}\footnote{Es decir, el grafo es $K_{n,m}$ con $n = m$.} $K_{n,n}$.
+
+Una condición suficiente trivial para que $\chi (G) \geq k$, es contener a $K_k$ como subgrafo. Pero esta condición no es necesaria: es posible tener número cromático alto y no contener ni siquiera a $K_3$ como subgrafo. Más aún,
+
+\begin{theorem}[Erdös (1959)]
+Para todo entero $k$ existe un grafo $G$ con cintura mayor a $k$, y número cromático $\chi (G) > k$.
+\end{theorem}
+
+\textbf{Conclusión:} el número cromá´tico puede ser alto por razones puramente globales (incluso si el grafo es ``localmente un árbol''). Y eso hace que entender por qué un grafo en particular tiene número cromático alto es bastante misterioso.
+
+
+
+\subsection{Ejercicios}
+
+\begin{exercise}
+Para todo $n \geq 2$, encuentre un grafo bipartito en $2n$ vértices tal que estos se pueden ordenar de modo que el algoritmo glotón use $n$ colores en lugar de $2$.
+\end{exercise}
+
+\begin{solution}
+Construiremos una familia de grafos bipartitos $\mathbf{B}_n, n \geq 2$ de $2n$ vértices con los vértices ordenados de cierta manera que el algoritmo glotón use $n$ colores. Llamamos $A_n, B_n$ a una partición de los vértices de manera que cada partición tiene sus vértices independientes, con $\abs {A_n} = n = \abs {B_n}$. Cuando $n = 2$, consideramos $A_2 = \{a_1, a_2\}, B_2 = \{b_1, b_2\}$ y agregamos una arista $ab$ para cada $a \in A_2, b \in B_2$. Por último ordenamos, $v_1 = a_1, v_2 = b_1, v_3 = a_2, v_4 = b_2$. Luego el algorítmo glotón pinta a los vértices $v_i$ con dos colores: $1,2,1,2$. Notar que este orden hace que el algorítmo glotón pinte con $2$ colores tanto $A_2$ como $B_2$.
+
+Supongamos ahora que hemos construido $\mathbf{B}_n$ y ordenado sus vértices como $v_1, \ldots, v_{2n}$ y más aún, que el algorítmo glotón pintó con $n$ colores distintos $A_n$ y lo mismo para $B_n$. Construimos $\mathbf{B}_{n+1}$ agregando a $\mathbf{B}_{n}$ dos vértices $a_{n+1}$ y $b_{n+1}$, más específicamente: $A_{n+1} := A_n \cup \{a_{n+1}\}$ y $B_{n+1} := b_n \cup \{b_{n+1} \}$. Por último, agregamos aristas $a_{n+1} b$ para todo $b \in B_n$ y $a b_{n+1}$ para todo $a \in A_n$. Ahora, ordenamos $v_1, \ldots, v_{2n}$ como el orden de los vértices de $\mathbf{B}_n$ y luego tomamos $v_{2n+1} := a_{n+1}, v_{2n+2} := b_{n+1}$. Notar que este orden pinta cada conjunto de la partición $A_{n+1}, B_{n+1}$ con $n + 1$ colores, en efecto, por hipótesis inductiva el algoritmo glotón pinta $v_1, \ldots, v_{2n}$ de tal manera que $A_n$ y $B_n$ usan $n$ colores, luego $v_{2n + 1 } = a_{n+1}$ lo pinta de color $n+1$ porque es adyacente a todos los vértices de $B_n$ y análogamente para $v_{2n + 2} = b_{n+1}$ (notar que $b_{n+1}$ no es adyacente a $a_{n+1}$).
+
+Es claro que $\mathbf{B}_n$ es siempre bipartito.
+\end{solution}
+
+\begin{definition}
+Un grafo $G$ con $\chi (G) = k$ es llamado \textbf{$k$-crítico} si $\chi (G \setminus \{v\})< k$ para todo vértice $v \in G$.
+\end{definition}
+
+
+\begin{exercise}
+Determine los grafos $3$-críticos.
+\end{exercise}
+\begin{solution}
+Veamos que los grafos $3$-críticos son los ciclos impares. Claramente los ciclos impares son $3$-coloreables y si sacamos cualquier vértice, tiene número cromático a lo más $2$, por ser camino.
+
+Recíprocamente, supongamos que $G$ es un grafo $3$-crítico. $G$ tiene un ciclo impar porque si no sería bipartito, i.e. $2$-coloreable. Más aún, todo vértice tiene que ser un vértice de este ciclo, de lo contrario quitarlo nos daría un grafo a lo más $2$-coloreable, pero ese coloreo serviría para colorear un ciclo impar, imposible. En otras palabras, $G$ es un grafo generado por un ciclo impar $C$, finalmente veamos que $G[C] = C$ (y por lo tanto $G = C$). En efecto, si hubiera una cuerda $x y$ de $C$ en $G$, entonces la cuerda forma dos subciclos $C_1, C_2 \subsetneq G$ tales que $V(C_1) \cup V (C_2) = V(C)$ (ver la siguiente ilustración). Como $C$ tiene orden impar, alguno de los subciclos $C_1$ o $C_2$ también tiene que tener orden impar, digamos $C_1$; con lo cual, $ G' = G \setminus \{w\}$ para cualquier $w \in V(G) \setminus V(C_1)$ no puede tener $\chi (G') \leq 2$ porque contiene un subciclo impar: $C_1$, contradiciendo que $G$ es $3$-crítico.
+
+\begin{center}
+\includegraphics[width=0.5\columnwidth]{"./Editor de Grafos/Figuras/Clase 19/Dibujo 1 - Ejercicios.pdf"}
+\captionof{figure}{Ilustración de una cuerda $xy$ en un grafo $G$ generado por un ciclo impar. Los vértices \purple{violeta} representan el subciclo impar $C_1$.}
+\end{center}
+\end{solution}
+
+
+
+
+
+
+
+\begin{exercise}
+Calcule el número cromático de un grafo en términos del número cromático de sus bloques.
+
+\textbf{Respuesta:} $\boxed{\chi (G) = \max_{\substack{B \subset G \\ \text{$B$ bloque}}} \chi (B).}$
+\end{exercise}
+\begin{solution}
+Afirmación: el número cromático de un grafo $G$ es $\max_B \chi (B) =:m$, donde recorremos todos los bloques $B \subset G$.
+
+Sin pérdida de generalidad, podemos asumir que $G$ es conexo. Por un lado, como un $\chi (G)$-coloreo sirve para todo $B$, tenemos que $\max_B \chi (B) \leq \chi (G)$. Probaremos ahora la desigualdad recíproca.
+
+Proseguiremos por inducción en la cantidad de vértices $b$ del árbol bloque de $G$. Si $b = 1$ no hay nada que probar. En general, supongamos que $b > 1$ y consideremos un bloque $B$ que corresponda a una hoja del árbol (notar que el grafo bloque nunca tiene hojas que sean vértices de corte de $G$). Consideremos $G' = G/B$, su grafo bloque tiene menos vértices pues como $b > 1$, $B$ no puede ser un solo vértice. Los grafos bloques de $G'$ son los grafos bloques de $G$ exceptuando $B$, luego por hipótesis inductiva $\chi (G') = \max_{B' \neq B} \chi (B')$.
+
+Ahora, podemos combinar el coloreo de $B$ con el de $G'$: sea $v \in B$ el único vértice de corte de $G$ contenido en $B$ ($B$ es una hoja del grafo bloque), y denotemos con el mismo nombre al vértice de $G'$ obtenido por contraer $B$. Coloreamos $B$ con $\chi (B)$ colores y lo juntamos con un $\chi (G')$-coloreo de $G'$, simplemente permutamos los colores de $B$, de ser necesario, para que $v$ tenga el mismo color en $B$ y en $G'$. Este coloreo de $G$ usa $\max \{ \chi (B), \chi (G') \} = m$ colores. Así, $\chi (G) \leq m$, como queríamos demostrar.
+\end{solution}
+
+
+
+
+
+
+
+
+
+
+\subsection{Coloreo de aristas}
+
+
+
+
+
+
+
+
+
+
+
 
 
 
