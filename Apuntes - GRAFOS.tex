@@ -2456,7 +2456,7 @@ Un camino camino $M$-alternante cuyos vértices extremos no están cubiertos por
 
 \Dibujo{Ejemplo de camino \red{$M$}-aumentante: $1,2,3,4,5,6,7,8$.}
 
-Si $P$ es un camino $M$-aumentante, entonces reemplazando las aristas de $M$ que están en $P$ por las aristas de $E(G) \setminus M$ en $P$ obtenemos un nuevo matching $M'$ de tamaño estrictamente mayor a $M$. De aquí el nombre ``aumentante''. Así, un matching máximo $M$ no tiene caminos $M$-aumentantes. Más aún, vale la recíproca:
+Si $P$ es un camino $M$-aumentante, entonces reemplazando las aristas de $M$ que están en $P$ por las aristas de $E(G) \setminus M$ en $P$ obtenemos un nuevo matching $M'$ de tamaño estrictamente mayor a $M$. De aquí el nombre ``aumentante''. Así, un matching máximo $M$ no tiene caminos $M$-aumentante. Más aún, vale la recíproca:
 
 \begin{theorem}[Berge (1957)]
 Sea $M$ un conjunto de aristas en un grafo $G$. $M$ es un matching de tamaño máximo si y solo si $G$ no tiene caminos $M$-aumentantes.
@@ -2967,15 +2967,33 @@ Así, hay un matching que cubre a $Y$, luego tomando por cada copia $A_i$ un ele
 Sea $G$ un grafo bipartito con bipartición $\{A,B\}$. Supongamos que $\delta (G) \geq 1$ y que $d(a) \geq d(b)$ para toda arista $ab$ con $a \in A$. Probar que $G$ contiene un matching que cubre a $A$.
 \end{exercise}
 \begin{solution}
-Supongamos que no hay matching que cubra $A$, es decir, existe un subconjunto $S \subsetneq A$ de cardinal máximo tal que cumple la condición de Hall \ref{eq:condicion de Hall}; notar que $\abs S \geq 1$ pues $\delta \geq 1$. Sea $a \in A \setminus S$, por maximalidad los vecinos de $a$ están en $N(S) = B$. Más aún, por maximalidad $\abs S = \abs {N(S)} = \abs B$, si no $S \cup \{x\}$ seguiría cumpliendo la condición de Hall. Sea $M = \{s_1 t_1,\ldots, s_{r t_r} \}$ el matching de $S$ con $N(S)$, tenemos que
+Supongamos que no hay matching que cubra $A$, es decir, existe un subconjunto $S \subsetneq A$ de cardinal máximo tal que cumple la condición de Hall \ref{eq:condicion de Hall}; notar que $\abs S \geq 1$ pues $\delta \geq 1$. Sea $a \in A \setminus S$, por maximalidad los vecinos de $a$ están en $N(S) = B$. Más aún, por maximalidad $\abs S = \abs {N(S)} = \abs B$, si no $S \cup \{x\}$ seguiría cumpliendo la condición de Hall. Sea $M = \{s_1 t_1,\ldots, s_{r} t_r \}$ el matching de $S$ con $N(S)$, tenemos que
 \begin{align*}
     2 \abs {E(G)} &= \sum_{x \in A} d(x) + \sum_{y \in B} d(y)\\
                 &> \sum_{x \in S} d(x) + \sum_{y \in B} d(y) \\
                 &= \sum_{i = 1}^r d(s_i) + d(t_r)\\
                 &\geq 2 \sum_{y \in Y} d(y).
 \end{align*}
-Con lo cual, $\abs \{E(G)\} > \sum_{y \in Y} d(y)$, lo cual es imposible porque todas las aristas de $G$ inciden en $Y$.
+Con lo cual, $\abs {E(G)} > \sum_{y \in Y} d(y)$, sin embargo esto es imposible porque todas las aristas de $G$ inciden en $Y$.
 \end{solution}
+
+\begin{exercise}
+Considerar un mazo de $mn$ cartas con $n$ palos y $m$ valores; cada valor aparece en una carta de cada palo. Se colocan las cartas de manera al azar en una grilla de $n$ filas y $m$ columnas.
+\begin{enumerate}[(a)]
+\item Probar que es posible elegir una carta de cada una de las $m$ columnas de tal manera que todos los valores sean distintos.
+\item Usar el ítem anterior para probar que es posible iteradamente de intercambiar posiciones de dos cartas de igual valor de tal manera que eventualmente cada palo aparezca en cada columna.
+\end{enumerate}
+\end{exercise}
+\begin{solution}
+\begin{enumerate}[(a)]
+\item Consideremos el grafo bipartito $B$ con vértices $C \cup V$, donde $C = \{1, \ldots, m\}$ son las $m$ columnas y $V = \{1, \ldots, m\}$ son los valores de las cartas, y además, agregamos $k$ aristas paralelas con extremos $c,v$ si $c \in C$ y $v \in V$ son tales que el valor $v$ aparece en la $c$-ésima columna $k$ veces. Notar que $B$ es regular: los vértices $v$ tienen grado $n$, y las columnas $c$ tienen grado $n$ pues tienen $n$ cartas. Luego por el Corolario \ref{corollary:König-Frobenius - todo bigrafo regular no trivial tiene un matching perfecto} (vale para multigrafos), $B$ tiene un matching perfecto, es decir, podemos elegir una carta de cada columna de manera que todos los valores sean distintos.
+\item Probaremos por inducción en la cantidad de palos $n$. Si $n = 1$ no hay nada que probar. En general, basta probar luego de finitas permutaciones de cartas del mismo valor, se puede llenar la primera fila de cartas del mismo palo, luego considerando el mazo de $m (n-1)$ cartas que se obtiene por eliminar la primera fila, se sigue el resultado por hipótesis inductiva.
+
+Fijemos una columna, digamos $c = c_i$, tal que no tiene todas sus cartas de un palo distinto pero $c_{j}$ tiene todas sus caras de un palo distinto para todo $j < i$. Luego podemos considerar el grafo bipartito $B$ cuyos vértices son las cartas de $c$ y las $n(m-i)$ cartas del resto de las otras columnas. Notar que $i \neq m$. Ahora, si vemos que siempre que una carta $v$ esté repetida en $c$ se puede cambiar por otra de las $n(m-i)$ columnas, entonces ganamos por recursión. Sean $u,v$ dos cartas del mismo palo en $c$, digamos de valores $1,2$ respectivamente. Entonces el ítem anterior nos garantiza que existe una carta del mismo valor que $u$ o $v$ y que podemos permutar, solo basta probar que existe alguna afuera de $c_j$ para todo $j < i$. En efecto, supongamos por el absurdo que no sucede; cada carta de $c$ esta asociado mediante una arista a una carta del mismo valor en otra columna, cada vértice de $C = c$ en este $C, \{j \neq i \}$-bigrafo tiene almenos un vecino (de lo contrario toda la columna $c$ eran del mismo valor y distinto palo y haciendo inducción en $m$ ganamos) y por lo tanto $ $
+
+\end{enumerate}
+\end{solution}
+
 
 \begin{definition}
 Decimos que un grafo $G$ es \textbf{vértice-transitivo} si para todo par de vértices $v,w\in G$ existe un automorfismo de $G$ tal que $v \mapsto w$.
@@ -3242,7 +3260,7 @@ La frontera de una cara siempre es el conjunto de puntos de un subgrafo.
 El subgrafo de $G$ cuyos puntos son la frontera de una cara $f$ se dice la \textbf{frontera} de $f$, denotada por $G[f]$. Una cara se dice \textbf{incidente} a los vértices y aristas de su frontera.
 \end{definition}
 
-\begin{obs}
+\begin{obs}\label{obs:toda cara de un grafo plano es la cara de su frontera visto como grafo plano}
 Por el segundo ítem del Lema \ref{lema:grafos planos - una arista está en la frontera de una cara o no interseca con el interior de una arista - una arista esta en la frontera de un ciclo luego esta en dos caras de G y en dos caras distintas de C}, toda cara de $G$ es también la cara de su frontera.
 \end{obs}
 
@@ -3283,7 +3301,7 @@ Recíproccamente, supongamos que $C$ es frontera de una cara $f$. Por la proposi
 Falta ver que $C$ no separa dos vértices $x,y \in G - C$. Por el Teorema de Menger \ref{menger}, $x$ e $y$ están conectados en $G$ por $3$ caminos independientes. Claramente $f$ yace dentro de una cara formada por la unión, y por el Lema \ref{lema:tres arcos disjuntos forman 3 componentes} esta cara tiene como frontera a solo dos de estos caminos. Entonces el tercero evita a $f$ y su frontera $C$.
 \end{proof}
 
-\begin{theorem}[Fórmula de Euler]
+\begin{theorem}[Fórmula de Euler]\label{th:formula de Euler}
 Sea $G$ un grafo plano conexo con $n$ vértices, $m$ aristas y $f$ caras. Entonces, se tiene
 \[
     \boxed{n - m + f = 2.}
@@ -3305,7 +3323,13 @@ Recíprocamente, sea $f' \in F(G') \setminus \{f_e\}$. Claramente $f' \neq f_1, 
 \end{proof}
 
 
-
+\begin{remark}
+En general, no es difícil probar por inducción en el número $c$ de componentes conexas de un grafo plano $G$ que vale la Fórmula de Euler:
+\[
+    n - m + f = 1 + c,
+\]
+donde $n,m$ y $f$ son como en el enunciado de la fórmula.
+\end{remark}
 
 
 %%%%%%%%%%%
@@ -3609,9 +3633,23 @@ Como $\tilde G$ es $3$-conexo, $\tilde G \setminus \{v_{xy}\}$ es $2$-conexo, co
 Fijemos $i$ de manera que $Y \subset P_i$. El conjunto $C \setminus P_i$ está contenido en una de estas dos caras del ciclo $C_i := x x_i P_i x_{i+1} x$; denotemos a la otra cara de $C_i$ por $f_i$. Como $f_i$ contiene puntos de $f$ (cercanos a $x$) pero no puntos en la frontera $C$, tenemos que $f_i \subset f$. Más aún, las aristas planas $x x_j$ con $j \not \in \{ i, i+1 \}$ intersecan $C_i$ solo en $x$ y terminan afuera de $f_i$ en $C \setminus P_i$, así, $f_i$ no interseca ninguna de estas aristas. Consecuentemente, $f_i \subset \reals^2 \setminus \tilde G'$, eso es, $f_i$ está contenido en (y por lo tanto es igual) a la cara de $\tilde G '$. Podemos entonces extender $\tilde G '$ a un dibujo de $G$ reemplazando $y$ y sus aristas incidentes en $f_i$
 \end{proof}
 
-\begin{lemma}\label{lema:teorema de Kuratowski - lema 2}
+\begin{obs}
+Esta demostración se puede adaptar para probar que todo grafo planar $3$-conexo tiene un dibujo donde todas sus caras interiores son convexas; en particular todas las aristas se pueden dibujar como rectas.
 
+Existen grafos planares $2$-conexos sin dibujos con todas sus caras interiores convexas:
+
+\Inkscape{Dibujo de un grafo con dos vértices de grado $4$ y cuatro vértices de grado $2$.}
+El grafo que corresponde a este dibujo es $2$-conexo y no puede tener todas sus caras interiores convexas. En efecto, para probar última afirmación, notar que si hubiera un dibujo con todas las caras internas convexas, luego rotando el dibujo podemos asumir que los dos vértices de grado $4$ están alineados sobre la recta $Y = 0$ de $\reals^2$. Como las caras son convexas los vértices de grado $2$: $v_1,v_2,v_3,v_4$ se pueden ordenar de manera que la cordenada $Y$ de los puntos cresca estrictamente: $y_1<y_2<y_3<y_4$ con $v_i = (*,y_i)$. Luego, no es difícil convencerse que la cara interior del ciclo que contiene a los vértices $v_3$ y $v_4$ no es convexa.
+
+Más precisamente: considerar la función concava $f$ cuyo gráfico es igual al camino entre los vértices de grado $4$ que pasa por $v_3$; como el dibujo tiene finitos puntos de inflexión, $f$ es una función lineal salvo finitos trozos que es convexa, luego $f$ es creciente en un intervalo, constante en otro (posiblemente ninguno) y luego decreciente pues no puede ser una recta constante, de lo contrario podríamos realizar el mismo razonamiento pero rotando $180$ grados la figura y mirando la cara con frontera el ciclo que contiene a $v_1$ y $v_2$. Ahora, la parte superior del gráfico de $f$ no es convexo, i.e. la cara que tiene a $v_4$ en su frontera no es convexo.
+\end{obs}
+
+\begin{lemma}\label{lema:teorema de Kuratowski - lema 2}
+Sea \textbf{$ \chi$} un conjunto de grafos $3$-conexos. Sea $G$ un grafo con una separación propia $\{V_1, V_2\}$ de orden $\kappa (G) \leq 2$. Si $G$ es arista maximal sin un menor topológicco en \textbf{$ \chi$}, entonces $G_1 := G[V_1]$ y $G_2 := G[V_2]$ tampoco, y además $G_1 \cap G_2 = K_2$.
 \end{lemma}
+\begin{proof}
+
+\end{proof}
 
 \begin{lemma}\label{lema:teorema de Kuratowski - lema 3}
 
@@ -3624,6 +3662,70 @@ Un grafo es planar si y solo si no contiene a $K_5$ o $K_{3,3}$ como subdivisió
 
 \end{proof}
 
+
+
+
+
+\begin{exercise}
+Sea $G = (V,E,F)$ un grafo planar, con $\abs V \geq 3$. Probar las siguientes desigualdades en cada caso:
+\begin{enumerate}
+\item En general se tiene
+\begin{enumerate}[(a)]
+\item $3 \abs F \leq 2 \abs E$.
+\item $\abs E \leq 3 \abs V - 6$.
+\item $\abs F \leq 2 \abs V - 4$.
+\end{enumerate}
+\item Si $G$ es bipartito, las cotas mejoran
+\begin{enumerate}[(a)]
+\item $2 \abs F \leq \abs E$.
+\item $\abs E \leq 2 \abs V - 4$.
+\item $\abs F \leq \abs V - 2$.
+\end{enumerate}
+\item Sea $g \geq 3$ el grosor de $G$, i.e., la mínima longitud de un ciclo en $G$, entonces
+\begin{enumerate}[(a)]
+\item $\abs F \leq \frac 2 g \abs E$.
+\item $\abs E \leq \frac g {g-2} (\abs V - 2)$.
+\item $\abs F \leq \frac 2 {g-2} ( \abs V -2 )$.
+\end{enumerate}
+\end{enumerate}
+\end{exercise}
+\begin{solution}
+\begin{enumerate}
+\item Agregando aristas a $G$ para que sea maximal plano (podemos porque $\abs V \geq 3$), y por la Proposición \ref{proposition:un grafo es maximalmente plano si y solo si es una triangulacion} podemos suponer que todas las caras de $G$ son triangulaciones.
+
+Consideremos el grafo bipartito $B$ con vértices $E \cup F$, donde hay una arista $ef$ con $e \in E, f \in F$ si y solo si $e$ está en la frontera de $f$. Por el Lema \ref{lema:grafos planos - una arista está en la frontera de una cara o no interseca con el interior de una arista - una arista esta en la frontera de un ciclo luego esta en dos caras de G y en dos caras distintas de C}, todo $e$ tiene grado $2$ en $B$ y todo $f$ tiene grado $3$ en $B$. Contando de dos maneras distintas el grado promedio, tenemos que $3 \abs F = 2 \abs E$.
+
+ Veamos que esto implica el caso general. En efecto, si vale la desigualdad para este caso, luego vale en general, pues restar una arista disminuye el lado derecho en $2$ y el lado izquierdo en $3$ si es que esa arista está en un ciclo. Ahora, si no está en un ciclo, no puede valer la igualdad porque podríamos agregar aristas para volver al caso planar maximal, pero la igualdad no se cumpliría ya que el lado izquierdo de $3 \abs F = 2 \abs E$ aumentó en múltiplos de $3$ y el derecho en múltiplos de $2$. Así, aunque quitar una arista no disminuya la cantidad de ciclos, tampoco rompe la desigualdad.
+
+ \bigskip
+
+ Aplicando la Fórmula de Euler \ref{th:formula de Euler}, tenemos que $\abs V - \abs E + \abs F = 2$, luego reemplazando $\abs F \leq \frac 2 3 \abs E$, nos queda que
+ \[
+     \abs E = \abs V + \abs F - 2 \leq \abs V + \frac 2 3 \abs E - 2
+ \]
+ si y solo si
+ \[
+     \abs E \leq 3 \abs V - \abs 6.
+ \]
+ \item Basta probar el ítem (a), pues de aquí se deducen las desigualdades (b) y (c). En efecto, para la primera tenemos por la Fórmula de Euler \ref{th:formula de Euler} y el ítem (a):
+ \[
+     \abs E = \abs V + \abs F - 2 \leq \abs V + \frac 1 2 \abs E - 2
+ \]
+ si y solo si
+ \[
+     \abs E \leq 2 \abs V - 4.
+ \]
+ Para la segunda, combinamos (a) y (b).
+
+ Más aún, Basta probar la desigüaldad (a) para árboles, pues si $G$ tiene ciclos, tienen que tener almenos orden $4$ por ser pares, con lo cual la desigualdad se deduce de tomar $g \geq 4$ en el ítem 3. que probaremos luego. Que vale para árboles es obvio.
+ \item Nuevamente, basta probar (a), luego de la Fórmula de Euler \ref{th:formula de Euler} se deduce (b), y juntando (a) y (b) se deduce (c).
+
+ Como en el ítem 1., consideremos el grafo bipartito $B$ con vértices $E \cup F$, donde hay una arista $ef$ con $e \in E, f \in F$ si y solo si $e$ está en la frontera de $f$. Notar que todas las caras $f$ de $G$ deben contener algún ciclo en la frontera, en efecto, supongamos que existe una cara $f$ que no contiene ningún ciclo en la frontera, por la Observación \ref{obs:toda cara de un grafo plano es la cara de su frontera visto como grafo plano} la frontera es un subgrafo $H$ de $G$, luego no tiene ciclos, i.e. es un árbol, así por la Proposición \ref{proposition:un arbol plano tiene una sola cara} tiene una sola cara, la cual por el Lema \ref{lema:clase 18 05 23 - lema 1} es igual a $f$, entonces $f$ es la única cara de $G$ pues $f = \reals^2 \setminus H  \supset \reals^2 \setminus G \supset f$. Todo $e$ tiene grado a lo más $2$ en $B$ por el Lema \ref{lema:grafos planos - una arista está en la frontera de una cara o no interseca con el interior de una arista - una arista esta en la frontera de un ciclo luego esta en dos caras de G y en dos caras distintas de C} y todo $f$ tiene grado almenos $g$ en $B$ por nuestra observación anterior. Como el número de aristas de $B$ es por un lado $\sum_{f \in F} d_B (f) \geq g \abs F$ y por otro $\sum_{e \in E} d_B (e) \leq 2 \abs E$, se sigue que
+ \[
+     g \abs F \leq 2 \abs E \quad \Leftrightarrow \quad \abs F \leq \frac 2 g \abs E.
+ \]
+\end{enumerate}
+\end{solution}
 
 
 
@@ -3828,8 +3930,7 @@ Para $i,j,k$ distintos, los caminos $C_{i,j}$ y $C_{i,k}$ se intersectan solo en
 
 \Inkscape{Diagrama de dos caminos $C_{i,j}$ y $C_{i,k}$ que se intersecan en un vértice distinto de $v_i$.}
 
-\red{INCOMPLETO SIGUE LA PROXIMA CLASE.}
-
+Finalmente, alguno de estos caminos $C_{i,j}$ tiene que tener más de dos vértices, de lo contrario $H$ y por lo tanto $G$, serían un completo $K_\Delta$; digamos $C_{1,2}$ con un vértice $u \neq v_1,v_2$ de color $1$. Consideremos la componente $U_{1,3}$ de $H_{1,3}$ que contiene a $u$. Por todo lo discutido anteriormente $v_1, v_3 \not \in U_{1,3}$, luego intercambiar los colores $1,3$ de $U_{1,3}$ cortan la cadena de Kempen $C_{1,2}$ y por lo tanto podemos $\Delta$-colorear a $G$ como antes.
 \end{proof}
 
 
@@ -3893,7 +3994,7 @@ Veamos que los grafos $3$-críticos son los ciclos impares. Claramente los ciclo
 Recíprocamente, supongamos que $G$ es un grafo $3$-crítico. $G$ tiene un ciclo impar porque si no sería bipartito, i.e. $2$-coloreable. Más aún, todo vértice tiene que ser un vértice de este ciclo, de lo contrario quitarlo nos daría un grafo a lo más $2$-coloreable, pero ese coloreo serviría para colorear un ciclo impar, imposible. En otras palabras, $G$ es un grafo generado por un ciclo impar $C$, finalmente veamos que $G[C] = C$ (y por lo tanto $G = C$). En efecto, si hubiera una cuerda $x y$ de $C$ en $G$, entonces la cuerda forma dos subciclos $C_1, C_2 \subsetneq G$ tales que $V(C_1) \cup V (C_2) = V(C)$ (ver la siguiente ilustración). Como $C$ tiene orden impar, alguno de los subciclos $C_1$ o $C_2$ también tiene que tener orden impar, digamos $C_1$; con lo cual, $ G' = G \setminus \{w\}$ para cualquier $w \in V(G) \setminus V(C_1)$ no puede tener $\chi (G') \leq 2$ porque contiene un subciclo impar: $C_1$, contradiciendo que $G$ es $3$-crítico.
 
 \begin{center}
-\includegraphics[width=0.5\columnwidth]{"./Editor de Grafos/Figuras/Clase 19/Dibujo 1 - Ejercicios.pdf"}
+\includegraphics[width=0.5\columnwidth]{"./Editor de Grafos/Figuras/Clase 20/Dibujo 1 - Ejercicios.pdf"}
 \captionof{figure}{Ilustración de una cuerda $xy$ en un grafo $G$ generado por un ciclo impar. Los vértices \purple{violeta} representan el subciclo impar $C_1$.}
 \end{center}
 \end{solution}
@@ -3929,6 +4030,63 @@ Ahora, podemos combinar el coloreo de $B$ con el de $G'$: sea $v \in B$ el únic
 
 
 \subsection{Coloreo de aristas}
+
+\begin{definition}
+Llamamos \textbf{coloreo de aristas} de un grafo $G = (V,E)$ a una función $c : E \rightarrow S$ con $c(e) \neq c(f)$ si $e$ y $f$ son aristas adyacentes.
+
+Un \textbf{$k$-arista-coloreo} de $G$ es un coloreo de ristas $c : E \rightarrow \{1,\ldots,k\}$.
+
+El \textbf{índice cromático} de un grafo $G$, denotado por $\chi' (G)$, es el menor $k$ tal que $G$ tiene un $k$-arista-coloreo.
+\end{definition}
+
+\begin{Remark}
+Si $L(G)$ es el grafo línea de $G$, entonces
+\[
+    \chi ' (G) = \chi (L(G)).
+\]
+Con lo cual, colorear aristas es un caso particular de coloreo de vértices.
+\end{Remark}
+
+\begin{obs}
+Notar que siempre se tiene
+\[
+    \chi ' (G) \geq \Delta (G).
+\]
+ya que si $v \in G$ tiene grado $d_G (v) = \Delta (G)$, entonces hay $\Delta (G)$ aristas todas incidentes en $v$, i.e. no pueden tener el mismo color.
+
+Por otro lado, sea $L(G)$ el grafo línea de $G$, tenemos que
+\[
+    \chi ' (G) = \chi (L (G)) \leq \Delta (L(G)) + 1 \quad \quad (\text{Proposición \ref{prop:algoritmo gloton}})
+\]
+y además, $\Delta (L(G)) \leq 2 \Delta (G) -2$ pues toda arista $e \in E(G)$ tiene dos vértices extremos, y por lo tanto hay $\leq 2 (\Delta (G) - 1)$ aristas incidentes en $e$: una por cada vecino de sus extremos (sin contar $e$).
+\Inkscape{Arista $e = xy$ con a lo más $\Delta (G)- 1$ vecinos incidentes en cada extremo $x$, $y$.}
+\end{obs}
+
+
+
+\begin{theorem}[König (1916)]
+Todo grafo bipartito $G$ cumple $\chi' (G) = \Delta (G)$.
+\end{theorem}
+\begin{proof}
+Haremos inducción en la cantidad de aristas $\Abs G$ de $G$. Si $\Abs G = 0,1$ es trivial. Ahora, supongamos que $\Abs G \geq 1$ y que el teorema se cumple para cualquier grafo con menos aristas. Sea $\Delta := \Delta (G)$.
+
+Tomemos una arista $xy \in \Abs{G}$ de manera que $\Delta (G -xy) = \Delta$, y un $\Delta$-arista-coloreo de $G - xy$, que existe por hipótesis inductiva. Digamos que las aristas con color $\alpha$ en nuestro coloreo de $G - xy$ son \textbf{$\alpha$-aristas}, $\alpha \in \{1, \ldots, \Delta\}$. En $G - xy$, los vértices $x$ e $y$ son incidentes en a lo más $\Delta -1$ aristas cada una.
+
+\Inkscape{$\Delta$-arista-coloreo de $G -xy$ con $\Delta = 5$.}
+
+Entonces hay colores $\alpha, \beta \in \{1,\ldots,\Delta\}$ tales que $x $ no es adyacente aninguna arista de color $\alpha$ e $y$ no es adyacente a ninguna arista de color $\beta$. Si $\alpha = \beta$, entonces puedo extender el coloreo de $G-xy$ a un coloreo de $G$ asignando a $xy$ el color $\alpha$. Consecuentemente, podemos asumir que $\alpha \neq \beta$ y que $x$ incide en una arista de color $\beta$.
+
+Ahora, consideremos la sucesión de aristas $e_1, \ldots, e_r$ de longitud máxima $r$, que empieza con la arista de color $\beta$ incidente en $x$ y va alternando colores de la siguiente manera: $e_1$ tiene color $\beta$, $e_2$ color $\alpha$, etc... Notemos que ninguna arista de color $\alpha$ cubre a $y$, pues si denotamos por $X,Y$ a la bipartición de los vértices de $G$, con $x \in X, y \in Y$, entonces un extremo en $Y$ de una arista de color $\alpha$ siempre tiene una arista de color $\beta$ incidente y por lo tanto no puede ser $y$ (se puede probar fácilmente por inducción en $r$). Luego, intercambiando los colores de esta sucesión de aristas\footnote{Observar que la sucesión que construimos es una componente de una cadena de Kempen $H_{\alpha, \beta}$ en el grafo de línea $L(G)$.}, obtenemos un arista coloreo tal que $x,y$ no tienen aristas incidentes de color $\beta$, luego extendemos este coloreo a $G$ pintando $xy$ de color $\beta$.
+\end{proof}
+
+
+
+\begin{theorem}[Vizing (1964)]
+Todo grafo $G$ cumple
+\[
+    \boxed{\Delta (G) \leq \chi ' (G) \leq \Delta (G) +1 .}
+\]
+\end{theorem}
 
 
 

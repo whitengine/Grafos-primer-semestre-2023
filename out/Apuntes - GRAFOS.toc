@@ -33,24 +33,25 @@
 \contentsline {subsection}{\numberline {1.13.4}Empaquetamiento de árboles y arboricidad}{84}{subsection.1.13.4}%
 \contentsline {subsection}{\numberline {1.13.5}Cubrimiento por caminos}{87}{subsection.1.13.5}%
 \contentsline {subsection}{\numberline {1.13.6}Ejercicios}{89}{subsection.1.13.6}%
-\contentsline {section}{\numberline {1.14}Clase 13: 15/05/23}{94}{section.1.14}%
-\contentsline {subsection}{\numberline {1.14.1}Grafos planares}{94}{subsection.1.14.1}%
-\contentsline {subsubsection}{Prerequisitos topológicos}{94}{section*.5}%
-\contentsline {section}{\numberline {1.15}Clase 14: 18/05/23}{97}{section.1.15}%
-\contentsline {section}{\numberline {1.16}Clase 15: 25/05/23}{102}{section.1.16}%
-\contentsline {subsubsection}{\underline {Operaciones que conocemos}}{102}{section*.6}%
-\contentsline {subsubsection}{\underline {Otra perspectiva con respecto a los menores}}{103}{section*.7}%
-\contentsline {subsubsection}{\underline {Retomando grafos planos}}{104}{section*.8}%
-\contentsline {subsection}{\numberline {1.16.1}Dibujos}{106}{subsection.1.16.1}%
-\contentsline {section}{\numberline {1.17}Clase 16: 26/05/23}{111}{section.1.17}%
-\contentsline {subsection}{\numberline {1.17.1}Teorema de Kuratowski}{113}{subsection.1.17.1}%
-\contentsline {section}{\numberline {1.18}Clase 17: 02/06/23}{115}{section.1.18}%
-\contentsline {subsection}{\numberline {1.18.1}Coloreo de Grafos}{115}{subsection.1.18.1}%
-\contentsline {section}{\numberline {1.19}Clase 18: 05/06/23}{118}{section.1.19}%
-\contentsline {section}{\numberline {1.20}Clase 19: 08/06/23}{119}{section.1.20}%
-\contentsline {section}{\numberline {1.21}Clase 20: 12/06/23}{121}{section.1.21}%
-\contentsline {subsection}{\numberline {1.21.1}Ejercicios}{121}{subsection.1.21.1}%
-\contentsline {chapter}{\numberline {A}Primera parte de la materia (primer capítulo del Diestel)}{124}{appendix.Alph1}%
-\contentsline {section}{\numberline {A.1}}{124}{section.Alph1.1}%
-\contentsline {section}{\numberline {A.2}}{130}{section.Alph1.2}%
-\contentsline {chapter}{\numberline {B}Orden parcial completo-dirigido y teorema del punto fijo de Kleene}{133}{appendix.Alph2}%
+\contentsline {section}{\numberline {1.14}Clase 13: 15/05/23}{95}{section.1.14}%
+\contentsline {subsection}{\numberline {1.14.1}Grafos planares}{95}{subsection.1.14.1}%
+\contentsline {subsubsection}{Prerequisitos topológicos}{95}{section*.5}%
+\contentsline {section}{\numberline {1.15}Clase 14: 18/05/23}{98}{section.1.15}%
+\contentsline {section}{\numberline {1.16}Clase 15: 25/05/23}{103}{section.1.16}%
+\contentsline {subsubsection}{\underline {Operaciones que conocemos}}{103}{section*.6}%
+\contentsline {subsubsection}{\underline {Otra perspectiva con respecto a los menores}}{104}{section*.7}%
+\contentsline {subsubsection}{\underline {Retomando grafos planos}}{105}{section*.8}%
+\contentsline {subsection}{\numberline {1.16.1}Dibujos}{107}{subsection.1.16.1}%
+\contentsline {section}{\numberline {1.17}Clase 16: 26/05/23}{112}{section.1.17}%
+\contentsline {subsection}{\numberline {1.17.1}Teorema de Kuratowski}{114}{subsection.1.17.1}%
+\contentsline {section}{\numberline {1.18}Clase 17: 02/06/23}{118}{section.1.18}%
+\contentsline {subsection}{\numberline {1.18.1}Coloreo de Grafos}{118}{subsection.1.18.1}%
+\contentsline {section}{\numberline {1.19}Clase 18: 05/06/23}{121}{section.1.19}%
+\contentsline {section}{\numberline {1.20}Clase 19: 08/06/23}{123}{section.1.20}%
+\contentsline {section}{\numberline {1.21}Clase 20: 12/06/23}{124}{section.1.21}%
+\contentsline {subsection}{\numberline {1.21.1}Ejercicios}{125}{subsection.1.21.1}%
+\contentsline {subsection}{\numberline {1.21.2}Coloreo de aristas}{127}{subsection.1.21.2}%
+\contentsline {chapter}{\numberline {A}Primera parte de la materia (primer capítulo del Diestel)}{130}{appendix.Alph1}%
+\contentsline {section}{\numberline {A.1}}{130}{section.Alph1.1}%
+\contentsline {section}{\numberline {A.2}}{136}{section.Alph1.2}%
+\contentsline {chapter}{\numberline {B}Orden parcial completo-dirigido y teorema del punto fijo de Kleene}{139}{appendix.Alph2}%
