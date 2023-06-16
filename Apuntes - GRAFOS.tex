@@ -4099,7 +4099,36 @@ Todo grafo $G$ cumple
 %%%%%%%%%%%
 
 
+\subsection{Lista coloreo}
 
+\begin{definition}
+Sea $(S_v)_{v \in G}$ una familia de conjuntos de colores. Si un coloreo $c$ de $V(G)$ es tal que $c(v) \in S_v$ para todo $v \in V(G)$, entonces decimos que $c$ es un \textbf{coloreo de las listas $S_v$}.
+
+Un grafo es \textbf{k-lista-coloreable}, si para cada familia) $(S_v)_{v \in G}$ con $\abs {S_v} = k$ hay un coloreo de las listas $S_v$.
+
+El \textbf{número lista-cromático}, denotado por $\ch G$, de un grafo $G$ es el menor $k$ tal que $G$ es $k$-lista-coloreable.
+\end{definition}
+
+\begin{example}
+El grafo $K_{2,4}$ no es $2$-lista-coloreable, para eso, basta ver que existe una familia de listas de tamaño $2$ que colorea. Consideremos:
+
+\Inkscape{Coloreo de una elección de listas de tamaño $2$ que es imposible de que funcione.}
+
+Es fácil extender esta idea para cualquier cantidad $k$, utilizando grafos bipartitos completos.
+\end{example}
+
+
+\begin{proposition}
+\begin{enumerate}
+\item Tenemo que $\ch G \leq \col G$.
+\item Hay una versión de Brooks para $\ch G$.
+\end{enumerate}
+Mäs aún, tenemos el siguiente toerema:
+\end{proposition}
+
+\begin{theorem}[Thomasen (1994)]
+Todo grafo planar es $5$-lista-coloreable.
+\end{theorem}
 
 
 
