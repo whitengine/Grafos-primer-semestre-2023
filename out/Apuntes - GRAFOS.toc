@@ -51,6 +51,7 @@
 \contentsline {section}{\numberline {1.21}Clase 20: 12/06/23}{124}{section.1.21}%
 \contentsline {subsection}{\numberline {1.21.1}Ejercicios}{125}{subsection.1.21.1}%
 \contentsline {subsection}{\numberline {1.21.2}Coloreo de aristas}{127}{subsection.1.21.2}%
+\contentsline {section}{\numberline {1.22}Clase 21: 16/06/23}{129}{section.1.22}%
 \contentsline {chapter}{\numberline {A}Primera parte de la materia (primer capítulo del Diestel)}{130}{appendix.Alph1}%
 \contentsline {section}{\numberline {A.1}}{130}{section.Alph1.1}%
 \contentsline {section}{\numberline {A.2}}{136}{section.Alph1.2}%
