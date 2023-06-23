@@ -367,6 +367,9 @@
 %numero de coloreo de un grafo G:
 \newcommand{\col}[1]{\operatorname{col} (#1)}
 
+%número de lista coloreo de un grafo G:
+\newcommand{\ch}[1]{\operatorname{ch} (#1)}
+
 
 
 
@@ -4104,27 +4107,28 @@ Todo grafo $G$ cumple
 \begin{definition}
 Sea $(S_v)_{v \in G}$ una familia de conjuntos de colores. Si un coloreo $c$ de $V(G)$ es tal que $c(v) \in S_v$ para todo $v \in V(G)$, entonces decimos que $c$ es un \textbf{coloreo de las listas $S_v$}.
 
-Un grafo es \textbf{k-lista-coloreable}, si para cada familia) $(S_v)_{v \in G}$ con $\abs {S_v} = k$ hay un coloreo de las listas $S_v$.
+Un grafo es \textbf{k-lista-coloreable}, si para cada familia $(S_v)_{v \in G}$ con $\abs {S_v} = k$ hay un coloreo de las listas $S_v$.
 
 El \textbf{número lista-cromático}, denotado por $\ch G$, de un grafo $G$ es el menor $k$ tal que $G$ es $k$-lista-coloreable.
 \end{definition}
 
 \begin{example}
-El grafo $K_{2,4}$ no es $2$-lista-coloreable, para eso, basta ver que existe una familia de listas de tamaño $2$ que colorea. Consideremos:
+El grafo $K_{2,4}$ no es $2$-lista-coloreable, para eso, basta ver que existe una familia de listas de tamaño $2$ que no colorea. Consideremos:
 
 \Inkscape{Coloreo de una elección de listas de tamaño $2$ que es imposible de que funcione.}
 
-Es fácil extender esta idea para cualquier cantidad $k$, utilizando grafos bipartitos completos.
+Es fácil extender esta idea para cualquier cantidad $k$, utilizando grafos bipartitos completos $K_{k, k^k}$. En efecto, si particionamos $K_{k,k^k}$ en $\{u_i\}_{i = 1}^k$ y $\{w_j\}_{j = 1}^{k^k}$, luego no podemos usar la siguiente lista para $k$-colorear: $S_{u_i} = \{(i-1)k + 1, \ldots, ik\}$, y $S_{w_j}$ son todas las maneras de construir un conjunto de $k$ elementos eligiendo uno de cada $S_{u_i}, \: \: i = 1 , \ldots, k$. Es claro que no podemos colorear con estas listas, pues dado un coloreo $c(u_i) \in S_{u_i}$ siempre podemos encontrar, por construcción, un vérticce $w_j$ adyacente a todos los $u_i$, tal que $S_{w_j} = \{ c(u_i) | i = 1, \ldots, k\}$.
 \end{example}
 
 
 \begin{proposition}
 \begin{enumerate}
-\item Tenemo que $\ch G \leq \col G$.
+\item Tenemos que $\ch G \leq \col G$.
 \item Hay una versión de Brooks para $\ch G$.
 \end{enumerate}
-Mäs aún, tenemos el siguiente toerema:
 \end{proposition}
+
+Más aún, tenemos el siguiente toerema:
 
 \begin{theorem}[Thomasen (1994)]
 Todo grafo planar es $5$-lista-coloreable.
@@ -4139,12 +4143,67 @@ Todo grafo planar es $5$-lista-coloreable.
 
 
 
+%%%%%%%%%%%
+\Clase{23/06/23}   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%
 
 
 
+\begin{theorem}[Vizing (1964)]
+Todo grafo $G$ cumple
+\[
+    \boxed{\Delta (G) \leq \chi ' (G) \leq \Delta (G) +1 .}
+\]
+\end{theorem}
+\begin{proof}
+Sea $G$ un contraejemplo minimal del teorema. Notemos $\Delta = \Delta (G)$. Entonces, $E(G) \neq \emptyset$. Sea $uv \in E(G)$, por minimalidad $G -uv$ admite una $(\Delta +1)$-arista-coloración, digamos $c: E(G) \rightarrow \{1, \ldots, \Delta + 1\}$.
+
+\Dibujo{}
+
+Dado un vértice $x \in G$, denotamos por $M(x)$ al conjunto de colores que no aparecen en
+\[
+    \{c(e) | \text{$e$ incidente a $x$}\}.
+\]
+
+\Dibujo{}
+
+Como $d(x) < \Delta + 1$, entonces $M(x) \neq \emptyset$ para todo $x \in V(G)$. Si $M(u) \cap M(v) \neq \emptyset$, entonces $c$ puede extenderse a un $(\Delta + 1)$-arista-coloreo de $G$: coloreando $uv$ con un color en $M(u) \cap M(v)$. Con lo cual, podemos suponer que $M(u) \cap M(v) = \emptyset$.
+
+Sea $i_1 \in M(v)$. Como $M(u) \cap M(v)  = \emptyset$, existe $v_1 \in N(u)$ tal que $c(uv_1) = i_1$. Sea $i_2 \in M(v_1)$. Si $i_2 \in M(u)$, podemos obtener una $(\Delta+1)$-colarión de $G$, coloreando con $i_2$ a $uv_1$ y dando el color $i_1$ a la arista $uv$. Tomamos $i_3 \in M(v_2)$ y definimos de $v_3$ de la misma manera. Así encontramos una secuencia $\{(i_j, v_j)\}_{j \geq 1}$, $v_0 = v$ talque
+\begin{enumerate}[(i)]
+\item $i_j \in M(v_{j-1})$ para todo $j \geq 1$.
+\item $c(uv_j) = i_j$.
+\end{enumerate}
+
+\Dibujo{}
+
+Como $d(u)$ es finito, existen $l, k$ con $l > k \geq 1$ tales que $M(v_l) = i_{l+1}$ y $c(uv_k) = i_{l+1} = i_k$. Consideremos el $l$ más pequeño tal que esto ocurre, i.e. los vértices $v_0, v_1, \ldots, v_l$ son todos distintos. Por la definición de nuestra secuencia $\{(i_j,v_j)\}_{j \geq 1}$. La siguiente es una $(\Delta + 1)$-arista-coloración de $G \setminus \{uv_k\}$:
+\begin{align*}
+c'(uv) &= i_1 \\
+c'(uv_1) &= i_2 \\
+&\vdots \\
+c'(uv_{k-1}) &= i_k
+\end{align*}
+para todo $e \neq u v_i, i \in \{0, \ldots, k-1\}$ $c'(e) = c(e)$. Sea $i \in M(u)$. Consideremos el subgrafo de $G$ que contiene todas las aristas con colores $i, i_k$ bajo $c'$, y llamémoslo $H_{i,i_k}$. El subgrafo $H_{i,i_k}$ es un conjunto de caminos y ciclos pares, pues tiene grado máximo a lo más $2$.
 
 
+\Dibujo{}
 
+Además, si consideramos $C$, una componente conexa de $H_{i,i_k}$ e intercambiamos los colores de la componente, obtenemos una $(\Delta + 1)$-arista-coloración de $G$.
+
+\Dibujo{}
+
+Si $C$ no contiene al vértice $v_k$, entonces vamos a intercambiar los colores de la componente $C$, y así obtenemos una $(\Delta + 1)$-arista-coloración de $G \setminus \{uv_k\}$ en donde $i_k \in M(u)$ e $i_k \in M(v_k)$. Luego esta coloración se puede extender a una $(\Delta+1)$-coloración de $G$ (cubriendo $uv_k$ con $i_k$). Ahora, consideramos la siguiente $(\Delta + 1)$-arista-coloración de $G \setminus \{uv_l\}$
+\[
+    c''(uv) ) i_1, c''(uv_1) = i_2, \ldots, c''(uv_{l-1}) = i_2.
+\]
+Notamos que $i_k \in M(v_l)$ bajo $c''$ y por otro lado, la componente conexa $C$ de $H_{i,i_k}$ que contiene a $uv_{k-1}$ no termina en $v_l$, salvo que $l = k$, lo cual es una contradicción. Por lo tanto, obtenemos una $(\Delta + 1)$-arista-coloración de $G$:
+\begin{itemize}
+\item Intercambiando los colores de $C$, y
+\item coloreando la arista $uv_l$ con color $i_k$.
+\end{itemize}
+
+\end{proof}
 
 
 
