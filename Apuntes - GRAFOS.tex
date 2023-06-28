@@ -4148,62 +4148,74 @@ Todo grafo planar es $5$-lista-coloreable.
 %%%%%%%%%%%
 
 
+Antes de demostrar el Teorema de Vizing \ref{th:teorema de Vizing}, necesitamos un poco de notación:
+\begin{definition}
+Sea $G$ un grafo con un coloreo de aristas $c: E(G) \rightarrow S$.
 
-\begin{theorem}[Vizing (1964)]
+Dado un vértice $x \in G$, denotamos por $M(x)$ al conjunto de colores (respecto de $c$) que no aparecen en
+\[
+    \{c(e) | \text{$e$ incidente a $x$}\}.
+\]
+
+Decimos que $\alpha \in S$ es \textbf{faltante en $x$} (respecto de $c$) si $\alpha \in M(x)$.
+\end{definition}
+
+\Inkscape{Ejemplo, $c$ es un coloreo de las aristas tal que $M(x) = \{4\}$. En esta terminología, el color $4$ es \textit{faltante} en $x$.}
+
+\begin{definition}
+Nuevamente, sea $G$ un grafo con un coloreo de aristas $c: E(G) \rightarrow S$.
+
+Si $\alpha, \beta \in S$ son dos colores distintos de $c$, llamamos \textbf{$\alpha/\beta$-camino desde $x$}, al único camino maximal que comienza en $x$ con su primer arista de color $\alpha$, su siguiente de color $\beta$ y así intercaladamente; la longitud puede ser $0$.
+\end{definition}
+
+\Inkscape{$\blue{\alpha}/\red{\beta}$-camino de un arista-coloreo de un grafo $G$.}
+
+\begin{theorem}[Vizing (1964)]\label{th:teorema de Vizing}
 Todo grafo $G$ cumple
 \[
     \boxed{\Delta (G) \leq \chi ' (G) \leq \Delta (G) +1 .}
 \]
 \end{theorem}
+
 \begin{proof}
-Sea $G$ un contraejemplo minimal del teorema. Notemos $\Delta = \Delta (G)$. Entonces, $E(G) \neq \emptyset$. Sea $uv \in E(G)$, por minimalidad $G -uv$ admite una $(\Delta +1)$-arista-coloración, digamos $c: E(G) \rightarrow \{1, \ldots, \Delta + 1\}$.
+Sea $G$ un contraejemplo arista-minimal del teorema. Notemos $\Delta = \Delta (G)$. Entonces, $E(G) \neq \emptyset$. Podemos asumir lo siguiente:
 
-\Dibujo{}
-
-Dado un vértice $x \in G$, denotamos por $M(x)$ al conjunto de colores que no aparecen en
-\[
-    \{c(e) | \text{$e$ incidente a $x$}\}.
-\]
-
-\Dibujo{}
-
-Como $d(x) < \Delta + 1$, entonces $M(x) \neq \emptyset$ para todo $x \in V(G)$. Si $M(u) \cap M(v) \neq \emptyset$, entonces $c$ puede extenderse a un $(\Delta + 1)$-arista-coloreo de $G$: coloreando $uv$ con un color en $M(u) \cap M(v)$. Con lo cual, podemos suponer que $M(u) \cap M(v) = \emptyset$.
-
-Sea $i_1 \in M(v)$. Como $M(u) \cap M(v)  = \emptyset$, existe $v_1 \in N(u)$ tal que $c(uv_1) = i_1$. Sea $i_2 \in M(v_1)$. Si $i_2 \in M(u)$, podemos obtener una $(\Delta+1)$-colarión de $G$, coloreando con $i_2$ a $uv_1$ y dando el color $i_1$ a la arista $uv$. Tomamos $i_3 \in M(v_2)$ y definimos de $v_3$ de la misma manera. Así encontramos una secuencia $\{(i_j, v_j)\}_{j \geq 1}$, $v_0 = v$ talque
-\begin{enumerate}[(i)]
-\item $i_j \in M(v_{j-1})$ para todo $j \geq 1$.
-\item $c(uv_j) = i_j$.
+\begin{quote}
+\begin{enumerate}
+\item[({$\ast$})]\label{vizing-proof-condition} Sea $xy \in E(G)$ y $c$ un $(\Delta + 1)$-arista-coloreo arbitrario de $G - xy$ y $\alpha$ faltante en $x$ y $\beta$ faltante en $y$ respecto de $c$. Entonces el $\alpha/\beta$-camino desde $y$ termina en $x$.
 \end{enumerate}
+\end{quote}
+En efecto, si no fuera cierto, podríamos intercambiar los colores $\alpha$ y $\beta$ del $\alpha/\beta$-camino y extender el coloreo $c$ a un coloreo de $G$ vía $c'(xy):= \alpha$.
 
-\Dibujo{}
+Sea $uv \in E(G)$, por minimalidad $G -uv$ admite una $(\Delta +1)$-arista-coloración, digamos $c_0: E(G) \rightarrow \{1, \ldots, \Delta + 1\}$.
 
-Como $d(u)$ es finito, existen $l, k$ con $l > k \geq 1$ tales que $M(v_l) = i_{l+1}$ y $c(uv_k) = i_{l+1} = i_k$. Consideremos el $l$ más pequeño tal que esto ocurre, i.e. los vértices $v_0, v_1, \ldots, v_l$ son todos distintos. Por la definición de nuestra secuencia $\{(i_j,v_j)\}_{j \geq 1}$. La siguiente es una $(\Delta + 1)$-arista-coloración de $G \setminus \{uv_k\}$:
-\begin{align*}
-c'(uv) &= i_1 \\
-c'(uv_1) &= i_2 \\
-&\vdots \\
-c'(uv_{k-1}) &= i_k
-\end{align*}
-para todo $e \neq u v_i, i \in \{0, \ldots, k-1\}$ $c'(e) = c(e)$. Sea $i \in M(u)$. Consideremos el subgrafo de $G$ que contiene todas las aristas con colores $i, i_k$ bajo $c'$, y llamémoslo $H_{i,i_k}$. El subgrafo $H_{i,i_k}$ es un conjunto de caminos y ciclos pares, pues tiene grado máximo a lo más $2$.
+\Inkscape{}
 
+Como $d(x) < \Delta + 1$, entonces $M(x) \neq \emptyset$ para todo $x \in V(G)$. Si $M(u) \cap M(v) \neq \emptyset$, entonces $c_0$ puede extenderse a un $(\Delta + 1)$-arista-coloreo de $G$: coloreando $uv$ con un color en $M(u) \cap M(v)$. Con lo cual, podemos suponer que $M(u) \cap M(v) = \emptyset$.
 
-\Dibujo{}
+Sea $i_1 \in M(v)$. Como $M(u) \cap M(v)  = \emptyset$, existe $v_1 \in N(u)$ tal que $c_0(uv_1) = i_1$. Sea $i_2 \in M(v_1)$. Si $i_2 \in M(u)$, podemos obtener una $(\Delta+1)$-coloración de $G$, coloreando con $i_2$ a $uv_1$ y dando el color $i_1$ a la arista $uv$. Luego $u$ tiene un vecino $v_2$ con $c_0(uv_2) = i_2$ como antes, tomamos $i_3 \in M(v_2)$. Así, obtenemos una secuencia maximal $v = v_0, v_1, \ldots, v_k$ de vecinos de $u$ tales que $c_0 (uv_i) \in M(v_{i-1})$ respecto de $c_0$ para todo $0 < i \leq k$.
 
-Además, si consideramos $C$, una componente conexa de $H_{i,i_k}$ e intercambiamos los colores de la componente, obtenemos una $(\Delta + 1)$-arista-coloración de $G$.
+Luego, para cada $i = 1, \ldots, k$ definimos un coloreo $c_i$:
+\begin{enumerate}[(i)]
+\item $c_i (uv_j) = c_0 (u v_{j+1})$ para todo $0 \leq j < i$,
+\item $c_i (uv_i)$ no está definido,
+\item $c_i (e) = c_0 (e)$ para el resto de las aristas.
+\end{enumerate}
+Estos son $(\Delta + 1)$-arista-coloreos de $G-uv_i$. Además, notemos que los colores faltantes $M(u)$ de $u$ son los mismos para todo $c_i, \: \: 0 \leq i \leq k$.
 
-\Dibujo{}
+\Inkscape{}
 
-Si $C$ no contiene al vértice $v_k$, entonces vamos a intercambiar los colores de la componente $C$, y así obtenemos una $(\Delta + 1)$-arista-coloración de $G \setminus \{uv_k\}$ en donde $i_k \in M(u)$ e $i_k \in M(v_k)$. Luego esta coloración se puede extender a una $(\Delta+1)$-coloración de $G$ (cubriendo $uv_k$ con $i_k$). Ahora, consideramos la siguiente $(\Delta + 1)$-arista-coloración de $G \setminus \{uv_l\}$
+Sea $\beta \in M(v_k)$ respecto de $c_0$, entonces $\beta$ también es faltante en $v_k$ respecto de $c_i$ para todo $0 \leq i \leq k$. Notar que por \hyperref[vizing-proof-condition]{({$\ast$})} aplicado a $c = c_k$, $\beta$ no es faltante en $u$ para $c_k$. Con lo cual, $\beta \not \in M(u)$ para todo $c_i$ con $0 \leq i \leq k$. Por la maximalidad la secuencia $v_0, \ldots,v_k$, existe un $1\leq i < k$ tal que $c_0(xv_i) = \beta$. Por como definimos $c_1, \ldots, c_k$ tenemos que:
 \[
-    c''(uv) ) i_1, c''(uv_1) = i_2, \ldots, c''(uv_{l-1}) = i_2.
+    c_0 (uv_i) = c_{i-1} (uv_i) = c_k (u v_{i-1}) = \beta.
 \]
-Notamos que $i_k \in M(v_l)$ bajo $c''$ y por otro lado, la componente conexa $C$ de $H_{i,i_k}$ que contiene a $uv_{k-1}$ no termina en $v_l$, salvo que $l = k$, lo cual es una contradicción. Por lo tanto, obtenemos una $(\Delta + 1)$-arista-coloración de $G$:
-\begin{itemize}
-\item Intercambiando los colores de $C$, y
-\item coloreando la arista $uv_l$ con color $i_k$.
-\end{itemize}
+
+Sea $\alpha \in M(u)$. Sea $P$ el $\alpha/\beta$-camino desde $v_k$ respecto de $c_k$. Por \hyperref[vizing-proof-condition]{({$\ast$})}, $P$ termina en $u$. Más aún, $P$ termina en una arista de color $\beta$ respecto de $c_k$. Con lo cual, la última arista de $P$ es $v_{i-1} u$. Ahora, consideremos $P'$ el $\alpha/\beta$-camino desde $v_{i-1}$ respecto de $c_{i-1}$. Como $P'$ está unívocamente determinado y las aristas interiores de $P$ no cambian en $c_0, \ldots, c_k$, el camino $P'$ usa las mismas aristas que $P$ en orden inverso y visita $v_k$. La arista de $P'$ que incide en $v_k$ es claramente de color $\alpha$, pero $\beta$ es faltante en $v_k$, con lo cual $P'$ termina en $v_k$. Esto contradice la Condición \hyperref[vizing-proof-condition]{({$\ast$})}.
+
+\Inkscape{Ilustración del coloreo $c_k$ de $G- uv_k$, donde se puede apreciar el $\blue{\alpha}/\red{\beta}$-camino $P$ desde $v_k$.}
 
 \end{proof}
+
 
 
 
