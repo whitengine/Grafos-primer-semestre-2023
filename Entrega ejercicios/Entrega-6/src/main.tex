@@ -1,0 +1,409 @@
+\documentclass[12pt]{article}
+
+
+\usepackage{fouriernc}%la fuente
+%\usepackage[sc]{mathpazo} %antigua fuente
+
+\usepackage[utf8]{inputenc}
+
+\usepackage[a4paper,width=150mm,top=25mm,bottom=25mm]{geometry}
+
+
+
+\usepackage{subfiles} %esto es para modularizar el overleaf
+%para usar este paquete solamente hay que usar el comando
+%\subfile{}
+
+\usepackage{graphicx}
+\usepackage{framed}
+\usepackage[dvipsnames]{xcolor} %agrega mas colores para xcolor.
+
+\usepackage{xparse}
+\usepackage{xstring}
+
+\usepackage{stmaryrd} %para poner el comando \mapsfrom "<---|"
+
+\usepackage{amssymb}
+
+\usepackage{amsmath}
+
+\usepackage{subfig}
+
+\usepackage{mathrsfs} % para tener mas tipos de texto: \mathscr que es una letra mayuscula cursiva.
+
+\usepackage{tikz-cd}
+
+\usepackage{tkz-graph}%este paquete es para crear grafos con el ambiente \begin{tikzpicture}
+
+\usepackage{caption}
+
+\usepackage[shortlabels]{enumitem}
+
+\usepackage{mathabx}
+\let\widering\relax %esto es porque hay problemas con el comando \widering que se define en la fuenta fouriernc y en el paquete \usepackage{mathabx}
+
+\usepackage[spanish,activeacute]{babel}
+
+\usepackage{xparse}
+\usepackage{xstring}
+
+\usepackage{braket} %para definir \set , \Set y que los conjuntos se vean mas lindos
+
+\usepackage{mathtools}
+
+\usepackage[shortlabels]{enumitem}
+
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks,
+    citecolor=red,
+    filecolor=red,
+    linkcolor=red,
+    urlcolor=red
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{amsthm}
+
+\theoremstyle{plain}
+\newtheorem{theorem}{Teorema}[section]
+\newtheorem{lemma}[theorem]{Lema}
+\newtheorem{proposition}[theorem]{Proposición}
+\newtheorem{proposition/definition}[theorem]{Proposición/Definición}
+\newtheorem{corollary}[theorem]{Corolario}
+\newtheorem{conjecture}[theorem]{Conjetura}
+\newtheorem{afirmacion}[theorem]{Afirmación}
+\newtheorem{recuerdo}[theorem]{Recuerdo}
+
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definición}
+\newtheorem{hypothesis}[theorem]{Hipótesis}
+\newtheorem{example}[theorem]{Ejemplo}
+\newtheorem{obs}[theorem]{Observación}
+\newtheorem{notation}[theorem]{Notación}
+\newtheorem{remark}[theorem]{Comentario}
+
+
+%por alguna razon el teorema $warning  est aen uso, asi que lo remuevo de maqnera trucha
+\newtheorem{warn}[theorem]{\textbf{ADVERTENCIA}}
+\renewenvironment{warning}{\begin{warn}}{\end{warn}}
+
+%crear ejercicio
+\newtheorem{exercise}[theorem]{Ejercicio}
+%solución
+\newenvironment{solution}{\begin{proof}[Solución]}{\end{proof}}
+
+
+
+
+
+%como crear un nuevo ambiente de teorema o proposición que este sobreado con un recuadro de "color". primero hacemos
+
+%\newenvironment{Theorem}{\colorlet{shadecolor}{color} \begin{shaded} \begin{theorem} }{ \end{theorem} \end{shaded} }
+
+%Notar que primero hay que definir el color del sobreado con el comando
+%"\colorlet{shadecolor}{color}" y luego hay que usar el environment "shaded". Adentro de este ponemos el environment que queremos, en nuestro caso queremos "pintar" el environment "\begin{theorem}".
+
+
+%se puede cambiar la tonalidad de un color "yellow!80" es el color amarillo pero al 80%  y el 20% es mezclado con blanco, i.e. está aclarado. Pero "yellow!80!Black" es 80% amarillo y 20% negro, i.e. es obscurecido 20%.
+
+\newenvironment{Definition}{\colorlet{shadecolor}{Apricot!12} \begin{shaded} \begin{definition} }{ \end{definition} \end{shaded} }
+
+\newenvironment{Example}{\colorlet{shadecolor}{Goldenrod!16} \begin{shaded} \begin{example}}{ \end{example} \end{shaded}}
+
+\newenvironment{Remark}{\colorlet{shadecolor}{Orchid!12} \begin{shaded} \begin{remark}}{ \end{remark} \end{shaded}}
+
+\newenvironment{Warning}{\colorlet{shadecolor}{red!12} \begin{shaded} \begin{warning}}{ \end{warning} \end{shaded}}
+
+\newenvironment{Conjecture}{\colorlet{shadecolor}{magenta!16} \begin{shaded} \begin{conjecture}}{ \end{conjecture} \end{shaded}}
+
+\newenvironment{Theorem}{\colorlet{shadecolor}{OliveGreen!18} \begin{shaded} \begin{theorem}}{ \end{theorem} \end{shaded}}
+
+\newenvironment{Lemma}{\colorlet{shadecolor}{LimeGreen!12} \begin{shaded} \begin{lemma}}{ \end{lemma} \end{shaded}}
+
+\newenvironment{Proposition}{\colorlet{shadecolor}{Green!12} \begin{shaded} \begin{proposition}}{ \end{proposition}\end{shaded}}
+
+\newenvironment{Corollary}{\colorlet{shadecolor}{TealBlue!16} \begin{shaded} \begin{corollary}}{ \end{corollary} \end{shaded}}
+
+\newenvironment{Obs}{\colorlet{shadecolor}{Dandelion!22} \begin{shaded} \begin{obs}}{ \end{obs} \end{shaded}}
+
+\newenvironment{Exercise}{\colorlet{shadecolor}{Lavender!12} \begin{shaded} \begin{exercise}}{ \end{exercise} \end{shaded}}
+
+%%%%%COLORES%%%%%%%%%%%%
+%Hay varios comandos del paquete Xcolor:
+%\color{blue,green,red,yellow,orange,black,white,pink,purble,etc...} hace que todo el bloque de texto se transforme en este color, se puede encerrar entre {} el bloque de texto que uno quiere colorear
+%\textcolor{color}{text} escribe el texto "text" en "color".
+%\colorbox{color}{text} pinta un rectangulo de "color" detrás del "text".
+%\shaded
+
+
+
+%lista de colores base de xcolor, como son colores de la extension del paquetem, empiezan con la primera letra mayuscula: si usaramos solo el paquete {xcolor} entonces no sería necesario.
+
+%red, Green (fluorecente), Blue (muy obscuro), Cyan, Magenta, Yellow, Black, Gray, lightgray, White, darkgray, lightgray, Brown, lime (este verde mas lindo manzana), olive (marron verdoso feo), Orange, pink, Purple, teal (verde marino), Violet
+
+%marco los colores lindos: red, Cyan, Magenta, Yellow, Black, Gray, White,  lime, Orange, pink, teal, Violet
+
+%Colores que incluye el paquete dvipsnames: Apricot (color beige), Brown, Goldenrod, JungleGreen, Salmon, Lavender, SpringGreen, Turquoise, Plum, Emerald, BurntOrange (naranja piola), ForestGreen (verde oscuro), BrickRed (rojo obscuro)
+
+
+\newcommand{\red}[1]{\textcolor{BrickRed}{#1}}
+
+			\newcommand{\comentario}[1]{\red{#1}}
+
+\newcommand{\green}[1]{\textcolor{SpringGreen}{#1}}
+
+\newcommand{\blue}[1]{\textcolor{Cyan}{#1}}
+
+\newcommand{\darkblue}[1]{\textcolor{Cyan!70!Black}{#1}}
+
+\newcommand{\yellow}[1]{\textcolor{yellow!80!Black}{#1}} %se puede cambiar la tonalidad de un color "yellow!80" es el color amarillo pero al 80%  y el 20% es mezclado con blanco, i.e. está aclarado. Pero "yellow!80!Black" es 80% amarillo y 20% negro, i.e. es obscurecido 20%.
+
+\newcommand{\black}[1]{\textcolor{Black}{#1}}
+
+\newcommand{\gray}[1]{\textcolor{Gray}{#1}}
+
+\newcommand{\purple}[1]{\textcolor{Purple}{#1}}
+
+\newcommand{\beige}[1]{\textcolor{Apricot}{#1}}
+
+\newcommand{\darkgreen}[1]{\textcolor{ForestGreen}{#1}}
+
+\newcommand{\pink}[1]{\textcolor{Lavender}{#1}}
+
+\newcommand{\salmon}[1]{\textcolor{Salmon}{#1}}
+
+\newcommand{\brown}[1]{\textcolor{RawSienna!50!Black}{#1}}
+
+\newcommand{\white}[1]{\textcolor{White}{#1}}
+
+\newcommand{\orange}[1]{\textcolor{BurntOrange}{#1}}
+
+
+
+
+
+
+
+
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+
+%grupos de matrices
+%SL
+\newcommand{\SL}[2]{\operatorname{SL}_{#1} ( #2)}
+%GL
+\newcommand{\GL}[2]{\operatorname{GL}_{#1} ( #2)}
+
+%matriz identidad
+\newcommand{\Id}{\operatorname{Id}}
+
+
+
+%enteros Z
+\newcommand{\integers}{\mathbb{Z}}
+%racionales
+\newcommand{\rationals}{\mathbb{Q}}
+%naturales
+\newcommand{\naturals}{\mathbb{N}}
+%reales R
+\newcommand{\reals}{\mathbb{R}}
+%imaginarios
+\newcommand{\complex}{\mathbb{C}}
+%p-adicos
+\newcommand{\padics}{\mathbb{Q}_p}
+%enteros p-adicos
+\newcommand{\padicintegers}{\mathbb{Z}_p}
+
+%cuerpos finitos
+%Fp
+\newcommand{\Fp}{\mathbb{F}_p}
+%Fq
+\newcommand{\Fq}{\mathbb{F}_q}
+
+
+
+%valor absoluto p-adico
+\newcommand{\abs}[1]{\left \vert #1 \right \vert}
+%valor absoluto p-adico
+\newcommand{\Abs}[1]{\left \vert \left \vert #1 \right \vert \right \vert}
+%valuacion p-adica
+\newcommand{\val}[1]{\operatorname{val} (#1)}
+
+%Hom
+\newcommand{\Hom}{\operatorname{Hom}}
+
+%imagen y núcleo
+\newcommand{\Imagen}{\operatorname{Im}}
+\newcommand{\Ker}{\operatorname{Ker}}
+
+%coker
+\newcommand{\Coker}{\operatorname{Coker}}
+
+%limite inverso
+\newcommand{\liminv}{\varprojlim}
+
+
+%un poco de typeset para categorias
+\newcommand{\catname}[1]{{\operatorfont\textbf{#1}}}
+
+
+\renewcommand{\hat}[1]{\widehat{#1}}
+\renewcommand{\bar}[1]{\overline{#1}}
+
+%declaro un comando nuevo para escribir restricción de funciones
+\newcommand\rest[2]{{% we make the whole thing an ordinary symbol
+  \left.\kern-\nulldelimiterspace % automatically resize the bar with \right
+  #1 % the function
+  \vphantom{\big|} % pretend it's a little taller at normal size
+  \right|_{#2} % this is the delimiter
+  }}
+
+
+%%%%   COMANDO ALGEBRA CONMUTATIVA   %%%%
+
+%altura de un ideal:
+\newcommand{\height}{\textsc{height}}
+
+%Clausura topológica
+\newcommand{\closure}[1]{\overline{#1}}
+
+%longitud de un A-modulo. Notacion: \length_A M
+\newcommand{\length}{\operatorname{length}}
+
+%Anulador de un $A$-módulo.
+\newcommand{\Ann}[1]{\operatorname{Ann} (#1)}
+
+%Cuerpo de fracciones. Notacion $\FracField A$.
+\newcommand{\FracField}[1]{\operatorname{Fr} (#1)}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+
+
+
+%%%%   COMANDO TEORÍA DE NÚMEROS  %%%%
+
+%Discriminante
+\newcommand{\discriminant}[1]{\mathfrak{d} (#1 )}
+
+%%%%Ideales primos%%%
+%escribe una letra en notación mathfrak, para denotar a un ideal o elemento primo.
+
+\newcommand{\primo}[1]{\mathfrak{#1}}
+\newcommand{\Primo}[1]{\mathfrak{\MakeUppercase{#1}}}
+
+%anillo de enteros O_K
+\renewcommand{\O}{\mathcal{O}}
+%anillo de enteros con subindice de cuerpo (input, por ejemplo $K$).
+\newcommand{\integralring}[1]{O_{#1}}
+
+%caracteristica de un cuerpo Char k
+\newcommand{\Char}[1]{\operatorname{Char} #1}
+
+%traza. Notación \trace = Tr
+\newcommand{\trace}{\operatorname{Tr}}
+
+%Traza de extensiones. Notación \Tr L K \alpha = \operatorname{Tr}_{L/K} (\alpha)
+\newcommand{\Tr}[1]{\operatorname{Tr}_{L/K} (#1)} %la extension es L/K por default
+\newcommand{\tr}[3]{\operatorname{Tr}_{#1/#2} (#3)}
+
+%Norma de extensiones. Notación \Norm L K \alpha = \operatorname{N}_{L/K} (\alpha)
+\newcommand{\Norm}[1]{\operatorname{N}_{L/K} (#1)}%la extension es L/K por default
+\newcommand{\norm}[3]{\operatorname{N}_{#1/#2} (#3)}
+
+
+%discriminante de una forma bilineal simetrica. notacion \disc{B} = \operatorname{disc} ( B)
+\newcommand{\disc}[1]{\operatorname{disc} (#1)}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+
+%%%%%%%%%%%%%COMANDO GRAFOS%%%%%%%%%%%%%
+
+%\ceil funcion techo
+\newcommand{\ceil}[1]{\left\lceil #1  \right\rceil}
+
+%\floor funcion piso
+\newcommand{\floor}[1]{\left\lfloor #1  \right\rfloor}
+
+%diámetro de un grafo
+\newcommand{\diam}[1]{\operatorname{diam} (#1)}
+
+%radio de un grafo
+\newcommand{\rad}[1]{\operatorname{rad}(#1)}
+
+%Kappa:
+\newcommand{\Kappa}{\mathcal{K}}
+
+%Defecto:
+\newcommand{\defecto}[1]{\mathrm{df}(#1)}
+
+
+
+
+
+\newcommand{\ch}[1]{\operatorname{ch}(#1)}
+
+
+
+
+
+\title{Entrega 5 - GRAFOS}
+\author{Enzo Giannotta}
+
+
+
+
+
+
+\begin{document}
+
+\maketitle
+
+\section*{Entrega 6 - Viernes 30/05/2023}
+
+\begin{exercise}
+En clase demostramos que para todo grafo bipartito se tiene $\chi' (G) = \Delta (G)$. Sin usar este resultado, demuestre que $\chi' (G) = k$ para todo grafo bipartito $k$-regular $G$.
+\end{exercise}
+
+\begin{solution}
+Como $G$ es $k$-regular, tenemos que $k = \Delta (G) \leq \chi ' (G)$. Probemos por inducción en $k\geq 1$. Si $k = 1$ es trivial.
+
+Sea $M$ un matching perfecto de $G$, existe por el Teorema \ref{}. Pintemos todos esas aristas de un color $1$. Consideremos ahora $G'$, es un grafo bipartito $(k-1)$-regular, por hipótesis inductiva $G'$ tiene un $(k-1)$-arista-coloreo, digamos con colores $2, \ldots, k$. Juntando el coloreo de $G'$ con el coloreo de $M$, obtenemos un $k$-arista-coloreo ode $G$.
+\end{solution}
+
+\begin{exercise}
+Sea $G$ un grafo línea. Encuentre una cota superior para $\ch (G)$ en términos de $\chi (G)$.
+\end{exercise}
+
+\begin{solution}
+ Sabemos que $G = L(H)$ para un grafo $G$ y que $\chi (G) = \chi' (H) \geq \Delta (H)$. Notemos que el algorítmo glotón permite probar de manera análoga que el caso del número cromático:
+ \[
+     \ch (G) \leq \Delta (G) + 1.
+ \]
+ Por otro lado, $\Delta (G) \leq 2 \Delta (H) - 2$. Más aún, el Teorema de Vizing \ref{th:teorema de Vizing} implica que $\Delta (H) \leq \chi ' (H) = \chi (G)$. Con lo cual, juntando todo:
+ \[
+     \ch (G) \leq 2 \chi (G) - 1 .
+ \]
+\end{solution}
+
+
+
+
+
+
+\end{document}
+

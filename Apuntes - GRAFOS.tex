@@ -419,7 +419,7 @@
 %el comando Inkscape tiene dos inputs \Inkscape{input 1}{input 2}, el primer input es [OPCIONAL] y representa el ancho del dibujo, y el segundo es el caption de la figura.
 \NewDocumentCommand{\Inkscape}{O{1} m}{
 \stepcounter{numeroDibujo}
-\begin{center}
+\begin{center}\label{Figura:Clase \thenumeroClase - Dibujo \thenumeroDibujo}
 \def\svgwidth{#1\textwidth}
 \input{"./Editor de Grafos/Figuras/Clase \thenumeroClase/Dibujo \thenumeroDibujo.pdf_tex"}
 \captionof{figure}{#2}
@@ -1665,7 +1665,7 @@ Sea $G = (V,E)$ un grafo y sean $A,B \subset V$. El mínimo número de vértices
 
 
 
-\begin{theorem}[Menger, 1927]
+\begin{theorem}[Menger, 1927]\label{th:teorema de menger}
 Sea $G = (V,E)$ un grafo y sean $A,B \subset V$. El mínimo número de vértices que separa a $A$ y $B$ es igual al máximo número de $A,B$-caminos disjuntos.
 \end{theorem}
 \begin{proof}
@@ -1725,7 +1725,7 @@ Sean $a$ y $b$ vértices distintos de $G= (V,E)$.
 
 Notar que en el segundo ítem de la demostración anterior usamos que hay una correspondencia biyectiva entre aristas $A,B$-separadoras y vérticces separadores de $E(A),E(B)$ en $L(G)$, y también entre los $A,B$-caminos arista-disjuntos y los $E(A),E(B)$-caminos disjuntos de $L(G)$.
 
-\begin{theorem}[Versión global de Menger]
+\begin{theorem}[Versión global de Menger]\label{th:version global de Menger}
 \begin{enumerate}[(i)]
 \item Un grafo es $k$-conexo si y solo si contiene $k$-caminos internamente disjuntos entre cada par de vértices.
 \item Un grafo es $k$-aristaconexo si y solo si contiene $k$ caminos arista disjuntos entre cada par de vértices.
@@ -2154,9 +2154,9 @@ y luego el matching es perfecto.
 
 \subsection{Matchings con preferencias}
 
-En alguna aplicaciones a la vida real, los matchings suelen ser buscados con algún tipo de ``estabilidad''. Más formalmente, sea $(\leq_v)_{v \in V}$ una familia ordenes totales en $E(v)$: el \textbf{conjunto de preferencias} de $G$. Luego diremos que un matching $M$ de $G$ es \textbf{estable} si para toda arista $e \in E \setminus M$, existe una arista $f \in M$ tal que $e$ y $f$ ccomparten un vértice $v$ tal que $e <_v f$.
+En alguna aplicaciones a la vida real, los matchings suelen ser buscados con algún tipo de ``estabilidad''. Más formalmente, sea $(\leq_v)_{v \in V}$ una familia ordenes totales en $E(v)$: el \textbf{conjunto de preferencias} de $G$. Luego diremos que un matching $M$ de $G$ es \textbf{estable} si para toda arista $e \in E \setminus M$, existe una arista $f \in M$ tal que $e$ y $f$ comparten un vértice $v$ tal que $e <_v f$.
 
-\begin{theorem}[El teorema del matrimonio estable - Gale \& Shapley (1962)]
+\begin{theorem}[El Teorema del Matrimonio Estable - Gale \& Shapley (1962)]\label{th:teorema del matrimonio estable}
 Para cualquier conjunto de preferencias $(\leq_v)_{v \in V}$ de un $X,Y$-bigrafo $G = (V,E)$. $G$ tiene un matching estable.
 \end{theorem}
 \begin{proof}
@@ -2341,7 +2341,7 @@ Probar que $\alpha (G) \leq \beta ' (G)$.
 Claramente si $G$ tiene puntos aislados la desigualdad se cumple trivialmente. Tomemos un conjunto $U$ de vértices de $G$ que son aislados de tamaño máximo $\alpha (G)$. Consideremos un conjunto de aristas $F$ de $G$ de tamaño mínimo que cubre a $G$. Todo vértice $x$ de $U$ es extremo de una arista de $F$, más aún, dos vértices distintos de $U$ no pueden compartir la misma arista porque no son adyacentes, luego $\alpha (G) = \abs U \leq \abs F =  \beta ' (G)$.
 \end{solution}
 
-\begin{theorem}[König (1916)]
+\begin{theorem}[König (1916)]\label{th:teorema de König - en todo grafo bipartito sin vertices aislados alpha = beta '}
 Si $G$ es bipartito sin vértices aislados
 \[
     \boxed{\alpha (G) = \beta ' (G) .}
@@ -3015,7 +3015,7 @@ Ahora, el grafo $S$ tiene la propiedad de que el bigrafo inducido $G_S$ es match
 Encontrar un grafo $3$-regular sin matching perfecto.
 \end{exercise}
 \begin{solution}
-Por el Corolario \ref{corolario:todo grafo 3-regular sin puentes tiene un matching perfecto} un matching perfecto, con lo cual un contraejemplo tiene que tener un puente. El grafo $3$ regular más chico es $K_4$. Notar que podemos contruir grafos $3$-regulares agarrando uno $3$-regular, agregar una subdivisión y conectar ese vértice por un puente a otro grafo $3$-regular. Notar que los grafos $3$ regulares tienen una cantidad de vértices par por la Proposición \ref{proposicion:el numero de vertices de grado impar es siempre par}. Con lo cual, nuestra construcción si tiene un puente no debería conectar directamente dos grafos $3$-regulares, pues quitar esos vértices no nos llevaría a un absurdo: queremos quitar un conjunto de $S$ vértices tal que $\abs S < q (G \setminus S)$. Así, la mejor idea que tenemos es que el puente tenga un extremo que conecte con \textit{tres} grafos $3$-regulares. En efecto, el contraejemplo más simeple que se nos ocurres es:
+Por el Corolario \ref{corolario:todo grafo 3-regular tiene un matching perfecto} un matching perfecto, con lo cual un contraejemplo tiene que tener un puente. El grafo $3$ regular más chico es $K_4$. Notar que podemos contruir grafos $3$-regulares agarrando uno $3$-regular, agregar una subdivisión y conectar ese vértice por un puente a otro grafo $3$-regular. Notar que los grafos $3$ regulares tienen una cantidad de vértices par por la Proposición \ref{proposicion:el numero de vertices de grado impar es siempre par}. Con lo cual, nuestra construcción si tiene un puente no debería conectar directamente dos grafos $3$-regulares, pues quitar esos vértices no nos llevaría a un absurdo: queremos quitar un conjunto de $S$ vértices tal que $\abs S < q (G \setminus S)$. Así, la mejor idea que tenemos es que el puente tenga un extremo que conecte con \textit{tres} grafos $3$-regulares. En efecto, el contraejemplo más simeple que se nos ocurres es:
 
 \Dibujo[0.6]{Grafo $3$-regular con tres puentes que no tiene matching perfecto, pues viola la Condición de Tutte \eqref{eq:condicion de Tutte}: considerar el singleton $S$ dado por \red{$\{v\}$} (ver el Teorema \ref{th:teorema de Tutte}.)}
 \end{solution}
@@ -3301,7 +3301,7 @@ Sea $G$ un grafo plano $3$-conexo, y sea $C \subset G$. Si $C$ es un ciclo induc
 
 Recíproccamente, supongamos que $C$ es frontera de una cara $f$. Por la proposició nanteior, $C$ es un ciclo. Si $C$ tuviera una cuerda $e = xy$, entonces las componentes conexas del grafo $C - \{x,y\}$ están conectadas por un $C$-camino en $G$, pues $G$ es $3$-conexo. Este camino junto con $e$ atraviesan la otra cara de $C$ que no es $f$, pero no se intersectan, contradiciendo el segundo ítem del Lema \ref{lema:tres arcos disjuntos forman 3 componentes}.
 
-Falta ver que $C$ no separa dos vértices $x,y \in G - C$. Por el Teorema de Menger \ref{menger}, $x$ e $y$ están conectados en $G$ por $3$ caminos independientes. Claramente $f$ yace dentro de una cara formada por la unión, y por el Lema \ref{lema:tres arcos disjuntos forman 3 componentes} esta cara tiene como frontera a solo dos de estos caminos. Entonces el tercero evita a $f$ y su frontera $C$.
+Falta ver que $C$ no separa dos vértices $x,y \in G - C$. Por el Teorema de Menger \ref{th:teorema de menger}, $x$ e $y$ están conectados en $G$ por $3$ caminos independientes. Claramente $f$ yace dentro de una cara formada por la unión, y por el Lema \ref{lema:tres arcos disjuntos forman 3 componentes} esta cara tiene como frontera a solo dos de estos caminos. Entonces el tercero evita a $f$ y su frontera $C$.
 \end{proof}
 
 \begin{theorem}[Fórmula de Euler]\label{th:formula de Euler}
@@ -3432,7 +3432,7 @@ Decimos que un grafo planar $G$ es \textbf{maximalmente plano}, si es planar per
 
 El grafo plano de un grafo maximalmente plano $G$ es maximalmente planar, no es obvio valga la recíproca: que un dibujo no se le pueda agregar aristas de manera que siga siendo plano implica que su grafo tampoco.
 
-\begin{proposition}
+\begin{proposition}\label{proposition:grafo es maximalmente plano si y solo si es maximalpmente planar}
 Un grafo maximalmente plano es maximalmente planar.
 \end{proposition}
 \begin{proof}
@@ -3835,6 +3835,16 @@ Recíprocamente, notemos que para todo $H \subset G$, se tiene que
 \]
 \end{proof}
 
+\begin{obs}
+Todo grafo $G$ con $\chi (G) = k$ contiene un subgrafo $H$ con $\chi (H) = k$ y $\delta (H) \geq k -1$.
+\end{obs}
+\begin{proof}
+En efecto, sea $H$ un subgrafo minimal tal que $\chi (H) = k$. Si existiera un vértice $v \in H$ tal que $d_H (v) \leq k-2$, entonces podríamos extender un $(k-1)$-coloreo de $H \setminus \{v\}$ a $H$, absurdo. Es decir, $\delta (H) \geq k-1$.
+\end{proof}
+
+
+\bigskip
+
 
 ¿Qué pasa en el caso de los grafos $G$ planares?
 
@@ -3867,14 +3877,14 @@ para todo grafo planar.
 
 
 El siguiente teorema fue conjeturado en $1852$; demostrado en $1976$ por Appel, Hacken y Koch; redemostrado de manera más corta por Robertson , Sanders, Seymer, Thomas.
-\begin{theorem}[Teorema de los cuatro colores]
+\begin{theorem}[Teorema de los $4$ colores]\label{th:teorema del los 4 colores - para grafos planares}
 Todo grafo planar es $4$-coloreable.
 \end{theorem}
 
 
-\begin{proposition}
+\begin{theorem}[Teorema de los $5$ colores]\label{th:teorema de los 5-colores - para grafos planares}
 Todo grafo planar es $5$-coloreable.
-\end{proposition}
+\end{theorem}
 \begin{proof}
 Usamos inducción en el número de vértices $n$. Si $n \leq 5$, trivial.
 
@@ -3965,7 +3975,9 @@ Una condición suficiente trivial para que $\chi (G) \geq k$, es contener a $K_k
 Para todo entero $k$ existe un grafo $G$ con cintura mayor a $k$, y número cromático $\chi (G) > k$.
 \end{theorem}
 
-\textbf{Conclusión:} el número cromá´tico puede ser alto por razones puramente globales (incluso si el grafo es ``localmente un árbol''). Y eso hace que entender por qué un grafo en particular tiene número cromático alto es bastante misterioso.
+\begin{remark}
+Consecuentemente, el número cromático puede ser alto por razones puramente globales: un grafo con cintura muy grande se ve \textit{localmente} un árblo y por lo tanto se puede colorear con $2$ colores. Por esta razón, entender por qué un grafo en particular tiene número cromático alto es bastante misterioso.
+\end{remark}
 
 
 
@@ -4002,7 +4014,16 @@ Recíprocamente, supongamos que $G$ es un grafo $3$-crítico. $G$ tiene un ciclo
 \end{center}
 \end{solution}
 
+\begin{exercise}
+Mostrar que todo grafo $k$-cromático crítico es $(k-1)$-arista-conexo.
+\end{exercise}
+\begin{solution}
+Procederemos en dos pasos: primero probaremos que sin pérdida de generalidad, podemos suponer que todo vértice de $G$ está contenido en un subgrafo completo de orden $k$ de $G$, luego probaremos que esto implica fácilmente que entre todo par de puntos existen al menos $k-1$ caminos arista-disjuntos, y por lo tanto el ejercicio se segirá de la versión global del Teorema de Menger \ref{th:version global de Menger}.
 
+En efecto, sea $x \in G$ fijo, notemos que tiene $k-1$ vecinos, de lo contrario podríamos extender un $(k-1)$-coloreo de $G \setminus \{x\}$ ($G$ es $k$-cromático crítico) a un $(k-1)$-coloreo de $G$, contradiciendo que $k = \chi (G)$. Más aún, los podemos suponer todos de distinto color (si no podríamos extender un $(k-1)$-coloreo de $G \setminus \{x\}$ a $G$). Ahora, veamos que si $y,z \in N_G(x)$ son tales que $yz \not \in E(G)$ y son de distinto color, entonces $G' := G + yz$ es $k$-cromático crítico y que si $G'$ es $(k-1)$-arista-conexo, entonces $G$ también lo es; esto nos reducirá al caso en el que $G$ cumple la propiedad de que todos sus vértices están en un subgrafo $k$-completo. Agregar una arista entre dos vecinos $y,z$ de distinto color, de $x$ en $G$ no cambia el número cromático, más aún, no cambia que sea $k$-crítico, salvo que exista un vértice $w \neq y,z$ tal que existan $k-1$ cadenas de kempen p
+
+Si $G$ es arista maximal con esta propiedad, entonces
+\end{solution}
 
 
 
@@ -4067,7 +4088,7 @@ y además, $\Delta (L(G)) \leq 2 \Delta (G) -2$ pues toda arista $e \in E(G)$ ti
 
 
 
-\begin{theorem}[König (1916)]
+\begin{theorem}[König (1916)]\label{th:todo grafo bipartito cumple que su numero cromatico es Delta}
 Todo grafo bipartito $G$ cumple $\chi' (G) = \Delta (G)$.
 \end{theorem}
 \begin{proof}
@@ -4112,7 +4133,7 @@ Un grafo es \textbf{k-lista-coloreable}, si para cada familia $(S_v)_{v \in G}$ 
 El \textbf{número lista-cromático}, denotado por $\ch G$, de un grafo $G$ es el menor $k$ tal que $G$ es $k$-lista-coloreable.
 \end{definition}
 
-\begin{example}
+\begin{example}\label{ejemplo:ejemplo de grafos bipartitos que no son k-lista coloreables}
 El grafo $K_{2,4}$ no es $2$-lista-coloreable, para eso, basta ver que existe una familia de listas de tamaño $2$ que no colorea. Consideremos:
 
 \Inkscape{Coloreo de una elección de listas de tamaño $2$ que es imposible de que funcione.}
@@ -4137,11 +4158,276 @@ Todo grafo planar es $5$-lista-coloreable.
 
 
 
+\bigskip
+
+Similarmente, podemos estudiar coloreo de aristas por listas:
+
+\begin{definition}
+Sea $(S_e)_{e \in E(G)}$ una familia de conjuntos de colores. Si un coloreo $c$ de $E(G)$ es tal que $c(e) \in S_e$ para todo $e \in E(G)$, entonces decimos que $c$ es un \textbf{coloreo de las listas $S_e$}, donde se entiende por contexto que estamos coloreando aristas.
+
+Un grafo es \textbf{k-arista-lista-coloreable}, si para cada familia $(S_e)_{e \in E(G)}$ con $\abs {S_e} = k$ hay un coloreo de las listas $S_e$.
+
+El \textbf{índice lista-cromático}, denotado por $\operatorname{ch}' (G)$, de un grafo $G$ es el menor $k$ tal que $G$ es $k$-arista-lista-coloreable.
+\end{definition}
+
+\begin{Obs}
+El coloreo de aristas por listas de un grafo $G$ es equivalente a colorear por listas los vértices del grafo línea $L(G)$. En particular, $\operatorname{ch}' (G) = \ch {L(G)}$
+\end{Obs}
+
+A priori, probar que un grafo es $k$-lista-coloreable (o $k$-arista-lista-coloreable) es más difícil que probar que es $k$-coloreable ($k$-arista-coloreable): este último es un caso particular de coloreo por las listas $S_v = \{1,\ldots, k\}$ para todo $v \in G$ ($S_e = \{1, \ldots, k\}$ para todo $e \in E(G)$). Por lo tanto,
+\[
+    \ch G \geq \chi (G) \quad (\operatorname{ch}' (G) \geq \chi ' (G))
+\]
+para cualquier grafo $G$.
+
+Estas desigualdades en muchos casos \textit{no son óptimas}: el Ejemplo \ref{ejemplo:ejemplo de grafos bipartitos que no son k-lista coloreables} muestra que para todo $k \geq 1$, existe un grafo bipartito (y por lo tanto $2$-coloreable) que no es $k$-lista coloreable.
+
+Al contrario del caso vértices, \underline{se desconoce actualmente} si existen grafos tal que $\operatorname{ch}' (G) > \chi ' (G)$. De hecho, se conjetura:
+\begin{conjecture}
+\[
+    \operatorname{ch}' (G) = \chi ' (G).
+\]
+\end{conjecture}
+Veamos que la conjetura vale para el caso particular de grafos bipartitos.
+
+Para eso, recordemos que si $D$ es un grafo dirigido y $v \in V(D)$, denotamos por $N^+ (v)$ al conjunto de vecinos, y por $d^+ (v)$ al número de vecinos, $w \in D$ tales que $D$ contiene una arista dirigida desde $v$ hasta $w$.
+
+\begin{definition}
+Sea $D$ un grafo dirigido. Llamamos a un conjunto independiente de vértices $U \subset V(D)$ un \textbf{núcleo} de $D$, si para todo vértice de $v \in D \setminus U$, existe una arista dirigida en $D$ desde $v$ hacia un vértice de $U$.
+\end{definition}
+Notar que los núcleos de un grafo dirigido $D$ no vacío son no vacíos también.
+
+\begin{lemma}
+Sea $H$ un grafo y $(S_v)_{v \in H}$ una familia de listas. Si $H$ tiene una orientación $D$ con $d^+ (v) < \abs{S_v}$ para todo $v$, tal que todo subgrafo inducido de $D$ tiene un núcleo, entonces $H$ puede ser coloreado a partir de las listas $S_v$.
+\end{lemma}
+\begin{proof}
+Haremos inducción en $n = \abs{H}$. Si $n = 0$ simplemente tomamos el \textit{coloreo vacío}. Para el paso inductivo, supongamos que $n > 0$. Sea $\alpha$ un color de alguna de las listas $S_v$, y sea $D$ una orientación de $H$ dada por el enunciado. Los vértices $v$ con $\alpha \in S_v$ generan un subgrafo (inducido) no vacío $D'$ de $D$, el cual por hipótesis tiene un núcleo $U \neq \emptyset$.
+
+Coloreemos los vértices de $U$ con $\alpha$, y removamos $\alpha$ de las listas de todos los vértices de $D' \setminus U$. Como cada uno de estos vértices manda una arista hacia $U$, las listas modificadas $S'_v, \: \: v \in D \setminus U$ siguen cumpliendo la condición $d^+_{D \setminus U} (v) < \abs{S'_v}$ en $D \setminus U$. Como $D \setminus U$ es una orientación de $H \setminus U$, podemos colorear $H \setminus U$ a partir de estas listas por hipótesis inductiva. Como ninguna de estas listas contiene a $\alpha$, podemos extender este coloreo a $U$, coloreando los vértices de $U$ con $\alpha$. Así obtenemos el coloreo deseado de $H$.
+\end{proof}
+
+\begin{theorem}[Galvin (1995)]
+Todo grafo bipartito tiene $\operatorname{ch}' (G) = \chi ' (G)$.
+\end{theorem}
+\begin{proof}
+Sea $G$ un $X,Y$-bigrafo con conjunto de aristas $E$. Diremos que dos aristas de $G$ \textbf{se reunen en} $X$, si comparten un mismo extremo en $X$ (Análogamente podemos definir qué significa que dos aristas se reunan en $Y$). Sea $\chi ' (G) = k$, y sea $c$ un $k$-coloreo de las aristas de $G$.
+
+Ya hemos visto que $\operatorname{ch}' (G) \geq k$; luego basta probar la otra desigualdad: $\ch G ' \leq k$. El plan es aplicar el lema anterior al grafo linea $H:= L(G)$ de $G$ para probar que es $k$-lista coloreable. Para eso, basta encontrar una orientación $D$ de $H$ con $d^+ (e) < k$ para todo vértice $e \in H$, de tal suerte que para cada subgrafo inducido $D$ existe un núcleo. Para definir $D$, consideremos dos aristas adyacentes $e, e' \in E$, digamos con color $c(e) < c(e')$. Si $e$ y $e'$ se reunen en $X$, orientamos la arista $ee' \in H$ desde $e'$ hacia $e$; si $e$ y $e'$ se reunen en $Y$, orientamos $e$ hacia $e'$.
+
+\Inkscape{Orientación del grafo línea $H$ de $G$.}
+
+Calculemos $d^e (e)$ para cualquier $ e \in V(D)$. Si $c(e) = i$, luego todo $e' \in N^+_D (e)$ que se reune en $X$ con $e$, tiene color en $\{1, \ldots, i-1\}$, y si se reune en $Y$ con $e$, tiene color en $\{i+1, ldots, k\}$. Además, dados dos vecinos de $e$ que se reunen en el mismo conjunto $X$ o $Y$ deben tener distinto color, con lo cual $d^+_D (e < k)$.
+
+Falta ver que todo subgrafo inducido $D'$ de $D$ tiene núcleo. Esto es un corolario inmediato del Teorema del Matrimonio \ref{th:teorema del matrimonio estable} para $G$, si interpretamos las direcciones en $D$ como expresando preferencia. En efecto, dado un vértice $v \in X \cup Y$ y aristas $e, e' \in V(D')$ indidentes a $v$, escribimos $e <_v e'$ sii la arista $ee'$ de $H$ es dirigida de $e$ en $e'$ in $D$. Así, todo matching estable en el grafo bipartito $(X \cup Y, V(D'))$ para esta preferencia es un núcleo en $D'$. (¿Cuál es un matching estable en la figura anterior?)
+\end{proof}
+
+\begin{corollary}
+Todo grafo bipartito $G$ satisface:
+\[
+    \boxed{\operatorname{ch}' (G) = \Delta (G).}
+\]
+\end{corollary}
+\begin{proof}
+Por el teorema, tenemos que $\operatorname{ch}' (G) = \chi ' (G)$. Por otro lado, $\chi ' (G) = \Delta (G)$ por el Teorema \ref{th:todo grafo bipartito cumple que su numero cromatico es Delta}.
+\end{proof}
 
 
 
+\subsection{Grafos perfectos}
+
+\begin{definition}
+El mayor número entero $n$ tal que $K_n \subset G$ como subgrafo, es el \textbf{número de clique} $\omega (G)$ de $G$.
+\end{definition}
+Claramente $\omega (G) \leq \chi (G)$, puesto que $\chi (K_m) = m$ para todo $m \geq 1$.
+
+\begin{obs}
+Sea $\alpha (G)$ el máximo número de vértices independientes de $G$. Observar que tenemos la siguiente dualidad: $\alpha (G) = \omega (\bar G)$ y que $\omega (G) = \alpha (\bar G)$.
+\end{obs}
+
+\begin{definition}
+Llamamos a un grafo \textbf{perfecto}, si para todo subgrafo inducido $H \subset G$ tiene número cromático $\chi (H) = \omega (H)$.
+\end{definition}
+En otras palabras, la cota obvia $\omega (H) \leq \chi (H)$ siempre basta para colorear $H$. Así, para probar que $\chi (G) > k$ en un grafo perfecto $G$, equivale a encontrar un subgrafo $K_{k+1}$ de $G$, que \textit{certifique} la no $k$-coloreabilidad de $G$.
+
+\begin{remark}
+Parecería que la clase de grafos perfectos fue definida de manera ``artificiar'': a pesar de ser cerrado bajo subgrafos inducidos (por definición), no es cerrado en general para subgrafos o supergrafos, mucho menos menores. Sin embargo, el concepto de perfección es sumamente importante para la teoría de grafos, pues existen varias clases fundamentales de grafos que son también perfecto; más aún, esta clase de grafos posee propiedades de dualidad con profundas conexiones con teoría de optimización y complejidad.
+\end{remark}
+
+\bigskip
+
+Existen varios ejemplos de tipos de grafos perfectos. Algunos serán mencionados en los ejercicios. Ahora, veremos que un tipo de grafo es perfecto: loso grafos \textit{cordales}:
+
+\begin{definition}
+Decimos que un grafo es \textbf{cordal} (o \textbf{triangulado}) si cada uno de sus ciclos de longitud $\geq 4$ tiene una cuerda, es decir, sus únicos subciclos inducidos son triángulos.
+\end{definition}
+
+Antes de seguir, si $G$ posee subgrafos inducidos $G_1,G_2$ y $S$, tales que $G = G_1 \cup G_2$ y $S = G_1 \cap G_2$, diremos que $G$ se obtiene a partir de $G_1$ y $G_2$ \textbf{pegando} estos grafos a lo largo de $S$.
+
+\begin{proposition}
+Un grafo es cordal si y solo si puede construirse recursivamente pegando grafos completos a lo largo de subgrafos completos.
+\end{proposition}
+\begin{proof}
+Si $G$ sse obtiene a partir de dos grafos cordales $G_1,G_2$ pegando ambos a lo largo de un subgrafo completo, entonces $G$ es claramente cordal: cualquier subciclo inducido de $G$ yace en $G_1$ o $G_2$, y es por lo tanto un triangulo. Como los grafos completos son cordales, esto prueba que todos los grafos construidos de esta manera son cordales.
+
+Recíprocamente, sea $G$ un grafo cordal. Probaremos por inducción en $n = \abs G$ que podemos construir $G$ de esta manera. Esto es trivial si $G$ es completo. Con lo cual, supongamos que $G$ no es completo, en particular $n > 1$. Sean $a,b \in G$ dos vértices no adyacentes, y sea $X \subset V(G) \setminus \{a,b\}$ un conjunto minimal que separa $a$ y $b$. Sea $C$ la componente de $G \setminus X$ que contiene $a$, y escribamos $G_1 := G[V(C) \cup X]$ y $G_2 := G \setminus C$. Entonces $G$ se obtiene a partir de $G_1$ y $G_2$ al pegar estos grafos a lo largo de $S:= G[X]$.
+
+Como $G_1$ y $G_2$ son ambos cordales (al ser subgrafos inducidos de $G$), se construyen por inducción de esta manera, con lo cual, basta ver que $S$ es completo. Por el absurdo, supongamos que existen $s,t \in S$ que no son adyacentes. Por la minimalidad de $X = V(S)$ como separador de $a,b$, tenemos que ambos $s$ y $t$ tienen un vecino en $C$. Por lo tanto, existe un $X$-camino de $s$ en $t$ en $G_1$; sea $P_1$ uno de estos caminos de tamaño mínimo. Análogamente, $G_2$ contiene un $X$-camino de tamaño mínimo, digamos $P_2$, desde $s$ hasta $t$. Entonces $P_1 \cup P_2$ es un ciclo sin cuerdas de longitud $\geq 4$, absurdo: $G$ es cordal.
+
+\Inkscape{Si $G_1$ y $G_2$ son cordales, entonces $G$ también.}
+\end{proof}
 
 
+\begin{proposition}
+Todo grafo cordal es perfecto.
+\end{proposition}
+\begin{proof}
+Como los grafos completos son perfectos, por la proposición anterior basta probar que todo grafo $G$ obtenido a partir de dos grafos perfectos $G_1,G_2$ luego de pegarlos a lo largo de un subgrafo completo $S$ es nuevamente perfecto. Luego seae $H \subset G$ cualquier subgrafo inducido; veamos que $\chi (H) \leq \omega (H)$.
+
+Sea $H_i := H \cap G_i$ para $i =1,2$ y sea $T := H \cap S$. Entonces $T$ es nuevamente completo, y $H$ se obtiene a partir de $H_1,H_2$ pegando a lo largo de $T$. Cada $H_i$ es un subgrafo inducido de $G_i$, y se puede colorear por $\omega (H_i)$ colores. Como $T$ es completo, ambos coloreos $H_1$ y $H_2$ se pueden combinar, luego de permutar los colores de alguno de ellos, tal que obtenemos un coloreo de $H$ con $\max \{\omega (H_1), \omega(H_2) \} \leq \omega (H)$ colores.
+\end{proof}
+
+Una caracterización muy famosa de los grafos perfectos vía una familia de subgrafos inducidos prohibidos: Los ciclos impares de grado $\geq 5$ y sus complementos.
+
+\begin{theorem}[El Teorema Fuerte de Grafos Perfectos - Chudnovsky, Robertson, Symour \& Thomas (2006)]
+Un grafo $G$ es perfecto si y solo si $G$ ni $\bar G$ contienen un ciclo impar de longitud $\geq 5$ como subgrafo inducido.
+\end{theorem}
+
+La demostración de este resultado es muy largo y complicado, sin embargo, probaremos de manera elemental dos corolarios inmediatos de este teorema:
+
+\begin{theorem}[Lovász (1972)]\label{th: lovasz 1 - todo grafo es perfecto si y solo si su complemento lo es}
+Un grafo es perfecto si y solo si su complemento lo es.
+\end{theorem}
+
+\begin{theorem}[Lovász (1972)]
+Un grafo $G$ es perfecto si y solo si
+\[
+    \abs H \leq \alpha (H) \cdot \omega (H)
+\]
+para todo subgrafo inducido $H \subset G$.
+\end{theorem}
+
+Antes de probar ambos resultados, necesitamos un lema. Sea $G$ un grafo y $x \in G$ un vértice, sea $G'$ obtenido a partir de $G$ al agregar un vértice $x'$ y uniéndolo a $x$ y a todos los vecinos de $x$. Decimos que $G'$ se obtiene a partir de $G$ al \textbf{expandir} el vértice $x$ a una arista $xx'$.
+
+\Inkscape{Expansión de un vértice $x$ en la demostración del Lema \ref{lema:la expansion de un grafo perfecto es perfecto}.}
+
+\begin{lemma}\label{lema:la expansion de un grafo perfecto es perfecto}
+Todo grafo obtenido a partir de un grafo perfecto al expandir un vértice es nuevamente perfecto.
+\end{lemma}
+\begin{proof}
+Sea $G$ un grafo perfecto, haremos inducción en $n = \abs G$. Expandir el vértice de $K_1$ nos da $K_2$, el cual es perfecto, esto prueba $n = 1$. En general, sea $n >1$ y $G'$ el grafo obtenido a partir de $G$ luego de expandir un vértice $x \in G$ a una arista $xx'$. Para probar que $G'$ es perfecto, basta ver que $\chi (G') \leq \omega (G')$. En efecto todo subgrafo propio inducido $H$ de $G'$ es isomorfo a un subgrafo inducido de $G$ o se obtiene a partir de un subgrafo propio inducido de $G$ al expandir $x$; en cualquier caso, $H$ es perfecto por hipótesis inductiva, y por loi tanto puede ser coloreado por $\omega (H) $ colores.
+
+Sea $\omega := \omega (G)$, entonces $\omega (G') = \omega$ o $\omega + 1$. Si $\omega (G') = \omega + 1$, entonces
+\[
+    \chi (G') \leq \chi (G) + 1 = \omega + 1 = \omega (G')
+\]
+y ganamos. Supongamos entonces que $\omega (G') = \omega$. Luego $x$ no yace en ningún subgrafo de $G$ isomorfo a $K_\omega$: de lo contrario, junto con $x'$ formaría un $K_{\omega + 1}$ de $G'$ y por lo tanto $\omega (G')$ sería $\omega + 1$, absurdo. Luego pintemos $G$ con $\omega$ colores. Como todo $K_\omega \subset G$ contiene un vértice del mismo color que $x$ (llamemos $X$ al conjunto de vértices de $G$ con el mismo color de $x$), pero no a $x$, el grafo $H:= G \setminus (X \setminus \{x\})$ tiene número de clique $\omega (H) < \omega$ (ver la figura anterior \ref{Figura:Clase \thenumeroClase - Dibujo \thenumeroDibujo}). Como $G$ es perfecto, podemos colorear $H$ con $\omega -1$ colores. Ahora, $X$ es un conjunto independiente, con lo cual el conjunto $(X \setminus \{x\}) \cup  \{x'\} = V(G' - H)$ es también independiente. Así, podemos extender el $(\omega -1)$-coloreo de $H$ a un $\omega$-coloreo de $G'$. Consecuentemente, $\chi (G') \leq \omega = \omega (G')$, como queríamos probar.
+\end{proof}
+
+Probemos ahora los dos teoremas.
+
+\begin{theorem}[Lovász (1972)]
+Un grafo es perfecto si y solo si su complemento lo es.
+\end{theorem}
+\begin{proof}
+Como $\bar {\bar G} = G$, basta ver que si $G = (V,E)$ es perfecto, entonces su complemento también. Hagamos inducción en $n = \abs G$.
+Si $n = 1$ esto es trivial, luego en general supongamos que $n \geq 2 $. Sea $\Kappa := \{V(K) | K \subset G \text{ es un subgrafo completo} \}$. Escribamos $\alpha := \alpha (G)$, y sea $\mathcal A := \{U \subset G | \text{$U$ es un conjunto independiente de vértices, con $\abs U = \alpha$}\}$.
+
+Todo subgrafo propio inducido de $\bar G$ es el complemento de un subgrafo propio inducido de $G$, y por lo tanto es perfecto por inducción. Con lo cual, para ver que $\bar G$ es perfecto, basta ver que $\chi (\bar G) \leq \omega (\bar G) = \alpha$. Para esto, encontraremos $K \in \Kappa$ tal que $K \cap A \neq \emptyset$ para todo $A \in \mathcal A$; consecuentemente
+\[
+    \omega (\bar G \setminus K ) = \alpha (G \setminus K) < \alpha = \omega (\bar G),
+\]
+luego por hipótesis inductiva:
+\[
+    \chi (\bar G) \overset{\text{$K$ es independiente en $\bar G$}}{\leq} \chi (\bar G \setminus K )+ 1 = \omega (\bar G \setminus K) + 1 \leq \omega (\bar G)
+\]
+como queríamos.
+
+Ahora, veamos que existe $K$ cumpliendo lo deseado. Para eso, supongamos por el absurdo que no, es decir, para todo $K \in \Kappa$ existe un $A_K \in \mathcal A$ tal que $K \cap A_K = \emptyset$. Reemplacemos en $G$ a cada vértice $x$ por un grafo completo $G_x$ de orden
+\[
+    k(x) := \abs{\Set{K \in \Kappa | x \in A_K}},
+\]
+y uniendo todos los vértices de $G_x$ con todos los vértices de $G_y$ si $xy \in E$. Así, obtenemos un grafo $G'$. Más aún, $G'$ se puede obtener al aplicar repetidas veces una expansión de vértices del grafo $G[\set{x \in V | k(x) > 0}]$. Al ser este un subgrafo inducido de $G$, debe ser perfecto, y por el Lema \ref{lema:la expansion de un grafo perfecto es perfecto}, $G'$ es perfecto. En particular,
+\begin{equation}\label{eq:clase 21 - coloreo - Teorema 1- eq 1}
+\chi (G') \leq \omega (G').
+\end{equation}
+
+Para obtener una contradicción a \eqref{eq:clase 21 - coloreo - Teorema 1- eq 1}, calcularemos los valores de $\omega (G')$ y de $\chi (G')$. Por construcción de $G'$, todo subgrafo maximal completo de $G'$ es de la forma $G'[\bigcup_{x \in X} G_x]$ para algún $X \in \Kappa$. Con lo cual, existe un $X \in \Kappa$ tal que
+\begin{align}
+\omega (G') &= \sum_{x \in X} k(x) \nonumber \\
+            &= \abs{\Set{(x, K) |  x\in X, K \in \Kappa, x \in A_K}} \nonumber \\
+            &= \sum_{K \in \Kappa} \abs{X \cap A_K} \nonumber \\
+            &\leq \abs{\Kappa} -1 , \label{eq:clase 21 - coloreo - Teorema 1- eq 2}
+\end{align}
+donde la última desigualdad se sigue de que $\abs {X \cap A_K} \leq 1$ para todo $K$, ya que $A_K$ es independiente pero $G[X]$ es completo, además $\abs{X \cap A_X} = 0$ por como elegimos $A_X$.
+
+Por otro lado,
+\begin{align*}
+\abs{G'} &= \sum_{x \in V} k(x) \\
+        &= \abs{\Set{(x, K) | x \in V, K \in \Kappa, x \in A_K}} \\
+        &= \sum_{K \in \Kappa} \abs{A_K} \\
+        &= \abs{\Kappa} \cdot \alpha.
+\end{align*}
+Como $\alpha (G') \leq \alpha$ por construcción de $G'$, tenemos que
+
+\begin{equation}\label{eq:clase 21 - coloreo - Teorema 1- eq 3}
+\chi (G') = \omega (G') = \sum_{K \in \Kappa}  \frac{\abs{G'}}{\alpha (G')} \geq \frac{\abs {G'}}{\alpha} = \abs{\Kappa},
+\end{equation}
+donde la primera desigualdad vale para todo grafo: las clases de colores de $G'$ particionan a $G'$ en conjuntos independientes (y por lo tanto tienen cardinal $\leq \alpha (G')$).
+
+Juntando \eqref{eq:clase 21 - coloreo - Teorema 1- eq 2} y \eqref{eq:clase 21 - coloreo - Teorema 1- eq 3}, obtenemos
+\[
+    \chi (G') \geq \abs{\Kappa} > \abs{\Kappa} - 1 \geq \omega (G'),
+\]
+contradiciendo \eqref{eq:clase 21 - coloreo - Teorema 1- eq 1}.
+\end{proof}
+
+\begin{obs}\label{obs:bipartitos son perfectos}
+Claramente los grafos bipartitos son perfectos. Luego, el teorema anterior implica que el complemento de un grafo bipartito también es perfecto.
+\end{obs}
+
+\begin{theorem}[Lovász (1972)]
+Un grafo $G$ es perfecto si y solo si
+\[
+    \abs H \leq \alpha (H) \cdot \omega (H)
+\]
+para todo subgrafo inducido $H \subset G$.
+\end{theorem}
+\begin{proof}
+Escribamos $\{v_1, \ldots,v_n\} := V(G)$, $\alpha := \alpha (G)$ y $\omega = \omega (G)$. La necesidad es inmediata: si $G$ es perfecto, entonces todo subgrafo inducido $H$ de $G$ puede ser particionado en a lo más $\omega (H)$ clases de colores, cada una conteniendo a lo más $\alpha (H)$ vértices.
+
+Para probar la recíproca, haremos inducción en $n = \abs G$. Supongamos que cada subgrafo inducido $H$ de $G$ cumple la desigualdad $\abs H \leq \alpha (H) \cdot \omega (H)$, pero que $G$ no es perfecto. Por hipótesis inductiva, todo subgrafo inducido propio de $G$ es perfeccto. Con lo cual, todo subconjunto independiente no vacío $U \subset V(G)$ satisface:
+\begin{equation}\label{eq:clase 21 - coloreo - Teorema 2- eq 1}
+\chi (G \setminus U) = \omega (G \setminus U) = \omega,
+\end{equation}
+en efecto, la primera igualdad proviene de la perfección de $G \setminus U$, mientras que $\omega (G \setminus U) \leq \omega$ es obvia, y además si $\chi (G \setminus U) < \omega$, luego tendríamos que $\chi (G) \leq \omega$, y por lo tanto $G$ sería perfecto, contradiciendo nuestra suposición.
+
+Así, apliquemos \eqref{eq:clase 21 - coloreo - Teorema 2- eq 1} al singleton $U = \{u \}$ y consideremos un $\omega$-coloreo de $G \setminus \{u\}$. Sea $K$ el conjunto de vértices de algún $K_\omega$ en $G$. Claramente,
+\begin{enumerate}[(1)]
+\item si $u \not \in K$, entonces $K$ contiene un color de cada clase de $G \setminus \{u\}$;
+\item Si $u \in K$, entonces $K$ contiene un color de todas las clases, salvo exactamente una, de $G \setminus \{u\}$.
+\end{enumerate}
+
+Sea $A_0 = \{u_1, \ldots, u_\alpha\}$ un conjunto independiente de $G$ de tamaño $\alpha$. Sean $A_1, \ldots, A_\omega$ las clases de colores de un $\omega$-coloreo de $G \setminus \{u_1\}$, y sean $A_{\omega + 1}, \ldots, A_{2\omega}$ las clases de colores de un $\omega$-coloreo de $G \setminus \{u_2\}$, y así sucesivamente. En total, obtenemos $\alpha \omega + 1$ conjuntos independientes $A_0, A_1, \ldots, A_{\alpha \omega}$ en $G$. Para cada $i = 0, \ldots, \alpha \omega$, existe por \eqref{eq:clase 21 - coloreo - Teorema 2- eq 1} un subgrafo completo $K_\omega \subset G \setminus A_{i}$; denotemos por $K_i$ al conjunto de sus vértices.
+
+Notar que si $K'$ es un conjunto de vértices de cualquier subgrafo completo $K_\omega$ de $G$, entonces
+\begin{equation}\label{eq:clase 21 - coloreo - Teorema 2- eq 2}
+K' \cap A_i = \emptyset \text{ para exactamente un $i = 0 , \ldots, \alpha \omega$}.
+\end{equation}
+En efecto, si $K' \cap A_0 = \emptyset$, entonces $K' \cap A_i \neq \emptyset$ para todo $i > 0$, por definición de $A_i$ y por el ítem (1). Similarmente, si $K' \cap A_0 \neq \emptyset$, entonces $\abs{K' \cap A_0} = 1$, con lo cual $K \cap A_i = \emptyset$ para exactamente un $i \neq 0$: por el ítem (2) aplicado al único $u' \in K' \cap A_0$, y por el ítem (3) aplicado al resto de los vértices de $A_0 \setminus \{u'\}$.
+
+Sea $J \in \reals^{(\alpha \omega + 1) \times (\alpha \omega + 1)}$ la matriz real con entradas cero en la diagonal principal y unos en el resto. Sea $A = (a_{ij}) \in \reals^{(\alpha \omega + 1) \times n}$ la matriz real cuyas filas son los vectores de incidencia de los conjuntos $A_i$ con $V(G)$:
+\[
+    a_{ij} = \begin{cases}
+            1 & \text{ si $v_j \in A_i$} \\
+            0 & \text{ si no}.
+    \end{cases}
+\]
+Similarmente, sea $B \in \reals^{n \times (\alpha \omega + 1)}$ la matriz cuyas columnas son los vectores de incidencia de los conjuntos $K_j$ con $V(G)$. Ahora, como $\abs{ A_i \cap K_i} = 0$ para todo $i$ por como elegimos $K_i$, tenemos que $A_i \cap K_j \neq \emptyset$ y por lo tanto, $\abs{ A_i \cap K_j} = 1$ para todo $i \neq j$, por \eqref{eq:clase 21 - coloreo - Teorema 2- eq 2}. Consecuentemente,
+\[
+    AB = J.
+\]
+Como $J$ es no singular, tenemos que $A$ tiene rango $\alpha \omega + 1$. En particular, $n \geq \alpha \omega + 1$, contradiciendo la condición del teorema para $H = G$.
+\end{proof}
 
 %%%%%%%%%%%
 \Clase{23/06/23}   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -4215,6 +4501,267 @@ Sea $\alpha \in M(u)$. Sea $P$ el $\alpha/\beta$-camino desde $v_k$ respecto de 
 \Inkscape{Ilustración del coloreo $c_k$ de $G- uv_k$, donde se puede apreciar el $\blue{\alpha}/\red{\beta}$-camino $P$ desde $v_k$.}
 
 \end{proof}
+
+
+
+
+
+
+%%%%%%%%%%%
+\Clase{29/06/23}   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%
+
+
+\subsection{Retomamos lista coloreo}
+
+\begin{definition}
+Decimos que un grafo planar $G$ es \textbf{casi triangulación} si $G$ admite una incrustación en el plano donde cada cara, exceptuando la cara exterior, es un triángulo, y la frontera de la cara externa es un ciclo (no hay vértices repetidos).
+\end{definition}
+
+\begin{theorem}
+Sea $G$ una casi triangulación y sean $v_1, \ldots, v_k, v_1$ los vértices, en orden, que acotan la cara externa de $G$. Supongamos que las las listas de colores asignadas a los vértices de $G$ tienen las siguientes propiedades:
+\begin{enumerate}[(i)]
+\item $v_1,v_2$ tienen listas de $1$ color cada una, $L(v_1) \neq L(v_2)$.
+\item $v_3, v_4, \ldots, v_k$ tienen listas de $3$ colores cada una.
+\item El resto de los vértices tienen listas de $5$ colores.
+\end{enumerate}
+Entonces, existe una coloración de los vértices de $G$, donde cada vértice recibe un color de su lista.
+\end{theorem}
+\begin{proof}
+Haremos inducción en la cantidad de vértices $\abs G = n$. Si $n \leq 3$ es muy fácil de ver. Luego, supongamos que $n \geq 4$. Supongamos por el absurdo que existe un contraejemplo $G$ de cardinal $n$ mínimo.
+
+Sea $C$ el ciclo que constituye la frontera de la cara externa de $G$. Digamos $C : v_1 v_2 \cdots v_k v_1$, y supongamos que las listas del coloreo satisfacen las hipótesis del teorema. Consideremos dos casos:
+\begin{enumerate}[(1)]
+\item $C$ tiene una cuerda.
+\item $C$ no tiene cuerdas.
+\end{enumerate}
+
+En el caso (1), sea $uv$ una cuerda de $C$. Notar que $uv$ separa el grafo $G$ en dos casi triangulaciones, digamos $G_1$ y $G_2$ (Ver la siguiente figura \ref{figura:clase 23 - figura 1}). Con ``separar'' nos referimos a que \textit{topológicamente} obtenemos dos dibujos disjuntos salvo el segmento $uv$. Acá, $G_1$ y $G_2$ comparten solamente la cuerda $uv$. Notar que son subgrafos inducidos de $G$, además, $v_1$ y $v_2$ están ambos en $G_1$ o ambos en $G_2$, digamos $v_1,v_2 \in G_1 \setminus G_2$.
+
+\Inkscape{``Separamos'' $G$ en dos subgrafos inducidos $G_1$ y $G_2$, tales que no hay vértices de $G_1$ adyacentes a vértices de $G_2$, salvo por $u,v$.}\label{figura:clase 23 - figura 1}
+
+Como $\abs{G_i} < \abs{G}$ para $i = 1, 2$, tenemos por un lado que $G_1$ admite una coloración $c$ donde cada vértice recibe un color de su lista. Observar que cada vértice recibe un color de su lista. Además, $c$ fija los colores de $u$ y $v$. Entonces, tomando $\{v_1',v_2'\}$ en $G_2$ como $\{u,v\}$, fijamos las listas de $v_1'$ y $v_2'$ de acuerdo a la coloración $c$:
+\[
+    \{L(v_1'), L(v_2') \} = \{c(u), c(v)\},
+\]
+luego $G_2$ también tiene una coloración por minimalidad de $G$, digamos $c'$.
+
+Juntando la lista-coloración de $G_1$ con la de $G_2$ obtenemos una lista coloración de $G$: $c \cup c'$. Absurdo. Notar que podemos juntar ambas lista-coloraciones porque no existen vértices $w_1 \in G_1$ y $w_2 \in G_2$ adyacentes en $G$, salvo por $u$ y $v$, pues $G$ es planar.
+
+\bigskip
+
+Ahora veamos el caso (2): $G$ no tiene cuerdas. Sean $v_{k-1}, u_1, u_2, \ldots, u_m, v_1$ los vecinos de $v_k$ en $G$, en el orden de la incrustación. Como $G$ es una casi triangulación, $v_{k-1}, u_1, u_2, \ldots, u_m, v_1$, forman un camino, y por lo tanto, $G\setminus \{v_k\}$ es una casi triangulación.
+
+Sean $x,y$ dos colores distintos en la lista de $v_k$ que sean también distintos al único color de la lista de $v_1$. Sea $\{L_v\}_{v \in G}$ el conjunto de listas de $G$. Consideramos las siguientes listas en $G\setminus \{v_k\}$:
+\begin{itemize}
+\item $L'(v_1) = L(v_1)$.
+\item $L'(v_{k-1}) = L(v_{k-1})$.
+\item $L'(u_i) = L(u_i) \setminus \{x,y\}$.
+\item $L'(v) = L(v)$ para todo $v \not \in \{v_{k-1}, u_1, \ldots, u_m, v_1 \}$.
+\end{itemize}
+Así, $G- \{v_k\}$ con el conjunto de listas $\{L'_v\}_{v \in G \setminus \{v_k\}}$ satisfacen las hipótesis del teorema, luego por minimalidad de $G$ existe una lista-coloración con estas listas.
+
+\Inkscape{Ilustración del caso (2).}
+
+Ahora, sabemos que los $u_j$ y $v_1$ no fueron coloreados con los colores $x$ o $y$. Por lo tanto, el único vértice que podría tomar esos colores es $v_{k-1}$, si lo hace, toma a lo más uno de ellos, luego coloreamos $v_k$ con el otro. Esto nos permite colorear $G$, absurdo.
+\end{proof}
+
+
+\begin{theorem}[Thomasen (1994)]\label{th:teorema de thomasen}
+Todo grafo planar es $5$-lista-coloreable.
+\end{theorem}
+\begin{proof}
+El teorema anterior prueba el Teorema de Thomasen. En efecto, sea $G$ un grafo planar, podemos asumir que $G$ es una casi triangulación pues por la Proposición \ref{proposition:grafo es maximalmente plano si y solo si es maximalpmente planar} es un subgrafo de un grafo planar maximal, i.e. una triangulación $G'$ (ver la Proposición \ref{proposition:un grafo es maximalmente plano si y solo si es una triangulacion}) y basta colorear $G'$. Simplifiquemos la notación escribiendo $G$ en lugar de $G'$. Sea $\{L(v)\}_{v \in G}$ una asignación de listas de colores de tamaño $5$. Si $G$ es una casi triangulación, entonces aplicamos el teorema anterior sobre $G$ considerando listas $\{ L'(v)\}_{v \in G}$ tales que $L'(v_1), L'(v_2)$ son subconjuntos de un elemento (distintos entre sí) de $L(v_1), L(v_2)$ respectivamente; $L'(v_j)$ es un subconjunto de cardinal $3$ de $L(v_j)$ para $j \neq 1,2$; y para el resto de los vértices $L'(v) = L(v)$.
+\end{proof}
+
+
+\begin{remark}
+Es interesante observar que esta demostración se beneficia del uso de una hipótesis inductiva mucho más fuerte para probar el resultado, y en particular implica el Teorema de los $5$-colores para grafos planares \ref{th:teorema de los 5-colores - para grafos planares}. En otras palabras, una buena idea para demostrar $k$-colorabilidad de un grafo, es intentar probar que es $k$-listas-coloreable.
+
+Sin embargo, esto no es siempre posible: en general existen grafos planares que no son $4$-lista-coloreables, mientras que si siempre son $4$-coloreables por el Teorema de los $4$ colores \ref{th:teorema del los 4 colores - para grafos planares}
+
+\end{remark}
+
+
+
+
+
+
+
+
+
+
+
+\subsection{Ejercicios}
+
+
+
+
+\begin{exercise}\label{ejercicio:coloreo de grafos - ejercicio 1 - nociones equivalentes de acotar numero cromatico y orientacion de grafos}
+Probar que las siguientes afirmaciones para un grafo $G$ son equivalentes:
+\begin{enumerate}[(i)]
+\item $\chi (G) \leq k$.
+\item $G$ tiene una orientación sin caminos dirigidos de longitud $k$ y sin ciclos dirigidos.
+\item $G$ tiene una orientación sin caminos dirigidos de longitud $k$.
+\end{enumerate}
+\end{exercise}
+\begin{solution}
+\begin{enumerate}[(i)]
+\item[]
+\item[(i)$\Rightarrow$(ii)] Sea $c : G \rightarrow \{1, \ldots, k$ un $k$-coloreo de $G$. Orientamos las aristas de $G$ de la siguiente manera: si $e = xy \in E(G)$, entonces $e$ se dirige a $y$ si $c(x) < c(y)$ o se dirige a $x$ si $c(x) > c(y)$. Claramente no tiene ciclos dirigidos. Tampoco tiene caminos dirigidos de longitud $k$, pues si $P: x_1, \ldots, x_r$ es un camino dirigido, entonces
+\[
+    1 \leq c(x_1) < c(x_2) < \cdots < c(x_r) \leq k,
+\]
+y por lo tanto $r \leq k$, i.e. $\Abs P < k$.
+\item[(ii)$\Rightarrow$(iii)] Trivial.
+\item[(iii)$\Rightarrow$(i)] Sea $H$ un subgrafo aciclico maximal de $G$; notar que $V(H) = V(G)$. Definamos el siguiente coloreo de los vértices de $G$: $c(x) = 0$ si el único camino dirigido que comienza en $x$ es el camino trivial, o
+\[
+    c(x) = \max \{ \Abs P | P \subset H \text{ es un camino dirigido que comienza en $x$} \}
+\]
+si no. Veamos que efectivamente $c$ es un coloreo de $G$. Supongamos por el absurdo que existen dos vértices $x,y$ adyacentes en $G$ con el mismo color $c = c(x) = c(y)$, sin pérdida de generalidad $e = xy$ se dirige hacia $y$.
+
+Pueden ocurrir dos casos. El primero, si $e \in H$, entonces claramente se puede extender un camino dirigido $P \subset H$ empezando en $y$ a uno más largo de longitud $c + 1 > c(x)$ que empieza en $x$, pues $H$ es acíclico. Por otro lado, si $e \not \in H$, entonces $H + e$ tiene un ciclo por maximalidad de $H$, es decir, existe un camino dirigido desde $x$ hacia $y$; juntando este camino con un camino dirigido $P \subset H$ empezando en $y$ de tamaño máximo $c$ obtenemos otro absurdo (se pueden combinar porque $H$ es aciclico).
+\end{enumerate}
+
+\end{solution}
+
+
+
+
+\begin{exercise}
+Dado un grafo $G$ y un entero $k \in \naturals$, notamos $P_G (k)$ al número de coloreos de vértices $V(G) \rightarrow \{1, \ldots,k\}$. Probar que $P_G$ es un polinomio en $k$ de grado $n := \abs G$, donde el coeficiente de $k^n$ es $1$ y el coeficiente de $k^{n-1}$ es $- \Abs G$.
+
+Llamamos a este polinomio el \textbf{polinomio cromático} de $G$.
+\end{exercise}
+\begin{solution}
+Lo probaremos por inducción en $r = \abs G + \Abs G$. Si $r = 0$ entonces $P_G (k) = 1$ es el polinomio constantemente $1$ y el enunciado vale. Para el caso general, $r > 0$ notemos que tenemos las siguientes identidades:
+\begin{enumerate}[(1)]
+\item $P_{G \cup \{x'\}} (k) = k P_G (k), \forall k \in \naturals$ si $x' \not \in G$ es un vértice que lo agregamos a $G$ sin unir ninguna arista.
+\item Si $e = xy \not \in E(G)$, entonces $P_{G + e} (k) = P_G (k) - P_{G/e} (k)$.
+\end{enumerate}
+Claramente estas identidades prueban que $P_G$ siempre es un polinomio mónico de grado $n = \abs G$, tal que su coeficiente que acompaña a $k^{n-1}$ es $- \Abs G$.
+\end{solution}
+
+\begin{exercise}
+Con la notación del ejercicio anterior: probar que los grafos $G$ con polinomio cromático $P_G (k) = k (k-1)^{n-1}$ son los árboles.
+\end{exercise}
+\begin{solution}
+Probaremos por inducción en el grado $n$ de $G$ (equivalentemente el grado de $P_G$) que la clase de los grafos con polinomio cromático $k(k-1)^{n-1}$ son los bosques.
+
+Primero veamos que si $G$ tiene un polinomio cromático $P_G (k) = k(k-1)^{n-1}$, entonces $G$ es un árbol. Primero supongamos que $G$ es conexo. En efecto, $n = \abs G$ es el grado del polinomio $P_G$, y el coeficiente que acompaña $k^{n-1}$ es $-(n-1)$ en $P_G$, luego el ejercicio anterior nos dice que $\Abs G = n-1$. Es decir, $G$ es un árbol por la Proposición \ref{corolario:todo grafo conexo de n vertices es un arbol si y solo si tiene n-1 aristas}. Ahora, si $G$ no fuera conexo, se puede escribir como la unión de dos grafos sin aristas entre sí: $G = G_1 \cup G_2$; más aún, notar que $P_G (k) = P_{G_1} (k) \cdot P_{G_2} (k)$, digamos, $P_{G_1} (k) = k(k-1)^j$ y $P_{G_2} (k) = (k-1)^{n-1 - j}$ con $0 \leq j \leq n-2$. Por inducción tenemos que $G_1$ es un bosque, y similarmente, separando a $G_2$ en sus componentes conexas, podemos ver que $G_2$ también.
+
+Recíprocamente, los bosques de grado $n =1$ cumplen. En general, si $x$ es una hoja de $G$, notar que $G' := G \setminus \{x\}$ es bosque. Como $G$ se obtiene a partir de $G'$ al agregar un vértice disjunto $x$ y luego una arista $e$ incidente a $x$, tenemos que por las identidades de polinomios cromáticos que probamos en la solición del ejercicio anterior:
+\begin{align*}
+P_G (k) &= P_{G' \cup \{x\} + e} (k) \\
+        &= P_{G' \cup \{x \}} (k) - P_{(G' \cup \{x \} + e)/e} (k) \\
+        &= k \cdot P_{G'} (k) - P_{G'} (k),
+\end{align*}
+luego el resultado se sigue de reemplazar $P_{G'} (k) = k (k-1)^{n-2}$ (hipótesis inductiva).
+\end{solution}
+
+\begin{exercise}
+Responder las siguientes preguntas:
+\begin{enumerate}
+\item ¿Es cierto que todo grafo orientado tiene núcleo?
+\item ¿Es cierto que todo grafo tiene una orientación donde todo subgrafo inducido tiene núcleo?
+\item ¿Todo grafo tiene una orientación con núcleo?
+\end{enumerate}
+\end{exercise}
+\begin{solution}
+Respuestas:
+\begin{enumerate}
+\item No: $G = K_3$ el triángulo es un contraejemplo (cf. la siguiente figura).
+\Inkscape{Ilustración de un $3$-ciclo orientado.}
+\item No: $G = K_5$ es un contraejemplo. En efecto, $G$ tiene $\chi (G) = 5$, por lo tanto $\chi (G) > 4$, luego podemos aplicar la equivalencia del Ejercicio \ref{ejercicio:coloreo de grafos - ejercicio 1 - nociones equivalentes de acotar numero cromatico y orientacion de grafos}. Así, para toda orientación de $G$, existe un camino dirigido de longitud $4$. Como el triángulo $K_3$ orientado para que sea un ciclo orientado no tiene núcleo, basta forzar todas las combinaciones de tres vértices en $G$ y observar que tiene que haber un $3$-ciclo orientado. (cf. la siguiente figura).
+\Inkscape{Ilustración de una orientación de $G =K_5$ con un $4$-camino orientado \blue{$P$} y un subgrafo inducido \red{$T = K_3$}, el cual es un triángulo orientado.}
+\item Si: sea $U$ un conjunto de vértices aislados de $G$ de tamaño máximo ($\abs U = \alpha (G)$). Entonces todas las aristas están cubiertas por un vértice de $U$ (por maximalidad de $U$); más aún, cada arista tiene un único vértice en $U$ como extremo, pues $U$ es un conjunto aislado. Orientamos las aristas de $G$ apuntando hacia el único vértice en $U$ que la cubre. Por construcción se tiene que $U$ es núcleo de esta orientación.
+\end{enumerate}
+\end{solution}
+
+\begin{exercise}
+Probar que todo grafo dirigido sin subciclos impares tiene núcleo.
+\end{exercise}
+\begin{solution}
+Sea $G$ un grafo como en el enunciado, y sea $H$ un subgrafo acíclico dirigido maximal (notar que $H$ genera $G$, pues seguro que contiene a un bosque generador). Definamos la siguiente función en los vértices $v$ de $G$:
+\[
+    f(v) := \begin{cases}
+    0 & \text{ si todos los caminos maximales $P$ en $H$ empezando en $v$ tienen longitud par} \\
+    1 & \text{ si no.}
+    \end{cases}
+\]
+Afirmamos que $U := f^{-1} (0)$ es un núcleo de $G$.
+
+En efecto, primero veamos que $U$ es un conjunto independiente. Si existieran dos vértices $u,v \in U$ con arista $e = uv \in E(G)$ dirigida hacia $v$, pueden ocurrir dos casos: $e \in H$ y por lo tanto $u$ tiene un camino maximal $P$ en $H$ empezando en $u$ de longitud impar, pues podemos elegir uno de longitud par empezando en $v$ de $H$ y formar otro concatenando con $v$; o si $e \not \in H$, tenemos que por maximalidad de $H$, $H+ e$ tiene un ciclo (par por hipótesis), digamos $C: u v \cdots u$. Con lo cual, este ciclo induce un camino dirigido impar en $H$ saliendo de $v$ hacia $u$; concatenandoló con un camino dirigido par máximal de $H$ saliendo de $u$ obtenemos un camino impar maximal saliendo de $v$, absurdo.
+
+Ahora, veamos que si $s \in G \setminus U$, sale una arista desde $s$ hacia un vértice de $U$. En efecto, sea $P: s u \cdots$ un camino dirigido maximal
+\end{solution}
+
+\begin{exercise}
+Probar el Teorema \ref{th:teorema de König - en todo grafo bipartito sin vertices aislados alpha = beta '} utilizando herramientas vistas en esta sección.
+\end{exercise}
+\begin{solution}
+Notar que $\alpha (G) = \omega (\bar G)$. Como $\bar G$ es perfecto (ver la Observación \ref{obs:bipartitos son perfectos}), tenemos que $\omega (\bar G) = \chi (\bar G)$. Luego veamos que $\chi (\bar G) = \beta '(G)$, en efecto, encontrar un coloreo mínimo de los vértices de $\bar G$ equivale a encontrar un cubrimiento mínimo de los vértices utilizando aristas de $G$.
+\end{solution}
+
+
+\begin{definition}
+Un grafo se dice \textbf{grafo comparable}, si existe un orden parcial de los vértices tal que dos vértices son adyacentes si y solo si son comparables en este orden parcial.
+\end{definition}
+\begin{exercise}
+Probar que los grafos comparables son perfectos.
+\end{exercise}
+\begin{solution}
+Sea $G$ un grafo comparable. Por el Teorema \ref{th: lovasz 1 - todo grafo es perfecto si y solo si su complemento lo es}, basta probar que $k:= \bar G$ es $\omega (\bar G)$-coloreable. Pero $\omega (\bar G) = \alpha (G)$ es igual al máximo número de vértices aislados de $G$, equivalentemente, es igual al máximo número de anticadenas (con el orden parcial de $G$), el cual es igual al mínimo número de cadenas (caminos dirigidos) que cubren $G$ por el Corolario \ref{corolario:teorema de Dilworth}. Ahora, enumeramos a estas cadenas $P_j$ con $1 \leq j \leq k$, y pintamos cada vértice $v \in \bar G$ de color $i \in \{j | v \in P_j\}$. Efectivamente, esto es un $k$-coloreo de $\bar G$: si $v,w$ fueran dos vértices de $\bar G$ del mismo color, tales que $vw \in E(\bar G)$, entonces por definición del compleneto, $v$ y $w$ no son comparables en el orden parcial de $G$, pero tienen el mismo color, i.e., están en la misma cadena $P_{i_0}$ y luego son comparables, absurdo.
+\end{solution}
+
+\begin{definition}
+Un grafo $G$ se llama \textbf{grafo intervalo}, si existe un conjunto de intervalos reales $\{I_v | v \in v(G) \}$ tal que $I_u \cap I_v \neq \emptyset$ si y solo si $uv \in E(G)$.
+\end{definition}
+
+\begin{exercise}
+ Probar que:
+\begin{enumerate}[(i)]
+\item Los grafos intervalo son cordales.
+\item El complemento de un grafo intervalo es un grafo de compatibilidad.
+\end{enumerate}
+\end{exercise}
+\begin{solution}
+Como el enunciado del ejercicio es más interesante que su sencilla solución, la omitiremos.
+\end{solution}
+Notar que en particular, los grafos intervalo son perfectos.
+
+\begin{exercise}
+En clase demostramos que para todo grafo bipartito se tiene $\chi' (G) = \Delta (G)$. Sin usar este resultado, demuestre que $\chi' (G) = k$ para todo grafo bipartito $k$-regular $G$.
+\end{exercise}
+
+\begin{solution}
+Como $G$ es $k$-regular, tenemos que $k = \Delta (G) \leq \chi ' (G)$. Probemos por inducción en $k\geq 1$. Si $k = 1$ es trivial.
+
+Sea $M$ un matching perfecto de $G$, existe por el Teorema \ref{corollary:König-Frobenius - todo bigrafo regular no trivial tiene un matching perfecto}. Pintemos todos esas aristas de un color $1$. Consideremos ahora $G'$, es un grafo bipartito $(k-1)$-regular, por hipótesis inductiva $G'$ tiene un $(k-1)$-arista-coloreo, digamos con colores $2, \ldots, k$. Juntando el coloreo de $G'$ con el coloreo de $M$, obtenemos un $k$-arista-coloreo de $G$.
+\end{solution}
+
+\begin{exercise}
+Sea $G$ un grafo línea. Encuentre una cota superior para $\ch G$ en términos de $\chi (G)$.
+\end{exercise}
+
+\begin{solution}
+ Sabemos que $G = L(H)$ para un grafo $G$ y que $\chi (G) = \chi' (H) \geq \Delta (H)$. Notemos que el algorítmo glotón permite probar de manera análoga que el caso del número cromático:
+ \[
+     \ch G \leq \Delta (G) + 1.
+ \]
+ Por otro lado, $\Delta (G) \leq 2 \Delta (H) - 2$. Más aún, el Teorema de Vizing \ref{th:teorema de Vizing} implica que $\Delta (H) \leq \chi ' (H) = \chi (G)$. Con lo cual, juntando todo:
+ \[
+     \ch G \leq 2 \chi (G) - 1 .
+ \]
+\end{solution}
+
+
+
+
+
+
+
+
 
 
 
