@@ -2255,7 +2255,7 @@ Por un lado, cada componente conexa no trivial debe tener una arista, que debe s
 Por otro lado, cada vértice $u$ de un cubrimiento $U$ por vértices de $G$ de tamaño mínimo $\beta (G)$ es extremo de alguna arista $e_u$ cuyo otro extremo está fuera de $U$. Luego si $u y u'$ son distintos, es porque sus aristas $e_u$ y $e_{u'}$ también lo son. Esto nos dice que $G$ tiene al menos $\abs U = \beta (G)$ aristas. Como trivialmente $\abs U \leq \abs G$, se tiene la segunda desigualdad. Notar que esta cota es tight porque podemos considerar a $G$ como la unión disjunta de una cantidad $k$ de $1$-caminos.
 \end{proof}
 
-\begin{theorem}[König-Egevary (1931)]
+\begin{theorem}[König-Egevary (1931)]\label{th:König-Egevary en todo grafo bipartito el tamaño maximo de un matching es igual al tamaño mínimo de un cubrimiento por vertices de las aristas}
 Si $G$ es bipartito, entonces
 \[
     \boxed{\alpha'(G) = \beta (G).}
@@ -2997,6 +2997,18 @@ Fijemos una columna, digamos $c = c_i$, tal que no tiene todas sus cartas de un 
 \end{enumerate}
 \end{solution}
 
+\begin{exercise}\label{exercise:matching perfecto de un n-n bigrafo tal que hay mas de n(n-1) aristas}
+Sea $G$ un $X,Y$-bigrafo con $\abs X = \abs Y = k \geq 1$ y más de $k(k-1)$ aristas. Probar que $G$ tiene un matching perfecto.
+\end{exercise}
+\begin{solution}
+Por el Teorema de König-Egevary \ref{th:König-Egevary en todo grafo bipartito el tamaño maximo de un matching es igual al tamaño mínimo de un cubrimiento por vertices de las aristas}, probar que $G$ tiene un matching perfecto, equivale a probar que todo cubrimiento por vértices de las aristas tiene almenos $k$ elementos.
+
+Ahora, si $U$ es un tal cubrimiento y $m = \abs U$, tenemos que
+\[
+    k(k-1) < \Abs G \leq k m.
+\]
+Es decir, $k-1 < m$, como queríamos probar.
+\end{solution}
 
 \begin{definition}
 Decimos que un grafo $G$ es \textbf{vértice-transitivo} si para todo par de vértices $v,w\in G$ existe un automorfismo de $G$ tal que $v \mapsto w$.
@@ -3946,7 +3958,18 @@ Para $i,j,k$ distintos, los caminos $C_{i,j}$ y $C_{i,k}$ se intersectan solo en
 Finalmente, alguno de estos caminos $C_{i,j}$ tiene que tener más de dos vértices, de lo contrario $H$ y por lo tanto $G$, serían un completo $K_\Delta$; digamos $C_{1,2}$ con un vértice $u \neq v_1,v_2$ de color $1$. Consideremos la componente $U_{1,3}$ de $H_{1,3}$ que contiene a $u$. Por todo lo discutido anteriormente $v_1, v_3 \not \in U_{1,3}$, luego intercambiar los colores $1,3$ de $U_{1,3}$ cortan la cadena de Kempen $C_{1,2}$ y por lo tanto podemos $\Delta$-colorear a $G$ como antes.
 \end{proof}
 
+\begin{example}
+A veces la cota que da el Teorema de Brooks \ref{th:brooks - un grafo conexo no completo ni ciclo impar luego chi(G) <= Delta(G)}. En efecto, sea $k \geq 3$, consideremos el grafo $G$ obtenido a partir de un camino
+\[
+    P_k : x_0 \cdot x_1 \cdot x_2 \cdots x_k,
+\]
+luego de agregar las aristas $x_0 x_k, x_1 x_k, \ldots, x_{k-2} x_k$. Notar que $\Delta (G) = d_G (x_k) = k \geq 3$, y que con queste orden, el algorítmo glotón prueba que $\col G \leq 3$. Así,
+\[
+    \chi (G) \leq \col G \leq 3 \leq k.
+\]
 
+\Inkscape{Ilustración de $G$. Comparar con el Algorítmo glotón \ref{prop:algoritmo gloton}.}
+\end{example}
 
 
 
@@ -4015,16 +4038,27 @@ Recíprocamente, supongamos que $G$ es un grafo $3$-crítico. $G$ tiene un ciclo
 \end{solution}
 
 \begin{exercise}
+Probar que si $G$ es un grafo $k$-crítico, entonces $\delta (G) \geq k-1$.
+\end{exercise}
+\begin{solution}
+En efecto, si existiera $v \in G$ tal que $d (v) \leq k-2$, entonces podríamos fácilmente extender un $(k-1)$-coloreo de $G \setminus \{v\}$ a un $(k-1)$-coloreo de $G$. Sin embargo, $\chi (G) = k$. Esto prueba que $\delta (G) \geq k-1$.
+\end{solution}
+
+\begin{exercise}
 Mostrar que todo grafo $k$-cromático crítico es $(k-1)$-arista-conexo.
 \end{exercise}
 \begin{solution}
-Procederemos en dos pasos: primero probaremos que sin pérdida de generalidad, podemos suponer que todo vértice de $G$ está contenido en un subgrafo completo de orden $k$ de $G$, luego probaremos que esto implica fácilmente que entre todo par de puntos existen al menos $k-1$ caminos arista-disjuntos, y por lo tanto el ejercicio se segirá de la versión global del Teorema de Menger \ref{th:version global de Menger}.
-
-En efecto, sea $x \in G$ fijo, notemos que tiene $k-1$ vecinos, de lo contrario podríamos extender un $(k-1)$-coloreo de $G \setminus \{x\}$ ($G$ es $k$-cromático crítico) a un $(k-1)$-coloreo de $G$, contradiciendo que $k = \chi (G)$. Más aún, los podemos suponer todos de distinto color (si no podríamos extender un $(k-1)$-coloreo de $G \setminus \{x\}$ a $G$). Ahora, veamos que si $y,z \in N_G(x)$ son tales que $yz \not \in E(G)$ y son de distinto color, entonces $G' := G + yz$ es $k$-cromático crítico y que si $G'$ es $(k-1)$-arista-conexo, entonces $G$ también lo es; esto nos reducirá al caso en el que $G$ cumple la propiedad de que todos sus vértices están en un subgrafo $k$-completo. Agregar una arista entre dos vecinos $y,z$ de distinto color, de $x$ en $G$ no cambia el número cromático, más aún, no cambia que sea $k$-crítico, salvo que exista un vértice $w \neq y,z$ tal que existan $k-1$ cadenas de kempen p
-
-Si $G$ es arista maximal con esta propiedad, entonces
+Notar que esto equivale a que cualquier enlace (conjunto de corte minimal) tenga almenos $k-1$ aristas. Luego el siguiente lema aplicado a $X = \{v\}$ e $Y = V(G) \setminus \{v\}$, implica el resultado:
 \end{solution}
 
+\begin{lemma}
+Sea $G$ un grafo con $\chi (G) > k$ y una partición de los vértices de $G$ dada por $X,Y$ tal que $G[X]$ y $G[Y]$ son $k$-coloreables, entonces el corte $E(X,Y)$ tiene almenos $k$ aristas.
+\end{lemma}
+\begin{proof}
+Tomemos particiones $A_1, \ldots, A_k$ y $B_1, \ldots, B_k$ de los vértices de $G[X]$ y $G[Y]$ respectivamente, de manera que los conjuntos son de vértices aislados. Supongamos por el absurdo que hay a lo más $k-1$ aristas en $E(X,Y)$. Consideremos el grafo bipartito $H$ con vértices $A_i$, $B_j$ donde $A_i{B_j}$ es una arista si y solo si no existe una $A_i,B_j$-arista en $E(X,Y)$. Entonces $H$ tiene más de $k(k-1)$ aristas. Por el Ejercicio \ref{exercise:matching perfecto de un n-n bigrafo tal que hay mas de n(n-1) aristas}, esto implica que $H$ tiene un matching perfecto. Digamos que esta biyección relaciona $A_1$ con $B_1$, $A_2$ con $B_2$, etc.
+
+Así, pintando $A_i$ y $B_i$ de color $i$ en $G$, obtenemos qune $k$-coloreo de $G$: no hay aristas entre $A_i$ y $B_i$ para todo $i =1, \ldots, k$. Esto es una contradicción, pues por hipótesis $\chi (G) > k$. Con lo cual, $E(X,Y)$ tiene almenos $k$ aristas, como queríamos demostrar.
+\end{proof}
 
 
 
@@ -4142,18 +4176,22 @@ Es fácil extender esta idea para cualquier cantidad $k$, utilizando grafos bipa
 \end{example}
 
 
-\begin{proposition}
+\begin{proposition}\label{proposicion:choice es menor o igual que coloreo menor o igual que delta + 1}
 \begin{enumerate}
-\item Tenemos que $\ch G \leq \col G$.
-\item Hay una versión de Brooks para $\ch G$.
+\item Tenemos que $\ch G \leq \col G$. En particular
+\[\ch G \leq \Delta (G) + 1.\]
+\item Hay una versión de Brooks para $\ch G$: si $G$ no es completo ni ciclo impar, entonces $\ch G \leq \Delta (G)$.
 \end{enumerate}
 \end{proposition}
+\begin{proof}
+Solo probaremos la primera afirmación, pues la segunda es más dificil.
 
-Más aún, tenemos el siguiente toerema:
-
-\begin{theorem}[Thomasen (1994)]
-Todo grafo planar es $5$-lista-coloreable.
-\end{theorem}
+Sea $\{v_i\}_{i = 1}^n$ un ordenamiento arbitrario de los vértices de $G$, y sea
+\[
+    d = \max_{i>1}d_{G[v_1, \ldots, v_{i-1}]} (v_i) + 1.
+\]
+Entonces $G$ es $d$-lista-coloreable: aplicamos el algorítmo glotón en este orden. Luego $\ch G \leq d$. Como el orden era arbitrario, tomando un orden que minimice $d$, se sigue que $\ch G \leq \col G$.
+\end{proof}
 
 
 
@@ -4197,7 +4235,7 @@ Sea $D$ un grafo dirigido. Llamamos a un conjunto independiente de vértices $U 
 \end{definition}
 Notar que los núcleos de un grafo dirigido $D$ no vacío son no vacíos también.
 
-\begin{lemma}
+\begin{lemma}[Lema del Núcleo]\label{lema:lema del nucleo}
 Sea $H$ un grafo y $(S_v)_{v \in H}$ una familia de listas. Si $H$ tiene una orientación $D$ con $d^+ (v) < \abs{S_v}$ para todo $v$, tal que todo subgrafo inducido de $D$ tiene un núcleo, entonces $H$ puede ser coloreado a partir de las listas $S_v$.
 \end{lemma}
 \begin{proof}
@@ -4608,7 +4646,7 @@ Probar que las siguientes afirmaciones para un grafo $G$ son equivalentes:
 \begin{solution}
 \begin{enumerate}[(i)]
 \item[]
-\item[(i)$\Rightarrow$(ii)] Sea $c : G \rightarrow \{1, \ldots, k$ un $k$-coloreo de $G$. Orientamos las aristas de $G$ de la siguiente manera: si $e = xy \in E(G)$, entonces $e$ se dirige a $y$ si $c(x) < c(y)$ o se dirige a $x$ si $c(x) > c(y)$. Claramente no tiene ciclos dirigidos. Tampoco tiene caminos dirigidos de longitud $k$, pues si $P: x_1, \ldots, x_r$ es un camino dirigido, entonces
+\item[(i)$\Rightarrow$(ii)] Sea $c : G \rightarrow \{1, \ldots, k\}$ un $k$-coloreo de $G$. Orientamos las aristas de $G$ de la siguiente manera: si $e = xy \in E(G)$, entonces $e$ se dirige a $y$ si $c(x) < c(y)$ o se dirige a $x$ si $c(x) > c(y)$. Claramente no tiene ciclos dirigidos. Tampoco tiene caminos dirigidos de longitud $k$, pues si $P: x_1, \ldots, x_r$ es un camino dirigido, entonces
 \[
     1 \leq c(x_1) < c(x_2) < \cdots < c(x_r) \leq k,
 \]
@@ -4624,6 +4662,27 @@ Pueden ocurrir dos casos. El primero, si $e \in H$, entonces claramente se puede
 \end{enumerate}
 
 \end{solution}
+
+
+\begin{definition}
+Dado un grafo $G$. Definimos el \textbf{número cromático total} $\chi '' (G)$, como el entero más chico $k$ tal que podemos colorear los vértices y las aristas de $G$ de manera que no haya dos colores iguales entre dos vértices adyacentes, dos aristas adyacentes, o un vértice y una arista adyacente a este.
+\end{definition}
+
+\begin{exercise}
+Probar que
+\[
+    \chi ''(G) \leq \operatorname{ch} ' (G) + 2
+\]
+para todo grafo $G$.
+\end{exercise}
+\begin{solution}
+Notemos que
+\[
+    \chi (G) \leq \Delta (G) + 1 \leq \chi ' (G) + 1 \leq \operatorname{ch} ' (G) + 1 \leq \operatorname{ch} ' (G) + 2.
+\]
+Por lo tanto, podemos colorear los vértices de $G$ con $k := \operatorname{ch}' (G) + 2$ colores, digamos, $c : V(G) \rightarrow \{1, \ldots, k\}$. Luego, a cada arista $e:= xy$ le asosciamos la lista $S_e := \{1 , \ldots, k\} \setminus \{c (x) , c(y)\}$. Notar que $\abs {S_e} \geq \operatorname{ch} ' (G)$, con lo cual podemos $S_e$ colorear las aristas. Este es un coloreo total de $G$ que utiliza $k$ colores, i.e. $\chi '' (G) \leq k$.
+\end{solution}
+
 
 
 
@@ -4682,18 +4741,19 @@ Respuestas:
 Probar que todo grafo dirigido sin subciclos impares tiene núcleo.
 \end{exercise}
 \begin{solution}
-Sea $G$ un grafo como en el enunciado, y sea $H$ un subgrafo acíclico dirigido maximal (notar que $H$ genera $G$, pues seguro que contiene a un bosque generador). Definamos la siguiente función en los vértices $v$ de $G$:
+Sin pérdida de generalidad, supongamos que $G$ es conexo.
+
+Probemos primero el caso en el que $G$ es un grafo sin subciclos impares fuertemente conexo. Fijemos $v \in G$, y consideremos el conjunto de los vértices $u$ de $G$ tales que existe un paseo dirigido desde $u$ hasta $v$ de longitud par; llamemos a este conjunto $U$. Veamos primero que $U$ es un conjunto de aislado de vértices. En efecto, supongamos que existe $u'$ en $U$ tal que $u \rightarrow u'$. Notar que un paseo cerrado dirigido impar en un grafo contiene un ciclo dirigido impar. Luego existe un paseo dirigido par desde $v$ hacia $u$. Así, obtenemos un paseo cerrado impar
 \[
-    f(v) := \begin{cases}
-    0 & \text{ si todos los caminos maximales $P$ en $H$ empezando en $v$ tienen longitud par} \\
-    1 & \text{ si no.}
-    \end{cases}
+    v\to u \to u' \to v,
 \]
-Afirmamos que $U := f^{-1} (0)$ es un núcleo de $G$.
+absurdo.
 
-En efecto, primero veamos que $U$ es un conjunto independiente. Si existieran dos vértices $u,v \in U$ con arista $e = uv \in E(G)$ dirigida hacia $v$, pueden ocurrir dos casos: $e \in H$ y por lo tanto $u$ tiene un camino maximal $P$ en $H$ empezando en $u$ de longitud impar, pues podemos elegir uno de longitud par empezando en $v$ de $H$ y formar otro concatenando con $v$; o si $e \not \in H$, tenemos que por maximalidad de $H$, $H+ e$ tiene un ciclo (par por hipótesis), digamos $C: u v \cdots u$. Con lo cual, este ciclo induce un camino dirigido impar en $H$ saliendo de $v$ hacia $u$; concatenandoló con un camino dirigido par máximal de $H$ saliendo de $u$ obtenemos un camino impar maximal saliendo de $v$, absurdo.
+Veamos ahora que si $w \not \in U$, existe $u \in U$ tal que $w \rightarrow u$. Por definición todos los paseos de $w$ hacia $v$ son impares, en particular existe uno impar, digamos $W: w w_1 \cdots $. Luego $w_1 \in U$ y $w \rightarrow w_1$ como queríamos. Es decir, $U$ es un núcleo de $G$.
 
-Ahora, veamos que si $s \in G \setminus U$, sale una arista desde $s$ hacia un vértice de $U$. En efecto, sea $P: s u \cdots$ un camino dirigido maximal
+En general, hagamos inducción en $\abs G$. Si $\abs G = 1$ es trivial. Ahora, supongamos que $\abs G > 1$ y que no es fuertemente conexo, es decir, existen dos vértices $u,v\in G$ tales que no existe un camino dirigido desde $u$ hacia $v$. Tomemos un subgrafo conexo sin aristas de salida tal que $C \subsetneq G$. Sea $K \subset C$ un núcleo, y sea $K'$ un núcleo del grafo $G'$ dado por $G$ menos los vértices $K$ y sus predecesores en $G$. Afirmamos que $N = K \cup K'$ es un núcleo de $G$. Notar que no hay aristas entre vértices de $K$, de $K'$, ni desde $K$ hacia $K'$($K' \subset G \setminus C$ y $C$ no tiene aristas de salida), ni viceversa ($K'$ se obtuvo luego de quitar los predecesores de $K$ en $G$), i.e. $N$ es aislado.
+
+Ahora, si $v \in G \setminus N$ puede haber dos casos, el primero $v \in C$ y por lo tanto tiene una arista dirigida hacia $K \subset N$; por otro lado, si $v \in G \setminus C$ no tiene una arista apuntando hacia $K$, luego $v \in G' \setminus K'$ y por lo tanto tiene una arista dirigida hacia $K' \subset N$. Esto prueba que $K$ es un núcleo de $G$.
 \end{solution}
 
 \begin{exercise}
@@ -4741,25 +4801,75 @@ Sea $M$ un matching perfecto de $G$, existe por el Teorema \ref{corollary:König
 \end{solution}
 
 \begin{exercise}
-Sea $G$ un grafo línea. Encuentre una cota superior para $\ch G$ en términos de $\chi (G)$.
+Sea $G$ un grafo línea. Probar que $\ch G \leq 2 \chi (G) - 1$. En otras palabras, si $H$ es un grafo arbitrario, tenemos que $\operatorname{ch}' (G) \leq 2 \chi ' (G) - 1$.
 \end{exercise}
 
+Daremos dos soluciones. La segunda forma es exibida para dar un ejemplo de aplicación interesante del Lema del Núcleo \ref{lema:lema del nucleo}.
+
 \begin{solution}
- Sabemos que $G = L(H)$ para un grafo $G$ y que $\chi (G) = \chi' (H) \geq \Delta (H)$. Notemos que el algorítmo glotón permite probar de manera análoga que el caso del número cromático:
- \[
-     \ch G \leq \Delta (G) + 1.
- \]
- Por otro lado, $\Delta (G) \leq 2 \Delta (H) - 2$. Más aún, el Teorema de Vizing \ref{th:teorema de Vizing} implica que $\Delta (H) \leq \chi ' (H) = \chi (G)$. Con lo cual, juntando todo:
- \[
-     \ch G \leq 2 \chi (G) - 1 .
- \]
+Sea $H$ el grafo línea del que proviene $G$, i.e. $G = L(H)$. Entonces,
+\[
+    \ch G \leq \Delta (G) + 1 \leq (2 \delta (H) - 2) + 1 \leq 2 \chi ' (H) - 1 = 2 \chi (G) - 1.
+\]
+Donde la primera desigualdad es por la Proposición \ref{proposicion:choice es menor o igual que coloreo menor o igual que delta + 1}, y la segunda es porque $G$ es el grafo línea de $H$, luego para toda arista $e \in H$, tiene a lo más $\Delta (H) - 1$ aristas incidentes en cada extremo, con lo cual $d_G (e) \leq 2 (\Delta (H) - 1)$, consecuentemente $\Delta (G) \leq 2 (\Delta (H)- 1)$.
+\end{solution}
+
+\begin{solution}
+Tomemos un $\chi ' (H)$-coloreo de las aristas de $H$ (equivalentemente un coloreo de los vértices de $G$), digamos $c (e) \in \{1, \ldots, k \}$ con $k = \chi ' (H)$. Ahora, orientamos las aristas de $G$ de la siguiente manera: $e f \in E(G)$ se dirige de $e$ hacia $f$ si y solo si $c(e) < c(f)$.
+
+Ahora, veamos que todo subgrafo inducido de $G$ con esta orientación de las aristas tiene núcleo. En efecto, sea $H$ un tal subgrafo, para cada $e \in H$ nos fijamos los vecinos de $e$ en $H$, si $e$ tiene el color más grande de todos sus vecinos entoncces lo elegimos; esto nos proporciona de un conjunto de vértices aislados $U$ de $H$: si $e, f \in H$ son adyacentes, digamos $ef \in E(H)$ se dirige hacia $f$, entonces $c(e) < c(f)$ por definición de la orientación, es decir, $e$ y $f$ no pueden estar ambos en $U$. Por otro lado, veamos que si $e \in H \setminus U$, luego existe un vértice $f \in U$ tal que $ef \in H$ está dirigido hacia $f$. Como $e \not \in H$, existe un vecino $f \in H$ tal que $c(e) < c(f)$, es decir, $ef \in H$ está dirigido hacia $f$.
+
+Así, podemos aplicar el Lema del Núcleo \ref{lema:lema del nucleo} a $G$ con esta orientación. Como $d^+_G (e) \leq 2 (k-1)$ para todo $e \in G$, ya que $e$ tiene dos extremos, luego a lo más dos aristas vecinas en $G$ de color distinto de $c(e)$. Por el lema, se sigue que $G$ es $(2k - 1)$-lista-coloreable como queríamos demostrar.
+\end{solution}
+
+\begin{exercise}
+Probar que para todo grafo línea $G$:
+\[
+    \omega (G) \leq \chi (G) \leq \omega (G) + 1.
+\]
+\end{exercise}
+\begin{solution}
+Como el Teorema de Vizing \ref{th:teorema de Vizing} dice que $\Delta (H) \leq \chi (G) \leq \Delta (H) + 1$ para el grafo $H$ tal lque $G = L(H)$, basta ver que $\Delta (H) = \omega (G)$.
+
+En efecto, si $v \in H$ es un vértice con grado $d_H (v) = \Delta (H)$, entonces las aristas incidentes en $v$ son todas vecinas entre sí en $H$, i.e., en $G$ forman los vértices de un grafo completo $K_{\Delta(H)}$. Esto nos dice que $\Delta (H) \leq \omega (G)$. Recíprocamente, si $K_m$ es un subgrafo completo de $G$, que todos sus vértices sean adyacentes entre sí en $G$ equivale a que sean todas aristas incidentes en un vértice de $H$, digamos $v$; luego $\Delta (H) \geq d_G(v) \geq m$. Tomando $m = \omega (G)$, se sigue que $\Delta (H) \geq \omega (G)$. En resumen, $\Delta (H) = \omega (G)$, como queríamos probar.
 \end{solution}
 
 
+\begin{exercise}
+Encontrar la fimilia de grafos $H$ cuyo grafo línea $G:= L(H)$ es perfecto.
+\end{exercise}
+\begin{solution}
+Afirmamos que esta familia son los grafos $H$ sin ciclos impares inducidos de longitud $\geq 5$. Veamos primero que si $G$ es perfecto, entonces $H$ es de este tipo. Lo haremos por inducción en $\abs H$. Sea $v \in H$, notar que $L(H-v) = G - K_v$, donde $K_v$ es el subgrafo completo de $G$ cuyos vértices en $G$ corresponden con las aristas de $G$ que inciden en $v$. Como $G - K_v = L(H-v)$ es perfecto, tenemos que por inducción $H-v$ no tiene ciclos impares de longitud $\geq 5$. Luego la única forma de que $H$ tenga un ciclo impar $C$ de longitud $\geq 5$, es que $v$ sea uno de sus vértices. Supongamos por el absurdo que esto sucede. Si existiera un vértice de $H$ afuera de $C$, digamos $w$, podríamos repetir el mismo razonamiento que al principio para probar que $H - w \supset C$ no tiene ciclos impares inducidos; así, debe ser que $H$ es un ciclo impar de longutd $\geq 5$, pero luego $G$ es un ciclo impar de longitud $\geq 5$, el cual no es perfecto porque en este caso $2 = \omega (G) < \chi (G) = 3$. Esto prueba que $H$ no tiene ciclos inducidos impares de longitud $\geq 5$.
+
+Recíprocamente, veamos que los grafos de este tipo tiene grafo línea perfecto. En efecto, hagamos inducción en $\abs H$. Si $\abs H = 1$ el resultado es trivial. En general, supongamos que $\abs H > 1$. Como la familia de grafos $H$ es cerrada por subrafos inducidos, tenemos que todo subgrafo inducido propio de $G$ es perfecto, pues corresponde con un subgrafo propio de $H$ (aplicamos hipótesis inductiva). Con lo cual, resta ver que $\omega (G) = \Delta (H) \geq \chi (G) = \chi ' (H)$ para concluir que $G$ es perfecto.
+
+Sea $v \in H$, como $H - v$ tiene su grafo linea perfecto, tenemos ue $\chi ' (H-v) = \Delta (H - v) \leq \Delta (H)$. Sea $c : E(H - v) \rightarrow \{1, \ldots, k\}$ un $k$-coloreo de $H-v$ con $k = \Delta (G)$. Veamos que podemos extender este coloreo de las aristas a todo $E(H)$, y por lo tanto, tendremos lo que queríamos probar.
+
+Numeremos las aristas que inciden en $v$: $e_1, e_2, \ldots, e_r$ ($r \leq k$). Estas son las aristas que faltan $k$-colorear en $H$. Llamemos $M(e)$ al conjunto de colores de $c$ que no han sido ocupados por las aristas vecinas de $e$ que no inciden en $v$. Nuestro objetivo es recolorear las aristas de $H-v$, de manera que $i \in M(e_i)$ para cada $i = 1, \ldots, r$, luego extendiendo este recoloreo a $e_i$ pintando esta arista de color $i$ obtendremos arista-coloreo de $H$ usando $k$-colores. Notemos que $M(e_i)$ tiene almenos un color, digamos $j$.
+
+En efecto, si $i \not \in M(e_i)$, consideremos $C_{ij}$ el $i/j$-camino maximal que empieza en una arista incidente a $e_i$. $C_{ij}$ no tiene ninguna arista vecina a $e_l$ para cualquier $l \neq i$, salvo que $e_i$ y $_l$ sean aristas de un triángulo pues $H$ no tiene subciclos impares inducidos de longitud $\geq 5$. Luego tenemos dos casos:
+\begin{enumerate}[(i)]
+\item $C_{ij}$ no tiene ninguna arista vecina a $e_l$ para cualquier $L \neq i$. Entonces permutando los colores $i,j$ en el camino $C_{ij}$, obtenemos un coloreo tal que los $M(e_l)$ con $l \neq i$ no cambian e $i \in M(e_i)$.
+\item $e_i$ y $e_l$ son dos aristas de un triángulo. Supongamos que el color $i$ aparece en una arista que es vecina con $e_l$ también. Si $j \neq l$ podemos hacer lo mismo que en el ítem anterior. Si no, tenemos que $j = l$, pero luego permutando los colores $i,j$ esto deja de suceder, y procedemos como en los casos anteriores.
+\end{enumerate}
+\end{solution}
 
 
+\begin{exercise}
+Probar que un grafo $G$ es perfecto si y solo si todo subgrafo inducido (no vacío) $H$ de $G$ contiene un subconjunto independiente $A \subset V(H)$ tal que
+\[
+    \omega (H \setminus A) < \omega (H).
+\]
+\end{exercise}
+\begin{solution}
+Supongamos que $G$ es perfecto. Luego para $H\neq \emptyset$ un subgrafo inducido de $G$, tenemos que $\omega (H) = \chi (H)$. Sea $c$ un $k$-coloreo de $G$ con $k = \chi (H)$, y consideremos $A$ como el conjunto de vértices de color $i$ para algún color de $c$. Notemos que $A$ es un conjunto independiente de $V(H)$ por definición de $c$. Nuevamente por perfección de $G$, $\omega (H \setminus A) = \chi (H \setminus A)$; pero por construcción $\chi (H \setminus A) < \chi (H) = \omega (H)$. Luego tenemos que $\omega (H \setminus A ) < \omega (H)$.
 
-
+Recíprocamente, como esta propiedad es cerrada por subgrafos inducidos, tenemos que todo subgrafo propio de $G$ es perfecto. Con lo cual, para probar que $G$ es perfecto, basta ver que $\chi (G) \leq \omega (G)$. Sea $A$ un conjunto independiente en $V(G)$ tal que
+\[
+    \omega (G \setminus A )< \omega (G).
+\]
+Como $H := G \setminus A$ posee la propiedad del enunciado, podemos probar por inducción en $\abs G$ que $H$ es perfecto, entonces $\chi (G \setminus A) = \omega (G \setminus A) < \omega (G)$. Sea $c$ un $\chi (G \setminus A)$-coloreo de $G \setminus A$. Entonces pintando los vértices de $A$ con otro color que no use $c$, podemos extender $c$ a un $\chi (G \setminus A) + 1 \leq \omega (G)$-coloreo de $G$. Consecuentemente, $\chi (G) \leq \omega (G)$ como queríamos demostrar.
+\end{solution}
 
 
 
