@@ -3681,7 +3681,7 @@ Un grafo es planar si y solo si no contiene a $K_5$ o $K_{3,3}$ como subdivisió
 
 
 
-\begin{exercise}
+\begin{exercise}\label{ejercicio:desigualdades para cantidad de caras aristas y vertices de grafos planares}
 Sea $G = (V,E,F)$ un grafo planar, con $\abs V \geq 3$. Probar las siguientes desigualdades en cada caso:
 \begin{enumerate}
 \item En general se tiene
@@ -4884,7 +4884,7 @@ Denotamos por $E_0 (D)$ al número de subgrafos Eulerianos pares de $D$, similar
 
 Antes de demostrar nuestro teorema principal, requerimos un par de lemas.
 
-\begin{lemma}
+\begin{lemma}\label{lema:coloreos y orientaciones de grafos - lema 1 del teorema principal}
 Sea $P = P(X_1, \ldots, X_n)$ un polinomio en $n$ variables sobre $\integers$. Supongamos que para $1 \leq i \leq n$ el grado de $P$ en $X_i$ está acotado por $d_i$ y sea $S_i \subset \integers$ un conjunto de $d_i + 1$ enteros distintos. Si
 \[
     P(x_1, \ldots, x_n) = 0
@@ -4919,7 +4919,7 @@ f_G (X_1, \ldots, X_n) = \sum_{d_1, \ldots, d_n \geq 0} (\abs{\mathcal D _0 (d_1
 Como $f_G = \sum_{D} w(D)$, simplemente hay que agrupar los términos de la sumatoria con monomio $\prod_{i = 1}^n X_i^{d_i}$.
 \end{proof}
 
-\begin{corollary}
+\begin{corollary}\label{corolario:coloreos y orientaciones de grafos - corolario 1 del teorema principal}
 Sea $D$ una orientación de un grafo no dirigido $G = (V,E)$ con $V = \{v_1, \ldots, v_n\}$. Para $1 \leq i \leq n$, sea $d_i = d^+_D (v_i)$. Entonces el valor absoluto del coeficiente que acompaña el monomio $\prod_{i = 1}^n X_i^{d_i}$ en $f_G$, es $\abs{E_0 (D) - E_1 (D)}$. En particular, si $E_0 (D )\neq E_1 (D)$, entonces el coeficiente que acompaña a $\prod_{i = 1}^n X_i^{d_i}$ no es cero.
 \end{corollary}
 \begin{proof}
@@ -4967,7 +4967,7 @@ Observemos que si $x_i \in S_i$, entonces $Q_i (x_i) = 0$, es decir,
     x_i^{d_i + 1} = \sum_{j = 0}^{d_i} q_{ij} x_i^j.
 \]
 
-Consideremos el polinomio $\bar f_G$ obtenido a partir de $f_G$ luego de reemplazar cada aparición de $X_i^{f_i}$ con $f_i > d_i$ por una combinación lineal entera de potencias más chicas de $X_i$ utilizando las relaciones anteriores. Claramente $\bar f_G$ es un polinomio de grado $\leq d_i$ en $X_i$. Más aún, $\bar f _G (x_1, \ldots, x_n) = f_G (x_1, \ldots, x_n)$ para todo $(x_1, \ldots, x_n) \in S_1 \times \cdots \times S_n$. Luego como el lado derecho vimos que era cero, tenemos que $\bar f _G (x_1, \ldots, x_n) = 0$ para todo $(x_1, \ldots, x_n) \in S_1 \times \cdots \times S_n$, por lo tanto, el Lema \ref{} implica que $\bar f _G \equiv 0$. Sin embargo, por el Corolario \ref{}, el c oeficiente de $\prod_{i = 1}^n X_i^d$ en $f_G$ es no nulo, pues por hipótesis $E_0 (D) \neq E_1 (D)$. Como el grado de cada $X_i$ en este monomio es $d_i$, las relaciones de arriba no afectarán esto. Más aún, como el polinomio $f_G$ es homogéneo y cada aplicación de las relaciones reduce el grado, este proceso de reemplazar $f_G$ por $\bar f_G$ no crea ningún multiplo escalar de $\prod_{i = 1}^n X_i^{d_i}$. Consecuentemente, el coeficiente de $\prod_{i = 1}^n X_i^{d_i}$ en $\bar f _G$ coincide con el coeficiente del mismo término en $f_G$, el cual es no nulo. Contradiciendo el hecho de que $\bar f _G \equiv 0$. Así, debe existe un coloreo $c : V \rightarrow \integers$ tal que $c(v_i) \in S_i$ para todo $1 \leq i \leq n$.
+Consideremos el polinomio $\bar f_G$ obtenido a partir de $f_G$ luego de reemplazar cada aparición de $X_i^{f_i}$ con $f_i > d_i$ por una combinación lineal entera de potencias más chicas de $X_i$ utilizando las relaciones anteriores. Claramente $\bar f_G$ es un polinomio de grado $\leq d_i$ en $X_i$. Más aún, $\bar f _G (x_1, \ldots, x_n) = f_G (x_1, \ldots, x_n)$ para todo $(x_1, \ldots, x_n) \in S_1 \times \cdots \times S_n$. Luego como el lado derecho vimos que era cero, tenemos que $\bar f _G (x_1, \ldots, x_n) = 0$ para todo $(x_1, \ldots, x_n) \in S_1 \times \cdots \times S_n$, por lo tanto, el Lema \ref{lema:coloreos y orientaciones de grafos - lema 1 del teorema principal} implica que $\bar f _G \equiv 0$. Sin embargo, por el Corolario \ref{corolario:coloreos y orientaciones de grafos - corolario 1 del teorema principal}, el coeficiente de $\prod_{i = 1}^n X_i^d$ en $f_G$ es no nulo, pues por hipótesis $E_0 (D) \neq E_1 (D)$. Como el grado de cada $X_i$ en este monomio es $d_i$, las relaciones de arriba no afectarán esto. Más aún, como el polinomio $f_G$ es homogéneo y cada aplicación de las relaciones reduce el grado, este proceso de reemplazar $f_G$ por $\bar f_G$ no crea ningún multiplo escalar de $\prod_{i = 1}^n X_i^{d_i}$. Consecuentemente, el coeficiente de $\prod_{i = 1}^n X_i^{d_i}$ en $\bar f _G$ coincide con el coeficiente del mismo término en $f_G$, el cual es no nulo. Contradiciendo el hecho de que $\bar f _G \equiv 0$. Así, debe existe un coloreo $c : V \rightarrow \integers$ tal que $c(v_i) \in S_i$ para todo $1 \leq i \leq n$.
 
 \end{proof}
 
@@ -5009,12 +5009,58 @@ Sea $G = (V,E)$ un grafo, y sea $f_G = f_{G} (X_1, \ldots, X_n)$. Para todo ente
 \end{proposition}
 
 
+\bigskip
 
+\begin{definition}
+Sea $G$ un grafo, definimos la cantidad
+\[
+    \ell (G) := \max_{H \subset G} \left \{ \frac{\abs {E (H)}}{\abs{V(H)}} \right \}.
+\]
+\end{definition}
 
+\begin{lemma}
+Sea $G$ un grafo. Entonces $G$ tiene una orientación $D$ tal que $d^+_D (v) \leq d \forall v \in G$ si y solo si $\ell (G) \leq d$.
+\end{lemma}
+\begin{proof}
+Para todo subgrafo $H$ de $G$, se tiene que
+\[
+    \abs{E(H)} = \sum_{v \in V(H)} d^+_D (v) \leq d \abs {V(H)},
+\]
+y por lo tanto $\abs{E(H)} / \abs{ V(H)} \leq d$, i.e. $\ell (G) \leq d$.
 
+Recíprocamente, supongamos que $\ell(G) \leq d$. Sea $B$ el grafo bipartito con véritces las clases de vértices $X$ e $Y$, donde $X = E$ e $Y$ es lal unión de $d$ copias disjuntas $V_1, V_2, \ldots, V_d$ de $V$. Cada arista $e = uv$ de $E$ está conectada mediante una arista de $B$ a cada una de las $d$ copias de $u$ y $v$ en $Y$. Afirmamos que existe un matching perfecto que cubre a $X = E$. En efecto, si $E' \subset E$ es un conjunto de aristas de un subgrafo $H$ de $G$ cuyos vértices son los extremos finales de los elementos de $E'$, entonces en $B$, $E'$ tiene $d\abs{v(H)} \geq \abs {E'}$ elementos. Por la definición de $\ell (G)$ tenemos que $\abs{ E'} / \abs{V(H)} \leq \ell (G) \leq d$ y consecuentemente $d \abs{V(H)} \geq \abs{E'}$. Con lo cual, el Teorema del de Hall \ref{th:teorema de Hall} afirma la existencia de este matching. Esto nos da una orientación $D$ de $G$ cuyo grado exterior máximo es menor o igual a $d$: orientamos la arista $e = uv$ dirigiéndoce hacia $v$ si la arista $e u$ de $B$ está en el matching.
+\end{proof}
 
+\begin{theorem}
+Todo grafo bipartito es $(\lceil \ell (G) \rceil + 1)$-lista-coloreable.
+\end{theorem}
+\begin{proof}
+Sea $d = \lfloor \ell (G) \rfloor$. Por el lema anterior existe una orientación $D$ de $G$ con grado máximo exterior a lo más $d$. Como $D$ no contiene ciclos dirigidos impares (de hecho tampoco ciclos no dirigidos impares), tenemos que $E_0 (D) \neq E_1 (D)$ y por lo tanto el resultado se sigue del Teorema principal \ref{th: todo grafo dirigido sin mismo numero de paseos eulerianos pares a impares es d+1 lista coloreable donde d es el maximo de todos los grados exteriores}.
+\end{proof}
 
+\begin{remark}
+Es necesario pedir que $G$ sea bipartito, pues si $G = K_n$ es un grafo completo, luego $\ell (G) = (n-1)/2$, pero claramente $K_n$ no es $k$-lista-coloreable para ningún $k < n$.
 
+Más aún, este teorema es óptimo en el sentido de que para cada $k \geq 1$ existe un grafo bipartito $G$ tal que $\ell (G) \leq k$ y $G$ no es $k$-lista-coloreable. En efecto, consideremos el grafo bipartito $G = K_{k,k^k}$ que aparece en el Ejemplo \ref{ejemplo:ejemplo de grafos bipartitos que no son k-lista coloreables}: ya vimos allí que no es $k$-lista-coloreable, luego basta ver que $\ell (G) \leq k$. Sea $H$ un subgrafo inducido de $G$ con dos particiones $A' \subset \{u_i\}_{i = 1}^k$, $B' \subset \{w_j\}_{j = 1}^{k^k}$, entonces
+\[
+    \abs{E(H)} = \sum_{w \in B'} d_H (w) \leq k \abs{ B'} \leq k \abs{V(H)}.
+\]
+\end{remark}
+
+\begin{corollary}
+Todo grafo bipartito planar es $3$-lista-coloreable.
+\end{corollary}
+\begin{proof}
+Por el teorema anterior, basta ver que $\ell (G) \leq 2$. Pero este es el caso: sea $H$ un subgrafo de $G$, luego es bipartito planar con $\abs H$ vértices. Por el Ejercicio \ref{ejercicio:desigualdades para cantidad de caras aristas y vertices de grafos planares} tenemos que $\abs{H} \leq 2 \abs H - 4$. Por lo tanto, $\abs{E(H)} / \abs{V(H)} \leq 2$
+\end{proof}
+
+\begin{remark}
+Este corolario también es óptimo, pues el grafo bipartito planar $G = K_{2,4}$ que aparece en el Ejemplo \ref{ejemplo:ejemplo de grafos bipartitos que no son k-lista coloreables} no es $2$-lista-coloreable.
+\end{remark}
+
+\begin{remark}
+En general, la cota del último teorema puede ser muy mala. Consideremos para $K > 1$ el grafo $G = K_{n,n}$ con partición $X$,$Y$ donde $\abs X = \abs Y = n = 2^{k-1}$, entonces $\ell (G) = 2^{k-2}$, pero $G$ es $k$-lista-coloreable. En efecto, sea $S_v$ una familia de colores para cada vértice $v \in G$ con $k$ colores. Escribamos $S = \bigcup_{v \in V} S_v$ y $S = S_X \cup S_Y$ una partición random de $S$ en dos clases disjuntas obtenidas al asignar a cada $s \in S$ de manera independiente $S_X$ o $S_Y$ con misma probabilidad. Diremos que un vértice $x \in X$ es \textbf{malo} si $S_x \cap S_X = \emptyset$. Similarmente, diremos que $y \in Y$ es malo si $ S_y \cap S_Y = \emptyset$. Como la probabilidad de que un vértice fijo sea malo es $2^{-k}$, la esperanza del número de vértices malos es $1$. Sin embargo, como algunas particiones (por ejemplo $S_X = S$ y $S_Y = \emptyset$) tienen $2^{k-1} > 1$ vértices malos, existe almenos una partición $(S_X, S_Y)$ sin vértices malos. Podemos ahora elegir para cada $x \in X$ un color $c(x) \in S_x \cap S_X$ y para cada $y \in Y$ un color $c(y) \in S_y \cap S_Y$, obteniendo así un $S_v$-lista-coloreo de $G$.
+\end{remark}
 
 
 

@@ -59,7 +59,7 @@
 \contentsline {subsection}{\numberline {1.24.1}Retomamos lista coloreo}{143}{subsection.1.24.1}%
 \contentsline {subsection}{\numberline {1.24.2}Ejercicios}{146}{subsection.1.24.2}%
 \contentsline {subsection}{\numberline {1.24.3}Coloreos y orientaciones de grafos}{153}{subsection.1.24.3}%
-\contentsline {chapter}{\numberline {A}Primera parte de la materia (primer capítulo del Diestel)}{158}{appendix.Alph1}%
-\contentsline {section}{\numberline {A.1}}{158}{section.Alph1.1}%
-\contentsline {section}{\numberline {A.2}}{164}{section.Alph1.2}%
-\contentsline {chapter}{\numberline {B}Orden parcial completo-dirigido y teorema del punto fijo de Kleene}{167}{appendix.Alph2}%
+\contentsline {chapter}{\numberline {A}Primera parte de la materia (primer capítulo del Diestel)}{159}{appendix.Alph1}%
+\contentsline {section}{\numberline {A.1}}{159}{section.Alph1.1}%
+\contentsline {section}{\numberline {A.2}}{165}{section.Alph1.2}%
+\contentsline {chapter}{\numberline {B}Orden parcial completo-dirigido y teorema del punto fijo de Kleene}{168}{appendix.Alph2}%
