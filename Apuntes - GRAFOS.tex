@@ -4872,8 +4872,141 @@ Como $H := G \setminus A$ posee la propiedad del enunciado, podemos probar por i
 \end{solution}
 
 
+\subsection{Coloreos y orientaciones de grafos}
+
+\begin{definition}
+Un gafo dirigido $D$ se dice \textbf{Euleriano} si el grado interno $d^- (v)$ de cualquier vértice $v$ es igual a su grado externo $d^+(v)$. (Notar que no pedimos que el grafo sea necesariamente conexo).
+
+Decimos que $D$ es \textbf{par}, si tiene un número par de aristas; similarmente, decimos que $D$ es \textbf{impar}, si tiene un número impar de aristas.
+
+Denotamos por $E_0 (D)$ al número de subgrafos Eulerianos pares de $D$, similarmente, $E_1 (D)$ al número de subgrafos Eulerianos impares. Por convención, el grafo vacío es Euleriano par con $E_0 =0$.
+\end{definition}
+
+Antes de demostrar nuestro teorema principal, requerimos un par de lemas.
+
+\begin{lemma}
+Sea $P = P(X_1, \ldots, X_n)$ un polinomio en $n$ variables sobre $\integers$. Supongamos que para $1 \leq i \leq n$ el grado de $P$ en $X_i$ está acotado por $d_i$ y sea $S_i \subset \integers$ un conjunto de $d_i + 1$ enteros distintos. Si
+\[
+    P(x_1, \ldots, x_n) = 0
+\]
+para todo $(x_1, x_2, \ldots, x_n) \in S_1 \times S_2 \times \cdots \times S_n$, entonces $P \equiv 0$.
+\end{lemma}
+\begin{proof}
+Se sigue fácilmente de hacer inducción en el número de variables $n$ de $P$.
+\end{proof}
+
+\begin{definition}
+Ahora, llamamos \textbf{grafo polinomial} al grafo $f_G (X_1, \ldots, X_n)$ de un grafo (no dirigido) $G = (V,E)$ con $V = \{v_1, \ldots, v_n\}$, definido por
+\[
+    f_G (X_1, \ldots, X_n) = \prod_{\substack{i < j \\ v_iv_j \in E}} (X_i - X_j).
+\]
+\end{definition}
+
+Notar que los coeficientes que acompañan los monomios de $f_G$ pueden expresarse en términos de la cantidad de orientaciones de $G$. En efecto, para cada arista orientada $e = (v_i, v_j)$ de $G$, definimos su peso $w (e)$ como $w (e) = x_i$ si $i < j$ y $w(e) = - x_i$ si $i > j$. El peso $w (D)$ de una orientacón $D$ de $G$ se define como el producto $\prod_{e \in E} w(e)$. Luego se tiene
+\[
+    f_G = \sum_{D \text{ orientación de $G$}} w(D).
+\]
+
+LLamemos a una arista orientada $(v_i,v_j)$ de $G$ \textbf{decreciente}, si $i > j$. Diremos que una orientación $D$ de $G$ es \textbf{par}, si tiene un número par de aristas decrecientes; si no, diremos que es \textbf{impar}. Para enteros no negativos $d_1,d_2, \ldots, d_n$, sean $\mathcal D _0 (d_1, \ldots, d_n)$ y $\mathcal D _1 (d_1, \ldots, d_n)$ los conjuntos de todas las orientaciones pares e impares de $G$, respectivamente, en donde el grado exterior de un vértice $v_i$ es $d_i$ para cada $1 \leq i \leq n$.
+
+\begin{lemma}
+Utilizando la notación anterior:
+\[
+f_G (X_1, \ldots, X_n) = \sum_{d_1, \ldots, d_n \geq 0} (\abs{\mathcal D _0 (d_1, \ldots, d_n)} - \abs{\mathcal D _1 (d_1, \ldots,d_n)}) \prod_{i = 1}^n X_i^{d_i}.
+\]
+\end{lemma}
+\begin{proof}
+Como $f_G = \sum_{D} w(D)$, simplemente hay que agrupar los términos de la sumatoria con monomio $\prod_{i = 1}^n X_i^{d_i}$.
+\end{proof}
+
+\begin{corollary}
+Sea $D$ una orientación de un grafo no dirigido $G = (V,E)$ con $V = \{v_1, \ldots, v_n\}$. Para $1 \leq i \leq n$, sea $d_i = d^+_D (v_i)$. Entonces el valor absoluto del coeficiente que acompaña el monomio $\prod_{i = 1}^n X_i^{d_i}$ en $f_G$, es $\abs{E_0 (D) - E_1 (D)}$. En particular, si $E_0 (D )\neq E_1 (D)$, entonces el coeficiente que acompaña a $\prod_{i = 1}^n X_i^{d_i}$ no es cero.
+\end{corollary}
+\begin{proof}
+Más en general, consideremos una sucesión $d_1, \ldots, d_n$ (por ejemplo, podemos elegirlos como en el enunciado), y sea $D_1$ una orientación fija de $\mathcal D _0 (d_1, \ldots, dn) \cup \mathcal D _1 (d_1, \ldots, d_n)$. Para cualquier orientación $D_2$ como recién, notemos por $D_1 \oplus D_2$ al conjunto de aristas orientadas de $D_1$ cuya orientación en $D_2$ tiene la dirección opuesta. Como el grado externo de cada vértice en $D_1$ coincide con su grado externo en $D_2$ (más específicamente, $d^+ (v_i) = d_i$ en $D_1$ y $D_2$). Tenemos que $D_1 \oplus D_2$ es un subgrafo Euleriano de $D_1$. Más aún, $D_1 \oplus D_2$ es par como grafo Euleriano si y solo si $D_1$ y $D_2$ tienen la misma paridad (como digrafos). En efecto, denotemos por
+\begin{itemize}
+\item $\alpha_1$ al número de aristas crecientes en $D_1$ y $D_2$,
+
+\item $\alpha_2$ el número de aristas crecientes en $D_1$ pero no en $D_2$,
+
+\item $\alpha_3$ el número de aristas decrecientes en $D_1$ y $D_2$,
+
+\item $\alpha_4$ el número de aristas decrecientes en $D_1$ pero no en $D_2$.
+\end{itemize}
+El número de aristas decrecientes de $D_1$ es $\alpha_3 + \alpha_4$ y el de $D_2$ es $\alpha_2 + \alpha_3$. Y el número de aristas de $D_1 \oplus D_2$ es $\alpha_2 + \alpha_4$. Con lo cual,
+\[
+    \alpha_2 + \alpha_4 \equiv 0 \mod 2 \quad \Leftrightarrow \quad \alpha_3 + \alpha_4 \equiv \alpha_2 + \alpha_3 \mod 2.
+\]
+
+Así, oobtenemos una biyección entre $\mathcal D _0 (d_1, \ldots, d_n) \cup \mathcal D_1 (d_1, \ldots, d_n)$ y el conjunto de subgrafos Eulerianos de $D_1$. Más aún, si $D_1$ es par, manda orientaciones pares en subgrafos Eulerianos pares y orientaciones impares en subgrafos Eulerianos impares; si $D_1$ es impar, manda orientaciones pares en subgrafos Eulerianos impares y orientaciones impares en subgrafos Eulerianos pares. En ambos caso,
+\[
+    \abs{\abs{\mathcal D _0 (d_1, \ldots, d_n)} - \abs{\mathcal D _1 (d_1, \ldots, d_n)}} = \abs{E_0 (D_1) - E_1 (D_1)}.
+\]
+
+\end{proof}
+
+Probemos ahora el teorema principal:
 
 
+\begin{theorem}\label{th: todo grafo dirigido sin mismo numero de paseos eulerianos pares a impares es d+1 lista coloreable donde d es el maximo de todos los grados exteriores}
+Sea $D = (V,E)$ un grafo dirigido. Para cada $v \in V$, sea $S_v$ un conjunto de $>d^+_D (v)$ colores. Si además $E_0 (D) \neq E_1 (D)$, entonces $D$ es $S_v$-coloreable.
+\end{theorem}
+\begin{proof}
+Sea $D= (V,E)$ un grafo dirigido con vértices $V = \{v_1, \ldots, v_n\}$ y $d_i := d_D^+ (v_i)$. Supongamos que $E_0 (D) \neq E_1 (D)$. Para cada $1 \leq i \leq n$, consideremos subconjuntos $S_i \subset \integers$ de $d_i + 1$ enteros distintos. Tenemos que probar que existe un $S_i$-lista-coloreo $c : V \rightarrow \integers$ tal que $c(v_i) \in S_i$ para todo $1\leq i \leq n$. Supongamos por el absurdo que no. Sea $G$ el grafo subyacente de $D$ y sea $f_G = f_G (X_1, \ldots, X_n)$. La hipótesis de que este coloreo no existe es quivalente a que
+\[
+    f_G (x_1, \ldots, x_n) = 0 \quad \forall (x_1, \ldots, x_n) \in S_1 \times \cdots \times S_n
+\]
+(hay dos colores $x_i$, $x_j$ iguales para algún $i < j$, luego el producto de $f_G$ se anula.)
+
+Para cada $1 \leq i \neq n$, sea $Q_i (X_i)$ el polinomio
+\[
+    Q_i (X_i) = \prod_{s \in S_i} (X_i - s) = X_i^{d_i + 1} - \sum_{j = 0}^{d_i} q_{ij} X_i^j.
+\]
+Observemos que si $x_i \in S_i$, entonces $Q_i (x_i) = 0$, es decir,
+\[
+    x_i^{d_i + 1} = \sum_{j = 0}^{d_i} q_{ij} x_i^j.
+\]
+
+Consideremos el polinomio $\bar f_G$ obtenido a partir de $f_G$ luego de reemplazar cada aparición de $X_i^{f_i}$ con $f_i > d_i$ por una combinación lineal entera de potencias más chicas de $X_i$ utilizando las relaciones anteriores. Claramente $\bar f_G$ es un polinomio de grado $\leq d_i$ en $X_i$. Más aún, $\bar f _G (x_1, \ldots, x_n) = f_G (x_1, \ldots, x_n)$ para todo $(x_1, \ldots, x_n) \in S_1 \times \cdots \times S_n$. Luego como el lado derecho vimos que era cero, tenemos que $\bar f _G (x_1, \ldots, x_n) = 0$ para todo $(x_1, \ldots, x_n) \in S_1 \times \cdots \times S_n$, por lo tanto, el Lema \ref{} implica que $\bar f _G \equiv 0$. Sin embargo, por el Corolario \ref{}, el c oeficiente de $\prod_{i = 1}^n X_i^d$ en $f_G$ es no nulo, pues por hipótesis $E_0 (D) \neq E_1 (D)$. Como el grado de cada $X_i$ en este monomio es $d_i$, las relaciones de arriba no afectarán esto. Más aún, como el polinomio $f_G$ es homogéneo y cada aplicación de las relaciones reduce el grado, este proceso de reemplazar $f_G$ por $\bar f_G$ no crea ningún multiplo escalar de $\prod_{i = 1}^n X_i^{d_i}$. Consecuentemente, el coeficiente de $\prod_{i = 1}^n X_i^{d_i}$ en $\bar f _G$ coincide con el coeficiente del mismo término en $f_G$, el cual es no nulo. Contradiciendo el hecho de que $\bar f _G \equiv 0$. Así, debe existe un coloreo $c : V \rightarrow \integers$ tal que $c(v_i) \in S_i$ para todo $1 \leq i \leq n$.
+
+\end{proof}
+
+
+
+
+
+\begin{corollary}
+Sea $G$ un grafo (no dirigido). Si $G$ tiene una orientación $D$ tal que $E_0 (D) \neq E_1 (D)$ tal que $\max_{v \in G} d^+_D (v) = d$, entonces $G$ es $(d+1)$-lista-coloreable (y en particular, $(d+1)$-coloreable). En particular, si $D$ no contiene subciclos inducidos impares, entonces $G$ es $(d+1)$-lista-coloreable; además, $G$ contiene un conjunto de vértices independiente con almenos $\frac n {d+1}$ vértice.
+\end{corollary}
+\begin{proof}
+La primera afirmación es una aplicación inmediata del Teorema \ref{th: todo grafo dirigido sin mismo numero de paseos eulerianos pares a impares es d+1 lista coloreable donde d es el maximo de todos los grados exteriores}. La segunda parte se sigue de que todo grafo tiene un subgrafo Euleriano par (el subgrafo vacío), i.e. $E_0 (D) \geq 1$, sin embargo, como todo paseo cerrado impar contiene un subciclo inducido impar, en esta caso se tiene $E_1 (D) = 0 \neq E_0 (D)$, con lo cual podemosm aplicar nuevamente el teorema.
+
+La última afirmación se sigue de escribir a $G$ como partición de conjuntos de vértices independientes, uno por cada conjunto de vértices de un color proveniente de un ${d+1}$-coloreo de $G$.
+\end{proof}
+
+Notar que la cota del teorema se alcanza para grafos completos $K_{d+1}$, pues poseen una orientación aciclica. (En efecto, podemos numerar los vértices como $1,2,3, \ldots, d+1$, y definir la orientación de $e = xy$ dirigida de $x$ hacia $y$ si y solo si $x < y$).
+
+\begin{corollary}
+Sea $G$ un grafo $G$ no dirigido como en las hipótesis del corolario anterior. Sean $d_1 \geq d_2 \geq \cdots \geq d_n$ una secuencia ordenada de manera decreciente de grados externos de los $n$ vértices de $D$. Entonces para cada $0 \leq k < n$, $G$ tiene un conjunto independiente de tamaño almenos $\lceil \frac{n-k}{d_{k+1}+1} \rceil$.
+\end{corollary}
+\begin{proof}
+Renumeremos los vértices de manera que $d^+_D (v_i) = d_i$. Por el teorema principal, existe un coloreo $c: V \rightarrow \integers$ de $G$, tal que $1 \leq c(v_i) \leq d_i + 1$ para cada $1 \leq i \leq n$. Para cada $0 \leq k < n$, los colores de $v_{k+1}, \ldots, v_n$ todos yacen en $\{1, 2, \ldots, d_{k+1} + 1 \}$ y por lo tanto el conjunto de vértices de color $d_{k+1} + 1$ tiene tamaño almenos $\lceil \frac{n-k}{d_{k+1} + 1}$.
+\end{proof}
+
+De manera similar a la demostración del Teorema \ref{th: todo grafo dirigido sin mismo numero de paseos eulerianos pares a impares es d+1 lista coloreable donde d es el maximo de todos los grados exteriores}, obtenemos un resultado parecido al Nullstellensatz:
+
+\begin{proposition}
+Sea $G = (V,E)$ un grafo, y sea $f_G = f_{G} (X_1, \ldots, X_n)$. Para todo entero $k$, las siguientes afirmaciones son equivalentes:
+\begin{enumerate}[(i)]
+\item $G$ no es $k$-coloreable.
+\item Existe un conjunto $S$ de $k$ números complejos distintos, tales que $f_G (x_1, \ldots, x_n) = 0$ para cada $x_1, \ldots,x_n \in S$.
+\item Para cada conjunto $S$ de $k$ distintos números complejos $f_G(x_1, \ldots, x_n) = 0$ para todo $x_1, \ldots, x_n \in S$.
+\item Existe un conjunto $S$ de $k$ números complejos distintos tales que el polinomio $f_G$ pertenece al ideal generado por los $n$ polinomios $Q_i (X_i) = \prod_{s \in S} (X_i - s), \: \_ 1 \leq i \leq n$.
+\item Para cada conjunto $S$ de $k$ números complejos distintos, el polinomio $f_G$ pertenece al ideal generado por los polinomios $Q_i (X_i) = \prod_{s \in S} (X_i - s), \: \_ 1 \leq i \leq n$.
+\item El polinomio $f_G$, visto como un polinomio en el anillo de polinomios de $n+k$ variables $X_1, \ldots, X_n, Z_1, \ldots,Z_k$ sobre los números complejos, pertenece al ideal generado por los polinomios $Q_i = \prod_{1 \leq j \leq k} (X_i - Z_j), \: \: 1 \leq i \leq n$.
+\item Para todo conjunto $S$ de $k$ números complejos no necesariamente distintos, el polinomio $f_G$ pertenece al ideal generado por los polinomios $Q_i (X_i) = \prod_{s \in S} (X_i - s), \: \_ 1 \leq i \leq n$.
+\end{enumerate}
+\end{proposition}
 
 
 
