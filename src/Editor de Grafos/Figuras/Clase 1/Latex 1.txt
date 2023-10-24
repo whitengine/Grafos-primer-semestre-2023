@@ -1,0 +1,9 @@
+\begin{tikzpicture}
+\definecolor{cv0}{rgb}{0.0,0.0,0.0}
+\definecolor{cfv0}{rgb}{1.0,1.0,1.0}
+\definecolor{clv0}{rgb}{0.0,0.0,0.0}
+%
+\Vertex[style={minimum size=1.0cm,draw=cv0,fill=cfv0,text=clv0,shape=circle},LabelOut=false,L=\hbox{$0$},x=2.5cm,y=2.5cm]{v0}
+%
+%
+\end{tikzpicture}
