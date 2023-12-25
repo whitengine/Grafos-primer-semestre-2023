@@ -19,7 +19,7 @@
 \usepackage{graphicx}
 
 \graphicspath{{./Apendice/Figuras/Capitulo
-    1/}{./Editor de Grafos/Figuras/Clase 11/}{./Editor de Grafos/Figuras/Clase 12/}{./Editor de Grafos/Figuras/Clase 13/}{./Editor de Grafos/Figuras/Clase 14/}{./Editor de Grafos/Figuras/Clase 15/}} %esto es para que encuentre las figuras hechas con pdf_tex en inkscape
+    1/}{./Editor de Grafos/Figuras/Clase 11/}{./Editor de Grafos/Figuras/Clase 12/}{./Editor de Grafos/Figuras/Clase 13/}{./Editor de Grafos/Figuras/Clase 14/}{./Editor de Grafos/Figuras/Clase 15/}{./Figuras/Introduccion-a-grafos/}} %esto es para que encuentre las figuras hechas con pdf_tex en inkscape
 
 \usepackage{framed}
 \usepackage[dvipsnames]{xcolor} %agrega mas colores para xcolor.
@@ -398,13 +398,23 @@
     \section{Clase \thenumeroClase: #1}
 }{}
 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcounter{numeroSeccion}[section]%ponemos un contador que empieza en 0 y que cuenta el número de seccion
+
+\newcounter{numeroCapitulo}[chapter]
+
+\newcounter{numeroDibujo}[numeroSeccion]
+
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %Cada dibujo se puede automatizar:
 %1) necesitamos el archivo "Dibujo n.png" en la carpeta "Clase m", donde $n$ es el número del dibujo y $m$ es el número de la clase.
 
-\newcounter{numeroDibujo}[numeroClase]
+
 
 \renewcommand\thefigure{\thesection.\arabic{figure}}
+
 
 %el comando Dibujo tiene dos inputs \Dibujo{input 1}{input 2}, el primer input es [OPCIONAL] y representa el ancho del dibujo, y el segundo es el caption de la figura.
 \NewDocumentCommand{\Dibujo}{O{0.8} m}{
@@ -416,12 +426,23 @@
 }
 
 
-%el comando Inkscape tiene dos inputs \Inkscape{input 1}{input 2}, el primer input es [OPCIONAL] y representa el ancho del dibujo, y el segundo es el caption de la figura.
-\NewDocumentCommand{\Inkscape}{O{1} m}{
+%el comando Inkscape tiene dos inputs \InscapeDEPRECADO{input 1}{input 2}, el primer input es [OPCIONAL] y representa el ancho del dibujo, y el segundo es el caption de la figura.
+\NewDocumentCommand{\InscapeDEPRECADO}{O{1} m}{
 \stepcounter{numeroDibujo}
 \begin{center}\label{Figura:Clase \thenumeroClase - Dibujo \thenumeroDibujo}
 \def\svgwidth{#1\textwidth}
 \input{"./Editor de Grafos/Figuras/Clase \thenumeroClase/Dibujo \thenumeroDibujo.pdf_tex"}
+\captionof{figure}{#2}
+\end{center}
+}
+
+
+%el comando Inkscape tiene dos inputs \Inkscape{input 1}{input 2}, el primer input es [OPCIONAL] y representa el ancho del dibujo, y el segundo es el caption de la figura.
+\NewDocumentCommand{\Inkscape}{O{1} m m}{
+\stepcounter{numeroDibujo}
+\begin{center}\label{Figura:Capitulo \thenumeroCapitulo - Seccion \thenumeroSeccion Dibujo \thenumeroDibujo}
+\def\svgwidth{#1\textwidth}
+\input{#3}
 \captionof{figure}{#2}
 \end{center}
 }
@@ -447,45 +468,32 @@
 
 %---------------------------------
 
-\chapter{Parte I: Introducción a grafos}
+\chapter{Introducción a Grafos}
 
 
-Bibliografia: \cite{diestelGraphTheory}.
-
-
-
-\section*{Evaluaciones:}
-
-\textbf{Nota:} sumativa significa examen.
-
-\begin{enumerate}
-\item Sumativa 1 : Lunes 24 abril. 30 porciento.
-\item Sumativa 2: Lunes 22 mayo: 25 porciento.
-\item Sumativa 3: Jueves 6 julio: 25 porciento.
-\item Talleres (usualmente los viernes): 20 porciento (hay que trabajar y entregar lo que se hizo en el taller, te pueden hacer resolver en clase al azar el ejercicio al siguiente taller).
-\end{enumerate}
-
+Seguiremos principalmente el libro de Diestel \cite{diestelGraphTheory}.
 
 %%%%%%%%%%%
 \Clase{16/03/23}   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%
 
 \begin{Definition}
-Un \textbf{Grafo} es un par ordenado $G = (V,E)$, donde $V$ es un conjunto de \textbf{vértices} y $E$ es un conjunto de \textbf{Aristas}. Es decir, las aristas son pares $(v_1,v_2)$ con $v_1,v_2 \in V$. En un prinicipio si el grafo \textbf{no es dirigido}, no importa el orden de los vértices que aparece en un par $(v_1,v_2)$.
+Un \textbf{Grafo} es un par ordenado $G = (V,E)$, donde $V$ es un conjunto de \textbf{vértices} y $E$ es un conjunto de \textbf{Aristas}. Es decir, las aristas son pares $(v_1,v_2)$ con $v_1,v_2 \in V$. En un prinicipio si el grafo \textbf{no es dirigido}, no importa el orden de los vértices que aparece en un par $(v_1,v_2)$. Más aún, en nuestra definición supondremos que no hay \textbf{bucles}, es decir, aristas $(v_1,v_2)$ con $v_1 = v_2$.
 \end{Definition}
 
 La manera de visualizar un grafo es dibujar cada vértice y unir dos pares de vértices $v_1,v_2 \in V$ por un segmento que representa la arista $(v_1,v_2)$.
 
 \begin{example}
-Sea $V = \{ 1,2,3,4,5\}$ y $E = \{ \{1,3\} , \{3,4\} , \{ 5,4\} , \{4,1 \} , \{ 1,2\}\}$
+Sean $V = \{ 1,2,3,4,5\}$ y $E = \{ \{1,3\} , \{3,4\} , \{ 5,4\} , \{4,1 \} , \{ 1,2\}\}$
 
 
-\Dibujo{Dibujo del grafo $V$.}
+\Inkscape{Dibujo del grafo $G = (V,E)$.}{"./Figuras/Introduccion-a-grafos/Dibujo 1.pdf_tex"}
+
 \end{example}
 
 
 \begin{definition}
-Para un grafo $G = (W,R)$, denotamos por $V(G)$ a $W$ (los vértices) y por $E(G) = R$ (las aristas).
+Para un grafo $G = (W,R)$, denotamos por $V(G)$ a $W$ (los vértices) y por $E(G)$ a $R$ (las aristas).
 
 El número de vértices de $G$ se denota como $\abs G$ o $\abs{V(G)}$, y se llama \textbf{orden} de $G$. El número de aristas lo denotamos como $\Abs G$ o simplemente $\abs{E(G)}$. Un grafo con orden $1$ o $0$ se llama \textbf{trivial}.
 \end{definition}
@@ -493,30 +501,32 @@ El número de vértices de $G$ se denota como $\abs G$ o $\abs{V(G)}$, y se llam
 \begin{definition}
 Si $v \in V(G)$ y $e \in E(G)$, y además $v \in e$, decimos que $v$ es \textbf{incidente} en $e$ y viceversa, i.e. $e$ es incidente en $v$. Los dos vértices que inciden en una arista son sus \textbf{extremos}.
 
-Dos vértices $x,y$ son \textbf{adyacentes} o \textbf{vecinos} si $(x,y) \in E$ (Otra notación: $xy \in E$ donde $xy$ es la arista).
+Dos vértices $x,y$ son \textbf{adyacentes} o \textbf{vecinos} si $(x,y) \in E$. Usualmente notaremos $xy \in E$ a la arista formada por estos vértices.
 \end{definition}
 
 \begin{obs}
-Si mi grafo tiene $n$ vértices, entonces tiene a lo sumo $\binom n 2$ aristas. Luego, la cantidad de grafos que se pueden construir es $2^{\binom n 2}$.
+Si un grafo tiene $n$ vértices, entonces tiene a lo sumo $\binom n 2$ aristas. Luego, la cantidad de grafos que se pueden construir es $2^{\binom n 2}$.
 \end{obs}
 
 \begin{definition}
-Si en un grafo todo par de vértices es adyacente, decimos que el grafo es \textbf{completo}.
-Notamos: $K_n$ para todo $n \geq 1$, al grafo completo con $n$ vértices.
+Si en un grafo $G$ todo par de vértices es adyacente, decimos que el grafo es \textbf{completo}. Notamos $ G =K_n$ si el grafo es completo y tiene $n$ vértices. (Notar que $K_n$ tiene exactamente $\binom n 2$ aristas: una por cada manera de elegir dos vértices).
 \end{definition}
 
-\Dibujo{Ejemplo de grafos completos de orden $1,2,3$ y $5$.}
+\Inkscape{Ejemplo de grafos completos de orden $1,2,3,4,5,6$.}{"./Figuras/Introduccion-a-grafos/Dibujo 2.pdf_tex"}
 
 \begin{definition}
-Si un par de vértices no es adyacente, decimos que son \textbf{independientes} o \textbf{estables}.
+Si un par de vértices no es adyacente, decimos que son \textbf{independientes} o \textbf{estables} (entre sí).
 
 Si $V' \subset V(G)$ es tal que cada par de vértices en $V'$ es independiente, entonces decimos que $V'$ es \textbf{independiente}.
 \end{definition}
 
 \begin{definition}
-Sean $G1 = (V1,E1)$ y $G2 = (V2, E2)$ grafos, decimos que $\varphi : V1 \rightarrow V2$ es un \textbf{isomorfismo} si para todo par de vértices $x,y \in V1$ se tiene que $xy \in E1 \Leftrightarrow \varphi (x) \varphi (y) \in E2$.
+Sean $G_1 = (V_1,E_1)$ y $G_2 = (V_2, E_2)$ dos grafos, decimos que una función $\varphi : V_1 \rightarrow V_2$ es un \textbf{isomorfismo} si para todo par de vértices $x,y \in V_1$ se tiene que
+\[
+    xy \in E_1 \quad \Longleftrightarrow \quad \varphi (x) \varphi (y) \in E_2.
+\]
 
-Usualmente no hacemos distinciones entre dos grafos isomorfos. De hecho en ese caso escribimos $G1 = G2$.
+Usualmente no hacemos distinciones entre dos grafos isomorfos. De hecho en ese caso escribimos $G_1 = G_2$.
 \end{definition}
 
 
@@ -1560,7 +1570,7 @@ Si un grafo $Y$ contiene a $TX$ como subgrafo, diremos que $X$ es una \textbf{me
 \end{definition}
 Notar que los vértices subdivisores tienen grado $2$ y los vértices de ramificación no cambian de grado.
 
-\Inkscape{De izquierda a derecha, tenemos la construcción prograsia de $X$, luego le agregamos \red{vértices subdivisores} formando $TX$, y finalmente ilustramos un ejemplo de grafo $Y$ con $X$ como menor topológico.}
+\InscapeDEPRECADO{De izquierda a derecha, tenemos la construcción prograsia de $X$, luego le agregamos \red{vértices subdivisores} formando $TX$, y finalmente ilustramos un ejemplo de grafo $Y$ con $X$ como menor topológico.}
 
 
 
@@ -2042,7 +2052,7 @@ luego de $v_l$ a $v_j$ para cada vértice $v_l$ adyacente a $v_j$.
 
 
 
-
+\chapter{Matchings}
 
 
 %%%%%%%%%%%
@@ -2180,7 +2190,7 @@ Todo grafo $2k$-regular ($k \geq 1$) $G$ tiene un $2$-factor.
 \begin{proof}
 Sin perdida de generalidad supongamos que $G$ es conexo. Por el Teorema \ref{th:paseo Euleriano si todos los vertices del multigrafo tienen grado par}, $G$ contiene un paseo Euleriano $v_0 e_0 \cdots e_{\ell -1} v_\ell$ con $v_0 = v_\ell$. Reemplacemos cada vértice $v$ por un par $(v^- , v^+)$, y cada arissta $e_i = v_i v_{i+1}$ por la arista $v_i^+ v_{i+1}^-$. Así obtenemos un grafo bipartito $G'$ que es $k$-regular, con lo cual el Corolario \ref{corollary:König-Frobenius - todo bigrafo regular no trivial tiene un matching perfecto} implica que tenemos un $1$-factor (i.e. un matching perfecto). Colapsando cada par $(v^-,v^+)$ de vuelta a su vértice original $v$, el $1$-factor de $G'$ se convierte en un $2$-factor de $G$.
 
-\Inkscape{Partiendo el vértice $v$ en $v^-$ y $v^+$.}
+\InscapeDEPRECADO{Partiendo el vértice $v$ en $v^-$ y $v^+$.}
 \end{proof}
 
 \subsection{Relaciones min-máx}
@@ -2555,7 +2565,7 @@ Dados un grafo $G$ llamemos $\mathcal C _G$ al conjunto de componentes conexas, 
 q(G \setminus S) \leq \abs S \quad \forall S\subset V(G),
 \end{equation}
 ya que toda componente impar de $G \setminus S$ tiene que mandar una arista de $M$ en $S$: por paridad una de las aristas de $M$ tiene un extremo en la componente impar y el otro en $S$; claramente dos compoenentes no pueden estar asociadas de esta manera a un mismo vértice de $S$ porque $M$ es un matching.
-\Inkscape[0.6]{Ilustración de la condición de Tutte, de un conjunto \yellow{$S$} con \green{$q(G \setminus S) = 3$} componentes impares en $G\setminus S$, luego se cumple la condición de Tutte pues \yellow{$\abs S = 5$}.}
+\InscapeDEPRECADO[0.6]{Ilustración de la condición de Tutte, de un conjunto \yellow{$S$} con \green{$q(G \setminus S) = 3$} componentes impares en $G\setminus S$, luego se cumple la condición de Tutte pues \yellow{$\abs S = 5$}.}
 
 Diremos que la ecuación \eqref{eq:condicion de Tutte} es la \textbf{condición de Tutte}. De hecho se tiene que esta condición es necesaria y suficiente:
 
@@ -2577,7 +2587,7 @@ Pero recíprocamente, si un conjunto $S \subset V$ satisface la afirmación ante
 
 Con lo cual, si probamos que $G$ contiene un subconjunto $S$ que cumple la afirmación llegaremos a un absurdo. Sea $S$ el conjunto de vérticees que son adyacentes a todo otro vértice. Si $S$ no cumple la afirmación, es porque alguna componente de $G\setminus S$ tiene dos vértices $a,a'$ no adyacentes. Sean $a,b,c$ los primeros tres vértices en algún $a$-$a'$ camino de longitud mínima dentro de esta componente; entonces $ab,bc \in E$ pero $ac \not \in E$. Como $b \not \in S$, existe un vértice $d \in V$ tal que $bd \not \in E$. Por maximalidad de $G$, existe un matching $M_1$ que cubre $V$ en $G+ ac$, y otro matching $M_2$ que cubre a $V$ en $G + bd$.
 
-\Inkscape[.8]{Ver la pagina 42 para una ilustración de la contradicción.}
+\InscapeDEPRECADO[.8]{Ver la pagina 42 para una ilustración de la contradicción.}
 
 Sea $P = d \cdots v$ un camino maximal en $G$ que empieza en $d$ con una arista de $M_1$ y que contiene alternadamente aristas de $M_1$ y $M_2$ como se ve en el dibujo de arriba. Si la última arista de $P$ se encuentra en $M_1$, entonces $v = b$, pues si no podríamos continuar $P$ y obtener un camino $M_2$-aumentante en $G + bd$. Escribamos entonces $C := P + bd$ en este caso. Por otro lado, si la última arista de $P$ yace en $M_2$, entonces por maximalidad de $P$ la $M_1$-arista en $v$ debe ser $ac$, con lo cual $v \in \{a, c \}$; en este caso escribamos $C:= d P v b d$. En cualquier caso, $C$ es un ciclo par donde las aristas se alternan afuera y adentro de $M_2$, y con su única arista fuera de $E$ es $bd$. Reemplazando en $M_2$ sus aristas en $C$ por las aristas de $C \setminus M_2$, obtenemos un matching perfecto de $G$ contenido en $E$, absurdo.
 \end{proof}
@@ -2606,7 +2616,7 @@ Un grafo no vacío $G = (V,E)$ se llama \textbf{factor-crítico} si no tiene mat
 Llamamos a un conjunto de vértices $S \subset V$ matcheable con $\mathcal C_{G \setminus S}$ si el grafo bipartito $G_S$\footnote{$G_S$ es el grafo creado a partir de $G$ por contracción de las componentes $C \in \mathcal C_{G \setminus S}$ a vértices y borrando todas las aristas dentro de $S$. Formalmente, $G_S$ es el grafo con conjunto de vértices $S \cup \mathcal C_{G \setminus S}$ y conjunto de aristas $\set{sC | \text{ existe un vértice $c \in C$ adyacente a $s$ en $G$}}$.} contiene un matching que cubre a $S$.
 \end{definition}
 
-\Inkscape{Ilustración cómo se ve el grafo $G_S$ construido a partir de \yellow{$S$}.}
+\InscapeDEPRECADO{Ilustración cómo se ve el grafo $G_S$ construido a partir de \yellow{$S$}.}
 
 \begin{theorem}\label{th:teorema del conjunto S con componentes del complemento factores criticos impares, con la propiedad de que caracteriza si el grafo tiene matching perfecto o no.}
 Todo grafo $G = (V,E)$ contiene un conjunto de vértices $S$ con las siguientes propiedades:
@@ -2710,7 +2720,7 @@ Como los primeros son un caso particular de grafos bipartitos, basta con probar 
 \item[\textit{Caso bosques:}] Por inducción en la cantidad de vértices $n$ de un bosque $T$. Recordemos que $n$ tiene que ser par y $G$ tiene que tener almenos una arista, luego los casos $n = 2,3$ son triviales. En general para $n \geq 4$, si $x \in G$ es una hoja con un padre $y$, consideramos el bosque $T' = T \setminus \{x,y\}$. Este nuevo bosque sigue cumpliendo la condición de Tutte débil \ref{def:condicion de Tutte debil}. En efecto, sea $z \in T'$, las componentes conexas de $T' \setminus \{z\}$ de orden impar son a lo más la cantidad de componentes impares de $T \setminus \{z\}$, pues como no hay ciclos en $T$, $x$ e $y$ son adyacentes como mucho a una componente de $T' \setminus \{z\}$, luego por la condición débil, $T' \setminus \{z\}$ tiene a lo más una componente impar. Como $z\in T'$ era arbitrario, podemos aplicar hipótesis inductiva con $ \abs{T'} = n -2 \geq 2$, luego $T'$ tiene matching perfecto, con lo cual agregando la arista $xy$ obtenemos un matching perfecto de $T$.
 \item[\textit{Caso $X,Y$-bigrafos:}] Por la condición de Tutte débil \ref{def:condicion de Tutte debil}, existe un subconjunto $S \subset X$ que tiene almenos un vecino, i.e. cumple la condición de Hall \eqref{eq:condicion de Hall}, luego tomemos $S$ de tamaño máximo tal que cumple la condición (en particular es no trivial). Supongamos por el absurdo que no tenemos un matching perfecto, es decir que $S \subsetneq X$. Sea $x \in X \setminus S$ arbitrario. Por maximalidad de $S$, tenemos que $\abs S = \abs N (S) \subset Y$, más aún, $N (x) \subset S$, i.e. los vértices de $Y \setminus N(S)$ son aislados. Como $\abs X = \abs Y$, debe haber almenos un $y \in Y \setminus N(S)$, sin embargo $G$ no tiene vértices aislados, absurdo.
 
-\Inkscape{Ilustración del absurdo en un bigrafo que cumple la condición débil.}
+\InscapeDEPRECADO{Ilustración del absurdo en un bigrafo que cumple la condición débil.}
 \end{enumerate}
 \end{solution}
 
@@ -2901,7 +2911,7 @@ Claramente $G$ tiene un cubrimiento de caminos, i.e. el cubrimiento por caminos 
 
 Si $\ter {\mathcal{P}} = \{v_1, \ldots, v_m \}$ es independiente, no hay nada que probar, luego supongamos que $G$ tiene una arista de $v_2$ en $v_1$. Como $P_2 v_2 v_1$ es nuevamente un camino, la minimalidad de $\ter {\mathcal{P}}$ implica que $v_1$ no es el único vértice de $P_1$; sea $v$ el vértice que precede a $v_1$ en $P_1$. Entonces $\mathcal P ' := \{ P_1 v , P_2, \ldots, P_m \}$ es un cubrimiento por caminos de $G' := G \setminus {v_1}$.
 
-\Inkscape{Cubrimiento por caminos de $G$ y $G'$.}
+\InscapeDEPRECADO{Cubrimiento por caminos de $G$ y $G'$.}
 
 Claramente, cualquier otro conjunto independiente de representantes para $\mathcal P'$ en $G'$ va a funcionar para $\mathcal P$ en $G$, con lo cual solo tenemos que verificar que podemos aplicar la hipótesis inductiva en $\mathcal P '$. Así, basta ver que $\ter {\mathcal{P}'} = \{v,v_2,\ldots,v_m\}$ es minimal respecto a los conjuntos de últimos vertices de cubrimientos por caminos de $G'$.
 
@@ -3114,7 +3124,7 @@ Encontrar un conjunto parcialmente ordenado anticadenas infinitas pero que no es
 \end{exercise}
 \begin{solution}
 Considerar el orden parcial inducido por el siguiente grafo dirigido infinito:
-\Inkscape{Grafo dirigido infinito. En \purple{violeta} se ilustra $A_3$.}
+\InscapeDEPRECADO{Grafo dirigido infinito. En \purple{violeta} se ilustra $A_3$.}
 Formalmente, exte es el conjunto dirigido $\{x_{i, j}\}_{i,j \in \naturals}$ tal que $x_{i,j} \leq x_{i',j'}$ si y solo si $i \leq i'$ y $j \leq j'$. Notemos que no puede tener una anticadena infinita. En efecto, sea $A=\{x_{i,j}\}_{i \in I, j \in J}$ una anticadena infinita. Si $I$ e $J$ son infinitos, luego claramente para algún $x^0 = x_{i_0,j_0} \in A$ existe $x^1 = x_{i_1,j_1} \in A$ con $i_0 \leq i_1$ y $j_0 \leq j_1$, i.e. $x^0 \leq x^1$, absurdo. Por otro lado, podemos suponer por simetría que $I$ es infinito, pero que $J$ es finito, digamos $J \subset \{1, \ldots, k\}$. Como hay infinitos elementos en $A$, debe haber almenos dos elementos distintos $x = x_{i,j}$, $x' = x_{i',j'}$ en $A$ con $j = j'$, con lo cual $x < x'$ o $x ' < x$, absurdo.
 
 Observemos que también este orden parcial tiene anticadenas de cardinal $k$ para todo $k \in \naturals$. En efecto, considerar los conjuntos $A_k = \{x_{k-j + 1, j}\}_{j = 1}^k$. En particular, no pueden existir cubrimientos por finitas cadenas: si cubrimos al grafo dirigido con $l$ cadenas, tenemos que $k = \abs {A_k} \leq l$ para todo $k \in \naturals$, pues $A_k$ es una anticadena (cada cadena contiene a lo más un elemento).
@@ -3128,7 +3138,7 @@ Observemos que también este orden parcial tiene anticadenas de cardinal $k$ par
 
 
 
-
+\chapter{Grafos planares}
 
 
 
@@ -3137,10 +3147,10 @@ Observemos que también este orden parcial tiene anticadenas de cardinal $k$ par
 %%%%%%%%%%%
 
 
-\subsection{Grafos planares}
 
 
-\subsubsection{Prerequisitos topológicos}
+
+\subsection{Prerequisitos topológicos}
 
 \begin{definition}
 \begin{enumerate}[(a)]
@@ -3152,7 +3162,7 @@ Observemos que también este orden parcial tiene anticadenas de cardinal $k$ par
 \end{enumerate}
 \end{definition}
 
-\Inkscape{Ilustración de un abierto \darkblue{$A$}. Ilustramos los puntos $x_1,y_1 \in A$ equivalentes, ya que podemos dibujar un arco $P_1 \subset A$ entre ellos. Similarmente, $x_2,y_2$ están unidos por un arco $P_2$ en $A$, luego son equivalentes entre sí. Las regiones de $A$ son el \textit{maní} y el \textit{boomerang}. La frontera de $A$ es la ``cáscara'' del maní (líneas punteadas) y el ``borde'' del boomerang.}
+\InscapeDEPRECADO{Ilustración de un abierto \darkblue{$A$}. Ilustramos los puntos $x_1,y_1 \in A$ equivalentes, ya que podemos dibujar un arco $P_1 \subset A$ entre ellos. Similarmente, $x_2,y_2$ están unidos por un arco $P_2$ en $A$, luego son equivalentes entre sí. Las regiones de $A$ son el \textit{maní} y el \textit{boomerang}. La frontera de $A$ es la ``cáscara'' del maní (líneas punteadas) y el ``borde'' del boomerang.}
 
 \begin{theorem}[Teorema de la curva de Jordan para polígonos]\label{th:teorema de la curva de Jordan para poligonos}
 Para todo polígono $P \subset \reals ^2$, el conjunto $\reals^2 \setminus P$ tiene dos regiones: una acotada\footnote{En $\reals^2$ o más en general en $\reals^n$, decimos que un conjunto es \textbf{acotado}, si está contenido en alguna bola de tamaño lo suficientemente grande.} y otra no acotada. Cada región tiene a $P$ como frontera.
@@ -3167,7 +3177,7 @@ Sean $P_1, P_2, P_3$ arcos disjuntos salvo en sus extremos, donde cualquier par 
 \end{enumerate}
 \end{lemma}
 
-\Inkscape{Dos ilustraciones del lema.}
+\InscapeDEPRECADO{Dos ilustraciones del lema.}
 
 \begin{lemma}\label{lema:arco tiene una sola cara}
 Para todo arco $P$, el conjunto $\reals^2 \setminus P$ tiene una sola región.
@@ -3207,7 +3217,7 @@ Todo grafo plano $(V,E)$ define un grafo $G$ en $V$ de manera natural.
 Decimos que $G$ es un \textbf{grafo planar} si se puede construir a partir de un grafo plano.
 \end{definition}
 
-\Inkscape[0.4]{Ejemplo de grafo plano, correspondiente a $K_4$.}
+\InscapeDEPRECADO[0.4]{Ejemplo de grafo plano, correspondiente a $K_4$.}
 
 Es conveniente pensar al \textit{grafo plano} asosciado a un \textit{grafo planar} $G$, como el ``dibujo'' de $G$. A veces haremos el abuso de notación, y hablaremos de grafo plano y de su grafo planar asosciado refiriéndonos a cualquiera de los dos sin preocuparnos por ser correctos con la terminología.
 
@@ -3224,7 +3234,7 @@ Si $G$ es un grafo plano, llamamos \textbf{caras} a las regiones de $\reals \set
 
 Como trabajamos con grafos planos finitos, estos son acotados, es decir, existe una bola $B \subset \reals^2$ tal que $G \subset B$. Siempre va a haber una cara que contiene a $\reals^2 \setminus B$ y esa cara la llamamos \textbf{cara exterior}.
 
-\Inkscape{Grafo plano $G$ contenido en una bola $B$, con caras \gray{$f_1$},\purple{$f_2$},\red{$f_3$},\yellow{$f_4$}. La cara exterior $f_1$ contiene a \gray{$B$}.}
+\InscapeDEPRECADO{Grafo plano $G$ contenido en una bola $B$, con caras \gray{$f_1$},\purple{$f_2$},\red{$f_3$},\yellow{$f_4$}. La cara exterior $f_1$ contiene a \gray{$B$}.}
 
 \begin{lemma}\label{lema:clase 18 05 23 - lema 1}
 Sea $G$ un grafo plano, $f$ una de sus caras y $H$ un subgrafo de $G$. Entonces,
@@ -3234,7 +3244,7 @@ Sea $G$ un grafo plano, $f$ una de sus caras y $H$ un subgrafo de $G$. Entonces,
 \end{enumerate}
 \end{lemma}
 
-\Inkscape{Del lado izquierdo un ejemplo del ítem (i), y del derecho uno del ítem (ii).}
+\InscapeDEPRECADO{Del lado izquierdo un ejemplo del ítem (i), y del derecho uno del ítem (ii).}
 
 \begin{proof}
 \begin{enumerate}[(i)]
@@ -3260,12 +3270,12 @@ Tomemos un punto interior $x_0$ de alguno de los segmentos $S \subset e$. Entonc
 
 Si $e$ yace en un ciclo $C \subset G$, entonces $B (x_0)$ interseca ambas caras de $C$ (Teorema \ref{th:teorema de la curva de Jordan para poligonos}). Como $f_1,f_2$ están contenidas en caras de $C$ por el Lema \ref{lema:clase 18 05 23 - lema 1}, esto implica que $f_1 \neq f_2$. Si $e$ no yacen en ningún ciclo, entonces $e$ es un puente, y por lo tanto une dos conjuntos disjuntos de puntos y segmentos $X_1,X_2$ como en el enunciado del Lema \ref{lema:arco tiene una sola cara}, y $X_1 \cup X_2 = G \setminus I(e)$. Claramente $f_1 \cup I(e) \cup f_2$ es el subconjunto de una cara de $G - e$. Por el Lema \ref{lema:arco tiene una sola cara}, $f \setminus I(e)$ es una cara de $G$, mientras que $f_1, f_2 \subset f \setminus I(e)$ por definición de $f$. Como $f_1$ y $f_2$ son caras de $G$, tenemos que $f_1 = f \setminus I(e) = f_2$.
 
-\Inkscape{Un arco de $y$ hacia $B_0$, cercano a $P$.}
+\InscapeDEPRECADO{Un arco de $y$ hacia $B_0$, cercano a $P$.}
 
 Ahora, tomemos otro punto $x_1 \in I(e)$. Sea $P$ un arco de $x_0$ en $x_1$ contenido en $e$. Como $P$ es compacto, finitas bolas $B(x)$ con $x \in P$ cubren a $P$. Numeremoslas como $B_0 , \ldots, B_n$ en el orden natural de sus centro a lo largo de $P$ y agregando a $B (x_0)$ y $B (x_1)$ de ser necesario, con lo cual podemos suponer que $B_0 = B(x_0)$ y $B_1 = B(x_1)$. Por inducción en $n$, podemos probar fácilmente que todo punto $y \in D_n \setminus e$ puede ser conectado por un arco dentro de $(D_0 \cup \cdots \cup D_n) \setminus e$ con un punto $z \in D_0 \setminus e$ (ver la figura de arriba); con lo cual $y,z$ son equivalentes en $\reals^2 \setminus G$. Con lo cual, todo punto de $D_n \setminus e$ yace en $f_1$ o $f_2$, con lo cual $x_1$ no puede encontrarse en la frontera de ninguna otra cada de $G$. Como ambos medio-discos de $D_0 \setminus e$ pueden ser conectados con $D_n \setminus e$ de esta manera (utilizando el mismo argumento pero intercambiando los roles de $B_0$ y $B_n$), podemos ver que $x_1$ se encuentra ene la frontera de $f_1$ y $f_2$.
 \end{proof}
 
-\Inkscape{Del lado izquierdo tenemos una ilustración del ítem (i), con una arista $e$ contenida en la frontera \yellow{$X_1$} pero no en la frontera \red{$f_2$}. Del lado derecho se ilustra el ítem (ii), con una arista en un ciclo \red{$C$} también contenida en las caras $f_1$ y $f_2$ de $G$, las cuales están contenidas en las dos caras de $C$ la \gray{exterior} y la \red{interior}.}
+\InscapeDEPRECADO{Del lado izquierdo tenemos una ilustración del ítem (i), con una arista $e$ contenida en la frontera \yellow{$X_1$} pero no en la frontera \red{$f_2$}. Del lado derecho se ilustra el ítem (ii), con una arista en un ciclo \red{$C$} también contenida en las caras $f_1$ y $f_2$ de $G$, las cuales están contenidas en las dos caras de $C$ la \gray{exterior} y la \red{interior}.}
 
 \begin{corollary}
 La frontera de una cara siempre es el conjunto de puntos de un subgrafo.
@@ -3358,7 +3368,7 @@ Llamamos \textbf{subdivisión} de $G$ a cualquier grafo $H$ que se obtiene luego
 Si un grafo $X$ contiene un subgrafo $H$ obtenido luego de subdividir a $G$, diremos que $G$ es un \textbf{menor topológico} de $X$.
 \end{definition}
 
-\Inkscape{De izquierda a derecha, tenemos la construcción progresiva: primero $G$, luego creamos \red{vértices subdivisores} formando $H$, y finalmente ilustramos un ejemplo de grafo $X$ con $G$ como menor topológico.}
+\InscapeDEPRECADO{De izquierda a derecha, tenemos la construcción progresiva: primero $G$, luego creamos \red{vértices subdivisores} formando $H$, y finalmente ilustramos un ejemplo de grafo $X$ con $G$ como menor topológico.}
 
 \subsubsection{\underline{Operaciones que conocemos}}
 
@@ -3370,7 +3380,7 @@ Si un grafo $X$ contiene un subgrafo $H$ obtenido luego de subdividir a $G$, dir
 \end{enumerate}
 
 Contraer un vértice $v$ de grado $2$ quiere decir que lo quitamos, pero si $u,w$ eran sus vecinos de $v$, entonces nuestro nuevo grafo tiene a $u$ y $w$ como vecinos. Equivalentemente, es lo mismo que contraer una de las dos aristas que inciden en $v$.
-\Inkscape{Ejemplo de contracción de un vértice $v$.}
+\InscapeDEPRECADO{Ejemplo de contracción de un vértice $v$.}
 
 \subsubsection{\underline{Otra perspectiva con respecto a los menores}}
 
@@ -3378,7 +3388,7 @@ Contraer un vértice $v$ de grado $2$ quiere decir que lo quitamos, pero si $u,w
 Sean $G,H$ dos grafos. Decimos que $G$ contiene un \textbf{modelo} de $H$, si $V(G)$ admite una partición $\{V_x | x \in V(H)\}$ en subconjuntos que inducen subgrafos conexos tales que dos vértices $x,y \in V(H)$ son adyacentes en $H$ si y solo si $G$ contiene una arista entre $V_x$ y $V_y$.
 \end{definition}
 
-\Inkscape{A la izquierda un grafo $H$, y a la derecha un grafo $G$ que contiene un modelo de $H$.}
+\InscapeDEPRECADO{A la izquierda un grafo $H$, y a la derecha un grafo $G$ que contiene un modelo de $H$.}
 
 Si $F$ es un grafo que contiene como subgrafo a un modelo de $H$, entonces decimos que $H$ es \textbf{menor} de $F$.
 
@@ -3421,7 +3431,7 @@ Veamos primero que $H$ contiene un ciclo. De lo contrario, $G \setminus H \neq \
 Así, como $H$ contiene un ciclo, basta probar que $n \leq 3$: en efecto, $H = K_3$. Luego, supongamos que $n \geq 4$, y sea $C = v_1 v_2 v_3 v_4 v_1$ un ciclo en $G[H] = K_n$. Como $C \subset G$, nuestra cara (de $G$) $f$ está contenida en una cara $f_C$ de $C$; sea $f'_C$ la otra cara de $C$. Como los vértices $v_1$ y $v_3$ yacen en la frontera de $f$, se pueden unir por un arco cuyo interior yace dentro de $f_C$ y no interseca $G$. Luego por el segundo ítem del Lema \ref{lema:tres arcos disjuntos forman 3 componentes}, la arista plana $v_2 v_4$ de $G[H]$ tiene su interior dentro de $f'_C$ en véz de $f_C$ (ver el siguiente dibujo). Análogamente, como $v_2, v_4 \in G[f]$, la arista $v_{1}v_3$ yace dentro de $f'_C$. Pero las aristas $v_{1}v_3$ y $v_2 v_4$ son disjuntas, contradiciendo el segundo ítem del Lema \ref{lema:tres arcos disjuntos forman 3 componentes}.
 \end{proof}
 
-\Inkscape{La arista $v_{2}v_4$ de $G$ yace dentro de la cara $f_C'$.}
+\InscapeDEPRECADO{La arista $v_{2}v_4$ de $G$ yace dentro de la cara $f_C'$.}
 
 
 \begin{corollary}\label{corolario:un grafo plano con n > 2 vertices tiene a lo mas 3n - 6 aristas}
@@ -3430,7 +3440,7 @@ Un grafo plano $G$ con $n \geq 3$ vértices tiene a lo más $3n - 6$ aristas. M�
 \begin{proof}
 Basta demostrar la segunda afirmación gracias a la proposición anterior. En una triangulación, cada cara tiene $3$ aristas en su frontera y cada arista está en la frontera de exactamente dos caras (por el segundo ítem del Lema \ref{lema:grafos planos - una arista está en la frontera de una cara o no interseca con el interior de una arista - una arista esta en la frontera de un ciclo luego esta en dos caras de G y en dos caras distintas de C}). Consideramos ahora el $X,Y$-bigrafo que tiene los conjuntos de vértices $X := E(G)$ e $Y := F (G)$, donde $ef$ es una arista ($e \in E(G)$, $f \in F (G)$) si y solo si $e$ está en la frontera de $f$.
 
-\Inkscape{Ejemplo de grafo bipartito obtenido a partir de una triangulación $G$.}
+\InscapeDEPRECADO{Ejemplo de grafo bipartito obtenido a partir de una triangulación $G$.}
 
 Notar que el número de aristas de este grafo bipartito es justamente $2 \abs {E(G)} = 3 \abs{F(G)}$. Luego reemplazando $f = \frac 2 3 m$ en la fórmula de Euler:
 \[
@@ -3476,7 +3486,7 @@ Notar que un isomorfismo topológico $\sigma$, salvo quizás un par de puntos in
 \end{obs}
 
 
-\Inkscape{Dos dibujos de grafos no topológicamente isomorfos: $H$ tiene una cara con $6$ aristas incidentes, pero $H'$ no.}
+\InscapeDEPRECADO{Dos dibujos de grafos no topológicamente isomorfos: $H$ tiene una cara con $6$ aristas incidentes, pero $H'$ no.}
 
 \begin{definition}
 \begin{enumerate}[(2)]
@@ -3499,13 +3509,13 @@ Tenemos las implicaciones obvias para un isomorfismo $\sigma : V \rightarrow V'$
 \begin{example}\label{ejemplo:dos dibujo combinatorialmente isomorfos pero no topológicamente}
 Ilustremos un ejemplo donde dos dibujos son combinatorialmente isomorfos pero no topológicamente:
 
-\Inkscape{Dos dibujos $H$ y $H'$ de un grafo que son combinatorialmente isomorfos, pero no topológicamente.}
+\InscapeDEPRECADO{Dos dibujos $H$ y $H'$ de un grafo que son combinatorialmente isomorfos, pero no topológicamente.}
 
 En efecto, si lo fueran, claramente tiene que mandar las aristas $xy$ y $x z$ en $x'y'$ y $x' z'$, pues preserva grados de los vértices y aristas. Pero si conectamos $y$ con $z$ mediante un arco $P$, este se traduce en un ciclo de $H'$ agregando un arco $P'$ entre $y'$ y $z'$; llamemos a estos nuevos grafos planos $\tilde H$ y $\tilde H'$, los cuales son topológicamente equivalentes.
 
 Tenemos que $u$ y $v$ son vértices que son equivalentes a distintas componentes de $\reals^2 \setminus \tilde H$, luego este isomorfismo topológico tiene que preservar lo mismo. Más precisamente, tenemos que $u \mapsto u'$ y $v \mapsto v'$; y $u',v'$ deberían estar en distintas componentes de $\reals^2 \setminus \tilde H '$. Esto no es verdad pues mirando una bola abierta $B$ alrededor de $x'$ lo suficientemente chico para que no interseque el arco nuevo que agregamos entre $y'$ y $z'$, tenemos que los puntos entre $x'$ y $v'$ son equivalentes a los puntos entre $x'$ y $u'$ dentro de $B$; como $P'$ no interseca el camino $x'$-$u'$ todos estos puntos son equivalentes entre sí con estos puntos dentre de $B$ sin intersecar $P'$, análogamente para el camino plano $x'$-$v'$. Como las clases de equivalencia de puntos de $B \cap \reals^2 \setminus \tilde H'$, se sigue que $u'$ y $v'$ son equivalentes en esta componente, absurdo.
 
-\Inkscape{Ilustración de $\tilde H$ y $\tilde H'$.}
+\InscapeDEPRECADO{Ilustración de $\tilde H$ y $\tilde H'$.}
 \end{example}
 
 El siguiente teorema nos dice que en la mayoría de los casos estas tres definiciones coinciden:
@@ -3546,7 +3556,7 @@ Dos dibujos de un grafo $G$ pueden ser topológicamente isomorfos, pero que las 
 
 En efecto, consideremos los siguientes dibujos $H$ y $H'$ ilustrados en la siguiente figuras:
 
-\Inkscape{Ilustración de $H$ y $H'$.}
+\InscapeDEPRECADO{Ilustración de $H$ y $H'$.}
 
 Donde $G$ es la estrella $K_{1,4}$. Claramente son topológicamente equivalentes: la identidad funciona. Sin embargo, consideremos las inmersiones planas
 \[
@@ -3618,11 +3628,11 @@ Con lo cual, el teorema anterior equivale a pedir que contenga a estos grafos co
 \begin{enumerate}
 \item[($\Leftarrow$)] Esta implicancia es gratis pues una subdivisión es un menor topológico, y en particular es menor (ver el primer ítem de la Proposición \ref{proposition:relaciones entre menor y menor topologico}).
 \item[($\Rightarrow$)] Por el segundo ítem de la Proposición \ref{proposition:relaciones entre menor y menor topologico} si $G$ contiene un grafo $H$ con $\Delta (H) \leq 3$, entonces $G$ contiene a $H$ como subdivisión. Entonces nos basta demostrar que si $G$ contiene a $K_5$ como menor, entonces contiene a $K_5$ o a $K_{3,3}$ como subdivisión. Supongamos que $G$ contiene a $K_5$ como menor y tomo como modelo de $K_5$ en $G$ que sea minimal con respecto a las aristas, es decir, si particionamos los vértices del modelo como $V_x$ con $x \in K_5$, las aristas en $V_x$ son mínimas tal que es conexo, es decir, es un árbol, y entre cada $V_x, V_y$ con $x\neq y \in K_5$ hay una única arista.
-\Inkscape{Ilustración del modelo de $K_5$.}
+\InscapeDEPRECADO{Ilustración del modelo de $K_5$.}
 Si consideramos el grafo inducido por $V_x$ y las cuatro aristas que salen de él incluyendo un vértie de cada $V_y$ con $y \neq x$, obtengo un árbol $T_x$. Nuevamente por minimalidad, el árbol $T_x$ tiene exactamente $4$ hojas. Si cada $T_x$ fuese una subdivisión de un $K_{1,4}$ entonces ya tenemos la subdivisión de $K_5$.
-\Inkscape{Dibujo de $K_{1,4}$.}
+\InscapeDEPRECADO{Dibujo de $K_{1,4}$.}
 Luego supongamos que no sucede, es decir, existe un $V_x$ tal que $T_x$ no es subdivisión de $K_{1,4}$. Entonces tiene exactamente dos vértices de grado $3$. Tomo esos dos vértices como extremos de su subdivisión y junto con otros extremos en los otros $V_y$ con $y \neq x$ obtengo una subdivisión de grafo que contiene a $K_{3,3}$.
-\Inkscape[0.8]{Ilustración: los dos vértices de grado $3$ en $V_x$ de color \blue{azul}.}
+\InscapeDEPRECADO[0.8]{Ilustración: los dos vértices de grado $3$ en $V_x$ de color \blue{azul}.}
 \end{enumerate}
 \end{proof}
 
@@ -3641,7 +3651,7 @@ Haremos inducción en $\abs G$. Para $\abs G = 4$ tenemos que $G = K_4$, y la af
 \]
 se puede ver como un dibujo de $G \setminus y$, en donde el vértice $x$ es representado por un punto $v_{xy}$ (ver el siguiente dibujo). Nuestro objetivo es agregar $y$ a este dibujo de manera que obtengamus un dibujo de $G$.
 
-\Inkscape{$\tilde G '$ como dibujo de $G \setminus \{y\}$: el vértice $x$ está representado por un punto $v_{xy}$.}
+\InscapeDEPRECADO{$\tilde G '$ como dibujo de $G \setminus \{y\}$: el vértice $x$ está representado por un punto $v_{xy}$.}
 
 Como $\tilde G$ es $3$-conexo, $\tilde G \setminus \{v_{xy}\}$ es $2$-conexo, con lo cual $C$ es un ciclo (Proposición \ref{lema:todo grafo 3-conexo distinto de K_4 tiene una arista e tal que G/e es nuevamente 3-conexo}). Sean $x_1, \ldots, x_k$ una numeración de los vértices en $X$ a lo largo de este ciclo, y sea $P_i = x_i \cdots x_{i+1}$ los $X$-caminos en $C$ entre ellos ($i = 1, \ldots, k$; con $x_{k+1} := x_1$). Veamos que $Y \subset V(P_i)$ para algún $i$. Supongamos que no. Si $y$ tiene un vecino $y' \in I(P_i)$ para algún $i$, tiene entonces otro vecino $y'' \in C \setminus P_i$, y estos están separados en $C$ por $x' := x_i$ y $x'' := x_{i+1}$. Si $Y \subset X$ y $\abs{Y \cap X} \leq 2$, entonces $y$ tiene exactamente dos vecinos $y', y''$ en $C$ pero no en el mismo $P_i$, así, nuevamente $y'$ e $y''$ están separados en $C$ por dos vértices $x',x'' \in X$. En cualquier caso, $x,y',y''$ e $y,x',x''$ son los vértices de ramificación de un $T K_{3,3}$ en $G$, absurdo. El único caso restante es que $y$, $x$ tengan tres vecinos en común en $C$. Luego estos forman un $T K_5$ con $x$ e $y$, otra vez absurdo.
 
@@ -3653,7 +3663,7 @@ Esta demostración se puede adaptar para probar que todo grafo planar $3$-conexo
 
 Existen grafos planares $2$-conexos sin dibujos con todas sus caras interiores convexas:
 
-\Inkscape{Dibujo de un grafo con dos vértices de grado $4$ y cuatro vértices de grado $2$.}
+\InscapeDEPRECADO{Dibujo de un grafo con dos vértices de grado $4$ y cuatro vértices de grado $2$.}
 El grafo que corresponde a este dibujo es $2$-conexo y no puede tener todas sus caras interiores convexas. En efecto, para probar última afirmación, notar que si hubiera un dibujo con todas las caras internas convexas, luego rotando el dibujo podemos asumir que los dos vértices de grado $4$ están alineados sobre la recta $Y = 0$ de $\reals^2$. Como las caras son convexas los vértices de grado $2$: $v_1,v_2,v_3,v_4$ se pueden ordenar de manera que la cordenada $Y$ de los puntos cresca estrictamente: $y_1<y_2<y_3<y_4$ con $v_i = (*,y_i)$. Luego, no es difícil convencerse que la cara interior del ciclo que contiene a los vértices $v_3$ y $v_4$ no es convexa.
 
 Más precisamente: considerar la función concava $f$ cuyo gráfico es igual al camino entre los vértices de grado $4$ que pasa por $v_3$; como el dibujo tiene finitos puntos de inflexión, $f$ es una función lineal salvo finitos trozos que es convexa, luego $f$ es creciente en un intervalo, constante en otro (posiblemente ninguno) y luego decreciente pues no puede ser una recta constante, de lo contrario podríamos realizar el mismo razonamiento pero rotando $180$ grados la figura y mirando la cara con frontera el ciclo que contiene a $v_1$ y $v_2$. Ahora, la parte superior del gráfico de $f$ no es convexo, i.e. la cara que tiene a $v_4$ en su frontera no es convexo.
@@ -3744,7 +3754,7 @@ Consideremos el grafo bipartito $B$ con vértices $E \cup F$, donde hay una aris
 
 
 
-
+\chapter{Coloreo de Grafos}
 
 %%%%%%%%%%%
 \Clase{02/06/23}   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -3752,7 +3762,7 @@ Consideremos el grafo bipartito $B$ con vértices $E \cup F$, donde hay una aris
 
 
 
-\subsection{Coloreo de Grafos}
+
 
 Vamos a ver coloreo de vértices, pero en general también veremos coloreo de aristas, el cual se puede pensar también como coloreo de vértices.
 
@@ -3767,7 +3777,7 @@ $c$ es un \textbf{$k$-coloreo} si $c : V \rightarrow \{1, \ldots, k\}$.
 El \textbf{número cromático} de $G$, denotado por $\chi (G)$, es el menor $k \geq 1$ tal que existe un $k$-coloreo en $G$.
 \end{definition}
 
-\Inkscape{Coloreamos los vértices de $G$ con \red{rojo}, \blue{azul} y \yellow{amarillo}. Notar que el $3$-ciclo solo se puede pintar con almenos $3$ colores; así, $\chi (G) = 3$}
+\InscapeDEPRECADO{Coloreamos los vértices de $G$ con \red{rojo}, \blue{azul} y \yellow{amarillo}. Notar que el $3$-ciclo solo se puede pintar con almenos $3$ colores; así, $\chi (G) = 3$}
 
 Notar que un $k$-coloreo es una partición de $G$ en $k$-conjuntos independientes, es decir, todo grafo $k$-coloreable es $k$-partito. A estos conjuntos los llamamos \textbf{clases de colores}.
 
@@ -3799,7 +3809,7 @@ Numeremos los vértices de un grafo $G$ de la siguiente manera: $v_1, \ldots, v_
 En el peor de los casos, $v_i$ tiene grado máximo $\Delta (G)$ y todos sus vecinos son los $v_j$ con $j < i$, y además todos tienen colores diferentes. Con lo cual, necesitaremos a lo más $\Delta (G) + 1$ colores para colorear a $G$, i.e. $\chi (G) \leq \Delta (G) + 1$.
 \end{proof}
 
-\Inkscape{Ilustración del algorítmo glotón.}
+\InscapeDEPRECADO{Ilustración del algorítmo glotón.}
 
 A veces esto es lo mejor que se puede hacer:
 \begin{proposition}
@@ -3912,7 +3922,7 @@ Supongamos que $G$ está dibujado en el plano y $B$ es un disco con centro $v$, 
 
 Primero observemos que todo $v_1,v_3$-camino $P \subset H \setminus \{v_2, v_4\}$ separa (topológicamente) a $v_2$ de $v_4$ en $H$. En efecto, esto ocurre si y solo si el ciclo $C = v v_1 P v_3 v$ separa a $v_2$ de $v_4$, y para ver esto basta ver que $v_2$ y $v_4$ están en caras distintas de $C$ (no es difícil).
 
-\Inkscape{Ilustración de la demostración.}
+\InscapeDEPRECADO{Ilustración de la demostración.}
 
 Dados $i,j \in \{1, \ldots, 5\}$, sea $H_{i,j}$ el subgrafo de $H$ inducido por los vértices de color $i$ y $j$. Veamos que la componente $C_1$ de $H_{1,3}$ que contiene a $v_1$, contiene también a $v_3$ (o si no ganamos). En efecto, si no fuese así, intercambiamos los colores $1$ y $3$ de la componente $C_1$ y obtenemos otro coloreo de $H$ en el cual no aparece el color $1$ en el vecindario de $v$. Así podemos colorear a $v$ con $1$ y $G$ es $5$-coloreable. Podemos asumir entonces que $H_{1,3}$ contiene un $v_1, v_3$-camino y como hemos visto, este camino separa a $v_2$ de $v_4$. Ahora, considero la componente $C_2$ de $H_{2,3}$ que contiene a $v_2$. Como $P \cap H_{2,3} = \emptyset$, la componente $C_2 $ no contiene a $v_4$. Así podemos intercambiar los colores $2$ y $3$ en $C_2$, obteniendo un nuevo coloreo de $H$ donde el color $2$ no aparece en el vecindario de $v$. Con lo cual, podemos extener este coloreo de $H$ a un $5$-coloreo de $G$: coloreamos a $v$ con color $2$.
 \end{proof}
@@ -3947,13 +3957,13 @@ Podemos suponer que $\chi (H) = \Delta$, si no $G$ sería $\Delta$-coloreable y 
 
 Dado un $\Delta$-coloreo de $H$, sean $v_i$ los vecinos de $v$ de color $i$ para todo $i = 1 , \ldots, \Delta$. Para $i \neq j$ consideremos $H_{i,j}$ el subgrafo de $H$ inducido por los vértices coloreados con colores $i,j$. Supongamos que para todo $i \neq j$, los vértices $v_i$ y $v_j$ están en una misma componente de $H_{i,j}$ la cual llamamos $C_{i,j}$. (Si esto no pasara podríamos intercambiar los colores $i,j$ de una componente de $H_{i,j}$ que contenga a $v_i$, lo cual no afectaría el color de $v_j$, así $H$ sería $\Delta$-coloreable de tal manera que los vecinos de $v$ están coloreados con $\Delta -1$ colores: todos menos el $i$-ésimo color).
 
-\Inkscape{Ilustración de un grafo $H$ que es $\Delta = 4$-coloreable y $v$ afuera de $H$ tiene $4$ vecinos pintados de color: $1,2,3,4$. Si la componente $C_{1,3}$ no fuera un camino, podríamos extender el $\Delta$-coloreo de $H$ a $v$.}
+\InscapeDEPRECADO{Ilustración de un grafo $H$ que es $\Delta = 4$-coloreable y $v$ afuera de $H$ tiene $4$ vecinos pintados de color: $1,2,3,4$. Si la componente $C_{1,3}$ no fuera un camino, podríamos extender el $\Delta$-coloreo de $H$ a $v$.}
 
 Notar que $d_H (v_i) = \Delta - 1$, pues $v_i$ debe tener almenos esa cantidad de vecinos todos de distinto color (si no podríamos recolorearlo y utilizar menos colores en el vecindario de $v$). Probemos que $C_{i,j}$ es un camino. Primero, acabamos de ver que $v_i$ y $v_j$ tienen un solo vecino en $C_{i,j}$ (pues hay una biyección entre los colores y los vecinos de cada vértice). Con lo cual, nos falta ver que $C_{i,j}$ no tiene vértices de grado $3$, supongamos por el absurdo que si existe un vértice así, digamos $u$. Entonces como $u$ tiene $3$ vecinos del mismo color, debe ser que su vecindario en $H$ usa a lo más $\Delta - 2$ colores, i.e., podemos cambiar el color de $u$ al que no se usa en su vecindario y así desconectamos $C_{i,j}$ y podemos $\Delta$-colorear a $G$ como antes.
 
 Para $i,j,k$ distintos, los caminos $C_{i,j}$ y $C_{i,k}$ se intersectan solo en $v_i$. En efecto, si existiera $u \in C_{i,j} \cap C_{i,k} \setminus \{v_i\}$, entonces $u$ tiene almenos $4$ vecinos pintados con a lo más $2$ colores (ver el siguiende diagrama), luego el vecindario de $u$ en $H$ tiene a lo más $\Delta -2$ colores y podríamos recolorearlo, separando las cadenas de Kempen y extendiendo un $\Delta$-coloreo a $G$.
 
-\Inkscape{Diagrama de dos caminos $C_{i,j}$ y $C_{i,k}$ que se intersecan en un vértice distinto de $v_i$.}
+\InscapeDEPRECADO{Diagrama de dos caminos $C_{i,j}$ y $C_{i,k}$ que se intersecan en un vértice distinto de $v_i$.}
 
 Finalmente, alguno de estos caminos $C_{i,j}$ tiene que tener más de dos vértices, de lo contrario $H$ y por lo tanto $G$, serían un completo $K_\Delta$; digamos $C_{1,2}$ con un vértice $u \neq v_1,v_2$ de color $1$. Consideremos la componente $U_{1,3}$ de $H_{1,3}$ que contiene a $u$. Por todo lo discutido anteriormente $v_1, v_3 \not \in U_{1,3}$, luego intercambiar los colores $1,3$ de $U_{1,3}$ cortan la cadena de Kempen $C_{1,2}$ y por lo tanto podemos $\Delta$-colorear a $G$ como antes.
 \end{proof}
@@ -3968,7 +3978,7 @@ luego de agregar las aristas $x_0 x_k, x_1 x_k, \ldots, x_{k-2} x_k$. Notar que 
     \chi (G) \leq \col G \leq 3 \leq k.
 \]
 
-\Inkscape{Ilustración de $G$. Comparar con el Algorítmo glotón \ref{prop:algoritmo gloton}.}
+\InscapeDEPRECADO{Ilustración de $G$. Comparar con el Algorítmo glotón \ref{prop:algoritmo gloton}.}
 \end{example}
 
 
@@ -4117,7 +4127,7 @@ Por otro lado, sea $L(G)$ el grafo línea de $G$, tenemos que
     \chi ' (G) = \chi (L (G)) \leq \Delta (L(G)) + 1 \quad \quad (\text{Proposición \ref{prop:algoritmo gloton}})
 \]
 y además, $\Delta (L(G)) \leq 2 \Delta (G) -2$ pues toda arista $e \in E(G)$ tiene dos vértices extremos, y por lo tanto hay $\leq 2 (\Delta (G) - 1)$ aristas incidentes en $e$: una por cada vecino de sus extremos (sin contar $e$).
-\Inkscape{Arista $e = xy$ con a lo más $\Delta (G)- 1$ vecinos incidentes en cada extremo $x$, $y$.}
+\InscapeDEPRECADO{Arista $e = xy$ con a lo más $\Delta (G)- 1$ vecinos incidentes en cada extremo $x$, $y$.}
 \end{obs}
 
 
@@ -4130,7 +4140,7 @@ Haremos inducción en la cantidad de aristas $\Abs G$ de $G$. Si $\Abs G = 0,1$ 
 
 Tomemos una arista $xy \in \Abs{G}$ de manera que $\Delta (G -xy) = \Delta$, y un $\Delta$-arista-coloreo de $G - xy$, que existe por hipótesis inductiva. Digamos que las aristas con color $\alpha$ en nuestro coloreo de $G - xy$ son \textbf{$\alpha$-aristas}, $\alpha \in \{1, \ldots, \Delta\}$. En $G - xy$, los vértices $x$ e $y$ son incidentes en a lo más $\Delta -1$ aristas cada una.
 
-\Inkscape{$\Delta$-arista-coloreo de $G -xy$ con $\Delta = 5$.}
+\InscapeDEPRECADO{$\Delta$-arista-coloreo de $G -xy$ con $\Delta = 5$.}
 
 Entonces hay colores $\alpha, \beta \in \{1,\ldots,\Delta\}$ tales que $x $ no es adyacente aninguna arista de color $\alpha$ e $y$ no es adyacente a ninguna arista de color $\beta$. Si $\alpha = \beta$, entonces puedo extender el coloreo de $G-xy$ a un coloreo de $G$ asignando a $xy$ el color $\alpha$. Consecuentemente, podemos asumir que $\alpha \neq \beta$ y que $x$ incide en una arista de color $\beta$.
 
@@ -4170,7 +4180,7 @@ El \textbf{número lista-cromático}, denotado por $\ch G$, de un grafo $G$ es e
 \begin{example}\label{ejemplo:ejemplo de grafos bipartitos que no son k-lista coloreables}
 El grafo $K_{2,4}$ no es $2$-lista-coloreable, para eso, basta ver que existe una familia de listas de tamaño $2$ que no colorea. Consideremos:
 
-\Inkscape{Coloreo de una elección de listas de tamaño $2$ que es imposible de que funcione.}
+\InscapeDEPRECADO{Coloreo de una elección de listas de tamaño $2$ que es imposible de que funcione.}
 
 Es fácil extender esta idea para cualquier cantidad $k$, utilizando grafos bipartitos completos $K_{k, k^k}$. En efecto, si particionamos $K_{k,k^k}$ en $\{u_i\}_{i = 1}^k$ y $\{w_j\}_{j = 1}^{k^k}$, luego no podemos usar la siguiente lista para $k$-colorear: $S_{u_i} = \{(i-1)k + 1, \ldots, ik\}$, y $S_{w_j}$ son todas las maneras de construir un conjunto de $k$ elementos eligiendo uno de cada $S_{u_i}, \: \: i = 1 , \ldots, k$. Es claro que no podemos colorear con estas listas, pues dado un coloreo $c(u_i) \in S_{u_i}$ siempre podemos encontrar, por construcción, un vérticce $w_j$ adyacente a todos los $u_i$, tal que $S_{w_j} = \{ c(u_i) | i = 1, \ldots, k\}$.
 \end{example}
@@ -4252,7 +4262,7 @@ Sea $G$ un $X,Y$-bigrafo con conjunto de aristas $E$. Diremos que dos aristas de
 
 Ya hemos visto que $\operatorname{ch}' (G) \geq k$; luego basta probar la otra desigualdad: $\ch G ' \leq k$. El plan es aplicar el lema anterior al grafo linea $H:= L(G)$ de $G$ para probar que es $k$-lista coloreable. Para eso, basta encontrar una orientación $D$ de $H$ con $d^+ (e) < k$ para todo vértice $e \in H$, de tal suerte que para cada subgrafo inducido $D$ existe un núcleo. Para definir $D$, consideremos dos aristas adyacentes $e, e' \in E$, digamos con color $c(e) < c(e')$. Si $e$ y $e'$ se reunen en $X$, orientamos la arista $ee' \in H$ desde $e'$ hacia $e$; si $e$ y $e'$ se reunen en $Y$, orientamos $e$ hacia $e'$.
 
-\Inkscape{Orientación del grafo línea $H$ de $G$.}
+\InscapeDEPRECADO{Orientación del grafo línea $H$ de $G$.}
 
 Calculemos $d^e (e)$ para cualquier $ e \in V(D)$. Si $c(e) = i$, luego todo $e' \in N^+_D (e)$ que se reune en $X$ con $e$, tiene color en $\{1, \ldots, i-1\}$, y si se reune en $Y$ con $e$, tiene color en $\{i+1, ldots, k\}$. Además, dados dos vecinos de $e$ que se reunen en el mismo conjunto $X$ o $Y$ deben tener distinto color, con lo cual $d^+_D (e < k)$.
 
@@ -4311,7 +4321,7 @@ Recíprocamente, sea $G$ un grafo cordal. Probaremos por inducción en $n = \abs
 
 Como $G_1$ y $G_2$ son ambos cordales (al ser subgrafos inducidos de $G$), se construyen por inducción de esta manera, con lo cual, basta ver que $S$ es completo. Por el absurdo, supongamos que existen $s,t \in S$ que no son adyacentes. Por la minimalidad de $X = V(S)$ como separador de $a,b$, tenemos que ambos $s$ y $t$ tienen un vecino en $C$. Por lo tanto, existe un $X$-camino de $s$ en $t$ en $G_1$; sea $P_1$ uno de estos caminos de tamaño mínimo. Análogamente, $G_2$ contiene un $X$-camino de tamaño mínimo, digamos $P_2$, desde $s$ hasta $t$. Entonces $P_1 \cup P_2$ es un ciclo sin cuerdas de longitud $\geq 4$, absurdo: $G$ es cordal.
 
-\Inkscape{Si $G_1$ y $G_2$ son cordales, entonces $G$ también.}
+\InscapeDEPRECADO{Si $G_1$ y $G_2$ son cordales, entonces $G$ también.}
 \end{proof}
 
 
@@ -4346,7 +4356,7 @@ para todo subgrafo inducido $H \subset G$.
 
 Antes de probar ambos resultados, necesitamos un lema. Sea $G$ un grafo y $x \in G$ un vértice, sea $G'$ obtenido a partir de $G$ al agregar un vértice $x'$ y uniéndolo a $x$ y a todos los vecinos de $x$. Decimos que $G'$ se obtiene a partir de $G$ al \textbf{expandir} el vértice $x$ a una arista $xx'$.
 
-\Inkscape{Expansión de un vértice $x$ en la demostración del Lema \ref{lema:la expansion de un grafo perfecto es perfecto}.}
+\InscapeDEPRECADO{Expansión de un vértice $x$ en la demostración del Lema \ref{lema:la expansion de un grafo perfecto es perfecto}.}
 
 \begin{lemma}\label{lema:la expansion de un grafo perfecto es perfecto}
 Todo grafo obtenido a partir de un grafo perfecto al expandir un vértice es nuevamente perfecto.
@@ -4484,7 +4494,7 @@ Dado un vértice $x \in G$, denotamos por $M(x)$ al conjunto de colores (respect
 Decimos que $\alpha \in S$ es \textbf{faltante en $x$} (respecto de $c$) si $\alpha \in M(x)$.
 \end{definition}
 
-\Inkscape{Ejemplo, $c$ es un coloreo de las aristas tal que $M(x) = \{4\}$. En esta terminología, el color $4$ es \textit{faltante} en $x$.}
+\InscapeDEPRECADO{Ejemplo, $c$ es un coloreo de las aristas tal que $M(x) = \{4\}$. En esta terminología, el color $4$ es \textit{faltante} en $x$.}
 
 \begin{definition}
 Nuevamente, sea $G$ un grafo con un coloreo de aristas $c: E(G) \rightarrow S$.
@@ -4492,7 +4502,7 @@ Nuevamente, sea $G$ un grafo con un coloreo de aristas $c: E(G) \rightarrow S$.
 Si $\alpha, \beta \in S$ son dos colores distintos de $c$, llamamos \textbf{$\alpha/\beta$-camino desde $x$}, al único camino maximal que comienza en $x$ con su primer arista de color $\alpha$, su siguiente de color $\beta$ y así intercaladamente; la longitud puede ser $0$.
 \end{definition}
 
-\Inkscape{$\blue{\alpha}/\red{\beta}$-camino de un arista-coloreo de un grafo $G$.}
+\InscapeDEPRECADO{$\blue{\alpha}/\red{\beta}$-camino de un arista-coloreo de un grafo $G$.}
 
 \begin{theorem}[Vizing (1964)]\label{th:teorema de Vizing}
 Todo grafo $G$ cumple
@@ -4513,7 +4523,7 @@ En efecto, si no fuera cierto, podríamos intercambiar los colores $\alpha$ y $\
 
 Sea $uv \in E(G)$, por minimalidad $G -uv$ admite una $(\Delta +1)$-arista-coloración, digamos $c_0: E(G) \rightarrow \{1, \ldots, \Delta + 1\}$.
 
-\Inkscape{}
+\InscapeDEPRECADO{}
 
 Como $d(x) < \Delta + 1$, entonces $M(x) \neq \emptyset$ para todo $x \in V(G)$. Si $M(u) \cap M(v) \neq \emptyset$, entonces $c_0$ puede extenderse a un $(\Delta + 1)$-arista-coloreo de $G$: coloreando $uv$ con un color en $M(u) \cap M(v)$. Con lo cual, podemos suponer que $M(u) \cap M(v) = \emptyset$.
 
@@ -4527,7 +4537,7 @@ Luego, para cada $i = 1, \ldots, k$ definimos un coloreo $c_i$:
 \end{enumerate}
 Estos son $(\Delta + 1)$-arista-coloreos de $G-uv_i$. Además, notemos que los colores faltantes $M(u)$ de $u$ son los mismos para todo $c_i, \: \: 0 \leq i \leq k$.
 
-\Inkscape{}
+\InscapeDEPRECADO{}
 
 Sea $\beta \in M(v_k)$ respecto de $c_0$, entonces $\beta$ también es faltante en $v_k$ respecto de $c_i$ para todo $0 \leq i \leq k$. Notar que por \hyperref[vizing-proof-condition]{({$\ast$})} aplicado a $c = c_k$, $\beta$ no es faltante en $u$ para $c_k$. Con lo cual, $\beta \not \in M(u)$ para todo $c_i$ con $0 \leq i \leq k$. Por la maximalidad la secuencia $v_0, \ldots,v_k$, existe un $1\leq i < k$ tal que $c_0(xv_i) = \beta$. Por como definimos $c_1, \ldots, c_k$ tenemos que:
 \[
@@ -4536,7 +4546,7 @@ Sea $\beta \in M(v_k)$ respecto de $c_0$, entonces $\beta$ también es faltante 
 
 Sea $\alpha \in M(u)$. Sea $P$ el $\alpha/\beta$-camino desde $v_k$ respecto de $c_k$. Por \hyperref[vizing-proof-condition]{({$\ast$})}, $P$ termina en $u$. Más aún, $P$ termina en una arista de color $\beta$ respecto de $c_k$. Con lo cual, la última arista de $P$ es $v_{i-1} u$. Ahora, consideremos $P'$ el $\alpha/\beta$-camino desde $v_{i-1}$ respecto de $c_{i-1}$. Como $P'$ está unívocamente determinado y las aristas interiores de $P$ no cambian en $c_0, \ldots, c_k$, el camino $P'$ usa las mismas aristas que $P$ en orden inverso y visita $v_k$. La arista de $P'$ que incide en $v_k$ es claramente de color $\alpha$, pero $\beta$ es faltante en $v_k$, con lo cual $P'$ termina en $v_k$. Esto contradice la Condición \hyperref[vizing-proof-condition]{({$\ast$})}.
 
-\Inkscape{Ilustración del coloreo $c_k$ de $G- uv_k$, donde se puede apreciar el $\blue{\alpha}/\red{\beta}$-camino $P$ desde $v_k$.}
+\InscapeDEPRECADO{Ilustración del coloreo $c_k$ de $G- uv_k$, donde se puede apreciar el $\blue{\alpha}/\red{\beta}$-camino $P$ desde $v_k$.}
 
 \end{proof}
 
@@ -4576,7 +4586,7 @@ Sea $C$ el ciclo que constituye la frontera de la cara externa de $G$. Digamos $
 
 En el caso (1), sea $uv$ una cuerda de $C$. Notar que $uv$ separa el grafo $G$ en dos casi triangulaciones, digamos $G_1$ y $G_2$ (Ver la siguiente figura \ref{figura:clase 23 - figura 1}). Con ``separar'' nos referimos a que \textit{topológicamente} obtenemos dos dibujos disjuntos salvo el segmento $uv$. Acá, $G_1$ y $G_2$ comparten solamente la cuerda $uv$. Notar que son subgrafos inducidos de $G$, además, $v_1$ y $v_2$ están ambos en $G_1$ o ambos en $G_2$, digamos $v_1,v_2 \in G_1 \setminus G_2$.
 
-\Inkscape{``Separamos'' $G$ en dos subgrafos inducidos $G_1$ y $G_2$, tales que no hay vértices de $G_1$ adyacentes a vértices de $G_2$, salvo por $u,v$.}\label{figura:clase 23 - figura 1}
+\InscapeDEPRECADO{``Separamos'' $G$ en dos subgrafos inducidos $G_1$ y $G_2$, tales que no hay vértices de $G_1$ adyacentes a vértices de $G_2$, salvo por $u,v$.}\label{figura:clase 23 - figura 1}
 
 Como $\abs{G_i} < \abs{G}$ para $i = 1, 2$, tenemos por un lado que $G_1$ admite una coloración $c$ donde cada vértice recibe un color de su lista. Observar que cada vértice recibe un color de su lista. Además, $c$ fija los colores de $u$ y $v$. Entonces, tomando $\{v_1',v_2'\}$ en $G_2$ como $\{u,v\}$, fijamos las listas de $v_1'$ y $v_2'$ de acuerdo a la coloración $c$:
 \[
@@ -4599,7 +4609,7 @@ Sean $x,y$ dos colores distintos en la lista de $v_k$ que sean también distinto
 \end{itemize}
 Así, $G- \{v_k\}$ con el conjunto de listas $\{L'_v\}_{v \in G \setminus \{v_k\}}$ satisfacen las hipótesis del teorema, luego por minimalidad de $G$ existe una lista-coloración con estas listas.
 
-\Inkscape{Ilustración del caso (2).}
+\InscapeDEPRECADO{Ilustración del caso (2).}
 
 Ahora, sabemos que los $u_j$ y $v_1$ no fueron coloreados con los colores $x$ o $y$. Por lo tanto, el único vértice que podría tomar esos colores es $v_{k-1}$, si lo hace, toma a lo más uno de ellos, luego coloreamos $v_k$ con el otro. Esto nos permite colorear $G$, absurdo.
 \end{proof}
@@ -4730,9 +4740,9 @@ Responder las siguientes preguntas:
 Respuestas:
 \begin{enumerate}
 \item No: $G = K_3$ el triángulo es un contraejemplo (cf. la siguiente figura).
-\Inkscape{Ilustración de un $3$-ciclo orientado.}
+\InscapeDEPRECADO{Ilustración de un $3$-ciclo orientado.}
 \item No: $G = K_5$ es un contraejemplo. En efecto, $G$ tiene $\chi (G) = 5$, por lo tanto $\chi (G) > 4$, luego podemos aplicar la equivalencia del Ejercicio \ref{ejercicio:coloreo de grafos - ejercicio 1 - nociones equivalentes de acotar numero cromatico y orientacion de grafos}. Así, para toda orientación de $G$, existe un camino dirigido de longitud $4$. Como el triángulo $K_3$ orientado para que sea un ciclo orientado no tiene núcleo, basta forzar todas las combinaciones de tres vértices en $G$ y observar que tiene que haber un $3$-ciclo orientado. (cf. la siguiente figura).
-\Inkscape{Ilustración de una orientación de $G =K_5$ con un $4$-camino orientado \blue{$P$} y un subgrafo inducido \red{$T = K_3$}, el cual es un triángulo orientado.}
+\InscapeDEPRECADO{Ilustración de una orientación de $G =K_5$ con un $4$-camino orientado \blue{$P$} y un subgrafo inducido \red{$T = K_3$}, el cual es un triángulo orientado.}
 \item Si: sea $U$ un conjunto de vértices aislados de $G$ de tamaño máximo ($\abs U = \alpha (G)$). Entonces todas las aristas están cubiertas por un vértice de $U$ (por maximalidad de $U$); más aún, cada arista tiene un único vértice en $U$ como extremo, pues $U$ es un conjunto aislado. Orientamos las aristas de $G$ apuntando hacia el único vértice en $U$ que la cubre. Por construcción se tiene que $U$ es núcleo de esta orientación.
 \end{enumerate}
 \end{solution}

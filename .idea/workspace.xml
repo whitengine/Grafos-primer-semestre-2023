@@ -4,360 +4,22 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d64069ff-abb3-47fa-9feb-8331f5baf8d7" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Editor de Grafos/Editor-de-Grafos.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Editor de Grafos/Figuras/Clase 1/Latex 1.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Editor de Grafos/Figuras/Clase 10/Dibujo 1.pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Editor de Grafos/Figuras/Clase 10/Dibujo 2.pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Editor de Grafos/Figuras/Clase 10/Dibujo 3.pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Editor de Grafos/Figuras/Clase 10/Dibujo 4.pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Editor de Grafos/Figuras/Clase 10/Dibujo 5.pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Editor de Grafos/Figuras/Clase 10/Dibujo 6.pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Editor de Grafos/Figuras/Clase 11/Dibujo 1.pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Editor de Grafos/Figuras/Clase 11/Dibujo 2.pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Editor de Grafos/Figuras/Clase 11/Dibujo 3.pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Editor de Grafos/Figuras/Clase 11/Dibujo 4.pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Editor de Grafos/Figuras/Clase 11/Dibujo 4.pdf_tex" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Editor de Grafos/Figuras/Clase 11/Dibujo 4.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Editor de Grafos/Figuras/Clase 11/Dibujo 5.pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Editor de Grafos/Figuras/Clase 11/Dibujo 6.pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Editor de Grafos/Figuras/Clase 11/Dibujo 7.pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Editor de Grafos/Figuras/Clase 11/Dibujo 8.pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Editor de Grafos/Figuras/Clase 11/Dibujo 9.pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Editor de Grafos/Figuras/Clase 12/Dibujo 1.pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Editor de Grafos/Figuras/Clase 12/Dibujo 2.pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Editor de Grafos/Figuras/Clase 12/Dibujo 3.pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Editor de Grafos/Figuras/Clase 12/Dibujo 3.pdf_tex" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Editor de Grafos/Figuras/Clase 12/Dibujo 3.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Editor de Grafos/Figuras/Clase 12/Dibujo 4.pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Editor de Grafos/Figuras/Clase 12/Dibujo 4.pdf_tex" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Editor de Grafos/Figuras/Clase 12/Dibujo 4.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Editor de Grafos/Figuras/Clase 12/Dibujo 5.pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Editor de Grafos/Figuras/Clase 12/Dibujo 5.pdf_tex" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Editor de Grafos/Figuras/Clase 12/Dibujo 5.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Editor de Grafos/Figuras/Clase 12/Dibujo 6.pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Editor de Grafos/Figuras/Clase 12/Dibujo 6.pdf_tex" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Editor de Grafos/Figuras/Clase 12/Dibujo 6.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Editor de Grafos/Figuras/Clase 12/Dibujo 7.pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Editor de Grafos/Figuras/Clase 12/Dibujo 7.pdf_tex" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Editor de Grafos/Figuras/Clase 12/Dibujo 7.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Editor de Grafos/Figuras/Clase 12/Dibujo 8.pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Editor de Grafos/Figuras/Clase 12/Dibujo 9.pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Editor de Grafos/Figuras/Clase 12/Dibujo 9.pdf_tex" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Editor de Grafos/Figuras/Clase 12/Dibujo 9.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Editor de Grafos/Figuras/Clase 13/Dibujo 1.pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Editor de Grafos/Figuras/Clase 13/Dibujo 1.pdf_tex" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Editor de Grafos/Figuras/Clase 13/Dibujo 1.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Editor de Grafos/Figuras/Clase 13/Dibujo 2.pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Editor de Grafos/Figuras/Clase 13/Dibujo 2.pdf_tex" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Editor de Grafos/Figuras/Clase 13/Dibujo 2.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Editor de Grafos/Figuras/Clase 13/Dibujo 3.pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Editor de Grafos/Figuras/Clase 13/Dibujo 3.pdf_tex" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Editor de Grafos/Figuras/Clase 13/Dibujo 3.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Editor de Grafos/Figuras/Clase 14/Dibujo 1.pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Editor de Grafos/Figuras/Clase 14/Dibujo 1.pdf_tex" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Editor de Grafos/Figuras/Clase 14/Dibujo 1.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Editor de Grafos/Figuras/Clase 14/Dibujo 2.pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Editor de Grafos/Figuras/Clase 14/Dibujo 2.pdf_tex" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Editor de Grafos/Figuras/Clase 14/Dibujo 2.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Editor de Grafos/Figuras/Clase 14/Dibujo 3.pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Editor de Grafos/Figuras/Clase 14/Dibujo 3.pdf_tex" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Editor de Grafos/Figuras/Clase 14/Dibujo 3.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Editor de Grafos/Figuras/Clase 14/Dibujo 4.pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Editor de Grafos/Figuras/Clase 14/Dibujo 4.pdf_tex" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Editor de Grafos/Figuras/Clase 14/Dibujo 4.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Editor de Grafos/Figuras/Clase 14/asd/Dibujo 3.pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Editor de Grafos/Figuras/Clase 14/asd/Dibujo 3.pdf_tex" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Editor de Grafos/Figuras/Clase 15/Dibujo 1.pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Editor de Grafos/Figuras/Clase 15/Dibujo 1.pdf_tex" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Editor de Grafos/Figuras/Clase 15/Dibujo 1.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Editor de Grafos/Figuras/Clase 15/Dibujo 2.pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Editor de Grafos/Figuras/Clase 15/Dibujo 2.pdf_tex" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Editor de Grafos/Figuras/Clase 15/Dibujo 2.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Editor de Grafos/Figuras/Clase 15/Dibujo 3.pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Editor de Grafos/Figuras/Clase 15/Dibujo 3.pdf_tex" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Editor de Grafos/Figuras/Clase 15/Dibujo 3.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Editor de Grafos/Figuras/Clase 15/Dibujo 4.pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Editor de Grafos/Figuras/Clase 15/Dibujo 4.pdf_tex" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Editor de Grafos/Figuras/Clase 15/Dibujo 4.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Editor de Grafos/Figuras/Clase 15/Dibujo 5.pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Editor de Grafos/Figuras/Clase 15/Dibujo 5.pdf_tex" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Editor de Grafos/Figuras/Clase 15/Dibujo 5.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Editor de Grafos/Figuras/Clase 15/Dibujo 6.pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Editor de Grafos/Figuras/Clase 15/Dibujo 6.pdf_tex" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Editor de Grafos/Figuras/Clase 15/Dibujo 6.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Editor de Grafos/Figuras/Clase 15/Dibujo 7.pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Editor de Grafos/Figuras/Clase 15/Dibujo 7.pdf_tex" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Editor de Grafos/Figuras/Clase 15/Dibujo 7.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Editor de Grafos/Figuras/Clase 15/Dibujo 8.pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Editor de Grafos/Figuras/Clase 15/Dibujo 8.pdf_tex" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Editor de Grafos/Figuras/Clase 15/Dibujo 8.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Editor de Grafos/Figuras/Clase 15/Dibujo 9.pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Editor de Grafos/Figuras/Clase 15/Dibujo 9.pdf_tex" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Editor de Grafos/Figuras/Clase 15/Dibujo 9.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Editor de Grafos/Figuras/Clase 16/Dibujo 1.pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Editor de Grafos/Figuras/Clase 16/Dibujo 1.pdf_tex" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Editor de Grafos/Figuras/Clase 16/Dibujo 1.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Editor de Grafos/Figuras/Clase 16/Dibujo 2.pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Editor de Grafos/Figuras/Clase 16/Dibujo 2.pdf_tex" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Editor de Grafos/Figuras/Clase 16/Dibujo 3.pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Editor de Grafos/Figuras/Clase 16/Dibujo 3.pdf_tex" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Editor de Grafos/Figuras/Clase 16/Dibujo 3.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Editor de Grafos/Figuras/Clase 16/Dibujo 4.pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Editor de Grafos/Figuras/Clase 16/Dibujo 4.pdf_tex" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Editor de Grafos/Figuras/Clase 16/Dibujo 4.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Editor de Grafos/Figuras/Clase 16/Dibujo 5.pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Editor de Grafos/Figuras/Clase 16/Dibujo 5.pdf_tex" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Editor de Grafos/Figuras/Clase 16/Dibujo 5.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Editor de Grafos/Figuras/Clase 17/Dibujo 1.pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Editor de Grafos/Figuras/Clase 17/Dibujo 1.pdf_tex" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Editor de Grafos/Figuras/Clase 17/Dibujo 1.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Editor de Grafos/Figuras/Clase 17/Dibujo 2.pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Editor de Grafos/Figuras/Clase 17/Dibujo 2.pdf_tex" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Editor de Grafos/Figuras/Clase 17/Dibujo 2.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Editor de Grafos/Figuras/Clase 18/Dibujo 1.pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Editor de Grafos/Figuras/Clase 18/Dibujo 1.pdf_tex" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Editor de Grafos/Figuras/Clase 18/Dibujo 1.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Editor de Grafos/Figuras/Clase 19/Dibujo 1.pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Editor de Grafos/Figuras/Clase 19/Dibujo 1.pdf_tex" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Editor de Grafos/Figuras/Clase 19/Dibujo 1.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Editor de Grafos/Figuras/Clase 19/Dibujo 2.pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Editor de Grafos/Figuras/Clase 19/Dibujo 2.pdf_tex" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Editor de Grafos/Figuras/Clase 19/Dibujo 2.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Editor de Grafos/Figuras/Clase 19/Dibujo 3.pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Editor de Grafos/Figuras/Clase 19/Dibujo 3.pdf_tex" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Editor de Grafos/Figuras/Clase 19/Dibujo 3.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Editor de Grafos/Figuras/Clase 20/Dibujo 1 - Ejercicios.pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Editor de Grafos/Figuras/Clase 20/Dibujo 1.pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Editor de Grafos/Figuras/Clase 20/Dibujo 1.pdf_tex" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Editor de Grafos/Figuras/Clase 20/Dibujo 1.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Editor de Grafos/Figuras/Clase 20/Dibujo 2.pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Editor de Grafos/Figuras/Clase 20/Dibujo 2.pdf_tex" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Editor de Grafos/Figuras/Clase 20/Dibujo 2.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Editor de Grafos/Figuras/Clase 21/Dibujo 1.pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Editor de Grafos/Figuras/Clase 21/Dibujo 1.pdf_tex" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Editor de Grafos/Figuras/Clase 21/Dibujo 1.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Editor de Grafos/Figuras/Clase 21/Dibujo 2.pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Editor de Grafos/Figuras/Clase 21/Dibujo 2.pdf_tex" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Editor de Grafos/Figuras/Clase 21/Dibujo 2.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Editor de Grafos/Figuras/Clase 21/Dibujo 3.pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Editor de Grafos/Figuras/Clase 21/Dibujo 3.pdf_tex" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Editor de Grafos/Figuras/Clase 21/Dibujo 3.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Editor de Grafos/Figuras/Clase 21/Dibujo 4.pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Editor de Grafos/Figuras/Clase 21/Dibujo 4.pdf_tex" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Editor de Grafos/Figuras/Clase 21/Dibujo 4.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Editor de Grafos/Figuras/Clase 22/Dibujo 1.pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Editor de Grafos/Figuras/Clase 22/Dibujo 1.pdf_tex" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Editor de Grafos/Figuras/Clase 22/Dibujo 1.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Editor de Grafos/Figuras/Clase 22/Dibujo 2.pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Editor de Grafos/Figuras/Clase 22/Dibujo 2.pdf_tex" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Editor de Grafos/Figuras/Clase 22/Dibujo 2.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Editor de Grafos/Figuras/Clase 22/Dibujo 3.pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Editor de Grafos/Figuras/Clase 22/Dibujo 3.pdf_tex" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Editor de Grafos/Figuras/Clase 22/Dibujo 3.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Editor de Grafos/Figuras/Clase 22/Dibujo 4.pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Editor de Grafos/Figuras/Clase 22/Dibujo 4.pdf_tex" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Editor de Grafos/Figuras/Clase 22/Dibujo 4.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Editor de Grafos/Figuras/Clase 22/Dibujo 5.pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Editor de Grafos/Figuras/Clase 22/Dibujo 5.pdf_tex" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Editor de Grafos/Figuras/Clase 22/Dibujo 5.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Editor de Grafos/Figuras/Clase 23/Dibujo 1.pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Editor de Grafos/Figuras/Clase 23/Dibujo 1.pdf_tex" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Editor de Grafos/Figuras/Clase 23/Dibujo 1.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Editor de Grafos/Figuras/Clase 23/Dibujo 2.pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Editor de Grafos/Figuras/Clase 23/Dibujo 2.pdf_tex" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Editor de Grafos/Figuras/Clase 23/Dibujo 2.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Editor de Grafos/Figuras/Clase 23/Dibujo 3.pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Editor de Grafos/Figuras/Clase 23/Dibujo 3.pdf_tex" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Editor de Grafos/Figuras/Clase 23/Dibujo 3.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Editor de Grafos/Figuras/Clase 23/Dibujo 4.pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Editor de Grafos/Figuras/Clase 23/Dibujo 4.pdf_tex" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Editor de Grafos/Figuras/Clase 23/Dibujo 4.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Editor de Grafos/Figuras/Clase 4/Dibujo 3.pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Editor de Grafos/Figuras/Clase 5/Dibujo 1.pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Editor de Grafos/Figuras/Clase 6/Dibujo 4.pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Editor de Grafos/Figuras/Clase 8/Dibujo 5.pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Editor de Grafos/Figuras/Clase 8/Dibujo 5.pdf_tex" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Editor de Grafos/Figuras/Clase 8/Dibujo 5.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Editor de Grafos/Figuras/Clase 8/Dibujo 6.pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Editor de Grafos/Figuras/Clase 8/Dibujo 7.pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Editor de Grafos/Figuras/Clase 8/Dibujo 8.pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Editor de Grafos/Figuras/Clase 9/Dibujo 1.pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Editor de Grafos/Figuras/Clase 9/Dibujo 2.pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Editor de Grafos/Figuras/Ejercicios/Dibujo 1.pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Editor de Grafos/Figuras/Ejercicios/Dibujo 2.pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Editor de Grafos/Manual de Teoria de Grafos - SageMath/graphs.pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Figuras/Clase 1/Dibujo 1.pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Figuras/Clase 1/Dibujo 2.pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Figuras/Clase 1/Dibujo 3.pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Figuras/Clase 1/Dibujo 4.pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Figuras/Clase 1/Dibujo 5.pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Figuras/Clase 2/Dibujo 1.pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Figuras/Clase 2/Dibujo 2.pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Figuras/Clase 2/Dibujo 3.pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Figuras/Clase 2/Dibujo 4.pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Figuras/Clase 2/Dibujo 5.pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Figuras/Clase 2/Dibujo 6.pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Figuras/Clase 2/Dibujo 7.pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Figuras/Clase 3/Dibujo 1.2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Figuras/Clase 3/Dibujo 1.pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Figuras/Clase 3/Dibujo 1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Figuras/Clase 3/Dibujo 2.pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Figuras/Clase 3/Dibujo 2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Figuras/Clase 3/Dibujo 3.pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Figuras/Clase 3/Dibujo 3.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Figuras/Clase 3/Dibujo 4.pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Figuras/Clase 3/Dibujo 4.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Figuras/Clase 3/Dibujo 5.pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Figuras/Clase 3/Dibujo 5.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Figuras/Clase 3/Dibujo 6.pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Figuras/Clase 3/Dibujo 6.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Figuras/Clase 4/Dibujo 1.pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Figuras/Clase 4/Dibujo 1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Figuras/Clase 4/Dibujo 2.pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Figuras/Clase 4/Dibujo 2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Figuras/Clase 4/Dibujo 3.pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Figuras/Clase 4/Dibujo 3.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Figuras/Clase 4/Dibujo 4.pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Figuras/Clase 4/Dibujo 4.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Figuras/Clase 4/Dibujo 5.pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Figuras/Clase 4/Dibujo 5.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Figuras/Clase 4/Dibujo 6.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Figuras/Clase 5/Dibujo 1.pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Figuras/Clase 5/Dibujo 1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Figuras/Clase 5/Dibujo 2.pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Figuras/Clase 5/Dibujo 2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Figuras/Clase 5/Dibujo 3.pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Figuras/Clase 5/Dibujo 3.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Figuras/Clase 5/Dibujo 4.pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Figuras/Clase 5/Dibujo 4.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Figuras/Clase 5/Dibujo 5.pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Figuras/Clase 5/Dibujo 5.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Figuras/Clase 5/Dibujo 6.pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Figuras/Clase 5/Dibujo 6.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Figuras/Clase 5/Dibujo 7.pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Figuras/Clase 5/Dibujo 77.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Figuras/Clase 5/Dibujo 777.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Figuras/Clase 5/Dibujo 8.pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Figuras/Clase 5/Dibujo 8.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Figuras/Clase 6/Dibujo 1.pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Figuras/Clase 6/Dibujo 2.pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Figuras/Clase 6/Dibujo 3.pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Figuras/Clase 6/Dibujo 5.pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Figuras/Clase 7/Dibujo 1.pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Figuras/Clase 7/Dibujo 2.pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Figuras/Clase 7/Dibujo 3.pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Figuras/Clase 7/Dibujo 4.pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Figuras/Clase 7/Dibujo 5.pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Figuras/Clase 7/Dibujo 6.pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Figuras/Clase 8/Dibujo 1.pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Figuras/Clase 8/Dibujo 2.pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Figuras/Clase 8/Dibujo 3.pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Figuras/Clase 8/Dibujo 4.pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main.bib" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/Grafos.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Apendice/Apendice.tex" beforeDir="false" afterPath="$PROJECT_DIR$/src/Apendice/Apendice.tex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Apendice/Figuras/Capitulo 1/Dibujo 1.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/src/Apendice/Figuras/Capitulo 1/Dibujo 1.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Apendice/Figuras/Capitulo 1/Dibujo 2.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/src/Apendice/Figuras/Capitulo 1/Dibujo 2.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Apendice/Figuras/Capitulo 1/Dibujo 2.pdf_tex" beforeDir="false" afterPath="$PROJECT_DIR$/src/Apendice/Figuras/Capitulo 1/Dibujo 2.pdf_tex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Apendice/Figuras/Capitulo 1/Dibujo 2.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/Apendice/Figuras/Capitulo 1/Dibujo 2.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Apendice/Figuras/Capitulo 1/asd/Dibujo 2.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/src/Apendice/Figuras/Capitulo 1/asd/Dibujo 2.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Apendice/Figuras/Capitulo 1/asd/Dibujo 2.pdf_tex" beforeDir="false" afterPath="$PROJECT_DIR$/src/Apendice/Figuras/Capitulo 1/asd/Dibujo 2.pdf_tex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Apendice/Figuras/Capitulo 6/Dibujo 1.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/src/Apendice/Figuras/Capitulo 6/Dibujo 1.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Editor de Grafos" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Figuras/Clase 1/Dibujo 1.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/src/Editor de Grafos/Figuras/Clase 1/Dibujo 1.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Figuras/Clase 1/Dibujo 2.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/src/Editor de Grafos/Figuras/Clase 1/Dibujo 2.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Figuras/Clase 1/Dibujo 3.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/src/Editor de Grafos/Figuras/Clase 1/Dibujo 3.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Figuras/Clase 1/Dibujo 4.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/src/Editor de Grafos/Figuras/Clase 1/Dibujo 4.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Figuras/Clase 1/Dibujo 5.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/src/Editor de Grafos/Figuras/Clase 1/Dibujo 5.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Figuras/Clase 2/Dibujo 1.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/src/Editor de Grafos/Figuras/Clase 2/Dibujo 1.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Figuras/Clase 2/Dibujo 2.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/src/Editor de Grafos/Figuras/Clase 2/Dibujo 2.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Figuras/Clase 2/Dibujo 3.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/src/Editor de Grafos/Figuras/Clase 2/Dibujo 3.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Figuras/Clase 2/Dibujo 4.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/src/Editor de Grafos/Figuras/Clase 2/Dibujo 4.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Figuras/Clase 2/Dibujo 5.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/src/Editor de Grafos/Figuras/Clase 2/Dibujo 5.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Figuras/Clase 2/Dibujo 6.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/src/Editor de Grafos/Figuras/Clase 2/Dibujo 6.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Figuras/Clase 2/Dibujo 7.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/src/Editor de Grafos/Figuras/Clase 2/Dibujo 7.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Figuras/Clase 3/Dibujo 1.2.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/Editor de Grafos/Figuras/Clase 3/Dibujo 1.2.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Figuras/Clase 3/Dibujo 1.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/src/Editor de Grafos/Figuras/Clase 3/Dibujo 1.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Figuras/Clase 3/Dibujo 1.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/Editor de Grafos/Figuras/Clase 3/Dibujo 1.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Figuras/Clase 3/Dibujo 2.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/src/Editor de Grafos/Figuras/Clase 3/Dibujo 2.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Figuras/Clase 3/Dibujo 2.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/Editor de Grafos/Figuras/Clase 3/Dibujo 2.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Figuras/Clase 3/Dibujo 3.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/src/Editor de Grafos/Figuras/Clase 3/Dibujo 3.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Figuras/Clase 3/Dibujo 3.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/Editor de Grafos/Figuras/Clase 3/Dibujo 3.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Figuras/Clase 3/Dibujo 4.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/src/Editor de Grafos/Figuras/Clase 3/Dibujo 4.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Figuras/Clase 3/Dibujo 4.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/Editor de Grafos/Figuras/Clase 3/Dibujo 4.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Figuras/Clase 3/Dibujo 5.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/src/Editor de Grafos/Figuras/Clase 3/Dibujo 5.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Figuras/Clase 3/Dibujo 5.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/Editor de Grafos/Figuras/Clase 3/Dibujo 5.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Figuras/Clase 3/Dibujo 6.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/src/Editor de Grafos/Figuras/Clase 3/Dibujo 6.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Figuras/Clase 3/Dibujo 6.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/Editor de Grafos/Figuras/Clase 3/Dibujo 6.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Figuras/Clase 4/Dibujo 1.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/src/Editor de Grafos/Figuras/Clase 4/Dibujo 1.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Figuras/Clase 4/Dibujo 1.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/Editor de Grafos/Figuras/Clase 4/Dibujo 1.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Figuras/Clase 4/Dibujo 2.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/src/Editor de Grafos/Figuras/Clase 4/Dibujo 2.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Figuras/Clase 4/Dibujo 2.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/Editor de Grafos/Figuras/Clase 4/Dibujo 2.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Figuras/Clase 4/Dibujo 3.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/src/Editor de Grafos/Figuras/Clase 4/Dibujo 4.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Figuras/Clase 4/Dibujo 3.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/Editor de Grafos/Figuras/Clase 4/Dibujo 3.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Figuras/Clase 4/Dibujo 4.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/src/Editor de Grafos/Figuras/Clase 4/Dibujo 5.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Figuras/Clase 4/Dibujo 4.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/Editor de Grafos/Figuras/Clase 4/Dibujo 4.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Figuras/Clase 4/Dibujo 5.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/src/Editor de Grafos/Figuras/Clase 4/Dibujo 6.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Figuras/Clase 4/Dibujo 5.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/Editor de Grafos/Figuras/Clase 4/Dibujo 5.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Figuras/Clase 4/Dibujo 6.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/Editor de Grafos/Figuras/Clase 4/Dibujo 6.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Figuras/Clase 5/Dibujo 1.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/src/Editor de Grafos/Figuras/Clase 5/Dibujo 2.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Figuras/Clase 5/Dibujo 1.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/Editor de Grafos/Figuras/Clase 5/Dibujo 1.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Figuras/Clase 5/Dibujo 2.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/src/Editor de Grafos/Figuras/Clase 5/Dibujo 3.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Figuras/Clase 5/Dibujo 2.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/Editor de Grafos/Figuras/Clase 5/Dibujo 2.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Figuras/Clase 5/Dibujo 3.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/src/Editor de Grafos/Figuras/Clase 5/Dibujo 4.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Figuras/Clase 5/Dibujo 3.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/Editor de Grafos/Figuras/Clase 5/Dibujo 3.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Figuras/Clase 5/Dibujo 4.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/src/Editor de Grafos/Figuras/Clase 5/Dibujo 5.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Figuras/Clase 5/Dibujo 4.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/Editor de Grafos/Figuras/Clase 5/Dibujo 4.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Figuras/Clase 5/Dibujo 5.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/src/Editor de Grafos/Figuras/Clase 5/Dibujo 6.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Figuras/Clase 5/Dibujo 5.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/Editor de Grafos/Figuras/Clase 5/Dibujo 5.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Figuras/Clase 5/Dibujo 6.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/src/Editor de Grafos/Figuras/Clase 5/Dibujo 7.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Figuras/Clase 5/Dibujo 6.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/Editor de Grafos/Figuras/Clase 5/Dibujo 6.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Figuras/Clase 5/Dibujo 7.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/src/Editor de Grafos/Figuras/Clase 5/Dibujo 8.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Figuras/Clase 5/Dibujo 77.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/Editor de Grafos/Figuras/Clase 5/Dibujo 77.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Figuras/Clase 5/Dibujo 777.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/Editor de Grafos/Figuras/Clase 5/Dibujo 777.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Figuras/Clase 5/Dibujo 8.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/src/Editor de Grafos/Figuras/Clase 5/Dibujo 9.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Figuras/Clase 5/Dibujo 8.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/Editor de Grafos/Figuras/Clase 5/Dibujo 8.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Figuras/Clase 6/Dibujo 1.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/src/Editor de Grafos/Figuras/Clase 6/Dibujo 1.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Figuras/Clase 6/Dibujo 1.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/Figuras/Clase 6/Dibujo 1.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Figuras/Clase 6/Dibujo 2.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/src/Editor de Grafos/Figuras/Clase 6/Dibujo 2.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Figuras/Clase 6/Dibujo 2.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/Figuras/Clase 6/Dibujo 2.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Figuras/Clase 6/Dibujo 3.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/src/Editor de Grafos/Figuras/Clase 6/Dibujo 3.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Figuras/Clase 6/Dibujo 3.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/Figuras/Clase 6/Dibujo 3.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Figuras/Clase 6/Dibujo 4.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/src/Figuras/Clase 6/Dibujo 4.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Figuras/Clase 6/Dibujo 4.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/Figuras/Clase 6/Dibujo 4.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Figuras/Clase 6/Dibujo 5.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/src/Editor de Grafos/Figuras/Clase 6/Dibujo 5.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Figuras/Clase 6/Dibujo 5.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/Figuras/Clase 6/Dibujo 5.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Figuras/Clase 7/Dibujo 1.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/src/Editor de Grafos/Figuras/Clase 7/Dibujo 1.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Figuras/Clase 7/Dibujo 1.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/Figuras/Clase 7/Dibujo 1.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Figuras/Clase 7/Dibujo 2.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/src/Editor de Grafos/Figuras/Clase 7/Dibujo 2.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Figuras/Clase 7/Dibujo 2.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/Figuras/Clase 7/Dibujo 2.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Figuras/Clase 7/Dibujo 3.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/src/Editor de Grafos/Figuras/Clase 7/Dibujo 3.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Figuras/Clase 7/Dibujo 3.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/Figuras/Clase 7/Dibujo 3.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Figuras/Clase 7/Dibujo 4.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/src/Editor de Grafos/Figuras/Clase 7/Dibujo 4.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Figuras/Clase 7/Dibujo 4.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/Figuras/Clase 7/Dibujo 4.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Figuras/Clase 7/Dibujo 5.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/src/Editor de Grafos/Figuras/Clase 7/Dibujo 5.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Figuras/Clase 7/Dibujo 5.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/Figuras/Clase 7/Dibujo 5.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Figuras/Clase 7/Dibujo 6.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/src/Editor de Grafos/Figuras/Clase 7/Dibujo 6.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Figuras/Clase 7/Dibujo 6.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/Figuras/Clase 7/Dibujo 6.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Figuras/Clase 8/.xdp-Dibujo 5.svg_tex-oKWovF" beforeDir="false" afterPath="$PROJECT_DIR$/src/Figuras/Clase 8/.xdp-Dibujo 5.svg_tex-oKWovF" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Figuras/Clase 8/Dibujo 1.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/src/Editor de Grafos/Figuras/Clase 8/Dibujo 1.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Figuras/Clase 8/Dibujo 2.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/src/Editor de Grafos/Figuras/Clase 8/Dibujo 2.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Figuras/Clase 8/Dibujo 2.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/Figuras/Clase 8/Dibujo 2.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Figuras/Clase 8/Dibujo 3.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/src/Editor de Grafos/Figuras/Clase 8/Dibujo 3.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Figuras/Clase 8/Dibujo 3.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/Figuras/Clase 8/Dibujo 3.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Figuras/Clase 8/Dibujo 4.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/src/Editor de Grafos/Figuras/Clase 8/Dibujo 4.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Figuras/Clase 8/Dibujo 4.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/Figuras/Clase 8/Dibujo 4.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Figuras/Clase 8/Dibujo 5.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/Figuras/Clase 8/Dibujo 5.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Figuras/Clase 8/Dibujo 5.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/Figuras/Clase 8/Dibujo 5.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Figuras/Probgando tikzit.tikz" beforeDir="false" afterPath="$PROJECT_DIR$/src/Figuras/Probgando tikzit.tikz" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Figuras/probando-tikzit.tikz" beforeDir="false" afterPath="$PROJECT_DIR$/src/Figuras/probando-tikzit.tikz" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Figuras/probando.tikzstyles" beforeDir="false" afterPath="$PROJECT_DIR$/src/Figuras/probando.tikzstyles" afterDir="false" />
+    <list default="true" id="d64069ff-abb3-47fa-9feb-8331f5baf8d7" name="Changes" comment="arreglado?">
+      <change afterPath="$PROJECT_DIR$/src/Figuras/Introduccion-a-grafos/Dibujo 1.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Figuras/Introduccion-a-grafos/Dibujo 1.pdf_tex" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Figuras/Introduccion-a-grafos/Dibujo 1.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Figuras/Introduccion-a-grafos/Dibujo 2.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Figuras/Introduccion-a-grafos/Dibujo 2.pdf_tex" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Figuras/Introduccion-a-grafos/Dibujo 2.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/main.aux" beforeDir="false" afterPath="$PROJECT_DIR$/out/main.aux" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/main.log" beforeDir="false" afterPath="$PROJECT_DIR$/out/main.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/main.out" beforeDir="false" afterPath="$PROJECT_DIR$/out/main.out" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/main.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/out/main.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/main.synctex.gz" beforeDir="false" afterPath="$PROJECT_DIR$/out/main.synctex.gz" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/main.toc" beforeDir="false" afterPath="$PROJECT_DIR$/out/main.toc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Apendice/Apendice.tex" beforeDir="false" afterPath="$PROJECT_DIR$/src/Apendice/Apendice.tex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main.tex" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.tex" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -367,9 +29,13 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 4
-}]]></component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/src/Apendice/Apendice.tex" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/main.tex" root0="SKIP_HIGHLIGHTING" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 4
+}</component>
   <component name="ProjectId" id="2XE1SL5lbtlYpqeQBdjVv7nAf9D" />
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
@@ -381,15 +47,21 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "ASKED_ADD_EXTERNAL_FILES": "true",
+    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "BibTeX.main bibliography.executor": "Run",
+    "LaTeX.main.executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
     "git-widget-placeholder": "master",
     "last.edited.regexp": "\\njjj",
+    "last_opened_file_path": "/home/enzo/Desktop/Doctorado Chile/Clases/2023/Primer semestre/Grafos-primer-semestre-2023",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -405,8 +77,8 @@
         <compiler-path />
         <compiler-arguments />
         <envs />
-        <main-file />
-        <aux-dir />
+        <main-file>$USER_HOME$</main-file>
+        <aux-dir>$USER_HOME$</aux-dir>
       </texify-bibtex>
       <method v="2" />
     </configuration>
@@ -422,6 +94,27 @@
         <main-file>$PROJECT_DIR$/src/main.tex</main-file>
         <aux-dir>$PROJECT_DIR$/out</aux-dir>
       </texify-bibtex>
+      <method v="2" />
+    </configuration>
+    <configuration default="true" type="LATEX_RUN_CONFIGURATION" factoryName="LaTeX configuration factory">
+      <texify>
+        <compiler>PDFLATEX</compiler>
+        <compiler-path />
+        <sumatra-path />
+        <pdf-viewer>EVINCE</pdf-viewer>
+        <viewer-command />
+        <compiler-arguments />
+        <envs />
+        <main-file />
+        <output-path>{projectDir}/out</output-path>
+        <auxil-path>{projectDir}/auxil</auxil-path>
+        <compile-twice>false</compile-twice>
+        <output-format>PDF</output-format>
+        <latex-distribution>TEXLIVE</latex-distribution>
+        <has-been-run>false</has-been-run>
+        <bib-run-config>[]</bib-run-config>
+        <makeindex-run-config>[]</makeindex-run-config>
+      </texify>
       <method v="2" />
     </configuration>
     <configuration name="main" type="LATEX_RUN_CONFIGURATION" factoryName="LaTeX configuration factory" temporary="true">
@@ -451,6 +144,13 @@
       </list>
     </recent_temporary>
   </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-python-sdk-50da183f06c8-2887949eec09-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-233.13135.95" />
+      </set>
+    </attachedChunks>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -459,8 +159,34 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1698179453010</updated>
-      <workItem from="1698179454107" duration="893000" />
+      <workItem from="1698179454107" duration="979000" />
+      <workItem from="1698275086892" duration="202000" />
+      <workItem from="1698283889909" duration="844000" />
+      <workItem from="1698354789584" duration="17000" />
+      <workItem from="1698364099434" duration="18000" />
+      <workItem from="1702671598145" duration="15000" />
+      <workItem from="1702672745998" duration="268000" />
+      <workItem from="1702673284533" duration="14000" />
+      <workItem from="1702749371212" duration="123000" />
+      <workItem from="1703536933146" duration="3879000" />
     </task>
+    <task id="LOCAL-00001" summary="arreglado?">
+      <option name="closed" value="true" />
+      <created>1698180378525</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1698180378525</updated>
+    </task>
+    <task id="LOCAL-00002" summary="arreglado?">
+      <option name="closed" value="true" />
+      <created>1698180398705</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1698180398705</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -468,5 +194,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="arreglado?" />
+    <option name="LAST_COMMIT_MESSAGE" value="arreglado?" />
   </component>
 </project>

@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="165mm"
+   height="88mm"
+   viewBox="0 0 165 88"
+   version="1.1"
+   id="svg12165"
+   inkscape:version="1.3.1 (9b9bdc1480, 2023-11-25, custom)"
+   sodipodi:docname="Dibujo 1.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview12167"
+     pagecolor="#959595"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="mm"
+     showgrid="true"
+     inkscape:zoom="1.9855336"
+     inkscape:cx="283.8028"
+     inkscape:cy="151.84835"
+     inkscape:window-width="1920"
+     inkscape:window-height="1016"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer8"
+     showguides="true">
+    <inkscape:grid
+       type="xygrid"
+       id="grid23485"
+       originx="0"
+       originy="0"
+       spacingy="1"
+       spacingx="1"
+       units="mm"
+       visible="true" />
+  </sodipodi:namedview>
+  <defs
+     id="defs12162" />
+  <g
+     inkscape:label="Background"
+     inkscape:groupmode="layer"
+     id="layer1"
+     sodipodi:insensitive="true"
+     inkscape:highlight-color="#ffffff">
+    <rect
+       style="fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1.051;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:2.7;stroke-dashoffset:5.5612;paint-order:stroke markers fill"
+       id="rect12221"
+       width="165"
+       height="87.849442"
+       x="0"
+       y="0"
+       sodipodi:insensitive="true" />
+  </g>
+  <g
+     inkscape:groupmode="layer"
+     id="layer3"
+     inkscape:label="Pintura - rellenos"
+     style="fill:#ffff3e"
+     inkscape:highlight-color="#def321" />
+  <g
+     inkscape:groupmode="layer"
+     id="layer9"
+     inkscape:label="Elipses - conjuntos" />
+  <g
+     inkscape:groupmode="layer"
+     id="layer6"
+     inkscape:label="Aristas"
+     inkscape:highlight-color="#4c4c4c">
+    <path
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.665;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1"
+       d="M 36.796236,29.41687 63.203771,64.626908"
+       id="path1"
+       inkscape:connector-type="polyline"
+       inkscape:connector-curvature="0"
+       inkscape:connection-start="#path23549"
+       inkscape:connection-end="#ellipse1" />
+    <path
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.665;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1"
+       d="M 37.614383,28.515822 102.38562,65.527955"
+       id="path2"
+       inkscape:connector-type="polyline"
+       inkscape:connector-curvature="0"
+       inkscape:connection-start="#path23549"
+       inkscape:connection-end="#ellipse1-6" />
+    <path
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.665;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1"
+       d="m 68.02219,67.021889 h 33.95563"
+       id="path3"
+       inkscape:connector-type="polyline"
+       inkscape:connector-curvature="0"
+       inkscape:connection-start="#ellipse1"
+       inkscape:connection-end="#ellipse1-6" />
+    <path
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.665;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1"
+       d="M 128.41878,29.545243 106.58465,64.486006"
+       id="path4"
+       inkscape:connector-type="polyline"
+       inkscape:connector-curvature="0"
+       inkscape:connection-start="#ellipse1-3-2"
+       inkscape:connection-end="#ellipse1-6" />
+    <path
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.665;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1"
+       d="M 37.891152,27.889234 82.108848,41.154543"
+       id="path5"
+       inkscape:connector-type="polyline"
+       inkscape:connector-curvature="0"
+       inkscape:connection-start="#path23549"
+       inkscape:connection-end="#ellipse1-3" />
+  </g>
+  <g
+     inkscape:groupmode="layer"
+     id="layer7"
+     inkscape:label="Vertices"
+     inkscape:highlight-color="#00d20b">
+    <ellipse
+       style="fill:#ccff42;stroke:#000000;stroke-width:0.6;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:5.1;stroke-dasharray:none;stroke-dashoffset:2.58;stroke-opacity:1;paint-order:stroke markers fill"
+       id="path23549"
+       cx="35"
+       cy="27.021889"
+       inkscape:label="V1"
+       rx="3.022182"
+       ry="2.9781103" />
+    <ellipse
+       style="fill:#ccff42;stroke:#000000;stroke-width:0.6;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:5.1;stroke-dasharray:none;stroke-dashoffset:2.58;stroke-opacity:1;paint-order:stroke markers fill"
+       id="ellipse1"
+       cx="65.000008"
+       cy="67.021889"
+       inkscape:label="V1"
+       rx="3.022182"
+       ry="2.9781103" />
+    <ellipse
+       style="fill:#ccff42;stroke:#000000;stroke-width:0.6;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:5.1;stroke-dasharray:none;stroke-dashoffset:2.58;stroke-opacity:1;paint-order:stroke markers fill"
+       id="ellipse1-3"
+       cx="85"
+       cy="42.021889"
+       inkscape:label="V1"
+       rx="3.022182"
+       ry="2.9781103" />
+    <ellipse
+       style="fill:#ccff42;stroke:#000000;stroke-width:0.6;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:5.1;stroke-dasharray:none;stroke-dashoffset:2.58;stroke-opacity:1;paint-order:stroke markers fill"
+       id="ellipse1-6"
+       cx="105"
+       cy="67.021889"
+       inkscape:label="V1"
+       rx="3.022182"
+       ry="2.9781103" />
+    <ellipse
+       style="fill:#ccff42;stroke:#000000;stroke-width:0.6;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:5.1;stroke-dasharray:none;stroke-dashoffset:2.58;stroke-opacity:1;paint-order:stroke markers fill"
+       id="ellipse1-3-2"
+       cx="130.00343"
+       cy="27.009359"
+       inkscape:label="V1"
+       rx="3.022182"
+       ry="2.9781103" />
+  </g>
+  <g
+     inkscape:groupmode="layer"
+     id="layer8"
+     inkscape:label="Texto"
+     inkscape:highlight-color="#5a74c9"
+     style="display:inline">
+    <text
+       xml:space="preserve"
+       style="font-size:4.23333px;line-height:1.25;font-family:sans-serif;display:inline;stroke-width:0.264583"
+       x="128.33304"
+       y="28.203808"
+       id="text1-7-7"><tspan
+         sodipodi:role="line"
+         id="tspan1-5-0"
+         style="stroke-width:0.264583"
+         x="128.33304"
+         y="28.203808">$5$</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:4.23333px;line-height:1.25;font-family:sans-serif;stroke-width:0.264583"
+       x="33.329617"
+       y="28.216337"
+       id="text1"><tspan
+         sodipodi:role="line"
+         id="tspan1"
+         style="stroke-width:0.264583"
+         x="33.329617"
+         y="28.216337">$1$</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:4.23333px;line-height:1.25;font-family:sans-serif;stroke-width:0.264583"
+       x="83.329613"
+       y="43.216335"
+       id="text1-7"><tspan
+         sodipodi:role="line"
+         id="tspan1-5"
+         style="stroke-width:0.264583"
+         x="83.329613"
+         y="43.216335">$2$</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:4.23333px;line-height:1.25;font-family:sans-serif;stroke-width:0.264583"
+       x="63.329617"
+       y="68.216339"
+       id="text1-3"><tspan
+         sodipodi:role="line"
+         id="tspan1-56"
+         style="stroke-width:0.264583"
+         x="63.329617"
+         y="68.216339">$3$</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:4.23333px;line-height:1.25;font-family:sans-serif;stroke-width:0.264583"
+       x="103.32963"
+       y="68.216339"
+       id="text1-2"><tspan
+         sodipodi:role="line"
+         id="tspan1-9"
+         style="stroke-width:0.264583"
+         x="103.32963"
+         y="68.216339">$4$</tspan></text>
+  </g>
+</svg>
