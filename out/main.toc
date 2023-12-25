@@ -4,7 +4,7 @@
 \contentsline {section}{\numberline {1.2}Clase 2: 18/03/23}{6}{section.1.2}%
 \contentsline {subsection}{\numberline {1.2.1}El grado de un vértice}{7}{subsection.1.2.1}%
 \contentsline {subsection}{\numberline {1.2.2}Caminos y Ciclos}{9}{subsection.1.2.2}%
-\contentsline {section}{\numberline {1.3}Clase 3: 20/03/23}{11}{section.1.3}%
+\contentsline {section}{\numberline {1.3}Clase 3: 20/03/23}{12}{section.1.3}%
 \contentsline {subsection}{\numberline {1.3.1}Conexidad}{17}{subsection.1.3.1}%
 \contentsline {section}{\numberline {1.4}Clase 4: 23/03/23}{19}{section.1.4}%
 \contentsline {subsection}{\numberline {1.4.1}Árboles y bosques}{21}{subsection.1.4.1}%

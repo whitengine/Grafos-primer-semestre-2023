@@ -530,41 +530,37 @@ Usualmente no hacemos distinciones entre dos grafos isomorfos. De hecho en ese c
 \end{definition}
 
 
-\Dibujo{Ejemplo de isomorfismo de grafos.}
-En este ejemplo un isomorfismo válido entre $G1$ y $G2$ es
+\Inkscape{Dibujo de dos grafos isomorfos.}{"./Figuras/Introduccion-a-grafos/Dibujo 3.pdf_tex"}
+Un isomorfismo entre los grafos $G_1$ y $G_2$ del dibujo es $\varphi$ dada por:
 \begin{align*}
-\varphi : 1 &\mapsto A \\
-        2 &\mapsto B \\
-        3 &\mapsto C \\
-        4 &\mapsto D
+1 &\longmapsto A \\
+        2 &\longmapsto B \\
+        3 &\longmapsto C \\
+        4 &\longmapsto D
 \end{align*}
 
 
 \begin{definition}
-Definimos:
+Dados dos grafos $G$ y $G'$, podemos construir un nuevo grafo a partir de ellos. Tenemos respectivamente, la \textbf{unión} y la \textbf{intersección} de $G$ con $G'$:
 \begin{itemize}
-\item $G \cup G' := (V \cup V', E \cup E')$
-\item $G \cap G' := (V \cap V' , E \cap E')$
+\item $G \cup G' := (V \cup V', E \cup E')$,
+\item $G \cap G' := (V \cap V' , E \cap E')$.
 \end{itemize}
 \end{definition}
 
-\Dibujo{Ejemplo de unión e intersección de grafos.}
+\Inkscape{Ilustración de las dos operaciones recién definidas.}{"./Figuras/Introduccion-a-grafos/Dibujo 4.pdf_tex"}
 
 \begin{definition}
-Si $G \cap G' = \emptyset$, decimos que son \textbf{disjuntos}.
+Sean $G = (V,E)$ y $G' = (V', E')$ dos grafos. Si $V \cap V' = \emptyset$ (o en otra notación: $G \cap G' = \emptyset$), decimos que $G$ y $G'$ son \textbf{disjuntos}.
 
-Si $V' \subset V$ y $E' \subset E$, decimos que $G'$ es \textbf{subgrafo} de $G$, y que $G$ es \textbf{supergrafo} de $G'$. Notamos $G' \subset G$. Si $G'$ es subgrafo de $G$ pero $G \neq G$, decimos que $G'$ es \textbf{subgrafo propio} de $G'$ y análogamente decimois que $G$ \textbf{supergrafo propio} de $G'$; notamos $G' \subsetneq G$.
-\end{definition}
+Si $V' \subset V$ y $E' \subset E$, decimos que $G'$ es \textbf{subgrafo} de $G$, y que $G$ es \textbf{supergrafo} de $G'$. Notamos $G' \subset G$. Si $G'$ es subgrafo de $G$ pero $G' \neq G$, decimos que $G'$ es \textbf{subgrafo propio} de $G$, y análogamente, decimos que $G$ \textbf{supergrafo propio} de $G'$; notamos $G' \subsetneq G$.
 
-\begin{definition}
-Sea $G' \subset G$, tal que $G'$ contiene todas las aristas $xy \in E$ tal que $x,y \in V'$. Decimos que $G'$ es un \textbf{subgrafo inducido} de $G$.
-
-En este caso diremos que $V'$ \textbf{induce} $G'$ en $G$, y escribimos $G' = G[V']$ para un subconjunto $V' \subset V$.
+Si $G'$ es un subgrafo de $G$ de tal suerte que $G'$ contiene todas las aristas $xy \in E$ con $x,y \in V'$, decimos que $G'$ es un \textbf{subgrafo inducido} de $G$. En este caso diremos que $V'$ \textbf{induce} $G'$ en $G$, y escribimos $G' = G[V']$, para el subconjunto $V' \subset V$.
 \end{definition}
 
 \Dibujo{Ejemplo de grafo inducido y no inducido.}
 
-
+\Inkscape{Ejemplo de un grafo $G$, un subgrafo inducido $G'$ de $G$, y un subgrafo no inducido $G''$ de $G$.}{"Figuras/Introduccion-a-grafos/Dibujo 5.pdf_tex"}
 
 
 
