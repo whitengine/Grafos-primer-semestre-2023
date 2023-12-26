@@ -752,70 +752,62 @@ Ahora, sea $i <k$ el menor índice tal que $x_i x_k \in E(G)$. Como $\delta (G) 
 
 
 \begin{Definition}
-La \textbf{distancia} entre dos vértices $x,y$ de un grafo $G$, es la longitud de un camino con longitud mínima entre $x,y$, la notamos
-$$
-d(x,y).
-$$
-Si no hay un camino entre $x$ e $y$, escribimos
-$$
-d(x,y) = \infty.
-$$
+La \textbf{distancia} entre dos vértices $x,y$ de un grafo $G$, es la longitud de un camino con longitud mínima entre $x,y$, la notamos $d_G (x,y)$ o simplemente $d (x,y)$. Si no hay un camino entre $x$ e $y$, ponemos $d (x,y) := \infty$. (Notar que $d(x,y) = 0$ si y solo si $ x = y$).
 
-El \textbf{diámetro} de $G$ es el máximo de las distancias entre todos los pares de vértices, lo notamos
-$$
-\diam G .
-$$
-\end{Definition}
+El \textbf{diámetro} de $G$ es el máximo de las distancias entre todos los pares de vértices, lo notamos $\diam G$.
 
-Notar que $d(x,y) = 0$ si y solo si $ x = y$.
-
-\begin{definition}
 El \textbf{radio} de un grafo $G$, denotado $\rad G$, es la cantidad
 $$
-\rad G = \min_{x \in V(G)} \max_{y \in V(G)} d (x,y).
+\rad G := \min_{x \in V(G)} \max_{y \in V(G)} d (x,y).
 $$
-
 Decimos que un vértice $v \in V(G)$ es \textbf{central}, si
 $$
 \max_{y \in v(G)} d(v,y) = \rad G.
 $$
 Es decir, $v$ minimiza la función $x \mapsto \max_{y \in V(G)} d(x,y)$.
+\end{Definition}
 
-\Dibujo{Ejemplo de vértice central es $3$ y tiene radio $4$. El grafo $G$ tiene diámetro $8$.}
-\end{definition}
+\Inkscape{Ejemplo de un grafo $G$ con diámetro $8$, radio $4$, y vértice central $v$.}{"Figuras/Introduccion-a-grafos/Dibujo 13.pdf_tex"}
 
-\begin{Exercise}[\textbf{Entrega de taller}]
+\begin{Warning}
+El el vértice centras puede \underline{no ser único}, por ejemplo los caminos de longitud impar tienen dos centros:
+\end{Warning}
+\Inkscape*{}{"./Figuras/Introduccion-a-grafos/Dibujo 14.pdf_tex"}
+
+\begin{exercise}
+Probar que existe un camino de longitud $\alpha$ entre dos vértices $x,y$, y un camino de longitud $\beta$ entre $y,z$, luego existe un camino entre $x$ y $z$ de longitud $\leq \alpha + \beta$.
+\end{exercise}
+
+\begin{exercise}
 Probar que
 $$
 \rad G \leq \diam G \leq 2 \rad G .
 $$
-\end{Exercise}
+\end{exercise}
 \begin{solution}
-Si el grafo $G$ no es conexo, luego el radio y el diámetro son infinito, luego vale la desigualdad. En efecto, por un lado si $x \in V(G)$ está fijo, como $G$ no es conexo existe $y \in V(G)$ tal que $d (x,y) = \infty$, con lo cual $\max_{y \in V(G)} d(x,y) = \infty$ para $x$ fijo, luego si tomamos mínimo sobre los $x$ se tiene que $\rad G = \infty$. Por otro lado, $\diam G = \infty$ porque es el máximo sobre todas las distancias entre dos vértices, y como mencionamos recién, al no ser conexo el grafo tiene que haber una distancia infinita entre algún par de vértices.
+Si el grafo $G$ no es conexo, entonces el radio y el diámetro son infinitos, luego vale la desigualdad. En efecto, por un lado si $x \in V(G)$ está fijo, como $G$ no es conexo existe $y \in V(G)$ tal que $d (x,y) = \infty$, con lo cual $\max_{y \in V(G)} d(x,y) = \infty$ para $x$ fijo, luego si tomamos mínimo sobre los $x$ se tiene que $\rad G = \infty$. Por otro lado, $\diam G = \infty$ porque es el máximo sobre todas las distancias entre dos vértices, y como mencionamos recién, al no ser conexo el grafo, tiene que haber una distancia infinita.
 
-Ahora supongamos que $G$ es conexo, es decir para todo par de vértices $x,y$ existe un camino $P_{xy}$ que los conecta, sin pérdida de generalidad supongamos que es el más corto, i.e. $d(x,y)$ es la longitud de $P_{xy}$. Se deduce que $d(x,y) \leq \diam G$ por definición de diámetro. Tomando máximo sobre $y$ y luego mínimo sobre $x$ se sigue por definición que
+Ahora supongamos que $G$ es conexo, es decir, para todo par de vértices $x,y$ existe un camino $P_{xy}$ que los conecta, sin pérdida de generalidad supongamos que es el más corto, i.e. $d(x,y)$ es la longitud de $P_{xy}$. Se deduce que $d(x,y) \leq \diam G$ por definición de diámetro. Tomando máximo sobre $y$ y luego mínimo sobre $x$ se sigue por definición de radio:
 $$
 \rad G \leq \diam G.
 $$
 Esto prueba la primera desigualdad. Ahora veamos la segunda.
 
-Sea $o$ un vértice que minimice la función $x \mapsto \max_{y \in V(G)} d(x,y)$, es decir, $o$ es central. Ahora tomemos dos vértices arbitrarios $x,y$. Como $o$  minimiza la función anterior, tenemos que $d(x,o) \leq \rad G = \max_{z \in V(G)} d(o,z)$, es decir existe un camino de longitud $\leq \rad G$ que une $x$ con $o$. Análogamente, existe un camino de longitud $\leq \rad G$ que une $o$ con $y$. Concatenando ambos caminos obtenemos un camino entre $x$ e $y$ de longitud $\leq 2 \rad G$. Tomando máximo sobre $x,y$ obtenemos la otra desigualdad:
+Sea $o$ un vértice que minimice la función $x \mapsto \max_{y \in V(G)} d(x,y)$, es decir, $o$ es central. Ahora tomemos dos vértices arbitrarios $x,y$. Como $o$  minimiza la función anterior, tenemos que $d(o,x) \leq \rad G = \max_{z \in V(G)} d(o,z)$, es decir, existe un camino de longitud $\leq \rad G$ que une $o$ con $x$. Análogamente, existe un camino de longitud $\leq \rad G$ que une $y$ con $o$. Así, por el ejercicio anterior, obtenemos un camino entre $x$ e $y$ de longitud $\leq 2 \rad G$, y por lo tanto $d(x,y) \leq 2 \rad G$. Tomando máximo sobre $x,y$, obtenemos la otra desigualdad:
 $$
 \diam G \leq 2 \rad G.
 $$
 \end{solution}
 
-Si queremos relacionar el radio o diámetro con el grafo mínimo, promedio o máximo debemos tener otros parámetros como intermediario. Por ejemplo, los caminos tienen grado mínimo $1$ pero pueden tener radio y diámetro arbitrariamente grandes. O podemos tener radio y diámetro arbitrariamente grande y grado mínimo arbitrario. Antes de dar un ejemplo, necesitamos la siguiente definición:
+Si queremos relacionar el radio o diámetro con el grado mínimo, promedio o máximo, debemos tener otros parámetros como intermediario. Por ejemplo, los caminos tienen grado mínimo $1$ pero pueden tener radio y diámetro arbitrariamente grandes. O podemos tener radio y diámetro arbitrariamente grandes, y grado mínimo arbitrario. Antes de dar un ejemplo, necesitamos la siguiente definición:
 
 \begin{definition}
-Sea $G$ un grafo, definimos $G^k$ como la \textbf{potencia} de $G$. Es el grafo que contiene los mismos vértices y
-las aristas son las originales pero agregando a cada vértice $x$ una arista incidente con cada vértice $y$ a
-distancia $ d(x,y) \leq k$.
+Sea $G$ un grafo, definimos $G^k$ como la \textbf{$k$-potencia} (o simplemente \textbf{potencia}) de $G$. Es el grafo que contiene los mismos vértices y las aristas son las originales pero agregando a cada vértice $x$ una arista incidente con cada vértice $y$ a distancia $ d(x,y) \leq k$.
 \end{definition}
 
-\Dibujo[0.6]{El camino $P : 0,1,2,\ldots,7$ dibujado en \black{negro}, le agregamos aristas para dibujar $P^3$. Las aristas rojas conectan nodos a distancia $2$ y las \blue{azules} $3$.}
+\Inkscape{El camino $P = x_0 x_1 \cdots x_7$ dibujado en \black{negro}, le agregamos aristas para dibujar $P^3$. Las aristas \red{rojas} conectan vértices a distancia $2$ y las \blue{azules} a distancia $3$.}{"Figuras/Introduccion-a-grafos/Dibujo 15.pdf_tex"}
 
-Por ejemplo, todo camino de longitud $2n$ tiene $2n+1$ vértices, radio $n$, diámetro $2n$. Luego $P^k$ tiene misma cantidad de vértices (pero no aristas), mismo radio y diámetro, pero grado $k$ para todo $1 \leq k \leq 2n$.
+Por ejemplo, todo camino $P$ de longitud $2n$ tiene $2n+1$ vértices, radio $n$, diámetro $2n$. Luego $P^k$ tiene misma cantidad de vértices (pero no aristas), mismo radio y diámetro, pero el grado máximo crece para todo $k \leq 2n$.
 
 Vamos a relacionar el radio y grado máximo a través de el número de vértices. Un grafo puede tener muchos vértices, por ejemplo si tiene radio alto, o si tiene grado máximo alto,
 
@@ -825,7 +817,7 @@ Sea $d \geq 3$. Un grafo $G$ con radio a lo más $k$ y grado máximo a lo más $
 \begin{proof}
 Sea $z$ un vértice central de $G$ y $D_i$ el conjunto de los vértices a distancia $i$ de $z$.
 
-\Dibujo{$D_0$ son los \green{verdes}, $D_1$ los \yellow{amarillos}, y así...}
+\Inkscape*{}{"Figuras/Introduccion-a-grafos/Dibujo 16.pdf_tex"}
 
 Tenemos que $\abs{D_0} =1, \abs{D_1} \leq \Delta \leq d$. Notar que cada vértice de $D_1$ tiene como vecino en $D_2$ a lo sumo $d - 1$ vértices, pues ya es vecino de $z$. En general, tenemos que
 $$
@@ -835,10 +827,10 @@ Con lo cual
 $$
 \abs{D_{i+1}} \leq \abs{D_1} (d-1)^i = d (d-1)^i , \quad i \geq 1 .
 $$
-Entonces
+Entonces por la fórmula geométrica,
 \begin{align*}
 \abs{V(G)} = \sum_{i=0}^k \abs{D_i} &\leq 1 + d \sum_{i=0}^{k-1} (d - 1)^i \\
-&= 1 + d (d-1)^k - 1 / d-2 \\
+&= 1 + d \frac{(d-1)^k - 1}{(d-1) - 1}\\
 &< \frac{d}{d-2} (d-1)^k .
 \end{align*}
 \end{proof}
@@ -847,7 +839,7 @@ Entonces
 \begin{enumerate}[1.]
 \item Cuando el radio es $k=1$, por ejemplo en un grafo estrella, la cantidad de vértices es asintóticamente igual a $\frac{d}{d-2} (d-1)^k$ cuando $d \rightarrow \infty$.
 
-\Dibujo[0.6]{Ilustración del grafo estrella.}
+\Inkscape{Ilustración del grafo estrella.}{"Figuras/Introduccion-a-grafos/Dibujo 17.pdf_tex"}
 
 
 \item La cota no es para nada óptima para grafos de potencia $P^k$ de caminos. Por ejemplo, si $P$ tiene $2n+1$ vértices, $k = n$ y $d = k \geq 3$. Luego en el mejor de los casos con $d = 3$, tenemos que
@@ -948,7 +940,9 @@ Tomamos como $v_{i+1}$ al último vértice en $P$, contado desde $v$, que no est
 \begin{example}
 El siguiente dibujo es un mal ejemplo:
 
-\Dibujo{Mal ejemplo, pues \gray{$0$ y $2$} no inducen un grafo conexo $G[0,2]$.}
+
+\red{Dibujo $\{$ Mal ejemplo, pues \gray{$0$ y $2$} no inducen un grafo conexo $G[0,2]$.$\}$}
+%\Dibujo{Mal ejemplo, pues \gray{$0$ y $2$} no inducen un grafo conexo $G[0,2]$.}
 \end{example}
 
 
