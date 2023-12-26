@@ -558,8 +558,6 @@ Si $V' \subset V$ y $E' \subset E$, decimos que $G'$ es \textbf{subgrafo} de $G$
 Si $G'$ es un subgrafo de $G$ de tal suerte que $G'$ contiene todas las aristas $xy \in E$ con $x,y \in V'$, decimos que $G'$ es un \textbf{subgrafo inducido} de $G$. En este caso diremos que $V'$ \textbf{induce} $G'$ en $G$, y escribimos $G' = G[V']$, para el subconjunto $V' \subset V$.
 \end{definition}
 
-\Dibujo{Ejemplo de grafo inducido y no inducido.}
-
 \Inkscape{Ejemplo de un grafo $G$, un subgrafo inducido $G'$ de $G$, y un subgrafo no inducido $G''$ de $G$.}{"Figuras/Introduccion-a-grafos/Dibujo 5.pdf_tex"}
 
 
@@ -571,62 +569,54 @@ Si $G'$ es un subgrafo de $G$ de tal suerte que $G'$ contiene todas las aristas 
 %%%%%%%%%%%
 
 \begin{definition}
-Si $U \subset V(G)$, escribimos $G \setminus U$ para denotar $G[V \setminus U]$. Es decir, $G \setminus U$ se obtiene de borrar los vértices de $U$ y sus aristas incidentes.
+Dado un grafo $G$ con vértices $V$, si $U \subset V(G)$, escribimos $G \setminus U$ para denotar al grafo inducido $G[V \setminus U]$. Es decir, $G \setminus U$ se obtiene de borrar los vértices de $U$ y sus aristas incidentes.
 \end{definition}
 
-\Dibujo{Ejemplo de $G \setminus U$.}
+\Inkscape{Ejemplo de $G \setminus U$ con $U = \{4,5\}$.}{"Figuras/Introduccion-a-grafos/Dibujo 6.pdf_tex"}
 
 \begin{definition}
-El \textbf{complemento} $\bar G$ de un grafo $G$, es el grafo con vértices $V(G)$ y que tiene una arista $xy$ si y solo si $xy \not \in E(G)$.
+El \textbf{complemento} $\bar G$ de un grafo $G$, es el grafo con vértices $V(G)$, que tiene una arista $xy$ si y solo si $xy \not \in E(G)$.
 \end{definition}
 
-\Dibujo{Ejemplo de complemento.}
+\Inkscape{Ejemplo grafo $G$ y su complemento $\bar G$.}{"Figuras/Introduccion-a-grafos/Dibujo 7.pdf_tex"}
 
 Notar que en el ejemplo de arriba, $G$ y $\bar G$ son isomorfos. Esto no pasa necesariamente, por ejemplo el complemento de un grafo completo es el grafo sin aristas.
 
 
 \subsection{El grado de un vértice}
 \begin{definition}
-Sea $G$ un grafo no vacío, y sea $v \in V(G)$. El conjunto de vecinos de $v$ lo denotamos como $N (v)$ o si el contexto no es claro $N_G (v)$. Llamamos a este conjunto el \textbf{vecindario} de $v$.
+Sea $G$ un grafo no vacío, y sea $v \in V(G)$. El conjunto de vecinos de $v$ lo denotamos como $N_G (v)$, o si el contexto es claro $N (v)$. Llamamos a este conjunto el \textbf{vecindario} de $v$.
 
-Más en general, si $U \subset V(G)$, no vacío. El \textbf{vecindario} de $U$ es el subconjunto de vértices de $V(G) \setminus U$ que contiene vecinos de algún elemento de $U$. Notamos $N(U)$ o $N_G (U)$.
+Más en general, si $U \subset V(G)$ es no vacío, el \textbf{vecindario} de $U$ es el subconjunto de vértices de $V(G) \setminus U$ que contiene vecinos de algún elemento de $U$. Similarmente al párrafo anterior, notamos $N_G (U)$, o simplemente $N (U)$.
 \end{definition}
 
-\Dibujo[0.6]{Ejemplo de vecindario de $U = \{ 3,4\}$. Tenemos que $N(U) = \{0,2\}$.}
+\Inkscape{Ejemplo de vecindario de $\red{U = \{ A,B\}}$. Tenemos que $\blue{N(U) = \{3,4,5\}}$.}{"Figuras/Introduccion-a-grafos/Dibujo 8.pdf_tex"}
 
 \begin{Definition}
-El \textbf{grado} de un vértice $v \in V(G)$ es el número de aristas que inciden en $v$ y lo denotamos como $d (v)$ o $d_G (v)$. Notar que
+El \textbf{grado} de un vértice $v \in V(G)$ es el número de aristas que inciden en $v$, y lo denotamos como $d_G (v)$ o simplemente $d (v)$. En otras palabras,
 $$
-d(v) = \abs{N(v)},
+d(v) = \abs{N(v)}.
 $$
-porque no permitimos multigrafos.
 
 Si $v$ tiene grado $0$, decimos que es \textbf{aislado}.
 \end{Definition}
 
 \begin{Definition}
-Definimos la cantidad de $G$:
+Dado un grafo $G$, definimos el \textbf{grado mínimo} como la cantidad
 $$
 \delta ( G) := \min_{v \in V(G)} \{ d(v) \}.
 $$
-Es el \textbf{grado mínimo} de $G$.
-
-Análogamente, tenemos la cantidad $G$:
+Análogamente, definimos el \textbf{grado máximo}:
 $$
 \Delta (G) := \max_{v \in V(G)} \{ d(v) \}.
 $$
-Es el \textbf{grado máximo} de $G$.
+En el caso que todos los vértices tienen el mismo grado, i.e. $\delta (G) = \Delta (G)$, decimos que $G$ tiene grado $k$ y que $G$ es \textbf{$k$-regular}, o simplemente \textbf{regular}.
 
-En el caso que todos los vértices tienen el mismo grado, i.e. $\delta (G) = \Delta (G)$, decimos que $G$ tiene grado $k$ y que $G$ es \textbf{$k$-regular} o simplemente \textbf{regular}.
+Definimos también el \textbf{grado promedio}:
+$$
+d(G) := \frac{1}{\abs {V(G)}} \sum_{v \in V(G)} d(v).
+$$
 \end{Definition}
-
-\begin{definition}
-Definimos la cantidad del grafo $G$:
-$$
-d(G) := \frac{1}{\abs {V(G)}} \sum_{v \in V(G)} d(v) = \frac{1}{\abs {G}} \sum_{v \in V(G)} d(v) .
-$$
-Es el \textbf{grado promedio} de $G$.
-\end{definition}
 
 \begin{Obs}
 $$
@@ -642,10 +632,12 @@ $$
 El número de vértices de grado impar en un grafo siempre par.
 \end{Proposition}
 \begin{proof}
-Por la observación anterior, $\sum_{v \in V(G)} d(v) = 2 \abs{G} \equiv 0 \mod 2$ con lo cual,
-$$
-\# \set{ v \in V(G) | d(v) \equiv 1 \mod 2 } = \sum_{v | d(v) \equiv 1 \mod 2} d(v) \equiv 0 \mod 2 .
-$$
+Por la observación anterior, $\sum_{v \in V(G)} d(v) = 2 \abs{G} \equiv 0 \mod 2$, con lo cual,
+\begin{align*}
+\# \set{ v \in V(G) : \: d(v) \equiv 1 \mod 2 } &= \sum_{v | d(v) \equiv 1 \mod 2} d(v) \\
+&\equiv \sum_{v \in V(G)} d(v) \equiv 0 \mod 2,
+\end{align*}
+esto prueba la proposición.
 \end{proof}
 
 \begin{proposition}\label{prop:ultima proposicion de la clase anterior a caminos y ciclos}
@@ -655,8 +647,8 @@ $$
 $$
 \end{proposition}
 \begin{proof}
-En efecto, la idea es la siguiente: construimos una secuencia de grafos $G = G_0 \supset G_1 \supset \ldots$ de subgrafos inducidos, tales que si $G_i$ tiene un vértice de grado $d(v_i) \leq \frac{\abs{E(G_i)}}{\abs{V(G_i)}}$, entonces tomamos $G_{i+1} := G_i \setminus v_i$; si no, la secuencia termina en $H := G_i$.
-Por la elección de $v_i$ se sigue que $\frac{\abs{E(G_{i+1})}}{\abs{V(G_{i+1})}} \geq \frac{\abs{E(G_i)}}{\abs{V(G_i)}}$, pues esto sucede si y solo si
+En efecto, la idea es la siguiente: construimos una secuencia de subgrafos inducidos $G = G_0 \supset G_1 \supset \ldots$, tales que si $G_i$ tiene un vértice de grado $d(v_i) \leq \frac{\abs{E(G_i)}}{\abs{V(G_i)}}$, entonces tomamos $G_{i+1} := G_i \setminus v_i$; si no, la secuencia termina en $H := G_i$.
+Por la elección de $v_i$, se sigue que $\frac{\abs{E(G_{i+1})}}{\abs{V(G_{i+1})}} \geq \frac{\abs{E(G_i)}}{\abs{V(G_i)}}$, pues esto sucede si y solo si
 \begin{align*}
 \frac{\abs{E(G_i)}-d(v_i)}{\abs{V(G_i)}-1} & \geq \frac{\abs{E(G_i)}}{\abs{V(G_i)}} \\
 \Leftrightarrow (\abs{E(G_i)}-d(v_i))\abs{V(G_i)} &\geq \abs{E(G_i)}(\abs{V(G_i)}-1) \\
@@ -665,7 +657,7 @@ Por la elección de $v_i$ se sigue que $\frac{\abs{E(G_{i+1})}}{\abs{V(G_{i+1})}
 \end{align*}
 En particular, $\frac{\abs{E(H)}}{\abs{V(H)}} \geq \frac{\abs{E(G)}}{\abs{V(G)}}$.
 
-Afirmamos que $H$ tiene al menos una arista, de lo contrario $\frac{\abs{E(H)}}{\abs{V(H)}} = 0 < \frac{\abs{E(G)}}{\abs{V(G)}}$, por tener $G$ al menos una arista. En particular, $H \neq \emptyset$. Como $H$ es el mínimo de esta construcción, se tiene que $\delta (H) > \frac{\abs{E(H)}}{\abs{V(H)}}$.
+Afirmamos que $H$ tiene al menos una arista, de lo contrario $0 =\frac{\abs{E(H)}}{\abs{V(H)}} \geq \frac{\abs{E(G)}}{\abs{V(G)}}$, que no puede suceder porque $G$ tiene al menos una arista. Como $H$ es el último subgrafo de la secuencia construida, se tiene que $\delta (H) > \frac{\abs{E(H)}}{\abs{V(H)}}$.
 \end{proof}
 
 \subsection{Caminos y Ciclos}

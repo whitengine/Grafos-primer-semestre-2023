@@ -68,7 +68,7 @@
     \put(0.7493466,0.143029){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$3$\end{tabular}}}}%
     \put(0.9449781,0.16708201){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$4$\end{tabular}}}}%
     \put(0.13672265,0.41331006){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$G$\end{tabular}}}}%
-    \put(0.47519365,0.41331006){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$G' = G[{1,2,3,4}]$\end{tabular}}}}%
+    \put(0.47519365,0.41331006){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$G' = G[\{1,2,3,4\}]$\end{tabular}}}}%
     \put(0.8081407,0.41306846){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$G''$\end{tabular}}}}%
   \end{picture}%
 \endgroup%
