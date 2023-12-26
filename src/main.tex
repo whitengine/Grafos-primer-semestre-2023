@@ -179,6 +179,8 @@
 
 \newcommand{\darkgreen}[1]{\textcolor{ForestGreen}{#1}}
 
+\newcommand{\teal}[1]{\textcolor{teal!70!green}{#1}} %verde marino
+
 \newcommand{\pink}[1]{\textcolor{Lavender}{#1}}
 
 \newcommand{\salmon}[1]{\textcolor{Salmon}{#1}}
@@ -926,34 +928,17 @@ G+2$. Es decir, existen dos vértices de $C$, digamos $x,y$ tales que su distanc
 Un grafo es \textbf{conexo} si es no vacío y para todo par de vértices, existe un camino que los une a ambos.
 \end{Definition}
 
-\begin{Proposition}\label{prop: todo grafo conexo se puede enumerar de manera que G_i[v1,...,vi] es conexo para todo i}
+\begin{proposition}\label{prop: todo grafo conexo se puede enumerar de manera que G_i[v1,...,vi] es conexo para todo i}
 Los vértices de un grafo conexo $G$ se pueden enumerar, digamos $v_1,v_2,\ldots,v_n$ tal que $G_i = G[v_1,v_2,\ldots,v_i]$ es conexo para todo $i = 1,\ldots ,n$.
-\end{Proposition}
+\end{proposition}
 
 \begin{proof}
-Probaremos la proposición por inducción en $n$. Sea $v$ arbitrario, y asumamos por inducción que $v_1,\ldots,v_i$ han sido escogidos para $i < \abs{V(G)}$ y que $G_i$ es conexo
+Probaremos la proposición por inducción en $n$. Sea $v$ arbitrario, y asumamos por inducción que $v_1,\ldots,v_i$ han sido escogidos para $i < \abs{V(G)}$ y que $G_i$ es conexo.
 
-Escojo un vértice $v$ no enumerado aún. Como $G$ es conexo existe un camino $P$ entre $v_1$ y $v$.
-
-\Dibujo[0.7]{Camino $P$ que une a $v$ y $v_1$. En color \blue{azul} representa los vértice de $G_i$ en $P$.}
-
-Tomamos como $v_{i+1}$ al último vértice en $P$, contado desde $v$, que no está en $G_i$. Como $v_{i+1}$ tiene vecino en $G_i$ y $G_i$ es conexo se tiene que $G_{i+1}$ es conexo.
-
+Escojo un vértice $v$ no enumerado aún. Como $G$ es conexo, existe un camino $P$ entre $v_1$ y $v$. Tomamos como $v_{i+1}$ al último vértice en $P$, contado desde $v$, que no está en $G_i$. Como $v_{i+1}$ tiene un vecino en $G_i$ y $G_i$ es conexo, se tiene que $G_{i+1}$ es conexo.
 \end{proof}
 
-\begin{example}
-El siguiente dibujo es un mal ejemplo:
-
-
-\red{Dibujo $\{$ Mal ejemplo, pues \gray{$0$ y $2$} no inducen un grafo conexo $G[0,2]$.$\}$}
-%\Dibujo{Mal ejemplo, pues \gray{$0$ y $2$} no inducen un grafo conexo $G[0,2]$.}
-\end{example}
-
-
-
-
-
-
+\Inkscape{Ilustración del tercer paso del algorítmo: tomamos un camino \blue{$P$} que una a $v_1$ con $v$. Luego construimos $G_4 := G[v_1,v_2,v_3,z]$.}{"Figuras/Introduccion-a-grafos/Dibujo 18.pdf_tex"}
 
 
 %%%%%%%%%%%
@@ -961,45 +946,45 @@ El siguiente dibujo es un mal ejemplo:
 %%%%%%%%%%%
 
 \begin{definition}[Maximalidad]
-Consideremos una propiedad $P$, para para algún grafo, conjunto de vértices, etc. Decimos que un conjunto de vértices $U$ es maximal para $P$, si $U$ cumple $P$, y $U \cup \{v\}$ con $v \not \in U$ no cumple $P$.
+Consideremos una propiedad $\mathcal P$, para para algún grafo, conjunto de vértices, etc. Decimos que un conjunto de vértices $U$ es \textbf {maximal} para $\mathcal P$, si $U$ cumple $\mathcal P$, y $U \cup \{v\}$ con $v \not \in U$ no cumple $\mathcal P$.
 \end{definition}
 
-\Dibujo{Ejemplo de camino maximal: $0,1,2,3,5,6,7,8$. Sin embargo, $5,7,8$ no lo es.}
+\Inkscape{Ejemplo de camino maximal \blue{$P_1$} y otro \underline{no} maximal \red{$P_2$} (dentro de un grafo).}{"Figuras/Introduccion-a-grafos/Dibujo 19.pdf_tex"}
 
 
 \begin{definition}
 Sea $G = (V,E)$ un grafo. Un subgrafo conexo maximal de $G$ es llamado una \textbf{componente} o \textbf{componente conexa} de $G$.
 \end{definition}
 
-\Dibujo{Ejemplo de componentes: tiene $3$.}
+\Inkscape{Ejemplo de un grafo $G$ con tres componentes: $\blue{C_1}$, $\red{C_2}$, y $\teal{C_3}$.}{"Figuras/Introduccion-a-grafos/Dibujo 20.pdf_tex"}
 
 
 \begin{notation}
-Sea $G= (V,E)$ un grafo. Vamos a notar a la cantidad de arisstas por vértice como la cantidad:
+Sea $G= (V,E)$ un grafo. Vamos a notar a la cantidad de aristas por vértice de $G$ por:
 \[
 \epsilon ( G) = \frac{\abs E}{\abs V}.
 \]
 \end{notation}
 
 \begin{theorem}
-Sea $k \in \naturals$. Todo grafo $G$ con $d(G) \geq 4 k$ tiene un subgrafo $H$ que es $(k-1)$-conexo tal que $\epsilon (H) > \epsilon (G) -k$.
+Sea $k \in \naturals$. Todo grafo $G$ con $d(G) \geq 4 k$ tiene un subgrafo inducido $H$ que es $(k+1)$-conexo tal que $\epsilon (H) > \epsilon (G) -k$.
 \end{theorem}
 \begin{proof}
 Notemos por $\gamma = \epsilon (G)$; como $\gamma = \frac 1 2 d(G)$, tenemos que $\gamma \geq 2 k$. Consideremos los subgrafos $G' \subset G$ tales que
-\[
-\abs{G'} \geq 2k \quad \text{y} \quad \Abs{G'}> \gamma ( \abs{G'}-k);
-\]
-esta familia es no vacía, pues $G$ cumple esta condición; notemos por $H$ al subgrafo de menor orden que cumple esta condición.
+\begin{equation*}
+\abs{G'} \geq 2k \quad \text{y} \quad \Abs{G'}> \gamma ( \abs{G'}-k) \tag{$\star$};
+\end{equation*}
+esta familia es no vacía, pues $G$ cumple esta condición; notemos por $H$ a un subgrafo inducido de orden mínimo que cumple $(\star)$.
 En efecto, $G$ cumple ambas condiciones, pues por un lado $\Abs G > \gamma (\abs G - k) = \Abs G - \gamma k$, y por otro lado
 $$
 \Delta (G) \geq d(G) \geq 4k,
 $$
 con lo cual existe un vértice de $G$ de grado máximo, con al menos $4k$ vecinos, es decir $\abs G \geq 4k +1 \geq 2k$.
 
-Notar que ningún grafo $G'$ que cumpla la condición tiene orden exactamente $2k$, ya que esto implicaría que $\Abs {G'} > \gamma k \geq 2k^2 > \binom{\abs {G'}}{2} = k(2k-1)$, lo cual contradice la cantidad máxima de aristas que puede tener un grafo de $\abs{G'}$ vértices.
-Por minimalidad de $H$, se tiene que $\delta (H) > \gamma$: de lo contrario podríamos eliminar un vértice de grado a lo más $\gamma$ y obtener un grafo $G' \subsetneq H$ que satisface la condición. En particular, como existe un vértice de grado $> \gamma$, se sigue que $\abs H \geq \gamma$. Ddividiendo la desigualdad $\Abs H > \gamma \abs H - \gamma k$ de la c ondición por $\abs H$, tenemos que $\epsilon (H) > \gamma - k$, como queríamos.
+Notar que ningún grafo $G'$ que cumpla $(\star)$ tiene orden exactamente $2k$, ya que esto implicaría que $\Abs {G'} > \gamma k \geq 2k^2 > \binom{\abs {G'}}{2} = k(2k-1)$, lo cual contradice la cantidad máxima de aristas que puede tener un grafo de $\abs{G'}$ vértices.
+Por minimalidad de $H$, se tiene que $\delta (H) > \gamma$: de lo contrario podríamos eliminar un vértice de grado a lo más $\gamma$ y obtener un grafo $G' \subsetneq H$ más pequeño cumpliendo $(\star)$. En particular, como existe un vértice de grado $> \gamma$, se sigue que $\abs H \geq \gamma$. Dividiendo la desigualdad $\Abs H > \gamma \abs H - \gamma k$ de $(\star)$ por $\abs H$, tenemos que $\epsilon (H) > \gamma - k$, como queríamos.
 
-Falta ver que $H$ es efectivamente $(k+1)$-conexo. De lo contrario, $H$ tendría una separación propia $\{U_1, U_2\}$ de orden a lo más $k$; escribamos $H[U_i] =: H_i$. Como todo vértice $v \in U_1 \setminus U_{2}$ tiene $d(v) \geq \delta (H) > \gamma$ vecínos de $H$ en $H_1$, tenemos que $\abs{H_1}\geq \gamma \geq 2k$. Similarmente, $\abs{H_2} \geq 2k$. Por la minimalidad de $H$, ninguno de los $H_1,H_2$ puede satisfaced la condición, con lo cual
+Falta ver que $H$ es efectivamente $(k+1)$-conexo. De lo contrario, $H$ tendría una separación propia $\{U_1, U_2\}$ de orden a lo más $k$; escribamos $H[U_i] =: H_i$ (notar que sigue siendo inducido en $G$). Como todo vértice $v \in U_1 \setminus U_{2}$ tiene $d(v) \geq \delta (H) > \gamma$ vecinos de $H$ en $H_1$, tenemos que $\abs{H_1}\geq \gamma \geq 2k$. Similarmente, $\abs{H_2} \geq 2k$. Por la minimalidad de $H$, ninguno de los $H_1,H_2$ puede satisfacer $(\star)$, con lo cual
 \[
 \Abs {H_i} \leq \gamma (\abs{H_i}-k), \quad i = 1,2.
 \]
@@ -1009,7 +994,7 @@ Sin embargo, tenemos que
 &\leq \gamma (\abs {H_1} + \abs{H_2} -2k) = \gamma (\abs{H}+ \abs{H_1 \cap H_2}-2k) \\
 &\leq \gamma (\abs H - k) \quad (\text{pues $\abs{H_1\cap H_2} \leq k$}),
 \end{align*}
-contradiciendo la condición.
+contradiciendo $(\star)$.
 \end{proof}
 
 

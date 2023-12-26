@@ -39,9 +39,9 @@
 \contentsline {subsection}{\numberline {3.1.1}Prerequisitos topológicos}{97}{subsection.3.1.1}%
 \contentsline {section}{\numberline {3.2}Clase 14: 18/05/23}{100}{section.3.2}%
 \contentsline {section}{\numberline {3.3}Clase 15: 25/05/23}{104}{section.3.3}%
-\contentsline {subsubsection}{\underline {Operaciones que conocemos}}{105}{section*.4}%
-\contentsline {subsubsection}{\underline {Otra perspectiva con respecto a los menores}}{106}{section*.5}%
-\contentsline {subsubsection}{\underline {Retomando grafos planos}}{106}{section*.6}%
+\contentsline {subsubsection}{\underline {Operaciones que conocemos}}{105}{section*.5}%
+\contentsline {subsubsection}{\underline {Otra perspectiva con respecto a los menores}}{106}{section*.6}%
+\contentsline {subsubsection}{\underline {Retomando grafos planos}}{106}{section*.7}%
 \contentsline {subsection}{\numberline {3.3.1}Dibujos}{108}{subsection.3.3.1}%
 \contentsline {section}{\numberline {3.4}Clase 16: 26/05/23}{113}{section.3.4}%
 \contentsline {subsection}{\numberline {3.4.1}Teorema de Kuratowski}{116}{subsection.3.4.1}%
