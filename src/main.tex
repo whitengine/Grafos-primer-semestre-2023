@@ -26,7 +26,7 @@
 
 %\usepackage[outdir=./]{epstopdf} %sin esto importar eps es imposible
 
-
+\usepackage{suffix} %esto es para crear comandos con sufijo * por ejemplo \mycomando*
 
 \usepackage{xparse}
 \usepackage{xstring}
@@ -438,14 +438,35 @@
 
 
 %el comando Inkscape tiene dos inputs \Inkscape{input 1}{input 2}, el primer input es [OPCIONAL] y representa el ancho del dibujo, y el segundo es el caption de la figura.
+
+
+
 \NewDocumentCommand{\Inkscape}{O{1} m m}{
-\stepcounter{numeroDibujo}
-\begin{center}\label{Figura:Capitulo \thenumeroCapitulo - Seccion \thenumeroSeccion Dibujo \thenumeroDibujo}
-\def\svgwidth{#1\textwidth}
-\input{#3}
-\captionof{figure}{#2}
-\end{center}
+  \stepcounter{numeroDibujo}
+  \begin{center}
+    \label{Figura:Capitulo \thenumeroCapitulo - Seccion \thenumeroSeccion Dibujo \thenumeroDibujo}
+    \def\svgwidth{#1\textwidth}
+    \input{#3}
+    \captionof{figure}{#2}  % Set the caption of the figure
+  \end{center}
 }
+
+\WithSuffix\NewDocumentCommand\Inkscape*{O{1} m m}{
+  \stepcounter{numeroDibujo}
+  \begin{center}
+    \label{Figura:Capitulo \thenumeroCapitulo - Seccion \thenumeroSeccion Dibujo \thenumeroDibujo}
+    \def\svgwidth{#1\textwidth}
+    \input{#3}
+    \captionsetup{labelformat=empty,labelsep=none}
+    \captionof{figure}{#2}  % Set the caption of the figure
+  \end{center}
+}
+
+\DeclareCaptionFormat{custom}
+{%
+    \textbf{#1#2}\textit{ #3}
+}
+\captionsetup{format=custom}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -649,12 +670,14 @@ $$
 \begin{proof}
 En efecto, la idea es la siguiente: construimos una secuencia de subgrafos inducidos $G = G_0 \supset G_1 \supset \ldots$, tales que si $G_i$ tiene un vértice de grado $d(v_i) \leq \frac{\abs{E(G_i)}}{\abs{V(G_i)}}$, entonces tomamos $G_{i+1} := G_i \setminus v_i$; si no, la secuencia termina en $H := G_i$.
 Por la elección de $v_i$, se sigue que $\frac{\abs{E(G_{i+1})}}{\abs{V(G_{i+1})}} \geq \frac{\abs{E(G_i)}}{\abs{V(G_i)}}$, pues esto sucede si y solo si
-\begin{align*}
-\frac{\abs{E(G_i)}-d(v_i)}{\abs{V(G_i)}-1} & \geq \frac{\abs{E(G_i)}}{\abs{V(G_i)}} \\
-\Leftrightarrow (\abs{E(G_i)}-d(v_i))\abs{V(G_i)} &\geq \abs{E(G_i)}(\abs{V(G_i)}-1) \\
-\Leftrightarrow -d(v_i) \abs{V(G_i)} &\geq -\abs{E(G_i)} \\
-\Leftrightarrow \frac{\abs{E(G_i)}}{\abs{V(G_i)}} &\geq d (v_i).
-\end{align*}
+\[
+\begin{array}{lrl}
+&\frac{\abs{E(G_i)}-d(v_i)}{\abs{V(G_i)}-1} & \geq \frac{\abs{E(G_i)}}{\abs{V(G_i)}} \\
+\Longleftrightarrow & \quad (\abs{E(G_i)}-d(v_i))\abs{V(G_i)} & \geq \abs{E(G_i)}(\abs{V(G_i)}-1) \\
+\Longleftrightarrow & \quad -d(v_i) \abs{V(G_i)} & \geq -\abs{E(G_i)} \\
+\Longleftrightarrow & \quad \frac{\abs{E(G_i)}}{\abs{V(G_i)}} & \geq d (v_i).
+\end{array}
+\]
 En particular, $\frac{\abs{E(H)}}{\abs{V(H)}} \geq \frac{\abs{E(G)}}{\abs{V(G)}}$.
 
 Afirmamos que $H$ tiene al menos una arista, de lo contrario $0 =\frac{\abs{E(H)}}{\abs{V(H)}} \geq \frac{\abs{E(G)}}{\abs{V(G)}}$, que no puede suceder porque $G$ tiene al menos una arista. Como $H$ es el último subgrafo de la secuencia construida, se tiene que $\delta (H) > \frac{\abs{E(H)}}{\abs{V(H)}}$.
@@ -663,7 +686,7 @@ Afirmamos que $H$ tiene al menos una arista, de lo contrario $0 =\frac{\abs{E(H)
 \subsection{Caminos y Ciclos}
 
 \begin{Definition}
-Un \textbf{camino} es un grafo no vacío $P = (V,E)$ de la forma
+Un \textbf{camino} (o en este caso \textbf{$k$-camino}, para denotar su tamaño) es un grafo no vacío $P = (V,E)$ de la forma
 $$
 V = \{ x_0,x_1,\ldots,x_k\}, \ k \geq 0.
 $$
@@ -671,63 +694,54 @@ Con
 $$
 E = \{ x_0x_1, x_1x_2,\ldots,x_{k-1} x_k\}.
 $$
-Donde todos los $x_i$ son distintos.
-
-Decimos que $\Abs G$, i.e. el número de aristas, es su \textbf{longitud}.
-
-Usualmente denotamos al camino $P$ como la secuencia de vértices
+Donde todos los $x_i$ son distintos. Decimos que $\Abs G$, i.e. el número de aristas, es su \textbf{longitud}. Usualmente denotamos al camino $P$ como la secuencia de vértices,
 $$
-P = x_0 x_1 \ldots x_k.
+P = x_0 x_1 \cdots x_k.
 $$
-En este caso diremos que $P$ es un \textbf{camino entre} $x_0$ y $x_k$.
+Diremos que $P$ es un \textbf{camino entre} $x_0$ y $x_k$. (Notar que $\abs G = k+1$, y que $\Abs G = k$).
 \end{Definition}
 
-Notar que $\abs G = k+1$, y que $\Abs G = k$.
-
-\Dibujo[0.9]{Dibujo de un camino de $k+1$ vértices.}
 
 
+\Inkscape{Dibujo de un $k$-camino.}{"Figuras/Introduccion-a-grafos/Dibujo 9.pdf_tex"}
 
-\begin{definition}
-Sea $C$ un grafo que se construye a partir de un camino $P = x_0x_1\cdots x_k$ con $k \geq 1$, en donde agregamos la arista $x_kx_0$. Este grafo se llama \textbf{ciclo}. Notamos a esta construcción $C:= P + x_k x_0$ o $x_0 x_1 \ldots x_k x_0$.
-
-La \textbf{longitud} de un ciclo es su número de aristas, es decir $\Abs C$.
-\end{definition}
-Notar que $\abs C = k$.
 
 
 \begin{definition}
-Sea $G$ un grafo. Definimos la \textbf{cintura} de $G$ como la mínima longitud $g(G)$ de un ciclo en $G$.
-
-Definimos la \textbf{circunferencia} como la máxima longitud de un ciclo en $G$.
+Sea $C$ un grafo que se construye a partir de un camino $P = x_0x_1\cdots x_k$ con $k \geq 1$, en donde agregamos la arista $x_kx_0$. Este grafo se llama \textbf{ciclo} (o \textbf{$k$-ciclo} cuando queramos especificar su tamaño). Notamos a esta construcción $C:= P + x_k x_0$ o $x_0 x_1 \ldots x_k x_0$. La \textbf{longitud} de $C$ es su número de aristas (o equivalentemente, su número de vértices), es decir $\Abs C$ (o $\abs C$).
 \end{definition}
 
-Si $G$ no tiene ciclos, definimos $g(G):= \infty$ y circunferencia $0$.
 
-\Dibujo[0.6]{Ejemplo de ciclos en un grafo de cinutra igual a $4$.}
+\begin{definition}
+Sea $G$ un grafo. Definimos la \textbf{cintura} de $G$ como la mínima longitud $g(G)$ de un ciclo en $G$. De manera opuesta, definimos la \textbf{circunferencia} como la máxima longitud de un ciclo en $G$. Si $G$ no tiene ciclos, definimos $g(G):= \infty$ y circunferencia $0$.
+\end{definition}
+
+
+
+\Inkscape{Ejemplo de ciclos en un grafo de cinutra igual a $4$, y circunferencia $7$.}{"Figuras/Introduccion-a-grafos/Dibujo 10.pdf_tex"}
 
 
 \begin{definition}
 Una arista que une a dos vértices de un ciclo $C$, pero que no pertenece a $E(C)$, se la llama \textbf{cuerda}.
 \end{definition}
 
-\Dibujo{Ejemplo de dos cuerdas de un ciclo $C$.}
+\Inkscape{Ejemplo de dos cuerdas de un ciclo.}{"Figuras/Introduccion-a-grafos/Dibujo 11.pdf_tex"}
 
 \begin{Proposition}\label{proposition:todo grafo tiene un camino de largo >= delta y ciclo de largo >= delta +1}
 Todo grafo $G$ contiene un camino de largo $\geq \delta (G)$. Más aún, si $\delta (G) \geq 2$, entonces también contiene un ciclo de largo $\geq \delta (G) + 1$.
 \end{Proposition}
 \begin{proof}
-Sea $P = x_0x_1\ldots x_k$ un camino de largo $k$ máximo en $G$. El caso $k = 1$ es inmediato, luego supongamos que $k \geq 1$.
+Sea $P = x_0x_1\ldots x_k$ un camino de largo máximo $k$ en $G$. El caso $k = 1$ es inmediato, luego supongamos que $k \geq 1$.
 
-\Dibujo[0.9]{Camino $P$ de longitud maximal $k$. Imaginemos que $x_0 = 0$ y que $x_k = 8$ (no pude cambiar las etiquetas en sage math cuando grafique el grafo).}
+\Inkscape{Ilustración de $P$ en $G$.}{"Figuras/Introduccion-a-grafos/Dibujo 12.pdf_tex"}
 
 Notar que por maximalidad de $P$, todos los vecinos de $x_k$ están en $V(P)$, de lo contrario habria un camino más largo. Con lo cual
 $$
 \abs{V(P)} = k \geq d(x_k) + 1 \geq \delta (G) + 1 .
 $$
-Con lo cual, $\Abs P \geq \delta (G)$.
+Es decir, $\Abs P \geq \delta (G)$.
 
-Ahora, sea $i <k$ el menor índice tal que $x_i x_k \in E(G)$. Como $\delta (G) \geq 2$, se sigue que $i < k-1$, i.e. $x_i$ y $x_k$ no son adyacentes, luego tomamos el ciclo $C = x_i x_{i+1} \ldots x_k x_i$. Notar que entonces la longitud de $\Abs C \geq \delta (x_k) + 1 \geq \delta (G) + 1$.
+Ahora, sea $i <k$ el menor índice tal que $x_i x_k \in E(G)$. Como $\delta (G) \geq 2$, se sigue que $i < k-1$, i.e. $x_i$ y $x_k$ no son adyacentes, luego tomamos el ciclo $C = x_i x_{i+1} \ldots x_k x_i$. Notar que entonces la longitud es $\Abs C \geq \delta (x_k) + 1 \geq \delta (G) + 1$.
 \end{proof}
 
 
