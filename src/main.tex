@@ -1289,26 +1289,24 @@ Resolver el problema de los siete puentes de Königsberg.
 \subsection{Conexidad}
 
 \begin{Definition}
-Decimos que un conjunto $X$ de vértices o aristas \textbf{separa} a $u,v \in V$ si $u,v \not \in X$ y todo camino entre $u$ y $v$ tiene un elemento de $X$.
+Sea $G$ un grafo con conjunto de vértices $V$. Decimos que un conjunto $X$ de vértices o aristas \textbf{separa} a $u,v \in V$ si $u,v \not \in X$ y todo camino entre $u$ y $v$ tiene un elemento de $X$.
 
 Si $X$ separa un par de vértices, decimos que es \textbf{separador} (de $u,v$). Si un vértice solo, i.e. $X$ es un singleton, es separador, decimos que es un \textbf{vértice de corte}. Un pequeño abuso de notación será simplemente referirnos a ese vértice en lugar del conjunto que lo contiene.
 
 Análogamente, una arista sola $X = \{e\}$ que separa sus vértices se dice \textbf{puente}. Un pequeño abuso de notación será simplemente referirnos a ese vértice en lugar del conjunto que lo contiene.
 \end{Definition}
 
-\Dibujo{Ejemplo: \yellow{$X = \{4,5,7,8,9 \}$} separa a \red{$u = 3,v = 6$}. También \purple{$Y = \{ e_1, e_2 \}$} e  \brown{$Y ' = \{ e_3, e_4\}$} son separadores de \red{$u,v$}. La arista \blue{$e = (6,10)$} es un puente.}
+\Inkscape{Ejemplo: \yellow{$X = \{x_1,x_2,x_3,x_4,x_5 \}$} separa a \red{$u,v$}. Además, \purple{$Y = \{ e_1, e_2 \}$} e \brown{$Y ' = \{ e_3, e_4\}$} son separadores de \red{$u,v$}. Y por último, la arista \blue{$e$} es un puente.}{"Figuras/Introduccion-a-grafos/Dibujo 33.pdf_tex"}
 
 \begin{definition}
 Para $k \geq 0$ decimos que $G = (V,E)$ es \textbf{$k$-conexo} si $\abs V > k$ y $G \setminus X$ es conexo para todo $X \subset V$ con $\abs X < k$. Es decir, ningún conjunto de menos de $k$-vértices separa.
 \end{definition}
 
 \begin{example}
-\begin{itemize}
-\item \textit{$0$-conexo:} Todo grafo no vacío.
-
-\item \textit{$1$-conexo:} grafos conexos no triviales (tiene que tener al menos una arista).
-
-\end{itemize}
+\begin{enumerate}[(a)]
+\item Todo grafo no vacío es $0$-conexo.
+\item Los grafos conexos con al menos una arista son $1$-conexos.
+\end{enumerate}
 \end{example}
 
 
@@ -1317,12 +1315,10 @@ La \textbf{conexidad}, $\Kappa (G)$ de $G$, es el máximo $k \geq 0$ tal que $G$
 \end{definition}
 
 \begin{example}\label{ex:clase6 - exemplo Kappa(K_n) = n-1}
-\begin{itemize}
-\item \textit{$\Kappa (G) = 0$:} Todo grafo disconexo no vacío o $K_1$.
-
-\item \textit{$\Kappa (K_n) = n-1 , \forall n \geq 1$.}
-
-\end{itemize}
+\begin{enumerate}[(a)]
+\item Los únicos grafos con $\Kappa (G) = 0$ son los grafos disconexos no triviales y $K_1$.
+\item $\Kappa (K_n) = n-1$ para todo $n \in \naturals$.
+\end{enumerate}
 \end{example}
 
 \begin{definition}
@@ -1330,17 +1326,17 @@ Sea $G$ no vacío y sea $\ell \geq 1$. Decimos que $G$ es \textbf{$\ell$-arista 
 \end{definition}
 
 \begin{example}
-\textit{$1$-arista conexo:} los grafos conexos no vacíos.
+Los grafos conexos no vacíos son $1$-arista conexos.
 \end{example}
 
 \begin{definition}
 La \textbf{arista conexidad}, $\lambda (G)$ de $G$, es el máximo $\ell$ tal que $G$ es $\ell$-arista conexo.
 \end{definition}
 
-\Dibujo[0.8]{Ejemplo de grafo que tiene $\Kappa = 4, \lambda = 4$.}
+\Inkscape[][triangulo azul de arriba]{Ejemplo de grafo con $\Kappa = 4$ y $\lambda = 4$.}{"Figuras/Introduccion-a-grafos/Dibujo 34.pdf_tex"}
 
 \begin{example}\label{ex:clase6 - exemplo lambda (K_n) = Kappa(K_n) = n-1}
-\textit{$\lambda (K_n) = n-1 , \forall n \geq 1$.}. Con lo cual, por el Ejemplo \ref{ex:clase6 - exemplo Kappa(K_n) = n-1} tenemos que
+Se tiene que $\lambda (K_n) = n-1 , \forall n \geq 1$. Con lo cual, por el Ejemplo \ref{ex:clase6 - exemplo Kappa(K_n) = n-1},
 $$
 \lambda (K_n) = \Kappa (K_n) .
 $$
@@ -1348,12 +1344,12 @@ $$
 
 \begin{exercise}
 Calcular $\Kappa$ y $\lambda$ del siguiente grafo $G$:
-\Dibujo[0.5]{Grafo $G$.}
+\Inkscape*{}{"Figuras/Introduccion-a-grafos/Dibujo 35.pdf_tex"}
 \end{exercise}
 \begin{solution}
-Si quitamos los  \blue{vértices $4,5$} entonces nos queda $G$ disconexo, luego $\Kappa (G) <3$. Si quito cualquier vértice, entonces el grafo sigue siendo conexo, luego es $2$-conexo, i.e. $\Kappa (G) \geq 2$. Luego $\Kappa (G) = 2$.
+Llamemos $u,v$ a los dos únicos vértices de grado $7$. Si quitamos $u,v$, entonces nos queda $G$ disconexo, luego $\Kappa (G) <3$. Si quito cualquier vértice, entonces el grafo sigue siendo conexo, luego es $2$-conexo, i.e. $\Kappa (G) \geq 2$. Luego $\Kappa (G) = 2$.
 
-En el anterior ejemplo teníamos $\lambda = 4$ en cada \blue{triángulo azul}, y como sacar $3$ aristas incidentes a \blue{$4,5$} no evita que $G$ siga siendo conexo, tenemos que $G$ es $4$-arista conexo, i.e. $\lambda (G) \geq 4$. Por otro lado, si quitamos las $4$ aristas incidentes en el \red{vértice $1$}, queda el aislado del resto del grafo, i.e. $\lambda (G) < 5$. Luego $\lambda (G) = 4$.
+En el anterior ejemplo \ref{Figura:triangulo azul de arriba} teníamos $\lambda = 4$ en cada \blue{triángulo azul}, y como sacar $3$ aristas incidentes a $u,v$ no evita que $G$ siga siendo conexo, tenemos que $G$ es $4$-arista conexo, i.e. $\lambda (G) \geq 4$. Por otro lado, si quitamos las $4$ aristas incidentes alguno de los vértices del \red{triángulo rojo}, queda aislado del resto del grafo, i.e. $\lambda (G) < 5$. Luego $\lambda (G) = 4$.
 \end{solution}
 
 
@@ -1368,19 +1364,18 @@ Si $G$ es no trivial, entonces $\Kappa (G) \leq \lambda (G) \leq \delta (G)$
 La segunda desigualdad se tiene porque todas las aristas incidentes en un vértice fijo separan a $G$.
 
 Veamos ahora la primera desigualdad. Sea $F$ un conjunto de aristas que separa a $G$, con $\abs F = \lambda (G)$, tal que $G \setminus F$ es disconexo. \textit{Observación:} $F$ es un conjunto de aristas minimal con la propiedad de ser separador.
-\begin{enumerate}
-\item[\textsc{Caso 1:}] Existe $v \in V(G)$ que no incide en $F$. Sea $C$ la componente conexa que contiene a $v$ en $G \setminus F$. No puede haber una arista $f$ de $F$ con extremos en $C$, pues de lo contrario $F \setminus \{f\}$ sería un conjunto más chico tal que es separador, lo cual contradice la minimalidad de $F$.
+
+\textbf{Caso 1:} Existe $v \in V(G)$ que no incide en $F$. Sea $C$ la componente conexa que contiene a $v$ en $G \setminus F$. No puede haber una arista $f$ de $F$ con extremos en $C$, pues de lo contrario $F \setminus \{f\}$ sería un conjunto más chico tal que es separador, lo cual contradice la minimalidad de $F$.
 
 \Dibujo[0.6]{Ilustración de \blue{$C$}, donde las \purple{aristas violeta} corresponden a aristas de \purple{$F$}.}
 
 Luego, si quitamos los vértices de las aristas de $F$ incidentes en $C$, las cuales solo comparten un vértice de $C$, nos queda que $v$ estaría separado del resto del grafo. Esta cantidad de vértices es a lo sumo $\abs F = \lambda (G)$. Con lo cual $\Kappa (G) \leq \abs F = \lambda (G)$.
 
-\item[\textsc{Caso 2:}] Todo $v \in V(G)$ incide en $F$. Fijemos $v \in V(G)$ y $C$ la componente conexa de $G \setminus F$ que lo contiene. Consideremos $N_{G} (v)$, los vecinos de $v$. Cada $w \in N_{G} (v) $ incide en una arista de $F$.
+\textbf{Caso 2:} Todo $v \in V(G)$ incide en $F$. Fijemos $v \in V(G)$ y $C$ la componente conexa de $G \setminus F$ que lo contiene. Consideremos $N_{G} (v)$, los vecinos de $v$. Cada $w \in N_{G} (v) $ incide en una arista de $F$.
 
 \Dibujo{Ilustración de lo que sucede: los \darkgreen{vecinos} de \green{$v$} inciden en una \purple{arista de $F$}.}
 
 Entonces $d_G (v) \leq \abs F = \lambda (G)$. Por lo tanto, salvo que $V(G) = \{ v \} \cup N_G ( v)$, tenemos que $N_G (v)$ separa a $v$ del resto del grafo, y salvo ese caso tendríamos que $\Kappa (G) \leq \abs{N_G (v)} \leq \lambda (G)$. Pero $v$ era arbitrario, entonces en el peor de todos los casos, tenemos que $V(G) =  \{ v \} \cup N_G ( v)$ para todo $v \in G$, i.e. $G$ es un grafo completo. Pero en este caso vale la igualdad por el Ejemplo \ref{ex:clase6 - exemplo lambda (K_n) = Kappa(K_n) = n-1}.
-\end{enumerate}
 \end{proof}
 
 \subsection{Grafos $2$-conexos}
