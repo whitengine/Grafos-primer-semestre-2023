@@ -1125,40 +1125,39 @@ Sea $v_1,\ldots,v_n$ con $n = \abs T$, una numeración de los vértices de $T$ t
 
 \bigskip
 
-De véz en cuando, es útil fijar un vértice $r$ de un árbol $T$, que llamaremos \textbf{raíz}. Un árbol con una raíz fija, se denomina \textbf{árbol enraigado} (o en inglés, \textbf{rooted tree}).
-Recordemos que para todo $y \in V(T)$, existe un único camino entre $r$ e $y$ que denotaremos $rTy$; esto induce un orden parcial $x \leq y$ si y solo si $x \in r T y$. Este orden en $V(T)$ se lo llama el \textbf{orden del árbol} asosciado a $T$ y $r$. Definimos los conjuntos:
+De véz en cuando es útil fijar un vértice $r$ de un árbol $T$, que llamaremos \textbf{raíz}. Un árbol con una raíz fija, se denomina \textbf{árbol enraigado} (o en inglés, \textbf{rooted tree}).
+Recordemos que para todo $y \in V(T)$, existe un único camino entre $r$ e $y$ que denotaremos $rTy$; esto induce un orden parcial en $V(T)$: $x \leq y$ si y solo si $x \in r T y$. Este orden se llama el \textbf{orden del árbol} asosciado a $T$ y $r$. Definimos los conjuntos:
 \[
-    \ceil y := \Set{x | x \leq y} \quad \text{y} \quad \floor x := \Set{ y | y \geq x}
+    \ceil y := \Set{x | x \leq y} \quad \text{y} \quad \floor x := \Set{ y | y \geq x},
 \]
-la \textbf{clausura inferior} de $y$, y la \textbf{clausura superior} de $x$, respectivamente. En general, definimos $\ceil X := \bigcup_{x \in X} \ceil x $ y análogamente $\floor X$, para un conjunto $X \subset V(T)$. Un conjunto $X$ que coincide con $\ceil X$, se dice \textbf{cerrado inferiormente}, análogamente en el otro caso tenemos que es \textbf{cerrado superiormente}.
+la \textbf{clausura inferior} de $y$, y la \textbf{clausura superior} de $x$, respectivamente. En general, definimos $\ceil X := \bigcup_{x \in X} \ceil x $ y análogamente $\floor X$, para un conjunto $X \subset V(T)$. Un conjunto $X$ que coincide con $\ceil X$, se dice \textbf{cerrado inferiormente}, similarmente en el otro caso, se dice \textbf{cerrado superiormente}.
 
-Notar que $r$ es el \textit{mínimo} en este orden, y todas las hojas de $T$ son \textit{maximales}. Los extremos de una arista son siempre comparables entre sí, y los elementos de una clausura inferior forman una \textit{cadena} (i.e. son comparables entre sí), sin embargo los elementos de una clausura superior no tienen por qué formar una cadena.
-Decimos que los vértice a distancia $k$ de $r$
-tienen \textbf{altura} $k$ y el conjunto de estos vértices forma el $k$-ésimo \textbf{nivel} de $T$.
+Notar que $r$ es el \textit{mínimo} en este orden, y todas las hojas de $T$ son elementos \textit{maximales}. Los extremos de una arista son siempre comparables entre sí, y los elementos de $\ceil{y}$ forman una \textit{cadena} (i.e. son comparables entre sí), sin embargo los elementos de $\floor x$ no tienen por qué formar una cadena.
+Decimos que los vértice a distancia $k$ de $r$ tienen \textbf{altura} $k$ y el conjunto de estos vértices forma el $k$-ésimo \textbf{nivel} de $T$.
 
-Un árbol enraigado $T$ contenido en un grafo $G$ se dice \textbf{normal} en $G$, si los extremos de todo $T$-camino en $G$ son comparables en el orden de $T$. Si $T$ genera $G$, esto equivale a pedir que dos vértices de $T$ sean comparables siempre que sean adyacentes en $G$; ver la siguiente figura:
+Un árbol enraigado $T$ contenido en un grafo $G$ se dice \textbf{normal} en $G$, si los extremos de todo camino en $G$ sin vértices interiores en $T$ son comparables en el orden de $T$. Si $T$ genera $G$, esto equivale a pedir que dos vértices de $T$ sean comparables siempre que sean adyacentes en $G$; ver la siguiente figura:
 
-\Dibujo{Un \brown{árbol} generador normal con raíz \darkgreen{r} de un grafo $G$.}
+\Inkscape{Un \brown{árbol} generador normal con raíz \red{r} de un grafo $G$.}{"Figuras/Introduccion-a-grafos/Dibujo 25.pdf_tex"}
 
 Un árbol normal puede ser una herramienta realmente útil para examinar la estructura de su grafo subyacente, ya que este grafo refleja las propiedades de separación de $T$:
 
 \begin{lemma}
 Sea $T$ un árbol normal en $G$. Tenemos que:
 \begin{enumerate}[(i)]
-\item Dados $x,y \in V(T)$, están separados en $G$ por el conjunto $\ceil x \cap \ceil y$.
-\item Supongamos que $T$ genera $G$. Si $S \subset V(T) = V(G)$ y $S$ es inferiormente cerrado, luego las componentes conexas de $G \setminus S$ están generadas por los conjuntos $\floor x$ con $x$ minimal en $T \setminus S$.
+\item Dados $x,y \in V(T)$, todo camino entre $x$ e $y$ en $G$ interseca el conjunto $\ceil x \cap \ceil y$.
+\item Supongamos que $T$ genera $G$. Si $S \subset V(T) = V(G)$ y $S$ es inferiormente cerrado, luego las componentes conexas del grafo $G \setminus S$ están generadas por los conjuntos $\floor x$ con $x$ minimal en el conjunto $V(T) \setminus S$.
 \end{enumerate}
 \end{lemma}
 \begin{proof}
 \begin{enumerate}[(i)]
-\item Sea $P$ cualquier camino entre $x,y$ en $G$; veamos que $P$ interseca $\ceil x \cap \ceil y$. Sea $t_1,\ldots,t_n$ una sucesión de vértices en $P \cap T$, minimal con la propiedad que $t_1 = x$ y $t_n = y$ y $t_i,t_{i+1}$ son comparables en el orden del árbol $T$ para todo $i$. Dicha sucesión existe, pues el conjunto de todos los vértices en $P \cap T$, con el orden natural inducido por $P$, tiene esta propiedad, ya que como $T$ es normal todo segmento $t_i P t_{i+1}$ es una arista de $T$ o un $T$-camino. En nuestra secuencia minimal no podemos tener $t_{i-1}< t_i > t_{i+1}$ para ningún $i$, pues $t_{i-1},t_{i+1}$ son comparables y podríamos eliminar a $t_i$ de nuestra secuencia, obteniendo así una secuencia más chica. Entonces nuestra secuencia tiene la forma
+\item Sea $P$ cualquier camino entre $x,y$ en $G$; veamos que $P$ interseca $\ceil x \cap \ceil y$. Sea $t_1,\ldots,t_n$ una secuencia de vértices en $P \cap T$, minimal con la propiedad que $t_1 = x$ y $t_n = y$ y $t_i,t_{i+1}$ son comparables en el orden del árbol $T$ para todo $i$. Dicha sucesión existe, pues el conjunto de todos los vértices en $P \cap T$, con el orden natural inducido por $P$, tiene esta propiedad: todo segmento $t_i P t_{i+1}$ es una arista de $T$ o un camino con interior disjunto de $T$, luego $t_i$ y $t_{i+1}$ son comparables porque $T$ es un árbol normal de $G$. En nuestra secuencia minimal no podemos tener $t_{i-1}< t_i > t_{i+1}$ para ningún $i$, sino $t_{i-1},t_{i+1}$ serían comparables y eliminando $t_i$ de nuestra secuencia obtendríamos una secuencia más pequeña. Entonces nuestra secuencia tiene la forma
 \[
-    x = t_1 > \ldots > t_k < \ldots < t_n = y
+    x = t_1 > \ldots > t_k < \ldots < t_n = y.
 \]
-(se podrían retirar los elementos en el ''medio''). Así, $t_k \in \ceil x \cap \ceil y \cap V(P)$.
+Así, $t_k \in \ceil x \cap \ceil y \cap V(P)$.
 \item Consideremos una componente $C$ de $G \setminus S$, y tomemos $x$ un elemento minimal ($T$ genera $G$) de $V(G)$. Afirmamos que $x$ es único, en efecto, si $x'$ fuera otro, ambos serian no comparables entre sí, pero por el ítem (i), cualquier camino entre $x,x'$ contiene un vértice más chico que ambos, contradiciendo minimalidad en $C$. Por lo tanto todo vértice de $C$ yace arriba de $x$: nuevamente por el ítem (i) hay un vértice debajo de ambos que por minimalidad es $x$. Recíproccamente, todo vértice $y \in \floor x$ está en $C$, pues como $S$ es cerrado inferiormente, el camino creciente $x T y$ yace en $T\setminus S$. Consecuentemente, $V(C)= \floor x$.
 
-Ahora veamos que $x$ es minimal no solo en $V(C)$, sino también en $T \setminus S$. Los vérticces por debajo de $x$ forman una cadena $\ceil t$ en $T$. Como $t$ es vecino de $x$ en $T$, la maximalidad de $C$ como componente conexa de $G \setminus S$ implica que $t \in S$, y por lo tanto $\ceil t \subset S$ porque $S$ es cerrado inferiormente. Esto completa la demostración de que toda componente de $G\setminus S$ está generada por un conjunto $\floor x$ con $x$ minimal en $T \setminus S$.
+Ahora veamos que $x$ es minimal no solo en $V(C)$, sino también en $T \setminus S$. Los vértices por debajo de $x$ forman una cadena $\ceil t$ en $T$. Como $t$ es vecino de $x$ en $T$, la maximalidad de $C$ como componente conexa de $G \setminus S$ implica que $t \in S$, y por lo tanto $\ceil t \subset S$ porque $S$ es cerrado inferiormente. Esto completa la demostración de que toda componente de $G\setminus S$ está generada por un conjunto $\floor x$ con $x$ minimal en $T \setminus S$.
 
 Recíprocamente, si $x$ es un elemento minimal en $T \setminus S$, claramente también es minimal en la componente $C$ de $G \setminus S$ que lo contiene. Eso significa que $V(C) = \floor x$.
 \end{enumerate}
@@ -1175,7 +1174,7 @@ Sea $G$ un grafo conexo y $r \in G$ un vértice fijo. Sea $T$ un árbol normal m
 
 Supongamos por el absurdo que no, y sea $C$ una componente conexa de $G \setminus T$. Como $T$ es normal, la vecindad $N_G (C)$ (que está contenida en $T$) es una cadena en $T$, obviamente porque $C$ permite construir $T$-caminos entre cualquier par de vértices de $N_G(C)$. Sea $x$ su máximo elemento (recordemos que estamos en una cadena), y sea $y \in C$ adyacente a $x$. Sea $T'$ el árbol obtenido de $T$ agregando la arista $yx$; el orden de árbol de $T'$ extiende al de $T$. Veamos que $T'$ también es normal en $G$, contradiciendo maximalida.
 
-Sea $P$ un $T'$-camino en $G$. Si sus extremos están en $T$, luego son comparables con el orden de $T$, y por lo tanto por el de $T'$ también, ya que $P$ es un $T$-camino también porque $T \subset T'$ y $T$ es normal. Si alguno de los extremos de $P$ fuera $y$, tenemos que $P \subset C$ salvo por su otro extremo $z$, que yace en $N_G(C)$. Como $x$ era máximo, tenemos que $z \leq x$. Luego $z,y$ serán comparables si vemos que $x < y$, es decir que $x \in r T' y$. Lo cual es claro ya que $y$ es una hoja de $T'$ con vecinon $x$.
+Sea $P$ un $T'$-camino en $G$. Si sus extremos están en $T$, luego son comparables con el orden de $T$, y por lo tanto por el de $T'$ también, ya que $P$ es un $T$-camino también porque $T \subset T'$ y $T$ es normal. Si alguno de los extremos de $P$ fuera $y$, tenemos que $P \subset C$ salvo por su otro extremo $z$, que yace en $N_G(C)$. Como $x$ era máximo, tenemos que $z \leq x$. Luego $z,y$ serán comparables si vemos que $x < y$, es decir que $x \in r T' y$. Lo cual es claro ya que $y$ es una hoja de $T'$ con vecino $x$.
 \end{proof}
 
 
