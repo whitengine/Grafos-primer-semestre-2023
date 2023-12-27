@@ -1023,7 +1023,7 @@ Todo árbol tiene al menos $1$ hoja. Más aún, si el árbol tiene más de un v�
 Sea $P$ un camino maximal en el árbol y elijamos uno de los extremos (podría haber solo uno si el camino tiene un solo vértice). Si el extremo tuviera grado $\geq 2$, entonces tiene al menos un vecino, el cual debe estar en $P$ por maximalidad, luego existe un ciclo, contradiciendo la definición de árbol, i.e., el extremo es una hoja. Más aún, si el árbol tiene más de un vértice, entonces el camino maximal que tomamos tiene dos extremos distintos, i.e. el árbol tiene dos hojas.
 \end{solution}
 
-\begin{Theorem}[Caracterización de los árboles]
+\begin{Theorem}[Caracterización de los árboles]\label{theorem:caracterizacion de arbol}
 Sea $T$ un grafo. Las siguientes definiciones son equivalentes:
 \begin{enumerate}[(i)]
 \item $T$ es árbol.
@@ -1183,9 +1183,7 @@ Sea $P$ un $T'$-camino en $G$. Si sus extremos están en $T$, luego son comparab
 \subsection{Grafos bipartitos}
 
 \begin{Definition}
-Sea $r \geq 2$ entero. Decimos que un grafo $G = (V,E)$ es \textbf{$r$-partito} si podemos particionar a $V$ en $r$ partes tal que cada arista tiene sus extremos en partes distintas. Es decir, cada parte es un conjunto independiente.
-
-$2$-partito es \textbf{bipartito}, $3$-partito es \textbf{tripartito}, etc.
+Sea $r \geq 2$ entero. Decimos que un grafo $G = (V,E)$ es \textbf{$r$-partito} si podemos particionar a $V$ en $r$ partes tal que cada arista tiene sus extremos en partes distintas. Es decir, cada parte es un conjunto independiente. A un grafo $2$-partito lo llamamos \textbf{bipartito}, a uno $3$-partito: \textbf{tripartito}, etc.
 \end{Definition}
 
 \Dibujo[0.20]{Ejemplo de grafo $3$-partito, $4$-partito y $5$-partito, pero no $2$-partito porque siempre existirian dos vértices del triangulo \yellow{amarillo} en la misma partición, pero eso es imposible porque son adyacentes. Se ilustran dos triparticiones distintas: $A,B,C$ y por otro lado \red{rojo}, \blue{azul}, \green{verde}.}
@@ -1193,18 +1191,16 @@ $2$-partito es \textbf{bipartito}, $3$-partito es \textbf{tripartito}, etc.
 \Dibujo[0.6]{Ejemplo de grafo $2$-partito.}
 
 \begin{definition}
-Un grafo $r$-partito $G$, donde cada par de vértices de partes distintas son adyacentes, decimos que $G$ es \textbf{$r$-partito completo}.
-
-Un grafo $r$-partito completo con partes de tamaño $n_1,n_2,\ldots, n_r$ se denota $K_{n_1,n_2,\ldots, n_r}$.
-
-\Dibujo[0.6]{Ejemplo de grafo $3$-partito completo.}
+Un grafo $r$-partito $G$, donde cada par de vértices de partes distintas son adyacentes, se dice \textbf{$r$-partito completo}. Un grafo $r$-partito completo con partes de tamaño $n_1,n_2,\ldots, n_r$ se denota $K_{n_1,n_2,\ldots, n_r}$.
 \end{definition}
 
-\begin{obs}
-Un grafo $K_{1,n}$ es una \textit{estrella}.
+\Dibujo[0.6]{Ejemplo de grafo $3$-partito completo.}
+
+\begin{definition}
+Los grafos isomorfos a $K_{1,n}$ se llaman \textbf{estrellas}.
+\end{definition}
 
 \Dibujo[0.60]{$K_{1,5}$}
-\end{obs}
 
 \begin{obs}
 Si $G$ es bipartito, entonces no tiene ciclos impares.
@@ -1220,22 +1216,21 @@ Sea $C=C_{2k+1}$ con $k \geq 1$ un subciclo de longitud $2k+1$ de $G$. Si $G$ fu
 Un grafo es bipartito si y solo si no tiene ciclos impares.
 \end{Theorem}
 \begin{proof}
-La observación anterior prueba la necesidad. Veamos la suficiencia. Sea $G$ un grafo sin ciclos impares. Podemos asumir sin pérdida de generalidad que es conexo. Sea $T$ un árbol generador, $r$ un vértice de $G$ que llamaremos raíz (de $T$). Para $v \in V(G)$ denotamos por $rTv$ al único camino entre $r$ y $v$ en $T$ (por la caracterización de árboles). Por último, si $w,v \in V(G)$, entonces decimos que $w \leq v$, si $w \in rTv$.
+La observación anterior prueba la necesidad. Veamos la suficiencia. Sea $G$ un grafo sin ciclos impares. Podemos asumir sin pérdida de generalidad que es conexo. Sea $T$ un árbol generador de $G$ (ver la Proposición \ref{proposition:todo grafo conexo tiene un arbol generador}), y $r$ un vértice de $T$ que será la raíz; así obtenemos el orden parcial inducido por $r$. Para $v \in V(G) = V(T)$ denotamos por $rTv$ al único camino entre $r$ y $v$ en $T$. Recordemos que si $w,v \in V(G) = V(T)$, entonces $w \leq v$ si $w \in rTv$.
 
-Definimos la partición de $G$: los vértices $v$ tales que $rTv$ tiene largo par, y por otro lado los vértices $v$ tales que $rTv$ tiene largo impar. Veamos que en efecto esto es una partición, i.e., no hay vértices adyacentes en la misma partición. Sea $e = xy$ una arista de $G$.
-\begin{enumerate}
+Definimos la partición de $G$: los vértices $v$ tales que $rTv$ tiene longitud par, y por otro lado los vértices $v$ tales que $rTv$ tiene largo impar. Veamos que en efecto esto es una partición, i.e., no hay vértices adyacentes en la misma partición. Sea $e = xy$ una arista de $G$.\vspace{-0.75cm}
+\begin{enumerate}[leftmargin=1.80cm]
 \item[]
-
 \item[\textsc{Caso 1:}] Si $e \in E(T)$, tendremos $x < y$ o $y < x$, pero nunca igualdad. Más aún, $\Abs{rTx} = \Abs{rTy} \pm 1$, i.e. tienen paridades distintas.
 
-\item[\textsc{Caso 2:}]  Si $e \not \in E(T)$, entonces $rTx, rTy$ y $e$ forman un ciclo (por la caracterización de árbol). Por la hipótesis, el ciclo es par. Esto implica que $\Abs{rTx}$ y $\Abs{rTy}$ tienen distinta paridad:
+\item[\textsc{Caso 2:}]  Si $e \not \in E(T)$, entonces $rTx, rTy$ y $e$ forman un ciclo (por la caracterización de árbol \ref{theorem:caracterizacion de arbol}). Por hipótesis, el ciclo es par. Consecuentemente, $\Abs{rTx}$ y $\Abs{rTy}$ tienen distinta paridad (ver la siguiente figura).
+\end{enumerate}
 
 \Dibujo[0.7]{Ilustración de este hecho.}
-\end{enumerate}
 \end{proof}
 
 \begin{corollary}
-Los árboles y los bosques son bipartitos.
+Los árboles y los bosques son bipartitos, pues no contienen ciclos, en particular no contienen ciclos impares.
 \end{corollary}
 
 
