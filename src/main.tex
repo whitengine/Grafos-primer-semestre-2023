@@ -449,24 +449,28 @@
 
 
 
-\NewDocumentCommand{\Inkscape}{O{1} m m}{
+\NewDocumentCommand{\Inkscape}{O{1} O{*} m m}{
   \stepcounter{numeroDibujo}
   \begin{center}
-    \label{Figura:Capitulo \thenumeroCapitulo - Seccion \thenumeroSeccion Dibujo \thenumeroDibujo}
+    \ifthenelse{\equal{#2}{*}}%
+      {\label{Figura:Capitulo \thenumeroCapitulo - Seccion \thenumeroSeccion Dibujo \thenumeroDibujo}}%
+      {\label{Figura:#2}}%
     \def\svgwidth{#1\textwidth}
-    \input{#3}
-    \captionof{figure}{#2}  % Set the caption of the figure
+    \input{#4}
+    \captionof{figure}{#3}  % Set the caption of the figure
   \end{center}
 }
 
-\WithSuffix\NewDocumentCommand\Inkscape*{O{1} m m}{
+\WithSuffix\NewDocumentCommand\Inkscape*{O{1} O{*} m m}{
   \stepcounter{numeroDibujo}
   \begin{center}
-    \label{Figura:Capitulo \thenumeroCapitulo - Seccion \thenumeroSeccion Dibujo \thenumeroDibujo}
+    \ifthenelse{\equal{#2}{*}}%
+      {\label{Figura:Capitulo \thenumeroCapitulo - Seccion \thenumeroSeccion Dibujo \thenumeroDibujo}}%
+      {\label{Figura:#2}}%
     \def\svgwidth{#1\textwidth}
-    \input{#3}
+    \input{#4}
     \captionsetup{labelformat=empty,labelsep=none}
-    \captionof{figure}{#2}  % Set the caption of the figure
+    \captionof{figure}{#3}  % Set the caption of the figure
   \end{center}
 }
 
@@ -845,10 +849,7 @@ Entonces por la fórmula geométrica,
 
 \begin{obs}
 \begin{enumerate}[(1)]
-\item Cuando el radio es $k=1$, por ejemplo en un grafo estrella, la cantidad de vértices es asintóticamente igual a $\frac{d}{d-2} (d-1)^k$ cuando $d \rightarrow \infty$.
-
-\Inkscape{Ilustración del grafo estrella.}{"Figuras/Introduccion-a-grafos/Dibujo 17.pdf_tex"}
-
+\item Cuando el radio es $k=1$, por ejemplo en un \textit{grafo estrella} (ver la Figura \ref{Figura:ilustracion de grafo K17}), la cantidad de vértices es asintóticamente igual a $\frac{d}{d-2} (d-1)^k$ cuando $d \rightarrow \infty$.
 
 \item La cota no es para nada óptima para grafos de potencia $P^k$ de caminos. Por ejemplo, si $P$ tiene $2n+1$ vértices, $k = n$ y $d = k \geq 3$. Luego en el mejor de los casos con $d = 3$, tenemos que
 $$
@@ -880,24 +881,21 @@ Notar que la función es creciente en ambas variables para todo $d \geq 2$ y $g 
 probar la afirmación para $d = \delta(G)$ y $g = g(G)$.
 
 Sea $v$ un vértice de un ciclo $C$ de largo mínimo, i.e. $\geq g$. Consideremos como $D_i$ al conjunto de vértices a distancia $i$ de $v$ en $G$. Como antes, $\abs {D_0} = 1$; cada vértice de $D_{i+1}$ tiene un vecino en $D_{i}$ si $i>0$. Como cada vértice de $D_i$ tiene un vecino en $D_{i-1}$, se sigue que $\abs{D_{i+1}}  \geq (d-1) \abs{D_i}$ si $i < r$, ya que de lo contrario existiría un ciclo de longitud más chica que $g$.
-Reiterando recursivamente, se sigue que $\abs{D_{i+1}} \geq (d-1)^i \abs{D_1}$ para todo $i < r$.
-
-Luego como
+Reiterando recursivamente, se sigue que $\abs{D_{i+1}} \geq (d-1)^i \abs{D_1}$ para todo $i < r$. Como
 $$
 G \supset \bigsqcup_{0\leq i\leq r} D_i,
 $$
-se sigue que
-\begin{enumerate}
-\item[Caso $g = 2 r +1$]
+podemos calcular en cada caso:
+
+\textbf{Caso $g = 2 r +1$:}
 $$
 \abs G \geq  1 + \sum_{i=0}^{r-1} \abs{D_{i+1}} \geq 1 + \sum_{i=0}^{r-1} (d-1)^i \abs{D_1} \geq 1 + \sum_{i=0}^{r-1} (d-1)^i d.$$
 
-\item[Caso $g = 2 r$] De manera análoga podemos garantizar que cada $D_i$ con $i \leq r-1$ tiene al menos $d (d-1)^i$ vértices (pero $D_r$ podría tener un solo vértice!), y por lo tanto
+\textbf{Caso $g = 2 r$:} De manera análoga podemos garantizar que cada $D_i$ con $i \leq r-1$ tiene al menos $d (d-1)^i$ vértices (pero $D_r$ podría tener un solo vértice!), y por lo tanto
 \[
 \abs{G} \geq 2 + d\sum_{i = 0}^{r-2} (d-1)^i.
 \]
 Como el lado derecho es mayor o igual a $2 \sum_{i = 0}^{r-1} (d-1)^i$, se tiene que $\abs G \geq n_0 (d, g)$ cuando $g = 2r$.
-\end{enumerate}
 
 La última afirmación vale, pues sea $d = d(G)/2$, luego por la Proposición \ref{prop:ultima proposicion de la clase anterior a caminos y ciclos}, existe un subgrafo $H$ de $G$ tal que $\delta (G) > d$, y por lo tanto aplicando la desigualdad que hemos probado a $H$, se tiene que $\abs G \geq \abs H \geq n_0 (\delta(H),g(H))$, pero como $\delta (H) > d$ y $g(H) \geq g(G) = g$, y $n_0$ es creciente en ambas variables, se deduce que $\abs G \geq n_0 (d,g)$.
 
@@ -1188,19 +1186,19 @@ Sea $r \geq 2$ entero. Decimos que un grafo $G = (V,E)$ es \textbf{$r$-partito} 
 
 \Inkscape{Ejemplo de grafo $3$-partito, $4$-partito y $5$-partito, pero no $2$-partito porque siempre existirian dos vértices del triangulo \yellow{amarillo} en la misma partición, pero eso es imposible porque son adyacentes. Se ilustran dos triparticiones distintas: $A,B,C$ y por otro lado \red{rojo}, \blue{azul}, \green{verde}.}{"Figuras/Introduccion-a-grafos/Dibujo 26.pdf_tex"}
 
-\Dibujo[0.6]{Ejemplo de grafo $2$-partito.}
+\Inkscape{Ejemplo de grafo $2$-partito.}{"Figuras/Introduccion-a-grafos/Dibujo 27.pdf_tex"}
 
 \begin{definition}
 Un grafo $r$-partito $G$, donde cada par de vértices de partes distintas son adyacentes, se dice \textbf{$r$-partito completo}. Un grafo $r$-partito completo con partes de tamaño $n_1,n_2,\ldots, n_r$ se denota $K_{n_1,n_2,\ldots, n_r}$.
 \end{definition}
 
-\Dibujo[0.6]{Ejemplo de grafo $3$-partito completo.}
+\Inkscape{Ejemplo de grafo $3$-partito completo: $K_{1,2,3} = K_{2,3,1}$.}{"Figuras/Introduccion-a-grafos/Dibujo 28.pdf_tex"}
 
 \begin{definition}
 Los grafos isomorfos a $K_{1,n}$ se llaman \textbf{estrellas}.
 \end{definition}
 
-\Dibujo[0.60]{$K_{1,5}$}
+\Inkscape[][ilustracion de grafo K17]{Ilustración del grafo estrella $K_{1,6}$.}{"Figuras/Introduccion-a-grafos/Dibujo 17.pdf_tex"}
 
 \begin{obs}
 Si $G$ es bipartito, entonces no tiene ciclos impares.
@@ -1210,7 +1208,7 @@ Sea $C=C_{2k+1}$ con $k \geq 1$ un subciclo de longitud $2k+1$ de $G$. Si $G$ fu
 \end{proof}
 
 
-\Dibujo{Como se ilustra en el dibujo, no podemos $2$-particionar a $C_7,C_5$ ni $C_3$. Pues siempre que pintamos con dos colores quedan dos vértices adyacentes.}
+\Inkscape{Como se ilustra en el dibujo, no podemos $2$-particionar a $C_7,C_5$ ni $C_3$. Pues siempre que pintamos con dos colores quedan dos vértices adyacentes del mismo color.}{"Figuras/Introduccion-a-grafos/Dibujo 29.pdf_tex"}
 
 \begin{Theorem}
 Un grafo es bipartito si y solo si no tiene ciclos impares.
@@ -1226,7 +1224,7 @@ Definimos la partición de $G$: los vértices $v$ tales que $rTv$ tiene longitud
 \item[\textsc{Caso 2:}]  Si $e \not \in E(T)$, entonces $rTx, rTy$ y $e$ forman un ciclo (por la caracterización de árbol \ref{theorem:caracterizacion de arbol}). Por hipótesis, el ciclo es par. Consecuentemente, $\Abs{rTx}$ y $\Abs{rTy}$ tienen distinta paridad (ver la siguiente figura).
 \end{enumerate}
 
-\Dibujo[0.7]{Ilustración de este hecho.}
+\Inkscape*{}{"Figuras/Introduccion-a-grafos/Dibujo 30.pdf_tex"}
 \end{proof}
 
 \begin{corollary}

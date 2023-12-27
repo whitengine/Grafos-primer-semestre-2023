@@ -5,12 +5,25 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d64069ff-abb3-47fa-9feb-8331f5baf8d7" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/Figuras/Introduccion-a-grafos/Dibujo 27.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Figuras/Introduccion-a-grafos/Dibujo 27.pdf_tex" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Figuras/Introduccion-a-grafos/Dibujo 27.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Figuras/Introduccion-a-grafos/Dibujo 28.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Figuras/Introduccion-a-grafos/Dibujo 28.pdf_tex" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Figuras/Introduccion-a-grafos/Dibujo 28.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Figuras/Introduccion-a-grafos/Dibujo 29.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Figuras/Introduccion-a-grafos/Dibujo 29.pdf_tex" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Figuras/Introduccion-a-grafos/Dibujo 29.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Figuras/Introduccion-a-grafos/Dibujo 30.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Figuras/Introduccion-a-grafos/Dibujo 30.pdf_tex" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Figuras/Introduccion-a-grafos/Dibujo 30.svg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/main.aux" beforeDir="false" afterPath="$PROJECT_DIR$/out/main.aux" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/main.log" beforeDir="false" afterPath="$PROJECT_DIR$/out/main.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/main.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/out/main.pdf" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/main.synctex.gz" beforeDir="false" afterPath="$PROJECT_DIR$/out/main.synctex.gz" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/main.toc" beforeDir="false" afterPath="$PROJECT_DIR$/out/main.toc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main.tex" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.tex" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -171,7 +184,7 @@
       <workItem from="1703613308185" duration="9839000" />
       <workItem from="1703630830418" duration="4178000" />
       <workItem from="1703637580584" duration="7954000" />
-      <workItem from="1703685488512" duration="8462000" />
+      <workItem from="1703685488512" duration="12724000" />
     </task>
     <task id="LOCAL-00001" summary="arreglado?">
       <option name="closed" value="true" />
@@ -269,7 +282,15 @@
       <option name="project" value="LOCAL" />
       <updated>1703695075869</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="arreglado?">
+      <option name="closed" value="true" />
+      <created>1703696926096</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1703696926096</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
