@@ -8,12 +8,6 @@
 
 \usepackage[a4paper,width=150mm,top=25mm,bottom=25mm]{geometry}
 
-\usepackage{paralist} %esto es para itemizar mejor y que los items no aparezcan muy a la izquierda. Ejemplo:
-%\begin{compactenum}[\hspace{0.25cm} 1. ]
-%\item $\nabla f(x^*)=0$
-%\item $\nabla^2 f(x^*)>0$ (positiva definida)
-%\end{compactenum}
-
 
 
 \usepackage{subfiles} %esto es para modularizar el overleaf
@@ -79,6 +73,7 @@
 }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 \usepackage{amsthm}
 
 \theoremstyle{plain}
@@ -511,8 +506,11 @@ Seguiremos principalmente el libro de Diestel \cite{diestelGraphTheory}.
 %%%%%%%%%%%
 
 \begin{Definition}
-Un \textbf{Grafo} es un par ordenado $G = (V,E)$, donde $V$ es un conjunto de \textbf{vértices} y $E$ es un conjunto de \textbf{Aristas}. Es decir, las aristas son pares $(v_1,v_2)$ con $v_1,v_2 \in V$. En un prinicipio si el grafo \textbf{no es dirigido}, no importa el orden de los vértices que aparece en un par $(v_1,v_2)$. Más aún, en nuestra definición supondremos que no hay \textbf{bucles}, es decir, aristas $(v_1,v_2)$ con $v_1 = v_2$.
+Un \textbf{grafo} es un par ordenado $G = (V,E)$, donde $V$ es un conjunto de \textbf{vértices} y $E$ es un conjunto de \textbf{aristas}. Es decir, las aristas son pares $(v_1,v_2)$ con $v_1,v_2 \in V$. En un prinicipio si el grafo \textbf{no es dirigido}, no importa el orden de los vértices que aparece en un par $(v_1,v_2)$. Más aún, en nuestra definición supondremos que no hay \textbf{bucles}, es decir, aristas $(v_1,v_2)$ con $v_1 = v_2$.
 \end{Definition}
+\begin{remark}
+En la literatura esta definición de grafo se le suele denominar \textbf{grafo \textit{simple}} para enfatizar que no hay bucles.
+\end{remark}
 
 La manera de visualizar un grafo es dibujar cada vértice y unir dos pares de vértices $v_1,v_2 \in V$ por un segmento que representa la arista $(v_1,v_2)$.
 
@@ -1234,38 +1232,23 @@ Los árboles y los bosques son bipartitos, pues no contienen ciclos, en particul
 
 \subsection{Paseos Eulerianos}
 
-Viajamos a Prusia, siglo XVIII, a la ciudad de Königsberg.
+\vspace{2cm}
 
-\Dibujo{Los siete puentes de Königsberg.}
+\begin{center}
+\includegraphics{./Figuras/Introduccion-a-grafos/Konigsberg_bridges.pdf}
+\captionof{figure}{Los siete puentes de Königsberg.}
+\end{center}
 
-La gente de la ciudad se preguntaba si se podía partir de un punto $x \in A$ o $B$ de la ciudad, cruzar cada puente exactamente una sola vez y volver a $x$. Euler se propuso a responder la pregunta.
+Viajamos a Prusia, siglo XVIII, a la ciudad de Königsberg. La gente de la ciudad se preguntaba si se podía partir de un punto $x \in A$ o $B$ de la ciudad, cruzar cada puente exactamente una sola vez y volver a $x$. Euler se propuso responder esta pregunta.
 
 Podemos modelar el problema como un \textit{multi}grafo (i.e. dos vértices pueden estar unidos por más de una arista):
 
-\Dibujo[0.7]{Multigrafo de los puentes de Königsberg.}
+\Inkscape{Multigrafo de los puentes de Königsberg.}{"Figuras/Introduccion-a-grafos/Dibujo 31.pdf_tex"}
 
 
 \begin{Definition}
-Un \textbf{paseo} en un multigrafo, es una secuencia de vértices $x_0,x_1,\ldots, $ tal que $x_i x_{i+1}$ es arista para todo $i \geq 0$, y ninguna de estas aristas se repite.
-
-Un \textbf{paseo cerrado} comienza y termina en el mismo vértice.
-
-Un paseo es \textbf{Euleriano} si es cerrado y recorre todas las aristas del multigrafo.
-
-Un \textbf{grafo Euleriano}, es un multigrafo que contiene un paseo Euleriano.
+Un \textbf{paseo} en un multigrafo, es una secuencia de vértices $x_0,x_1,\ldots, $ tal que $x_i x_{i+1}$ es arista para todo $i \geq 0$, y ninguna de estas aristas se repite (pero los vértices se pueden repetir) Un \textbf{paseo cerrado} es un paseo que comienza y termina en el mismo vértice. Un paseo es \textbf{Euleriano} si es cerrado y recorre todas las aristas del multigrafo. Un \textbf{(multi)grafo Euleriano}, es un (multi)grafo que contiene un paseo Euleriano.
 \end{Definition}
-
-\begin{Theorem}
-Un multigrafo conexo es Euleriano si y solo si todos sus vértices tienen grado par.
-\end{Theorem}
-
-Veremos la demostración la clase siguiente.
-
-
-
-
-
-
 
 
 
@@ -1286,19 +1269,22 @@ Un multigrafo conexo es Euleriano si y solo si todos sus vértices tienen grado 
 \item[]
 
 
-\item[$\Rightarrow$)] Asumimos que $G$ tiene un paseo Euleriano $P$. Cada vez que el paseo ''entra'' en una vértice, lo hace por medio de una arista, y debe salir por otra. Cada vez que $v$ a parece en $P$ se utilizan otras dos aristas incidentes en $v$. Como se ocupan todas esas aristas, $d(v)$ es par.
+\item[($\Rightarrow$)] Asumimos que $G$ tiene un paseo Euleriano $P$. Cada vez que el paseo ``entra'' en una vértice, lo hace por medio de una arista, y debe ``salir'' por otra. Cada vez que $v$ a parece en $P$ se utilizan otras dos aristas incidentes en $v$. Como se ocupan todas esas aristas, $d(v)$ es par.
 
-\item[$\Leftarrow$)]  Supongamos que todos los grados son pares. Haremos inducción en $\Abs G$. El caso base es $\Abs G = 2$ que claramente tiene un paseo Euleriano:
+\item[($\Leftarrow$)]  Supongamos que todos los grados son pares. Haremos inducción en $\Abs G$. El caso base es $\Abs G = 2$ que claramente tiene un paseo Euleriano. Supongamos que $\Abs G >2$. Cuando todos los grados son pares, puedo encontrar un paseo cerrado no trivial. Tomemos como $P$ el de largo máximo, y sea $F$ su conjunto de aristas. Si $F$ es todo, la demostración está terminada. Luego supongamos que no. Sea $G':= G \setminus F$, tiene una arista $e$ que incide en un vértice de $P$. Sea $C$ la componente de $G'$ que contiene a $e$. Todo vértice de $G$, posee un número par de aristas incidentes en $F$, luego la cantidad de aristas en $G'$ sigue siendo par. Aplicando la hipótesis inductiva, podemos encontrar un paseo Euleriano en $C$, llamémoslo $P'$. Como $P$ y $P'$ unidos son un paseo cerrado más grande que $P$, llegamos a un absurdo.
 
-\Dibujo[0.1]{$\Abs G = 2$.}
-
-Supongamos que $\Abs G >2$. Cuando todos los grados son pares, puedo encontrar un paseo cerrado no trivial. Tomemos como $P$ el de largo máximo, y sea $F$ su conjunto de aristas. Si $F$ es todo, la demostración está terminada. Luego supongamos que no. Sea $G \setminus F = G'$, tiene una arista $e$ que incide en un vértice de $P$, pues $G$ es conexo. Sea $C$ la componente de $G'$ que contiene a $e$. Todo vértice de $G$, posee un número par de aristas incidentes en $F$, luego la cantidad de aristas en $G'$ sigue siendo par. Aplicando la hipótesis inductiva, podemos encontrar un paseo Euleriano en $C$, llamémoslo $P'$. Como $P$ y $P'$ unidos son un paseo cerrado más grande que $P$, llegamos a un absurdo.
-
-\Dibujo{Esta es una ilustración de lo que podría suceder: $P : 0,1,2,3,5,6,7,8,4,0$ es el camino \black{negro} y \darkgreen{$C$ es el grafo conexo}.}
-
+\Inkscape{Ilustración de un grafo conexo $G$ con vértices de grado par, junto con un camino \black{negro} $P$ que no cubre todas las aristas de $G$, pero tal que existe una arista $e\in G \setminus V(P)$ que incide en $P$, donde la componente conexa $\blue{C}$ de $G \setminus V(P)$ conteniendo $e$ es un grafo Euleriano.}{"Figuras/Introduccion-a-grafos/Dibujo 32.pdf_tex"}
 \end{enumerate}
-
 \end{proof}
+
+\begin{exercise}
+Resolver el problema de los siete puentes de Königsberg.
+\end{exercise}
+
+
+
+
+
 
 \subsection{Conexidad}
 
