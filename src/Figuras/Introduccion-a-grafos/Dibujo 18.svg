@@ -25,14 +25,14 @@
      inkscape:document-units="mm"
      showgrid="true"
      inkscape:zoom="1.4039843"
-     inkscape:cx="289.53315"
+     inkscape:cx="289.88928"
      inkscape:cy="154.204"
      inkscape:window-width="1920"
      inkscape:window-height="1016"
      inkscape:window-x="0"
      inkscape:window-y="0"
      inkscape:window-maximized="1"
-     inkscape:current-layer="layer8"
+     inkscape:current-layer="svg12165"
      showguides="true">
     <inkscape:grid
        type="xygrid"
@@ -68,7 +68,7 @@
      style="fill:#ffff3e"
      inkscape:highlight-color="#def321" />
   <circle
-     style="display:inline;fill:#f9f06b;stroke:#000000;stroke-width:0.665001;stroke-linejoin:round;stroke-dashoffset:8.04283;paint-order:markers fill stroke"
+     style="display:inline;fill:#f9f06b;stroke:#000000;stroke-width:0.665001;stroke-linejoin:round;stroke-dashoffset:0;paint-order:markers fill stroke;stroke-dasharray:1.99500293, 1.99500293;stroke-linecap:round"
      id="path7"
      cx="30.529169"
      cy="40"

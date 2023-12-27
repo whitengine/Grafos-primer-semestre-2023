@@ -8,6 +8,12 @@
 
 \usepackage[a4paper,width=150mm,top=25mm,bottom=25mm]{geometry}
 
+\usepackage{paralist} %esto es para itemizar mejor y que los items no aparezcan muy a la izquierda. Ejemplo:
+%\begin{compactenum}[\hspace{0.25cm} 1. ]
+%\item $\nabla f(x^*)=0$
+%\item $\nabla^2 f(x^*)>0$ (positiva definida)
+%\end{compactenum}
+
 
 
 \usepackage{subfiles} %esto es para modularizar el overleaf
@@ -1009,39 +1015,39 @@ Un grafo acíclico, es decir, sin ciclos, es llamado un \textbf{bosque}. A un bo
 
 \Inkscape{Un \brown{árbol} $T$ con \darkgreen{hojas} y \green{vértices interiores}.}{"Figuras/Introduccion-a-grafos/Dibujo 21.pdf_tex"}
 
-
-\begin{exercise}
+El siguiente ejercicio es importante pues nos permitirá hacer \textit{inducción en las hojas} de un árbol para probar resultados sobre este tipo de grafos:
+\begin{Exercise}
 Todo árbol tiene al menos $1$ hoja. Más aún, si el árbol tiene más de un vértice, entonces tiene al menos $2$ hojas. En particular, los árboles tienen grado mínimo $\delta = 1$.
-\end{exercise}
+\end{Exercise}
 \begin{solution}
 Sea $P$ un camino maximal en el árbol y elijamos uno de los extremos (podría haber solo uno si el camino tiene un solo vértice). Si el extremo tuviera grado $\geq 2$, entonces tiene al menos un vecino, el cual debe estar en $P$ por maximalidad, luego existe un ciclo, contradiciendo la definición de árbol, i.e., el extremo es una hoja. Más aún, si el árbol tiene más de un vértice, entonces el camino maximal que tomamos tiene dos extremos distintos, i.e. el árbol tiene dos hojas.
 \end{solution}
 
-\begin{Theorem}
+\begin{Theorem}[Caracterización de los árboles]
 Sea $T$ un grafo. Las siguientes definiciones son equivalentes:
 \begin{enumerate}[(i)]
 \item $T$ es árbol.
 \item Cada par de vértices en $T$ están unidos por un único camino.
 \item $T$ es conexo, pero $T \setminus e$ es disconexo para todo $e \in E(T)$. Es decir, es minimalmente conexo.
-\item $T$ es conexo, pero $T \setminus v$ es disconexo para todo $v \in V(T)$ que no sea hoja.
+\item $T$ es conexo, pero $T \setminus v$ es disconexo para todo $v \in V(T)$ interior.
 \item $T$ es acíclico, pero $T \cup xy$ tiene un ciclo para cualquier par de vértices $x,y$ no adyacentes. Es decir, es maximalmente acíclico.
 \end{enumerate}
 \end{Theorem}
 \begin{proof}
-\begin{enumerate}
+\begin{enumerate}[leftmargin=2cm]
 \item[]
 
 \item[(i) $\Rightarrow$ (ii)] Si no, existe al menos un camino por ser conexo, luego si hay dos caminos distintos entonces podemos construir un ciclo.
 
-\item[(ii) $\Rightarrow$ (iii)] Sea $e$ una arista entre $xy$, entonces $xy$ es un camino entre esos vértices, por hipótesis es el único, luego al quitarlo debe quedar disconexo, de lo contrario es que había otro camino.
+\item[(ii) $\Rightarrow$ (iii)] Sea $e = xy$ una arista de $T$, entonces $e$ es un camino entre $x$ e $y$. Por hipótesis es el único, luego al quitarlo $T$ debe quedar disconexo.
 
-\item[(iii) $\Rightarrow$ (iv)] Como $v$ no es una hoja, es vecino de al menos dos vértices distintos, dicamos $a,b$. Si todo camino entre $a$ y $b$ pasa por $v$, entonces quitar este vértice haría que $T$ fuera disconexo. Supongamos que existe un camino que une $a,b$ pero que no contiene a $v$. Luego si quitamos la arista $av$ o $vb$ el grafo sigue siendo conexo, pues tenemos un ciclo $a v b$, absurdo.
+\item[(iii) $\Rightarrow$ (iv)] Como $v$ no es una hoja, es vecino de al menos dos vértices distintos, digamos $a,b$. Si todo camino entre $a$ y $b$ pasa por $v$, entonces quitar este vértice haría que $T$ fuera disconexo. Supongamos por el absurdo que existe un camino que une $a,b$ pero que no contiene a $v$. Luego si quitamos la arista $av$ o $vb$ de $T$, el grafo sigue siendo conexo, absurdo.
 
-\item[(iv) $\Rightarrow$ (v)] $T$ es acíclico, pues de lo contrario podríamos podríamos quitar un vértice y que siga quedando conexo. En efeco, sea $C$ un ciclo en $T$, digamos con vértices $x_0,x_1,\ldots,x_n,x_0$ y $n \geq 2$. Si quitamos cualquier vértice $v$ de $C$, este queda conexo, pero veamos que $T$ también. De lo contrario, es que $v$ separa a $T$ en dos componentes conexas, es decir, todos los caminos entre $C$ y $T \setminus C$ pasan por $v$, con lo cual tomando otro vértice de $C$ que no sea $v$ y quitándolo, nos quedaría que $T$ menos ese punto ex conexo, absurdo.
+\item[(iv) $\Rightarrow$ (v)] $T$ es acíclico, pues de lo contrario podríamos podríamos quitar un vértice y que siga quedando conexo. En efeco, sea $C$ un ciclo en $T$, digamos con vértices $x_0,x_1,\ldots,x_n,x_0$ y $n \geq 2$. Si quitamos cualquier vértice $v$ de $C$, este queda conexo; afirmamos que $T$ también. De lo contrario, es que $v$ separa a $T$ en dos componentes conexas, es decir, todos los caminos entre $C$ y $T \setminus C$ pasan por $v$, con lo cual tomando otro vértice de $C$ que no sea $v$ y quitándolo, nos quedaría que $T$ menos ese vértice es conexo, absurdo.
 
-Sean $x,y$ no adyacentes. Consideremos $P$ un camino entre $x,y$. Como no son adyacentes este camino necesariamente tiene al menos un vértice en intermedio, digamos $z$. Por hipótesis, si quitamos $z$ el grafo nos queda disconexo, y esto lo podemos hacer para cualquier $z \neq x,y$ en $P$. Con lo cual, $P \cup xy$ es un ciclo en $T \cup xy$.
+Sean $x,y$ no adyacentes, nos falta ver que $T \setminus xy$ es disconexo. Consideremos $P$ un camino entre $x,y$. Como no son adyacentes este camino necesariamente tiene al menos un vértice interior, digamos $z$. Por hipótesis, si quitamos $z$ el grafo nos queda disconexo, y esto lo podemos hacer para cualquier $z \neq x,y$ en $P$. Con lo cual, $P \cup xy$ es un ciclo en $T \cup xy$.
 
-\item[(v) $\Rightarrow$ (i)] Por hipótesis, $T$ es acíclico. Sean $x,y \in V(G)$. Por hipótesis tenemos que $T \cup xy$ tiene un cíclo $C_{xy}$, luego $C_{xy}$ debe contener la arista $xy$ pues $T$ es acíclico. Entonces $C_{xy} \setminus xy$ conecta a $xy$. Como $x,y$ eran arbitrarios, tenemos que $T$ es conexo.
+\item[(v) $\Rightarrow$ (i)] Por hipótesis, $T$ es acíclico, luego falta ver que $T$ es conexo. Sean $x,y \in V(G)$. Por hipótesis tenemos que $T \cup xy$ tiene un cíclo $C_{xy}$, luego $C_{xy}$ debe contener la arista $xy$ pues $T$ es acíclico. Entonces $C_{xy} \setminus xy$ conecta a $xy$ en $T$. Como $x,y$ eran arbitrarios, tenemos que $T$ es conexo como queríamos.
 \end{enumerate}
 \end{proof}
 
@@ -1049,38 +1055,38 @@ Sean $x,y$ no adyacentes. Consideremos $P$ un camino entre $x,y$. Como no son ad
 Sea $G$ un grafo. Un \textbf{árbol generador} de $G$ es un subgrafo de $G$ que es árbol y que contiene a todos los vértices de $G$.
 \end{definition}
 
-\Dibujo[0.35]{Ejemplo: árbol generador, con aristas en \red{rojo}.}
+\Inkscape{Ejemplo: árbol generador, con aristas en \red{rojo}.}{"Figuras/Introduccion-a-grafos/Dibujo 22.pdf_tex"}
 
 \begin{obs}
-Del dibujo anterior podemos ver que el árbol generador no necesariamente es único, y de hecho, puede haber otro que no sea isomorfo. Por ejemplo cambiemos los vértices del árbol en \red{rojo}, de manera que ya no tenga vértices de grado $3$:
-\Dibujo[0.20]{Otro árbol generador.}
+Del dibujo anterior podemos ver que el árbol generador no necesariamente es único, y de hecho, puede haber otro que no sea isomorfo. Por ejemplo, consideremos otro \blue{árbol generador} que no tenga vértices de grado $4$:
+\Inkscape*{}{"Figuras/Introduccion-a-grafos/Dibujo 23.pdf_tex"}
 \end{obs}
 
-\begin{proposition}
+\begin{proposition}\label{proposition:todo grafo conexo tiene un arbol generador}
 Todo grafo conexo tiene un árbol generador.
 \end{proposition}
 \begin{proof}
-Tomemos un subgrafo minimalmente conexo $H$, que contenga a todo $V(G)$. Por (iii) del teorema anterior tenemos que $H$ es un árbol. También se puede usar el ítem (v), aplicado a un subgrafo acíclico maximal.
+Tomemos un subgrafo minimalmente conexo $H$, que contenga a todo $V(G)$. Por (iii) del teorema anterior tenemos que $H$ es un árbol, y genera $G$.
 \end{proof}
 
-\begin{obs}
-Esta demostración nos da un álgoritmo para construir el árbol generador de un grafo: quitamos aristas hasta que nos quede minimalmente conexo.
-\end{obs}
+\begin{remark}
+Esta demostración nos da un álgoritmo para construir el árbol generador de un grafo: quitamos aristas hasta obtener un grafo minimalmente conexo.
+\end{remark}
+
+\begin{Proposition}
+Los vértices de un árbol $T$ pueden ser enumerados, digamos $v_1,v_2,\ldots,v_n$, de manera que para todo $i \geq 2$, $v_i$ es hoja en $T[v_1,\ldots,v_i]$ (que es árbol también).
+\end{Proposition}
+\begin{proof}
+Por la Proposición \ref{prop: todo grafo conexo se puede enumerar de manera que G_i[v1,...,vi] es conexo para todo i}, existe una enumeración $v_1,\ldots,v_n$ tal que $T[v_1,\ldots,v_i]$ es conexo para todo $i \geq 1$. Inspeccionando la demostración, se puede ver que esta construcción sirve. En efecto, sabemos que existe un vértice $z \in T$ que tiene un vecino en $T[v_1,\ldots,v_i]$, llamemosló $x$. Si $z$ tuviera otro vecino, digamos $y$, entonces $T[v_1,\ldots,v_i]$ tendría un camino $P$ entre $x$ e $y$, que formaría el ciclo $zxPyz$ en $T$, imposible (ver la siguiente figura).
+\end{proof}
+
+\Inkscape{}{"Figuras/Introduccion-a-grafos/Dibujo 24.pdf_tex"}
+
+
 
 \begin{definition}
 Si $T$ es un árbol generador de un grafo $G$, las aristas en $E(G) \setminus E(T)$ son las \textbf{cuerdas} de $T$ en $G$.
 \end{definition}
-
-\begin{Proposition}
-Los vértices de un árbol $T$ pueden ser enumerados, digamos $v_1,v_2,\ldots,v_n$ de manera que para todo $i \geq 2$, $v_i$ es hoja en $T[v_1,\ldots,v_i]$ (que es árbol también).
-\end{Proposition}
-\begin{proof}
-Por la Proposición \ref{prop: todo grafo conexo se puede enumerar de manera que G_i[v1,...,vi] es conexo para todo i} existe una enumeración $v_1,\ldots,v_n$ tal que $T[v_1,\ldots,v_i]$ es conexo para todo $i \geq 1$. Inspeccionando la demostración, se puede ver que esta construcción sirve. En efecto, sabemos que $v_{i+1}$ tiene un vecino en $G[v_1,\ldots,v_i]$, llamemosló $x$, si tuviera otro llamado $y$, entonces $G[v_1,\ldots,v_i]$ contiene un camino $P_{xy}$ entre ellos, que junto con $x v_{i+1} y$ nos forma un cíclo, absurdo.
-
-\Dibujo{Ver dibujo.}
-\end{proof}
-
-
 
 
 
@@ -1093,28 +1099,28 @@ Por la Proposición \ref{prop: todo grafo conexo se puede enumerar de manera que
 
 
 \begin{corollary}\label{corolario:todo grafo conexo de n vertices es un arbol si y solo si tiene n-1 aristas}
-Un grafo de $n$ vértices conexo es un árbol si y solo si tiene $n-1$ aristas.
+Un grafo conexo $T$ con $n$ vértices es un árbol si y solo si tiene $n-1$ aristas.
 \end{corollary}
 \begin{proof}
 \begin{enumerate}
-\item[$\Rightarrow$)] Supongamos que $T$ es árbol; en particular es conexo. Por la proposición anterior, existe una enumeración $v_1,v_2,\ldots,v_n$ tal que para todo $i \geq 1$, el grafo $T[v_1,\ldots, v_i]$ tiene $i-1$ aristas por inducción.
+\item[($\Rightarrow$)] Supongamos que $T$ es árbol. Por la proposición anterior, existe una enumeración $v_1,v_2,\ldots,v_n$ tal que para todo $i \geq 1$, el grafo $T[v_1,\ldots, v_i]$ tiene $i-1$ aristas por inducción. De donde se sigue que $T$ tiene $n-1$ aristas.
 
-\item[$\Leftarrow$)] Como $T$ es conexo tiene árbol generador $T'$, y por la implicación anterior tiene $n-1$ aristas, entonces $T = T'$, i.e. $T$ es árbol.
+\item[($\Leftarrow$)] Como $T$ es conexo, tiene árbol generador $T'$ (ver la Proposición \ref{proposition:todo grafo conexo tiene un arbol generador}), y por la implicación de arriba, $T'$ tiene $n-1$ aristas, entonces $T = T'$, i.e. $T$ es un árbol.
 \end{enumerate}
 \end{proof}
 
 \begin{corollary}
-Todo grafo conexo de $n$ vértices tiene al menos $n-1$ aristas.
+Todo grafo conexo con $n$ vértices tiene al menos $n-1$ aristas.
 \end{corollary}
 \begin{proof}
 Tiene un árbol generador, que debe tener $n-1$ aristas.
 \end{proof}
 
 \begin{corollary}
-Si $T$ es un árbol y $G$ es un grafo con $\delta (G) \geq \abs T -1$, entonces $T \subset G$, es decir $G$ tiene un subgrafo isomorfo a $T$.
+Si $T$ es un árbol arbitrario, y $G$ es un grafo con $\delta (G) \geq \abs T -1$, entonces $G$ contiene un subgrafo isomorfo a $T$.
 \end{corollary}
 \begin{proof}
-Sea $v_1,\ldots,v_n$ con $n = \abs T$, una numeración de los vértices de $T$ tal que $v_i, i \geq 2$ es una hoja de $T[v_1,\ldots,v_{i-1}]$. Haremos inducción en estos vértices. El caso base es trivial. Veamos el paso inductivo: supongamos que $G$ tiene a $T[v_1,\ldots,v_{i-1}]$ como subgrafo con $i\leq n$, entonces como $\delta (G) \geq n-1$, tenemos que $v_j, 1 \leq j \leq i-1$ (el único vecino de $v_i$) tiene al menos $\delta(G) \geq n-1$ vecinos en $G$, es decir, tiene un vecino que no está en $T[v_1,\ldots, v_{i-1}]$, luego agregamos a ese vértice como $v_i$ junto con la arista que le corresponde a $v_j$.
+Sea $v_1,\ldots,v_n$ con $n = \abs T$, una numeración de los vértices de $T$ tal que $v_i, i \geq 2$ es una hoja de $T_i := T[v_1,\ldots,v_{i-1}]$. Haremos inducción en $i$. El caso base es trivial. Veamos el paso inductivo: supongamos que $G$ tiene a $T_i$ como subgrafo. $v_i$ tiene un único vecino en $T_i$, digamos $z_i \in T_i$, el cual tiene al menos $\delta (G) \geq n-1$ vecinos en $G$. Luego $z_i$ tiene un vecino en $G$ que no está en $T_i \subset G$. Así, identificamos $v_i$ con este vecino en $G$, y por lo tanto $T_{i+1} \subset G$.
 \end{proof}
 
 \bigskip
