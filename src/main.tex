@@ -161,7 +161,7 @@
 
 			\newcommand{\comentario}[1]{\red{#1}}
 
-\newcommand{\green}[1]{\textcolor{SpringGreen}{#1}}
+\newcommand{\green}[1]{\textcolor{green!30!Black!20!Yellow}{#1}}
 
 \newcommand{\blue}[1]{\textcolor{Cyan}{#1}}
 
@@ -177,7 +177,7 @@
 
 \newcommand{\beige}[1]{\textcolor{Apricot}{#1}}
 
-\newcommand{\darkgreen}[1]{\textcolor{ForestGreen}{#1}}
+\newcommand{\darkgreen}[1]{\textcolor{green!60!Black}{#1}}
 
 \newcommand{\teal}[1]{\textcolor{teal!70!green}{#1}} %verde marino
 
@@ -1004,30 +1004,18 @@ contradiciendo $(\star)$.
 \subsection{Árboles y bosques}
 
 \begin{Definition}
-Un grafo acíclico, es decir, sin ciclos, es llamado un \textbf{bosque}.
-
-A un bosque conexo lo llamamos \textbf{árbol}, es decir un grafo conexo y acíclico.
-
-Los vértices de grado $1$ son sus \textbf{hojas}, los otros vértices son sus \textbf{vértices interiores}.
+Un grafo acíclico, es decir, sin ciclos, es llamado un \textbf{bosque}. A un bosque conexo lo llamamos \textbf{árbol}, es decir un grafo conexo y acíclico. (Los subgrafos conexos de un bosque son árboles, en particular, las componentes de un bosque son árboles). Los vértices de grado $1$ son sus \textbf{hojas}, los otros vértices son sus \textbf{vértices interiores}.
 \end{Definition}
-Notar que las componentes conexas de un bosque son árboles.
 
-\begin{obs}
-Los subgrafos conexos de un árbol son árboles.
-\end{obs}
-
-\Dibujo{Un \brown{árbol} con \darkgreen{hojas} y \green{vértices interiores}.}
-
+\Inkscape{Un \brown{árbol} $T$ con \darkgreen{hojas} y \green{vértices interiores}.}{"Figuras/Introduccion-a-grafos/Dibujo 21.pdf_tex"}
 
 
 \begin{exercise}
-Todo árbol tiene al menos $1$ hoja. Más aún, si el árbol tiene más de un vértice entonces tiene al menos $2$ hojas. En particular los árboles tienen grado mínimo $\delta = 1$.
+Todo árbol tiene al menos $1$ hoja. Más aún, si el árbol tiene más de un vértice, entonces tiene al menos $2$ hojas. En particular, los árboles tienen grado mínimo $\delta = 1$.
 \end{exercise}
 \begin{solution}
-Sea $P$ un camino maximal en el árbol, y miro uno de los extremos (podría haber solo uno si el camino tiene un solo vértice). Ese extremo si tuviera grado $\geq 2$, el otro vecino debería caer en el camino por maximalidad, luego existe un ciclo, absurdo!. Más aún, si el árbol tiene más de un vértice entonces el camino maximal que tomamos tiene dos vértices, i.e. dos hojas.
+Sea $P$ un camino maximal en el árbol y elijamos uno de los extremos (podría haber solo uno si el camino tiene un solo vértice). Si el extremo tuviera grado $\geq 2$, entonces tiene al menos un vecino, el cual debe estar en $P$ por maximalidad, luego existe un ciclo, contradiciendo la definición de árbol, i.e., el extremo es una hoja. Más aún, si el árbol tiene más de un vértice, entonces el camino maximal que tomamos tiene dos extremos distintos, i.e. el árbol tiene dos hojas.
 \end{solution}
-
-Esto implica lo mismo para caminos, pues los caminos son árboles.
 
 \begin{Theorem}
 Sea $T$ un grafo. Las siguientes definiciones son equivalentes:
