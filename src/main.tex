@@ -1365,17 +1365,13 @@ La segunda desigualdad se tiene porque todas las aristas incidentes en un vérti
 
 Veamos ahora la primera desigualdad. Sea $F$ un conjunto de aristas que separa a $G$, con $\abs F = \lambda (G)$, tal que $G \setminus F$ es disconexo. \textit{Observación:} $F$ es un conjunto de aristas minimal con la propiedad de ser separador.
 
-\textbf{Caso 1:} Existe $v \in V(G)$ que no incide en $F$. Sea $C$ la componente conexa que contiene a $v$ en $G \setminus F$. No puede haber una arista $f$ de $F$ con extremos en $C$, pues de lo contrario $F \setminus \{f\}$ sería un conjunto más chico tal que es separador, lo cual contradice la minimalidad de $F$.
+\textbf{Caso 1:} Existe $v \in V(G)$ que no incide en $F$. Sea $C$ la componente conexa que contiene a $v$ en $G \setminus F$. No puede haber una arista $f$ de $F$ con ambos extremos en $C$, pues de lo contrario $F \setminus \{f\}$ sería un conjunto separador más chico, contradiciendo la minimalidad de $F$. (Ver la siguiente figura \ref{Figura:ilustracion de C y F violeta}). Luego, si quitamos los vértices de las aristas de $F$ incidentes en $C$, las cuales solo comparten un vértice con $C$, nos queda que $v$ estaría separado del resto del grafo. Esta cantidad de vértices es a lo sumo $\abs F = \lambda (G)$. Con lo cual $\Kappa (G) \leq \abs F = \lambda (G)$.
 
-\Dibujo[0.6]{Ilustración de \blue{$C$}, donde las \purple{aristas violeta} corresponden a aristas de \purple{$F$}.}
+\Inkscape[][ilustracion de C y F violeta]{Ilustración de la componente \blue{$C$} que contiene a $v$, donde las \purple{aristas violeta} corresponden a un conjunto separador $\purple{F}$. Notar que en este ejemplo \purple{$F$} no es minimal, pues $\purple {f \in F}$ tiene ambos extremos en \blue{$C$}.}{"Figuras/Introduccion-a-grafos/Dibujo 36.pdf_tex"}
 
-Luego, si quitamos los vértices de las aristas de $F$ incidentes en $C$, las cuales solo comparten un vértice de $C$, nos queda que $v$ estaría separado del resto del grafo. Esta cantidad de vértices es a lo sumo $\abs F = \lambda (G)$. Con lo cual $\Kappa (G) \leq \abs F = \lambda (G)$.
+\textbf{Caso 2:} Todo $v \in V(G)$ incide en $F$. Fijemos $v \in V(G)$ y $C$ la componente conexa de $G \setminus F$ que lo contiene. Consideremos $N_{G} (v)$, los vecinos de $v$. Cada $w \in N_{G} (v) $ incide en una arista de $F$. (Ver la siguiente Figura \ref{Figura:los vecinos de v inciden en al menos una arista de F}). Entonces $d_G (v) \leq \abs F = \lambda (G)$. Por lo tanto, salvo que $V(G) = \{ v \} \cup N_G ( v)$, tenemos que $N_G (v)$ separa a $v$ del resto del grafo, y salvo ese caso tendríamos que $\Kappa (G) \leq \abs{N_G (v)} \leq \lambda (G)$. Pero $v$ era arbitrario, entonces en el peor de todos los casos, tenemos que $V(G) =  \{ v \} \cup N_G ( v)$ para todo $v \in G$, i.e. $G$ es un grafo completo. Afortunadamente, vale la igualdad por el Ejemplo \ref{ex:clase6 - exemplo lambda (K_n) = Kappa(K_n) = n-1}. Esto concluye la demostración de la primera desigualdad.
 
-\textbf{Caso 2:} Todo $v \in V(G)$ incide en $F$. Fijemos $v \in V(G)$ y $C$ la componente conexa de $G \setminus F$ que lo contiene. Consideremos $N_{G} (v)$, los vecinos de $v$. Cada $w \in N_{G} (v) $ incide en una arista de $F$.
-
-\Dibujo{Ilustración de lo que sucede: los \darkgreen{vecinos} de \green{$v$} inciden en una \purple{arista de $F$}.}
-
-Entonces $d_G (v) \leq \abs F = \lambda (G)$. Por lo tanto, salvo que $V(G) = \{ v \} \cup N_G ( v)$, tenemos que $N_G (v)$ separa a $v$ del resto del grafo, y salvo ese caso tendríamos que $\Kappa (G) \leq \abs{N_G (v)} \leq \lambda (G)$. Pero $v$ era arbitrario, entonces en el peor de todos los casos, tenemos que $V(G) =  \{ v \} \cup N_G ( v)$ para todo $v \in G$, i.e. $G$ es un grafo completo. Pero en este caso vale la igualdad por el Ejemplo \ref{ex:clase6 - exemplo lambda (K_n) = Kappa(K_n) = n-1}.
+\Inkscape[][los vecinos de v inciden en al menos una arista de F]{Ilustración de lo que sucede: los \darkgreen{vecinos} de \green{$v$} inciden en al menos una \purple{arista de $F$}.}{"Figuras/Introduccion-a-grafos/Dibujo 37.pdf_tex"}
 \end{proof}
 
 \subsection{Grafos $2$-conexos}
