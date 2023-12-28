@@ -1219,7 +1219,7 @@ Definimos la partición de $G$: los vértices $v$ tales que $rTv$ tiene longitud
 \item[]
 \item[\textsc{Caso 1:}] Si $e \in E(T)$, tendremos $x < y$ o $y < x$, pero nunca igualdad. Más aún, $\Abs{rTx} = \Abs{rTy} \pm 1$, i.e. tienen paridades distintas.
 
-\item[\textsc{Caso 2:}]  Si $e \not \in E(T)$, entonces $rTx, rTy$ y $e$ forman un ciclo (por la caracterización de árbol \ref{theorem:caracterizacion de arbol}). Por hipótesis, el ciclo es par. Consecuentemente, $\Abs{rTx}$ y $\Abs{rTy}$ tienen distinta paridad (ver la siguiente figura).
+\item[\textsc{Caso 2:}]  Si $e \not \in E(T)$, entonces $rTx, rTy$ y $e$ forman un ciclo (por el ítem (v) de la caracterización de árbol \ref{theorem:caracterizacion de arbol}). Por hipótesis, el ciclo es par. Consecuentemente, $\Abs{rTx}$ y $\Abs{rTy}$ tienen distinta paridad (ver la siguiente figura).
 \end{enumerate}
 
 \Inkscape*{}{"Figuras/Introduccion-a-grafos/Dibujo 30.pdf_tex"}
@@ -1380,34 +1380,40 @@ Veamos ahora la primera desigualdad. Sea $F$ un conjunto de aristas que separa a
 Sea $H$ un grafo. Decimos que un camino $P$ es un \textbf{$H$-camino} si es no trivial (tiene al menos una arista) e interseca a $H$ exactamente en sus extremos ($P$ no tiene ni vértices ni aristas en $H$, salvo por sus extremos).
 \end{Definition}
 
-\Dibujo[.7]{Ejemplo de \blue{$H$}-camino \yellow{$P$} de un grafo \blue{$H$}. Notar que en el dibujo consideramos a los vértices \blue{$0,5$} como extremos de \yellow{$P$}.}
+\Inkscape{Ejemplo de \blue{$H$}-camino \yellow{$P$}. Notar que en el dibujo consideramos a los vértices \blue{$x,y$} como extremos de \yellow{$P$}.}{"Figuras/Introduccion-a-grafos/Dibujo 38.pdf_tex"}
 
-Los ciclos son los grafos $2$-conexos más elementales. Veamos que todos los demás se pueden construir a partir de ellos.
-
-\Dibujo[.7]{Ejemplos de ciclos: $C_7, C_6, C_5, C_4$ y $C_3$.}
+Los ciclos son los grafos $2$-conexos más elementales. De hecho, veamos que todos los demás grafos $2$-conexos se pueden construir a partir de ellos.
 
 \begin{proposition}\label{prop:un grafo es 2-conexo si y solo si se construye a partir de un grafo 2-conexo union un H-camino}
 Un grafo es $2$-conexo si y solo si se puede construir a partir de un ciclo añadiendo sucesivamente $H$-caminos a grafos $H$ ya construidos.
 \end{proposition}
 
 \begin{remark}
-Es decir, si $H_0$ es un ciclo, le agregamos un $H_0$-camino, y a la unión la llamamos $H_1$, el cual es $2$-conexo, si quisieramos podemos agregar un $H_1$-camino y seguiría siendo $2$-conexo, etc.
+Es decir, si $H_0$ es un ciclo, le agregamos un $H_0$-camino, y a la unión la llamamos $H_1$, el cual es $2$-conexo; si quisieramos podemos agregar un $H_1$-camino y seguiría siendo $2$-conexo, etc. Más formalmente, un grafo $G$ es $2$-conexo, si y solo si existe una secuencia de grafos
+\[
+H_0 \subset H_1 \subset \cdots \subset H_n, \quad n \geq 1,
+\]
+tal que $H_0$ es un ciclo, $H_n = G$, y $H_{i+1}$ se obtiene a partir de $H_{i}$ agregando un $H_{i}$-camino. Ver la siguiente figura:
+
+\Inkscape{Ilustración de la secuencia $\darkgreen{H_0} \subset \yellow{H_1} \subset \red{H_2} \subset \blue{H_3}$.}{"Figuras/Introduccion-a-grafos/Dibujo 39.pdf_tex"}
 \end{remark}
 
-\Dibujo{Ilustración de un ciclo $H_0$ en negro, al que le agregamo $H$-caminos en el siguiente orden: \yellow{$H_0$-camino}, \red{$H_1$-camino} y por último \blue{$H_2$-camino}.}
-
-\begin{proof}
+\begin{proof}[Demostración de la proposición]
 \begin{enumerate}
 \item[]
 
-\item[ ( $\Leftarrow$ )] Claramente un grafo construido de esta manera no se puede separar por un solo vértice. Y por su puesto que tiene más de $2$ vértices.
+\item[($\Leftarrow$)] Claramente un grafo construido de esta manera no se puede separar por un solo vértice. Y por su puesto que tiene más de $2$ vértices. Con lo cual es $2$-conexo.
 
-\item[ ($\Rightarrow$)] Tomemos un grafo $G$, $2$-conexo (en particular es también conexo). Como es $2$-conexo, debe tener algún ciclo $C$, pues de lo contrario sería un árbol con al menos $3$-vértices, y quitando un vértice que no es hoja nos quedaría separado. Nos fijamos si tiene un $C$-camino, si esto es así lo agregamos, y luego seguimos agregando hasta que no podamos más. Consideremos el subgrafo maximal $H$ de $G$ construido de esta manera a partir de $C$. Entonces toda arista $xy \in E(G) \setminus E(H)$ tal que $x,y \in V(H)$, es un $H$-camino, con lo cual no puede existir por maximalidad de $H$. Es decir, $H$ es un subgrafo inducido de $G$. Entonces todas las aristas de $G$ que no están en $H$ tienen un extremo fuera de $H$. Si $H$ es $G$ habríamos terminado, luego por el absurdo supongamos que no. Por conexión existe un vértice $v \in G \setminus H$, y conectándolo por un camino con $H$ podemos asumir que $v$ es incidente en $H$, es decir existe $w \in H$ tal que $v w$ es una arista incidente en $H$. Como $G$ es $2$-conexo, si quitamos a $w$ el grafo sigue siendo conexo, luego debe ser que existe otro camino $P$ de $v$ a $H$, con lo cual $P \cup v w$ es un $H$-camino. Absurdo por maximalidad de $H$.
+\item[($\Rightarrow$)] Tomemos un grafo $G$, $2$-conexo (en particular es también conexo). Como es $2$-conexo, debe tener algún ciclo $C$, pues de lo contrario sería un árbol con al menos $3$-vértices, y quitando un vértice que no es hoja nos quedaría separado por el ítem (iv) de \ref{theorem:caracterizacion de arbol}.
+
+Ahora nos fijamos si tiene un $C$-camino, si esto es así lo agregamos, y luego seguimos agregando hasta que no podamos más. Consideremos el subgrafo maximal $H$ de $G$ construido de esta manera a partir de $C$. Entonces toda arista $xy \in E(G) \setminus E(H)$ tal que $x,y \in V(H)$, es un $H$-camino, con lo cual no puede existir por maximalidad de $H$. Es decir, $H$ es un subgrafo inducido de $G$. Entonces todas las aristas de $G$ que no están en $H$ tienen un extremo fuera de $H$. Si $H$ es $G$ habríamos terminado, luego por el absurdo supongamos que no. Por conexión existe un vértice $v \in G \setminus H$, y conectándolo por un camino con $H$ podemos asumir que $v$ es incidente en $H$, es decir, existe $w \in H$ tal que $v w$ es una arista incidente en $H$. Como $G$ es $2$-conexo, si quitamos $w$, el grafo sigue siendo conexo, por lo tanto debe ser que existe otro camino $P$ de $v$ a $H$ que no contiene a $w$, con lo cual $P \cup v w$ es un $H$-camino. Sin embargo, esto es absurdo por maximalidad de $H$. Ver la siguiente ilustración:
+
+\Inkscape*{}{"Figuras/Introduccion-a-grafos/Dibujo 40.pdf_tex"}
 \end{enumerate}
 \end{proof}
 
 
-\Dibujo{Ilustración: \green{$H$} contiene a \green{$w$}, con una arista incidente de extremo \blue{$v$}, que se extiende a un \green{$H$}-camino \blue{P}.}
+
 
 
 
