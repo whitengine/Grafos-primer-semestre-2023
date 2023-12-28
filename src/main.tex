@@ -1428,17 +1428,17 @@ Ahora nos fijamos si tiene un $C$-camino, si esto es así lo agregamos, y luego 
 
 
 
-Todo grafo \textit{sin vértices aislados} se puede particionar en subgrafos $1$-conexos. Y podemos intentar lo mismo para subgrafos $2$-conexos. Pero pueden ocurrir problemas, por ejemplo:
+Todo grafo \textit{sin vértices aislados} se puede particionar en subgrafos $1$-conexos. Y podemos intentar nuevamente caracterizar los grafos $2$-conexos. Sin embargo, nos topamos con problemas, por ejemplo:
 
-\Dibujo{Ejemplo de problemas para particionar en subgrafos $2$-conexos maximales. Las componentes $2$-conexas del dibujo son sus \blue{ciclos} que comparten vértices con otras estructuras como por ejemplo las dos \yellow{aristas} $12$ y $23$; o comparten aristas entre dos ciclos.}
+\Inkscape[][problemas la definicion de subgrafo 2-conexo maximal y bloques]{Los subgrafos $2$-conexos maximales de este grafo son sus ciclos, los cuales comparten vértices entre sí y con otras estructuras como las aristas que inciden en \red{$v$}.}{"Figuras/Introduccion-a-grafos/Dibujo 41.pdf_tex"}
 
-Como ilustra la figura de arriba, los subgrafos $2$-conexos maximales no siempre abarcan todo el grafo ni son siempre disjuntos. Veamos como se arregla: podemos simplificar la noción para poder abarcar todo el grafo.
+Como ilustra la figura de arriba, los subgrafos $2$-conexos maximales no siempre abarcan todo el grafo ni son siempre disjuntos. La siguiente definición viene a solucionar esto:
 
 \begin{definition}
 Un \textbf{bloque} es un subgrafo conexo maximal sin vértices de corte.
 \end{definition}
 
-En la figura anterior, los bloques del grafo con los \blue{ciclos} y las \yellow{aristas} $12$ y $23$.
+En la Figura \ref{Figura:problemas la definicion de subgrafo 2-conexo maximal y bloques}, los bloques del grafo con los \blue{ciclos} y las \red{aristas} (junto con sus extremos) que inciden en \red{$v$}.
 
 \begin{obs}
 Es fácil ver que los bloques van a ser o subgrafos \textit{$2$-conexos} o una \textit{arista} o un \textit{vértice}.
@@ -1455,9 +1455,9 @@ Todo ciclo es $2$-conexo, luego es conexo sin vértices de corte, y debe estar c
 Sean $e,f \in E(G)$. Entonces pertenecen a un mismo bloque si y solo si pertenecen a un mismo ciclo.
 \end{proposition}
 \begin{proof}
-Si pertenecen al mismo ciclo, entonces por la proposición anterior están en el mismo bloque.
+Si pertenecen al mismo ciclo, entonces por la proposición anterior están en un mismo bloque.
 
-Recíprocamente, como $e,f$ son dos aristas en un mismo bloque, puedo asumir que el bloque es un subgrafo $2$-conexo (no es arista sola o vértice solo). La idea es la siguiente: este subgrafo $2$-conexo se construye a partir de un ciclo uniendo $H$-caminos, luego no es difícil ver que las dos aristas están contenidas en un mismo ciclo.
+Recíprocamente, como $e,f$ son dos aristas en un mismo bloque, puedo asumir que el bloque es un subgrafo $2$-conexo (no es arista sola o vértice solo). La idea es la siguiente: este subgrafo $2$-conexo se construye a partir de un ciclo uniendo $H$-caminos por la Proposición \ref{prop:un grafo es 2-conexo si y solo si se construye a partir de un grafo 2-conexo union un H-camino}, luego no es difícil ver que las dos aristas están contenidas en un mismo ciclo.
 \end{proof}
 
 \begin{definition}
