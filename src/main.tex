@@ -1358,8 +1358,8 @@ En el anterior ejemplo \ref{Figura:triangulo azul de arriba} teníamos $\lambda 
 \Clase{03/04/23}   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%
 
-\begin{Proposition}
-Si $G$ es no trivial, entonces $\Kappa (G) \leq \lambda (G) \leq \delta (G)$
+\begin{Proposition}\label{proposition:desigualdad que relaciona numero de conexion numero arista conexion y grado minimo}
+Si $G$ es no trivial, entonces $\Kappa (G) \leq \lambda (G) \leq \delta (G)$.
 \end{Proposition}
 \begin{proof}
 La segunda desigualdad se tiene porque todas las aristas incidentes en un vértice fijo separan a $G$.
@@ -1588,24 +1588,22 @@ Existen más variantes, pero dependen del contexto en el que estemos; por ejempl
 Todo grafo $3$-conexo, distinto de $K_4$, tiene una arista $e$ tal que $G/e$ es $3$-conexo.
 \end{lemma}
 \begin{proof}
-Supongamos que no hay una arista con esta propiedad. Es decir, para toda $xy \in E(G)$, el grafo $G/xy$ tiene un conjunto separador $S$ de a lo más $2$ vértices. Como $G$ es $3$-conexo, $v_{xy}$ (el vértice que sale de contraer la arista $xy$) tiene que estar en $S$ y $\abs S = 2$, ya que $\abs S = 0$ es imposible porque el grafo es conexo y por otro lado si $\abs S = 1$, estamos diciendo que $G$ se puede separar con un solo vértice si $v_{xy} \not \in S$ o si $v_{xy}\in S$ entonces podemos desconectar a $G$ con los vértices $x, y$, imposible.
-Luego, escribimos $S = \{z, v_{xy}\}$ con $z \not \in \{x,y\}$ separador de $G/xy$. Con lo cual, $T=\{z,x,y\}$ separa a $G$. Como ningún subconjunto propio de $T$ separa, cada vértice de $T$ tiene un vecino en cada componente de $G \setminus T$.
-\Dibujo{Ilustración del conjunto \purple{$T$}, donde se muestra que el vértice \purple{$z$} tiene vecinos en cada \yellow{com}\red{po}\blue{nente} de $G \setminus T$.}
+Supongamos por el absurdo que no existe una arista $e$ con esta propiedad. Es decir, para toda arista $e = xy \in E(G)$, el grafo $G/e$ tiene un conjunto separador $S$ con a lo más $2$ vértices. Como $G$ es $3$-conexo, $v_{xy}$ (el vértice que sale de contraer la arista $xy$) tiene que estar en $S$, además $\abs S = 2$. En efecto, $\abs S = 0$ es imposible porque el grafo es conexo, por otro lado, si $\abs S = 1$, estamos diciendo que $G$ se puede separar con un solo vértice si $v_{xy} \not \in S$, o que $G$ se puede desconectar removiendo $x,y$ si $v_{x,y} \in S$, en cualquier caso esto no ocurre.
 
-Como $xy$ era arbitrario, podemos elegir la arista $xy$, el vértice $z$ y la componente $C$ tal que $\abs C$ es mínimo. Tomo $v \in C$ y es vecino de $z$. Entoncces $G/v z$ tampoco es $3$-conexo, o sea que existe $w$ tal que $v,z,w$ (distintos) separan $G$. Como antes cada una de $v,z,w$ tiene un vecino en cada conmponente de $G \setminus \{v,z,w\}$. Como $x$ e $y$ son adyacentes, existe $D$ componente de $G \setminus \{v,z,w\}$ tal que $D \cap \{x,y\} = \emptyset$ (porque $G \neq K_4$!).
-\Dibujo{\blue{$D$} está contenido en el \blue{subgrafo azul}.}
-Dado que $v \in C$, los vecinos de $v$ en $D$ están en $C$. Tenemos que $D \cap C \neq \emptyset$, más aún, $D \subsetneq C$. Contradiciendo la minimalidad del orden de $C$.
+Luego, escribimos $S = \{z, v_{xy}\}$ con $z \not \in \{x,y\}$ (que depende de $x,y$) para el conjunto separador de $G/xy$ del párrafo anterior. Con lo cual, $T=\{z,x,y\}$ separa a $G$. Como ningún subconjunto propio de $T$ separa $G$, cada vértice de $T$ tiene un vecino en cada componente de $G \setminus T$.
+
+Como $xy$ era arbitrario, podemos elegir la arista $xy$, tal que existe $z$ como arriba, de tal forma que $G \setminus T$ tenga una componente $C$ más chica posible. Tomo $v \in C$; es vecino de $z$. Entonces $G/v z$ tampoco es $3$-conexo, o sea que como antes, existe $w$ tal que $v,z,w$ separan $G$. Nuevamente, cada vértice $v,z,w$ tiene un vecino en cada componente de $G \setminus \{v,z,w\}$. Como $x$ e $y$ son adyacentes, existe $D$ componente de $G \setminus \{v,z,w\}$ tal que $D \cap \{x,y\} = \emptyset$ (porque $G \neq K_4$). Dado que $v \in C$, los vecinos de $v$ en $D$ están en $C$. Tenemos que $D \cap C \neq \emptyset$, más aún, $D \subsetneq C$. Contradiciendo la minimalidad del orden de $C$. Esto concluye la demostración por el absurdo.
 \end{proof}
 
-\begin{theorem}[Teorema de Tutte, 1961]
+\begin{Theorem}[Teorema de Tutte, 1961]
 Un grafo $G$ es $3$-conexo si y solo si existe una secuencia de grafos $G_0, G_1, \ldots, G_n$ que cumple lo siguiente:
 \begin{enumerate}[(i)]
 \item $G_0 = K_4$ y $G_n = G$.
 \item $G_{i+1}$ tiene una arista $xy$ tal que $d(x),d(y) \geq 3$ y $G_i = G_{i+1}/xy$ para todo $i < n$. Más aún, cada $G_i$ es $3$-conexo.
 \end{enumerate}
-\end{theorem}
+\end{Theorem}
 \begin{proof}
-Por el lema anterior, podemos quitar una arista recursivamente hasta llegar a $K_4$. La vuelta esta en el DIESTEL.
+Notar que aplicando recursivamente el lema anterior podemos encontrar una secuencia de grafos $3$-conexos, $G_0, G_1, \ldots, G_n$ tales que $G_0 = K_4$ (es el único grafo $3$-conexo de orden $4$) y $G_n = G$, de tal suerte que $G_{i} = G_{i+1}/e_i$ para alguna arista $e_i \in G_{i+1}$ ($i < n$). Notar que el Teorema \ref{proposition:desigualdad que relaciona numero de conexion numero arista conexion y grado minimo} implica que el grado de $x,y$ es al menos $3$. La recíproca es trivial.
 \end{proof}
 
 
