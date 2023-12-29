@@ -1555,24 +1555,27 @@ Finalmente, tenemos la siguiente relación entre menores y menores topológicos:
 
 \begin{proposition}
 \begin{enumerate}[(i)]
-\item Todo $TX$ es también un $IX$ (ver la siguiente figura). Por lo tanto, todo menor topológico de un grafo es un menor de él.
+\item Todo $TX$ es también un $IX$ (ver la Figura \ref{Figura:subdivision de K4 visto como IK4}). Por lo tanto, todo menor topológico de un grafo es un menor de él.
 \item Si $\Delta (X) \leq 3$, entonces todo $IX$ contiene un $TX$. Con lo cual, todo menor con grado máximo a lo sumo $3$ de un grafo es también un menor topológico de él.
 \end{enumerate}
 \end{proposition}
 \begin{proof}
-Veamos solo (ii), el primer ítem es obvio. En efecto, $IX$ es el grafo que se obtiene de $X$ reemplazando cada vértice $x$ de él por un subgrafo conexo $G_x$ y cada arista por un conjunto de aristas no vacío, luego tomando una arista de ese conjunto, basta con escoger un vértice de $G_x$ que tenga por cada vecino de $x$ en $X$ un camino distinto hacia cada arista incidente en $G_x$. Esto es posible: empezamos eligiendo de manera inocente al vértice que es extremo de una arista incidente con $G_x$, de este vértice, llamemosló $x$, tendríamos que contrar dos caminos disjuntos con extremo final, en el peor de los casos pues $\Delta (X) \leq 3$, en otras dos aristas de $X$; ahora si no se cruzan ya ganamos, de lo contrario se fusionan a partir de un momento, incluso varias veces, pero luego movemos nuestro vértice $x$ a la última véz que se fusionan los caminos, y llamemosló $x'$:
+Veamos solo (ii), el primer ítem es obvio. $IX$ es el grafo que se obtiene de $X$ reemplazando cada vértice $x$ de él por un subgrafo conexo $G_x$ y cada arista por un conjunto de aristas no vacío, luego tomando una arista de ese conjunto, basta con escoger un vértice de $G_x$ que tenga por cada vecino de $x$ en $X$ un camino distinto hacia cada arista incidente en $G_x$, y con interiores disjuntos entre sí. Esto es posible: empezamos eligiendo de manera inocente al vértice que es extremo de una arista incidente con $G_x$, llamemosló $x$, de este vértice tendríamos que encontrar dos caminos internamente disjuntos con extremos en otras dos aristas incidentes a $G_x$, pues $\Delta X \leq 3$. Ahora, dos caminos siempre existen, con lo cual si no se cruzan ganamos, pero si se cruzan, lo hacen a partir de un momento, incluso varias veces. En este caso, movemos nuestro vértice $x$ a la última véz que se cruzan los caminos, y llamemosló $x'$. Esto funciona:
 
-\Dibujo{Ilustración de cómo se ven dos caminos, ambos de color amarillo pero uno más claro que el otro, que salen de nuestro vértice $x$ y tienen que llegar a las aristas incidentes en $G_x$. Al final movemos nuestro vértice a $x'$.}
-
+\Inkscape*{Ilustración de cómo se ven dos caminos, ambos de color amarillo pero uno más claro que el otro, que salen de nuestro vértice $x$ y tienen que llegar a las aristas incidentes en $G_x$. Al final movemos nuestro vértice a $x'$.}{"Figuras/Introduccion-a-grafos/Dibujo 47.pdf_tex"}
 \end{proof}
 
-\Dibujo{Ejemplo: Una subdivisión de $K^4$ visto como $I K^4$.}
-
-
-Ahora que conocemos todas las relaciones standard entre grafos, podemos definir lo qu esignifica embeber a un grafo en otro.
+\Inkscape[][subdivision de K4 visto como IK4]{Subdivisión de $K_4$ visto como $IK_4$.}{"Figuras/Introduccion-a-grafos/Dibujo 48.pdf_tex"}
 
 \begin{definition}
-Básicamente, una \textbf{inmersión} (o \textbf{embedding} en inglés) de $H$ en $G$ es un mapa inyectivo $\varphi : V(H) \rightarrow V(G)$ tal que preserva la estructura en la que estamos interesados. Con lo cual, $\varphi$ embebe a $H$ en $G$ como un subgrafo si preserva la adyacencia entre vértices, y como subgrafo inducido si preserva tanto la adyacencia como la no adyacencia. Si $\varphi$ está definido también en $E(H)$ como en $V(H)$ y manda $xy$ en caminos independientes de $G$ entre $\varphi (x)$ y $\varphi (y)$, decimos que $\varphi$ embebe a $H$ en $G$ como un menor topológico. Similarmente, decimos que es una inmesión de $H$ en $G$ como un menor, si mapea a $V(H)$ en conjuntos disjuntos de vértices en $G$ conexos, de manera que $G$ tiene una arista entre los conjuntos $\varphi (x)$ y $\varphi (y)$ siempre que $xy$ es una arisda de $H$. Más varíantes existen, pero depende del contexto en el que estemos; por ejemplo, se pueden definir de manera obvia las inmersiones de 'subgrafos generadores', y 'menores inducidas', etc.
+Una \textbf{incrustación} o \textbf{inmersión} (en inglés \textbf{embedding}) de un grafo $H$ en un grafo $G$, es una función inyectiva $\varphi : V(H) \rightarrow V(G)$ que preserva la estructura en la que estamos interesados. En particular:
+\begin{enumerate}[(a)]
+\item $\varphi$ incrusta a $H$ en $G$ como \underline{subgrafo} si preserva la adyacencia entre vértices;
+\item y como \underline{subgrafo inducido} si preserva tanto la adyacencia como la no adyacencia;
+\item si $\varphi$ está definido también en $E(H)$ como en $V(H)$ y manda $xy$ en caminos independientes de $G$ entre $\varphi (x)$ y $\varphi (y)$, decimos que $\varphi$ incrusta a $H$ en $G$ como \underline{menor topológico};
+\item similarmente, decimos que es una incrustación de $H$ en $G$ como \underline{menor}, si mapea a $V(H)$ en subgrafos conexos disjuntos de $G$, de manera que $G$ tiene una arista entre los conjuntos $\varphi (x)$ y $\varphi (y)$ siempre que $xy \in E(H)$.
+\end{enumerate}
+Existen más variantes, pero dependen del contexto en el que estemos; por ejemplo, se pueden definir de manera obvia las incrustaciones de ``subgrafos generadores'', ``menores inducidas'', etc.
 \end{definition}
 
 %%%%%%%%%%%
