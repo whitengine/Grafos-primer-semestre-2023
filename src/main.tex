@@ -373,7 +373,8 @@
 %número de lista coloreo de un grafo G:
 \newcommand{\ch}[1]{\operatorname{ch} (#1)}
 
-
+%Grafo bloque de un grafo $G$
+\newcommand{\block}[1]{\operatorname{Block} (#1)}
 
 
 
@@ -1461,10 +1462,10 @@ Recíprocamente, como $e,f$ son dos aristas en un mismo bloque, puedo asumir que
 \end{proof}
 
 \begin{definition}
-El \textbf{grafo bloque} de un grafo $G$ tiene un vértice por cada bloque y por cada vértice de corte de $G$; hay una arista entre dos vértices si una representa un bloque y si el otro representa un vértice de corte que está dentro del bloque.
+El \textbf{grafo bloque} de un grafo conexo $G$, denotado por $\block G$, es el grafo que tiene un vértice por cada bloque y por cada vértice de corte de $G$; y $Xy$ es una arista de $\block G$ si $X$ es un bloque e $y$ es un vértice de corte de $G$ contenido en $X$.
 \end{definition}
 
-\Dibujo{Ejemplo: $G$ (izquierda) tiene $5$ \purple{bloques} (denotados por letras mayúscula: \purple{$A,B,C,D,E$}) y $2$ \darkgreen{puntos de corte} (denotados por letras minúscula: \darkgreen{$a,b$}). Luego el grafo bloque (derecha) de $G$ tiene $7$ vértices.}
+\Inkscape{Del lado izquierdo se ilustra $G$, que tiene $5$ bloques: \blue{$A$}, \yellow{$B$}, \red{$C$}, \purple{$D$}; y $2$ \darkgreen{vértices de corte}. Del lado derecho se ilustra $\block G$.}{"Figuras/Introduccion-a-grafos/Dibujo 42.pdf_tex"}
 
 Notar que en nuestro ejemplo, el grafo bloque es un árbol. Esto no es casualidad:
 
@@ -1472,13 +1473,11 @@ Notar que en nuestro ejemplo, el grafo bloque es un árbol. Esto no es casualida
 El grafo bloque de un grafo conexo es un árbol.
 \end{exercise}
 \begin{proof}
-\textit{Notación:} al grafo bloque de $G$ lo denotamos por $Block(G)$. A un subgrafo conexo sin vértices de corte
-maximal,
-i.e. un bloque, lo vamos a denotar con las letras mayusculas $B,C,D$. Y denotaremos con la misma letra al vértice que inducen en el grafo $Block(G)$. A los vértices de corte los denotaremos por una letra minúscula como $x,y,z,u,v,w$ y los denotaremos de la misma manera en el grafo $Block (G)$. Quedará claro dependiendo del contexto, a qué grafo pertenece cada vértice en esta notación. Haremos el abuso de notación y llamaremos bloque tanto al subgrafo de $G$ como al vértice de $Block (G)$. Análogamente, cuando digamos vértice de corte de $Block(G)$ nos estamos refiriendo a un vértice que proviene de un vértice de corte de $G$.
+\textit{Notación:} a los bloques de $G$ los denotamos por letras mayúscula, y a los vértices de corte los denotamos por una letra minúscula. Utilizaremos la misma notación y términologia para referirnos a los respectivos vértices en el grafo bloque $\block G$; quedará claro dependiendo del contexto, a qué grafo pertenece cada vértice en esta notación. En particular, un bloque de $\block G$ es un vértice que corresponde a un bloque de $G$, y similarmente un vértice de corte de $\block G$ es un vérticce que corresponde con uno de $G$.
 
-Si $G$ es conexo, luego $Block(G)$ es conexo. Antes notemos que basta probar que entre dos blockes de $Block (G)$ existe un camino, pues todo vértice de corte de $Block (G)$ es adyacente a algún bloque en $Block (G)$ por definición de grafo bloque. Sean $B,B'$ dos bloques de $Block(G)$, consideremos luego a partir de un $B,B'$-camino siempre podemos construir un camino que no puede entrara y salir de un bloque más de una vez, por conexión del bloque. Este camino nos induce un camino en $Block(G)$ dado por $\tilde P : B_0 v_0 B_1 v_1 \cdots B_{r-1} v_{r-1} B_r $, donde cada bloque o vértice aparece en el orden en el cual el camino $P$ se intersecó por primera véz con estos en $G$.
+Primero veamos que $\block G$ es conexo. Para eso, basta probar que entre dos bloques de $\block G$ existe un camino, pues todo vértice de corte de $\block G$ es adyacente a algún bloque en $\block G$ por definición de grafo bloque. Sean $B,B'$ dos bloques de $\block G$, consideremos un $B,B'$-camino $P$ en $G$, el cual se puede tomar de tal suerte que no puede entrar y salir de un bloque más de una vez. Este camino nos induce un camino en $\block G$ dado por $\tilde P : B_0 v_0 B_1 v_1 \cdots B_{r-1} v_{r-1} B_r $, donde cada bloque o vértice aparece en el orden en el cual el camino $P$ se intersecó por primera véz con este.
 
-Ahora vevamos que $Block(G)$ es aciclico. En efecto, supongamos que no, sea $C$ un ciclo en $Block(G)$. Como $Block(G)$ es bipartito (particionamos entre vértices de corte y bloques), no tiene ciclos impares, luego $C$ tiene al menos $4$ vértices (pueden ser cortes o bloques). Con lo cual, existen dos bloques distintos $B_1,B_2$ y dos vértices de corte distintos $v_1,v_2$ tal que podemos escribir $C : B_1 v_1 B_2 \cdots v_2 B_1$. Pero esto quiere decir que hay otro $B_1,B_2$-camino en $G$ que no pasa por $v_1$, es decir que $v_1$ no era vértice de corte, absurdo.
+Ahora veamos que $\block G$ es aciclico. En efecto, supongamos que no, sea $C$ un ciclo en $\block G$. Como $\block G$ es bipartito (se puede particionar: vértices de corte y bloques), no tiene ciclos impares, luego $C$ tiene al menos $4$ vértices. Con lo cual, existen dos bloques distintos $B_1,B_2$ y dos vértices de corte distintos $v_1,v_2$ tales que $C = B_1 v_1 B_2 \cdots v_2 B_1$. Pero esto quiere decir que podemos quitar $v_1$ de $G$ y sigue siendo conexo, i.e., $v_1$ no era vértice de corte, absurdo.
 \end{proof}
 
 
