@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.4.11)  28 DEC 2023 23:34
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.4.11)  29 DEC 2023 00:15
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1438,6 +1438,12 @@ LaTeX Warning: Label `Figura:Capitulo 0- Seccion 0Dibujo 5' multiply defined.
 
 LaTeX Warning: Label `Figura:Capitulo 0- Seccion 0Dibujo 2' multiply defined.
 
+
+LaTeX Warning: Label `Figura:Capitulo 0- Seccion 0Dibujo 3' multiply defined.
+
+
+LaTeX Warning: Label `Figura:Capitulo 0- Seccion 0Dibujo 4' multiply defined.
+
 )
 \openout1 = `main.aux'.
 
@@ -2568,37 +2574,42 @@ rafos/Dibujo 41.pdf
 
 pdfTeX warning: pdflatex (file ./Figuras/Introduccion-a-grafos/Dibujo 41.pdf): 
 PDF inclusion: multiple pdfs with page group included in a single page
->]
-<./Editor de Grafos/Figuras/Clase 8/Dibujo 3.pdf, id=789, 455.30101pt x 261.702
-06pt>
-File: ./Editor de Grafos/Figuras/Clase 8/Dibujo 3.pdf Graphic file (type pdf)
-<use ./Editor de Grafos/Figuras/Clase 8/Dibujo 3.pdf>
-Package pdftex.def Info: ./Editor de Grafos/Figuras/Clase 8/Dibujo 3.pdf  used 
-on input line 1490.
-(pdftex.def)             Requested size: 341.43436pt x 196.26007pt.
-
+>] [41 <./Figuras/Introduccion-a-grafos/Dibujo 42.pdf>]
+(./Figuras/Introduccion-a-grafos/Dibujo 43.pdf_tex
+<Figuras/Introduccion-a-grafos/Dibujo 43.pdf, id=798, page=1, 469.47046pt x 250
+.38426pt>
+File: Figuras/Introduccion-a-grafos/Dibujo 43.pdf Graphic file (type pdf)
+<use Figuras/Introduccion-a-grafos/Dibujo 43.pdf, page 1>
+Package pdftex.def Info: Figuras/Introduccion-a-grafos/Dibujo 43.pdf , page1 us
+ed on input line 56.
+(pdftex.def)             Requested size: 426.79134pt x 227.62079pt.
+)
 
 Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 1490.
+(caption)                particular \caption on input line 1494.
 See the caption package documentation for explanation.
 
-[41 <./Figuras/Introduccion-a-grafos/Dibujo 42.pdf>]
-<./Editor de Grafos/Figuras/Clase 8/Dibujo 4.pdf, id=799, 455.30101pt x 241.734
-62pt>
-File: ./Editor de Grafos/Figuras/Clase 8/Dibujo 4.pdf Graphic file (type pdf)
-<use ./Editor de Grafos/Figuras/Clase 8/Dibujo 4.pdf>
-Package pdftex.def Info: ./Editor de Grafos/Figuras/Clase 8/Dibujo 4.pdf  used 
-on input line 1508.
-(pdftex.def)             Requested size: 341.43436pt x 181.28575pt.
-
+(./Figuras/Introduccion-a-grafos/Dibujo 44.pdf_tex
+<Figuras/Introduccion-a-grafos/Dibujo 44.pdf, id=799, page=1, 469.47046pt x 250
+.38426pt>
+File: Figuras/Introduccion-a-grafos/Dibujo 44.pdf Graphic file (type pdf)
+<use Figuras/Introduccion-a-grafos/Dibujo 44.pdf, page 1>
+Package pdftex.def Info: Figuras/Introduccion-a-grafos/Dibujo 44.pdf , page1 us
+ed on input line 56.
+(pdftex.def)             Requested size: 426.79134pt x 227.62079pt.
+)
 
 Package caption Warning: The option `hypcap=true' will be ignored for this
 (caption)                particular \caption on input line 1508.
 See the caption package documentation for explanation.
 
-[42 <./Editor de Grafos/Figuras/Clase 8/Dibujo 3.pdf> <./Editor de Grafos/Figur
-as/Clase 8/Dibujo 4.pdf>] (./Editor de Grafos/Figuras/Clase 8/Dibujo 5.pdf_tex
-<./Editor de Grafos/Figuras/Clase 8/Dibujo 5.pdf, id=852, page=1, 469.47046pt x
+[42 <./Figuras/Introduccion-a-grafos/Dibujo 43.pdf> <./Figuras/Introduccion-a-g
+rafos/Dibujo 44.pdf
+
+pdfTeX warning: pdflatex (file ./Figuras/Introduccion-a-grafos/Dibujo 44.pdf): 
+PDF inclusion: multiple pdfs with page group included in a single page
+>] (./Editor de Grafos/Figuras/Clase 8/Dibujo 5.pdf_tex
+<./Editor de Grafos/Figuras/Clase 8/Dibujo 5.pdf, id=815, page=1, 469.47046pt x
  249.95587pt>
 File: ./Editor de Grafos/Figuras/Clase 8/Dibujo 5.pdf Graphic file (type pdf)
 <use ./Editor de Grafos/Figuras/Clase 8/Dibujo 5.pdf, page 1>
@@ -2611,7 +2622,7 @@ Package caption Warning: The option `hypcap=true' will be ignored for this
 (caption)                particular \caption on input line 1526.
 See the caption package documentation for explanation.
 
-<./Editor de Grafos/Figuras/Clase 8/Dibujo 6.pdf, id=853, 455.30101pt x 199.476
+<./Editor de Grafos/Figuras/Clase 8/Dibujo 6.pdf, id=816, 455.30101pt x 199.476
 93pt>
 File: ./Editor de Grafos/Figuras/Clase 8/Dibujo 6.pdf Graphic file (type pdf)
 <use ./Editor de Grafos/Figuras/Clase 8/Dibujo 6.pdf>
@@ -2633,7 +2644,7 @@ LaTeX Font Warning: Font shape `T1/fnc/m/scit' undefined
 (Font)              using `T1/fnc/m/sc' instead on input line 1560.
 
 [44 <./Editor de Grafos/Figuras/Clase 8/Dibujo 6.pdf>]
-<./Editor de Grafos/Figuras/Clase 8/Dibujo 7.pdf, id=888, 455.1099pt x 303.5389
+<./Editor de Grafos/Figuras/Clase 8/Dibujo 7.pdf, id=852, 455.1099pt x 303.5389
 9pt>
 File: ./Editor de Grafos/Figuras/Clase 8/Dibujo 7.pdf Graphic file (type pdf)
 <use ./Editor de Grafos/Figuras/Clase 8/Dibujo 7.pdf>
@@ -2646,7 +2657,7 @@ Package caption Warning: The option `hypcap=true' will be ignored for this
 (caption)                particular \caption on input line 1566.
 See the caption package documentation for explanation.
 
-<./Editor de Grafos/Figuras/Clase 8/Dibujo 8.pdf, id=889, 455.30101pt x 254.289
+<./Editor de Grafos/Figuras/Clase 8/Dibujo 8.pdf, id=853, 455.30101pt x 254.289
 86pt>
 File: ./Editor de Grafos/Figuras/Clase 8/Dibujo 8.pdf Graphic file (type pdf)
 <use ./Editor de Grafos/Figuras/Clase 8/Dibujo 8.pdf>
@@ -2660,7 +2671,7 @@ See the caption package documentation for explanation.
 
 [45 <./Editor de Grafos/Figuras/Clase 8/Dibujo 7.pdf> <./Editor de Grafos/Figur
 as/Clase 8/Dibujo 8.pdf>]
-<./Editor de Grafos/Figuras/Clase 9/Dibujo 1.pdf, id=931, 455.30101pt x 315.809
+<./Editor de Grafos/Figuras/Clase 9/Dibujo 1.pdf, id=895, 455.30101pt x 315.809
 4pt>
 File: ./Editor de Grafos/Figuras/Clase 9/Dibujo 1.pdf Graphic file (type pdf)
 <use ./Editor de Grafos/Figuras/Clase 9/Dibujo 1.pdf>
@@ -2674,7 +2685,7 @@ Package caption Warning: The option `hypcap=true' will be ignored for this
 See the caption package documentation for explanation.
 
 [46 <./Editor de Grafos/Figuras/Clase 9/Dibujo 1.pdf>]
-<./Editor de Grafos/Figuras/Clase 9/Dibujo 2.pdf, id=952, 455.30101pt x 175.260
+<./Editor de Grafos/Figuras/Clase 9/Dibujo 2.pdf, id=916, 455.30101pt x 175.260
 88pt>
 File: ./Editor de Grafos/Figuras/Clase 9/Dibujo 2.pdf Graphic file (type pdf)
 <use ./Editor de Grafos/Figuras/Clase 9/Dibujo 2.pdf>
@@ -2695,7 +2706,7 @@ LaTeX Font Warning: Font shape `T1/fnc/m/scit' undefined
 LaTeX Font Warning: Font shape `T1/fnc/m/scit' undefined
 (Font)              using `T1/fnc/m/sc' instead on input line 1602.
 
-<./Editor de Grafos/Figuras/Clase 10/Dibujo 1.pdf, id=953, 455.30101pt x 169.24
+<./Editor de Grafos/Figuras/Clase 10/Dibujo 1.pdf, id=917, 455.30101pt x 169.24
 695pt>
 File: ./Editor de Grafos/Figuras/Clase 10/Dibujo 1.pdf Graphic file (type pdf)
 <use ./Editor de Grafos/Figuras/Clase 10/Dibujo 1.pdf>
@@ -2708,7 +2719,7 @@ Package caption Warning: The option `hypcap=true' will be ignored for this
 See the caption package documentation for explanation.
 
 [47 <./Editor de Grafos/Figuras/Clase 9/Dibujo 2.pdf>]
-<./Editor de Grafos/Figuras/Clase 10/Dibujo 2.pdf, id=979, 455.30101pt x 216.78
+<./Editor de Grafos/Figuras/Clase 10/Dibujo 2.pdf, id=943, 455.30101pt x 216.78
 082pt>
 File: ./Editor de Grafos/Figuras/Clase 10/Dibujo 2.pdf Graphic file (type pdf)
 <use ./Editor de Grafos/Figuras/Clase 10/Dibujo 2.pdf>
@@ -2721,7 +2732,7 @@ Package caption Warning: The option `hypcap=true' will be ignored for this
 (caption)                particular \caption on input line 1643.
 See the caption package documentation for explanation.
 
-<./Editor de Grafos/Figuras/Clase 10/Dibujo 3.pdf, id=980, 455.30101pt x 119.94
+<./Editor de Grafos/Figuras/Clase 10/Dibujo 3.pdf, id=944, 455.30101pt x 119.94
 185pt>
 File: ./Editor de Grafos/Figuras/Clase 10/Dibujo 3.pdf Graphic file (type pdf)
 <use ./Editor de Grafos/Figuras/Clase 10/Dibujo 3.pdf>
@@ -2735,8 +2746,8 @@ See the caption package documentation for explanation.
 
 [48 <./Editor de Grafos/Figuras/Clase 10/Dibujo 1.pdf> <./Editor de Grafos/Figu
 ras/Clase 10/Dibujo 2.pdf>]
-<./Editor de Grafos/Figuras/Clase 10/Dibujo 4.pdf, id=1016, 455.30101pt x 142.8
-814pt>
+<./Editor de Grafos/Figuras/Clase 10/Dibujo 4.pdf, id=980, 455.30101pt x 142.88
+14pt>
 File: ./Editor de Grafos/Figuras/Clase 10/Dibujo 4.pdf Graphic file (type pdf)
 <use ./Editor de Grafos/Figuras/Clase 10/Dibujo 4.pdf>
 Package pdftex.def Info: ./Editor de Grafos/Figuras/Clase 10/Dibujo 4.pdf  used
@@ -2748,8 +2759,8 @@ Package caption Warning: The option `hypcap=true' will be ignored for this
 (caption)                particular \caption on input line 1654.
 See the caption package documentation for explanation.
 
-<./Editor de Grafos/Figuras/Clase 10/Dibujo 5.pdf, id=1017, 455.30101pt x 248.9
-3697pt>
+<./Editor de Grafos/Figuras/Clase 10/Dibujo 5.pdf, id=981, 455.30101pt x 248.93
+697pt>
 File: ./Editor de Grafos/Figuras/Clase 10/Dibujo 5.pdf Graphic file (type pdf)
 <use ./Editor de Grafos/Figuras/Clase 10/Dibujo 5.pdf>
 Package pdftex.def Info: ./Editor de Grafos/Figuras/Clase 10/Dibujo 5.pdf  used
@@ -2760,8 +2771,8 @@ Package caption Warning: The option `hypcap=true' will be ignored for this
 (caption)                particular \caption on input line 1661.
 See the caption package documentation for explanation.
 
-<./Editor de Grafos/Figuras/Clase 10/Dibujo 6.pdf, id=1018, 455.30101pt x 213.9
-1039pt>
+<./Editor de Grafos/Figuras/Clase 10/Dibujo 6.pdf, id=982, 455.30101pt x 213.91
+039pt>
 File: ./Editor de Grafos/Figuras/Clase 10/Dibujo 6.pdf Graphic file (type pdf)
 <use ./Editor de Grafos/Figuras/Clase 10/Dibujo 6.pdf>
 Package pdftex.def Info: ./Editor de Grafos/Figuras/Clase 10/Dibujo 6.pdf  used
@@ -2791,7 +2802,7 @@ LaTeX Font Warning: Font shape `T1/fnc/m/scit' undefined
 (Font)              using `T1/fnc/m/sc' instead on input line 1694.
 
 [50 <./Editor de Grafos/Figuras/Clase 10/Dibujo 6.pdf>] [51]
-<./Editor de Grafos/Figuras/Ejercicios/Dibujo 1.pdf, id=1130, 455.30101pt x 318
+<./Editor de Grafos/Figuras/Ejercicios/Dibujo 1.pdf, id=1094, 455.30101pt x 318
 .88486pt>
 File: ./Editor de Grafos/Figuras/Ejercicios/Dibujo 1.pdf Graphic file (type pdf
 )
@@ -2804,7 +2815,7 @@ Overfull \hbox (28.50856pt too wide) in paragraph at lines 1798--1799
  [][] 
  []
 
-<./Editor de Grafos/Figuras/Ejercicios/Dibujo 2.pdf, id=1131, 455.30101pt x 319
+<./Editor de Grafos/Figuras/Ejercicios/Dibujo 2.pdf, id=1095, 455.30101pt x 319
 .30661pt>
 File: ./Editor de Grafos/Figuras/Ejercicios/Dibujo 2.pdf Graphic file (type pdf
 )
@@ -2820,7 +2831,7 @@ Overfull \hbox (28.50856pt too wide) in paragraph at lines 1807--1811
 [52] [53 <./Editor de Grafos/Figuras/Ejercicios/Dibujo 1.pdf>] [54 <./Editor de
  Grafos/Figuras/Ejercicios/Dibujo 2.pdf>] [55] [56] [57] [58]
 Cap\'{\i }tulo 2.
-<./Editor de Grafos/Figuras/Clase 11/Dibujo 1.pdf, id=1217, 206.93494pt x 339.3
+<./Editor de Grafos/Figuras/Clase 11/Dibujo 1.pdf, id=1180, 206.93494pt x 339.3
 4154pt>
 File: ./Editor de Grafos/Figuras/Clase 11/Dibujo 1.pdf Graphic file (type pdf)
 <use ./Editor de Grafos/Figuras/Clase 11/Dibujo 1.pdf>
@@ -2835,7 +2846,7 @@ See the caption package documentation for explanation.
 [59
 
  <./Editor de Grafos/Figuras/Clase 11/Dibujo 1.pdf>]
-<./Editor de Grafos/Figuras/Clase 11/Dibujo 2.pdf, id=1234, 455.30101pt x 218.8
+<./Editor de Grafos/Figuras/Clase 11/Dibujo 2.pdf, id=1198, 455.30101pt x 218.8
 1862pt>
 File: ./Editor de Grafos/Figuras/Clase 11/Dibujo 2.pdf Graphic file (type pdf)
 <use ./Editor de Grafos/Figuras/Clase 11/Dibujo 2.pdf>
@@ -2858,7 +2869,7 @@ cmi/m/it/12 x\U/matha/m/n/12 u\FML/fncmi/m/it/12 ; Y\U/matha/m/n/12 zt\FML/fncm
 i/m/it/12 y\U/matha/m/n/12 u$\T1/fnc/m/n/12 -
  []
 
-<./Editor de Grafos/Figuras/Clase 11/Dibujo 3.pdf, id=1240, 455.30101pt x 169.2
+<./Editor de Grafos/Figuras/Clase 11/Dibujo 3.pdf, id=1204, 455.30101pt x 169.2
 2575pt>
 File: ./Editor de Grafos/Figuras/Clase 11/Dibujo 3.pdf Graphic file (type pdf)
 <use ./Editor de Grafos/Figuras/Clase 11/Dibujo 3.pdf>
@@ -2873,7 +2884,7 @@ See the caption package documentation for explanation.
 [60 <./Editor de Grafos/Figuras/Clase 11/Dibujo 2.pdf>] [61 <./Editor de Grafos
 /Figuras/Clase 11/Dibujo 3.pdf>]
 (./Editor de Grafos/Figuras/Clase 11/Dibujo 4.pdf_tex
-<./Editor de Grafos/Figuras/Clase 11/Dibujo 4.pdf, id=1302, page=1, 469.47046pt
+<./Editor de Grafos/Figuras/Clase 11/Dibujo 4.pdf, id=1266, page=1, 469.47046pt
  x 249.95587pt>
 File: ./Editor de Grafos/Figuras/Clase 11/Dibujo 4.pdf Graphic file (type pdf)
 <use ./Editor de Grafos/Figuras/Clase 11/Dibujo 4.pdf, page 1>
@@ -2913,7 +2924,7 @@ LaTeX Font Info:    Undo math alphabet allocation in version normal on input li
 ne 2183.
 LaTeX Font Info:    Undo math alphabet allocation in version normal on input li
 ne 2185.
-<./Editor de Grafos/Figuras/Clase 11/Dibujo 5.pdf, id=1310, 455.30101pt x 168.8
+<./Editor de Grafos/Figuras/Clase 11/Dibujo 5.pdf, id=1274, 455.30101pt x 168.8
 757pt>
 File: ./Editor de Grafos/Figuras/Clase 11/Dibujo 5.pdf Graphic file (type pdf)
 <use ./Editor de Grafos/Figuras/Clase 11/Dibujo 5.pdf>
@@ -2967,7 +2978,7 @@ LaTeX Font Info:    No math alphabet change to frozen version normal on input l
 ine 2195.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
 ine 2195.
-<./Editor de Grafos/Figuras/Clase 11/Dibujo 6.pdf, id=1322, 455.30101pt x 129.6
+<./Editor de Grafos/Figuras/Clase 11/Dibujo 6.pdf, id=1286, 455.30101pt x 129.6
 4706pt>
 File: ./Editor de Grafos/Figuras/Clase 11/Dibujo 6.pdf Graphic file (type pdf)
 <use ./Editor de Grafos/Figuras/Clase 11/Dibujo 6.pdf>
@@ -3016,7 +3027,7 @@ LaTeX Font Info:    No math alphabet change to frozen version normal on input l
 ine 2197.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
 ine 2204.
-<./Editor de Grafos/Figuras/Clase 11/Dibujo 7.pdf, id=1323, 219.68245pt x 339.3
+<./Editor de Grafos/Figuras/Clase 11/Dibujo 7.pdf, id=1287, 219.68245pt x 339.3
 4154pt>
 File: ./Editor de Grafos/Figuras/Clase 11/Dibujo 7.pdf Graphic file (type pdf)
 <use ./Editor de Grafos/Figuras/Clase 11/Dibujo 7.pdf>
@@ -3103,7 +3114,7 @@ LaTeX Font Info:    No math alphabet change to frozen version normal on input l
 ine 2237.
 LaTeX Font Info:    Undo math alphabet allocation in version normal on input li
 ne 2240.
-<./Editor de Grafos/Figuras/Clase 11/Dibujo 8.pdf, id=1379, 455.30101pt x 110.1
+<./Editor de Grafos/Figuras/Clase 11/Dibujo 8.pdf, id=1343, 455.30101pt x 110.1
 4172pt>
 File: ./Editor de Grafos/Figuras/Clase 11/Dibujo 8.pdf Graphic file (type pdf)
 <use ./Editor de Grafos/Figuras/Clase 11/Dibujo 8.pdf>
@@ -3201,7 +3212,7 @@ LaTeX Font Info:    No math alphabet change to frozen version normal on input l
 ine 2272.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
 ine 2272.
-<./Editor de Grafos/Figuras/Clase 11/Dibujo 9.pdf, id=1398, 455.30101pt x 188.2
+<./Editor de Grafos/Figuras/Clase 11/Dibujo 9.pdf, id=1361, 455.30101pt x 188.2
 7367pt>
 File: ./Editor de Grafos/Figuras/Clase 11/Dibujo 9.pdf Graphic file (type pdf)
 <use ./Editor de Grafos/Figuras/Clase 11/Dibujo 9.pdf>
@@ -3782,7 +3793,7 @@ LaTeX Font Info:    No math alphabet change to frozen version normal on input l
 ine 2420.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
 ine 2420.
-<./Editor de Grafos/Figuras/Clase 12/Dibujo 1.pdf, id=1439, 387.94536pt x 339.3
+<./Editor de Grafos/Figuras/Clase 12/Dibujo 1.pdf, id=1403, 387.94536pt x 339.3
 4154pt>
 File: ./Editor de Grafos/Figuras/Clase 12/Dibujo 1.pdf Graphic file (type pdf)
 <use ./Editor de Grafos/Figuras/Clase 12/Dibujo 1.pdf>
@@ -3858,7 +3869,7 @@ ine 2431.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
 ine 2431.
 [71 <./Editor de Grafos/Figuras/Clase 12/Dibujo 1.pdf>]
-<./Editor de Grafos/Figuras/Clase 12/Dibujo 2.pdf, id=1468, 455.30101pt x 332.6
+<./Editor de Grafos/Figuras/Clase 12/Dibujo 2.pdf, id=1432, 455.30101pt x 332.6
 6516pt>
 File: ./Editor de Grafos/Figuras/Clase 12/Dibujo 2.pdf Graphic file (type pdf)
 <use ./Editor de Grafos/Figuras/Clase 12/Dibujo 2.pdf>
@@ -4374,7 +4385,7 @@ ine 2520.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
 ine 2520.
  (./Editor de Grafos/Figuras/Clase 12/Dibujo 3.pdf_tex
-<./Editor de Grafos/Figuras/Clase 12/Dibujo 3.pdf, id=1516, page=1, 187.90742pt
+<./Editor de Grafos/Figuras/Clase 12/Dibujo 3.pdf, id=1480, page=1, 187.90742pt
  x 175.65451pt>
 File: ./Editor de Grafos/Figuras/Clase 12/Dibujo 3.pdf Graphic file (type pdf)
 <use ./Editor de Grafos/Figuras/Clase 12/Dibujo 3.pdf, page 1>
@@ -4389,7 +4400,7 @@ LaTeX Font Info:    No math alphabet change to frozen version normal on input l
 ine 58.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
 ine 58.
-<./Editor de Grafos/Figuras/Clase 12/Dibujo 3.pdf, id=1517, page=2, 187.90742pt
+<./Editor de Grafos/Figuras/Clase 12/Dibujo 3.pdf, id=1481, page=2, 187.90742pt
  x 175.65451pt>
 File: ./Editor de Grafos/Figuras/Clase 12/Dibujo 3.pdf Graphic file (type pdf)
 <use ./Editor de Grafos/Figuras/Clase 12/Dibujo 3.pdf, page 2>
@@ -4515,7 +4526,7 @@ ine 2541.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
 ine 2541.
  (./Editor de Grafos/Figuras/Clase 12/Dibujo 4.pdf_tex
-<./Editor de Grafos/Figuras/Clase 12/Dibujo 4.pdf, id=1530, page=1, 278.54062pt
+<./Editor de Grafos/Figuras/Clase 12/Dibujo 4.pdf, id=1493, page=1, 278.54062pt
  x 158.09062pt>
 File: ./Editor de Grafos/Figuras/Clase 12/Dibujo 4.pdf Graphic file (type pdf)
 <use ./Editor de Grafos/Figuras/Clase 12/Dibujo 4.pdf, page 1>
@@ -4763,7 +4774,7 @@ LaTeX Font Info:    No math alphabet change to frozen version normal on input l
 ine 2569.
 
 (./Editor de Grafos/Figuras/Clase 12/Dibujo 5.pdf_tex
-<./Editor de Grafos/Figuras/Clase 12/Dibujo 5.pdf, id=1542, page=1, 389.51353pt
+<./Editor de Grafos/Figuras/Clase 12/Dibujo 5.pdf, id=1506, page=1, 389.51353pt
  x 164.08887pt>
 File: ./Editor de Grafos/Figuras/Clase 12/Dibujo 5.pdf Graphic file (type pdf)
 <use ./Editor de Grafos/Figuras/Clase 12/Dibujo 5.pdf, page 1>
@@ -4778,7 +4789,7 @@ LaTeX Font Info:    No math alphabet change to frozen version normal on input l
 ine 58.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
 ine 58.
-<./Editor de Grafos/Figuras/Clase 12/Dibujo 5.pdf, id=1543, page=2, 389.51353pt
+<./Editor de Grafos/Figuras/Clase 12/Dibujo 5.pdf, id=1507, page=2, 389.51353pt
  x 164.08887pt>
 File: ./Editor de Grafos/Figuras/Clase 12/Dibujo 5.pdf Graphic file (type pdf)
 <use ./Editor de Grafos/Figuras/Clase 12/Dibujo 5.pdf, page 2>
@@ -4793,7 +4804,7 @@ LaTeX Font Info:    No math alphabet change to frozen version normal on input l
 ine 61.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
 ine 61.
-<./Editor de Grafos/Figuras/Clase 12/Dibujo 5.pdf, id=1544, page=3, 389.51353pt
+<./Editor de Grafos/Figuras/Clase 12/Dibujo 5.pdf, id=1508, page=3, 389.51353pt
  x 164.08887pt>
 File: ./Editor de Grafos/Figuras/Clase 12/Dibujo 5.pdf Graphic file (type pdf)
 <use ./Editor de Grafos/Figuras/Clase 12/Dibujo 5.pdf, page 3>
@@ -4804,7 +4815,7 @@ LaTeX Font Info:    No math alphabet change to frozen version normal on input l
 ine 63.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
 ine 63.
-<./Editor de Grafos/Figuras/Clase 12/Dibujo 5.pdf, id=1545, page=4, 389.51353pt
+<./Editor de Grafos/Figuras/Clase 12/Dibujo 5.pdf, id=1509, page=4, 389.51353pt
  x 164.08887pt>
 File: ./Editor de Grafos/Figuras/Clase 12/Dibujo 5.pdf Graphic file (type pdf)
 <use ./Editor de Grafos/Figuras/Clase 12/Dibujo 5.pdf, page 4>
@@ -4819,7 +4830,7 @@ LaTeX Font Info:    No math alphabet change to frozen version normal on input l
 ine 66.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
 ine 66.
-<./Editor de Grafos/Figuras/Clase 12/Dibujo 5.pdf, id=1546, page=5, 389.51353pt
+<./Editor de Grafos/Figuras/Clase 12/Dibujo 5.pdf, id=1510, page=5, 389.51353pt
  x 164.08887pt>
 File: ./Editor de Grafos/Figuras/Clase 12/Dibujo 5.pdf Graphic file (type pdf)
 <use ./Editor de Grafos/Figuras/Clase 12/Dibujo 5.pdf, page 5>
@@ -5203,7 +5214,7 @@ ine 2674.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
 ine 2674.
  [80] (./Editor de Grafos/Figuras/Clase 12/Dibujo 6.pdf_tex
-<./Editor de Grafos/Figuras/Clase 12/Dibujo 6.pdf, id=1605, page=1, 469.47046pt
+<./Editor de Grafos/Figuras/Clase 12/Dibujo 6.pdf, id=1569, page=1, 469.47046pt
  x 249.95587pt>
 File: ./Editor de Grafos/Figuras/Clase 12/Dibujo 6.pdf Graphic file (type pdf)
 <use ./Editor de Grafos/Figuras/Clase 12/Dibujo 6.pdf, page 1>
@@ -6157,7 +6168,7 @@ ine 2865.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
 ine 2865.
  (./Editor de Grafos/Figuras/Clase 12/Dibujo 7.pdf_tex
-<./Editor de Grafos/Figuras/Clase 12/Dibujo 7.pdf, id=1653, page=1, 469.47046pt
+<./Editor de Grafos/Figuras/Clase 12/Dibujo 7.pdf, id=1616, page=1, 469.47046pt
  x 284.55032pt>
 File: ./Editor de Grafos/Figuras/Clase 12/Dibujo 7.pdf Graphic file (type pdf)
 <use ./Editor de Grafos/Figuras/Clase 12/Dibujo 7.pdf, page 1>
@@ -6765,7 +6776,7 @@ ine 2993.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
 ine 2993.
  [90]
-<./Editor de Grafos/Figuras/Clase 12/Dibujo 8.pdf, id=1708, 330.58963pt x 339.6
+<./Editor de Grafos/Figuras/Clase 12/Dibujo 8.pdf, id=1672, 330.58963pt x 339.6
 6899pt>
 File: ./Editor de Grafos/Figuras/Clase 12/Dibujo 8.pdf Graphic file (type pdf)
 <use ./Editor de Grafos/Figuras/Clase 12/Dibujo 8.pdf>
@@ -7115,7 +7126,7 @@ ine 3072.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
 ine 3072.
  (./Editor de Grafos/Figuras/Clase 12/Dibujo 9.pdf_tex
-<./Editor de Grafos/Figuras/Clase 12/Dibujo 9.pdf, id=1738, page=1, 469.47046pt
+<./Editor de Grafos/Figuras/Clase 12/Dibujo 9.pdf, id=1702, page=1, 469.47046pt
  x 249.95587pt>
 File: ./Editor de Grafos/Figuras/Clase 12/Dibujo 9.pdf Graphic file (type pdf)
 <use ./Editor de Grafos/Figuras/Clase 12/Dibujo 9.pdf, page 1>
@@ -7296,7 +7307,7 @@ ine 3114.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
 ine 3114.
 (./Editor de Grafos/Figuras/Clase 13/Dibujo 1.pdf_tex
-<./Editor de Grafos/Figuras/Clase 13/Dibujo 1.pdf, id=1754, page=1, 469.47046pt
+<./Editor de Grafos/Figuras/Clase 13/Dibujo 1.pdf, id=1718, page=1, 469.47046pt
  x 249.95587pt>
 File: ./Editor de Grafos/Figuras/Clase 13/Dibujo 1.pdf Graphic file (type pdf)
 <use ./Editor de Grafos/Figuras/Clase 13/Dibujo 1.pdf, page 1>
@@ -7307,7 +7318,7 @@ LaTeX Font Info:    No math alphabet change to frozen version normal on input l
 ine 58.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
 ine 58.
-<./Editor de Grafos/Figuras/Clase 13/Dibujo 1.pdf, id=1755, page=2, 469.47046pt
+<./Editor de Grafos/Figuras/Clase 13/Dibujo 1.pdf, id=1719, page=2, 469.47046pt
  x 249.95587pt>
 File: ./Editor de Grafos/Figuras/Clase 13/Dibujo 1.pdf Graphic file (type pdf)
 <use ./Editor de Grafos/Figuras/Clase 13/Dibujo 1.pdf, page 2>
@@ -7330,7 +7341,7 @@ LaTeX Font Info:    No math alphabet change to frozen version normal on input l
 ine 63.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
 ine 63.
-<./Editor de Grafos/Figuras/Clase 13/Dibujo 1.pdf, id=1756, page=3, 469.47046pt
+<./Editor de Grafos/Figuras/Clase 13/Dibujo 1.pdf, id=1720, page=3, 469.47046pt
  x 249.95587pt>
 File: ./Editor de Grafos/Figuras/Clase 13/Dibujo 1.pdf Graphic file (type pdf)
 <use ./Editor de Grafos/Figuras/Clase 13/Dibujo 1.pdf, page 3>
@@ -7434,7 +7445,7 @@ ine 3129.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
 ine 3129.
 (./Editor de Grafos/Figuras/Clase 13/Dibujo 2.pdf_tex
-<./Editor de Grafos/Figuras/Clase 13/Dibujo 2.pdf, id=1769, page=1, 469.88504pt
+<./Editor de Grafos/Figuras/Clase 13/Dibujo 2.pdf, id=1732, page=1, 469.88504pt
  x 180.4443pt>
 File: ./Editor de Grafos/Figuras/Clase 13/Dibujo 2.pdf Graphic file (type pdf)
 <use ./Editor de Grafos/Figuras/Clase 13/Dibujo 2.pdf, page 1>
@@ -7556,7 +7567,7 @@ ine 3167.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
 ine 3170.
  (./Editor de Grafos/Figuras/Clase 13/Dibujo 3.pdf_tex
-<./Editor de Grafos/Figuras/Clase 13/Dibujo 3.pdf, id=1784, page=1, 254.3717pt 
+<./Editor de Grafos/Figuras/Clase 13/Dibujo 3.pdf, id=1748, page=1, 254.3717pt 
 x 249.95587pt>
 File: ./Editor de Grafos/Figuras/Clase 13/Dibujo 3.pdf Graphic file (type pdf)
 <use ./Editor de Grafos/Figuras/Clase 13/Dibujo 3.pdf, page 1>
@@ -7610,7 +7621,7 @@ LaTeX Font Info:    No math alphabet change to frozen version normal on input l
 ine 3188.
 
 (./Editor de Grafos/Figuras/Clase 14/Dibujo 1.pdf_tex
-<./Editor de Grafos/Figuras/Clase 14/Dibujo 1.pdf, id=1801, page=1, 469.47046pt
+<./Editor de Grafos/Figuras/Clase 14/Dibujo 1.pdf, id=1765, page=1, 469.47046pt
  x 249.95587pt>
 File: ./Editor de Grafos/Figuras/Clase 14/Dibujo 1.pdf Graphic file (type pdf)
 <use ./Editor de Grafos/Figuras/Clase 14/Dibujo 1.pdf, page 1>
@@ -7641,7 +7652,7 @@ LaTeX Font Info:    No math alphabet change to frozen version normal on input l
 ine 62.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
 ine 62.
-<./Editor de Grafos/Figuras/Clase 14/Dibujo 1.pdf, id=1802, page=2, 469.47046pt
+<./Editor de Grafos/Figuras/Clase 14/Dibujo 1.pdf, id=1766, page=2, 469.47046pt
  x 249.95587pt>
 File: ./Editor de Grafos/Figuras/Clase 14/Dibujo 1.pdf Graphic file (type pdf)
 <use ./Editor de Grafos/Figuras/Clase 14/Dibujo 1.pdf, page 2>
@@ -7715,7 +7726,7 @@ ine 3196.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
 ine 3196.
 (./Editor de Grafos/Figuras/Clase 14/Dibujo 2.pdf_tex
-<./Editor de Grafos/Figuras/Clase 14/Dibujo 2.pdf, id=1803, page=1, 602.25pt x 
+<./Editor de Grafos/Figuras/Clase 14/Dibujo 2.pdf, id=1767, page=1, 602.25pt x 
 249.95587pt>
 File: ./Editor de Grafos/Figuras/Clase 14/Dibujo 2.pdf Graphic file (type pdf)
 <use ./Editor de Grafos/Figuras/Clase 14/Dibujo 2.pdf, page 1>
@@ -7920,7 +7931,7 @@ ine 3224.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
 ine 3224.
 (./Editor de Grafos/Figuras/Clase 14/Dibujo 3.pdf_tex
-<./Editor de Grafos/Figuras/Clase 14/Dibujo 3.pdf, id=1821, page=1, 469.47046pt
+<./Editor de Grafos/Figuras/Clase 14/Dibujo 3.pdf, id=1785, page=1, 469.47046pt
  x 214.47469pt>
 File: ./Editor de Grafos/Figuras/Clase 14/Dibujo 3.pdf Graphic file (type pdf)
 <use ./Editor de Grafos/Figuras/Clase 14/Dibujo 3.pdf, page 1>
@@ -8046,7 +8057,7 @@ LaTeX Font Info:    No math alphabet change to frozen version normal on input l
 ine 3228.
 
 (./Editor de Grafos/Figuras/Clase 14/Dibujo 4.pdf_tex
-<./Editor de Grafos/Figuras/Clase 14/Dibujo 4.pdf, id=1834, page=1, 469.82503pt
+<./Editor de Grafos/Figuras/Clase 14/Dibujo 4.pdf, id=1798, page=1, 469.82503pt
  x 251.17279pt>
 File: ./Editor de Grafos/Figuras/Clase 14/Dibujo 4.pdf Graphic file (type pdf)
 <use ./Editor de Grafos/Figuras/Clase 14/Dibujo 4.pdf, page 1>
@@ -8443,7 +8454,7 @@ LaTeX Font Info:    No math alphabet change to frozen version normal on input l
 ine 3321.
 
 (./Editor de Grafos/Figuras/Clase 15/Dibujo 1.pdf_tex
-<./Editor de Grafos/Figuras/Clase 15/Dibujo 1.pdf, id=1871, page=1, 469.47046pt
+<./Editor de Grafos/Figuras/Clase 15/Dibujo 1.pdf, id=1835, page=1, 469.47046pt
  x 249.95587pt>
 File: ./Editor de Grafos/Figuras/Clase 15/Dibujo 1.pdf Graphic file (type pdf)
 <use ./Editor de Grafos/Figuras/Clase 15/Dibujo 1.pdf, page 1>
@@ -8512,7 +8523,7 @@ ine 3335.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
 ine 3335.
  (./Editor de Grafos/Figuras/Clase 15/Dibujo 2.pdf_tex
-<./Editor de Grafos/Figuras/Clase 15/Dibujo 2.pdf, id=1881, page=1, 577.8179pt 
+<./Editor de Grafos/Figuras/Clase 15/Dibujo 2.pdf, id=1844, page=1, 577.8179pt 
 x 249.95587pt>
 File: ./Editor de Grafos/Figuras/Clase 15/Dibujo 2.pdf Graphic file (type pdf)
 <use ./Editor de Grafos/Figuras/Clase 15/Dibujo 2.pdf, page 1>
@@ -8581,7 +8592,7 @@ uras/Clase 15/Dibujo 2.pdf
 pdfTeX warning: pdflatex (file ./Editor de Grafos/Figuras/Clase 15/Dibujo 2.pdf
 ): PDF inclusion: multiple pdfs with page group included in a single page
 >] (./Editor de Grafos/Figuras/Clase 15/Dibujo 3.pdf_tex
-<./Editor de Grafos/Figuras/Clase 15/Dibujo 3.pdf, id=1892, page=1, 469.47046pt
+<./Editor de Grafos/Figuras/Clase 15/Dibujo 3.pdf, id=1856, page=1, 469.47046pt
  x 249.95587pt>
 File: ./Editor de Grafos/Figuras/Clase 15/Dibujo 3.pdf Graphic file (type pdf)
 <use ./Editor de Grafos/Figuras/Clase 15/Dibujo 3.pdf, page 1>
@@ -8755,7 +8766,7 @@ LaTeX Font Info:    No math alphabet change to frozen version normal on input l
 ine 3384.
 
 (./Editor de Grafos/Figuras/Clase 15/Dibujo 4.pdf_tex
-<./Editor de Grafos/Figuras/Clase 15/Dibujo 4.pdf, id=1912, page=1, 469.47046pt
+<./Editor de Grafos/Figuras/Clase 15/Dibujo 4.pdf, id=1876, page=1, 469.47046pt
  x 249.95587pt>
 File: ./Editor de Grafos/Figuras/Clase 15/Dibujo 4.pdf Graphic file (type pdf)
 <use ./Editor de Grafos/Figuras/Clase 15/Dibujo 4.pdf, page 1>
@@ -8844,7 +8855,7 @@ LaTeX Font Info:    No math alphabet change to frozen version normal on input l
 ine 3394.
 [105 <./Editor de Grafos/Figuras/Clase 15/Dibujo 4.pdf>]
 (./Editor de Grafos/Figuras/Clase 15/Dibujo 5.pdf_tex
-<./Editor de Grafos/Figuras/Clase 15/Dibujo 5.pdf, id=1922, page=1, 469.47046pt
+<./Editor de Grafos/Figuras/Clase 15/Dibujo 5.pdf, id=1886, page=1, 469.47046pt
  x 249.95587pt>
 File: ./Editor de Grafos/Figuras/Clase 15/Dibujo 5.pdf Graphic file (type pdf)
 <use ./Editor de Grafos/Figuras/Clase 15/Dibujo 5.pdf, page 1>
@@ -9052,7 +9063,7 @@ LaTeX Font Info:    No math alphabet change to frozen version normal on input l
 ine 3438.
 
 (./Editor de Grafos/Figuras/Clase 15/Dibujo 6.pdf_tex
-<./Editor de Grafos/Figuras/Clase 15/Dibujo 6.pdf, id=1934, page=1, 469.47046pt
+<./Editor de Grafos/Figuras/Clase 15/Dibujo 6.pdf, id=1898, page=1, 469.47046pt
  x 249.95587pt>
 File: ./Editor de Grafos/Figuras/Clase 15/Dibujo 6.pdf Graphic file (type pdf)
 <use ./Editor de Grafos/Figuras/Clase 15/Dibujo 6.pdf, page 1>
@@ -9091,7 +9102,7 @@ LaTeX Font Info:    No math alphabet change to frozen version normal on input l
 ine 64.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
 ine 64.
-<./Editor de Grafos/Figuras/Clase 15/Dibujo 6.pdf, id=1935, page=2, 469.47046pt
+<./Editor de Grafos/Figuras/Clase 15/Dibujo 6.pdf, id=1899, page=2, 469.47046pt
  x 249.95587pt>
 File: ./Editor de Grafos/Figuras/Clase 15/Dibujo 6.pdf Graphic file (type pdf)
 <use ./Editor de Grafos/Figuras/Clase 15/Dibujo 6.pdf, page 2>
@@ -9157,7 +9168,7 @@ pdfTeX warning: pdflatex (file ./Editor de Grafos/Figuras/Clase 15/Dibujo 6.pdf
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
 ine 3459.
  (./Editor de Grafos/Figuras/Clase 15/Dibujo 7.pdf_tex
-<./Editor de Grafos/Figuras/Clase 15/Dibujo 7.pdf, id=1947, page=1, 521.13806pt
+<./Editor de Grafos/Figuras/Clase 15/Dibujo 7.pdf, id=1911, page=1, 521.13806pt
  x 249.95587pt>
 File: ./Editor de Grafos/Figuras/Clase 15/Dibujo 7.pdf Graphic file (type pdf)
 <use ./Editor de Grafos/Figuras/Clase 15/Dibujo 7.pdf, page 1>
@@ -9305,7 +9316,7 @@ ine 3469.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
 ine 3469.
 (./Editor de Grafos/Figuras/Clase 15/Dibujo 8.pdf_tex
-<./Editor de Grafos/Figuras/Clase 15/Dibujo 8.pdf, id=1948, page=1, 521.13806pt
+<./Editor de Grafos/Figuras/Clase 15/Dibujo 8.pdf, id=1912, page=1, 521.13806pt
  x 249.95587pt>
 File: ./Editor de Grafos/Figuras/Clase 15/Dibujo 8.pdf Graphic file (type pdf)
 <use ./Editor de Grafos/Figuras/Clase 15/Dibujo 8.pdf, page 1>
@@ -9596,7 +9607,7 @@ LaTeX Font Info:    No math alphabet change to frozen version normal on input l
 ine 3510.
 
 (./Editor de Grafos/Figuras/Clase 15/Dibujo 9.pdf_tex
-<./Editor de Grafos/Figuras/Clase 15/Dibujo 9.pdf, id=1976, page=1, 469.47046pt
+<./Editor de Grafos/Figuras/Clase 15/Dibujo 9.pdf, id=1940, page=1, 469.47046pt
  x 249.95587pt>
 File: ./Editor de Grafos/Figuras/Clase 15/Dibujo 9.pdf Graphic file (type pdf)
 <use ./Editor de Grafos/Figuras/Clase 15/Dibujo 9.pdf, page 1>
@@ -9883,7 +9894,7 @@ LaTeX Font Info:    No math alphabet change to frozen version normal on input l
 ine 3583.
 
 (./Editor de Grafos/Figuras/Clase 16/Dibujo 1.pdf_tex
-<./Editor de Grafos/Figuras/Clase 16/Dibujo 1.pdf, id=2000, page=1, 469.47046pt
+<./Editor de Grafos/Figuras/Clase 16/Dibujo 1.pdf, id=1964, page=1, 469.47046pt
  x 249.95587pt>
 File: ./Editor de Grafos/Figuras/Clase 16/Dibujo 1.pdf Graphic file (type pdf)
 <use ./Editor de Grafos/Figuras/Clase 16/Dibujo 1.pdf, page 1>
@@ -9937,7 +9948,7 @@ ine 3585.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
 ine 3585.
  (./Editor de Grafos/Figuras/Clase 16/Dibujo 2.pdf_tex
-<./Editor de Grafos/Figuras/Clase 16/Dibujo 2.pdf, id=2010, page=1, 470.98485pt
+<./Editor de Grafos/Figuras/Clase 16/Dibujo 2.pdf, id=1973, page=1, 470.98485pt
  x 184.55751pt>
 File: ./Editor de Grafos/Figuras/Clase 16/Dibujo 2.pdf Graphic file (type pdf)
 <use ./Editor de Grafos/Figuras/Clase 16/Dibujo 2.pdf, page 1>
@@ -9978,7 +9989,7 @@ ine 3587.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
 ine 3587.
 (./Editor de Grafos/Figuras/Clase 16/Dibujo 3.pdf_tex
-<./Editor de Grafos/Figuras/Clase 16/Dibujo 3.pdf, id=2011, page=1, 343.57094pt
+<./Editor de Grafos/Figuras/Clase 16/Dibujo 3.pdf, id=1974, page=1, 343.57094pt
  x 249.95587pt>
 File: ./Editor de Grafos/Figuras/Clase 16/Dibujo 3.pdf Graphic file (type pdf)
 <use ./Editor de Grafos/Figuras/Clase 16/Dibujo 3.pdf, page 1>
@@ -10072,7 +10083,7 @@ ine 3605.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
 ine 3605.
  (./Editor de Grafos/Figuras/Clase 16/Dibujo 4.pdf_tex
-<./Editor de Grafos/Figuras/Clase 16/Dibujo 4.pdf, id=2022, page=1, 469.47046pt
+<./Editor de Grafos/Figuras/Clase 16/Dibujo 4.pdf, id=1986, page=1, 469.47046pt
  x 249.95587pt>
 File: ./Editor de Grafos/Figuras/Clase 16/Dibujo 4.pdf Graphic file (type pdf)
 <use ./Editor de Grafos/Figuras/Clase 16/Dibujo 4.pdf, page 1>
@@ -10280,7 +10291,7 @@ LaTeX Font Info:    No math alphabet change to frozen version normal on input l
 ine 3617.
 
 (./Editor de Grafos/Figuras/Clase 16/Dibujo 5.pdf_tex
-<./Editor de Grafos/Figuras/Clase 16/Dibujo 5.pdf, id=2033, page=1, 469.47046pt
+<./Editor de Grafos/Figuras/Clase 16/Dibujo 5.pdf, id=1997, page=1, 469.47046pt
  x 249.95587pt>
 File: ./Editor de Grafos/Figuras/Clase 16/Dibujo 5.pdf Graphic file (type pdf)
 <use ./Editor de Grafos/Figuras/Clase 16/Dibujo 5.pdf, page 1>
@@ -10545,7 +10556,7 @@ ine 3730.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
 ine 3730.
 (./Editor de Grafos/Figuras/Clase 17/Dibujo 1.pdf_tex
-<./Editor de Grafos/Figuras/Clase 17/Dibujo 1.pdf, id=2085, page=1, 469.47046pt
+<./Editor de Grafos/Figuras/Clase 17/Dibujo 1.pdf, id=2049, page=1, 469.47046pt
  x 249.95587pt>
 File: ./Editor de Grafos/Figuras/Clase 17/Dibujo 1.pdf Graphic file (type pdf)
 <use ./Editor de Grafos/Figuras/Clase 17/Dibujo 1.pdf, page 1>
@@ -10657,7 +10668,7 @@ ine 3762.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
 ine 3762.
 (./Editor de Grafos/Figuras/Clase 17/Dibujo 2.pdf_tex
-<./Editor de Grafos/Figuras/Clase 17/Dibujo 2.pdf, id=2095, page=1, 469.47046pt
+<./Editor de Grafos/Figuras/Clase 17/Dibujo 2.pdf, id=2059, page=1, 469.47046pt
  x 249.95587pt>
 File: ./Editor de Grafos/Figuras/Clase 17/Dibujo 2.pdf Graphic file (type pdf)
 <use ./Editor de Grafos/Figuras/Clase 17/Dibujo 2.pdf, page 1>
@@ -10901,7 +10912,7 @@ ine 3876.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
 ine 3876.
  (./Editor de Grafos/Figuras/Clase 18/Dibujo 1.pdf_tex
-<./Editor de Grafos/Figuras/Clase 18/Dibujo 1.pdf, id=2119, page=1, 469.47046pt
+<./Editor de Grafos/Figuras/Clase 18/Dibujo 1.pdf, id=2082, page=1, 469.47046pt
  x 249.95587pt>
 File: ./Editor de Grafos/Figuras/Clase 18/Dibujo 1.pdf Graphic file (type pdf)
 <use ./Editor de Grafos/Figuras/Clase 18/Dibujo 1.pdf, page 1>
@@ -11164,7 +11175,7 @@ LaTeX Font Info:    No math alphabet change to frozen version normal on input l
 ine 3911.
 
 (./Editor de Grafos/Figuras/Clase 19/Dibujo 1.pdf_tex
-<./Editor de Grafos/Figuras/Clase 19/Dibujo 1.pdf, id=2137, page=1, 469.47046pt
+<./Editor de Grafos/Figuras/Clase 19/Dibujo 1.pdf, id=2101, page=1, 469.47046pt
  x 249.95587pt>
 File: ./Editor de Grafos/Figuras/Clase 19/Dibujo 1.pdf Graphic file (type pdf)
 <use ./Editor de Grafos/Figuras/Clase 19/Dibujo 1.pdf, page 1>
@@ -11175,7 +11186,7 @@ LaTeX Font Info:    No math alphabet change to frozen version normal on input l
 ine 57.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
 ine 57.
-<./Editor de Grafos/Figuras/Clase 19/Dibujo 1.pdf, id=2138, page=2, 469.47046pt
+<./Editor de Grafos/Figuras/Clase 19/Dibujo 1.pdf, id=2102, page=2, 469.47046pt
  x 249.95587pt>
 File: ./Editor de Grafos/Figuras/Clase 19/Dibujo 1.pdf Graphic file (type pdf)
 <use ./Editor de Grafos/Figuras/Clase 19/Dibujo 1.pdf, page 2>
@@ -11339,7 +11350,7 @@ ine 3917.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
 ine 3917.
 (./Editor de Grafos/Figuras/Clase 19/Dibujo 2.pdf_tex
-<./Editor de Grafos/Figuras/Clase 19/Dibujo 2.pdf, id=2139, page=1, 469.47046pt
+<./Editor de Grafos/Figuras/Clase 19/Dibujo 2.pdf, id=2103, page=1, 469.47046pt
  x 249.95587pt>
 File: ./Editor de Grafos/Figuras/Clase 19/Dibujo 2.pdf Graphic file (type pdf)
 <use ./Editor de Grafos/Figuras/Clase 19/Dibujo 2.pdf, page 1>
@@ -11465,7 +11476,7 @@ ine 3929.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
 ine 3932.
  (./Editor de Grafos/Figuras/Clase 19/Dibujo 3.pdf_tex
-<./Editor de Grafos/Figuras/Clase 19/Dibujo 3.pdf, id=2148, page=1, 494.36172pt
+<./Editor de Grafos/Figuras/Clase 19/Dibujo 3.pdf, id=2112, page=1, 494.36172pt
  x 249.95587pt>
 File: ./Editor de Grafos/Figuras/Clase 19/Dibujo 3.pdf Graphic file (type pdf)
 <use ./Editor de Grafos/Figuras/Clase 19/Dibujo 3.pdf, page 1>
@@ -11742,7 +11753,7 @@ LaTeX Font Info:    No math alphabet change to frozen version normal on input l
 ine 3995.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
 ine 3995.
-<./Editor de Grafos/Figuras/Clase 20/Dibujo 1 - Ejercicios.pdf, id=2171, 311.43
+<./Editor de Grafos/Figuras/Clase 20/Dibujo 1 - Ejercicios.pdf, id=2135, 311.43
 108pt x 339.34154pt>
 File: ./Editor de Grafos/Figuras/Clase 20/Dibujo 1 - Ejercicios.pdf Graphic fil
 e (type pdf)
@@ -12034,7 +12045,7 @@ LaTeX Font Info:    No math alphabet change to frozen version normal on input l
 ine 4082.
 
 (./Editor de Grafos/Figuras/Clase 20/Dibujo 1.pdf_tex
-<./Editor de Grafos/Figuras/Clase 20/Dibujo 1.pdf, id=2204, page=1, 469.47046pt
+<./Editor de Grafos/Figuras/Clase 20/Dibujo 1.pdf, id=2168, page=1, 469.47046pt
  x 249.95587pt>
 File: ./Editor de Grafos/Figuras/Clase 20/Dibujo 1.pdf Graphic file (type pdf)
 <use ./Editor de Grafos/Figuras/Clase 20/Dibujo 1.pdf, page 1>
@@ -12123,7 +12134,7 @@ LaTeX Font Info:    No math alphabet change to frozen version normal on input l
 ine 4094.
 [129 <./Editor de Grafos/Figuras/Clase 20/Dibujo 1.pdf>]
 (./Editor de Grafos/Figuras/Clase 20/Dibujo 2.pdf_tex
-<./Editor de Grafos/Figuras/Clase 20/Dibujo 2.pdf, id=2216, page=1, 469.47046pt
+<./Editor de Grafos/Figuras/Clase 20/Dibujo 2.pdf, id=2180, page=1, 469.47046pt
  x 249.95587pt>
 File: ./Editor de Grafos/Figuras/Clase 20/Dibujo 2.pdf Graphic file (type pdf)
 <use ./Editor de Grafos/Figuras/Clase 20/Dibujo 2.pdf, page 1>
@@ -12289,7 +12300,7 @@ LaTeX Font Info:    No math alphabet change to frozen version normal on input l
 ine 4134.
 
 (./Editor de Grafos/Figuras/Clase 21/Dibujo 1.pdf_tex
-<./Editor de Grafos/Figuras/Clase 21/Dibujo 1.pdf, id=2227, page=1, 469.47046pt
+<./Editor de Grafos/Figuras/Clase 21/Dibujo 1.pdf, id=2191, page=1, 469.47046pt
  x 249.95587pt>
 File: ./Editor de Grafos/Figuras/Clase 21/Dibujo 1.pdf Graphic file (type pdf)
 <use ./Editor de Grafos/Figuras/Clase 21/Dibujo 1.pdf, page 1>
@@ -12640,7 +12651,7 @@ ine 4216.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
 ine 4216.
  (./Editor de Grafos/Figuras/Clase 21/Dibujo 2.pdf_tex
-<./Editor de Grafos/Figuras/Clase 21/Dibujo 2.pdf, id=2250, page=1, 462.40292pt
+<./Editor de Grafos/Figuras/Clase 21/Dibujo 2.pdf, id=2213, page=1, 462.40292pt
  x 272.30786pt>
 File: ./Editor de Grafos/Figuras/Clase 21/Dibujo 2.pdf Graphic file (type pdf)
 <use ./Editor de Grafos/Figuras/Clase 21/Dibujo 2.pdf, page 1>
@@ -12923,7 +12934,7 @@ LaTeX Font Info:    No math alphabet change to frozen version normal on input l
 ine 4275.
 
 (./Editor de Grafos/Figuras/Clase 21/Dibujo 3.pdf_tex
-<./Editor de Grafos/Figuras/Clase 21/Dibujo 3.pdf, id=2271, page=1, 469.47046pt
+<./Editor de Grafos/Figuras/Clase 21/Dibujo 3.pdf, id=2235, page=1, 469.47046pt
  x 249.95587pt>
 File: ./Editor de Grafos/Figuras/Clase 21/Dibujo 3.pdf Graphic file (type pdf)
 <use ./Editor de Grafos/Figuras/Clase 21/Dibujo 3.pdf, page 1>
@@ -13065,7 +13076,7 @@ LaTeX Font Info:    No math alphabet change to frozen version normal on input l
 ine 4310.
 
 (./Editor de Grafos/Figuras/Clase 21/Dibujo 4.pdf_tex
-<./Editor de Grafos/Figuras/Clase 21/Dibujo 4.pdf, id=2281, page=1, 469.47046pt
+<./Editor de Grafos/Figuras/Clase 21/Dibujo 4.pdf, id=2245, page=1, 469.47046pt
  x 249.95587pt>
 File: ./Editor de Grafos/Figuras/Clase 21/Dibujo 4.pdf Graphic file (type pdf)
 <use ./Editor de Grafos/Figuras/Clase 21/Dibujo 4.pdf, page 1>
@@ -13717,7 +13728,7 @@ ine 4447.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
 ine 4447.
  (./Editor de Grafos/Figuras/Clase 22/Dibujo 1.pdf_tex
-<./Editor de Grafos/Figuras/Clase 22/Dibujo 1.pdf, id=2329, page=1, 469.47046pt
+<./Editor de Grafos/Figuras/Clase 22/Dibujo 1.pdf, id=2293, page=1, 469.47046pt
  x 249.95587pt>
 File: ./Editor de Grafos/Figuras/Clase 22/Dibujo 1.pdf Graphic file (type pdf)
 <use ./Editor de Grafos/Figuras/Clase 22/Dibujo 1.pdf, page 1>
@@ -13787,7 +13798,7 @@ ine 4455.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
 ine 4455.
 (./Editor de Grafos/Figuras/Clase 22/Dibujo 2.pdf_tex
-<./Editor de Grafos/Figuras/Clase 22/Dibujo 2.pdf, id=2330, page=1, 469.47046pt
+<./Editor de Grafos/Figuras/Clase 22/Dibujo 2.pdf, id=2294, page=1, 469.47046pt
  x 249.95587pt>
 File: ./Editor de Grafos/Figuras/Clase 22/Dibujo 2.pdf Graphic file (type pdf)
 <use ./Editor de Grafos/Figuras/Clase 22/Dibujo 2.pdf, page 1>
@@ -13901,7 +13912,7 @@ LaTeX Font Info:    No math alphabet change to frozen version normal on input l
 ine 4477.
 
 (./Editor de Grafos/Figuras/Clase 22/Dibujo 3.pdf_tex
-<./Editor de Grafos/Figuras/Clase 22/Dibujo 3.pdf, id=2341, page=1, 469.47046pt
+<./Editor de Grafos/Figuras/Clase 22/Dibujo 3.pdf, id=2305, page=1, 469.47046pt
  x 249.95587pt>
 File: ./Editor de Grafos/Figuras/Clase 22/Dibujo 3.pdf Graphic file (type pdf)
 <use ./Editor de Grafos/Figuras/Clase 22/Dibujo 3.pdf, page 1>
@@ -14017,7 +14028,7 @@ ine 4491.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
 ine 4491.
  (./Editor de Grafos/Figuras/Clase 22/Dibujo 4.pdf_tex
-<./Editor de Grafos/Figuras/Clase 22/Dibujo 4.pdf, id=2350, page=1, 469.47046pt
+<./Editor de Grafos/Figuras/Clase 22/Dibujo 4.pdf, id=2314, page=1, 469.47046pt
  x 249.95587pt>
 File: ./Editor de Grafos/Figuras/Clase 22/Dibujo 4.pdf Graphic file (type pdf)
 <use ./Editor de Grafos/Figuras/Clase 22/Dibujo 4.pdf, page 1>
@@ -14168,7 +14179,7 @@ LaTeX Font Info:    No math alphabet change to frozen version normal on input l
 ine 4500.
 [142 <./Editor de Grafos/Figuras/Clase 22/Dibujo 4.pdf>]
 (./Editor de Grafos/Figuras/Clase 22/Dibujo 5.pdf_tex
-<./Editor de Grafos/Figuras/Clase 22/Dibujo 5.pdf, id=2366, page=1, 470.70285pt
+<./Editor de Grafos/Figuras/Clase 22/Dibujo 5.pdf, id=2329, page=1, 470.70285pt
  x 249.95587pt>
 File: ./Editor de Grafos/Figuras/Clase 22/Dibujo 5.pdf Graphic file (type pdf)
 <use ./Editor de Grafos/Figuras/Clase 22/Dibujo 5.pdf, page 1>
@@ -14346,7 +14357,7 @@ LaTeX Font Info:    No math alphabet change to frozen version normal on input l
 ine 4540.
 
 (./Editor de Grafos/Figuras/Clase 23/Dibujo 1.pdf_tex
-<./Editor de Grafos/Figuras/Clase 23/Dibujo 1.pdf, id=2405, page=1, 469.47046pt
+<./Editor de Grafos/Figuras/Clase 23/Dibujo 1.pdf, id=2369, page=1, 469.47046pt
  x 249.95587pt>
 File: ./Editor de Grafos/Figuras/Clase 23/Dibujo 1.pdf Graphic file (type pdf)
 <use ./Editor de Grafos/Figuras/Clase 23/Dibujo 1.pdf, page 1>
@@ -14510,7 +14521,7 @@ LaTeX Font Info:    No math alphabet change to frozen version normal on input l
 ine 4563.
 
 (./Editor de Grafos/Figuras/Clase 23/Dibujo 2.pdf_tex
-<./Editor de Grafos/Figuras/Clase 23/Dibujo 2.pdf, id=2416, page=1, 469.47046pt
+<./Editor de Grafos/Figuras/Clase 23/Dibujo 2.pdf, id=2380, page=1, 469.47046pt
  x 249.95587pt>
 File: ./Editor de Grafos/Figuras/Clase 23/Dibujo 2.pdf Graphic file (type pdf)
 <use ./Editor de Grafos/Figuras/Clase 23/Dibujo 2.pdf, page 1>
@@ -14922,7 +14933,7 @@ LaTeX Font Info:    No math alphabet change to frozen version normal on input l
 ine 4695.
 
 (./Editor de Grafos/Figuras/Clase 23/Dibujo 3.pdf_tex
-<./Editor de Grafos/Figuras/Clase 23/Dibujo 3.pdf, id=2449, page=1, 469.47046pt
+<./Editor de Grafos/Figuras/Clase 23/Dibujo 3.pdf, id=2413, page=1, 469.47046pt
  x 249.95587pt>
 File: ./Editor de Grafos/Figuras/Clase 23/Dibujo 3.pdf Graphic file (type pdf)
 <use ./Editor de Grafos/Figuras/Clase 23/Dibujo 3.pdf, page 1>
@@ -14967,7 +14978,7 @@ ine 4697.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
 ine 4697.
 (./Editor de Grafos/Figuras/Clase 23/Dibujo 4.pdf_tex
-<./Editor de Grafos/Figuras/Clase 23/Dibujo 4.pdf, id=2451, page=1, 469.47046pt
+<./Editor de Grafos/Figuras/Clase 23/Dibujo 4.pdf, id=2415, page=1, 469.47046pt
  x 249.95587pt>
 File: ./Editor de Grafos/Figuras/Clase 23/Dibujo 4.pdf Graphic file (type pdf)
 <use ./Editor de Grafos/Figuras/Clase 23/Dibujo 4.pdf, page 1>
@@ -16936,7 +16947,7 @@ ine 188.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
 ine 188.
  [162]
-<./Apendice/Figuras/Capitulo 1/Dibujo 1.pdf, id=2605, 455.30101pt x 250.76039pt
+<./Apendice/Figuras/Capitulo 1/Dibujo 1.pdf, id=2569, 455.30101pt x 250.76039pt
 >
 File: ./Apendice/Figuras/Capitulo 1/Dibujo 1.pdf Graphic file (type pdf)
 <use ./Apendice/Figuras/Capitulo 1/Dibujo 1.pdf>
@@ -17300,7 +17311,7 @@ ine 316.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
 ine 316.
  [165] (./Apendice/Figuras/Capitulo 1/Dibujo 2.pdf_tex
-<./Apendice/Figuras/Capitulo 1/Dibujo 2.pdf, id=2648, page=1, 469.47046pt x 249
+<./Apendice/Figuras/Capitulo 1/Dibujo 2.pdf, id=2612, page=1, 469.47046pt x 249
 .95587pt>
 File: ./Apendice/Figuras/Capitulo 1/Dibujo 2.pdf Graphic file (type pdf)
 <use ./Apendice/Figuras/Capitulo 1/Dibujo 2.pdf, page 1>
@@ -17315,7 +17326,7 @@ LaTeX Font Info:    No math alphabet change to frozen version normal on input l
 ine 58.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
 ine 58.
-<./Apendice/Figuras/Capitulo 1/Dibujo 2.pdf, id=2649, page=2, 469.47046pt x 249
+<./Apendice/Figuras/Capitulo 1/Dibujo 2.pdf, id=2613, page=2, 469.47046pt x 249
 .95587pt>
 File: ./Apendice/Figuras/Capitulo 1/Dibujo 2.pdf Graphic file (type pdf)
 <use ./Apendice/Figuras/Capitulo 1/Dibujo 2.pdf, page 2>
@@ -17330,7 +17341,7 @@ LaTeX Font Info:    No math alphabet change to frozen version normal on input l
 ine 61.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
 ine 61.
-<./Apendice/Figuras/Capitulo 1/Dibujo 2.pdf, id=2650, page=3, 469.47046pt x 249
+<./Apendice/Figuras/Capitulo 1/Dibujo 2.pdf, id=2614, page=3, 469.47046pt x 249
 .95587pt>
 File: ./Apendice/Figuras/Capitulo 1/Dibujo 2.pdf Graphic file (type pdf)
 <use ./Apendice/Figuras/Capitulo 1/Dibujo 2.pdf, page 3>
@@ -17754,10 +17765,10 @@ Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: DE763347FE2666B54A522AC7C93C1D76;9571.
  ) 
 Here is how much of TeX's memory you used:
- 31554 strings out of 476017
- 639767 string characters out of 5786780
+ 31564 strings out of 476017
+ 640163 string characters out of 5786780
  1869666 words of memory out of 5000000
- 50242 multiletter control sequences out of 15000+600000
+ 50246 multiletter control sequences out of 15000+600000
  618221 words of font info for 227 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  98i,19n,94p,1685b,981s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -17790,10 +17801,10 @@ ntrsbk/uncbi8a.pfb></home/whitengine/texlive/2023/texmf-dist/fonts/type1/urw/nc
 ntrsbk/uncr8a.pfb></home/whitengine/texlive/2023/texmf-dist/fonts/type1/urw/ncn
 trsbk/uncri8a.pfb>
 Output written on "/home/enzo/Desktop/Doctorado Chile/Clases/2023/Primer semest
-re/Grafos-primer-semestre-2023/out/main.pdf" (171 pages, 1104080 bytes).
+re/Grafos-primer-semestre-2023/out/main.pdf" (171 pages, 1095532 bytes).
 PDF statistics:
- 2956 PDF objects out of 2984 (max. 8388607)
- 2322 compressed objects within 24 object streams
+ 2920 PDF objects out of 2984 (max. 8388607)
+ 2311 compressed objects within 24 object streams
  914 named destinations out of 1000 (max. 500000)
  1209 words of extra memory for PDF output out of 10000 (max. 10000000)
 

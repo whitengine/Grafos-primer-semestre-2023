@@ -1487,25 +1487,25 @@ Ahora veamos que $\block G$ es aciclico. En efecto, supongamos que no, sea $C$ u
 \textbf{Contraer una arista} $e=xy$ equivale a borrar $x$ e $y$, y añadir un nuevo vértice $v_{xy}$ adyacente a todos los vértices que eran vecinos a $x$ o $y$.
 \end{definition}
 
-\Dibujo{Ejemplo. Contraemos los vértices \blue{$x,y$} y formamos $\blue{v_{xy}}$.}
-
 \begin{notation}
 Dado un grafo $G$ y $e = xy \in E(G)$, notamos como $G/e$ al grafo que se obtiene de $G$ al contraer la arista $e$.
 \end{notation}
 
+\Inkscape{Contracción de los vértices \blue{$x,y$} de un grafo $G$. Forma el vértice $\blue{v_{xy}}$ de $G/xy$.}{"Figuras/Introduccion-a-grafos/Dibujo 43.pdf_tex"}
+
 \begin{definition}
-Decimos que $H$ es un \textbf{menor} de $G$ si se puede obtener $H$ a partir de $G$ al utilizar las siguientes operaciones:
+Decimos que un grafo $H$ es un \textbf{menor} de $G$ si se puede obtener a partir de $G$ utilizando las siguientes operaciones:
 \begin{enumerate}[1.]
-\item Borrar vértices.
-\item Borrar vértices y aristas.
-\item Contraer aristas. O equivalentemente, contraer subgrafos conexos.
+\item borrar vértices,
+\item borrar aristas,
+\item contraer aristas. (Equivalentemente, contraer subgrafos conexos).
 \end{enumerate}
 \end{definition}
 
 \begin{example}
 Los subgrafos y contracciones de $G$ son \textit{menores} de $G$. No necesariamente vale la vuelta:
 
-\Dibujo{Ejemplo de menor \blue{$H$} de \green{$G$}, que no es subgrafo porque tiene grado máximo $\Delta (H) = 5$. Pues \blue{$H$} se obtiene luego de contraer las \yellow{aristas} de \green{$G$}}
+\Inkscape{Ejemplo de menor $H$ de un grafo $G$, que no es subgrafo, ya que tiene un vértice de grado $5$. Notar que $H$ se obtiene luego de contraer las \red{aristas rojas} de $G$.}{"Figuras/Introduccion-a-grafos/Dibujo 44.pdf_tex"}
 \end{example}
 
 
