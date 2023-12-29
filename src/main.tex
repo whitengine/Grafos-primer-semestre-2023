@@ -1509,7 +1509,7 @@ Los subgrafos y contracciones de $G$ son \textit{menores} de $G$. No necesariame
 \end{example}
 
 
-\subsection{subdivisiones}\label{subsection: subdivisiones}
+\subsection{Subdivisiones}\label{subsection: subdivisiones}
 
 Sea $X$ un grafo fijo.
 
@@ -1517,36 +1517,35 @@ Sea $X$ un grafo fijo.
 Llamamos \textbf{subdivisión} de $X$ a cualquier grafo $G$ que se obtiene de \textit{subdividir} algunas aristas de $X$ y dibujando encima nuevos vértices. Más precisamente, reemplazamos las aristas de $X$ con nuevos caminos entre sus extremos, de manera que estos caminos no se intersecan entre si y tampoco intersecan a $V(X)$ salvo en los extremos.
 Diremos que $G$ es un $TX$.
 
-Llamaremos a los vértices originales de $X$, \textbf{vértices de ramificación de los de} $TX$; a los nuevos vértices los llamaremos \textbf{vértices subdivisores}.
+Llamaremos a los vértices originales de $X$, \textbf{vértices de ramificación de los de} $TX$; a los nuevos vértices los llamaremos \textbf{vértices subdivisores}. (Notar que los vértices subdivisores tienen grado $2$ y los vértices de ramificación no cambian de grado).
 
-Si un grafo $Y$ contiene a $TX$ como subgrafo, diremos que $X$ es una \textbf{menor topológica} de $Y$.
+Si un grafo $Y$ contiene a $TX$ como subgrafo, diremos que $X$ es un \textbf{menor topológico}\footnote{
+En topología el número de ``agujeros'' de un espacio topológico $X$ es un invariante topológico, más precisamente, es invariante por \textit{homotopías} (deformaciones continuas del espacio). Por ejemplo, un triángulo tiene $1$ agujero, pero dos triángulos adyacentes por una arista tiene $2$. En grafos también podemos definir una ``noción de agujero'', y claramente si $X$ tiene $n$ agujeros, $TX$ también, pues no estamos agregando más! De aquí el nombre de menor \textit{topológico}. Notar que de todas formas, $Y$ puede tener más agujeros que $TX$, pues este último es solo un subgrafo.
+} de $Y$.
 \end{definition}
-Notar que los vértices subdivisores tienen grado $2$ y los vértices de ramificación no cambian de grado.
 
-\InscapeDEPRECADO{De izquierda a derecha, tenemos la construcción prograsia de $X$, luego le agregamos \red{vértices subdivisores} formando $TX$, y finalmente ilustramos un ejemplo de grafo $Y$ con $X$ como menor topológico.}
-
-
+\Inkscape{De izquierda a derecha, construimos progresivamente $X$, luego le agregamos \red{vértices subdivisores} formando $TX$, y finalmente ilustramos un ejemplo de grafo $Y$ con $X$ como menor topológico.}{"Figuras/Introduccion-a-grafos/Dibujo 45.pdf_tex"}
 
 \begin{definition}
 Similarmente, reemplazando los vértices $x \in X$ con grafos conexos disjuntos $G_x$, y las aristas $xy \in X$ con conjuntos no vacíos de $G_x - G_y$ aristas, obtenemos un grafo que llamaremos $IX$. Recíprocamente, decimos que $X$ se obtiene a partir de $G$ \textbf{contrayendo} subgrafos $G_x$ (y fusionando las $G_x-G_y$ aristas), y lo llamamos una \textbf{menor contraida} de $G$.
 
-Si un grafo $Y$ contiene un $IX$ como subgrafo, decimos entonces que $X$ es una \textbf{menor} de $Y$, llamamos a $IX$ un \textbf{modelo} de $X$ en $Y$, y denotamos $X\preccurlyeq Y$
+Si un grafo $Y$ contiene un $IX$ como subgrafo, decimos entonces que $X$ es una \textbf{menor} de $Y$, llamamos a $IX$ un \textbf{modelo} de $X$ en $Y$, y notamos $X\preccurlyeq Y$.
 \end{definition}
 
-\Dibujo{De izquierda a derecha, tenemos el grafo $X$, que se obtiene de contraer \purple{sub}\red{gr}\darkgreen{af}\blue{os} de $G$; finalmente, el grafo $Y$ tiene a $X$ como menor y a $G$ como modelo de $X$ en $Y$}
+\Inkscape{De izquierda a derecha, tenemos el grafo $X$, que se obtiene de contraer los subgrafos \red{$G_x$}, \darkgreen{$G_y$}, \blue{$G_z$}, \purple{$G_w$} de $G$; finalmente, el grafo $Y$ tiene a $X$ como menor y a $G$ como modelo de $X$ en $Y$.}{"Figuras/Introduccion-a-grafos/Dibujo 46.pdf_tex"}
 
-Por lo tanto, $X$ es un menor de $Y$ si y solo si existe una función $\varphi : S \subset V(Y) \twoheadrightarrow V(X)$ tal que para todo vértice $x \in X$ si preimagen $\varphi^{-1} (x)$ es conexa en $Y$ y para toda arista $xx' \in E(X)$ existe una arista en $Y$ entre conjuntos de ramificación $\varphi^{-1}(x), \varphi^{-1} (x')$. Si el dominio de $\varphi$ es todo $V(Y)= S$, y si $xx' \in E(X)$ siempre que $x \neq x'$ e $Y$ tiene una arista entre $\varphi^{-1}(x)$ y $\varphi^{-1} (x')$ (es decir $Y$ es una $IX$), decimos que $\varphi$ es una \textbf{contracción} de $Y$ en $X$.
+Por lo tanto, $X$ es un menor de $Y$ si y solo si existe una función $\varphi : S \subset V(Y) \twoheadrightarrow V(X)$ tal que para todo vértice $x \in X$ si preimagen $\varphi^{-1} (x)$ es conexa en $Y$ y para toda arista $xx' \in E(X)$ existe una arista en $Y$ entre conjuntos de ramificación $\varphi^{-1}(x), \varphi^{-1} (x')$. Si el dominio de $\varphi$ es todo $V(Y)= S$, y si $xx' \in E(X)$ siempre que $x \neq x'$ e $Y$ tiene una arista entre $\varphi^{-1}(x)$ y $\varphi^{-1} (x')$, es decir $Y$ es una $IX$, decimos que $\varphi$ es una \textbf{contracción} de $Y$ en $X$.
 
 
-\begin{proposition}
+\begin{obs}
 La relación de menores $\preccurlyeq$ y la relación de menores topológicos son ordenes parciales en la clase de grafos finitos. Es decir, son reflexivos, antisimétricos, y transitivos.
-\end{proposition}
+\end{obs}
 
 
-Si $G$ es una $IX$, luego $P = \Set{G_x | x \in X}$ es una partición de $V(G)$, y notamos $G/P := X$. Si $U = G_x$ es el único conjunto de ramificación que no es un singleton, escribimos $G/U := X$, y notamos $v_U$ al vértice $x \in X$ al que se contrae $U$, y pensamos al ressto de $X$ como un subgrafo inducido de $G$. El caso más simple es cuando $U$ contiene exactamente dos vértices que forman una arista $e= U$, aquí escribiremos $G/e = X$, el grafo que se obtiene de \textbf{contraer la arista} $e$.
+Si $G$ es una $IX$, luego $P = \Set{G_x | x \in X}$ es una partición de $V(G)$, y notamos $G/P := X$. Si $U = G_x$ es el único conjunto de ramificación que no es un singleton, escribimos $G/U := X$, y notamos $v_U$ al vértice $x \in X$ al que se contrae $U$, y pensamos al ressto de $X$ como un subgrafo inducido de $G$. El caso más simple es cuando $U$ contiene exactamente dos vértices que forman una arista $e= U$, aquí escribiremos $G/e = X$.
 
 \begin{proposition}
-Sean $X$ e $Y$ grafos finitos. Entonces $X$ es una menor de $Y$ si y solo si existen grafos $G_0,\ldots,G_n$ tales que $G_0 = Y$ y $G_n = X$, y además $G_{i+1}$ se obtiene a partir de $G_i$ borrando aristas, contrayendo aristas, o borrando vérticces.
+Sean $X$ e $Y$ do grafos. Entonces $X$ es una menor de $Y$ si y solo si existen grafos $G_0,\ldots,G_n$ tales que $G_0 = Y$ y $G_n = X$, y además $G_{i+1}$ se obtiene a partir de $G_i$ borrando aristas, contrayendo aristas, o borrando vértices.
 \end{proposition}
 \begin{proof}
 Estas tres últimas operaciones claramente producen una menor $X$, pues la relación de menor es transitiva. Recíprocamente, se puede hacer inducción en $\abs Y + \Abs Y$.
@@ -1556,8 +1555,8 @@ Finalmente, tenemos la siguiente relación entre menores y menores topológicos:
 
 \begin{proposition}
 \begin{enumerate}[(i)]
-\item Todo $TX$ es también un $IX$ (ver la siguiente figura); por lo tanto, toda menor topológica de un grafo es su menor (ordinaria).
-\item Si $\Delta (X) \leq 3$, entonces todo $IX$ contiene un $TX$; con lo cual, toda menor con grado máximo a lo sumo $3$ de un grafo es también su menor topológico.
+\item Todo $TX$ es también un $IX$ (ver la siguiente figura). Por lo tanto, todo menor topológico de un grafo es un menor de él.
+\item Si $\Delta (X) \leq 3$, entonces todo $IX$ contiene un $TX$. Con lo cual, todo menor con grado máximo a lo sumo $3$ de un grafo es también un menor topológico de él.
 \end{enumerate}
 \end{proposition}
 \begin{proof}
