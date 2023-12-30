@@ -5,13 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d64069ff-abb3-47fa-9feb-8331f5baf8d7" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Figuras/Introduccion-a-grafos/Dibujo 52.pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Figuras/Introduccion-a-grafos/Dibujo 52.pdf_tex" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Figuras/Introduccion-a-grafos/Dibujo 52.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Figuras/Introduccion-a-grafos/Dibujo 55.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Figuras/Introduccion-a-grafos/Dibujo 55.pdf_tex" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Figuras/Introduccion-a-grafos/Dibujo 55.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Figuras/Introduccion-a-grafos/Dibujo 56.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Figuras/Introduccion-a-grafos/Dibujo 56.pdf_tex" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Figuras/Introduccion-a-grafos/Dibujo 56.svg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/main.aux" beforeDir="false" afterPath="$PROJECT_DIR$/out/main.aux" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/main.log" beforeDir="false" afterPath="$PROJECT_DIR$/out/main.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/main.out" beforeDir="false" afterPath="$PROJECT_DIR$/out/main.out" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/main.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/out/main.pdf" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/main.synctex.gz" beforeDir="false" afterPath="$PROJECT_DIR$/out/main.synctex.gz" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/main.toc" beforeDir="false" afterPath="$PROJECT_DIR$/out/main.toc" afterDir="false" />
@@ -187,7 +189,8 @@
       <workItem from="1703895159595" duration="7923000" />
       <workItem from="1703904563878" duration="1858000" />
       <workItem from="1703906836335" duration="45000" />
-      <workItem from="1703946326796" duration="4164000" />
+      <workItem from="1703946326796" duration="4172000" />
+      <workItem from="1703955438148" duration="5996000" />
     </task>
     <task id="LOCAL-00001" summary="arreglado?">
       <option name="closed" value="true" />
@@ -413,7 +416,15 @@
       <option name="project" value="LOCAL" />
       <updated>1703902294729</updated>
     </task>
-    <option name="localTasksCounter" value="29" />
+    <task id="LOCAL-00029" summary="arreglado?">
+      <option name="closed" value="true" />
+      <created>1703952135454</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1703952135454</updated>
+    </task>
+    <option name="localTasksCounter" value="30" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

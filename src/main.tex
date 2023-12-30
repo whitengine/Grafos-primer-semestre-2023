@@ -1731,14 +1731,10 @@ absurdo.
 \end{solution}
 
 \begin{exercise}
-Sean $\alpha, \beta$ dos invariantes de grafos en $\naturals$.
-\end{exercise}
-
-\begin{exercise}
 Probar que todo árbol $T$ tiene al menos $\Delta (T)$ hojas.
 \end{exercise}
 \begin{proof}
-En efecto, fijemos una raíz $r$ con $d (r) = \Delta (t)$. Afirmamos que hay una hoja distinta por cada vecinos de $r$, más aún, estos son los elementos maximales en el orden de árbol con raíz $r$. Y hay al menos $d(r)$ de estos, tomand el máximo de cada conjuntos $w^{\geq} := \{ v \in T | v \geq w \}$, con $w \in N_T (r)$. Son distintos, pues de lo contrario, sean $m_1$ al mínimo vértice de $w_1^{\geq}$ y $m_2$ el de $w_2^{\geq}$ tales que no son más grandes que $w_2$ y $w_1$ respectivamente. En particular, existe $m \geq w_1,w_2$. Luego tenemos un ciclo $r <  w_1 < \cdots < m_1 < m > m_2 > \cdots > w_2 > r$, lo cual es imposible.
+Haremos inducción en la cantidad de hojas de $T$. Si $T$ tiene una sola hoja, luego $T$ tiene un solo vértice y se sigue la afirmación. En general, sea $h \in T$ una hoja, consideremos $T' := T \setminus h$. Como $\Delta (T') \geq \Delta (T) - 1$, la hipótesis inductiva implica que $T'$ tiene al menos $\Delta (T) - 1$ hojas, y por lo tanto, $T$ tiene al menos $\Delta (T)$ hojas.
 \end{proof}
 
 
@@ -1751,11 +1747,7 @@ e$ tal que $F + e$ es nuevamente un bosque.
 \begin{solution}
 En efecto, si $F$ tuviera más de una componente, entonces cualquier arista $e \in F'$ con extremo en ambas
 funcionaría. Luego supongamos que $F'$ no tiene aristas que conectan ningúna componente de $F$, es decir por
-inducción en $\Abs F$ se sigue el resultado. Luego supongamos que $F$ es conexo, es decir es un árbol, como $\Abs {F'} = \abs {F'}- \# \text{componentes}$, se sigue de la desigualdad del enunciado que $F'$ también es conexo. Ahora si consideramos el grafo $G = F + F$, este grafo tiene dos árboles generadores $F$ y $F'$. Si $F$ y $F'$ tuvieran una arista en común, luego el resultado se sigue. De lo contrario, tendríamos que por cada arista $e \in F'$, tenemos un ciclo en $T+e$, es decir un ciclo fundamental $C_e$. Pero por la Ecuación \eqref{eq:formula de la dimension para los subsespacios ortogonales de E(G)} aplicada al subespacio de cortes $\mathcal B (G)$ y usando el Teorema \ref{th:apendice subespacio de ciclos y subespacio de cortes son mutuamente ortogonales entre si}:
-\[
-    \Abs F + \Abs {F'} = \dim \mathcal E (G) = n -1 + \dim \mathcal C (G)
-\]
-con $n = \abs F = \abs {F'}$, y como $F$ es árbol $n-1 = \Abs F$. Luego $\dim \mathcal C (G) = \Abs {F'}$. Análogamente, $\dim \mathcal C (G) = \Abs {F} < \Abs {F'}$, imposible.
+inducción en $\Abs F$ se sigue el resultado. Luego supongamos que $F$ es conexo, es decir, es un árbol, como $\Abs {F'} = \abs {F'}- \# \text{componentes de $F'$}$, se llega a un absurdo utilzando la desigualdad del enunciado.
 \end{solution}
 
 \begin{exercise}\label{ejercicio:todo grafo es 2 arista conexo si y solo si tiene una orientacion fuertemente conexa}
@@ -1765,53 +1757,29 @@ decir, tiene una orientación en la cual para todo par de vértices $x,y$ existe
 \end{exercise}
 \begin{solution}
 \begin{enumerate}
-\item[($\Rightarrow$)] Lo probaremos para multigrafos $2$-arista-conexos, por inducción en el número de aristas.
-Primero supongamos que $\delta (G) \geq 3$, digamos con $d(x) \geq 3$ y $e$ aristas incidentes en $x$.
-Consideremos el grafo $G \setminus e$. Si sigue siendo $2$-arista conexo, luego por inducción tenemos que tiene
-una orientación fuertemente conexa y en particular $G$ también. De lo contrario, es porque existe otra arista $f$, distinta de $e$, tal que $
-G\setminus \{e,f\}$
-tiene
-exactamente dos componentes $2$-conexas, conectadas entre sí por $e$ y $f$, digamos $H_1,H_2$ y por hipótesis
-inductiva
-tienen una
-oritentación
-fuertemente conexa cada una, las cuales podemos extender a todo $G$ declarando a $f$ como la orientación $H_1$
-hacia $H_2$ y a $e$ como la orientación opuesta.
-\begin{figure}
-\centering
-\includegraphics{"./Editor de Grafos/Figuras/Ejercicios/Dibujo 1"}
-\caption{Por un lado tenemos a \red{$H_1$} y por el otro \blue{$H_2$}, conectados por \yellow{$e$} y \yellow{$f$}.}
-\end{figure}
+\item[($\Rightarrow$)] Lo probaremos para multigrafos $2$-arista-conexos, por inducción en el número de aristas. Primero supongamos que $\delta (G) \geq 3$, digamos con $d(x) \geq 3$ y $e$ aristas incidentes en $x$. Consideremos el grafo $G \setminus e$. Si sigue siendo $2$-arista conexo, luego por inducción tenemos que tiene una orientación fuertemente conexa y en particular $G$ también. De lo contrario, es porque existe otra arista $f$, distinta de $e$, tal que $
+G\setminus \{e,f\}$ tiene exactamente dos componentes $2$-conexas, conectadas entre sí por $e$ y $f$, digamos $H_1,H_2$ y por hipótesis inductiva tienen una oritentación fuertemente conexa cada una, las cuales podemos extender a todo $G$ declarando a $f$ como la orientación $H_1$
+hacia $H_2$ y a $e$ como la orientación opuesta:
 
+\Inkscape*{Por un lado tenemos a \blue{$H_1$} y por el otro \red{$H_2$}, conectados por $e$ y $f$.}{"Figuras/Introduccion-a-grafos/Dibujo 55.pdf_tex"}
 
-Ahora, si $\Delta (G) \leq 2$, tenemos que como $2 \leq \lambda (G) \leq \delta (G) \leq \Delta (G)$, en realidad
-vale la igualdad, es decir $G$ es $2$-regular. Si $G$ tiene solo vértice no hay nada que probar, en general sea $x \in V(G)$, luego tiene dos vecinos o era el multigrafo con solo dos vértices de grado $2$; en el primer caso podemos \textit{remover} a $x$, es decir, los vecinos de $x$ ahora van a estar unidos por una arista en vez de conectarse a $x$, como la cantidad de aristas disminuye pero sigue siendo $2$-conexo, luego por inducción tiene una orientación fuertemente conexa, la cual sencillamente podemos extender a todo $G$ como lo muestra el dibujo:
-\begin{figure}
-  \centering
-  \includegraphics{"./Editor de Grafos/Figuras/Ejercicios/Dibujo 2"}
-  \caption{Remover \red{$x$} es equivalente a unir a sus vecinos por una \yellow{arista} y quitar \red{las
-  aristas
-  incidentes} en
-   \red{$x$}.}
-\end{figure}
+Ahora, si $\Delta (G) \leq 2$, tenemos que como $2 \leq \lambda (G) \leq \delta (G) \leq \Delta (G)$, en realidad vale la igualdad, es decir $G$ es $2$-regular. Si $G$ tiene solo vértice no hay nada que probar, en general sea $x \in V(G)$, luego tiene dos vecinos o era el multigrafo con solo dos vértices de grado $2$; en el primer caso podemos \textit{remover} a $x$, es decir, los vecinos de $x$ ahora van a estar unidos por una arista en vez de conectarse a $x$, como la cantidad de aristas disminuye pero sigue siendo $2$-conexo, luego por inducción tiene una orientación fuertemente conexa, la cual sencillamente podemos extender a todo $G$ como lo muestra el dibujo:
 
+\Inkscape*{Remover \red{$x$} es equivalente a unir a sus vecinos por una \yellow{arista} y quitar \red{las aristas incidentes} en \red{$x$}.}{"Figuras/Introduccion-a-grafos/Dibujo 56.pdf_tex"}
 
 \item[($\Leftarrow$)] Quitar una arista no nos puede remover la conexión de $G$, de lo contrario, sean $x,y$ dos
-vértices adyacentes tales que $e = xy$ es un puente, i.e. $G\setminus e$ es arista disconexo, tenemos que $e$ ten
-ía la orientación,
-digamos $x$ a $y$, sin embargo existe un camino en $G$ con orientación de $y$ en $x$, el cual no puede tener
+vértices adyacentes tales que $e = xy$ es un puente, i.e. $G\setminus e$ es arista disconexo, tenemos que $e$ tenía la orientación, digamos $x$ a $y$, sin embargo existe un camino en $G$ con orientación de $y$ en $x$, el cual no puede tener
 ninguna arista igual a $e$, con lo cual $x,y$ seguían siendo arista-conectados en $G \setminus e$, absurdo.
 \end{enumerate}
 \end{solution}
 
 \begin{exercise}
-Dar una demostración corta por inducción de la exisstencia de un árbol normal generador en cualquier grafo finito
-conexo (para cualquier orden de árbol).
+Dar una demostración corta por inducción de la existencia de un árbol normal generador en cualquier grafo.
 \end{exercise}
 \begin{solution}
 Afirmamos que existe un vértice $v$ de $G$ que se puede eliminar y sigue siendo conexo: $G$ tiene un árbol generador
 , luego quitamos una hoja. Ahora por inducción, $G \setminus v$ tiene un árbol generador normal $T'$. Afirmamos
-que el árbol generador $T = T' vx$ de $G$ es también normal, donde $x \in T'$ es adyacente a $v$ en $G$, maximal
+que el árbol generador $T = T'+ vx$ de $G$ es también normal, donde $x \in T'$ es adyacente a $v$ en $G$, maximal
 en el orden de $T'$.
 Ahora, el orden de $T'$ se extiende al de $T$ para cualquier raíz $r$ de $T'$. Sea $P$ un $T$-camino entre dos vértices distintos de $v$, luego son comparables en $T'$; por otro lado, si uno de los vértices es $v$ y el otro es $y$, digamos, entonces $x v P y$ es un $T'$-camino, luego $x$ e $y$ son comparables, y por lo tanto $v$ e $y$ también, pues por la maximalidad de $x$, $x \geq y$. (Notar que luego vale para $v$ como raíz también.)
 \end{solution}
@@ -1833,8 +1801,8 @@ normal.
 \begin{enumerate}[1.]
 \item Sea $C$ un ciclo con vértices consecutivos $x_0, x_1, x_2 , \ldots, x_k$ en $T$. Podemos suponer que $x_k$ fue
 el último en haber sido visitado. Luego $x_0$ tuvo que haber sido el vértice que se visitó primero de $C$ y en
-consecuencia se visitó en orden: $x_0, x_1, \ldots, x_k$. Pero una vez visitado $x_k$ el algorítmo sigui corriendo
-sin volver a $x_0$ pues este ya fue visitado, pero esto significa que $C$ no puede tener la arista $x_k x_0$,
+consecuencia se visitó en orden: $x_0, x_1, \ldots, x_k$. Pero una vez visitado $x_k$ el algorítmo sigue corriendo
+sin volver a $x_0$, pues este ya fue visitado, pero esto significa que $C$ no puede tener la arista $x_k x_0$,
 absurdo.
 \item Supongamos que existe un vértice no visitado, luego existe un vértice sin visitar a distancia mínima de $T$,
 i.e. adyacente a $x \in T$. Luego el algorítmo tuvo que pasar por este vértice cuando volvió a $x$ por última vez.
