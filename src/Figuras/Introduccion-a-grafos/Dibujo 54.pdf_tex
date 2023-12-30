@@ -1,6 +1,6 @@
 %% Creator: Inkscape 1.3.1 (9b9bdc1480, 2023-11-25, custom), www.inkscape.org
 %% PDF/EPS/PS + LaTeX output extension by Johan Engelen, 2010
-%% Accompanies image file 'Dibujo 52.pdf' (pdf, eps, ps)
+%% Accompanies image file 'Dibujo 54.pdf' (pdf, eps, ps)
 %%
 %% To include the image in your LaTeX document, write
 %%   \input{<filename>.pdf_tex}
@@ -53,15 +53,10 @@
   \begin{picture}(1,0.53333333)%
     \lineheight{1}%
     \setlength\tabcolsep{0pt}%
-    \put(0,0){\includegraphics[width=\unitlength,page=1]{Figuras/Introduccion-a-grafos/Dibujo 52.pdf}}%
-    \put(0.24100705,0.33772132){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$e_1$\end{tabular}}}}%
-    \put(0.47146833,0.40187188){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}\resizebox{!}{10pt}{$L(G)$}\end{tabular}}}}%
-    \put(0.40666305,0.33719737){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$e_3$\end{tabular}}}}%
-    \put(0.24122855,0.18017393){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$e_2$\end{tabular}}}}%
-    \put(0.40638173,0.18038386){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$e_4$\end{tabular}}}}%
-    \put(0.57896303,0.33768812){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$e_5$\end{tabular}}}}%
-    \put(0.74033596,0.33692333){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$e_7$\end{tabular}}}}%
-    \put(0.57925725,0.17952617){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$e_6$\end{tabular}}}}%
-    \put(0.74055897,0.18033128){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$e_8$\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=1]{Figuras/Introduccion-a-grafos/Dibujo 54.pdf}}%
+    \put(0.68687656,0.47811894){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}\blue{$B$}\end{tabular}}}}%
+    \put(0.29148372,0.2653555){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$a$\end{tabular}}}}%
+    \put(0.42068972,0.47811894){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}\red{$A$}\end{tabular}}}}%
+    \put(0.55217974,0.47811894){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}\brown{$X$}\end{tabular}}}}%
   \end{picture}%
 \endgroup%

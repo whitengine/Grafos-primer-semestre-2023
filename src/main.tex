@@ -1611,12 +1611,12 @@ Notar que aplicando recursivamente el lema anterior podemos encontrar una secuen
 \Clase{20/04/23}   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%
 
-\subsection[]{Teorema de Menger}
+\subsection{Teorema de Menger}
 \begin{definition}
 Si $A,B,X \subset V(G)$ son tales que todo $A,B$-camino tiene un vértice de $X$, decimos que $X$ separa a $A$ y $B$ en $G$.
 \end{definition}
 
-\begin{theorem}[Menger, 1927]
+\begin{theorem}[Menger, 1927]\label{theorem:teorema de menger}
 Sea $G = (V,E)$ un grafo y sean $A,B \subset V$. El mínimo número de vértices que separa a $A$ y $B$ es igual al máximo número de $A,B$-caminos disjuntos.
 \end{theorem}
 \begin{proof}
@@ -1624,61 +1624,52 @@ Sea $k$ el mínimo número de vértices que separan $A$ y $B$. Como no pueden ha
 
 \Inkscape*{}{"Figuras/Introduccion-a-grafos/Dibujo 49.pdf_tex"}
 
-Para la otra desigualdad, haremos inducción en el número de aristas. Si $G$ no tiene aristas entonces los $A,B$-caminos son puntos de $A \cap B$! y trivialmente vale la igualdad. Ahora, si existe una arista $e = xy$ de $G$, y si $G$ no tiene $k$ caminos entre $A,B$ disjuntos (es decir tiene $<k$), entonces $G/e$ tampoco pues $G/e$ no puede tener más $A,B$-caminos (contamos a $v_e$ como elemento de $A$ (o $B$) si alguna de $x $ o $y$ está en $A$ (o $B$)). Luego por hipótesis inductiva, $G/e$ tiene un $A,B$-separador $Y$ con menos de $k$ vértices. El vértice $v_e$ debe estar en $Y$, porque si no $Y$ sería separador de $G$, contradiciendo minimalidad de $k$. Entoncces $X = (Y \setminus v_e) \cup \{x,y\}$ es un $A,B$-separador de $G$ con exactamente $k$ vértices. En efedcto, por minimalidad $k \leq \abs X$, y por construccón $\abs X = \abs Y + 1 < k +1 \leq k$.
+Para la otra desigualdad, haremos inducción en el número de aristas. Si $G$ no tiene aristas entonces los $A,B$-caminos son puntos de $A \cap B$, con lo cual vale la igualdad. Ahora, si existe una arista $e = xy$ de $G$, y si $G$ no tiene $k$ caminos entre $A,B$ disjuntos (es decir tiene $<k$), entonces $G/e$ tampoco (¿por qué?). Luego por hipótesis inductiva, $G/e$ tiene un $A,B$-separador $Y$ con menos de $k$ vértices. El vértice $v_e$ debe estar en $Y$, porque si no $Y$ sería separador de $G$, contradiciendo minimalidad de $k$. Consecuentemente, $X = (Y \setminus \{v_e\}) \cup \{x,y\}$ es un $A,B$-separador de $G$ con exactamente $k$ vértices. En efecto, por minimalidad $k \leq \abs X$, y por construccón $\abs X = \abs Y + 1 < k +1 \leq k$.
 
-Consideremos ahora $G \setminus e$. Como $x,y \in X$, todo $A,X$-separador en $G \setminus e$ es un $A,B$-separador en $G$ con al menos $k$-vértices por minimalildad de $k$.
+Consideremos ahora $G \setminus e$. Todo $A,X$-separador en $G \setminus e$ es un $A,B$-separador en $G$ con al menos $k$-vértices por minimalildad de $k$ (ver la siguiente Figura \ref{Figura:AX separador de G menos e es un AB separador en G}). Por inducción, hay al menos $k$ caminos entre $A,X$ disjuntos en $G \setminus e$. Lo mismo pasa con los $B,X$-caminos. Como $X$ separa a $A$ y $B$, estos caminos solo se encuentran en $X$ y los puedo combinar para tener al menos $k$ caminos disjuntos entre $A$ y $B$, contradicción.
 
-\Inkscape{Ilustración del conjunto separador \brown{$X$} y los conjuntos de vértices \red{$A$} y \blue{$B$}. Notar que todos los $A,B$-caminos deben pasar por el \yellow{$A,X$-separador}.}{"Figuras/Introduccion-a-grafos/Dibujo 50.pdf_tex"}
-
-Por inducción, hay al menos $k$ caminos entre $A,X$ disjuntos en $G \setminus e$. Lo mismo pasa con los $B,X$-caminos. Como $X$ separa a $A$ y $B$, estos caminos solo se encuentran en $X$ y los puedo combinar para tener al menos $k$ caminos entre $A$ y $B$ (disjuntos), contradicción.
+\Inkscape[][AX separador de G menos e es un AB separador en G]{Ilustración del conjunto separador \brown{$X$} y los conjuntos de vértices \red{$A$} y \blue{$B$}. Notar que todos los $A,B$-caminos deben pasar por el \yellow{$A,X$-separador}.}{"Figuras/Introduccion-a-grafos/Dibujo 50.pdf_tex"}
 \end{proof}
 
 \begin{definition}
-El \textbf{grafo línea} $L(G)$ de un grafo $G = (V,E)$ es aquel cuyo conjunto de vértices es $E$ y hay una arista entre dos elementos de $E$ si y solo si las aristas son adyacentes en $G$, es decir comparten un extremo.
+El \textbf{grafo línea} $L(G)$ de un grafo $G = (V,E)$ es aquel cuyo conjunto de vértices es $E$ y $ef$ es una arista de $L(G)$ si y solo si $e$ y $f$ comparten un extremo en $G$.
 \end{definition}
 
-\Inkscape{Ejemplo de un grafo $G$.}{"Figuras/Introduccion-a-grafos/Dibujo 51.pdf_tex"}
-
-\Inkscape{Grafo de línea de $G$, donde se puede ver que sus \brown{vértices} son las \brown{aristas} de $G$.}{"Figuras/Introduccion-a-grafos/Dibujo 52.pdf_tex"}
+\Inkscape{Ejemplo de un grafo $G$ y su grafo línea $L(G)$.}{"Figuras/Introduccion-a-grafos/Dibujo 51.pdf_tex"}
 
 \begin{definition}
-Un conjunto de $a,B$-caminos es un \textbf{$a,B$-abanico} si cada par de estos caminos se intersecta SOLO en $a$.
+Sea $a$ un vértice y $B$ un conjunto de vértices. Un conjunto de $a,B$-caminos de dice \textbf{$a,B$-abanico} si cada par de estos caminos se intersecan solamente en $a$.
 \end{definition}
 
 \Inkscape{Ejemplo de $\red{a},\blue{B}$-abanico.}{"Figuras/Introduccion-a-grafos/Dibujo 53.pdf_tex"}
 
-
 \begin{corollary}
-Para $B \subset V$ y $a \in V \setminus B$, el mínimo número de vértice que separan $a$ de $B$ en $G$ es igual al máximo número de caminos en un $a,B$-abanico en $G$.
+Para $B \subset V$ y $a \in V \setminus B$, el mínimo número de vértices que separan $a$ de $B$ en $G$ es igual al máximo número de caminos en un $a,B$-abanico en $G$.
 \end{corollary}
 \begin{proof}
-Aplicamos el Teorema de Menger a $G \setminus a$ con conjuntos $A = N_G (a)$ y $B$ como en el enunciado.
+Aplicamos el Teorema de Menger \ref{theorem:teorema de menger} al grafo $G \setminus a$ con conjuntos $A := N_G (a)$ y $B$. Así obtenemos el corolario.
 
-\Dibujo{Ilustración del procedimiento: en rojo los \red{vecinos} de $a$, en azúl el conjunto \blue{B}, y en marrón a un connjunto $\red{A},\blue{B}$-separador \brown{$X$}.}
-
+\Inkscape{Ilustración del procedimiento: en \red{rojo} los \red{vecinos} de $a$, en \blue{azúl} el conjunto \blue{B}, y en \brown{marrón} un connjunto $\red{A},\blue{B}$-separador \brown{$X$}.}{"Figuras/Introduccion-a-grafos/Dibujo 54.pdf_tex"}
 \end{proof}
 
-
 \begin{corollary}
-Sean $a$ y $b$ vértices distintos de $G= (V,E)$.
+Sean $a$ y $b$ vértices distintos de $G= (V,E)$. Entonces,
 \begin{enumerate}[(i)]
-\item Si $ab \not \in E$ ($a,b$ no son adyacentes), entonces el mínimo número de vértices que separan $a$ de $b$ en $G$ es igual al máximo número de $a,b$-caminos INTERNAMENTE disjuntos.
-\item El mínimo número de aritas que separan $a$ de $b$ es igual al máximo número de $a,b$-caminos arista-disjuntos.
+\item Si $ab \not \in E$ ($a,b$ no son adyacentes), entonces el mínimo número de vértices que separan $a$ de $b$ en $G$ es igual al máximo número de $a,b$-caminos internamente disjuntos.
+\item El mínimo número de aristas que separan $a$ de $b$ es igual al máximo número de $a,b$-caminos arista-disjuntos.
 \end{enumerate}
 \end{corollary}
 \begin{proof}
 \begin{enumerate}[(i)]
-\item Aplicamos el Teorema de Menger a $G \setminus \{a,b\}$ con $A = N_G (a)$ y $B = N_G (b)$.
-\item Aplicamos el Teorema de Menger al grafo $L(G)$ con conjuntos $A = E(a)$ y $B = E(b)$ los conjuntos de aristas incidentes en $a$ y $b$, respectivamente.
+\item Aplicamos el Teorema de Menger \ref{theorem:teorema de menger} a $G \setminus \{a,b\}$ con $A := N_G (a)$ y $B := N_G (b)$.
+\item Observemos que hay una correspondencia biyectiva entre aristas $A,B$-separadoras de $G$ y vértices separadores de $E(A),E(B)$ (los conjuntos de aristas incidentes en $A$ y $B$, respectivamente) en $L(G)$; y también entre los $A,B$-caminos arista-disjuntos de $G$ y los $E(A),E(B)$-caminos disjuntos de $L(G)$. Así, aplicamos el Teorema de Menger \ref{theorem:teorema de menger} al grafo línea $L(G)$ con conjuntos $A := E(a)$ y $B := E(b)$.
 \end{enumerate}
 \end{proof}
-
-Notar que en el segundo ítem de la demostración anterior usamos que hay una correspondencia biyectiva entre aristas $A,B$-separadoras y vérticces separadores de $E(A),E(B)$ en $L(G)$, y también entre los $A,B$-caminos arista-disjuntos y los $E(A),E(B)$-caminos disjuntos de $L(G)$.
 
 \begin{theorem}[Versión global de Menger]\label{th:version global de Menger}
 \begin{enumerate}[(i)]
 \item Un grafo es $k$-conexo si y solo si contiene $k$-caminos internamente disjuntos entre cada par de vértices.
-\item Un grafo es $k$-aristaconexo si y solo si contiene $k$ caminos arista disjuntos entre cada par de vértices.
+\item Un grafo es $k$-arista conexo si y solo si contiene $k$ caminos arista disjuntos entre cada par de vértices.
 \end{enumerate}
 \end{theorem}
 \begin{proof}
