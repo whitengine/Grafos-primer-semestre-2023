@@ -1607,6 +1607,10 @@ Notar que aplicando recursivamente el lema anterior podemos encontrar una secuen
 \end{proof}
 
 
+%%%%%%%%%%%
+\Clase{20/04/23}   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%
+
 \subsection[]{Teorema de Menger}
 \begin{definition}
 Si $A,B,X \subset V(G)$ son tales que todo $A,B$-camino tiene un vértice de $X$, decimos que $X$ separa a $A$ y $B$ en $G$.
@@ -1615,32 +1619,16 @@ Si $A,B,X \subset V(G)$ son tales que todo $A,B$-camino tiene un vértice de $X$
 \begin{theorem}[Menger, 1927]
 Sea $G = (V,E)$ un grafo y sean $A,B \subset V$. El mínimo número de vértices que separa a $A$ y $B$ es igual al máximo número de $A,B$-caminos disjuntos.
 \end{theorem}
-
-
-
-
-
-
-
-%%%%%%%%%%%
-\Clase{20/04/23}   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%
-
-
-
-\begin{theorem}[Menger, 1927]\label{th:teorema de menger}
-Sea $G = (V,E)$ un grafo y sean $A,B \subset V$. El mínimo número de vértices que separa a $A$ y $B$ es igual al máximo número de $A,B$-caminos disjuntos.
-\end{theorem}
 \begin{proof}
-Sea $k$ el mínimo numero de vértices que separan $A$ y $B$. No es difícil convencerse que $G$ no puede contener más de $k$ caminos entre $A$ y $B$, i.e. $k\geq$ al máximo número de $A,B$-caminos disjuntos.
+Sea $k$ el mínimo número de vértices que separan $A$ y $B$. Como no pueden haber más $A,B$-caminos disjuntos que vértices de un conjunto que separa $A$ y $B$, se sigue que el número máximo número de $A,B$-caminos disjuntos es a lo más $k$.
 
-\Dibujo{El \brown{conjunto separador con $k$-elementos} se ilustra en el medio de los conjuntos \red{$A$} y \blue{$B$}, formados por los vértices \brown{$0$},\red{1},\red{2},\red{3} y \brown{$0$},\blue{4},\blue{5},\blue{6} respectivamente.}
+\Inkscape*{}{"Figuras/Introduccion-a-grafos/Dibujo 49.pdf_tex"}
 
 Para la otra desigualdad, haremos inducción en el número de aristas. Si $G$ no tiene aristas entonces los $A,B$-caminos son puntos de $A \cap B$! y trivialmente vale la igualdad. Ahora, si existe una arista $e = xy$ de $G$, y si $G$ no tiene $k$ caminos entre $A,B$ disjuntos (es decir tiene $<k$), entonces $G/e$ tampoco pues $G/e$ no puede tener más $A,B$-caminos (contamos a $v_e$ como elemento de $A$ (o $B$) si alguna de $x $ o $y$ está en $A$ (o $B$)). Luego por hipótesis inductiva, $G/e$ tiene un $A,B$-separador $Y$ con menos de $k$ vértices. El vértice $v_e$ debe estar en $Y$, porque si no $Y$ sería separador de $G$, contradiciendo minimalidad de $k$. Entoncces $X = (Y \setminus v_e) \cup \{x,y\}$ es un $A,B$-separador de $G$ con exactamente $k$ vértices. En efedcto, por minimalidad $k \leq \abs X$, y por construccón $\abs X = \abs Y + 1 < k +1 \leq k$.
 
 Consideremos ahora $G \setminus e$. Como $x,y \in X$, todo $A,X$-separador en $G \setminus e$ es un $A,B$-separador en $G$ con al menos $k$-vértices por minimalildad de $k$.
 
-\Dibujo{Ilustración del conjunto separador \brown{$X$} y los conjuntos de vértices \red{$A$} y \blue{$B$}. Notar que todos los $A,B$-caminos deben pasar por el \yellow{$A,X$-separador}.}
+\Inkscape{Ilustración del conjunto separador \brown{$X$} y los conjuntos de vértices \red{$A$} y \blue{$B$}. Notar que todos los $A,B$-caminos deben pasar por el \yellow{$A,X$-separador}.}{"Figuras/Introduccion-a-grafos/Dibujo 50.pdf_tex"}
 
 Por inducción, hay al menos $k$ caminos entre $A,X$ disjuntos en $G \setminus e$. Lo mismo pasa con los $B,X$-caminos. Como $X$ separa a $A$ y $B$, estos caminos solo se encuentran en $X$ y los puedo combinar para tener al menos $k$ caminos entre $A$ y $B$ (disjuntos), contradicción.
 \end{proof}
@@ -1649,9 +1637,9 @@ Por inducción, hay al menos $k$ caminos entre $A,X$ disjuntos en $G \setminus e
 El \textbf{grafo línea} $L(G)$ de un grafo $G = (V,E)$ es aquel cuyo conjunto de vértices es $E$ y hay una arista entre dos elementos de $E$ si y solo si las aristas son adyacentes en $G$, es decir comparten un extremo.
 \end{definition}
 
-\Dibujo{Ejemplo de un grafo $G$.}
+\Inkscape{Ejemplo de un grafo $G$.}{"Figuras/Introduccion-a-grafos/Dibujo 51.pdf_tex"}
 
-\Dibujo{Grafo de línea de $G$, donde se puede ver que sus \brown{vértices} son las \brown{aristas} de $G$.}
+\Inkscape{Grafo de línea de $G$, donde se puede ver que sus \brown{vértices} son las \brown{aristas} de $G$.}{"Figuras/Introduccion-a-grafos/Dibujo 52.pdf_tex"}
 
 
 \begin{definition}

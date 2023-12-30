@@ -19,8 +19,8 @@
 \contentsline {subsection}{\numberline {1.8.1}Contracciones y menores}{41}{subsection.1.8.1}%
 \contentsline {subsection}{\numberline {1.8.2}Subdivisiones}{43}{subsection.1.8.2}%
 \contentsline {section}{\numberline {1.9}Clase 9: 17/04/23}{46}{section.1.9}%
-\contentsline {subsection}{\numberline {1.9.1}}{48}{subsection.1.9.1}%
-\contentsline {section}{\numberline {1.10}Clase 10: 20/04/23}{48}{section.1.10}%
+\contentsline {section}{\numberline {1.10}Clase 10: 20/04/23}{47}{section.1.10}%
+\contentsline {subsection}{\numberline {1.10.1}}{47}{subsection.1.10.1}%
 \contentsline {section}{\numberline {1.11}Ejercicios}{51}{section.1.11}%
 \contentsline {chapter}{\numberline {2}Matchings}{60}{chapter.2}%
 \contentsline {section}{\numberline {2.1}Clase 11: 27/04/23}{60}{section.2.1}%
