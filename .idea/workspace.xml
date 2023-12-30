@@ -5,20 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d64069ff-abb3-47fa-9feb-8331f5baf8d7" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Figuras/Introduccion-a-grafos/Dibujo 54.pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Figuras/Introduccion-a-grafos/Dibujo 54.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Figuras/Introduccion-a-grafos/Dibujo 52.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Figuras/Introduccion-a-grafos/Dibujo 52.pdf_tex" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Figuras/Introduccion-a-grafos/Dibujo 52.svg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/main.aux" beforeDir="false" afterPath="$PROJECT_DIR$/out/main.aux" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/main.log" beforeDir="false" afterPath="$PROJECT_DIR$/out/main.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/main.out" beforeDir="false" afterPath="$PROJECT_DIR$/out/main.out" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/main.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/out/main.pdf" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/main.synctex.gz" beforeDir="false" afterPath="$PROJECT_DIR$/out/main.synctex.gz" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/main.toc" beforeDir="false" afterPath="$PROJECT_DIR$/out/main.toc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Figuras/Introduccion-a-grafos/Dibujo 51.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/src/Figuras/Introduccion-a-grafos/Dibujo 51.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Figuras/Introduccion-a-grafos/Dibujo 51.pdf_tex" beforeDir="false" afterPath="$PROJECT_DIR$/src/Figuras/Introduccion-a-grafos/Dibujo 51.pdf_tex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Figuras/Introduccion-a-grafos/Dibujo 51.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/Figuras/Introduccion-a-grafos/Dibujo 51.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Figuras/Introduccion-a-grafos/Dibujo 52.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Figuras/Introduccion-a-grafos/Dibujo 52.pdf_tex" beforeDir="false" afterPath="$PROJECT_DIR$/src/Figuras/Introduccion-a-grafos/Dibujo 54.pdf_tex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Figuras/Introduccion-a-grafos/Dibujo 52.svg" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main.tex" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.tex" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -190,6 +186,8 @@
       <workItem from="1703859499506" duration="14343000" />
       <workItem from="1703895159595" duration="7923000" />
       <workItem from="1703904563878" duration="1858000" />
+      <workItem from="1703906836335" duration="45000" />
+      <workItem from="1703946326796" duration="4164000" />
     </task>
     <task id="LOCAL-00001" summary="arreglado?">
       <option name="closed" value="true" />

@@ -1668,12 +1668,16 @@ Sean $a$ y $b$ vértices distintos de $G= (V,E)$. Entonces,
 
 \begin{theorem}[Versión global de Menger]\label{th:version global de Menger}
 \begin{enumerate}[(i)]
-\item Un grafo es $k$-conexo si y solo si contiene $k$-caminos internamente disjuntos entre cada par de vértices.
-\item Un grafo es $k$-arista conexo si y solo si contiene $k$ caminos arista disjuntos entre cada par de vértices.
+\item Un grafo $G$ es $k$-conexo si y solo si contiene $k$-caminos internamente disjuntos entre cada par de vértices.
+\item Un grafo $G$ es $k$-arista conexo si y solo si contiene $k$ caminos arista disjuntos entre cada par de vértices.
 \end{enumerate}
 \end{theorem}
 \begin{proof}
+\begin{enumerate}[(i)]
+\item Por un lado, si hay $k$ caminos internamente disjuntos entre cada par de vértices pero $G$ no es $k$-conexo, es porque existen dos vértices $x,y$ separados por un conjunto $X$ con $\abs X \leq k-1$, pero el ítem (i) del corolario anterior implica que hay a lo más $k-1$ caminos internamente disjuntos entre $x,y$, lo cual es absurdo. Recíprocamente, si $x,y$ son dos vértices no adyacente, el corolario anterior implica que hay al menos $k$ caminos internamente disjuntos entre $x,y$, pues si $G$ es $k$-conexo, el mínimo conjunto $x,y$-separador debe tener al menos $k$-vértices. Si $x,y$ son dos vértices adyacentes, el ítem (i) del corolario anterior sigue valiendo, solo que ahora hay más caminos arista disjuntos: hay que contar el camino $xy$.
 
+\item El razonamiento es totalmente análogo al ítem anterior: aplicar el ítem (ii) del corolario de arriba.
+\end{enumerate}
 \end{proof}
 
 
@@ -1708,20 +1712,22 @@ por el Teorema débil \ref{th:version debil del teorema de Alon, Hoory y Lineal 
 
 
 \begin{exercise}
-Probar que todo grafo conexo $G$ contiene un camino o un ciclo de longitud al menos $\min \{2 \delta (G) , \abs G\}$.
+Probar que todo grafo conexo $G$ con $\abs G \geq 3$ contiene un camino o un ciclo de longitud al menos $k := \min \{2 \delta (G) , \abs G\}$. (En general, vale para cualquier grafo conexo con $k = \min \{2 \delta (G), \abs G - 1\}$).
 \end{exercise}
 \begin{solution}
-Comentario, el resultado es falso solo para $n = 2$. En efecto, veremos en la demostración que vale para $n \neq 2$,
-y un camino de longitud uno no cumple pues $2 \delta = 2$ y $n = 2$ pero la longitud de cualquier sub camino o ciclo
-es a lo más uno.
+Tomemos $P := v_0, \ldots, ,v_l$ un camino de largo máximo en $G$. Sabemos que $N_G (v_0)$ y $N_G (v_l)$ están contenidos en $V(P)$ por maximalidad de $P$. Si $V(P) = V(G)$, entonces $v_0v_l \not \in E(G)$, de lo contrario se sigue el resultado. Similarmente, para cada $i \in \{1, \ldots, l-1\}$ (el conjunto es no vacío porque $\abs G \geq 3$) se tiene que $v_{i-1}v_l \not \in E(G)$ o $v_0 v_i \not \in E(G)$, de lo contrarío tendríamos un ciclo de longitud $\abs G \geq k$ (ver la Figura \ref{Figura:no hay cruces internos en P}). Consecuentemente,
+\[
+    2 \delta(G) \leq d_G (v_0) + d_G (v_l) \leq l,
+\]
+y ganamos.
 
-Consideremos $P$ el camino de longitud máxima. Por maximalidad los vecinos de los extremos de $P$ tienen que estar en $P$. Si $G[P]$ forma un ciclo $C$ de longitud mayor a $P$, i.e. $G[C] = G[P]$ debe ser que
-\begin{enumerate}[(i)]
-\item $\Abs C = \abs G$ si $G = G[C]$. Luego en este caso se tiene que vale la afirmación;
-\item o si no, como $G$ es conexo existe un vértice $v \not \in V(C)$ adyacente a $C$. Más aún, todos sus vecinos deben estar en $C$, de lo contrario podíamos encontrar un camino más grande que $P$. Con lo cual $\delta (G) \leq d (v) \leq \Abs C / 2$ porque no puede haber dos vecinos de $v$ en $C$ ayacentes mediante una arista de $C$ por maximalidad de $C$. Luego en este caso también vale la afirmación.
-\end{enumerate}
+Ahora supongamos que $V(P) \neq V(G)$. Y supongamos también que $l < k\leq 2\delta (G)$. Demostraremos que existe un ciclo de longitud $l$ contenido en $G[V(P)]$, así llegaremos a una contradicción pues al existir un vértice $x$ fuera de $G[V(P)]$ en $G$, podríamos extender el ciclo a un camino de longitud al menos $l+1$ en $G$ conectándolo con $x$. En efecto, supongamos que no existe tal ciclo, luego para cada $i \in \{1, \ldots, l-1\} \neq \emptyset$ se tiene que $v_{i-1}v_l \not \in E(G)$ o $v_0 v_i \not \in E(G)$ (ver la Figura \ref{Figura:no hay cruces internos en P}). Entonces
+\[
+    2 \delta(G) \leq d_G (v_0) + d_G (v_l) \leq l < 2 \delta (G),
+\]
+absurdo.
 
-Por otro lado, si $G[P]$ no forma ciclos de longitud mayor a $P$, debe ser que los extremos de $P$ (digamos $x_1$ y $x_2$, que podemos suponer son distintos pues este caso es trivial) no son vecinos entre sí. Veamos que esto implica que $\Abs P \geq 2 \delta (G)$, para eso, basta ver que $\Abs P \geq d (x_1) + d (x_2)$. En efecto, ordenemos a los vecinos de $x_1$ en $P$: $V: v_1<v_2< \cdots < v_{d(x_1)}$; similarmente ordenamos los vecinos de $x_2$ en $P$: $W: w_1 < w_2 <\cdots < w_{d(x_2)}$. Notemos que un elemento de $v \in V$ no puede ser adyacente a un elemento $w \in W$ cuando $v > w$, pues podríamos construir un ciclo de longitud más grande que $P$: $w x_2 P v x_1 P w$. Luego con esta observación, probemos que el camino de $P$ generado por todos los vértices $x_i,y_j$ tiene longitud al menos $d(x_1) + d(x_2) -2$. Para eso, basta ver que este conjunto tiene al menos $d (x_1) + d(x_2) -1$ vértices. Sea $j_0$ el primer índice tal que $y_{j_0}$ coincide con un $x_i$, luego debe ser que para todo $y_j$ con $j > j_0$ tal que coincide con un $x_i$ no puede ser consecutivo a $y_{j-1}$ (por la observación de recién con $v = y_{j}$ y $w = y_{j-1}$), de hecho debe haber un vértice entre $y_{j-1}$ e $y_j$ que no sea ningún $x_i$: el consecutivo a $y_{j-1}$ por la observación anterior. Es decir, salvo por $y_{j_0}$ los $y_j$ son distintos a los $x_i$ o si coinciden con algún $x_i$ es porque hay un tercer vértice distinto de $x_i$ o $y_j$ que podemos contar en lugar de $y_j$.
+\Inkscape[][no hay cruces internos en P]{Notar que en este caso $v_0 P v_{i-1} v_l P v_i v_0$ es un ciclo de longitud $\abs P$ en $G[V(P)]$.}{"Figuras/Introduccion-a-grafos/Dibujo 52.pdf_tex"}
 \end{solution}
 
 \begin{exercise}
