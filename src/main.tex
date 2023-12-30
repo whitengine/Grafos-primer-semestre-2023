@@ -1469,7 +1469,7 @@ El \textbf{grafo bloque} de un grafo conexo $G$, denotado por $\block G$, es el 
 
 Notar que en nuestro ejemplo, el grafo bloque es un árbol. Esto no es casualidad:
 
-\begin{exercise}
+\begin{exercise}\label{exercise:el grafo bloque de un grafo conexo es un arbol}
 El grafo bloque de un grafo conexo es un árbol.
 \end{exercise}
 \begin{proof}
@@ -1814,31 +1814,24 @@ i.e. adyacente a $x \in T$. Luego el algorítmo tuvo que pasar por este vértice
 Sea $\mathcal T$ un conjunto de subárboles de un árbol $T$, y $k \in \naturals$.
 \begin{enumerate}[(i)]
 \item Mostrar que si los árboles de $\mathcal T$ no son disjuntos dos a dos, entonces $\bigcap_{S \in \mathcal T} S \neq \emptyset$.
-\item Mostrar que o $\mathcal T$ tiene $k$ árboles disjuntos o existe un conjunto de a lo sumo $k-1$ vérticces
+\item Mostrar que $\mathcal T$ tiene $k$ árboles disjuntos o existe un conjunto de a lo sumo $k-1$ vértices
 de $T$ en $\bigcap_{S \in \mathcal T} S$.
 \end{enumerate}
 \end{exercise}
-Notar que $\mathcal T$ tiene que ser finito, por ejemplo si $T$ es finito, porque si no el primer ítem fallta
-tomando una cadena (con el orden de inclusión) de conjuntos de caminos infinitos.
-
 \begin{solution}
 \begin{enumerate}[(i)]
-\item Lo probaremos por inducción en $n = \abs T$. Si $n = 1$ es trivial. En general, si $n>1$, tomamos una hoja $x \in T$ y consideramos $T' = T \setminus x$. Sea $\mathcal T$ un subconjunto de árboles de $T$ con la propiedad de intersección dos a dos del enunciado. Si $x \in \bigcap \mathcal T$, entonces ganamos. Supongamos luego que no, y consideremos $\mathcal T '$ el conjunto de los $T_i' := T_i \setminus x$ con $T_i \in \mathcal T$. Este es un subconjunto de árboles en $T'$, luego si vemos que cumple la propiedad de intersección dos a dos, se seguirá por inducción que $\emptyset \neq \bigcap \mathcal T ' \subset \bigcap \mathcal T$. En efecto, si existieran $T_1', T_2' \in \mathcal T'$ tales que $T_1' \cap T_2' = \emptyset$, quiere decir que $T_1 \cap T_2 = \{x\}$, pero esto es imposible salvo que $T_1$ o  $T_2$ sea igual a $\{ x \}$, ya que $x$ es una hoja de $T$, pero entonces por la intersección dos a dos de $\mathcal T$, tenemos que $x \in \bigcap \mathcal T$, pero ya habíamos descartado este caso.
+\item Lo probaremos por inducción en $n = \abs T$. Si $n = 1$ es trivial. En general, si $n>1$, tomamos una hoja $x \in T$ y consideramos $T' = T \setminus x$. Sea $\mathcal T$ un subconjunto de árboles de $T$ con la propiedad de intersección dos a dos del enunciado. Si $x \in \bigcap \mathcal T$, entonces ganamos. Supongamos luego que no, y consideremos $\mathcal T '$ el conjunto de los $T_i' := T_i \setminus x$ con $T_i \in \mathcal T$. Este es un subconjunto de árboles en $T'$, luego si vemos que cumple la propiedad de intersección dos a dos, se seguirá por inducción que $\emptyset \neq \bigcap \mathcal T ' \subset \bigcap \mathcal T$. En efecto, si existieran $T_1', T_2' \in \mathcal T'$ tales que $T_1' \cap T_2' = \emptyset$, quiere decir que $T_1 \cap T_2 = \{x\}$, pero esto es imposible salvo que $T_1$ o  $T_2$ sea igual a $\{ x \}$, ya que $x$ es una hoja de $T$, pero entonces por la intersección dos a dos de $\mathcal T$, tenemos que $x \in \bigcap \mathcal T$, que es el caso que descartamos al comienzo.
 \item Lo haremos por inducción en el número de vértices $n$ de $T$. Si $n = 1$, el resultado es trivial. En
 general, tomemos una hoja $x \in T$, y consideremos un conjunto $\mathcal T$ de árboles de $T$. Supongamos que no
 contiene $k \in \naturals$ árboles disjuntos. Sea $\mathcal T ' := \{ T \setminus \{x \} | T \in \mathcal T \}$, una familia de subárboles de $T' = T \setminus \{x\}$.
-Pueden ocurrir dos casos: en el primero $\mathcal T'$ no tiene $k-1$ árboles disjuntos, luego por hipótesis
-inductiva, existe un conjunto de vértices $S \subset T' := T \setminus \{x\}$ con a lo más $k-2$ vértices que
-interseca a todos los árboles de $\mathcal T'$. Si ningún árbol de $T$ fuera exactamente $\{x\}$, entonces se
-seguiría que esos vértices también intersecan a los de $\mathcal T$. De lo contrario, agregando a $x$ tenemos
-un subconjuntos de a lo más $k-1$ vértices que también sirve para $\mathcal T$. El segundo caso es cuando $\mathcal T '$ tiene $k-1$ árboles disjuntos pero no tiene $k$. El mismo procedimiento nos daría un conjunto $S \subset T'$ de a lo más $k-1$ elementos que interseca a los árboles de $\mathcal T'$, pero como hay $k-1$ disjuntos, debe ser exactamente $k-1$. Ahora, estos $k-1$ árboles de $\mathcal T'$, originalmente a lo más uno podía contener a $x$, de lo contrario com $x$ es hoja, su vecino $y$ estária en la intersección de dos árboles de $\mathcal T '$. Como $\mathcal T$ no puede tener $k$ árboles disjuntos, debe ser que el árbol $\{x\}$ interseca a alguno de los que no se degeneraron en $T'$, o sea que hay exactamente un árbol $T_0$ en $\mathcal T$, tal que $x,y \in T_0$ pero que no están en ningún otro árbol, reemplazando al elemento de $S \cap T_0' = S \cap (T_0 \setminus \{x\} = \{z\})$ por $x$, obtenemos que $S$ tiene $k-1$ elementos e interseca a todos los árboles de $\mathcal T$.
+Pueden ocurrir dos casos. En el primer caso, $\mathcal T '$ tiene $k$ árboles $\tau'$ disjuntos, y por lo tanto $\mathcal T$ también si tomamos los árboles $\tau := \tau ' \cup \{x\}$, pues si dos árboles contienen a $x$, luego contienen a su padre $y$, contradiciendo que los $\tau '$ son disjuntos en $T'$. Si el primer caso no ocurriera, se tendría por hipótesis inductiva que existe un conjunto de a lo más $k-1$ vértices $S$ que interseca todos los $\tau ' \in \mathcal T '$, en particular este conjunto interseca todos los $\tau \in \mathcal T$.
 \end{enumerate}
 \end{solution}
 
 \begin{remark}
 Utilizando el vocabulario del Capítulo \ref{apendice:orden parcial completo
 -dirigido y teorema del punto fijo de Kleene} del Apéndice, los ítems del ejercicio anterior se pueden traducir.
-Antes, vamos a considerar el conjunto $\operatorname{Trees} (T)$, de subármoles de $T$, el cual es un orden parcial
+Antes, vamos a considerar el conjunto $\operatorname{Trees} (T)$, de subárboles de $T$, el cual es un orden parcial
 con la inclusión, pero nos va a interesar mirar el orden opuesto $\leq:= \subset^{op}$. Así, la operación supremo
 entre un conjunto arbitrario de subárboles de $T$, digamos $\mathcal T$, es $\bigvee \mathcal T = \bigcap \mathcal T$, cuando el supremo exista, y este sea un subárbol de $T$. Notar que siempre que dos árboles en $T$ no sean disjuntos, entonces la intersección está en $\operatorname{Trees} (T)$, es decir tienen supremo. Con lo cual:
 \begin{enumerate}[(i)]
@@ -1864,9 +1857,8 @@ Probaremos el enunciado por inducción en el cardindinal de $T$. Si $\abs T$ es 
 En general, consideramos $f : T \rightarrow T$ endomorfismo de grafos, luego induce un endomorfismo $f^* : L
 (T) \rightarrow L(T)$ entre grafos de línea, que manda $e = xy \mapsto f^*(e) = f(x)f(y)$ (siempre está bien
 definido el morfismo de grafos $f^*$ inducido por un morfismo des grafos $f : G_1 \rightarrow G_2$). Como
-$L(T)$ es un árbol también (en efecto, es el grafo de bloque de $T$) y tiene $n-1$ vértices si $n= \abs T$,
-se sigue por inducción que $f^*$ deja fijo a una arista o a un vértice de $L(T)$. En ambos casos se implica
-que $f$ tiene un punto fijo.
+$L(T)$ es un árbol también (en efecto, es el grafo de bloque de $T$ y podemos aplicar el Ejercicio \ref{exercise:el grafo bloque de un grafo conexo es un arbol}) y tiene $n-1$ vértices si $n= \abs T$,
+se sigue por inducción que $f^*$ deja fijo a una arista o a un vértice de $L(T)$. En ambos casos se tiene que $f$ tiene un vértice fijo o una arista fija.
 \end{solution}
 
 
