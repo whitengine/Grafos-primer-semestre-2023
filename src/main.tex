@@ -1869,7 +1869,7 @@ de cada árbol generador son precisamente los enlaces del grafo.
 \end{exercise}
 \begin{solution}
 Por un lado, un corte de $G$ tiene que tener una arista de cada árbol generador, pues el árbol es conexo y no se
-puede separar por las partes que inducen el corte; luego los enlaces son minimales con esta propiedad. Por otro
+puede separar por las partes que inducen el corte; luego los enlaces son cortes minimales con esta propiedad. Por otro
 lado, lo anterior implica que los conjuntos de aristas minimales con esta propiedad, cumplen que si son cortes
 entonces son enlaces. Luego basta probar que estos conjuntos son cortes. En efecto, sea $E$ un conjunto de
 aristas minimal con la propiedad que interseca a todos los árboles generadores de $G$. Sea $f \in E$, por
@@ -1878,8 +1878,8 @@ fundamental
 \[
     D_f = D_f(T) \subset E;
 \]
-con lo cual, como $D_f$ es un enlace, interseca a todos los árboles generadores, luego por minimalidad de $E$
-deben ser iguales, i.e. $E$ es un corte (de hecho un enlace). Finalmente, veamos la afirmación: ya sabemos que $f \in D_f \cap E$; sea ahora $g \in D_f \setminus \{f\}$, consideremos el árbol $T' = T - f + g$ que es también generador de $G$. Notemos que $T'$ debe intersecar a $E$ porque es árbol generador, pero por cómo elegimos a $T$, la única arista que puede estár en $E$ es $g$. Como $g$ era arbitrario, $D_f \subset E$, como queríamos.
+con lo cual, como $D_f$ es un enlace, interseca a todos los árboles generadores, luego por minimalidad de $E$,
+deben ser iguales, i.e. $E$ es un corte y por lo tanto un enlace. Finalmente, veamos la afirmación: ya sabemos que $f \in D_f \cap E$; sea ahora $g \in D_f \setminus \{f\}$, consideremos el árbol $T' = T - f + g$ que es también generador de $G$. Notemos que $T'$ debe intersecar a $E$ porque es árbol generador, pero por cómo elegimos a $T$, la única arista que puede estár en $E$ es $g$. Como $g$ era arbitrario, $D_f \subset E$, como queríamos.
 \end{solution}
 
 \begin{exercise}
