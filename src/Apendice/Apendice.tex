@@ -81,7 +81,7 @@ El \textbf{espacio de ciclos} $\mathcal{C} = \mathcal{C}(G)$ es el subespacio de
 \end{definition}
 
 \begin{proposition}\label{proposition:apendice - definiciones equivalentes de elemento del subespacio de ciclos}
-Las siguientes afiirmacaiones son equivalentes para conjuntos de aristas $D \subset E$:
+Las siguientes afirmaciones son equivalentes para conjuntos de aristas $D \subset E$:
 \begin{enumerate}[1.]
 \item $D \in \mathcal{C} (G)$;
 \item $D$ es una unión (posiblemente vacía) disjunta de ciclos en $G$;
@@ -110,9 +110,9 @@ Sea $\mathcal B$ el subespacio generado por los cortes de la forma $E(v)$ en $\m
 El espacio $\mathcal{B} (G)$ es el \textbf{espacio de cortes}, o el \textbf{espacio de enlaces} de $G$.
 \end{definition}
 
-\begin{obs}
-Los enlaces son para $\mathcal B$, lo que son los ciclos para $\mathcal C$: elementos minimales no vacíos.
-\end{obs}
+\begin{proposition}\label{proposition:caracterizacion de enlaces en grafos conexos}
+Si $G$ es un grafo conexo, los enlaces son los cortes con partición $(V_1, V_2)$ tales que $G[V_1]$ y $G[V_2]$ son conexos. Más aún, si $G$ es disconexo, sus enlaces son los cortes minimales de sus componentes.
+\end{proposition}
 \begin{proof}
 Si $G$ es conexo, entonces los enlaces son justamente sus cortes minimales: un corte en un grafo conexo es minimal si y solo si ambos lados de la partición inducen subgrafos conexos. En efecto, por un lado, dado un corte minimal con bipartición $\{V_1,V_2\}$, induce subgrafos conexos $G[V_1]$, $G[V_2]$, pues de lo contrario, digamos que $G[V_1]$ tiene una componente $C$, se sigue que el corte $E(V_1 \setminus C, V_2 \cup C)$ pierde todas las $C,V_2$ aristas (hay al menos una porque $G$ es conexo), contradiciendo minimalidad.
 
@@ -181,16 +181,16 @@ $$
 \mathcal{C}(B) \subset \mathcal{B}(G)^\perp \quad \text{y} \quad \mathcal B (G)  \subset \mathcal{C}(G)^\perp.
 $$
 
-Para probar $\mathcal{B}(G)^\perp \subset \mathcal C$ hay que usar la anteúltima proposición que caracteriza los vectores del subespacio de ciclos, es decir $F \not \in \mathcal{C}(G)$ si y solo si tiene un vértice incidente con un número impar de aristas en $F$. Luego $\langle E(v), F \rangle = 1$, entonces como $E(v) \in \mathcal{B}(G)$ se sigue que $F \not \in \mathcal{B}(G)^\perp$. Esto termina de probar que $\mathcal C = \mathcal B ^\perp$ en $G$.
+Para probar $\mathcal{B}(G)^\perp \subset \mathcal C (G)$, hay que usar la anteúltima proposición que caracteriza los vectores del subespacio de ciclos, es decir $F \not \in \mathcal{C}(G)$ si y solo si tiene un vértice incidente con un número impar de aristas en $F$. Luego $\langle E(v), F \rangle = 1$, entonces como $E(v) \in \mathcal{B}(G)$, se sigue que $F \not \in \mathcal{B}(G)^\perp$. Esto termina de probar que $\mathcal C = \mathcal B ^\perp$ en $G$.
 
-Finalmente, para probar $\mathcal (G)^\perp \subset \mathcal B (G)$, tomemos $F \in \mathcal C (G)^\perp$. Consideremos el \textit{multigrafo} $H$ obtenido a partir de $G$ luego de contraer las aristas de $E \setminus F$. Todo ciclo en $H$ tiene sus aristas en $F$. Como lo podemos extender a cualquier ciclo en $G$ agergando aristas de $E\setminus F$, entonces el número de aristas del ciclo extendido que están en $F$ (es decir las aristas del ciclo en $H$ original) debe ser par, pues $F \in \mathcal C ^\perp$. Usando la caracterización de grafos bipartitos, tenemos q ue $H$ es bipartito. Su partición induce una partición $(V_1,V_2)$ de $V$ (ya que las aristas que habíamos contraído convierten la bipartición en un corte), tal que $E(V_1,V_2) = F$, i.e. $F \in \mathcal{B}(G)$.
+Finalmente, para probar $\mathcal C (G)^\perp \subset \mathcal B (G)$, tomemos $F \in \mathcal C (G)^\perp$. Consideremos el \textit{multigrafo} $H$ obtenido a partir de $G$ luego de contraer las aristas de $E \setminus F$. Todo ciclo en $H$ tiene sus aristas en $F$. Como lo podemos extender a un ciclo en $G$ agregando aristas de $E\setminus F$, entonces el número de aristas del ciclo extendido que están en $F$ debe ser par, pues $F \in \mathcal C ^\perp$, y por lo tanto el número de aristas del ciclo en $H$ también. Usando la caracterización de grafos bipartitos, tenemos que $H$ es bipartito. Su partición induce una partición $(V_1,V_2)$ de $V$ (ya que las aristas que habíamos contraído convierten la bipartición en un corte), tal que $E(V_1,V_2) = F$, i.e. $F \in \mathcal{B}(G)$.
 \end{proof}
 
 
 
-Consideremos ahaora un grafo conexo $G = (V,E)$ con un árbol generador $T \subset G$. Para toda cuerda $e \in E \setminus E(T)$ existe un único ciclo $C_e$ en $T+e$, que llamaremos el \textbf{ciclo fundamental} de $e$ con respecto a $T$. Similarmente, para toda arista $f \in T$, el bosque tienee exactamente dos componentes (por la caracterización de árbol). El conjunto $D_f \subset E$ de aristas de $G$ entre ambas componentes es un \textit{enlace} (usando una de las propiedades probadas en essta sección, pues ambos lados de la partición son subgrafos inducidos conexos) en $G$, el \textbf{corte fundamental} de $f$ con respecto de $T$.
+Consideremos ahora un grafo conexo $G = (V,E)$ con un árbol generador $T \subset G$. Para toda cuerda $e \in E \setminus E(T)$ existe un único ciclo $C_e$ en $T+e$, que llamaremos el \textbf{ciclo fundamental} de $e$ con respecto a $T$. Similarmente, para toda arista $f \in T$, el bosque $T \setminus e$ tiene exactamente dos componentes (por la caracterización de árbol \ref{theorem:caracterizacion de arbol}). El conjunto $D_f \subset E$ de aristas de $G$ entre ambas componentes es un \textit{enlace} en $G$ por la Proposición \ref{proposition:caracterizacion de enlaces en grafos conexos}, que llamaremos el \textbf{corte fundamental} de $f$ con respecto de $T$. Es el único corte fundamental que contiene a $f$.
 
-Notar que $f \in C_e$ si y solo si $e \in D_f$, para todo $e \not \in T$ y $f \in T$. En efecto, por un lado si $e \not \in T$ y $f \in T$, entonces $f \in C_e$ entonces sacar a $f$ de $T$ hace que se parta en dos componentes, que tienen que estar conectada por la cuerda $e$ ya que todo camino entre ambas componentes pasaba por $f$, luego por $C_e$ y cuando quitas una arista de un ciclo los caminos pueden seguir pasando por los vértices de $f$ a través de $e$, i.e. $e \in D_f$. Por otro lado, si $e \in D_f$ entonces el camino $f \cdots e \cdots f$ tiene que ser un ciclo en $G$ porque las aristas de $f \cdots e$ están en una componente y las aristas $e \cdots f$ en otra, así $f \in C_e$. Esto indica una conexión más profunda de dualidad; el siguiente teorema explora un poco este descubrimiento.
+Notar que $f \in C_e$ si y solo si $e \in D_f$, para todo $e \not \in T$ y $f \in T$. En efecto, si $f \in C_e$, quitar $f$ de $T$ parte en dos componentes, que tienen que estar conectadas por la cuerda $e$, ya que todo camino entre ambas componentes pasaba por $f$, luego por $C_e$, y cuando quitamos una arista de un ciclo, los caminos pueden seguir pasando por los vértices de $f$ a través de $e$, i.e. $e \in D_f$. Por otro lado, si $e \in D_f$, entonces el camino $f \cdots e \cdots f$ tiene que ser un ciclo en $G$, porque las aristas de $f \cdots e$ están en una componente y las aristas $e \cdots f$ en otra, así, $f \in C_e$. Esto indica una conexión más profunda de dualidad; el siguiente teorema explora un poco este descubrimiento:
 
 \begin{figure}
 \includegraphics[width=\linewidth]{"./Apendice/Figuras/Capitulo 1/Dibujo 1.pdf"}
@@ -210,18 +210,22 @@ $$
 \end{theorem}
 \begin{proof}
 \begin{enumerate}[(i)]
-\item Notemos que toda arista $f \in T$ yace en $D_f$, pero ningún otro corte fundamental lo hace (estas son aristas de $T$), mientras que una arista $e \not \in T$ yace en $C_e$ pero no en otro ciclo fundamental (este ciclo está construido con una sola arista fuera de $T$).
-Es decir, dados un subconjunto arbitrario de cortes fundamentales $\{ D_{f_1}, \ldots, D_{f_r}\}$, entonces
+\item Notemos que toda arista $f \in T$ yace en $D_f$, pero ningún otro corte fundamental lo hace (estas son aristas de $T$), mientras que una arista $e \not \in T$ yace en $C_e$, pero no en otro ciclo fundamental (este ciclo está construido con una sola arista fuera de $T$).
+Es decir, dado un conjunto arbitrario de cortes fundamentales $\{ D_{f_1}, \ldots, D_{f_r}\}$, se tiene que
 $$
 \sum_{i = 1}^r D_{f_i} \neq \emptyset.
 $$
-Análogamente, lo mismo sucede para un subconjunto de ciclos sfundamentales $\{ C_{e_1}, \ldots, C_{e_s} \}$.
-Con lo cual los cortes fundamentales y los ciclos fundamentales son, respectivamente, conjuntos linealmente independientes en $\mathcal B = \mathcal B (G)$ y $\mathcal C  = \mathcal C (G)$.
+Análogamente, lo mismo sucede para un conjunto de ciclos fundamentales $\{ C_{e_1}, \ldots, C_{e_s} \}$.
+Consecuentemente, los cortes fundamentales y los ciclos fundamentales son, respectivamente, conjuntos linealmente independientes en $\mathcal B = \mathcal B (G)$ y $\mathcal C  = \mathcal C (G)$.
 
-Veamos ahora que los ciclos fundamentales generan a un ciclo $C$ arbitrario. Por nuestra observación inicial, $D := C + \sum_{e \in C \setminus T} C_e$, es decir a $C$ le estamos quitando todas las aristas fuera de $T$, es un elemento de $\mathcal C$, que no contiene ningúna arista fuera de $T$, i.e. está contenido en $T$. Pero por el ítem 2. de la Proposición \ref{proposition:apendice - definiciones equivalentes de elemento del subespacio de ciclos}, los elementos de $\mathcal C$ son unión disjunta de ciclos, pero como $T$ es aciclico, la única opción es que sea el conjunto $\emptyset$. En consecuencia $D = \emptyset$ y en particular $C = \sum_{e \in C \setminus T} C_e$.
+Veamos ahora que los ciclos fundamentales generan a un ciclo $C$ arbitrario. Consideremos
+$$
+D := C + \sum_{e \in C \setminus T} C_e,
+$$
+es decir, a $C$ le estamos quitando todas las aristas fuera de $T$; $D$ pertenece a $\mathcal C$, y no contiene ningúna arista fuera de $T$, i.e. está contenido en $T$. Pero por el ítem 2. de la Proposición \ref{proposition:apendice - definiciones equivalentes de elemento del subespacio de ciclos}, los elementos de $\mathcal C$ son unión disjunta de ciclos, sin embargo, $T$ es aciclico, o sea, $D = \emptyset$. En particular, $C = \sum_{e \in C \setminus T} C_e$.
 
-Similarmente, todo corte $D$ es la suma de cortes fundamentales. En efecto, el elemento $D + \sum_{f \in D \cap T} D_f$ de $\mathcal B$ no contiene aristas en $T$. Así es, pues si $e \in (E(G) \setminus E(T)) \cap (D + \sum_{f \in D \cap T} D_f)$, entonces por la observación inicial $C_e \cap (D + \sum_{f \in D \cap T} D_f) = \{e\}$ ya que la única arista extra $g$ que podría aparecer debería estar en $T$ pues $C_e$ de lo contrario $g \in C_g \cap C_e$, por otro lado $g$ está en $D$ o en algún $D_f$; por un lado si está en $D$ luego está en un único $D_f$ por la observación inicial, es decir no está en $D + \sum_{f \in D \cap T} D_f$, por otro lado si no oestá en $D$, no puede estar en ningún $D_f$ con $f \in D \cap T$ pues $D_f$ contiene a un único corte fundamental. En resumen, $D + \sum_{f \in D \cap T} D_f$ es vacío. Es decir, $D = \sum_{f \in D \cap T} D_f$.
-\item Por un ladod hay $n-1$ cortes fundamentales, pues hay uno por cada arista del arbol generador $T$ de $G$, el cual tiene $n$ vértices (usamos que los grafos conexos de $n$ vértices tienen $n-1$ aristas si y solo si son árboles). Por otro lado, como vimos que $\mathcal C (G) = \mathcal B (G)^\perp$ y que para todo subespacio $V \subset \mathcal \epsilon (G)$ se tiene $\dim V + \dim V^\perp = \dim \mathcal E (G) = m$, se sigue que $\dim \mathcal C (G) = m-n+1$.
+Similarmente, todo corte $D$ es la suma de cortes fundamentales. En efecto, el elemento $D + \sum_{f \in D \cap T} D_f$ de $\mathcal B$ no contiene aristas en $T$, pues si $f$ es una arista de $T$, o está en $D$ y en un único $D_f$, o no está en $D$ y no está en ningún $D_f$. Ahora bien, tampoco puede contener aristas fuera de $T$, ya que de lo contrario, existiría un ciclo fundamental $C_e$ con $e \in D + \sum_{f \in D \cap T} D_f$, pero entonces el Teorema \ref{th:apendice subespacio de ciclos y subespacio de cortes son mutuamente ortogonales entre si} implica que $C_e$ interseca una cantidad par de veces este conjunto, es decir, contiene al menos una arista de $C_e \setminus \{ e\} \subset T$, absurdo. En resumen, no hay aristas en este conjunto, y por ende $D = \sum_{f \in D \cap T} D_f$.
+\item Por un lado hay $n-1$ cortes fundamentales, pues hay uno por cada arista del árbol generador $T$ de $G$, el cual tiene $n$ vértices (cf. \ref{corolario:todo grafo conexo de n vertices es un arbol si y solo si tiene n-1 aristas}). Por otro lado, como $\mathcal C (G) = \mathcal B (G)^\perp$ por el Teorema \ref{th:apendice subespacio de ciclos y subespacio de cortes son mutuamente ortogonales entre si}, la Ecuación \eqref{eq:formula de la dimension para los subsespacios ortogonales de E(G)} implica que $\dim \mathcal C (G) = m-n+1$.
 \end{enumerate}
 \end{proof}
 
@@ -238,18 +242,18 @@ Similarmente, todo corte $D$ es la suma de cortes fundamentales. En efecto, el e
     \]
     Luego las matrices $B$ y $B^t$ definen las transformaciones lineales
     \[
-        B : \mathcal E (G) \rightarrow \mathcal V (G) \quad \text{y} \quad B^t \mathcal V (G) \rightarrow \mathcal E (G)
+        B : \mathcal E (G) \rightarrow \mathcal V (G) \quad \text{y} \quad B^t : \mathcal V (G) \rightarrow \mathcal E (G),
     \]
     definidas respecto de las bases standard.
 \end{definition}
 
 \begin{obs}
 La transformación $B$ manda conjuntos de aristas $F \subset E$ en al conjunto de vértices incidentes en un número
-impar de aristas de $F$. Mientras que $B^t$ manda un conjunto de vértices $U \subset V$ en el lconjunto de aristas
+impar de aristas de $F$. Mientras que $B^t$ manda un conjunto de vértices $U \subset V$ en el conjunto de aristas
 con exactamente un solo extremo en $U$.
 \end{obs}
 
-Como consecuencia obtenemos:
+Consecuentemente, obtenemos el siguiente corolario:
 
 \begin{corollary}
 \begin{enumerate}[(i)]
@@ -260,8 +264,8 @@ Como consecuencia obtenemos:
 \begin{proof}
 \begin{enumerate}[(i)]
 \item $C \in \Ker B$ si y solo si todos los vértices de $G$ tienen un número par de aristas incidentes en $C$, es
-decir $(G,C)$ tiene todos sus vértices de grado par, lo cual es una definición equivalente de estar en $\mathcal C (G)$.
-\item Sea $U \subset V$, entoncces $B^t (U) = F$ el conjunto de aristas con exactamente un extremo en $U$, es decir, $F = E(U, V \setminus U)$ es un corte.
+decir $(G,C)$ tiene todos sus vértices de grado par, luego la Proposición \ref{proposition:apendice - definiciones equivalentes de elemento del subespacio de ciclos} prueba lo deseado.
+\item Sea $U \subset V$, entonces $B^t (U) = F$ es el conjunto de aristas con exactamente un extremo en $U$, es decir, $F = E(U, V \setminus U)$ es un corte.
 \end{enumerate}
 \end{proof}
 
@@ -280,20 +284,17 @@ La \textbf{matriz de adyasencia} $A = (a_{ij})_{n \times n} \in \mathbb{F}_2^{n 
 Esta matriz es simétrica. Además, se puede ver como una transformación lineal $A : \mathcal V (G) \rightarrow \mathcal V (G)$, que manda subconjuntos de vértices $U \subset V$ al conjunto de vértices con un número impar de vecinos en $U$.
 \end{obs}
 
-Denotemos por $D$ a la matriz \textit{real} diagonal $(d_{ij})_{n \times n} \in \reals^{n \times n}$ con $d_{ii} = d(
-v_i)$. Nuestra última proposición establece una conexión de $A$ y $B$ vistos como matrices reales:
+Denotemos por $D$ a la matriz \textit{real} diagonal $(d_{ij})_{n \times n} \in \reals^{n \times n}$ con $d_{ii} = d_G(v_i)$. Nuestra última proposición establece una conexión entre $A$ y $B$ vistas como matrices reales:
 
 \begin{proposition}
 $$
 B \cdot B^t = A + D.
 $$
+(Sigue valiendo módulo $2$).
 \end{proposition}
 \begin{proof}
-La cuenta se tiene que hacer entre matrices reales, la cual una cuenta muy elemental.
+La demostración es solamente una cuenta elemental entre matrices reales.
 \end{proof}
-
-Notar que la misma ecuación sigue valiendo módulo $2$.
-
 
 \section[]{Otras nociones sobre grafos}
 
