@@ -2059,19 +2059,20 @@ Fijado un matching $M$, diremos que un vértice $x \in X$ es \textbf{aceptable} 
 
 Empezando con el matching vacío, construiremos una secuencia de matchings que hagan felices a todos los vértices en $X$. Dado un matching $M$ que cumpla esto, consideremos un vértice $x \in X$ que no esté cubierto por $M$, pero que sea aceptable para algún $y \in Y$ (Si $x$ no existe, la sucesión termina). Luego agregamos a $M$ la arista $xy$ máxima respecto del orden $\leq_x$, y descartamos de $M$ cualquier otra arista incidente en $y$.
 
-Claramente, todo matching en nuestra secuencia es mejor que las anteriores y mantiene a los vértices de $X$ felices, los cuales lo estaban desde el principio, pues empezamos con el matching vacío. Así, la secuencia continua hasta encontrar un matching $M$ que no tiene vértices de $X$ sin cubrir y que sea aceptable para algún vecino en $Y$. Como todo vértice en $X$ es feliz con $M$, este matching es estable.
+Claramente, todo matching en nuestra secuencia es mejor que las anteriores y mantiene a los vértices de $X$ felices, los cuales lo estaban desde el principio, pues empezamos con el matching vacío. Así, la secuencia continua hasta encontrar un matching $M$ que tal que $X$ no tiene vértices sin cubrir estables para algún vecino en $Y$. Como todo vértice en $X$ es feliz con $M$, este matching es estable.
 \end{proof}
 
+\bigskip
 
 \begin{definition}
-Llamamos a un subgrafo $k$-regular generador de un grafo $G$, un \textbf{k-factor}.
+Llamamos a un subgrafo $k$-regular generador de un grafo $G$, un \textbf{$k$-factor}.
 \end{definition}
 
 \begin{corollary}[Petersen (1891)]
-Todo grafo $2k$-regular ($k \geq 1$) $G$ tiene un $2$-factor.
+Sea $k \geq 1$. Entonces, todo grafo $2k$-regular $G$ tiene un $2$-factor.
 \end{corollary}
 \begin{proof}
-Sin perdida de generalidad supongamos que $G$ es conexo. Por el Teorema \ref{th:paseo Euleriano si todos los vertices del multigrafo tienen grado par}, $G$ contiene un paseo Euleriano $v_0 e_0 \cdots e_{\ell -1} v_\ell$ con $v_0 = v_\ell$. Reemplacemos cada vértice $v$ por un par $(v^- , v^+)$, y cada arissta $e_i = v_i v_{i+1}$ por la arista $v_i^+ v_{i+1}^-$. Así obtenemos un grafo bipartito $G'$ que es $k$-regular, con lo cual el Corolario \ref{corollary:König-Frobenius - todo bigrafo regular no trivial tiene un matching perfecto} implica que tenemos un $1$-factor (i.e. un matching perfecto). Colapsando cada par $(v^-,v^+)$ de vuelta a su vértice original $v$, el $1$-factor de $G'$ se convierte en un $2$-factor de $G$.
+Sin perdida de generalidad supongamos que $G$ es conexo. Por el Teorema \ref{th:paseo Euleriano si todos los vertices del multigrafo tienen grado par}, $G$ contiene un paseo Euleriano $v_0 e_0 \cdots e_{\ell} v_\ell$ con $v_0 = v_\ell$. Reemplacemos cada vértice $v$ por un par $(v^- , v^+)$, y cada arista $e_i = v_i v_{i+1}$ por una arista $v_i^+ v_{i+1}^-$. Así obtenemos un grafo bipartito $G'$ que es $k$-regular, con lo cual el Corolario \ref{corollary:König-Frobenius - todo bigrafo regular no trivial tiene un matching perfecto} implica que tenemos un mathching perfecto, i.e. un $1$-factor. Colapsando cada par $(v^-,v^+)$ de vuelta a su vértice original $v$, el $1$-factor de $G'$ se convierte en un $2$-factor de $G$.
 
 \InscapeDEPRECADO{Partiendo el vértice $v$ en $v^-$ y $v^+$.}
 \end{proof}
