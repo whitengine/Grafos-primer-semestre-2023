@@ -2072,9 +2072,9 @@ Llamamos a un subgrafo $k$-regular generador de un grafo $G$, un \textbf{$k$-fac
 Sea $k \geq 1$. Entonces, todo grafo $2k$-regular $G$ tiene un $2$-factor.
 \end{corollary}
 \begin{proof}
-Sin perdida de generalidad supongamos que $G$ es conexo. Por el Teorema \ref{th:paseo Euleriano si todos los vertices del multigrafo tienen grado par}, $G$ contiene un paseo Euleriano $v_0 e_0 \cdots e_{\ell} v_\ell$ con $v_0 = v_\ell$. Reemplacemos cada vértice $v$ por un par $(v^- , v^+)$, y cada arista $e_i = v_i v_{i+1}$ por una arista $v_i^+ v_{i+1}^-$. Así obtenemos un grafo bipartito $G'$ que es $k$-regular, con lo cual el Corolario \ref{corollary:König-Frobenius - todo bigrafo regular no trivial tiene un matching perfecto} implica que tenemos un mathching perfecto, i.e. un $1$-factor. Colapsando cada par $(v^-,v^+)$ de vuelta a su vértice original $v$, el $1$-factor de $G'$ se convierte en un $2$-factor de $G$.
+Sin perdida de generalidad supongamos que $G$ es conexo. Por el Teorema \ref{th:paseo Euleriano si todos los vertices del multigrafo tienen grado par}, $G$ contiene un paseo Euleriano $v_0 e_0 \cdots e_{\ell} v_\ell$ con $v_0 = v_\ell$. Reemplacemos cada vértice $v$ por un par $(v^- , v^+)$, y cada arista $e_i = v_i v_{i+1}$ por una arista $v_i^+ v_{i+1}^-$ (ver la Figura \ref{Figura:partiendo el vertice v en parte positiva y negativa}). Así obtenemos un grafo bipartito $G'$ que es $k$-regular, con lo cual el Corolario \ref{corollary:König-Frobenius - todo bigrafo regular no trivial tiene un matching perfecto} implica que tenemos un mathching perfecto, i.e. un $1$-factor. Colapsando cada par $(v^-,v^+)$ de vuelta a su vértice original $v$, el $1$-factor de $G'$ se convierte en un $2$-factor de $G$.
 
-\InscapeDEPRECADO{Partiendo el vértice $v$ en $v^-$ y $v^+$.}
+\Inkscape[][partiendo el vertice v en parte positiva y negativa]{Partimos el vértice $v$ en $(v^-, v^+)$.}{"Figuras/Matchings/Dibujo 3.pdf_tex"}
 \end{proof}
 
 \subsection{Relaciones min-máx}
