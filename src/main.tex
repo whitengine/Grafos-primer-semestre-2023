@@ -19,7 +19,7 @@
 \usepackage{graphicx}
 
 \graphicspath{{./Apendice/Figuras/Capitulo
-    1/}{./Editor de Grafos/Figuras/Clase 11/}{./Editor de Grafos/Figuras/Clase 12/}{./Editor de Grafos/Figuras/Clase 13/}{./Editor de Grafos/Figuras/Clase 14/}{./Editor de Grafos/Figuras/Clase 15/}{./Figuras/Introduccion-a-grafos/}} %esto es para que encuentre las figuras hechas con pdf_tex en inkscape
+    1/}{./Editor de Grafos/Figuras/Clase 11/}{./Editor de Grafos/Figuras/Clase 12/}{./Editor de Grafos/Figuras/Clase 13/}{./Editor de Grafos/Figuras/Clase 14/}{./Editor de Grafos/Figuras/Clase 15/}{./Figuras/Introduccion-a-grafos/}{./Figuras/Matchings/}} %esto es para que encuentre las figuras hechas con pdf_tex en inkscape
 
 \usepackage{framed}
 \usepackage[dvipsnames]{xcolor} %agrega mas colores para xcolor.
@@ -1959,42 +1959,31 @@ luego de $v_l$ a $v_j$ para cada vértice $v_l$ adyacente a $v_j$.
 
 \begin{definition}
 Un \textbf{matching} o \textbf{emparejamiento} en un grafo $G = (V,E)$ es un subconjunto $M \subset E$ tal
-que ningún par de aristas en $M$ comparten un vértice.
-
-Un matching es \textbf{maximal} si al añadirle cualquier otra arista deja de ser matching.
-
-Un matching es \textbf{máximo} si no hay otro matchinig con mayor tamaño (número de aristas).
-
-Decimos que un matching \textbf{cubre} a los vértices de sus aristas.
-
-Un matching que cubre a todo $V(G)$ es \textbf{perfecto}.
+que ningún par de aristas en $M$ comparten un vértice. Un matching es \textbf{maximal} si al añadirle cualquier otra arista deja de ser matching. Un matching es \textbf{máximo} si no hay otro matchinig con mayor número de aristas. Decimos que un matching \textbf{cubre} a los extremos de sus aristas. Un matching que cubre a todo $V(G)$ se le dice \textbf{perfecto}.
 \end{definition}
-Notar que un matching de un grafo $G$, es la definición dual de conjuntos de vértices aislados en su grafo de línea $
+Notar que un matching de un grafo $G$, es la noción dual de subconjunto de vértices aislados en su grafo línea $
 L(G)$.
 
-\Dibujo[0.4]{Ilustración de un \yellow{matching} de un grafo $G$. Observar que este matching es maximal, no perfecto.
-¿Será máximo?}
+\Dibujo[0.3]{\red{BORRAME}}
+
+\Inkscape[][ilustracion de un matching maximal no perfecto de un grafo G]{Ilustración de un \red{matching} en un grafo $G$. Observar que este matching es maximal, pero no perfecto. ¿Será máximo?}{"Figuras/Matchings/Dibujo 1.pdf_tex"}
 
 \begin{remark}
-Hay grafos sin mathchings perfectos. Por ejemplo, el grafo de la ilustración anterior:
-\Dibujo{En efecto, todo matching perfecto debe cubrir a los vértices de grado uno: \yellow{$1$} y \yellow{$2$}, pero
-esto es imposible porque haría que sus aristas fueran adyacentes.}
+Hay grafos sin mathchings perfectos. Por ejemplo, el grafo de la ilustración anterior \ref{Figura:ilustracion de un matching maximal no perfecto de un grafo G}: en efecto, todo matching perfecto de $G$ debe cubrir a los vértices de grado uno, pero como $G$ tiene dos de estos con un vecino en común, no puede existir.
 
-En particular, el ejemplo anterior muestra que todo grafo con un par vértices de grado $1$, a distancia $2$ entre sí
-, no puede tener un matching perfecto.
+En particular, el ejemplo anterior muestra que todo grafo con un par vértices de grado $1$, con un vecino en común no puede tener un matching perfecto.
 \end{remark}
 
+\bigskip
 
 
-Sea $G = (X \sqcup Y, E)$ un grafo bipartito (hablamos de un \textbf{$X,Y$-bigrafo}). Si $G$ tiene un matching de
-tamaño $\abs X$  (en particular cubre a $X$) los elementos de cualquier $S \subset X$ tienen
+Sea $G = (X \coprod Y, E)$ un grafo bipartito (hablamos de un \textbf{$X,Y$-bigrafo}). Si $G$ tiene un matching de tamaño $\abs X$ (en particular cubre a $X$), se tiene que para cualquier subconjunto $S \subset X$:
 \begin{equation}\label{eq:condicion de Hall}
 \abs{N(S)} \geq \abs S.
 \end{equation}
 
 \begin{definition}[Condición de Hall]
-Si subconjunto de vértices $S \subset G$ cumple $\eqref{eq:condicion de Hall}$, decimos que $
-S$ cumple la \textbf{condición de Hall}.
+Sea $S \subset V(G)$. Si $S$ cumple la desigualdad $\eqref{eq:condicion de Hall}$, decimos que cumple la \textbf{condición de Hall}.
 \end{definition}
 
 \begin{theorem}[Teorema de Hall (1935)]\label{th:teorema de Hall}
@@ -2002,12 +1991,10 @@ En un $X,Y$-bigrafo, existe un matching que cubre a $X$ si y solo si $S$ cumple 
 condición de Hall \eqref{eq:condicion de Hall} para todo $S \subset X$.
 \end{theorem}
 \begin{proof}
-La primera implicación la vimos antes de la definición de condición de Hall.
+La primera implicación la vimos antes de la definición de condición de Hall. Veamos la recíproca. Lo haremos por inducción en $\abs X =: n$. Si $n =1$ es trivial. En general, si $n> 1$, queremos
+ver que vale para $n+1$. Existen dos casos:
 
-Veamos la recíproca. Lo haremos por inducción en $\abs X =: n$. Si $n =1$ es trivial. En general, si $n> 1$, queremos
-ver que vale para $n+1$. Hay dos casos:
-\begin{enumerate}
-\item \item[Caso 1:] $\abs{N(S)}> \abs S$ para todo subconjunto $S \subsetneq X$ no vacío. Tomemos un par de vértices que
+El primero es si $\abs{N(S)}> \abs S$ para todo subconjunto $S \subsetneq X$ no vacío. Ahora tomemos un par de vértices que
 sean
 vecinos $x \in X$ e $y \in Y$, luego consideramos la $X',Y' = X \setminus \{x\}, Y \setminus \{y\}$-bipartición
 proveniente
@@ -2015,25 +2002,24 @@ de $G$ al eliminar $x,y$; todos los subconjuntos de $X'$ siguen cumpliendo la
 condición de
 Hall,
 luego tiene
-un matching que cubre a $X'$ por hipótesis inductiva, luego
+un matching que cubre a $X'$ por hipótesis inductiva, así,
 agregando $xy$
-obtenemos un matching que cubre a $X$ en $G$.
-\item[Caso 2:] Sea $S \supset X$ no vacío tal que $\abs{N(S)} = \abs S$.
-\Dibujo{Ilustración: \red{$S$} y \blue{$N(S)$} tienen el mismo cardinal, pero \blue{$N(S)$} podría tener otros
-vecinos en $X$ además de \red{$S$}. Junto con las \yellow{aristas}, los vértices de \red{$S$} y \blue{$N(S)$}
-forman el grafo inducido $G[S \cup N(S)]$.}
-Sea $G_1$ el grafo inducido por los vértices $S \cup N(S)$, y sea $G_2$ el subgrafo inducido por $G \setminus (S
+obtenemos un matching que cubre a $X$.
+
+Para el segundo caso, supongamos que existe $S \subset X$ no vacío tal que $\abs{N(S)} = \abs S$. Sea $G_1$ el grafo inducido por los vértices $S \cup N(S)$, y sea $G_2$ el subgrafo inducido por $G \setminus (S
 \cup N(S))$. Notar que $G_1$ cumple la condición de Hall. Por lo tanto, usando hipótesis inductiva, hay un matching
-en $G_1$ que cubre $S$. Veamos que la condición de Hall se tiene que cumplir también en $G_2$. Consideremos $T \subset X \setminus S$ y notemos que $$N_{G_2} (T) = N_G (T \cup S) \setminus N_G (S).$$ Así tenemos que
+en $G_1$ que cubre $S$. Veamos que la condición de Hall se tiene que cumplir también en $G_2$. Consideremos $T \subset X \setminus S$ y notemos que $$N_{G_2} (T) = N_G (T \cup S) \setminus N_G (S).$$ Así, tenemos que
 \[
    \abs{N_{G_2}(T)} = \abs{N_G (T\cup S)} - \abs{N_G (S)} \geq \abs{T \cup S} - \abs{ N_G (S)} = \abs{T \cup S} - \abs S = \abs T.
 \]
-Entonces $G_2$ cumple la condición de Hall, luego tiene un matching que cubre a $X \setminus S$ por hipótesis
+Con lo cual, $G_2$ cumple la condición de Hall, luego tiene un matching que cubre a $X \setminus S$ por hipótesis
 inductiva.
 Uniendo los dos
-matchings
-obtenidos, conseguimos un matching que cubre a $X$.
-\end{enumerate}
+matchings, conseguimos un matching que cubre $X$.
+
+\Inkscape{Ilustración: \red{$S$} y \blue{$N(S)$} tienen el mismo cardinal, pero \blue{$N(S)$} podría tener otros
+vecinos en $X$ además de \red{$S$}. Junto con las \yellow{aristas}, los vértices de \red{$S$} y \blue{$N(S)$}
+forman el grafo inducido $G_1 := G[S \cup N(S)]$; $G_2$ es su complemento. Notar que podemos construir un matching que cubre a $X$, juntando un matching de $G_1$ con otro de $G_2$. }{"Figuras/Matchings/Dibujo 2.pdf_tex"}
 \end{proof}
 
 

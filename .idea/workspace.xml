@@ -5,12 +5,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d64069ff-abb3-47fa-9feb-8331f5baf8d7" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/Figuras/Matchings/Dibujo 1.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Figuras/Matchings/Dibujo 1.pdf_tex" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Figuras/Matchings/Dibujo 1.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Figuras/Matchings/Dibujo 2.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Figuras/Matchings/Dibujo 2.pdf_tex" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Figuras/Matchings/Dibujo 2.svg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/main.aux" beforeDir="false" afterPath="$PROJECT_DIR$/out/main.aux" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/main.log" beforeDir="false" afterPath="$PROJECT_DIR$/out/main.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/main.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/out/main.pdf" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/main.synctex.gz" beforeDir="false" afterPath="$PROJECT_DIR$/out/main.synctex.gz" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Apendice/Apendice.tex" beforeDir="false" afterPath="$PROJECT_DIR$/src/Apendice/Apendice.tex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main.tex" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.tex" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -189,7 +195,8 @@
       <workItem from="1703969711560" duration="435000" />
       <workItem from="1704570275854" duration="1714000" />
       <workItem from="1704656885858" duration="3343000" />
-      <workItem from="1704677694442" duration="6698000" />
+      <workItem from="1704677694442" duration="6711000" />
+      <workItem from="1704722594568" duration="4824000" />
     </task>
     <task id="LOCAL-00001" summary="arreglado?">
       <option name="closed" value="true" />
@@ -439,7 +446,15 @@
       <option name="project" value="LOCAL" />
       <updated>1704660239617</updated>
     </task>
-    <option name="localTasksCounter" value="32" />
+    <task id="LOCAL-00032" summary="arreglado?">
+      <option name="closed" value="true" />
+      <created>1704687776326</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1704687776326</updated>
+    </task>
+    <option name="localTasksCounter" value="33" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
