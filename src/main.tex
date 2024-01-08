@@ -2035,31 +2035,31 @@ las únicas, podría haber más aristas incidentes en $N(S)$ que provienen de v�
 mismo que en la figura anterior.) Es
 decir,
  \[
-     k \abs S \leq k \abs{N(S)} \quad \Leftrightarrow \quad \abs S \leq \abs{N(S)}.
+     k \abs S \leq k \abs{N(S)} \quad \Longleftrightarrow \quad \abs S \leq \abs{N(S)}.
  \]
 Como $S\subset X$ era arbitrario, se cumple la condición de Hall, y luego por el Teorema anterior existe un
 matching de $G$ que cubre a $X$.
 
 De la misma manera, podemos conseguir un matching de $G$ que cubra a $Y$. Consecuentemente, $\abs X = \abs Y$
-y luego el matching es perfecto.
+y luego cualquiera de los matchings encontrados es perfecto.
 \end{proof}
 
 
 \subsection{Matchings con preferencias}
 
-En alguna aplicaciones a la vida real, los matchings suelen ser buscados con algún tipo de ``estabilidad''. Más formalmente, sea $(\leq_v)_{v \in V}$ una familia ordenes totales en $E(v)$: el \textbf{conjunto de preferencias} de $G$. Luego diremos que un matching $M$ de $G$ es \textbf{estable} si para toda arista $e \in E \setminus M$, existe una arista $f \in M$ tal que $e$ y $f$ comparten un vértice $v$ tal que $e <_v f$.
+En algunas aplicaciones a la vida real, los matchings suelen ser buscados con algún tipo de ``estabilidad''. Más formalmente, sea $(\leq_v)_{v \in V}$ una familia ordenes totales en $E(v)$: el \textbf{conjunto de preferencias} de $G$. Luego diremos que un matching $M$ de $G$ es \textbf{estable} si para toda arista $e \in E \setminus M$, existe una arista $f \in M$ de tal suerte que $e$ y $f$ comparten un vértice $v$ tal que $e <_v f$.
 
 \begin{theorem}[El Teorema del Matrimonio Estable - Gale \& Shapley (1962)]\label{th:teorema del matrimonio estable}
 Para cualquier conjunto de preferencias $(\leq_v)_{v \in V}$ de un $X,Y$-bigrafo $G = (V,E)$. $G$ tiene un matching estable.
 \end{theorem}
 \begin{proof}
-Llamemos a un mataching $M$ de $G$ \textbf{mejor} que un matching $M' \neq M$, si $M$ hace que todos los vérticces de $Y$ más felices que $M'$, más precisamente, si todo vértice $y \in Y$ incidente en una arista $f' \in M'$ es también incidente a algún $f \in M$ tal que $f' \leq_y f$. Construiremos una sucesión de matchings cada vez mejores. Como por cada vértice $y \in Y$, podemos mejorar su felicidad a lo más unas $d(y)$ veces, este procceso debe terminar eventualmente.
+Llamemos a un mataching $M$ de $G$ \textbf{mejor} que un matching $M' \neq M$, si $M$ hace que todos los vértices de $Y$ más felices que $M'$, más precisamente, si todo vértice $y \in Y$ incidente en una arista $f' \in M'$ es también incidente a algún $f \in M$ tal que $f' \leq_y f$. Construiremos una secuencia de matchings cada vez mejores. Como por cada vértice $y \in Y$, podemos mejorar su felicidad a lo más unas $d(y)$ veces, este procceso debe terminar eventualmente.
 
 Fijado un matching $M$, diremos que un vértice $x \in X$ es \textbf{aceptable} para $y \in Y$, si $e = xy \in E \setminus M$ y para cualquier arista $f \in M$ incidente en $y$ satisface $f <_y e$. Llamemos a $x \in X$ \textbf{feliz con $M$} si $x$ no está cubierto por $M$ o si la arista $f \in M$ que lo cubre satisface $f >_x e$ para toda arista $e = xy$ tal que $x$ es aceptable para $y$.
 
-Empezando con el matching vacío, construimos una sucesión de matchings que hagan felices a todos los vértices en $X$. Dados un matching $M$ que cumple esto, cconsideremos un vértice $x \in X$ que no está cubierto por $M$ pero aceptable para algún $y \in Y$ (Si $x$ no existe, la sucesión termina). Luego agregamos a $M$ la arista $xy$ máxima respecto del orden $\leq_x$ tal que $x$ es aceptable para $y$, y descartemos de $M$ cualquier otra arista de $y$.
+Empezando con el matching vacío, construiremos una secuencia de matchings que hagan felices a todos los vértices en $X$. Dado un matching $M$ que cumpla esto, consideremos un vértice $x \in X$ que no esté cubierto por $M$, pero que sea aceptable para algún $y \in Y$ (Si $x$ no existe, la sucesión termina). Luego agregamos a $M$ la arista $xy$ máxima respecto del orden $\leq_x$, y descartamos de $M$ cualquier otra arista incidente en $y$.
 
-Claramente, todo matching en nuestra sucesión es mejor que las anteriores y mantiene a los vértices de $X$ felices, los cuales lo estaban desde el principio pues empezamos con el matching vacío. Con lo cual, la sucesión continua hasta que termina con algún mathinc $M$ que no tiene vvérticces sin cubrir en $X$ que sea aceptable para algún vecino en $Y$. Como todo vértice en $X$ es feliz con $M$, este matching es estable.
+Claramente, todo matching en nuestra secuencia es mejor que las anteriores y mantiene a los vértices de $X$ felices, los cuales lo estaban desde el principio, pues empezamos con el matching vacío. Así, la secuencia continua hasta encontrar un matching $M$ que no tiene vértices de $X$ sin cubrir y que sea aceptable para algún vecino en $Y$. Como todo vértice en $X$ es feliz con $M$, este matching es estable.
 \end{proof}
 
 
