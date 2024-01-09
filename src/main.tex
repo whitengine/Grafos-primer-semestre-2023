@@ -2079,12 +2079,11 @@ Sin perdida de generalidad supongamos que $G$ es conexo. Por el Teorema \ref{th:
 
 \subsection{Relaciones min-máx}
 
-El Teorema de Hall nos dice cuándo podemos encontrar un matching que cubre una de las partes de un grafo bipartito.
-Pero quizá, sabiendo que no puedo cubrir ninguna de las partes, igual quiero saber el tamaño máximo de un matching en
-mi grafo.
+El Teorema de Hall \ref{th:teorema de Hall} nos dice cuándo podemos encontrar un matching que cubre una de las partes de un grafo bipartito.
+Sin embargo, en caso que no se pueda cubrir ninguna de las partes, sigue siendo interesante conocer el tamaño máximo de un matching en el grafo.
 
 \begin{notation}
-Denotamos por $\alpha ' (G)$ al tamaño máximo de un matching en un grafo $G$ (cantidad de aristas del matching).
+Denotamos por $\alpha ' (G)$ a la cantidad de aristas de un matching máximo en un grafo $G$.
 \end{notation}
 
 \begin{obs}
@@ -2092,50 +2091,44 @@ En un grafo $G$ con un matching $M$ de tamaño $m$, tenemos que $2 m \leq \abs G
 \[
     2 \alpha ' (G) \leq \abs G.
 \]
+En particular, $G$ tiene un matching perfecto si y solo si $\alpha ' (G) = \frac {\abs G} 2$.
 \end{obs}
 
 \begin{definition}
-Para un $X,Y$-bigrafo, el \textbf{defecto} $\defecto{S}$ de un conjunto $S \subset X$ es la cantidad
+Para un $X,Y$-bigrafo, el \textbf{defecto} de un conjunto $S \subset X$ es la cantidad
 \[
-    \abs S - \abs{N(S)}.
+    \defecto{S} := \abs S - \abs{N(S)}.
 \]
 \end{definition}
 
 
 
-\begin{corollary}[Fórmula del defecto]\label{corollary:formula del defecto}
+\begin{theorem}[Fórmula del defecto]\label{corollary:formula del defecto}
 En un $X,Y$-bigrafo $G$, se tiene
 \[
-    \alpha ' (G) = \min_{S \subset X} \{ \abs X - \defecto{S} \}.
+    \boxed{\alpha ' (G) = \min_{S \subset X} \{ \abs X - \defecto{S} \}.}
 \]
-\end{corollary}
+\end{theorem}
 \begin{proof}
-Todo matching de $G$ no cubre $\defecto{S}$ vértices de $S$, para cualquier subconjunto $S \subset X$ arbitrario. Es
-decir, todo matching tiene a lo más $\abs X - \defecto{S}$ elementos. Así, $$\alpha ' (
+Todo matching de $G$, en el mejor de los casos, cubre $\defecto{S}$ vértices de $S$, para cualquier subconjunto $S \subset X$. Es
+decir, todo matching tiene a lo más $\abs X - \defecto{S}$ aristas. Así, $$\alpha ' (
 G) \leq \abs X -
-\defecto{S}, \forall S \subset X.$$
+\defecto{S}, \quad \forall S \subset X.$$
 
-\Dibujo{Visualización: por un lado está $\red{S} \subset X$, y por otro $\blue{N(S)} \subset Y$. En \yellow{
-matching} no cubre $\defecto{S} = \red{5} - \blue{2}$ vértices de $\red{S}$, con lo cual cubre a lo
-más $\abs X - \defecto S = 8 - 2 = 6$ vértices de $X$.}
+Para la otra desigualdad, basta construir un matching de tamaño al menos $\abs X - d$ con $d := \max_{S \subset X} \{ \defecto S\}$. Para esto, construyamos un grafo $G'$ añadiendo $d$ vértices a $Y$, cada uno adyacente a todo vértice de $X$ (ver la Figura \ref{Figura:ilustracion de G'}). El grafo $G'$ cumple la condición de Hall, pues para cada subconjunto $S\subset X$ le añado $d \geq \defecto S$ vecinos nuevos. Con lo cual, $G'$ tiene un matching que cubre a $X$. En el peor de los casos, este matching tiene que cubrir a los $d$ vértices nuevos que agregamos a $Y$, es decir, que quitando estos vértices obtenemos un matching de $G$ con al menos $\abs X - d$ aristas como queríamos.
 
-Para la otra desigualdad construiremos un matching de tamaño mínimo. Como vimos recién $\alpha ' (G) \leq \abs X - \defecto S, \forall S \subset X$. Si tomamos $d = \max_{S \subset X} \{ \defecto S \}$, en particular tenemos que
-\[
-    \alpha' (G) \leq \abs X - d.
-\]
-Luego basta encontrar un matching de tamaño al menos $\abs X - d$. Construyamos un grafo $G'$ añadiendo $d$ vértices a $Y$, cada uno adyacente a todo $X$.
-\Dibujo{Ilustración de $G'$: agregamos en el dibujo \brown{dos vértices} adyacentes a todos los vértices de $X$ (fila superior con vértices \blue{azules} y \yellow{amarillos}). Notar que en este caso \brown{$2$} es el defecto de \yellow{$S$}.}
-El grafo $G'$ cumple la condición de Hall, pues para cada subconjunto $S\subset X$ le añado $d \geq \defecto S$ vecinos nuevos. Con lo cual $G'$ tiene un matching que cubre a $X$. En el peor de los casos, este matching tiene que cubrir a los $d$ vértices nuevos que agregamos a $Y$, es decir, que quitando estos vértices obtenemos un matching con al menos $\abs X - d$ vértices de $X$ cubiertos.
+\Inkscape[][ilustracion de G']{Ilustración de $G'$: como el defecto de \red{$S$} en esta figura es $2$, agregamos a $Y$ \gray{dos vértices} adyacentes a todos los vértices de $X$.}{"Figuras/Matchings/Dibujo 4.pdf_tex"}
 \end{proof}
 
-El tamaño de un matching está acotado por un parámetro ``dual'' natural.
-\begin{definition}
-Un \textbf{cubrimiento por vértices} es un conjunto de vértices que contiene al menos un extremo de cada arista.
+\bigskip
 
-Denotamos por $\beta (G)$ al tamaño mínimo de un cubrimiento por vértices.
+El tamaño de un matching está acotado por un parámetro ``dual'' natural:
+\begin{definition}
+Un \textbf{cubrimiento por vértices} es un conjunto de vértices que contiene al menos un extremo de cada arista. Denotamos por $\beta (G)$ al tamaño mínimo de un cubrimiento por vértices.
 \end{definition}
-\Dibujo[0.5]{Ejemplo de \purple{cubrimiento por vértices} de un grafo $G$.}
 Notar que un cubrimiento obvio, pero poco interesante, de un grafo $G$ es todo el conjunto de vértices $V(G)$.
+
+\Inkscape{Ejemplo de un \purple{cubrimiento por vértices} de un grafo.}{"Figuras/Matchings/Dibujo 5.pdf_tex"}
 
 \begin{obs}
 Tenemos que
@@ -2144,9 +2137,9 @@ Tenemos que
 \]
 \end{obs}
 \begin{proof}
-Por un lado, cada componente conexa no trivial debe tener una arista, que debe ser cubiarte por al menos un vértices. Así se ve la primera desigualdad. Notar que esta cota es tight porque podemos considerar un grafo que sea la unión disjunta de $k$ estrellas de de cualquier cantidad de aristas y $l$ vértices aislados.
+Por un lado, cada componente conexa no trivial debe tener una arista, que debe ser cubiarta por al menos un vértice. Así se ve la primera desigualdad. Notar que esta cota es tight porque podemos considerar un grafo que sea la unión disjunta de $k$ estrellas de de cualquier cantidad de aristas y $l$ vértices aislados.
 
-Por otro lado, cada vértice $u$ de un cubrimiento $U$ por vértices de $G$ de tamaño mínimo $\beta (G)$ es extremo de alguna arista $e_u$ cuyo otro extremo está fuera de $U$. Luego si $u y u'$ son distintos, es porque sus aristas $e_u$ y $e_{u'}$ también lo son. Esto nos dice que $G$ tiene al menos $\abs U = \beta (G)$ aristas. Como trivialmente $\abs U \leq \abs G$, se tiene la segunda desigualdad. Notar que esta cota es tight porque podemos considerar a $G$ como la unión disjunta de una cantidad $k$ de $1$-caminos.
+Por otro lado, cada vértice $u$ de un cubrimiento $U$ por vértices de $G$ de tamaño mínimo $\beta (G)$ es extremo de alguna arista $e_u$ cuyo otro extremo está fuera de $U$ por minimalidad. Luego si $u$ y $u'$ son distintos, es porque sus aristas $e_u$ y $e_{u'}$ también lo son. Esto nos dice que $G$ tiene al menos $\abs U = \beta (G)$ aristas. Como trivialmente $\abs U \leq \abs G$, se tiene la segunda desigualdad. Notar que esta cota es tight porque podemos considerar a $G$ como la unión disjunta de una cantidad $k$ de $1$-caminos.
 \end{proof}
 
 \begin{theorem}[König-Egevary (1931)]\label{th:König-Egevary en todo grafo bipartito el tamaño maximo de un matching es igual al tamaño mínimo de un cubrimiento por vertices de las aristas}
@@ -2164,16 +2157,17 @@ En efecto, tomemos un cubrmiento de tamaño mínimo $\beta (G)$, dados un matchi
 \end{enumerate}
 \end{Remark}
 
-\begin{proof}[Teorema]
-Sea $G$ un $X,Y$-bigrafo. Ya vimos una de las desigualdades, ahora veamos la otra. Vamos a buscar un cubrimiento por vértices, de tamaño $\alpha' (G)$. La fórmula del defecto nos dice que $\alpha' (G) = \min_{S \subset X} \{ \abs X - \defecto S \}$, tomando $T \subset X$ que realice el mínimo:
+\begin{proof}[Demostración del teorema]
+Sea $G$ un $X,Y$-bigrafo. Ya vimos una de las desigualdades, ahora veamos la otra. Vamos a buscar un cubrimiento por vértices, de tamaño $\alpha' (G)$. La fórmula del defecto nos dice que $\alpha' (G) = \min_{S \subset X} \{ \abs X - \defecto S \}$, tomando $T \subset X$ que realice el mínimo, podemos expresar:
 \[
     \alpha ' (G) = \abs X - \defecto T = \abs X - \abs T + \abs{ N(T)} = \abs{X \setminus T} + \abs {N(T)}.
 \]
-\Dibujo{Inspiremonos con el dibujo. Del lado \blue{$X$} tenemos a \yellow{$T$}, y del lado \red{$Y$} tenemos \yellow{$N(T)$}.}
-Un cubrimiento por vértices de tamaño $\alpha ' (G)$ es entonces $(X \setminus T) \cup N(T)$, luego el cubrmiento mínimo debe ser $\beta (G) \leq \alpha ' (G)$.
+Ahora, consideremos el cubrimiento por vértices de tamaño $\alpha ' (G)$ dado por $(X \setminus T) \cup N(T)$ (inspirarse en la Figura \ref{Figura:inspiracion de cubrimiento por vertices a partir de la formula del defecto}). Así, $\alpha ' (G) \geq \beta (G)$.
+
+\Inkscape[][inspiracion de cubrimiento por vertices a partir de la formula del defecto]{Inspiremonos con el dibujo. Formamos el cubrimiento por vértices \purple{$(X \setminus T) \cup N(T)$}.}{"Figuras/Matchings/Dibujo 6.pdf_tex"}
 \end{proof}
 
-Como corolario, este teorema nos dice que en un bigrafo encontrar un mátching máximo, o un cubrimiento por vértices mínimo son problemas de optimizasción duales.
+Como corolario, este teorema nos dice que en un bigrafo, encontrar un matching máximo, o un cubrimiento por vértices mínimo son problemas de optimizasción duales.
 
 \begin{exercise}
 Calcular $\alpha ' (K_n)$ para todo $n \geq 3$. (Notar que $\alpha ' (K_2) = 1$).
@@ -2201,18 +2195,21 @@ El \textbf{número de independencia} de un grafo $G$ es el tamaño máximo de un
 Notar que $\alpha ' (G) = \alpha (L(G))$, es decir que independencia de vértices y matchings son conceptos \textit{duales}.
 
 En un $X,Y$-bigrafo, ambas partes $X,Y$ son conjuntos independientes, pero podría pasar que $\alpha (G) > \max \{ \abs X, \abs Y \}$:
-\Dibujo{Ejemplo.}
+\Inkscape*{}{"Figuras/Matchings/Dibujo 7.pdf_tex"}
 
 \begin{obs}
 Si $S$ es un conjunto de vértices independientes de tamaño máximo $\alpha (G)$, se tiene todo vértice en $V(G) \setminus S$ es adyacente a algún vértice de $S$. Luego
 \[
-    \abs G - \alpha (G) \leq \Abs G \quad \Leftrightarrow \quad \abs G - \Abs G \leq \alpha (G).
+    \begin{array}{lrcl}
+    &\abs G - \alpha (G) &\leq& \Abs G \\
+    \Longleftrightarrow & \abs G - \Abs G &\leq& \alpha (G).
+    \end{array}
 \]
 Pero en la mayoría de los casos no nos dice nada, pues el lado izquierdo es negativo.
 \end{obs}
 
 \begin{definition}
-Un \textbf{cubrimiento por aristas} de $G$ es un conjunto de aristas tal que todo vértice de $G$ es extremo de alguna arista en el conjunto. Notemos a esta cantidad $\beta ' (G)$.
+Un \textbf{cubrimiento por aristas} de $G$ es un conjunto de aristas tal que todo vértice de $G$ es extremo de alguna arista en el conjunto. Notemos a la mínima cantidad de aristas posible en un cubrimiento por aristas $\beta ' (G)$.
 \end{definition}
 Notar que lo más inocente que uno podría intentar hacer en un grafo $G$ para encontrar un cubrimiento por aristas, es elegir el conjunto de todas las aristas $E$, sin embargo, si $G$ tiene vértices aislados entonces no hay cubrimiento! (En este caso definimos $\beta ' (G) := \infty$). Es decir, solamente los grafos sin vértices aislados tienen cubrimiento por aristas.
 
@@ -2223,26 +2220,26 @@ Tenemos que
 \]
 \end{obs}
 \begin{proof}
-Sea $S$ un cubrimiento por aristas de $G$ de tamaño mínimo $\beta ' (G)$. Por minimalidad de $S$, ambos extremos de una arista de $S$ no pueden tener otras aristas incidentes de $S$, luego en el peor de los casos, se necesitan $\abs G -1$ aristas para cubrir $G$. Luego $\beta ' (G) \leq \abs G -1$. Este argumento se puede luego aplicar a cada componente de $G$, pues un cubrimiento de $G$ es la unión disjunta de los cubrimientos de sus componentes. Esta cota es tight porque podemos considerar un grafo que sea la unión disjunta de $k$ estrellas de grado $n$.
+Sea $S$ un cubrimiento por aristas de $G$ de tamaño mínimo $\beta ' (G)$. Por minimalidad de $S$, ambos extremos de una arista de $S$ no pueden tener otras aristas incidentes a $S$, luego en el peor de los casos, se necesitan $\abs G -1$ aristas para cubrir $G$. Luego $\beta ' (G) \leq \abs G -1$. Este argumento se puede luego aplicar a cada componente de $G$, pues un cubrimiento de $G$ es la unión disjunta de los cubrimientos de sus componentes. Esta cota es tight porque podemos considerar un grafo que sea la unión disjunta de $k$ estrellas de grado $n$.
 
-Por otro lado, por cada arista $e \in S$ cubrimos a lo más dos vértices, luego en el por de los casos $\abs G / 2 \leq \abs S = \beta ' (G)$.
+Por otro lado, por cada arista $e \in S$ cubrimos a lo más dos vértices, luego $\abs G / 2 \leq \abs S = \beta ' (G)$.
 \end{proof}
 
 \begin{exercise}
-Probar que $\alpha (G) \leq \beta ' (G)$.
+Probar que $\alpha (G) \leq \beta ' (G)$ para cualquier grafo $G$.
 \end{exercise}
 \begin{solution}
-Claramente si $G$ tiene puntos aislados la desigualdad se cumple trivialmente. Tomemos un conjunto $U$ de vértices de $G$ que son aislados de tamaño máximo $\alpha (G)$. Consideremos un conjunto de aristas $F$ de $G$ de tamaño mínimo que cubre a $G$. Todo vértice $x$ de $U$ es extremo de una arista de $F$, más aún, dos vértices distintos de $U$ no pueden compartir la misma arista porque no son adyacentes, luego $\alpha (G) = \abs U \leq \abs F =  \beta ' (G)$.
+Claramente si $G$ tiene vértices aislados la desigualdad se cumple trivialmente pues el lado derecho es infinito. Supongamos ahora que $G$ no tiene vértices aislados. Tomemos un conjunto independiente $U$ de vértices de $G$ de tamaño máximo $\alpha (G)$. Consideremos un conjunto de aristas $F$ de $G$ de tamaño mínimo que cubre a $G$. Todo vértice $x$ de $U$ es extremo de una arista de $F$, más aún, dos vértices distintos de $U$ no pueden compartir la misma arista, pues no son adyacentes, luego $\alpha (G) = \abs U \leq \abs F =  \beta ' (G)$.
 \end{solution}
 
 \begin{theorem}[König (1916)]\label{th:teorema de König - en todo grafo bipartito sin vertices aislados alpha = beta '}
-Si $G$ es bipartito sin vértices aislados
+Si $G$ es bipartito sin vértices aislados, entonces
 \[
     \boxed{\alpha (G) = \beta ' (G) .}
 \]
 \end{theorem}
 \begin{proof}
-El ejercicio anterior prueba una desigualdad. Para probar la otra desigualdad basta encontrar un cubrimiento por aristas de tamaño $ \leq \alpha (G)$. Tomemos un conjunto de vértices independiente $U$ de tamaño máximo $\alpha (G)$. Por maximalidad, cualquier vértice de $V(G) \setminus U$ es adyacente a un vértice de $U$. Es decir, el conjunto $F$ de aristas que inciden en $U$ cubre $G$. Sin pérdida de generalidad, supongamos que $F$ es minimal. Veamos que por cada vértice de $u \in U$ hay a lo más una arista incidente; como consecuencia se sigue que $\abs F \leq \alpha (G)$ como queríamos encontrar. En efecto, de lo contrario, si $u$ tuviera dos vecinos distintos $v,v'$ en el complemento de $U$ (digamos $u \in X$ y $v,v \in Y$), por minimalidad de $F$ debe ser que $v$ y $v'$ no tienen otro vecino en $U$ que no sea $u$. Luego llegamos a un absurdo construyendo un conjunto de vértices independiente más grande: $U\setminus \{u\} \cup \{v,v'\}$.
+El ejercicio anterior prueba una desigualdad. Para probar la otra desigualdad basta encontrar un cubrimiento por aristas de tamaño $ \leq \alpha (G)$. Tomemos un conjunto de vértices independiente $U$ de tamaño máximo $\alpha (G)$. Por maximalidad, cualquier vértice de $V(G) \setminus U$ es adyacente a un vértice de $U$. Es decir, el conjunto $F$ de aristas que inciden en $U$ cubre $G$. Sin pérdida de generalidad, supongamos que $F$ es minimal con la propiedad de cubrir los vértices de $G$. Veamos que por cada vértice $u \in U$ hay a lo más una arista incidente; como consecuencia se seguirá que $\abs F \leq \alpha (G)$ como queríamos. En efecto, de lo contrario, si $u$ tuviera dos vecinos distintos $v$, $v'$ en $\bar U$ (digamos $u \in X$ y $v,v \in Y$), por minimalidad de $F$ debe ser que $v$ y $v'$ no tienen otro vecino en $U$ que no sea $u$. Luego llegamos a un absurdo construyendo un conjunto de vértices independiente más grande: $U\setminus \{u\} \cup \{v,v'\}$.
 \end{proof}
 
 
