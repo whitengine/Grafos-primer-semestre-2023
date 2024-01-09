@@ -2276,7 +2276,7 @@ En clase vimos la demostración del Teorema de König-Egevary, que dice que vale
 
 Veamos la recíproca, es decir, veamos que si un grafo $G$ cumple la igualdad para todo subgrafo $H$ de $G$, entonces es bipartito. En efecto, supongamos por el absurdo que $G$ no es bipartito, i.e. $G$ contiene un ciclo impar $H$. Llegaremos a un absurdo si logramos probar que para todo ciclo impar, no se cumple la igualdad del enunciado.
 
-Así es, pues si escribimos $C: x_0 \cdot x_1 \cdot x_2 \cdots x_{2k} \cdot x_0$ para cualquier ciclo impar con $k \geq 1$, entonces $\beta (C) = k+1$ ya que los vértices de índice par cubren todas las aristas y con $k$ vértices no se pueden cubrir todas las aristas, pues cada vértice cubre $2$ aristas de $C$ pero $C$ tiene $2k+1$ aristas; por otro lado, sabemos que en todo grafo $\alpha ' (C) \leq \beta (C)$, entonces basta ver que no hay un mathcing en $C$ de tamaño $k+1$: como notamos en el ejercicio anterior, en un matching con $r = k+1$ aristas, $2 r \leq \abs C = 2k +1$, imposible. Esto prueba que $G$ no puede tener ciclos impares.
+Así es, pues si escribimos $C = x_0 \cdot x_1 \cdot x_2 \cdots x_{2k} \cdot x_0$ para cualquier ciclo impar con $k \geq 1$, entonces $\beta (C) = k+1$ ya que los vértices de índice par cubren todas las aristas y con $k$ vértices no se pueden cubrir todas las aristas, pues cada vértice cubre $2$ aristas de $C$ pero $C$ tiene $2k+1$ aristas; por otro lado, sabemos que en todo grafo $\alpha ' (C) \leq \beta (C)$, entonces basta ver que no hay un mathcing en $C$ de tamaño $k+1$: por la Observación \ref{obs:todo matching de tamaño m tiene a lo mas v(G)/2 aristas}, en un matching con $r = k+1$ aristas, $2 r \leq \abs C = 2k +1$, luego $r \leq k$. Esto prueba que $G$ no puede tener ciclos impares como queríamos.
 \end{solution}
 
 
@@ -2284,7 +2284,11 @@ Así es, pues si escribimos $C: x_0 \cdot x_1 \cdot x_2 \cdots x_{2k} \cdot x_0$
 Sea $G$ un $X,Y$-bigrafo tal que $\abs X = \alpha (G)$, donde $\alpha (G)$ es el tamaño máximo de un conjunto de vértices independiente de $G$. Demuestre que $G$ tiene un matching que cubre a $Y$.
 \end{exercise}
 \begin{solution}
-Notemos primero que la igualdad $\abs X = \alpha (G)$ nos dice que $\abs Y \leq \abs X$, ya que $Y$ también es un conjunto independiente. Para probar que $G$ tiene un matching que cubre a $Y$, esto equivale a probar que todos los subconjuntos de $Y$ cumplen la Condición de Hall. En efecto, supongamos por el absurdo que no, es decir, existe un subconjunto $S \subset Y$ no vacío de tamaño mínimo tal que no cumple la condición de Hall. Claramente $\abs S > 1$, pues si no $S = \{y\}$ con  $y$ sin vecinos en $X$, pero luego $X \cup S$ es independiente y $\alpha (G) > \abs X$. Ahora tomemos $y \in S$, y notemos $S' = S \setminus \{y \} \neq \emptyset$. Por minimalidad de $S$, el conjunto $S'$ cumple la condición de Hall, i.e. existe un matching de $G$ que cubre a $S'$; más aún, $\abs {N(S')} = \abs {S'} $, de lo contrario $S$ cumpliría la condición de Hall. Consideramos ahora el conjunto $X \setminus N(S') \cup S = X \setminus N(S') \cup S' \cup \{y\}$ de $G$ de tamaño $\abs X +1$. Por hipótesis, no puede ser independiente, y por construcción, debe ser que $y$ tiene un vecino en $X \setminus N(S')$, es decir, $\abs {N (S)} \geq \abs{N(S')} + 1 = \abs {S'} + 1 = \abs S$, lo cual es imposible porque $S$ no cumplía la condición de Hall.
+Por el Teorema de Hall \ref{th:teorema de Hall}, basta ver que $S \subset Y$ cumple la condición de Hall \eqref{eq:condicion de Hall} para todo $S$ no vacío. Para eso, notar que el conjunto de vértices $(Y \setminus S) \cup N(S)$ cubre todas las aristas de $G$, por lo tanto
+\[
+\abs {N(S)} + \abs Y - \abs S \geq \beta ' (G) = \alpha (G) = \abs X,
+\]
+donde usamos que $\beta ' (G) = \alpha (G)$ por el Teorema \ref{th:teorema de König - en todo grafo bipartito sin vertices aislados alpha = beta '}. De aquí vemos que se cumple la condición de Hall, como queríamos.
 \end{solution}
 
 
