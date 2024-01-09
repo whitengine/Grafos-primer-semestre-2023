@@ -2086,7 +2086,7 @@ Sin embargo, en caso que no se pueda cubrir ninguna de las partes, sigue siendo 
 Denotamos por $\alpha ' (G)$ a la cantidad de aristas de un matching máximo en un grafo $G$.
 \end{notation}
 
-\begin{obs}
+\begin{obs}\label{obs:todo matching de tamaño m tiene a lo mas v(G)/2 aristas}
 En un grafo $G$ con un matching $M$ de tamaño $m$, tenemos que $2 m \leq \abs G$, pues los vértices que cubre cada arista de $M$ son disjuntos por definición de matching. Consecuentemente,
 \[
     2 \alpha ' (G) \leq \abs G.
@@ -2257,14 +2257,13 @@ El ejercicio anterior prueba una desigualdad. Para probar la otra desigualdad ba
 \begin{solution}
 \begin{enumerate}[(a)]
 \item Esto equivale a probar que todo grafo $G$ tiene un matching the tamaño al menos $\lceil \delta (G)/2 \rceil$. En efecto, sabemos que todo grafo contiene un camino de longitud $\geq \delta (G)$, luego en ese camino podemos construir un matching obvio de longitud $\geq \lceil \delta (G) /2 \rceil \geq \delta (G)/2$: elegimos la primera arista (en un orden natural inducido por el camino) y luego la siguiente arista no adyacente más cercana, y repetimos el procedimiento de manera recursiva. (En un camino de longitud $n = 2k$ este algorítmo construye un matching de tamaño $k$, y en un camino de longitud $n = 2k +1$ construye uno de tamaño $k+1$). Esto implica que $\alpha ' (G) \geq \delta (G) /2$.
-\item En un $X,Y$-bigrafo. Tomemos $y_0 \in Y$. Como $y$ tiene $d(y) \geq \delta (G)$ vecinos en $X$, sabemos que $X$ tiene al menos $\delta (G)$ vértices. Tomemos un subconjunto $T \subset X$ de tamaño $\delta (G)$ (por ejemplo los vecinos de $y$). Notemos que $T$ cumple la Condición de Hall. En efecto, para todo $S \subset T$ no vacío, sabemos que cualquier vértice de $S$ tiene al menos $\delta (G)$ vecinos, en particular
+\item En un $X,Y$-bigrafo. Tomemos $y_0 \in Y$. Como $y$ tiene $d(y) \geq \delta (G)$ vecinos en $X$, sabemos que $X$ tiene al menos $\delta (G)$ vértices. Tomemos un subconjunto $T \subset X$ de tamaño $\delta (G)$ (por ejemplo los vecinos de $y$). Notemos que $T$ cumple la Condición de Hall \eqref{eq:condicion de Hall}. En efecto, para todo $S \subset T$ no vacío, sabemos que cualquier vértice de $S$ tiene al menos $\delta (G)$ vecinos, en particular
 $$\abs {N(S)} \geq \delta (G) = \abs T \geq \abs S .$$
-Con lo cual, el Teorema de Hall no dice que existe un matching de $G$ que cubre a $T$, es decir, un matching con $\abs T = \delta (G)$ aristas. Consecuentemente $\alpha ' (G) \geq \delta (G)$.
+Con lo cual, el Teorema de Hall \ref{th:teorema de Hall} no dice que existe un matching de $G$ que cubre a $T$, es decir, un matching con $\abs T = \delta (G)$ aristas. Consecuentemente $\alpha ' (G) \geq \delta (G)$.
 \item
-    \begin{enumerate}[(a)]
-    \item Consideremos la familia $G_k = (P_{2k})^{2k}$, es decir, la familia de las $2k$-potencias de caminos de longitud $2k$ con $k \in \naturals$. Recordar que la $i$-potencia de un grafo $G$ es un grafo con los mismos vértices pero donde dos vértices son adyacentes si y solo si estaban a distancia a lo más $i$ en $G$. Afirmamos que $\delta (G_k) = 2k$ y que $\alpha ' (G_k) = k$. Numerando a los vértices de $P_{2k} : x_0 x_1 \cdots x_{2k}$, tenemos que claramente $x_i$ es adyacente a $x_j$ en $G_k$, para todo $0 \leq i, j \leq 2k$, luego $G_k$ es $2k$-regular, en particular $\delta (G_k) = 2k$. Ahora, notemos que el conjunto de aristas de $G_k$ dado por $\{ e_i\}_{i = 1}^k$ con $e_i = x_{2i-1}x_{2i}$ es un matching de $G_k$ con $k$ aristas. Esto nos dice que $\alpha ' (G) \geq k$. Por otro lado, observemos que un grafo $G$ arbitrario, con un matching de $r$ aristas, se tiene que $2 r \leq \abs G$, pues el matching cubre $2 r$ vértices distintos, con lo cual $2 \alpha ' (G) \leq \abs G$. Aplicando esta observación a $G_k$, se sigue que $\alpha ' (G_k) \leq \abs {G_k}/2 = k$. En resumen, hemos visto que $\alpha ' (G_k) = k = \delta (G_k)/2$ para todo $k \in \naturals$.
-    \item Consideremos ahora la familia $G_k = K_{k,k}$ de grafos bipartitos completos con dos particiones de $k$ elementos, para $k \in \naturals$. $G_k$ es $k$-regular, en particular $\delta (G_k) = k$. Por otro lado, vimos en el ítem (b) que $\alpha ' (G_k) \geq \delta (G_k) = k$. Veamos que no puede haber un matching con más de $k$ aristas. En efecto, todo matching de $G_k$ cubre a lo más $k$ vértices en una de las particiones de $K_{k,k} = G_k$. Esto concluye la demostración de que $\alpha ' (G_k) = k = \delta (G_k)$, para todo $k \in \naturals$.
-    \end{enumerate}
+Para el primer ítem, consideremos $G_k := K_{2k+1}$. Como $G_k$ es $2k$-regular, se tiene que $\delta (G_k) = 2k$. Por el ítem (a), cualquier matching máximo tiene al menos $k$ aristas. Por otro lado, la Observación \ref{obs:todo matching de tamaño m tiene a lo mas v(G)/2 aristas} implica que todo matching tiene a lo más $(2k+1)/2$ aristas, i.e., $\alpha' (G_k) = k$ para todo $k$, y vale la igualdad en (a).
+
+Consideremos ahora la familia $G_k = K_{k,k}$ de grafos bipartitos completos con dos partes tamaño $k$, con $k \in \naturals$. $G_k$ es $k$-regular, en particular $\delta (G_k) = k$. Por otro lado, vimos en el ítem (b) que $\alpha ' (G_k) \geq \delta (G_k) = k$. Veamos que no puede haber un matching con más de $k$ aristas. En efecto, la Observación \ref{obs:todo matching de tamaño m tiene a lo mas v(G)/2 aristas} implica que todo matching de $G_k$ tiene a lo más $2k/2$ aristas. Por lo tanto, $\alpha ' (G_k) = k$ y vale la igualdad en (b).
 \end{enumerate}
 \end{solution}
 
