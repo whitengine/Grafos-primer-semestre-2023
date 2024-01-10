@@ -2284,7 +2284,7 @@ Así es, pues si escribimos $C = x_0 \cdot x_1 \cdot x_2 \cdots x_{2k} \cdot x_0
 Sea $G$ un $X,Y$-bigrafo tal que $\abs X = \alpha (G)$, donde $\alpha (G)$ es el tamaño máximo de un conjunto de vértices independiente de $G$. Demuestre que $G$ tiene un matching que cubre a $Y$.
 \end{exercise}
 \begin{solution}
-Por el Teorema de Hall \ref{th:teorema de Hall}, basta ver que $S \subset Y$ cumple la condición de Hall \eqref{eq:condicion de Hall} para todo $S$ no vacío. Para eso, notar que el conjunto de vértices $(Y \setminus S) \cup N(S)$ cubre todas las aristas de $G$, por lo tanto
+Sin pérdida de generalidad, podemos suponer que $G$ no tiene vértices aislados. Por el Teorema de Hall \ref{th:teorema de Hall}, basta ver que $S \subset Y$ cumple la condición de Hall \eqref{eq:condicion de Hall} para todo $S$ no vacío. Para eso, notar que el conjunto de vértices $(Y \setminus S) \cup N(S)$ cubre todas las aristas de $G$ (ver la Figura \ref{Figura:inspiracion de cubrimiento por vertices a partir de la formula del defecto}), por lo tanto
 \[
 \abs {N(S)} + \abs Y - \abs S \geq \beta ' (G) = \alpha (G) = \abs X,
 \]
@@ -2325,6 +2325,7 @@ Si $G$ no tiene vértices aislados:
 \[
 \boxed{\alpha ' (G) + \beta ' (G) = \abs G .}
 \]
+(Quitando los vértices aislados de $G$ se puede probar la fórmula más general: $\alpha ' (G) + \beta' (\tilde G) = \abs G$, donde $\tilde G$ es el grafo $G$ menos sus vértices aislados).
 \end{proposition}
 \begin{proof}
 Sea $S$ un matching de tamaño máximo $\alpha ' (G)$ en $G$. Consideremos $U$ el conjunto de vértices de $G$ que no son cubiertos por $S$, i.e. $\abs U = \abs G - 2 \alpha ' (G)$. Por maximalidad de $S$, todas las aristas incidentes a un vértice $u \in U$ deben tener su otro extremo en $W = V(G) \setminus U$. Por cada vértice de $U$, tomemos una de estas aristas. Luego este conjunto de aristas junto con $S$ cubren a $G$, i.e.
@@ -2351,7 +2352,7 @@ Dado un matching $M$ de un grafo $G$. Llamamos \textbf{camino $M$-alternate} a u
 Un camino camino $M$-alternante cuyos vértices extremos no están cubiertos por $M$ se llama \textbf{$M$-aumentante}.
 \end{definition}
 
-\Dibujo{Ejemplo de camino \red{$M$}-aumentante: $1,2,3,4,5,6,7,8$.}
+\Inkscape{Ejemplo de camino \red{$M$}-aumentante: $x_0x_1x_2 \cdots x_7$.}{"Figuras/Matchings/Dibujo 8.pdf_tex"}
 
 Si $P$ es un camino $M$-aumentante, entonces reemplazando las aristas de $M$ que están en $P$ por las aristas de $E(G) \setminus M$ en $P$ obtenemos un nuevo matching $M'$ de tamaño estrictamente mayor a $M$. De aquí el nombre ``aumentante''. Así, un matching máximo $M$ no tiene caminos $M$-aumentante. Más aún, vale la recíproca:
 
@@ -2359,9 +2360,9 @@ Si $P$ es un camino $M$-aumentante, entonces reemplazando las aristas de $M$ que
 Sea $M$ un conjunto de aristas en un grafo $G$. $M$ es un matching de tamaño máximo si y solo si $G$ no tiene caminos $M$-aumentantes.
 \end{theorem}
 \begin{proof}
-Acabamos de observar una de las implicaciones, veamos la vuelta. Supongamos que sí hay un matching $M'$ de tamaño estrictamente más grande que un matching $M$ sin caminos $M$-aumentantes. Sea $F = M \Delta M'$ la diferencia simétrica entre estos dos conjuntos. Como $M$ y $M'$ son matchings, cada vértice incide en a lo más una arista de $M$ y una de $M'$. Así, $\Delta (H) \leq 2$ si vemos a $F$ como un grafo $H := (V(G), F)$. Entonces $H$ es unión disjunta de ciclos y caminos.
-\Dibujo{Ilustración de $H$, donde por un lado tenemos las aristas de \red{$M \setminus M'$} y las de \blue{$M' \setminus M$}.}
-Cada componente de $H$ alterna entre $M$ y $M'$, y por lo tanto sus ciclos son pares. Al tener $\abs{M'} > \abs M$ tiene que haber en $H$ una componente que no es ciclo. Más aún, alguna de las componentes que no son ciclos tiene que tener más aristas de $M'$ que de $M$. Por lo tanto, hay una componente que es camino que empieza y termina con aristas de $M'$. Esta componente nos da un camino $M$-aumentante, lo cual es imposible.
+Acabamos de observar una de las implicaciones, veamos la vuelta. Supongamos que sí hay un matching $M'$ de tamaño estrictamente más grande que un matching $M$ sin caminos $M$-aumentantes. Sea $F = M \Delta M'$ la diferencia simétrica entre estos dos conjuntos. Como $M$ y $M'$ son matchings, cada vértice incide en a lo más una arista de $M$ y una de $M'$. Consideremos el subgrafo $H := (V(G), F)$, luego $\Delta (H) \leq 2$. Por lo tanto, $H$ es unión disjunta de ciclos y caminos.
+\Inkscape{Ilustración de $H$, donde por un lado tenemos las aristas de \blue{$M \setminus M'$} y las de \red{$M' \setminus M$}.}{"Figuras/Matchings/Dibujo 9.pdf_tex"}
+Cada componente de $H$ alterna entre $M$ y $M'$, y por lo tanto sus ciclos son pares. Al tener $\abs{M'} > \abs M$, debe ser que hay una componente en $H$ que no es un ciclo, i.e. es un camino. Más aún, alguno de estos caminos debe ser impar y tener más aristas de $M'$ que de $M$. Más aún, ese camino empieza y termina con aristas de $M'$, con lo cual forma un camino $M$-aumentante en $G$, absurdo.
 \end{proof}
 
 \begin{obs}\label{obs}
@@ -2372,11 +2373,11 @@ En efecto, pues de lo contrario, si $u ' \in U$ es un vecino de $u$, agregando l
 \end{proof}
 
 \begin{exercise}
-Sea $G$ un grafo con grado máximo $\Delta (G) = k$. Sea $M$ un matching máximo de $G$. Para $k \geq 3$, demuestre que el número de aristas que une vértices cubiertos por $M$ a vértices no cubiertos por $M$ es a lo más $(k-1) \abs M$.
+Sea $G$ un grafo con grado máximo $\Delta (G) = k$. Sea $M$ un matching máximo de $G$. Para $k \geq 2$, demuestre que el número de aristas que une vértices cubiertos por $M$ a vértices no cubiertos por $M$ es a lo más $(k-1) \abs M$.
 \end{exercise}
 
 \begin{solution}
-Sea $S$ el conjunto de aristas que unen vértices cubiertos por $M$ a vértices no cubiertos por $M$. Llamemos $U$ al conjunto de vértices que no están cubiertos por $M$. Tenemos que para todo $u \in U$ los vecinos de $u$ son todos vértices cubiertos por $M$ por la Observación \ref{obs}.
+Llamemos $U$ al conjunto de vértices que no están cubiertos por $M$. Por cada arista $e = xy$ de $M$, hay a lo más $k-1$ vértices de $U$ adyacentes a algún extremo de $e$, de lo contrario existirían dos vértices distintos $u,u' \in U$, tales que $xu , y u' \in S$ y $uxyu'$ sería un camino $M$-aumentante, contradiciendo que $M$ es máximo. Con lo cual, $\abs S \leq (k-1) \abs M$.
 
 \begin{definition}
 Sea $u \in U$ con $U$ como recién. Sea $e$ una arista de $M$ que tiene uno de sus extremos vecino a $u$. Si $e$ tiene alguno de sus extremos adyacente a $u$, diremos que $e$ es \textbf{vecina} de $u$ y diremos que $u$ es \textbf{vecino} de $e$. Diremos que $u$ es \textbf{compañero} de $e$ si es adyacente a ambos extremos de $e$. De lo contrario, diremos que es \textbf{no compañero}, y notaremos como $x_u$ al único vértice de $e$ adyacente a $u$.
@@ -2433,7 +2434,7 @@ En general, si $M$ es un matching máximo de un grafo $G$, y $x$ es un extremo d
 Supongamos que no, es decir que existe un matching $W$ de $G'$ con más aristas que $M'$, es decir $\abs {M'} \leq \abs W - 1$. Notar que $\abs {M'} = \abs M - 1$ porque borramos dos véŕtices $x,y$: donde $x$ solamente es extremo de una arista de $M$ por ser un matching, e $y$ no era extremo de ninguna arista de $M$ por cómo lo elegimos. Esto implica que $\alpha ' (G) - 1 \leq \abs W - 1$. Luego como $W$ también es un matching de $G$, debe ser que $\abs W \leq \alpha ' (G)$, con lo cual $\alpha ' (G) = \abs W$ y $W$ es un matching máximo de $G$. Sean $x$ y $e \in M$ como al principio. Por construcción de $W$, tenemos que $e = xy$ no está en $W$, más aún, esta arista es independiente de $W$, luego $W \cup \{e \}$ es un matching de $G$ de tamaño $\alpha ' (G) + 1$, absurdo. Esto prueba que $M'$ es un matching máximo de $G'$.
 \end{proof}
 
-Estamos ahora en condiciones de probar la Proposición \ref{proposicion}:
+Estamos ahora en condiciones de probar la proposición \ref{proposicion}:
 \begin{proof}
 Si $k = 1$, como $M_k = M$, $G_k = G$ y $U_k = U$, no hay nada que probar en (i); (ii) se sigue inmediatamente de la Observación \ref{obs}; (iii) se sigue de que $G_k$ no tiene matching perfecto. En general, si el primer jugador no ganó en su $k$-ésimo turno, $M_{k+1}$ es igual a $M_k \cap E(G_{k+1})$, donde notemos que $G_{k+1} = G_k \setminus \{x_k, y_k\}$, y $x_k$ es el vértice escogido por el primer jugador en el $k$-ésimo turno $y_k$ el vértice (adyacente) escogido subsecuentemente por el segundo jugador, más aún, por hipótesis inductiva $x_k \in U_k$ es un vértice no cubierto por el matching máximo $M_k$ de $G_k$, con lo cual $y_k$ es adyacente a $x_k$ y está cubierto por una arista de $M_k$ y luego por el Lema \ref{lema} $M_{k+1}$ es un matching máximo de $G_{k+1}$. Esto prueba (i). Por la Observación \ref{obs}, los vecinos de todo $u \in U_{k+1}$ tienen que estar cubiertos por el matching máximo $M_{k+1}$, probando así (ii). Como $y_k$ esta cubierto por una arista de $M_k$, el otro extremo de esta arista puede ser escogido por el primer jugador, y además debe estar en $U_{k+1}$, pues la única arista de $M$ que incide en este extremo fue eliminado de $G_k$ (recordar que $M_{k+1} = M_k \cap E(G_k) = M \cap E(G_{k+1})$). Así, se sigue (iii).
 \end{proof}

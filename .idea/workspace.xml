@@ -5,7 +5,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d64069ff-abb3-47fa-9feb-8331f5baf8d7" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/Figuras/Matchings/Dibujo 8.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Figuras/Matchings/Dibujo 8.pdf_tex" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Figuras/Matchings/Dibujo 8.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Figuras/Matchings/Dibujo 9.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Figuras/Matchings/Dibujo 9.pdf_tex" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Figuras/Matchings/Dibujo 9.svg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/main.aux" beforeDir="false" afterPath="$PROJECT_DIR$/out/main.aux" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/main.log" beforeDir="false" afterPath="$PROJECT_DIR$/out/main.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/main.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/out/main.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/main.synctex.gz" beforeDir="false" afterPath="$PROJECT_DIR$/out/main.synctex.gz" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main.tex" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.tex" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -192,7 +202,8 @@
       <workItem from="1704737779692" duration="2561000" />
       <workItem from="1704743614728" duration="2806000" />
       <workItem from="1704755357904" duration="9142000" />
-      <workItem from="1704834030008" duration="1497000" />
+      <workItem from="1704834030008" duration="4256000" />
+      <workItem from="1704844692355" duration="6261000" />
     </task>
     <task id="LOCAL-00001" summary="arreglado?">
       <option name="closed" value="true" />
@@ -490,7 +501,23 @@
       <option name="project" value="LOCAL" />
       <updated>1704767507014</updated>
     </task>
-    <option name="localTasksCounter" value="38" />
+    <task id="LOCAL-00038" summary="arreglado?">
+      <option name="closed" value="true" />
+      <created>1704835534774</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1704835534774</updated>
+    </task>
+    <task id="LOCAL-00039" summary="arreglado?">
+      <option name="closed" value="true" />
+      <created>1704837156809</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1704837156809</updated>
+    </task>
+    <option name="localTasksCounter" value="40" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
