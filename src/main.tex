@@ -1070,7 +1070,7 @@ Tomemos un subgrafo minimalmente conexo $H$, que contenga a todo $V(G)$. Por (ii
 Esta demostración nos da un álgoritmo para construir el árbol generador de un grafo: quitamos aristas hasta obtener un grafo minimalmente conexo.
 \end{remark}
 
-\begin{Proposition}
+\begin{Proposition}\label{proposition:todo arbol tiene un orden que lo vuelve inductivo}
 Los vértices de un árbol $T$ pueden ser enumerados, digamos $v_1,v_2,\ldots,v_n$, de manera que para todo $i \geq 2$, $v_i$ es hoja en $T[v_1,\ldots,v_i]$ (que es árbol también).
 \end{Proposition}
 \begin{proof}
@@ -1119,6 +1119,17 @@ Si $T$ es un árbol arbitrario, y $G$ es un grafo con $\delta (G) \geq \abs T -1
 \begin{proof}
 Sea $v_1,\ldots,v_n$ con $n = \abs T$, una numeración de los vértices de $T$ tal que $v_i, i \geq 2$ es una hoja de $T_i := T[v_1,\ldots,v_{i-1}]$. Haremos inducción en $i$. El caso base es trivial. Veamos el paso inductivo: supongamos que $G$ tiene a $T_i$ como subgrafo. $v_i$ tiene un único vecino en $T_i$, digamos $z_i \in T_i$, el cual tiene al menos $\delta (G) \geq n-1$ vecinos en $G$. Luego $z_i$ tiene un vecino en $G$ que no está en $T_i \subset G$. Así, identificamos $v_i$ con este vecino en $G$, y por lo tanto $T_{i+1} \subset G$.
 \end{proof}
+
+\begin{exercise}
+Sea $G$ un grafo con un árbol generador $T$. Probar que existe un subgrafo generador $H$ de $G$ cuyos vértices tienen grado par y tal que
+\[
+E(G) \setminus E(T) \subset E(H).
+\]
+\end{exercise}
+\begin{solution}
+Haremos inducción en $n := \abs G$. El caso $n=1$ es trivial. En general, supongamos que $n > 1$ y consideremos un orden de los vértices de $G$ como dicta la Proposición \ref{proposition:todo arbol tiene un orden que lo vuelve inductivo}. Por hipótesis inductiva, existe un subgrafo generador $H'$ de $G' := G \setminus \{v_n\}$, tal que todos los vértices son pares y $E(G') \setminus E(T') \subset E(H')$, donde $T' := T_{n-1} = T[v_1, \ldots, v_{n-1}]$. Consideremos ahora el grafo $H$ obtenido a partir de $H'$ al agregar el vértice $v_n$ y solo las aristas de $E(G) \setminus E(T)$ incidentes, llamemos $J$ a este conjunto, si $\abs J$ es par, o agregamos $J$ junto con la arista de $T$ que conecta $v_n$ con $T'$ si $\abs J$ es impar. En cualquier caso, $H$ es el subgrafo generador de $G$ que estábamos buscando por construcción.
+\end{solution}
+
 
 \bigskip
 
