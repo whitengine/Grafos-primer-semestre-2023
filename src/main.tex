@@ -2788,18 +2788,18 @@ $h(a') = f(a')$, la cual claramente es inyectiva, por ser la restricción de $f$
 \end{solution}
 
 \begin{exercise}
-Sea $k$ un entero y $A$ un conjunto finito. Probar que dadas dos particiones $P^i = \{A^i_1, \ldots, A^i_r\}$ para $i = 1,2$ en subconjuntos de $k$ elementos de $A$, existe una elección de representantes $a_1, \ldots, a_r$ de los conjuntos de $P_1$ y $P_2$.\footnote{Un conjunto de representantes de una partición es un conjunto de elementos, cada único perteneciente a un único conjunto de la partición, y todos los conjuntos tienen algún elemento.}
+Sea $k$ un entero y $A$ un conjunto finito. Probar que dadas dos particiones $P^i = \{A^i_1, \ldots, A^i_r\}$ para $i = 1,2$ en subconjuntos de $k$ elementos de $A$, existe una elección de representantes $a_1, \ldots, a_r$ de los conjuntos de $P_1$ y $P_2$.\footnote{Un conjunto de representantes de una partición es un conjunto de elementos, cada uno perteneciente a un único conjunto de la partición, y todos los conjuntos tienen algún elemento.}
 \end{exercise}
 \begin{solution}
-Consideremos el $X,Y$-bigrafo dado por $X= P^1$ e $Y = P^2$, donde $A^1_i A^2_j$ es una arista si y solo si $A^1_i \cap A^2_j \neq \emptyset$. Este grafo cumple la condición de Hall \ref{eq:condicion de Hall}, en efecto, sea $S \subset X$, entonces el subconjunto $\bigcup_{A^1_j \in S} A^1_j$ de $A$ tiene $k \abs S$ elementos, y por lo tanto, debe haber almenos $\abs S$ conjuntos de la partición $P^2$ que contengan a estos vértices, es decir, $\abs S \leq \abs {N(S)}$. Por lo tanto, el Teorema de Hall \ref{th:teorema de Hall} garantiza la existencia de un matching que cubre a $X$, el cual debe cubrir a $Y$ pues $\abs X = \abs Y$.
+Consideremos el $X,Y$-bigrafo dado por $X= P^1$ e $Y = P^2$, donde $A^1_i A^2_j$ es una arista si y solo si $A^1_i \cap A^2_j \neq \emptyset$. Este grafo cumple la condición de Hall \ref{eq:condicion de Hall}, en efecto, sea $S \subset X$, entonces el subconjunto $\bigcup_{A^1_j \in S} A^1_j$ de $A$ tiene $k \abs S$ elementos, y por lo tanto, debe haber al menos $\abs S$ conjuntos de la partición $P^2$ que contengan a estos vértices, es decir, $\abs S \leq \abs {N(S)}$. Por lo tanto, el Teorema de Hall \ref{th:teorema de Hall} garantiza la existencia de un matching que cubre a $X$, el cual debe cubrir a $Y$ pues $\abs X = \abs Y$.
 
-Escribimos $M = \{e_1,\ldots,e_r\}$ a este matching. Así, podemos tomar un conjunto de representantes $x_1,x_2,\ldots,x_r$ tal que $x_i$ pertenece a ambos conjuntos de las particiones que constituyen los extremos de la arista $e_i \in M$.
+Escribimos $M = \{e_1,\ldots,e_r\}$ para este matching perfecto. Así, podemos tomar un conjunto de representantes $x_1,x_2,\ldots,x_r$ tal que $x_i$ pertenece a ambos conjuntos de las particiones que constituyen los extremos de la arista $e_i \in M$.
 \end{solution}
 
 \begin{exercise}
 Sea $A$ un conjunto finito con subconjuntos $A_1,\ldots,A_n$, y sean $d_1,\ldots,d_n \in \naturals$. Mostrar que existen subconjuntos disjuntos $D_k \subset A_k$, con $\abs{D_k} = d_k$ para todo $1 \leq k \leq n$ si y solo si
 \[
-\lvert \bigcup_{i \in I} A_i \rvert \geq \sum_{i \in I} d_i
+\Big \lvert \bigcup_{i \in I} A_i \Big \rvert \geq \sum_{i \in I} d_i
 \]
 para todo $I \subset \{1, \ldots, n\}$.
 \end{exercise}
@@ -2807,9 +2807,9 @@ para todo $I \subset \{1, \ldots, n\}$.
 \begin{solution}
 Consideremos el $X,Y$-bigrafo tal que $X = A$ e $Y$ el conjunto con $d_i$ copias de $A_i$ para cada $i = 1, \ldots, n$, donde $d$ tiene una arista con todas las copias de $A_i$ si $d \in A_i$. Luego tenemos un matching que cubre a $Y$ por el Teorema de Hall \ref{th:teorema de Hall}. En efecto, para todo $S \subset Y$ se tiene que $\abs S \leq \sum_{i \in I} d_i$ donde $I$ es el conjunto de índices $j$ tal que aparece alguna copia de $A_j$ en $S$; con lo cual,
 \[
-    \abs S \leq \sum_{i \in I} d_i \leq \lvert \bigcup_{i \in I} A_i \rvert = \abs{N(S)}.
+    \abs S \leq \sum_{i \in I} d_i \leq \Big \lvert \bigcup_{i \in I} A_i \Big \rvert = \abs{N(S)}.
 \]
-Así, hay un matching que cubre a $Y$, luego tomando por cada copia $A_i$ un elemento de $A$, podemos construir $D_i \subset A_i$ de $d_i$ elementos, tales que $D_i \cap D_j = \emptyset$ para todo $i \neq j$.
+Así, hay un matching que cubre a $Y$, luego tomando por cada copia $A_i$ un elemento de $A$ cubierto por el matching, podemos construir conjuntos $D_i \subset A_i$ de $d_i$ elementos, tales que $D_i \cap D_j = \emptyset$ para todo $i \neq j$.
 \end{solution}
 
 
@@ -2819,14 +2819,14 @@ Así, hay un matching que cubre a $Y$, luego tomando por cada copia $A_i$ un ele
 Sea $G$ un grafo bipartito con bipartición $\{A,B\}$. Supongamos que $\delta (G) \geq 1$ y que $d(a) \geq d(b)$ para toda arista $ab$ con $a \in A$. Probar que $G$ contiene un matching que cubre a $A$.
 \end{exercise}
 \begin{solution}
-Supongamos que no hay matching que cubra $A$, es decir, existe un subconjunto $S \subsetneq A$ de cardinal máximo tal que cumple la condición de Hall \ref{eq:condicion de Hall}; notar que $\abs S \geq 1$ pues $\delta \geq 1$. Sea $a \in A \setminus S$, por maximalidad los vecinos de $a$ están en $N(S) = B$. Más aún, por maximalidad $\abs S = \abs {N(S)} = \abs B$, si no $S \cup \{x\}$ seguiría cumpliendo la condición de Hall. Sea $M = \{s_1 t_1,\ldots, s_{r} t_r \}$ el matching de $S$ con $N(S)$, tenemos que
+Supongamos que no hay matching que cubra $A$, es decir, existe un subconjunto $S \subsetneq A$ de cardinal máximo tal que cumple la condición de Hall \ref{eq:condicion de Hall}; notar que $\abs S \geq 1$ pues $\delta \geq 1$. Sea $a \in A \setminus S$, por maximalidad los vecinos de $a$ están en $N(S) = B$. Más aún, por maximalidad $\abs S = \abs {N(S)} = \abs B$, si no $S \cup \{a\}$ seguiría cumpliendo la condición de Hall. Sea $M = \{s_1 t_1,\ldots, s_{r} t_r \}$ un matching de $S$ con $N(S)$, tenemos que
 \begin{align*}
     2 \abs {E(G)} &= \sum_{x \in A} d(x) + \sum_{y \in B} d(y)\\
                 &> \sum_{x \in S} d(x) + \sum_{y \in B} d(y) \\
                 &= \sum_{i = 1}^r d(s_i) + d(t_r)\\
                 &\geq 2 \sum_{y \in Y} d(y).
 \end{align*}
-Con lo cual, $\abs {E(G)} > \sum_{y \in Y} d(y)$, sin embargo esto es imposible porque todas las aristas de $G$ inciden en $Y$.
+Con lo cual, $\abs {E(G)} > \sum_{y \in Y} d(y) = E(G)$, sin embargo esto es imposible.
 \end{solution}
 
 \begin{exercise}
@@ -2839,10 +2839,7 @@ Considerar un mazo de $mn$ cartas con $n$ palos y $m$ valores; cada valor aparec
 \begin{solution}
 \begin{enumerate}[(a)]
 \item Consideremos el grafo bipartito $B$ con vértices $C \cup V$, donde $C = \{1, \ldots, m\}$ son las $m$ columnas y $V = \{1, \ldots, m\}$ son los valores de las cartas, y además, agregamos $k$ aristas paralelas con extremos $c,v$ si $c \in C$ y $v \in V$ son tales que el valor $v$ aparece en la $c$-ésima columna $k$ veces. Notar que $B$ es regular: los vértices $v$ tienen grado $n$, y las columnas $c$ tienen grado $n$ pues tienen $n$ cartas. Luego por el Corolario \ref{corollary:König-Frobenius - todo bigrafo regular no trivial tiene un matching perfecto} (vale para multigrafos), $B$ tiene un matching perfecto, es decir, podemos elegir una carta de cada columna de manera que todos los valores sean distintos.
-\item Probaremos por inducción en la cantidad de palos $n$. Si $n = 1$ no hay nada que probar. En general, basta probar luego de finitas permutaciones de cartas del mismo valor, se puede llenar la primera fila de cartas del mismo palo, luego considerando el mazo de $m (n-1)$ cartas que se obtiene por eliminar la primera fila, se sigue el resultado por hipótesis inductiva.
-
-Fijemos una columna, digamos $c = c_i$, tal que no tiene todas sus cartas de un palo distinto pero $c_{j}$ tiene todas sus caras de un palo distinto para todo $j < i$. Luego podemos considerar el grafo bipartito $B$ cuyos vértices son las cartas de $c$ y las $n(m-i)$ cartas del resto de las otras columnas. Notar que $i \neq m$. Ahora, si vemos que siempre que una carta $v$ esté repetida en $c$ se puede cambiar por otra de las $n(m-i)$ columnas, entonces ganamos por recursión. Sean $u,v$ dos cartas del mismo palo en $c$, digamos de valores $1,2$ respectivamente. Entonces el ítem anterior nos garantiza que existe una carta del mismo valor que $u$ o $v$ y que podemos permutar, solo basta probar que existe alguna afuera de $c_j$ para todo $j < i$. En efecto, supongamos por el absurdo que no sucede; cada carta de $c$ esta asociado mediante una arista a una carta del mismo valor en otra columna, cada vértice de $C = c$ en este $C, \{j \neq i \}$-bigrafo tiene almenos un vecino (de lo contrario toda la columna $c$ eran del mismo valor y distinto palo y haciendo inducción en $m$ ganamos) y por lo tanto $ $
-
+\item Probaremos por inducción en la cantidad de palos $n$. Si $n = 1$ no hay nada que probar. Notemos que si existe un palo, digamos $A$, tal que en cada columna hay una carta de este palo, entonces suprimiendo las cartas de este palo de la mesa, podemos deducir por hipótesis inductiva que existen finitas permutaciones de tal suerte que en cada columna todas las cartas sean de distinto palo. Ahora, tomemos un palo $A$, por el ítem anterior, existe en cada columna una carta de distinto valor, luego permutando cada una de estas cartas por una de palo $A$ y mismo valor, logramos que en la mesa haya una carta de palo $A$ en cada columna, esto termina la demostración.
 \end{enumerate}
 \end{solution}
 
@@ -2850,7 +2847,7 @@ Fijemos una columna, digamos $c = c_i$, tal que no tiene todas sus cartas de un 
 Sea $G$ un $X,Y$-bigrafo con $\abs X = \abs Y = k \geq 1$ y más de $k(k-1)$ aristas. Probar que $G$ tiene un matching perfecto.
 \end{exercise}
 \begin{solution}
-Por el Teorema de König-Egevary \ref{th:König-Egevary en todo grafo bipartito el tamaño maximo de un matching es igual al tamaño mínimo de un cubrimiento por vertices de las aristas}, probar que $G$ tiene un matching perfecto, equivale a probar que todo cubrimiento por vértices de las aristas tiene almenos $k$ elementos.
+Por el Teorema de König-Egevary \ref{th:König-Egevary en todo grafo bipartito el tamaño maximo de un matching es igual al tamaño mínimo de un cubrimiento por vertices de las aristas}, probar que $G$ tiene un matching perfecto, equivale a probar que todo cubrimiento por vértices de las aristas tiene al menos $k$ vértices.
 
 Ahora, si $U$ es un tal cubrimiento y $m = \abs U$, tenemos que
 \[
