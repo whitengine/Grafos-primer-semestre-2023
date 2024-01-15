@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.4.11)  14 JAN 2024 21:06
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.4.11)  15 JAN 2024 00:54
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -8404,7 +8404,9 @@ ine 3257.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
 ine 3269.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 3272.
+ine 3269.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 3269.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
 ine 3272.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
@@ -8414,6 +8416,8 @@ ine 3272.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
 ine 3272.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 3272.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
 ine 3274.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
 ine 3274.
@@ -8453,6 +8457,8 @@ LaTeX Font Info:    No math alphabet change to frozen version normal on input l
 ine 3276.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
 ine 3276.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 3278.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
 ine 3278.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
@@ -17499,10 +17505,10 @@ Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: 149801D862BB46A61FFC004C2A6D743C;9672.
  ) 
 Here is how much of TeX's memory you used:
- 31660 strings out of 476017
- 643069 string characters out of 5786780
+ 31661 strings out of 476017
+ 643084 string characters out of 5786780
  1867666 words of memory out of 5000000
- 50299 multiletter control sequences out of 15000+600000
+ 50300 multiletter control sequences out of 15000+600000
  621496 words of font info for 230 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  98i,19n,94p,1685b,928s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -17540,7 +17546,7 @@ rw/ncntrsbk/uncbi8a.pfb></home/whitengine/texlive/2023/texmf-dist/fonts/type1/u
 rw/ncntrsbk/uncr8a.pfb></home/whitengine/texlive/2023/texmf-dist/fonts/type1/ur
 w/ncntrsbk/uncri8a.pfb>
 Output written on "/home/enzo/Desktop/Doctorado Chile/Clases/2023/Primer semest
-re/Grafos-primer-semestre-2023/out/main.pdf" (169 pages, 1023737 bytes).
+re/Grafos-primer-semestre-2023/out/main.pdf" (169 pages, 1023695 bytes).
 PDF statistics:
  2646 PDF objects out of 2984 (max. 8388607)
  2228 compressed objects within 23 object streams

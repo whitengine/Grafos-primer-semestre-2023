@@ -6,17 +6,9 @@
   <component name="ChangeListManager">
     <list default="true" id="d64069ff-abb3-47fa-9feb-8331f5baf8d7" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/main.aux" beforeDir="false" afterPath="$PROJECT_DIR$/out/main.aux" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/main.log" beforeDir="false" afterPath="$PROJECT_DIR$/out/main.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/main.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/out/main.pdf" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/main.synctex.gz" beforeDir="false" afterPath="$PROJECT_DIR$/out/main.synctex.gz" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/main.toc" beforeDir="false" afterPath="$PROJECT_DIR$/out/main.toc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Editor de Grafos/Figuras/Clase 13/Dibujo 1.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/src/Editor de Grafos/Figuras/Clase 13/Dibujo 1.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Editor de Grafos/Figuras/Clase 13/Dibujo 1.pdf_tex" beforeDir="false" afterPath="$PROJECT_DIR$/src/Editor de Grafos/Figuras/Clase 13/Dibujo 1.pdf_tex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Editor de Grafos/Figuras/Clase 13/Dibujo 1.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/Editor de Grafos/Figuras/Clase 13/Dibujo 1.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Editor de Grafos/Figuras/Clase 13/Dibujo 2.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/src/Editor de Grafos/Figuras/Clase 13/Dibujo 2.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Editor de Grafos/Figuras/Clase 13/Dibujo 2.pdf_tex" beforeDir="false" afterPath="$PROJECT_DIR$/src/Editor de Grafos/Figuras/Clase 13/Dibujo 2.pdf_tex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Editor de Grafos/Figuras/Clase 13/Dibujo 2.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/Editor de Grafos/Figuras/Clase 13/Dibujo 2.svg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main.tex" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.tex" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -215,6 +207,7 @@
       <workItem from="1704994276815" duration="813000" />
       <workItem from="1704998261138" duration="50000" />
       <workItem from="1705262123159" duration="11992000" />
+      <workItem from="1705282153424" duration="6072000" />
     </task>
     <task id="LOCAL-00001" summary="arreglado?">
       <option name="closed" value="true" />

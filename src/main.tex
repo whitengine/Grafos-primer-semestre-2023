@@ -3266,16 +3266,16 @@ Un grafo plano es una \textbf{triangulación} si todas sus caras tienen por fron
 Estas dos definiciones son equivalentes:
 
 \begin{proposition}\label{proposition:un grafo es maximalmente plano si y solo si es una triangulacion}
-Un grafo es maximial plano (de orden $\geq 3$) si y solo si es una triangulación.
+Sea $G$ un grafo plano de orden $\geq 3$. Entonces, $G$ es maximial plano si y solo si es una triangulación.
 \end{proposition}
 \begin{proof}
-Es fácil de ver que si todas las caras de $G$ tienen como frontera un triángulo, entonces $G$ es maximalmente plano. En efecto, agregar una arista $e$, haría que su interior estuviera adentro de una cara de $G$ y sus extremos en la frontera de dicha cara. Con lo cual sus extremos ya eran adyacentes en $G$, incumpliendo la definición de grafo plano.
+Es fácil de ver que si todas las caras de $G$ tienen como frontera un triángulo, entonces $G$ es maximalmente plano. En efecto, agregar una arista $e$, haría que su interior estuviera adentro de una cara de $G$ y sus extremos en la frontera de dicha cara. Por lo tanto sus extremos ya eran adyacentes en $G$, incumpliendo la definición de grafo plano.
 
-Recíprocamente, supongamos que $G$ es maximalmente plano y sea $f \in F(G)$ una cara; escribamos $H := G[f]$. Como $G$ es maximal como grafo plano, $G[H]$ es completo: todo par de vértices que no son adyacentes en $G$ se podrían unir por un arco con interior dentro de $f$, extensiendo a $G$ a un grafo plano con más aristas, absurdo. Así $G [H] = K_n$ para algún $n$ (sin embargo, todavía no sabemos qué aristas de $G[H]$ están en $H$).
+Recíprocamente, supongamos que $G$ es maximalmente plano y sea $f \in F(G)$ una cara; escribamos $H := G[f]$. Como $G$ es maximal como grafo plano, $G[H]$ es completo: todo par de vértices que no son adyacentes en $G$ se podrían unir por un arco con interior dentro de $f$, extendiendo a $G$ a un grafo plano con más aristas, absurdo. Así $G [H] = K_n$ para algún $n$ (sin embargo, todavía no sabemos qué aristas de $G[H]$ están en $H$).
 
 Veamos primero que $H$ contiene un ciclo. De lo contrario, $G \setminus H \neq \emptyset$, pues $G \supset K_n$ para $n \geq 3$ o $H$ tiene menos de tres vértices pero $\abs G \geq 3$. Por otro lado, tendríamos que $f \cup H = \reals^2$ por la Proposición \ref{proposition:un arbol plano tiene una sola cara} y luego $G = H$, absurdo.
 
-Así, como $H$ contiene un ciclo, basta probar que $n \leq 3$: en efecto, $H = K_3$. Luego, supongamos que $n \geq 4$, y sea $C = v_1 v_2 v_3 v_4 v_1$ un ciclo en $G[H] = K_n$. Como $C \subset G$, nuestra cara (de $G$) $f$ está contenida en una cara $f_C$ de $C$; sea $f'_C$ la otra cara de $C$. Como los vértices $v_1$ y $v_3$ yacen en la frontera de $f$, se pueden unir por un arco cuyo interior yace dentro de $f_C$ y no interseca $G$. Luego por el segundo ítem del Lema \ref{lema:tres arcos disjuntos forman 3 componentes}, la arista plana $v_2 v_4$ de $G[H]$ tiene su interior dentro de $f'_C$ en véz de $f_C$ (ver el siguiente dibujo). Análogamente, como $v_2, v_4 \in G[f]$, la arista $v_{1}v_3$ yace dentro de $f'_C$. Pero las aristas $v_{1}v_3$ y $v_2 v_4$ son disjuntas, contradiciendo el segundo ítem del Lema \ref{lema:tres arcos disjuntos forman 3 componentes}.
+Así, como $H$ contiene un ciclo, $n\geq 3$ y basta probar que $n < 4$. Luego, supongamos por el absurdo que $n \geq 4$, y sea $C = v_1 v_2 v_3 v_4 v_1$ un ciclo en $G[H] = K_n$. Como $C \subset G$, $f$ está contenida en una cara $f_C$ de $C$; sea $f'_C$ la otra cara de $C$. Como los vértices $v_1$ y $v_3$ yacen en la frontera de $f$, se pueden unir por un arco $P$ cuyo interior yace dentro de $f_C$ y no interseca $G$. Luego, por el segundo ítem del Lema \ref{lema:tres arcos disjuntos forman 3 componentes}, la arista plana $v_2 v_4$ de $G[H]$ tiene su interior dentro de $f'_C$, de lo contrario intersecaría $I(P)$ y en particular $f$. Análogamente, como $v_2, v_4 \in G[f]$, la arista $v_{1}v_3$ yace dentro de $f'_C$. Pero las aristas $v_{1}v_3$ y $v_2 v_4$ son disjuntas, contradiciendo el segundo ítem del Lema \ref{lema:tres arcos disjuntos forman 3 componentes}.
 \end{proof}
 
 \InscapeDEPRECADO{La arista $v_{2}v_4$ de $G$ yace dentro de la cara $f_C'$.}
@@ -3289,17 +3289,17 @@ Basta demostrar la segunda afirmación gracias a la proposición anterior. En un
 
 \InscapeDEPRECADO{Ejemplo de grafo bipartito obtenido a partir de una triangulación $G$.}
 
-Notar que el número de aristas de este grafo bipartito es justamente $2 \abs {E(G)} = 3 \abs{F(G)}$. Luego reemplazando $f = \frac 2 3 m$ en la fórmula de Euler:
+Contando de dos formas distintas las aristas de este grafo bipartito, tenemos que $2 \abs {E(G)} = 3 \abs{F(G)}$. Luego reemplazando $f = \frac 2 3 m$ en la fórmula de Euler:
 \[
-    n - m + \frac 2 3 m = 2 \quad \Leftrightarrow \quad m = 3 n - 6.
+    n - m + \frac 2 3 m = 2 \quad \Longleftrightarrow \quad m = 3 n - 6.
 \]
 \end{proof}
 
 \begin{definition}
-Decimos que un grafo planar $G$ es \textbf{maximalmente plano}, si es planar pero no se le puede agregar una arista nueva (sin agregar vértices) tal que sigue siendo planar.
+Decimos que un grafo planar $G$ es \textbf{maximalmente plano}, si es planar pero no se le puede agregar una arista nueva tal que sigue siendo planar.
 \end{definition}
 
-El grafo plano de un grafo maximalmente plano $G$ es maximalmente planar, no es obvio valga la recíproca: que un dibujo no se le pueda agregar aristas de manera que siga siendo plano implica que su grafo tampoco.
+El grafo plano de un grafo maximalmente planar $G$ es maximalmente plano, no es tan obvio que valga la recíproca:
 
 \begin{proposition}\label{proposition:grafo es maximalmente plano si y solo si es maximalpmente planar}
 Un grafo maximalmente plano es maximalmente planar.
