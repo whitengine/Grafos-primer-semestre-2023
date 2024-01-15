@@ -3449,11 +3449,11 @@ El grafo $G := K_5$ no es planar. En efecto, tiene $n= 5$ vértices y $m = \bino
 \end{example}
 
 \begin{example}
-El grafo $G := K_{3,3}$ no es planar. En efecto, al ser bipartito todos los ciclos son pares, luego si tuviera un grafo plano correspondiente, las fronteras de sus caras van a ser de largo al menos $4$, por la Proposición \ref{proposicion:un grafo plano 2-conexo tiene todas sus caras con frontera un ciclo}. Como en la demostración del último corolario de la clase anterior \ref{corolario:un grafo plano con n > 2 vertices tiene a lo mas 3n - 6 aristas}, construimos el $X,Y$-bigrafo asosciado al grafo plano con $X = E(K_{3,3})$ e $Y = F(K_{3,3})$. Pero similarmente a la demostración de dicho corolario, inspeccionando este grafo bipartito, vemos que tiene $2 \abs E (G)$ aristas y almenos $4 \abs F$ caras. Llamemos $n,m,f$ al número de vértices, aristas, y caras de $G$, respectivamente. Así, la desigualdad anterior se traduce a que $2 f \leq m$. Con lo cual, aplicando el Teorema de Euler y reemplazando los valores de $n$ y $m$ de $G = K_{3,3}$:
+El grafo $G := K_{3,3}$ tampoco es planar. En efecto, al ser bipartito todos los ciclos son pares, luego si tuviera un grafo plano correspondiente, las fronteras de sus caras van a ser de largo al menos $4$, por la Proposición \ref{proposicion:un grafo plano 2-conexo tiene todas sus caras con frontera un ciclo}. Como en la demostración del Corolario \ref{corolario:un grafo plano con n > 2 vertices tiene a lo mas 3n - 6 aristas}, construimos el $X,Y$-bigrafo asosciado al grafo plano con $X = E(K_{3,3})$ e $Y = F(K_{3,3})$. Este grafo bipartito, tiene $2 \abs E (G)$ aristas y almenos $4 \abs F$ caras. Llamemos $n,m,f$ al número de vértices, aristas, y caras de $G$, respectivamente. Así, la desigualdad anterior se traduce a que $2 f \leq m$. Con lo cual, aplicando la fórmula de Euler a $G$, y reemplazando los valores de $n$ y $m$:
 \[
-    \begin{array}{lllll}
-    2 = n - m + f & \leq & n - m + \frac m 2 & \quad & (2 f \leq m), \\
-                    & \leq & \frac 3 2 & \quad & (n = 6, m = 9),
+    \begin{array}{lclllll}
+    2 &=& n - m + f & \leq & n - m + \frac m 2 & \quad & (2 f \leq m), \\
+                    &&& \leq & \frac 3 2 & \quad & (n = 6, m = 9),
     \end{array}
 \]
 absurdo.
@@ -3464,13 +3464,12 @@ Si un grafo $H$ no es planar, entonces los grafos que contienen una subdivisión
 \end{obs}
 
 \begin{example}
-Como $K_5$ y $K_{3,3}$ no son planares, tampoco lo son los grafos que contienen subdivisiones de estos. Con lo cual, si $G$ es un grafo planar entonces $G$ no contiene ni a $K_5$ ni a $K_{3,3}$ como subdivisión. De hecho, vale la recíproca:
+Como $K_5$ y $K_{3,3}$ no son planares, tampoco lo son los grafos que contienen subdivisiones de estos. Con lo cual, si $G$ es un grafo planar entonces $G$ no contiene ni a $K_5$ ni a $K_{3,3}$ como subdivisión. De hecho, en breve veremos que vale la recíproca.
 \end{example}
 
 \begin{lemma}
-Un grafo contiene a $K_5$ o $K_{3,3}$ como menor si y solo si contiene a $K_5$ o $K_3,3$ como subdivisión (i.e. como menor topológico).
+Un grafo contiene a $K_5$ o $K_{3,3}$ como menor si y solo si contiene a $K_5$ o $K_{3,3}$ como subdivisión (i.e. como menor topológico).
 \end{lemma}
-Con lo cual, el teorema anterior equivale a pedir que contenga a estos grafos como menor.
 \begin{proof}
 \begin{enumerate}
 \item[($\Leftarrow$)] Esta implicancia es gratis pues una subdivisión es un menor topológico, y en particular es menor (ver el primer ítem de la Proposición \ref{proposition:relaciones entre menor y menor topologico}).
@@ -3489,26 +3488,26 @@ Luego supongamos que no sucede, es decir, existe un $V_x$ tal que $T_x$ no es su
 Al final de esta subsección probaremos el Teorema de Kuratowski. Para eso, probaremos primero el resultado para grafos $3$-conexos. Requeriremos una serie de lemas.
 
 \begin{lemma}\label{lema:teorema de Kuratowski - lema 1}
-Todo grafo $3$-conexo $G$ sin $K^5$ ni $K_{3,3}$ como menor es planar.
+Todo grafo $3$-conexo $G$ sin $K_5$ ni $K_{3,3}$ como menor es planar.
 \end{lemma}
 \begin{proof}
-Haremos inducción en $\abs G$. Para $\abs G = 4$ tenemos que $G = K_4$, y la afirmación vale. Supongamos ahora que $\abs G > 4$. Por el Lema \ref{lema:todo grafo 3-conexo distinto de K_4 tiene una arista e tal que G/e es nuevamente 3-conexo}, $G$ tiene una arista $xy$ tal que $G/xy$ no tiene a $K_5$ o o$K_{3,3}$ como menor. Por hipótesis inductiva, $G/xy$ tiene un dibujo $\tilde G$ en el plano. Sea $f$la cara de $\tilde G \setminus v_{xy}$ que contiene el punto $v_{xy}$ y sea $C$ la frontera de $f$. Sea $X := N_G (x) \setminus \{y\}$ e $Y := N_G (y) \setminus \{x \}$; luego $X \cup Y \subset V(C)$, pues $v_{xy} \in f$. Claramente,
+Haremos inducción en $\abs G$. Para $\abs G = 4$ tenemos que $G = K_4$, y la afirmación vale. Supongamos ahora que $\abs G > 4$. Por el Lema \ref{lema:todo grafo 3-conexo distinto de K_4 tiene una arista e tal que G/e es nuevamente 3-conexo}, $G$ tiene una arista $xy$ tal que $G/xy$ no tiene a $K_5$ o $K_{3,3}$ como menor. Por hipótesis inductiva, $G/xy$ tiene un dibujo $\tilde G$ en el plano. Sea $f$ la cara de $\tilde G \setminus v_{xy}$ que contiene el punto $v_{xy}$ y sea $C$ la frontera de $f$. Sean $X := N_G (x) \setminus \{y\}$ e $Y := N_G (y) \setminus \{x \}$; luego $X \cup Y \subset V(C)$, pues $v_{xy} \in f$. Claramente,
 \[
     \tilde G ' := \tilde G \setminus \{ v_{xy} v | v \in Y \setminus X \}
 \]
-se puede ver como un dibujo de $G \setminus y$, en donde el vértice $x$ es representado por un punto $v_{xy}$ (ver el siguiente dibujo). Nuestro objetivo es agregar $y$ a este dibujo de manera que obtengamus un dibujo de $G$.
+se puede ver como un dibujo de $G \setminus y$, en donde el vértice $x$ es representado por un punto $v_{xy}$ (ver el siguiente dibujo). Nuestro objetivo es agregar $y$ a este dibujo de manera que obtengamos un dibujo de $G$.
 
 \InscapeDEPRECADO{$\tilde G '$ como dibujo de $G \setminus \{y\}$: el vértice $x$ está representado por un punto $v_{xy}$.}
 
 Como $\tilde G$ es $3$-conexo, $\tilde G \setminus \{v_{xy}\}$ es $2$-conexo, con lo cual $C$ es un ciclo (Proposición \ref{lema:todo grafo 3-conexo distinto de K_4 tiene una arista e tal que G/e es nuevamente 3-conexo}). Sean $x_1, \ldots, x_k$ una numeración de los vértices en $X$ a lo largo de este ciclo, y sea $P_i = x_i \cdots x_{i+1}$ los $X$-caminos en $C$ entre ellos ($i = 1, \ldots, k$; con $x_{k+1} := x_1$). Veamos que $Y \subset V(P_i)$ para algún $i$. Supongamos que no. Si $y$ tiene un vecino $y' \in I(P_i)$ para algún $i$, tiene entonces otro vecino $y'' \in C \setminus P_i$, y estos están separados en $C$ por $x' := x_i$ y $x'' := x_{i+1}$. Si $Y \subset X$ y $\abs{Y \cap X} \leq 2$, entonces $y$ tiene exactamente dos vecinos $y', y''$ en $C$ pero no en el mismo $P_i$, así, nuevamente $y'$ e $y''$ están separados en $C$ por dos vértices $x',x'' \in X$. En cualquier caso, $x,y',y''$ e $y,x',x''$ son los vértices de ramificación de un $T K_{3,3}$ en $G$, absurdo. El único caso restante es que $y$, $x$ tengan tres vecinos en común en $C$. Luego estos forman un $T K_5$ con $x$ e $y$, otra vez absurdo.
 
-Fijemos $i$ de manera que $Y \subset P_i$. El conjunto $C \setminus P_i$ está contenido en una de estas dos caras del ciclo $C_i := x x_i P_i x_{i+1} x$; denotemos a la otra cara de $C_i$ por $f_i$. Como $f_i$ contiene puntos de $f$ (cercanos a $x$) pero no puntos en la frontera $C$, tenemos que $f_i \subset f$. Más aún, las aristas planas $x x_j$ con $j \not \in \{ i, i+1 \}$ intersecan $C_i$ solo en $x$ y terminan afuera de $f_i$ en $C \setminus P_i$, así, $f_i$ no interseca ninguna de estas aristas. Consecuentemente, $f_i \subset \reals^2 \setminus \tilde G'$, eso es, $f_i$ está contenido en (y por lo tanto es igual) a la cara de $\tilde G '$. Podemos entonces extender $\tilde G '$ a un dibujo de $G$ reemplazando $y$ y sus aristas incidentes en $f_i$
+Fijemos $i$ de manera que $Y \subset P_i$. El conjunto $C \setminus P_i$ está contenido en una de estas dos caras del ciclo $C_i := x x_i P_i x_{i+1} x$; denotemos a la otra cara de $C_i$ por $f_i$. Como $f_i$ contiene puntos de $f$ (cercanos a $x$) pero no puntos en la frontera $C$, tenemos que $f_i \subset f$. Más aún, las aristas planas $x x_j$ con $j \not \in \{ i, i+1 \}$ intersecan $C_i$ solo en $x$ y terminan afuera de $f_i$ en $C \setminus P_i$, así, $f_i$ no interseca ninguna de estas aristas. Consecuentemente, $f_i \subset \reals^2 \setminus \tilde G'$, eso es, $f_i$ está contenido en (y por lo tanto es igual) a la cara de $\tilde G '$. Podemos entonces extender $\tilde G '$ a un dibujo de $G$ reemplazando $y$ y sus aristas incidentes en $f_i$.
 \end{proof}
 
 \begin{obs}
-Esta demostración se puede adaptar para probar que todo grafo planar $3$-conexo tiene un dibujo donde todas sus caras interiores son convexas; en particular todas las aristas se pueden dibujar como rectas.
+Esta demostración se puede adaptar para probar que todo grafo planar $3$-conexo tiene un dibujo donde todas sus caras interiores son convexas; en particular, todas las aristas se pueden dibujar como rectas.
 
-Existen grafos planares $2$-conexos sin dibujos con todas sus caras interiores convexas:
+Sin embargo, existen grafos planares $2$-conexos sin dibujos donde todas las caras interiores son convexas:
 
 \InscapeDEPRECADO{Dibujo de un grafo con dos vértices de grado $4$ y cuatro vértices de grado $2$.}
 El grafo que corresponde a este dibujo es $2$-conexo y no puede tener todas sus caras interiores convexas. En efecto, para probar última afirmación, notar que si hubiera un dibujo con todas las caras internas convexas, luego rotando el dibujo podemos asumir que los dos vértices de grado $4$ están alineados sobre la recta $Y = 0$ de $\reals^2$. Como las caras son convexas los vértices de grado $2$: $v_1,v_2,v_3,v_4$ se pueden ordenar de manera que la cordenada $Y$ de los puntos cresca estrictamente: $y_1<y_2<y_3<y_4$ con $v_i = (*,y_i)$. Luego, no es difícil convencerse que la cara interior del ciclo que contiene a los vértices $v_3$ y $v_4$ no es convexa.
@@ -3589,12 +3588,14 @@ Consideremos el grafo bipartito $B$ con vértices $E \cup F$, donde hay una aris
  \]
  Para la segunda, combinamos (a) y (b).
 
- Más aún, Basta probar la desigüaldad (a) para árboles, pues si $G$ tiene ciclos, tienen que tener almenos orden $4$ por ser pares, con lo cual la desigualdad se deduce de tomar $g \geq 4$ en el ítem 3. que probaremos luego. Que vale para árboles es obvio.
+ Más aún, Basta probar la desigüaldad (a) para árboles, pues si $G$ tiene ciclos, tienen que tener al menos orden $4$ por ser pares, con lo cual la desigualdad se deduce de tomar $g \geq 4$ en el ítem 3. que probaremos luego. Que vale para árboles es obvio.
  \item Nuevamente, basta probar (a), luego de la Fórmula de Euler \ref{th:formula de Euler} se deduce (b), y juntando (a) y (b) se deduce (c).
 
- Como en el ítem 1., consideremos el grafo bipartito $B$ con vértices $E \cup F$, donde hay una arista $ef$ con $e \in E, f \in F$ si y solo si $e$ está en la frontera de $f$. Notar que todas las caras $f$ de $G$ deben contener algún ciclo en la frontera, en efecto, supongamos que existe una cara $f$ que no contiene ningún ciclo en la frontera, por la Observación \ref{obs:toda cara de un grafo plano es la cara de su frontera visto como grafo plano} la frontera es un subgrafo $H$ de $G$, luego no tiene ciclos, i.e. es un árbol, así por la Proposición \ref{proposition:un arbol plano tiene una sola cara} tiene una sola cara, la cual por el Lema \ref{lema:clase 18 05 23 - lema 1} es igual a $f$, entonces $f$ es la única cara de $G$ pues $f = \reals^2 \setminus H  \supset \reals^2 \setminus G \supset f$. Todo $e$ tiene grado a lo más $2$ en $B$ por el Lema \ref{lema:grafos planos - una arista está en la frontera de una cara o no interseca con el interior de una arista - una arista esta en la frontera de un ciclo luego esta en dos caras de G y en dos caras distintas de C} y todo $f$ tiene grado almenos $g$ en $B$ por nuestra observación anterior. Como el número de aristas de $B$ es por un lado $\sum_{f \in F} d_B (f) \geq g \abs F$ y por otro $\sum_{e \in E} d_B (e) \leq 2 \abs E$, se sigue que
+ Como en el ítem 1., consideremos el grafo bipartito $B$ con vértices $E \cup F$, donde hay una arista $ef$ con $e \in E, f \in F$ si y solo si $e$ está en la frontera de $f$. Notar que todas las caras $f$ de $G$ deben contener algún ciclo en la frontera, en efecto, supongamos que existe una cara $f$ que no contiene ningún ciclo en la frontera, por la Observación \ref{obs:toda cara de un grafo plano es la cara de su frontera visto como grafo plano}, la frontera es un subgrafo $H$ de $G$; como no tiene ciclos, es un árbol, así, por la Proposición \ref{proposition:un arbol plano tiene una sola cara}, tiene una sola cara, la cual por el Lema \ref{lema:clase 18 05 23 - lema 1}, es igual a $f$, más aún, debe ser la única cara de $G$, es decir, $G$ es un árbol y el resultado se sigue.
+
+ Ahora, todo $e$ tiene grado a lo más $2$ en $B$ por el Lema \ref{lema:grafos planos - una arista está en la frontera de una cara o no interseca con el interior de una arista - una arista esta en la frontera de un ciclo luego esta en dos caras de G y en dos caras distintas de C}, y todo $f$ tiene grado al menos $g$ en $B$ por nuestra observación del párrafo anterior. Como el número de aristas de $B$ es por un lado $\sum_{f \in F} d_B (f) \geq g \abs F$ y por otro $\sum_{e \in E} d_B (e) \leq 2 \abs E$, se sigue que
  \[
-     g \abs F \leq 2 \abs E \quad \Leftrightarrow \quad \abs F \leq \frac 2 g \abs E.
+     g \abs F \leq 2 \abs E \quad \Longleftrightarrow \quad \abs F \leq \frac 2 g \abs E.
  \]
 \end{enumerate}
 \end{solution}
