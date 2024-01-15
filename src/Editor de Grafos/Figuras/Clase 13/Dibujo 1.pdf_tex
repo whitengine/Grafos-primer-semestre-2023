@@ -1,6 +1,6 @@
-%% Creator: Inkscape 1.2.2 (732a01da63, 2022-12-09, custom), www.inkscape.org
+%% Creator: Inkscape 1.3.1 (9b9bdc1480, 2023-11-25, custom), www.inkscape.org
 %% PDF/EPS/PS + LaTeX output extension by Johan Engelen, 2010
-%% Accompanies image file './Editor de Grafos/Figuras/Clase 13/Dibujo 1.pdf' (pdf, eps, ps)
+%% Accompanies image file 'Dibujo 1.pdf' (pdf, eps, ps)
 %%
 %% To include the image in your LaTeX document, write
 %%   \input{<filename>.pdf_tex}
@@ -24,7 +24,6 @@
 %% For more information, please see info/svg-inkscape on CTAN:
 %%   http://tug.ctan.org/tex-archive/info/svg-inkscape
 %%
-
 \begingroup%
   \makeatletter%
   \providecommand\color[2][]{%
@@ -51,20 +50,18 @@
   \global\let\svgwidth\undefined%
   \global\let\svgscale\undefined%
   \makeatother%
-  \begin{picture}(1,0.53242086)%
+  \begin{picture}(1,0.53212123)%
     \lineheight{1}%
     \setlength\tabcolsep{0pt}%
     \put(0,0){\includegraphics[width=\unitlength,page=1]{./Editor de Grafos/Figuras/Clase 13/Dibujo 1.pdf}}%
-    \put(0.85485451,0.47042451){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}\scalebox{3}{$A$}\end{tabular}}}}%
+    \put(0.85485451,0.47012488){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}\resizebox{!}{20pt}{$\darkblue{A}$}\end{tabular}}}}%
     \put(0,0){\includegraphics[width=\unitlength,page=2]{./Editor de Grafos/Figuras/Clase 13/Dibujo 1.pdf}}%
-    \put(0.14009409,0.16674678){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$x_1$\end{tabular}}}}%
-    \put(0.22591906,0.45054428){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$y_1$\end{tabular}}}}%
-    \put(0.60051154,0.18666719){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$x_2$\end{tabular}}}}%
-    \put(0.85593419,0.1434937){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$y_2$\end{tabular}}}}%
+    \put(0.14009409,0.16644715){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$x_1$\end{tabular}}}}%
+    \put(0.2472797,0.44007382){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$y_1$\end{tabular}}}}%
+    \put(0.57329888,0.23){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$x_2$\end{tabular}}}}%
+    \put(0.82057292,0.20728545){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$y_2$\end{tabular}}}}%
     \put(0,0){\includegraphics[width=\unitlength,page=3]{./Editor de Grafos/Figuras/Clase 13/Dibujo 1.pdf}}%
-    \put(0.20764942,0.25213008){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$P_1$\end{tabular}}}}%
-    \put(0.71322572,0.33085242){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$P_2$\end{tabular}}}}%
+    \put(0.20764942,0.25183045){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$P_1$\end{tabular}}}}%
+    \put(0.71322572,0.33055279){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$P_2$\end{tabular}}}}%
   \end{picture}%
 \endgroup%
-
-

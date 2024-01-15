@@ -1,6 +1,6 @@
-%% Creator: Inkscape 1.2.2 (732a01da63, 2022-12-09, custom), www.inkscape.org
+%% Creator: Inkscape 1.3.1 (9b9bdc1480, 2023-11-25, custom), www.inkscape.org
 %% PDF/EPS/PS + LaTeX output extension by Johan Engelen, 2010
-%% Accompanies image file './Editor de Grafos/Figuras/Clase 13/Dibujo 2.pdf' (pdf, eps, ps)
+%% Accompanies image file 'Dibujo 2.pdf' (pdf, eps, ps)
 %%
 %% To include the image in your LaTeX document, write
 %%   \input{<filename>.pdf_tex}
@@ -38,7 +38,7 @@
   \newcommand*\fsize{\dimexpr\f@size pt\relax}%
   \newcommand*\lineheight[1]{\fontsize{\fsize}{#1\fsize}\selectfont}%
   \ifx\svgwidth\undefined%
-    \setlength{\unitlength}{468.12956172bp}%
+    \setlength{\unitlength}{467.71653543bp}%
     \ifx\svgscale\undefined%
       \relax%
     \else%
@@ -50,15 +50,15 @@
   \global\let\svgwidth\undefined%
   \global\let\svgscale\undefined%
   \makeatother%
-  \begin{picture}(1,0.38401798)%
+  \begin{picture}(1,0.38398181)%
     \lineheight{1}%
     \setlength\tabcolsep{0pt}%
     \put(0,0){\includegraphics[width=\unitlength,page=1]{./Editor de Grafos/Figuras/Clase 13/Dibujo 2.pdf}}%
-    \put(0.14394213,0.08979664){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$P_1$\end{tabular}}}}%
-    \put(0.65601282,0.08856594){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$P_1$\end{tabular}}}}%
-    \put(0.23972082,0.14833275){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$P_2$\end{tabular}}}}%
-    \put(0.36782535,0.09414273){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$P_3$\\\end{tabular}}}}%
-    \put(0.88765931,0.09242756){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$P_2$\\\end{tabular}}}}%
-    \put(0.75458776,0.1479044){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$P_3$\end{tabular}}}}%
+    \put(0.14406924,0.0898739){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$P_1$\end{tabular}}}}%
+    \put(0.65659212,0.08864212){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$P_1$\end{tabular}}}}%
+    \put(0.23993251,0.14846171){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$P_2$\end{tabular}}}}%
+    \put(0.36815017,0.09422383){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$P_3$\\\end{tabular}}}}%
+    \put(0.88844318,0.09250715){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$P_2$\\\end{tabular}}}}%
+    \put(0.75525411,0.14803298){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$P_3$\end{tabular}}}}%
   \end{picture}%
 \endgroup%

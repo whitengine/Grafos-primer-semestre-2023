@@ -41,9 +41,9 @@
 \contentsline {section}{\numberline {3.3}Clase 15: 25/05/23}{100}{section.3.3}%
 \contentsline {subsubsection}{\underline {Operaciones que conocemos}}{101}{section*.3}%
 \contentsline {subsubsection}{\underline {Otra perspectiva con respecto a los menores}}{102}{section*.4}%
-\contentsline {subsubsection}{\underline {Retomando grafos planos}}{102}{section*.5}%
-\contentsline {subsection}{\numberline {3.3.1}Dibujos}{104}{subsection.3.3.1}%
-\contentsline {section}{\numberline {3.4}Clase 16: 26/05/23}{109}{section.3.4}%
+\contentsline {subsubsection}{\underline {Retomando grafos planos}}{103}{section*.5}%
+\contentsline {subsection}{\numberline {3.3.1}Dibujos}{105}{subsection.3.3.1}%
+\contentsline {section}{\numberline {3.4}Clase 16: 26/05/23}{110}{section.3.4}%
 \contentsline {subsection}{\numberline {3.4.1}Teorema de Kuratowski}{112}{subsection.3.4.1}%
 \contentsline {chapter}{\numberline {4}Coloreo de Grafos}{117}{chapter.4}%
 \contentsline {section}{\numberline {4.1}Clase 17: 02/06/23}{117}{section.4.1}%

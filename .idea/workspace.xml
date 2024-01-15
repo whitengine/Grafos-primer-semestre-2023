@@ -10,6 +10,13 @@
       <change beforePath="$PROJECT_DIR$/out/main.log" beforeDir="false" afterPath="$PROJECT_DIR$/out/main.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/main.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/out/main.pdf" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/main.synctex.gz" beforeDir="false" afterPath="$PROJECT_DIR$/out/main.synctex.gz" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/main.toc" beforeDir="false" afterPath="$PROJECT_DIR$/out/main.toc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Editor de Grafos/Figuras/Clase 13/Dibujo 1.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/src/Editor de Grafos/Figuras/Clase 13/Dibujo 1.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Editor de Grafos/Figuras/Clase 13/Dibujo 1.pdf_tex" beforeDir="false" afterPath="$PROJECT_DIR$/src/Editor de Grafos/Figuras/Clase 13/Dibujo 1.pdf_tex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Editor de Grafos/Figuras/Clase 13/Dibujo 1.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/Editor de Grafos/Figuras/Clase 13/Dibujo 1.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Editor de Grafos/Figuras/Clase 13/Dibujo 2.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/src/Editor de Grafos/Figuras/Clase 13/Dibujo 2.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Editor de Grafos/Figuras/Clase 13/Dibujo 2.pdf_tex" beforeDir="false" afterPath="$PROJECT_DIR$/src/Editor de Grafos/Figuras/Clase 13/Dibujo 2.pdf_tex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Editor de Grafos/Figuras/Clase 13/Dibujo 2.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/Editor de Grafos/Figuras/Clase 13/Dibujo 2.svg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main.tex" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.tex" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -21,6 +28,7 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Apuntes - GRAFOS.tex" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/src/Apendice/Apendice.tex" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/src/main.tex" root0="SKIP_HIGHLIGHTING" />
   </component>
@@ -203,7 +211,10 @@
       <workItem from="1704900555745" duration="162000" />
       <workItem from="1704910028627" duration="7690000" />
       <workItem from="1704928745410" duration="3279000" />
-      <workItem from="1704981363298" duration="813000" />
+      <workItem from="1704981363298" duration="1640000" />
+      <workItem from="1704994276815" duration="813000" />
+      <workItem from="1704998261138" duration="50000" />
+      <workItem from="1705262123159" duration="11992000" />
     </task>
     <task id="LOCAL-00001" summary="arreglado?">
       <option name="closed" value="true" />
@@ -541,7 +552,15 @@
       <option name="project" value="LOCAL" />
       <updated>1704933207784</updated>
     </task>
-    <option name="localTasksCounter" value="43" />
+    <task id="LOCAL-00043" summary="arreglado?">
+      <option name="closed" value="true" />
+      <created>1704982182066</created>
+      <option name="number" value="00043" />
+      <option name="presentableId" value="LOCAL-00043" />
+      <option name="project" value="LOCAL" />
+      <updated>1704982182066</updated>
+    </task>
+    <option name="localTasksCounter" value="44" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

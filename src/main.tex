@@ -3001,15 +3001,15 @@ Observemos que también este orden parcial tiene anticadenas de cardinal $k$ par
 
 \begin{definition}
 \begin{enumerate}[(a)]
-\item Un \textbf{segmento de recta} en el plano Euclídeo es un conjunto de puntos de la forma $\{ P + \lambda (Q-P) | 0 \leq \lambda \leq 1 \}$ para un par de puntos fijos $P,Q \in \reals^2$.
-\item Un \textbf{polígono} es un subconjunto de $\reals ^2$ que es unión de un número finíto de segmentos que es homeomorfo\footnote{ Recordar que un \textbf{homeomorfismo} $\varphi : X \rightarrow Y$ entre dos espacios topológicos $X$ e $Y$, es una función continua y biyectiva tal que su función inversa $\varphi^{-1} : Y \rightarrow X$ también es continua.} al cículo unitario.
-\item Un \textbf{arco} (poligonal) es la unión de un número finito de segmentos que es homeomorfo al intervalo cerrado $[0,1]$. En particular, un arco es cerrado. Fijado un homeomorfismo, las pre-imágenes de $0$ y $1$ son los \textbf{extremos} del arco y decimos que el arco \textbf{une} o \textbf{va entre} sus extremos. Observar que los extremos de un arco son distintos, pues un homeomorfismo es biyectivo. Si $P$ es un arco entre $x$ e $y$, denotamos por $I(P)$ al \textbf{interior} del arco, es decir, $I(P) :== P \setminus \{ x,y \}$.
-\item Sea $A \subset \reals^2$ un conjunto abierto. Estar unido por un arco en $A$, define una relación de equivalencia en los elementos de $A$. Las clases de equivalencia las llamamos \textbf{regiones}. (Notar que las regiones son las componentes arco-conexas (por curvas continuas), o equivalentemente, las componentes conexas).
-\item La \textbf{frontera} de un conjunto $X \subset \reals^2$ es el conjunto $Y$ de todos los puntos $y \in \reals^2$ tal que todo vecindario de $y$ intersecta a ambos $X$ y $\reals^2 \setminus X$.
+\item Un \textbf{segmento de recta} en el plano Euclídeo $\reals^2$ es un conjunto de puntos de la forma $\{ P + \lambda (Q-P) | 0 \leq \lambda \leq 1 \}$ para un par de puntos fijos $P,Q \in \reals^2$.
+\item Un \textbf{polígono} es un subconjunto de $\reals ^2$ que es unión de un número finito de segmentos, que también es homeomorfo\footnote{ Recordar que un \textbf{homeomorfismo} $\varphi : X \rightarrow Y$ entre dos espacios topológicos $X$ e $Y$, es una función continua y biyectiva tal que su función inversa $\varphi^{-1} : Y \rightarrow X$ también es continua.} al cículo unitario.
+\item Un \textbf{arco} (poligonal) es la unión de un número finito de segmentos que es homeomorfo al intervalo cerrado $[0,1]$. En particular, un arco es topológicamente cerrado. Fijado un homeomorfismo, las pre-imágenes de $0$ y $1$ son los \textbf{extremos} del arco y decimos que el arco \textbf{une} o \textbf{va entre} sus extremos. Observar que los extremos de un arco son distintos, pues un homeomorfismo es biyectivo. Si $P$ es un arco entre $x$ e $y$, denotamos por $I(P)$ al \textbf{interior} del arco, es decir, $I(P) := P \setminus \{ x,y \}$.
+\item Sea $A \subset \reals^2$ un conjunto abierto. Estar unido por un arco en $A$, define una relación de equivalencia en los elementos de $A$. Las clases de equivalencia las llamamos \textbf{regiones}. (Notar que las regiones son las componentes arco-conexas, o equivalentemente, las componentes conexas).
+\item La \textbf{frontera} de un conjunto $X \subset \reals^2$ es el conjunto $Y$ de todos los puntos $y \in \reals^2$ tales que todo vecindario de $y$ intersecta $X$ y $\reals^2 \setminus X$.
 \end{enumerate}
 \end{definition}
 
-\InscapeDEPRECADO{Ilustración de un abierto \darkblue{$A$}. Ilustramos los puntos $x_1,y_1 \in A$ equivalentes, ya que podemos dibujar un arco $P_1 \subset A$ entre ellos. Similarmente, $x_2,y_2$ están unidos por un arco $P_2$ en $A$, luego son equivalentes entre sí. Las regiones de $A$ son el \textit{maní} y el \textit{boomerang}. La frontera de $A$ es la ``cáscara'' del maní (líneas punteadas) y el ``borde'' del boomerang.}
+\InscapeDEPRECADO{Ilustración de un abierto \darkblue{$A$}. Los puntos $x_1,y_1 \in A$ son equivalentes en $A$, ya que podemos dibujar un arco $P_1 \subset A$ entre ellos. Similarmente, $x_2,y_2$ están unidos por un arco $P_2$ en $A$, luego son equivalentes entre sí. Las regiones de $A$ son el {\upshape\sffamily{maní}} y el {\upshape\sffamily{boomerang}}. La frontera de $A$ es la ``cáscara'' del maní unión el ``borde'' del boomerang; ambas remarcadas con \red{segmentos} rodeando las áreas azules.}
 
 \begin{theorem}[Teorema de la curva de Jordan para polígonos]\label{th:teorema de la curva de Jordan para poligonos}
 Para todo polígono $P \subset \reals ^2$, el conjunto $\reals^2 \setminus P$ tiene dos regiones: una acotada\footnote{En $\reals^2$ o más en general en $\reals^n$, decimos que un conjunto es \textbf{acotado}, si está contenido en alguna bola de tamaño lo suficientemente grande.} y otra no acotada. Cada región tiene a $P$ como frontera.
@@ -3020,7 +3020,7 @@ Con este teorema no es difícil probar lo siguiente:
 Sean $P_1, P_2, P_3$ arcos disjuntos salvo en sus extremos, donde cualquier par de arcos comparten ambos extremos. Entonces:
 \begin{enumerate}[(i)]
 \item $\reals ^2 \setminus (P_1 \cup P_2 \cup P_3)$ tiene exactamente tres regiones con fronteras $P_1 \cup P_2$, $P_2 \cup P_3$ y $P_1 \cup P_3$.
-\item Si $P$ es un arco entre un punto en $I (P_1)$ y otro en $I(P_3)$, tal que $I(P)$ está en la región $\reals^2 \setminus (P_1 \cup P_3)$ que contiene a $I(P_2)$, entonces $I(P) \cap I(P_2) \neq \emptyset$.
+\item Si $P$ es un arco entre un punto en $I (P_1)$ y otro en $I(P_3)$, tal que $I(P)$ está en la única región (de las dos que tiene) de $\reals^2 \setminus (P_1 \cup P_3)$ que contiene a $I(P_2)$, entonces $I(P) \cap I(P_2) \neq \emptyset$.
 \end{enumerate}
 \end{lemma}
 
@@ -3049,7 +3049,7 @@ Sea $\varphi : C_1 \rightarrow C_2$ un homeomorfismo entre dos círculos en $S^2
 \bigskip
 
 \begin{definition}
-Un \textbf{grafo plano} (no confundir con \textit{grafo planar}) es un par $(V,E)$ que cumple:
+Un \textbf{grafo plano} (no confundir con \textit{grafo planar}) es un par $G := (V,E)$ que cumple:
 \begin{enumerate}
 \item $V \subset \reals^2$ es finito.
 \item $E$ es un conjunto de arcos entre elementos de $V$.
@@ -3076,12 +3076,12 @@ Es conveniente pensar al \textit{grafo plano} asosciado a un \textit{grafo plana
 
 
 \begin{definition}
-Si $G$ es un grafo plano, llamamos \textbf{caras} a las regiones de $\reals \setminus G$. Al conjunto de caras de $G$ lo denotamos por $F (G)$.
+Si $G$ es un grafo plano, llamamos \textbf{caras} a las regiones de $\reals \setminus (V \cup E)$. Al conjunto de caras de $G$ lo denotamos por $F (G)$.
 \end{definition}
 
 Como trabajamos con grafos planos finitos, estos son acotados, es decir, existe una bola $B \subset \reals^2$ tal que $G \subset B$. Siempre va a haber una cara que contiene a $\reals^2 \setminus B$ y esa cara la llamamos \textbf{cara exterior}.
 
-\InscapeDEPRECADO{Grafo plano $G$ contenido en una bola $B$, con caras \gray{$f_1$},\purple{$f_2$},\red{$f_3$},\yellow{$f_4$}. La cara exterior $f_1$ contiene a \gray{$B$}.}
+\InscapeDEPRECADO{Grafo plano $G$ contenido en una bola $B$, con caras \gray{$f_1$},\purple{$f_2$},\red{$f_3$},\yellow{$f_4$}. La cara exterior \gray{$f_1$} contiene a \gray{$B$}.}
 
 \begin{lemma}\label{lema:clase 18 05 23 - lema 1}
 Sea $G$ un grafo plano, $f$ una de sus caras y $H$ un subgrafo de $G$. Entonces,
@@ -3109,23 +3109,23 @@ Sea $G$ un grafo plano y $e$ una arista de $G$. Entonces,
 \end{enumerate}
 \end{lemma}
 \begin{proof}
-Consideremos un punto $x_0 \in I(e)$. Probaremos que $x_0$ yace en exactamente dos caras o exactamente una cara, dependiendo de si $e$ está en un ciclo o no. Luego probaremos que los extremos de $e$ también están contenidos en la frontera de estas caras, pues están en la clausura topológica del interior de $e$.
+Consideremos un punto $x_0 \in I(e)$ fijo. Probaremos que $x_0$ yace en exactamente la frontera de dos caras o de una sola, dependiendo de si $e$ está en un ciclo o no, respectivamente. Luego probaremos que para $x \in I(e)$ arbitrario, pertenece a las fronteras de las caras donde yace $x_0$. Concluyendo que los extremos de $e$ también están contenidos en la frontera de estas caras, pues están en la clausura topológica del interior de $e$.
 
-Como $G \setminus I(e)$ es compacto, podemos entontrar alrededor de cada punto $x \in I(e)$ una bola $B (x)$ que interseca a $G$ solamente en una o dos segmentos que contienen a $x$.
+Como $G \setminus I(e)$ es compacto, podemos entontrar alrededor de cada punto $x \in I(e)$ una bola $B (x)$ que interseca a $G$ solamente en uno o dos segmentos que contienen a $x$.
 
 Tomemos un punto interior $x_0$ de alguno de los segmentos $S \subset e$. Entonces $B(x_0) \cap G = B(x_0) \cap S$, con lo cual $B(x_0) \setminus G$ es la unión de dos semidiscos. Como estos semidiscos no intersecan a $G$, cada uno yace en una cara de $G$. Denotemoslas por $f_1,f_2$; Estas son las únicas caras de $G$ con $x_0$ en sus fronteras, podríamos estar en el caso de que $f_1 = f_2$.
 
-Si $e$ yace en un ciclo $C \subset G$, entonces $B (x_0)$ interseca ambas caras de $C$ (Teorema \ref{th:teorema de la curva de Jordan para poligonos}). Como $f_1,f_2$ están contenidas en caras de $C$ por el Lema \ref{lema:clase 18 05 23 - lema 1}, esto implica que $f_1 \neq f_2$. Si $e$ no yacen en ningún ciclo, entonces $e$ es un puente, y por lo tanto une dos conjuntos disjuntos de puntos y segmentos $X_1,X_2$ como en el enunciado del Lema \ref{lema:arco tiene una sola cara}, y $X_1 \cup X_2 = G \setminus I(e)$. Claramente $f_1 \cup I(e) \cup f_2$ es el subconjunto de una cara de $G - e$. Por el Lema \ref{lema:arco tiene una sola cara}, $f \setminus I(e)$ es una cara de $G$, mientras que $f_1, f_2 \subset f \setminus I(e)$ por definición de $f$. Como $f_1$ y $f_2$ son caras de $G$, tenemos que $f_1 = f \setminus I(e) = f_2$.
+Si $e$ yace en un ciclo $C \subset G$, entonces $B (x_0)$ interseca ambas caras de $C$ (Teorema \ref{th:teorema de la curva de Jordan para poligonos}). Como $f_1,f_2$ están contenidas en caras de $C$ por el Lema \ref{lema:clase 18 05 23 - lema 1}, esto implica que $f_1 \neq f_2$. Si $e$ no yacen en ningún ciclo, entonces $e$ es un puente, y por lo tanto une dos conjuntos disjuntos de puntos y segmentos $X_1,X_2$ como en el enunciado del Lema \ref{lema:arco tiene una sola cara}, y $X_1 \cup X_2 = G \setminus I(e)$. Claramente $f_1 \cup I(e) \cup f_2$ es el subconjunto de una cara $f$ de $G - e$. Por el Lema \ref{lema:arco tiene una sola cara}, $f \setminus I(e)$ es una cara de $G$, mientras que $f_1, f_2 \subset f \setminus I(e)$ por definición de $f$. Como $f_1$ y $f_2$ son caras de $G$, tenemos que $f_1 = f \setminus I(e) = f_2$.
 
 \InscapeDEPRECADO{Un arco de $y$ hacia $B_0$, cercano a $P$.}
 
-Ahora, tomemos otro punto $x_1 \in I(e)$. Sea $P$ un arco de $x_0$ en $x_1$ contenido en $e$. Como $P$ es compacto, finitas bolas $B(x)$ con $x \in P$ cubren a $P$. Numeremoslas como $B_0 , \ldots, B_n$ en el orden natural de sus centro a lo largo de $P$ y agregando a $B (x_0)$ y $B (x_1)$ de ser necesario, con lo cual podemos suponer que $B_0 = B(x_0)$ y $B_1 = B(x_1)$. Por inducción en $n$, podemos probar fácilmente que todo punto $y \in D_n \setminus e$ puede ser conectado por un arco dentro de $(D_0 \cup \cdots \cup D_n) \setminus e$ con un punto $z \in D_0 \setminus e$ (ver la figura de arriba); con lo cual $y,z$ son equivalentes en $\reals^2 \setminus G$. Con lo cual, todo punto de $D_n \setminus e$ yace en $f_1$ o $f_2$, con lo cual $x_1$ no puede encontrarse en la frontera de ninguna otra cada de $G$. Como ambos medio-discos de $D_0 \setminus e$ pueden ser conectados con $D_n \setminus e$ de esta manera (utilizando el mismo argumento pero intercambiando los roles de $B_0$ y $B_n$), podemos ver que $x_1$ se encuentra ene la frontera de $f_1$ y $f_2$.
+Ahora, tomemos otro punto $x_1 \in I(e)$. Sea $P$ un arco de $x_0$ en $x_1$ contenido en $e$. Como $P$ es compacto, finitas bolas $B(x)$ con $x \in P$ cubren a $P$. Numeremoslas como $B_0 , \ldots, B_n$ en el orden natural de sus centros a lo largo de $P$ y agregando a $B (x_0)$ y $B (x_1)$ de ser necesario, podemos suponer que $B_0 = B(x_0)$ y $B_1 = B(x_1)$. Por inducción en $n$, podemos probar fácilmente que todo punto $y \in B_n \setminus e$ puede ser conectado por un arco dentro de $(B_0 \cup \cdots \cup B_n) \setminus e$ con un punto $z \in B_0 \setminus e$ (ver la figura de arriba); con lo cual $y,z$ son equivalentes en $\reals^2 \setminus G$. Consecuentemente, todo punto de $B_n \setminus e$ yace en $f_1$ o $f_2$, así, $x_1$ no puede encontrarse en la frontera de ninguna otra cara de $G$. Como ambos semidiscos de $B_0 \setminus e$ pueden ser conectados con $B_n \setminus e$ de esta manera (utilizando el mismo argumento pero intercambiando los roles de $B_0$ y $B_n$), podemos ver que $x_1$ se encuentra en la frontera de $f_1$ y $f_2$.
 \end{proof}
 
-\InscapeDEPRECADO{Del lado izquierdo tenemos una ilustración del ítem (i), con una arista $e$ contenida en la frontera \yellow{$X_1$} pero no en la frontera \red{$f_2$}. Del lado derecho se ilustra el ítem (ii), con una arista en un ciclo \red{$C$} también contenida en las caras $f_1$ y $f_2$ de $G$, las cuales están contenidas en las dos caras de $C$ la \gray{exterior} y la \red{interior}.}
+\InscapeDEPRECADO{Del lado izquierdo tenemos una ilustración del ítem (i), con una arista $e$ contenida en la frontera \yellow{$X_1$} pero no en la frontera de \red{$f_2$}. Del lado derecho se ilustra el ítem (ii), con una arista en un ciclo \red{$C$} también contenida en las caras $f_1$ y $f_2$ de $G$, las cuales están contenidas en las dos caras de $C$ la \gray{exterior} y la \red{interior}.}
 
 \begin{corollary}
-La frontera de una cara siempre es el conjunto de puntos de un subgrafo.
+La frontera de una cara siempre es el conjunto de vértices y aristas de un subgrafo.
 \end{corollary}
 
 \begin{definition}
@@ -3133,22 +3133,22 @@ El subgrafo de $G$ cuyos puntos son la frontera de una cara $f$ se dice la \text
 \end{definition}
 
 \begin{obs}\label{obs:toda cara de un grafo plano es la cara de su frontera visto como grafo plano}
-Por el segundo ítem del Lema \ref{lema:grafos planos - una arista está en la frontera de una cara o no interseca con el interior de una arista - una arista esta en la frontera de un ciclo luego esta en dos caras de G y en dos caras distintas de C}, toda cara de $G$ es también la cara de su frontera.
+Por el segundo ítem del Lema \ref{lema:grafos planos - una arista está en la frontera de una cara o no interseca con el interior de una arista - una arista esta en la frontera de un ciclo luego esta en dos caras de G y en dos caras distintas de C}, toda cara de $G$ es también una cara de su frontera.
 \end{obs}
 
 \begin{proposition}\label{proposition:un arbol plano tiene una sola cara}
 Si $G$ es un grafo plano que corresponde a un árbol, $G$ tiene una sola cara.
 \end{proposition}
 \begin{proof}
-Se deduce del Lema \ref{lema:arco tiene una sola cara} haciendo inducción en lar aristas. En efecto, si $v$ es el punto que corresponde a una hoja del árbol, este une mediante el arco que corresponde a su arista, con el resto del grafo, el cual es un grafo plano con una arista menos. Por inducción, su complemento tiene una sola cara y pinchado por $v$ sigue teniendo una sola cara. Así, el arco $e$ no separa esta cara por el lema.
+Se deduce del Lema \ref{lema:arco tiene una sola cara} haciendo inducción en las aristas. En efecto, si $v$ es el punto que corresponde a una hoja del árbol, este une mediante el arco que corresponde a su arista, con el resto del grafo, el cual es un grafo plano con una arista menos. Por inducción, su complemento tiene una sola cara y pinchado por $v$ sigue teniendo una sola cara. Así, el arco $e$ no separa esta cara por el lema.
 \end{proof}
 
 
 \begin{lemma}\label{lema:si un grafo plano tiene almenso dos caras con la misma frontera, entonces es un ciclo}
-Si un grafo plano tiene almenos dos caras distintas con la misma frontera, entonces el grafo es un ciclo.
+Si un grafo plano tiene al menos dos caras distintas con la misma frontera, entonces el grafo es un ciclo.
 \end{lemma}
 \begin{proof}
-Sea $G$ un grafo plano, y $H \subset G$ la frontera de dos caras distintas $f_1, f_2$ de $G$. Como $f_1$ y $f_2$ son también las caras de $H$, la proposición anterior implica que $H$ contiene un ciclo $C$. Por el segundo ítem del Lema \ref{lema:grafos planos - una arista está en la frontera de una cara o no interseca con el interior de una arista - una arista esta en la frontera de un ciclo luego esta en dos caras de G y en dos caras distintas de C}, $f_1$ y $f_2$ están contenidos en diferentes caras de $C$. Como $f_1$ y $f_2$ ambas tienen toda la frontera de $H$, esto implica que $H = C$: cualquier otro vértice o arista de $H$ caería en alguna de las caras de $C$ y por lo tanto no en la frontera del otro. Así, $f_1$ y $f_2$ son caras distintas de $C$. Como $C$ tiene solo dos caras, se sigue que $f_1 \cup C \cup f_2 = \reals 2$ y por lo tanto $G = C$.
+Sea $G$ un grafo plano, y $H \subset G$ la frontera de dos caras distintas $f_1, f_2$ de $G$. Como $f_1$ y $f_2$ son también las caras de $H$, la proposición anterior implica que $H$ contiene un ciclo $C$. Por el segundo ítem del Lema \ref{lema:grafos planos - una arista está en la frontera de una cara o no interseca con el interior de una arista - una arista esta en la frontera de un ciclo luego esta en dos caras de G y en dos caras distintas de C}, $f_1$ y $f_2$ están contenidos en diferentes caras de $C$. Como $f_1$ y $f_2$ ambas tienen toda la frontera de $H$, esto implica que $H = C$: si no, cualquier otro vértice o arista de $H$ fuera de $C$ caería en alguna de las dos caras de $C$ y por lo tanto no en la frontera de la otra. Así, $f_1$ y $f_2$ son caras distintas de $C$. Como $C$ tiene solo dos caras (Teorema \ref{th:teorema de la curva de Jordan para poligonos}), se sigue que $f_1 \cup C \cup f_2 = \reals^ 2$ y por lo tanto $G = C$.
 \end{proof}
 
 \begin{proposition}\label{proposicion:un grafo plano 2-conexo tiene todas sus caras con frontera un ciclo}
@@ -3157,20 +3157,20 @@ En un grafo plano $2$-conexo, todas las caras tienen un ciclo por frontera.
 \begin{proof}
 Sea $f$ una cara de $G$. Probaremos por inducción en $\Abs G$ que $G[f]$ es un ciclo. Si $G$ es un ciclo, esto se cumple por el Teorema \ref{th:teorema de la curva de Jordan para poligonos}. Supongamos entonces que $G$ no es un ciclo.
 
-Por la Proposición \ref{prop:un grafo es 2-conexo si y solo si se construye a partir de un grafo 2-conexo union un H-camino}, existe un grafo plano $2$-conexo $H \subset G$ y un $H$-camino $P$ tal que $G = H \cup P$. El interior de $P$ yace en una cara $f'$ de $H$, con lo cual, por hipótesis inductiva esta es frontera de un ciclo $C$.
+Por la Proposición \ref{prop:un grafo es 2-conexo si y solo si se construye a partir de un grafo 2-conexo union un H-camino}, existe un grafo plano $2$-conexo $H \subset G$ y un $H$-camino $P$ tal que $G = H \cup P$. El interior de $P$ yace en una cara $f'$ de $H$, y por hipótesis inductiva la frontera de $f'$ es un ciclo $C$.
 
-Si $G[f] \subset H$, entonces $f$ también es una cara de $H$ (segundo ítem del Lema \ref{lema:clase 18 05 23 - lema 1}, luego se sigue por hipótesis inductiva. Si $G[f] \not \subset H$, entonces $G[f]$ interseca $P \setminus H$, con lo cual $f \subset f'$ y $G[f] \subset C \cup P$. Por el segundo ítem del Lema \ref{lema:clase 18 05 23 - lema 1}, deducimos que $f$ es una cara de $C \cup P$, y por lo tanto tiene como frontera un ciclo (primer ítem del Lema \ref{lema:tres arcos disjuntos forman 3 componentes}).
+Si $G[f] \subset H$, entonces $f$ también es una cara de $H$ (segundo ítem del Lema \ref{lema:clase 18 05 23 - lema 1}), luego el resultado se sigue por hipótesis inductiva. Si $G[f] \not \subset H$, entonces $G[f]$ interseca $P \setminus H$, con lo cual $f \subset f'$ y $G[f] \subset C \cup P$. Por el segundo ítem del Lema \ref{lema:clase 18 05 23 - lema 1}, deducimos que $f$ es una cara de $C \cup P$, y por lo tanto tiene como frontera un ciclo (primer ítem del Lema \ref{lema:tres arcos disjuntos forman 3 componentes}).
 \end{proof}
 
 \begin{proposition}\label{proposition:las fronteras de las caras de un grafo plano 3-conexo son precisamente sus ciclos inducidos que no separan}
 Las fronteras de las caras de un grafo plano $3$-conexo son precisamente sus ciclos inducidos que no separan (es decir, que $G \setminus C$ sigue siendo conexo).
 \end{proposition}
 \begin{proof}
-Sea $G$ un grafo plano $3$-conexo, y sea $C \subset G$. Si $C$ es un ciclo inducido no separador, entonces por el Teorema de la curva de Jordan para polígonos \ref{th:teorema de la curva de Jordan para poligonos} sus dos caras no pueden ambas contener puntos de $G \setminus C$. Con lo cual, es frontera de una cara de $G$.
+Sea $G$ un grafo plano $3$-conexo, y sea $C \subset G$. Si $C$ es un ciclo inducido no separador, entonces por el Teorema de la curva de Jordan para polígonos \ref{th:teorema de la curva de Jordan para poligonos}, sus dos caras no pueden ambas contener puntos de $G \setminus C$. Con lo cual, es frontera de una cara de $G$.
 
-Recíproccamente, supongamos que $C$ es frontera de una cara $f$. Por la proposició nanteior, $C$ es un ciclo. Si $C$ tuviera una cuerda $e = xy$, entonces las componentes conexas del grafo $C - \{x,y\}$ están conectadas por un $C$-camino en $G$, pues $G$ es $3$-conexo. Este camino junto con $e$ atraviesan la otra cara de $C$ que no es $f$, pero no se intersectan, contradiciendo el segundo ítem del Lema \ref{lema:tres arcos disjuntos forman 3 componentes}.
+Recíprocamente, supongamos que $C$ es frontera de una cara $f$. Por la proposición anteior, $C$ es un ciclo. Si $C$ tuviera una cuerda $e = xy$, entonces las componentes conexas del grafo $C - \{x,y\}$ están conectadas por un $C$-camino en $G$, pues $G$ es $3$-conexo. Este camino junto con $e$ atraviesan la otra cara de $C$ que no es $f$, pero no se intersectan porque $G$ es plano, contradiciendo el segundo ítem del Lema \ref{lema:tres arcos disjuntos forman 3 componentes}.
 
-Falta ver que $C$ no separa dos vértices $x,y \in G - C$. Por el Teorema de Menger \ref{th:teorema de menger}, $x$ e $y$ están conectados en $G$ por $3$ caminos independientes. Claramente $f$ yace dentro de una cara formada por la unión, y por el Lema \ref{lema:tres arcos disjuntos forman 3 componentes} esta cara tiene como frontera a solo dos de estos caminos. Entonces el tercero evita a $f$ y su frontera $C$.
+Falta ver que $C$ no separa dos vértices $x,y \in G - C$. Por el ítem (i) del Corolario \ref{th:version global de Menger} del teorema de Menger, $x$ e $y$ están conectados en $G$ por $3$ caminos internamente disjuntos. Claramente $f$ yace dentro de una cara formada por la unión (ítem (i) del Lema \ref{lema:clase 18 05 23 - lema 1}), y por el Lema \ref{lema:tres arcos disjuntos forman 3 componentes} esta cara tiene como frontera a solo dos de estos caminos. Entonces el tercero evita a $f$ y su frontera $C$.
 \end{proof}
 
 \begin{theorem}[Fórmula de Euler]\label{th:formula de Euler}
@@ -3182,16 +3182,16 @@ Sea $G$ un grafo plano conexo con $n$ vértices, $m$ aristas y $f$ caras. Entonc
 \begin{proof}
 Fijemos $n$ y hacemos inducción en la cantidad de aristas $m$. Si $m \leq n -1$, entonces $G$ es un árbol y $m = n-1$; pero la Proposición \ref{proposition:un arbol plano tiene una sola cara}, el árbol tiene una sola cara, y por lo tanto $n - m + f = n - (n-1) + 1 = 2$.
 
-Ahora, supongamos que $m \geq n$, entonces $G$ tiene una arista $e$ que está en un ciclo. Sea $G' = G \setminus e$. Por el ítem (ii) Lema \ref{lema:grafos planos - una arista está en la frontera de una cara o no interseca con el interior de una arista - una arista esta en la frontera de un ciclo luego esta en dos caras de G y en dos caras distintas de C} $e$ yace en la frontera de exactamente dos caras $f_1,f_2$ de $G$, y como lo spuntos de $I(e)$ son todos equivalentes en $\reals^2 \setminus G'$, existe entonces una cara $f_e$ de $G'$ que contiene a $I(e)$.
+Ahora, supongamos que $m \geq n$, entonces $G$ tiene una arista $e$ que está en un ciclo. Sea $G' = G \setminus e$. Por el ítem (ii) Lema \ref{lema:grafos planos - una arista está en la frontera de una cara o no interseca con el interior de una arista - una arista esta en la frontera de un ciclo luego esta en dos caras de G y en dos caras distintas de C} $e$ yace en la frontera de exactamente dos caras $f_1,f_2$ de $G$, y como los puntos de $I(e)$ son todos equivalentes en $\reals^2 \setminus G'$, existe entonces una cara $f_e$ de $G'$ que contiene a $I(e)$.
 Luego basta demostrar que
 \[
     F (G) \setminus \{f_1, f_2 \} = F (G') \setminus \{f_e\},
 \]
 ya que $G'$ tiene exactamente una cara y una arista menos que $G$. Así obtendríamos el resultado por hipótesis inductiva.
 
-Por un lado, si $f \in F(G) \setminus \{f_1,f_2\}$, por el ítem (i) Lema \ref{lema:grafos planos - una arista está en la frontera de una cara o no interseca con el interior de una arista - una arista esta en la frontera de un ciclo luego esta en dos caras de G y en dos caras distintas de C} tenemos que $G[f] \subset G \setminus I(e) = G'$, y por lo tanto $f \in F(G')$ por el segundo ítem del Lema \ref{lema:clase 18 05 23 - lema 1}. Claramente $f \neq f_e$, y así iprobamos una inclusión.
+Por un lado, si $f \in F(G) \setminus \{f_1,f_2\}$, por el ítem (i) Lema \ref{lema:grafos planos - una arista está en la frontera de una cara o no interseca con el interior de una arista - una arista esta en la frontera de un ciclo luego esta en dos caras de G y en dos caras distintas de C} tenemos que $G[f] \subset G \setminus I(e) = G'$, y por lo tanto $f \in F(G')$ por el segundo ítem del Lema \ref{lema:clase 18 05 23 - lema 1}. Claramente $f \neq f_e$, y así probamos una inclusión.
 
-Recíprocamente, sea $f' \in F(G') \setminus \{f_e\}$. Claramente $f' \neq f_1, f_2$ y $f' \cap I(e) = \emptyset$. Entonces, dados dos puntos de $f'$, estos yacen en $\reals^2 \setminus G$ y por lo tanto son equivalentes allí, i.e. $G$ tiene una cara $f$ conteniendo a $f'$. Por el ítem (i) del Lema \ref{lema:clase 18 05 23 - lema 1}, tenemos que sin embargo $f$ yace dentro de una cara $f''$ de $G'$. Así, $f' \subset f \subset f''$ y luego $f' = f = f''$, pues ambas $f'$ y $f''$ son caras de $G'$.
+Recíprocamente, sea $f' \in F(G') \setminus \{f_e\}$. Como $f' \neq f_e$, no contiene puntos de $f_1$ ni $f_2$. Consecuentemente, contiene una cara $f$ en $F(G) \setminus \{f_1,f_2\}$. En el párrafo anterior probamos que $f$ es una cara de $G'$, luego por maximalidad, $f = f'$.
 \end{proof}
 
 
@@ -3200,7 +3200,7 @@ En general, no es difícil probar por inducción en el número $c$ de componente
 \[
     n - m + f = 1 + c,
 \]
-donde $n,m$ y $f$ son como en el enunciado de la fórmula.
+donde $n,m$ y $f$ son como en el enunciado de la fórmula de Euler.
 \end{remark}
 
 
