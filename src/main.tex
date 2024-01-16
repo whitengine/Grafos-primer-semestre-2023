@@ -3817,11 +3817,11 @@ Finalmente, alguno de estos caminos $C_{i,j}$ tiene que tener más de dos vérti
 \end{proof}
 
 \begin{example}
-A veces la cota que da el Teorema de Brooks \ref{th:brooks - un grafo conexo no completo ni ciclo impar luego chi(G) <= Delta(G)}. En efecto, sea $k \geq 3$, consideremos el grafo $G$ obtenido a partir de un camino
+La cota que da el Teorema de Brooks \ref{th:brooks - un grafo conexo no completo ni ciclo impar luego chi(G) <= Delta(G)} puede ser muy mala en infinitos casos. En efecto, sea $k \geq 3$, consideremos el grafo $G$ obtenido a partir de un camino
 \[
     P_k : x_0 \cdot x_1 \cdot x_2 \cdots x_k,
 \]
-luego de agregar las aristas $x_0 x_k, x_1 x_k, \ldots, x_{k-2} x_k$. Notar que $\Delta (G) = d_G (x_k) = k \geq 3$, y que con queste orden, el algorítmo glotón prueba que $\col G \leq 3$. Así,
+después de agregar las aristas $x_0 x_k, x_1 x_k, \ldots, x_{k-2} x_k$. Notar que $\Delta (G) = d_G (x_k) = k \geq 3$, y que con este orden, el algorítmo glotón prueba que $\col G \leq 3$. Así,
 \[
     \chi (G) \leq \col G \leq 3 \leq k.
 \]
