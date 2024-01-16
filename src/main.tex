@@ -1120,7 +1120,7 @@ Si $T$ es un árbol arbitrario, y $G$ es un grafo con $\delta (G) \geq \abs T -1
 Sea $v_1,\ldots,v_n$ con $n = \abs T$, una numeración de los vértices de $T$ tal que $v_i, i \geq 2$ es una hoja de $T_i := T[v_1,\ldots,v_{i-1}]$. Haremos inducción en $i$. El caso base es trivial. Veamos el paso inductivo: supongamos que $G$ tiene a $T_i$ como subgrafo. $v_i$ tiene un único vecino en $T_i$, digamos $z_i \in T_i$, el cual tiene al menos $\delta (G) \geq n-1$ vecinos en $G$. Luego $z_i$ tiene un vecino en $G$ que no está en $T_i \subset G$. Así, identificamos $v_i$ con este vecino en $G$, y por lo tanto $T_{i+1} \subset G$.
 \end{proof}
 
-\begin{exercise}
+\begin{exercise}\label{exercise:todo grafo G con arbol generador T tiene un subgrafo par que contiene las cuerdas de T}
 Sea $G$ un grafo con un árbol generador $T$. Probar que existe un subgrafo generador $H$ de $G$ cuyos vértices tienen grado par y tal que
 \[
 E(G) \setminus E(T) \subset E(H).
@@ -1723,18 +1723,18 @@ por el Teorema débil \ref{th:version debil del teorema de Alon, Hoory y Lineal 
 
 
 \begin{exercise}
-Probar que todo grafo conexo $G$ con $\abs G \geq 3$ contiene un camino o un ciclo de longitud al menos $k := \min \{2 \delta (G) , \abs G\}$. (En general, vale para cualquier grafo conexo con $k = \min \{2 \delta (G), \abs G - 1\}$).
+Probar que todo grafo conexo $G$ con $\abs G \geq 3$ contiene un camino o un ciclo de longitud al menos $k := \min \{2 \delta (G) +1, \abs G\}$. (En general, vale para cualquier grafo conexo con $k = \min \{2 \delta (G)+1, \abs G - 1\}$).
 \end{exercise}
 \begin{solution}
-Tomemos $P := v_0, \ldots, ,v_l$ un camino de largo máximo en $G$. Sabemos que $N_G (v_0)$ y $N_G (v_l)$ están contenidos en $V(P)$ por maximalidad de $P$. Si $V(P) = V(G)$, entonces $v_0v_l \not \in E(G)$, de lo contrario se sigue el resultado. Similarmente, para cada $i \in \{1, \ldots, l-1\}$ (el conjunto es no vacío porque $\abs G \geq 3$) se tiene que $v_{i-1}v_l \not \in E(G)$ o $v_0 v_i \not \in E(G)$, de lo contrarío tendríamos un ciclo de longitud $\abs G \geq k$ (ver la Figura \ref{Figura:no hay cruces internos en P}). Consecuentemente,
+Tomemos $P := v_0, \ldots, ,v_l$ un camino de largo máximo $l$ en $G$. Sabemos que $N_G (v_0)$ y $N_G (v_l)$ están contenidos en $V(P)$ por maximalidad de $P$. Si $V(P) = V(G)$, entonces $v_0v_l \not \in E(G)$, de lo contrario se sigue el resultado. Similarmente, para cada $i \in \{1, \ldots, l-1\}$ (el conjunto es no vacío porque $\abs G \geq 3$) se tiene que $v_{i-1}v_l \not \in E(G)$ o $v_0 v_i \not \in E(G)$, de lo contrarío tendríamos un ciclo de longitud $\abs G \geq k$ (ver la Figura \ref{Figura:no hay cruces internos en P}). Consecuentemente,
 \[
-    2 \delta(G) \leq d_G (v_0) + d_G (v_l) \leq l,
+    2 \delta(G) \leq d_G (v_0) + d_G (v_l) \leq l-1,
 \]
 y ganamos.
 
-Ahora supongamos que $V(P) \neq V(G)$. Y supongamos también que $l < k\leq 2\delta (G)$. Demostraremos que existe un ciclo de longitud $l$ contenido en $G[V(P)]$, así llegaremos a una contradicción pues al existir un vértice $x$ fuera de $G[V(P)]$ en $G$, podríamos extender el ciclo a un camino de longitud al menos $l+1$ en $G$ conectándolo con $x$. En efecto, supongamos que no existe tal ciclo, luego para cada $i \in \{1, \ldots, l-1\} \neq \emptyset$ se tiene que $v_{i-1}v_l \not \in E(G)$ o $v_0 v_i \not \in E(G)$ (ver la Figura \ref{Figura:no hay cruces internos en P}). Entonces
+Ahora supongamos que $V(P) \neq V(G)$. Y supongamos también que $l < k\leq 2\delta (G)+1$. Demostraremos que existe un ciclo de longitud $l$ contenido en $G[V(P)]$, así llegaremos a una contradicción pues al existir un vértice $x$ fuera de $G[V(P)]$ en $G$, podríamos extender el ciclo a un camino de longitud al menos $l+1$ en $G$ conectándolo con $x$. En efecto, supongamos que no existe tal ciclo, luego para cada $i \in \{1, \ldots, l-1\} \neq \emptyset$ se tiene que $v_{i-1}v_l \not \in E(G)$ o $v_0 v_i \not \in E(G)$ (ver la Figura \ref{Figura:no hay cruces internos en P}). Entonces
 \[
-    2 \delta(G) \leq d_G (v_0) + d_G (v_l) \leq l < 2 \delta (G),
+    2 \delta(G) \leq d_G (v_0) + d_G (v_l) \leq l-1 < 2 \delta (G),
 \]
 absurdo.
 

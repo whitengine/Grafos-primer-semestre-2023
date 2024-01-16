@@ -92,7 +92,12 @@ Las siguientes afirmaciones son equivalentes para conjuntos de aristas $D \subse
 Como los ciclos tienen grados pares y tomar diferencia simétrica preserva esta propiedad, luego 1. implica 3. por inducción en la cantidad de ciclos que generan $D$ con la suma. Que 3. implica 2. se sigue por inducción en $\abs D$: si $D \neq \emptyset$ entonces $(V,D)$ contiene un ciclo por la Proposición \ref{proposition:todo grafo tiene un camino de largo >= delta y ciclo de largo >= delta +1}, borrando las aristas de $C$ podemos proceder inductivamente pues los vértices siguen teniendo grado par. Finalmente la implicación 2. $\Rightarrow$ 1. es inmediata de la definición de $\mathcal{C}(G)$.
 \end{proof}
 
-
+\begin{exercise}
+Probar el Ejercicio \ref{exercise:todo grafo G con arbol generador T tiene un subgrafo par que contiene las cuerdas de T} dando una construcción de un subgrafo par $H$ que contenga las cuerdas de $T$.
+\end{exercise}
+\begin{solution}
+Dado $T$, consideremos $H := \sum_{e \in E(G) \setminus E(T)} C_e$ dado por la suma de todos los ciclos fundamentales. Como cada cuerda $e \in E(G) \setminus E(T)$ de $T$ pertenece a un único ciclo fundamental, debe estar en $H$. Como los ciclos estan en $\mathcal C (G)$, y este espacio es cerrado para la suma, $H \in \mathcal C(G)$. Con lo cual, la proposición anterior nos dice que $H$ es un grafo par.
+\end{solution}
 
 \begin{definition}
 Un conjunto $F$ de aristas se dice un \textbf{corte}\footnote{No vamos a incluir el caso de particiones vacías. Luego la única manera de que el conjunto vacío de aristas sea un corte es que el grafo subyacente sea disconexo.}
