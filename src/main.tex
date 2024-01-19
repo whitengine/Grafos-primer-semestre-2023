@@ -1425,7 +1425,20 @@ Ahora nos fijamos si tiene un $C$-camino, si esto es así lo agregamos, y luego 
 \end{proof}
 
 
+\begin{exercise}\label{ejercicio:todo grafo 2-arista-conexo tiene una descomposicion ciclo-oreja}
+Probar que un grafo es $2$-arista-conexo si y solo si se puede construir a partir de un ciclo añadiendo sucesivamente \textbf{$H$-orejas} (i.e., un $H$-camino cuyos extremos pueden ser iguales) a grafos $H$ ya construidos.
+\end{exercise}
+\begin{solution}
+\begin{enumerate}
+\item[]
 
+\item[($\Leftarrow$)] Claramente un grafo construido de esta manera no se puede separar por una sola arista. Con lo cual es $2$-arista-conexo.
+
+\item[($\Rightarrow$)] Tomemos un grafo $G$, $2$-arista-conexo (en particular es también conexo). Como es $2$-arista-conexo, debe tener algún ciclo $C$, pues de lo contrario sería un árbol, y quitando una arista quedaría separado por el ítem (iii) de \ref{theorem:caracterizacion de arbol}.
+
+Ahora nos fijamos si tiene una $C$-oreja, si esto es así lo agregamos, y luego seguimos agregando hasta que no podamos más. Consideremos el subgrafo maximal $H$ de $G$ construido de esta manera a partir de $C$. Entonces toda arista $xy \in E(G) \setminus E(H)$ tal que $x,y \in V(H)$, es una $H$-oreja, con lo cual no puede existir por maximalidad de $H$. Es decir, $H$ es un subgrafo inducido de $G$. Entonces todas las aristas de $G$ que no están en $H$ tienen un extremo fuera de $H$. Si $H$ es $G$ habríamos terminado, luego por el absurdo supongamos que no. Por conexión existe un vértice $v \in G \setminus H$, y conectándolo por un camino con $H$ podemos asumir que $v$ es incidente en $H$, es decir, existe $w \in H$ tal que $v w$ es una arista incidente en $H$. Como $G$ es $2$-arista-conexo, si quitamos $vw$, el grafo sigue siendo conexo, por lo tanto debe ser que existe otro camino $P$ de $v$ a $H$ que no contiene a $vw$, con lo cual $P \cup v w$ es una $H$-oreja. Sin embargo, esto es absurdo por maximalidad de $H$.
+\end{enumerate}
+\end{solution}
 
 
 
@@ -1745,7 +1758,7 @@ absurdo.
 Probar que todo árbol $T$ tiene al menos $\Delta (T)$ hojas.
 \end{exercise}
 \begin{proof}
-Haremos inducción en la cantidad de hojas de $T$. Si $T$ tiene una sola hoja, luego $T$ tiene un solo vértice y se sigue la afirmación. En general, sea $h \in T$ una hoja, consideremos $T' := T \setminus h$. Como $\Delta (T') \geq \Delta (T) - 1$, la hipótesis inductiva implica que $T'$ tiene al menos $\Delta (T) - 1$ hojas, y por lo tanto, $T$ tiene al menos $\Delta (T)$ hojas.
+Haremos inducción en el orden de $T$. Si $T$ un solo vértice, se sigue la afirmación trivialmente. En general, sea $h \in T$ una hoja, consideremos el árbol $T' := T \setminus h$. Como $\Delta (T') \geq \Delta (T) - 1$, la hipótesis inductiva implica que $T'$ tiene al menos $\Delta (T) - 1$ hojas. Si $\Delta (T') \geq \Delta (T)$, luego por hipótesis inductiva ganamos. Si no, $\Delta (T') = \Delta (T) -1$, y más aún, si el padre de $h$ tiene grado mayor que $1$ en $T'$, agregar $h$ a $T'$ nos da una hoja nueva sin perder otra, y por lo tanto hay al menos $\Delta (T)$ hojas en $T$. Finalmente, si el padre de $h$ tiene grado $1$ en $T'$, y el grado máximo de $T$ disminuyó en $T'$, es porque estamos sen el caso $\abs T = 1$, el cual ya probamos.
 \end{proof}
 
 
@@ -1768,15 +1781,9 @@ decir, tiene una orientación en la cual para todo par de vértices $x,y$ existe
 \end{exercise}
 \begin{solution}
 \begin{enumerate}
-\item[($\Rightarrow$)] Lo probaremos para multigrafos $2$-arista-conexos, por inducción en el número de aristas. Primero supongamos que $\delta (G) \geq 3$, digamos con $d(x) \geq 3$ y $e$ aristas incidentes en $x$. Consideremos el grafo $G \setminus e$. Si sigue siendo $2$-arista conexo, luego por inducción tenemos que tiene una orientación fuertemente conexa y en particular $G$ también. De lo contrario, es porque existe otra arista $f$, distinta de $e$, tal que $
-G\setminus \{e,f\}$ tiene exactamente dos componentes $2$-conexas, conectadas entre sí por $e$ y $f$, digamos $H_1,H_2$ y por hipótesis inductiva tienen una oritentación fuertemente conexa cada una, las cuales podemos extender a todo $G$ declarando a $f$ como la orientación $H_1$
-hacia $H_2$ y a $e$ como la orientación opuesta:
+\item[($\Rightarrow$)] Como $G$ es $2$-arista-conexo, tiene una descomposición como se enuncia en el Ejercicio \ref{ejercicio:todo grafo 2-arista-conexo tiene una descomposicion ciclo-oreja}: $G$ se construye a partir de un ciclo $C$ añadiendo sucesivamente $H$-orejas. Ahora, orientamos de manera natural el ciclo, y a cada oreja también la orientamos naturalmente. Es claro que así obtenemos una orientación fuertemente conexa.
 
-\Inkscape*{Por un lado tenemos a \blue{$H_1$} y por el otro \red{$H_2$}, conectados por $e$ y $f$.}{"Figuras/Introduccion-a-grafos/Dibujo 55.pdf_tex"}
-
-Ahora, si $\Delta (G) \leq 2$, tenemos que como $2 \leq \lambda (G) \leq \delta (G) \leq \Delta (G)$, en realidad vale la igualdad, es decir $G$ es $2$-regular. Si $G$ tiene solo vértice no hay nada que probar, en general sea $x \in V(G)$, luego tiene dos vecinos o era el multigrafo con solo dos vértices de grado $2$; en el primer caso podemos \textit{remover} a $x$, es decir, los vecinos de $x$ ahora van a estar unidos por una arista en vez de conectarse a $x$, como la cantidad de aristas disminuye pero sigue siendo $2$-conexo, luego por inducción tiene una orientación fuertemente conexa, la cual sencillamente podemos extender a todo $G$ como lo muestra el dibujo:
-
-\Inkscape*{Remover \red{$x$} es equivalente a unir a sus vecinos por una \yellow{arista} y quitar \red{las aristas incidentes} en \red{$x$}.}{"Figuras/Introduccion-a-grafos/Dibujo 56.pdf_tex"}
+\item[($\Rightarrow$)] Daremos una demostración alternativa utilizando árboles normales. Como $G$ es conexo, existe un árbol generador normal $T$ de $G$ con una raíz $r$. Orientamos las aristas de $T$ de manera que apunten ``afuera'' de $r$. Como $G$ es $2$-arista-conexo, dado un vértice $x$ a nivel $i > 0$, siempre podemos encontrar un vértice $y >_T x$ que sea adyacente a un vérticce de nivel $j < i$. Por lo tanto, orientando cada arista $e = uv$ de $E(G) \setminus E(T)$ de manera que si $u > v$, la arista $e$ se dirige de $u$ a $v$, obtenemos una orientación fuertemente conexa de $G$.
 
 \item[($\Leftarrow$)] Quitar una arista no nos puede remover la conexión de $G$, de lo contrario, sean $x,y$ dos
 vértices adyacentes tales que $e = xy$ es un puente, i.e. $G\setminus e$ es arista disconexo, tenemos que $e$ tenía la orientación, digamos $x$ a $y$, sin embargo existe un camino en $G$ con orientación de $y$ en $x$, el cual no puede tener
@@ -1784,12 +1791,12 @@ ninguna arista igual a $e$, con lo cual $x,y$ seguían siendo arista-conectados 
 \end{enumerate}
 \end{solution}
 
+
 \begin{exercise}
 Dar una demostración corta por inducción de la existencia de un árbol normal generador en cualquier grafo.
 \end{exercise}
 \begin{solution}
-Afirmamos que existe un vértice $v$ de $G$ que se puede eliminar y sigue siendo conexo: $G$ tiene un árbol generador
-, luego quitamos una hoja. Ahora por inducción, $G \setminus v$ tiene un árbol generador normal $T'$. Afirmamos
+Afirmamos que existe un vértice $v$ de $G$ que se puede eliminar y sigue siendo conexo: $G$ tiene un árbol generador, luego quitamos una hoja. Ahora por inducción, $G \setminus v$ tiene un árbol generador normal $T'$. Afirmamos
 que el árbol generador $T = T'+ vx$ de $G$ es también normal, donde $x \in T'$ es adyacente a $v$ en $G$, maximal
 en el orden de $T'$.
 Ahora, el orden de $T'$ se extiende al de $T$ para cualquier raíz $r$ de $T'$. Sea $P$ un $T$-camino entre dos vértices distintos de $v$, luego son comparables en $T'$; por otro lado, si uno de los vértices es $v$ y el otro es $y$, digamos, entonces $x v P y$ es un $T'$-camino, luego $x$ e $y$ son comparables, y por lo tanto $v$ e $y$ también, pues por la maximalidad de $x$, $x \geq y$. (Notar que luego vale para $v$ como raíz también.)
@@ -1952,7 +1959,7 @@ A^k \cdot A = (a''_{i,j})$ donde
 \[
     a''_{ij} = \sum_{1 \leq l \leq n} a'_{i,l} a_{l j},
 \]
-con $A^k = (a'_{i,l})$ la cantidad de paseos de longitud $k$ entre $v_i$ y $v_l$. Luego la afirmación se sigue de
+con $A^k = (a'_{i,l})$ la cantidad de paseos de longitud $k$ entre $v_i$ y $v_l$. Luego la afirmación se sigue, pues
 la cantidad de $k+1$ paseos entre $v_i$ y $v_j$ es igual a la cantidad de $k$ paseos entre $v_i$ y $v_l$, y
 luego de $v_l$ a $v_j$ para cada vértice $v_l$ adyacente a $v_j$.
 \end{solution}
