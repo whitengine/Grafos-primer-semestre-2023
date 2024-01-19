@@ -1703,9 +1703,9 @@ dos vértices de $C$. Probar que $G$ contiene un ciclo de longitud al menos $\sq
 \end{exercise}
 \begin{solution}
 Si $C$ tiene longitud $\sqrt k$ entonces la afirmación vale. Si no, denotemos por $P$ al camino de longitud $k$
-entre dos vérticces $x,y \in C$. Como $\Abs C < \sqrt k$, $P$ interseca con $C$ en menos de $\sqrt k$ vértices,
+entre dos vértices $x,y \in C$. Como $\Abs C < \sqrt k$, $P$ interseca $C$ en menos de $\sqrt k$ vértices,
 por lo tanto existen dos vértices $a,b \in P \cap C$ tales que, en el orden inducido por el camino $P$, no hay otro
-vértice de $C$ entre estos, y $a P b$ tiene longitud $\geq \sqrt k$. Luego el ciclo $a P b C a$ tiene logitd $\geq \sqrt k$.
+vértice de $C$ entre estos, y $a P b$ tiene longitud $\geq \sqrt k$. Con lo cual, el ciclo $a P b C a$ tiene logitud $\geq \sqrt k$.
 \end{solution}
 
 
@@ -1732,13 +1732,13 @@ Tomemos $P := v_0, \ldots, ,v_l$ un camino de largo máximo $l$ en $G$. Sabemos 
 \]
 y ganamos.
 
-Ahora supongamos que $V(P) \neq V(G)$. Y supongamos también que $l < k\leq 2\delta (G)+1$. Demostraremos que existe un ciclo de longitud $l$ contenido en $G[V(P)]$, así llegaremos a una contradicción pues al existir un vértice $x$ fuera de $G[V(P)]$ en $G$, podríamos extender el ciclo a un camino de longitud al menos $l+1$ en $G$ conectándolo con $x$. En efecto, supongamos que no existe tal ciclo, luego para cada $i \in \{1, \ldots, l-1\} \neq \emptyset$ se tiene que $v_{i-1}v_l \not \in E(G)$ o $v_0 v_i \not \in E(G)$ (ver la Figura \ref{Figura:no hay cruces internos en P}). Entonces
+Ahora supongamos que $V(P) \neq V(G)$. Y supongamos también que $l < k\leq 2\delta (G)+1$. Demostraremos que existe un ciclo de longitud $l$ contenido en $G[V(P)]$, así, llegaremos a una contradicción, pues al existir un vértice $x$ fuera de $G[V(P)]$ en $G$, podríamos extender el ciclo a un camino de longitud al menos $l+1$ en $G$ conectándolo con $x$. En efecto, supongamos que no existe tal ciclo, luego para cada $i \in \{1, \ldots, l-1\} \neq \emptyset$, se tiene que $v_{i-1}v_l \not \in E(G)$ o $v_0 v_i \not \in E(G)$ (ver la Figura \ref{Figura:no hay cruces internos en P}). Entonces
 \[
     2 \delta(G) \leq d_G (v_0) + d_G (v_l) \leq l-1 < 2 \delta (G),
 \]
 absurdo.
 
-\Inkscape[][no hay cruces internos en P]{Notar que en este caso $v_0 P v_{i-1} v_l P v_i v_0$ es un ciclo de longitud $\abs P$ en $G[V(P)]$.}{"Figuras/Introduccion-a-grafos/Dibujo 52.pdf_tex"}
+\Inkscape[][no hay cruces internos en P]{$v_0 \red{P} v_{i-1} v_l \red{P} v_i v_0$ es un ciclo de longitud $\abs {\red{P}}$ en $G[V(\red{P})]$.}{"Figuras/Introduccion-a-grafos/Dibujo 52.pdf_tex"}
 \end{solution}
 
 \begin{exercise}
@@ -4667,7 +4667,7 @@ Daremos dos soluciones. La segunda forma es exibida para dar un ejemplo de aplic
 \begin{solution}
 Sea $H$ el grafo línea del que proviene $G$, i.e. $G = L(H)$. Entonces,
 \[
-    \ch G \leq \Delta (G) + 1 \leq (2 \delta (H) - 2) + 1 \leq 2 \chi ' (H) - 1 = 2 \chi (G) - 1.
+    \ch G \leq \Delta (G) + 1 \leq (2 \Delta (H) - 2) + 1 \leq 2 \chi ' (H) - 1 = 2 \chi (G) - 1.
 \]
 Donde la primera desigualdad es por la Proposición \ref{proposicion:choice es menor o igual que coloreo menor o igual que delta + 1}, y la segunda es porque $G$ es el grafo línea de $H$, luego para toda arista $e \in H$, tiene a lo más $\Delta (H) - 1$ aristas incidentes en cada extremo, con lo cual $d_G (e) \leq 2 (\Delta (H) - 1)$, consecuentemente $\Delta (G) \leq 2 (\Delta (H)- 1)$.
 \end{solution}
