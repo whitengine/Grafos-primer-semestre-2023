@@ -8,7 +8,7 @@
    version="1.1"
    id="svg12165"
    inkscape:version="1.3.1 (9b9bdc1480, 2023-11-25, custom)"
-   sodipodi:docname="Dibujo 5.svg"
+   sodipodi:docname="Dibujo 12.svg"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns="http://www.w3.org/2000/svg"
@@ -25,19 +25,24 @@
      inkscape:document-units="mm"
      showgrid="false"
      inkscape:zoom="1.9855336"
-     inkscape:cx="265.92347"
+     inkscape:cx="330.89342"
      inkscape:cy="143.28642"
      inkscape:window-width="1920"
      inkscape:window-height="1016"
      inkscape:window-x="0"
      inkscape:window-y="0"
      inkscape:window-maximized="1"
-     inkscape:current-layer="layer4"
+     inkscape:current-layer="layer5"
      showguides="true">
     <sodipodi:guide
        position="18.09137,293.13675"
        orientation="0,-1"
        id="guide1"
+       inkscape:locked="false" />
+    <sodipodi:guide
+       position="59.214384,33.382057"
+       orientation="0,-1"
+       id="guide2"
        inkscape:locked="false" />
   </sodipodi:namedview>
   <defs
@@ -333,6 +338,42 @@
     <inkscape:path-effect
        effect="bspline"
        id="path-effect7604-3"
+       is_visible="true"
+       lpeversion="1"
+       weight="33.333333"
+       steps="2"
+       helper_size="0"
+       apply_no_weight="true"
+       apply_with_weight="true"
+       only_selected="false"
+       uniform="false" />
+    <inkscape:path-effect
+       effect="bspline"
+       id="path-effect4042-5"
+       is_visible="true"
+       lpeversion="1"
+       weight="33.333333"
+       steps="2"
+       helper_size="0"
+       apply_no_weight="true"
+       apply_with_weight="true"
+       only_selected="false"
+       uniform="false" />
+    <inkscape:path-effect
+       effect="bspline"
+       id="path-effect7604-35"
+       is_visible="true"
+       lpeversion="1"
+       weight="33.333333"
+       steps="2"
+       helper_size="0"
+       apply_no_weight="true"
+       apply_with_weight="true"
+       only_selected="false"
+       uniform="false" />
+    <inkscape:path-effect
+       effect="bspline"
+       id="path-effect7604-6"
        is_visible="true"
        lpeversion="1"
        weight="33.333333"
@@ -1028,46 +1069,46 @@
        id="path8053"
        inkscape:path-effect="#path-effect8359"
        inkscape:original-d="m 93.299878,20.812827 c 5.002252,-1.147116 10.004222,-2.294508 15.005902,-3.442176 2.80413,3.021459 5.60787,6.042521 8.41137,9.063369 -2.91266,3.955095 -5.8255,7.909757 -8.73867,11.864228 -5.59854,-2.531414 -11.197145,-5.063 -16.796144,-7.594914 0.706146,-3.296627 1.41198,-6.593396 2.117542,-9.890507 z"
-       transform="translate(9.5250005,6.3500003)" />
+       transform="translate(9.5250005,5.2916669)" />
     <path
        style="fill:#ffc600;fill-rule:evenodd;stroke:#ff0e00;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       d="m 106.11271,30.86332 0.93371,5.665877"
+       d="m 106.11271,29.804986 0.93371,5.665877"
        id="path8119"
        inkscape:connector-type="polyline"
        inkscape:connector-curvature="0" />
     <path
        style="fill:#ffc600;fill-rule:evenodd;stroke:#ff0e00;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       d="M 120.01517,19.808469 114.69938,27.1072"
+       d="m 120.01517,18.750135 -5.31579,7.298731"
        id="path8123"
        inkscape:connector-type="polyline"
        inkscape:connector-curvature="0" />
     <path
        style="fill:#ffc600;fill-rule:evenodd;stroke:#ff0e00;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       d="m 122.37825,32.139989 2.98039,-1.543597"
+       d="m 122.37825,31.081655 2.98039,-1.543597"
        id="path8127"
        inkscape:connector-type="polyline"
        inkscape:connector-curvature="0" />
     <path
        style="fill:#ffc600;fill-rule:evenodd;stroke:#ff0e00;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       d="M 119.26366,44.622004 116.7876,38.772367"
+       d="M 119.26366,43.56367 116.7876,37.714033"
        id="path8139"
        inkscape:connector-type="polyline"
        inkscape:connector-curvature="0" />
     <path
        style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       d="M 105.95549,29.201238 105.7524,21.176993"
+       d="M 105.95549,28.142904 105.7524,20.118659"
        id="path8155"
        inkscape:connector-type="polyline"
        inkscape:connector-curvature="0" />
     <path
        style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       d="m 105.82991,30.861485 -2.07389,11.64184"
+       d="m 105.82991,29.803151 -2.07389,11.64184"
        id="path8161"
        inkscape:connector-type="polyline"
        inkscape:connector-curvature="0" />
     <path
        style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       d="m 120.92992,32.074635 -6.01783,-3.8409"
+       d="m 120.92992,31.016301 -6.01783,-3.8409"
        id="path8167"
        inkscape:connector-type="polyline"
        inkscape:connector-curvature="0" />
@@ -1077,40 +1118,40 @@
        id="path8205"
        inkscape:path-effect="#path-effect8383"
        inkscape:original-d="m 93.299878,20.812827 c 5.002252,-1.147116 10.004222,-2.294508 15.005902,-3.442176 2.80413,3.021459 5.60787,6.042521 8.41137,9.063369 -2.91266,3.955095 -5.8255,7.909757 -8.73867,11.864228 -5.59854,-2.531414 -11.197145,-5.063 -16.796144,-7.594914 0.706146,-3.296627 1.41198,-6.593396 2.117542,-9.890507 z"
-       transform="translate(9.5250005,6.3500003)" />
+       transform="translate(9.5250005,5.2916669)" />
     <path
        style="fill:#ffc600;fill-rule:evenodd;stroke:#0054ff;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       d="M 120.01517,19.808469 114.69938,27.1072"
+       d="m 120.01517,18.750135 -5.31579,7.298731"
        id="path8275"
        inkscape:connector-type="polyline"
        inkscape:connector-curvature="0" />
     <path
        style="fill:#ffc600;fill-rule:evenodd;stroke:#0054ff;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       d="m 122.37825,32.139989 2.98039,-1.543597"
+       d="m 122.37825,31.081655 2.98039,-1.543597"
        id="path8279"
        inkscape:connector-type="polyline"
        inkscape:connector-curvature="0" />
     <path
        style="fill:#ffc600;fill-rule:evenodd;stroke:#0054ff;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       d="M 119.26366,44.622004 116.7876,38.772367"
+       d="M 119.26366,43.56367 116.7876,37.714033"
        id="path8291"
        inkscape:connector-type="polyline"
        inkscape:connector-curvature="0" />
     <path
        style="fill:none;fill-rule:evenodd;stroke:#0054ff;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       d="M 105.95549,29.201238 105.7524,21.176993"
+       d="M 105.95549,28.142904 105.7524,20.118659"
        id="path8307"
        inkscape:connector-type="polyline"
        inkscape:connector-curvature="0" />
     <path
        style="fill:none;fill-rule:evenodd;stroke:#0054ff;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       d="m 105.82991,30.861485 -2.07389,11.64184"
+       d="m 105.82991,29.803151 -2.07389,11.64184"
        id="path8313"
        inkscape:connector-type="polyline"
        inkscape:connector-curvature="0" />
     <path
        style="fill:none;fill-rule:evenodd;stroke:#0054ff;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       d="m 104.03885,42.609048 2.71396,-4.5362"
+       d="m 104.03885,41.550714 2.71396,-4.536201"
        id="path8405"
        inkscape:connector-type="polyline"
        inkscape:connector-curvature="0"
@@ -1118,7 +1159,7 @@
        inkscape:connection-end="#circle8243" />
     <path
        style="fill:none;fill-rule:evenodd;stroke:#0054ff;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       d="m 121.50384,33.351175 -1.7827,11.215012"
+       d="m 121.50384,32.292841 -1.7827,11.215012"
        id="path8407"
        inkscape:connector-type="polyline"
        inkscape:connector-curvature="0"
@@ -1126,7 +1167,7 @@
        inkscape:connection-start="#circle8239" />
     <path
        style="fill:none;fill-rule:evenodd;stroke:#0054ff;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       d="m 125.28175,30.044231 -10.25523,-2.09332"
+       d="M 125.28175,28.985896 115.02652,26.892577"
        id="path8415"
        inkscape:connector-type="polyline"
        inkscape:connector-curvature="0"
@@ -1172,19 +1213,19 @@
        inkscape:connection-end="#circle7486" />
     <g
        id="g1"
-       transform="translate(-1.1963444,-17.060859)">
+       transform="translate(-5.429678,-17.060859)">
       <text
          xml:space="preserve"
          style="font-size:4.23333px;line-height:1.25;font-family:sans-serif;display:inline;stroke-width:0.264583"
          x="69.283394"
-         y="50.144077"
+         y="53.848248"
          id="text25733-5"
          inkscape:label="$G$"><tspan
            sodipodi:role="line"
            id="tspan25731-3"
            style="font-size:4.23333px;stroke-width:0.264583"
            x="69.283394"
-           y="50.144077">\resizebox{!}{20pt}{\purple{$\rightsquigarrow$}}</tspan></text>
+           y="53.848248">\resizebox{!}{20pt}{\purple{$\rightsquigarrow$}}</tspan></text>
     </g>
   </g>
   <g
@@ -1555,121 +1596,121 @@
        style="fill:#007af4;fill-opacity:1;stroke:#000000;stroke-width:0.264999;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:2.7;paint-order:stroke markers fill"
        id="circle8055"
        cx="119.58978"
-       cy="45.392555"
+       cy="44.334221"
        r="0.83675098" />
     <circle
        style="fill:#007af4;fill-opacity:1;stroke:#000000;stroke-width:0.264999;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:2.7;paint-order:stroke markers fill"
        id="circle8077"
        cx="120.50772"
-       cy="19.132097"
+       cy="18.073763"
        r="0.83675098" />
     <circle
        style="fill:#ffc600;fill-opacity:1;stroke:#000000;stroke-width:0.264999;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:2.7;paint-order:stroke markers fill"
        id="circle8083"
        cx="105.97662"
-       cy="30.03772"
+       cy="28.979385"
        r="0.83675098" />
     <circle
        style="fill:#ffc600;fill-opacity:1;stroke:#000000;stroke-width:0.264999;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:2.7;paint-order:stroke markers fill"
        id="circle8085"
        cx="114.20669"
-       cy="27.783566"
+       cy="26.725231"
        r="0.83675098" />
     <circle
        style="fill:#ffc600;fill-opacity:1;stroke:#000000;stroke-width:0.264999;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:2.7;paint-order:stroke markers fill"
        id="circle8087"
        cx="121.63519"
-       cy="32.524807"
+       cy="31.466473"
        r="0.83675098" />
     <circle
        style="fill:#ffc600;fill-opacity:1;stroke:#000000;stroke-width:0.264999;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:2.7;paint-order:stroke markers fill"
        id="circle8089"
        cx="116.4614"
-       cy="38.00182"
+       cy="36.943485"
        r="0.83675098" />
     <circle
        style="fill:#ffc600;fill-opacity:1;stroke:#000000;stroke-width:0.264999;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:2.7;paint-order:stroke markers fill"
        id="circle8091"
        cx="107.1824"
-       cy="37.354801"
+       cy="36.296467"
        r="0.83675098" />
     <circle
        style="fill:#007af4;fill-opacity:1;stroke:#000000;stroke-width:0.264999;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:2.7;paint-order:stroke markers fill"
        id="circle8093"
        cx="105.73119"
-       cy="20.340509"
+       cy="19.282175"
        r="0.83675098" />
     <circle
        style="fill:#007af4;fill-opacity:1;stroke:#000000;stroke-width:0.264999;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:2.7;paint-order:stroke markers fill"
        id="circle8097"
        cx="103.60925"
-       cy="43.327095"
+       cy="42.268761"
        r="0.83675098" />
     <circle
        style="fill:#007af4;fill-opacity:1;stroke:#000000;stroke-width:0.264999;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:2.7;paint-order:stroke markers fill"
        id="circle8125"
        cx="126.10158"
-       cy="30.211576"
+       cy="29.153242"
        r="0.83675098" />
     <circle
        style="fill:#007af4;fill-opacity:1;stroke:#000000;stroke-width:0.264999;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:2.7;paint-order:stroke markers fill"
        id="circle8207"
        cx="119.58978"
-       cy="45.392555"
+       cy="44.334221"
        r="0.83675098" />
     <circle
        style="fill:#007af4;fill-opacity:1;stroke:#000000;stroke-width:0.264999;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:2.7;paint-order:stroke markers fill"
        id="circle8229"
        cx="120.50772"
-       cy="19.132097"
+       cy="18.073763"
        r="0.83675098" />
     <circle
        style="fill:#f5c211;fill-opacity:1;stroke:#000000;stroke-width:0.264999;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:2.7;paint-order:stroke markers fill"
        id="circle8235"
        cx="105.97662"
-       cy="30.03772"
+       cy="28.979385"
        r="0.83675098" />
     <circle
        style="fill:#f5c211;fill-opacity:1;stroke:#000000;stroke-width:0.264999;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:2.7;paint-order:stroke markers fill"
        id="circle8237"
        cx="114.20669"
-       cy="27.783566"
+       cy="26.725231"
        r="0.83675098" />
     <circle
        style="fill:#f5c211;fill-opacity:1;stroke:#000000;stroke-width:0.264999;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:2.7;paint-order:stroke markers fill"
        id="circle8239"
        cx="121.63519"
-       cy="32.524807"
+       cy="31.466473"
        r="0.83675098" />
     <circle
        style="fill:#f5c211;fill-opacity:1;stroke:#000000;stroke-width:0.264999;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:2.7;paint-order:stroke markers fill"
        id="circle8241"
        cx="116.4614"
-       cy="38.00182"
+       cy="36.943485"
        r="0.83675098" />
     <circle
        style="fill:#f5c211;fill-opacity:1;stroke:#000000;stroke-width:0.264999;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:2.7;paint-order:stroke markers fill"
        id="circle8243"
        cx="107.1824"
-       cy="37.354801"
+       cy="36.296467"
        r="0.83675098" />
     <circle
        style="fill:#007af4;fill-opacity:1;stroke:#000000;stroke-width:0.264999;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:2.7;paint-order:stroke markers fill"
        id="circle8245"
        cx="105.73119"
-       cy="20.340509"
+       cy="19.282175"
        r="0.83675098" />
     <circle
        style="fill:#007af4;fill-opacity:1;stroke:#000000;stroke-width:0.264999;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:2.7;paint-order:stroke markers fill"
        id="circle8249"
        cx="103.60925"
-       cy="43.327095"
+       cy="42.268761"
        r="0.83675098" />
     <circle
        style="fill:#007af4;fill-opacity:1;stroke:#000000;stroke-width:0.264999;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:2.7;paint-order:stroke markers fill"
        id="circle8277"
        cx="126.10158"
-       cy="30.211576"
+       cy="29.153242"
        r="0.83675098" />
   </g>
   <g
@@ -1712,35 +1753,56 @@
     <text
        xml:space="preserve"
        style="font-size:3.88056px;line-height:1.25;font-family:sans-serif;stroke-width:0.264583"
-       x="111.12986"
-       y="34.327496"
-       id="text7586-7"><tspan
-         sodipodi:role="line"
-         id="tspan7584-5"
-         style="stroke-width:0.264583"
-         x="111.12986"
-         y="34.327496">$S$</tspan></text>
-    <text
-       xml:space="preserve"
-       style="font-size:3.88056px;line-height:1.25;font-family:sans-serif;stroke-width:0.264583"
        x="9.6496658"
-       y="6.9861021"
+       y="8.0444355"
        id="text7590"><tspan
          sodipodi:role="line"
          style="stroke-width:0.264583"
          x="9.6496658"
-         y="6.9861021"
-         id="tspan7588">$G$</tspan></text>
+         y="8.0444355"
+         id="tspan7588">\resizebox{!}{10pt}{$G$}</tspan></text>
+    <g
+       id="g1-3"
+       transform="translate(-27.685179,-0.92008403)">
+      <text
+         xml:space="preserve"
+         style="font-size:4.23333px;line-height:1.25;font-family:sans-serif;stroke-width:0.264583"
+         x="14.191429"
+         y="9.4280891"
+         id="text25733-5-6"
+         inkscape:label="$G$"><tspan
+           sodipodi:role="line"
+           id="tspan25731-3-7"
+           style="font-size:4.23333px;stroke-width:0.264583"
+           x="14.191429"
+           y="9.4280891" /></text>
+    </g>
     <text
        xml:space="preserve"
        style="font-size:3.88056px;line-height:1.25;font-family:sans-serif;stroke-width:0.264583"
        x="92.693199"
-       y="6.8218536"
+       y="7.880187"
        id="text8345"><tspan
          sodipodi:role="line"
          style="stroke-width:0.264583"
          x="92.693199"
-         y="6.8218536"
-         id="tspan8343">$G_S$</tspan></text>
+         y="7.880187"
+         id="tspan8343">\resizebox{!}{10pt}{$G_S$}</tspan></text>
+  </g>
+  <g
+     inkscape:groupmode="layer"
+     id="layer7"
+     inkscape:label="texto 1">
+    <text
+       xml:space="preserve"
+       style="font-size:3.88056px;line-height:1.25;font-family:sans-serif;stroke-width:0.264583"
+       x="111.15426"
+       y="33.406002"
+       id="text7586-74"><tspan
+         sodipodi:role="line"
+         id="tspan7584-52"
+         style="stroke-width:0.264583"
+         x="111.15426"
+         y="33.406002">$S$</tspan></text>
   </g>
 </svg>

@@ -24,12 +24,12 @@
 \contentsline {section}{\numberline {1.11}Ejercicios}{51}{section.1.11}%
 \contentsline {chapter}{\numberline {2}Matchings}{58}{chapter.2}%
 \contentsline {section}{\numberline {2.1}Clase 11: 27/04/23}{58}{section.2.1}%
-\contentsline {subsection}{\numberline {2.1.1}Matchings con preferencias}{61}{subsection.2.1.1}%
-\contentsline {subsection}{\numberline {2.1.2}Relaciones min-máx}{62}{subsection.2.1.2}%
+\contentsline {subsection}{\numberline {2.1.1}Matchings con preferencias}{60}{subsection.2.1.1}%
+\contentsline {subsection}{\numberline {2.1.2}Relaciones min-máx}{61}{subsection.2.1.2}%
 \contentsline {subsection}{\numberline {2.1.3}Ejercicios}{67}{subsection.2.1.3}%
-\contentsline {section}{\numberline {2.2}Clase 12: 8/05/23}{69}{section.2.2}%
-\contentsline {subsection}{\numberline {2.2.1}Caminos aumentantes}{70}{subsection.2.2.1}%
-\contentsline {subsection}{\numberline {2.2.2}Matchings en grafos generales}{72}{subsection.2.2.2}%
+\contentsline {section}{\numberline {2.2}Clase 12: 8/05/23}{68}{section.2.2}%
+\contentsline {subsection}{\numberline {2.2.1}Caminos aumentantes}{69}{subsection.2.2.1}%
+\contentsline {subsection}{\numberline {2.2.2}Matchings en grafos generales}{71}{subsection.2.2.2}%
 \contentsline {subsection}{\numberline {2.2.3}The Erdös-Pósa theorem}{78}{subsection.2.2.3}%
 \contentsline {subsection}{\numberline {2.2.4}Empaquetamiento de árboles y arboricidad}{80}{subsection.2.2.4}%
 \contentsline {subsection}{\numberline {2.2.5}Cubrimiento por caminos}{83}{subsection.2.2.5}%

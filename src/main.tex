@@ -1944,10 +1944,11 @@ maximal con esta propiedad. Claramente obtenemos una bipartición; cuya unión d
 \item Por un lado, si $F$ se extiende a un elemento de $\mathcal C (G)$, digamos $\bar F$, entonces no contiene
 cortes
 impares,
-pues de lo contrario, digamos que contiene a un corte $E$ impar, luego tenemos que por ortogonalidad $\langle E, \bar F \rangle = 0$, i.e. $\bar F$  interseca una cantidad par de veces a $E$, pero como $E \subset F \subset \bar F$, interseca en su totalidad a $E$ que es una cantidad impar: absurdo. Recíprocamente, si no contiene cortes impares, podemos considerar el conjunto de aristas $F$ maximal con la propiedad de no contener cortes impares, obtenido a partir de $F$ agregando aristas. Luego para ver que está en el espacio de ciclos, hay que probar la propiedad de ortoganalidad: $F$ interseca una cantidad par de veces a todos los cortes. Probemosló por el absurdo, si no fuera así, existiría corte $E$ que interseca a $F$ una cantidad impar de veces, en particular, $E$ no está contenido en $F$.
+pues de lo contrario, digamos que contiene a un corte $E$ impar, luego tenemos que por ortogonalidad $\langle E, \bar F \rangle = 0$, i.e. $\bar F$ interseca una cantidad par de veces a $E$, pero como $E \subset F \subset \bar F$, interseca en su totalidad a $E$ que es una cantidad impar: absurdo.
+
+Recíprocamente, veamos que si $F$ no contiene cortes impares, entonces se puede extender a un elemento de $\mathcal C (G)$. Hagamos inducción en el número de aristas de $G$. Si todos los vértices de $G$ tienen grado par, entonces $E(G) \in \mathcal C (G)$ y no hay nada que probar. Con lo cual, existe un vértice de $G$ de grado impar, digamos $v$. Notar que $E(v) \not \subset F$ por hipótesis, es decir, existe una arista $e$ incidente en $v$ que no está en $F$. Luego consideremos $G' := G / e$. Notar que $F$ no tiene cortes impares en $G'$, de lo contrario podríamos extenderlo a un corte impar de $G$ contenido en $F$: si $e := xy$ y $E(X',Y') \subset F$ es un corte de $G'$, digamos que $v_{xy} \in X'$, entonces $E((X' \setminus \{v_{xy}\} \cup \{x,y\}, Y') \subset F$ es un corte de $G$ con el mismo número de aristas. Luego por hipótesis inductiva, $F$ está contendo en un elemento de $\mathcal C (G')$, el cual es la unión disjunta de ciclos. Claramente descontrayendo $v_{xy}$ obtenemos una unión disjunta de ciclos que sigue conteniendo a $F$, es decir, $F$ se extiende a un elemento de $\mathcal C (G)$.
 \end{enumerate}
 \end{solution}
-
 
 
 \begin{exercise}
@@ -1981,8 +1982,6 @@ que ningún par de aristas en $M$ comparten un vértice. Un matching es \textbf{
 \end{definition}
 Notar que un matching de un grafo $G$, es la noción dual de subconjunto de vértices aislados en su grafo línea $
 L(G)$.
-
-\Dibujo[0.3]{\red{BORRAME}}
 
 \Inkscape[][ilustracion de un matching maximal no perfecto de un grafo G]{Ilustración de un \red{matching} en un grafo $G$. Observar que este matching es maximal, pero no perfecto. ¿Será máximo?}{"Figuras/Matchings/Dibujo 1.pdf_tex"}
 
@@ -2417,14 +2416,15 @@ Dos personas juegan un juego en un grafo: se alternan para elegir vértices $v_1
 
 \subsection{Matchings en grafos generales}
 
-Dados un grafo $G$ llamemos $\mathcal C _G$ al conjunto de componentes conexas, y por $q(G)$ al número de sus componentes de orden impar. Si $G$ tiene un matching perfecto $M$, luego claramente tenemos
+Dado un grafo $G$, llamemos $\mathcal C _G$ al conjunto de componentes conexas de $G$, y por $q(G)$ al número de sus componentes de orden impar. Si $G$ tiene un matching perfecto $M$, luego claramente tenemos
 \begin{equation}\label{eq:condicion de Tutte}
-q(G \setminus S) \leq \abs S \quad \forall S\subset V(G),
+q(G \setminus S) \leq \abs S,
 \end{equation}
-ya que toda componente impar de $G \setminus S$ tiene que mandar una arista de $M$ en $S$: por paridad una de las aristas de $M$ tiene un extremo en la componente impar y el otro en $S$; claramente dos compoenentes no pueden estar asociadas de esta manera a un mismo vértice de $S$ porque $M$ es un matching.
-\InscapeDEPRECADO[0.6]{Ilustración de la condición de Tutte, de un conjunto \yellow{$S$} con \green{$q(G \setminus S) = 3$} componentes impares en $G\setminus S$, luego se cumple la condición de Tutte pues \yellow{$\abs S = 5$}.}
+para todo $S \subset V(G)$, ya que toda componente impar de $G \setminus S$ tiene que mandar una arista de $M$ en $S$: por paridad una de las aristas de $M$ tiene un extremo en la componente impar y el otro en $S$; claramente dos componentes no pueden estar asociadas de esta manera a un mismo vértice de $S$ porque $M$ es un matching. Diremos que la ecuación \eqref{eq:condicion de Tutte} es la \textbf{condición de Tutte}.
 
-Diremos que la ecuación \eqref{eq:condicion de Tutte} es la \textbf{condición de Tutte}. De hecho se tiene que esta condición es necesaria y suficiente:
+\Inkscape{Ilustración de la condición de Tutte, de un conjunto \orange{$S$} con $q(G \setminus S) = \darkgreen 3$ componentes impares en $G\setminus S$, luego se cumple la condición de Tutte pues $\abs {\orange{S}} = 5$.}{"Figuras/Matchings/Dibujo 10.pdf_tex"}
+
+De hecho, se tiene que la condición de Tutte condición es necesaria y suficiente:
 
 \begin{theorem}[Tutte (1947)]\label{th:teorema de Tutte}
 Un grafo $G$ tiene un matching perfecto si y solo si
@@ -2436,32 +2436,31 @@ es decir, se cumple la condición de Tutte \eqref{eq:condicion de Tutte} para to
 \begin{proof}
 Recien vimos una implicación, con lo cual nos resta ver la implicación recíproca. Por el absurdo, supongamos que $G= (V,E)$ es un grafo sin matching perfecto, y supongamos que es arista-maximal con esta propiedad: esto es posible pues si $G'$ se obtiene a partir de $G$ agregando aristas y $S \subset V$ no cumple la condición de Tutte en $G'$, luego $S$ tampoco lo cumple en $G$, pues toda componente impar de $G' \setminus S$ es la unión de las componentes impares de $G \setminus S$, o sea que una de estas debe ser impar.
 
-Ahora, claramente si $G$ contiene un conjunto $S$ que no cumple la condición de Tutte, luego por arista-maximalidad y de la implicación del teorema que ya probamos:
+Ahora, afirmamos que $G$ contiene un conjunto $S$ tal que:
 \begin{afirmacion}
 Todas las componentes de $G \setminus S$ son completas y todo vértice $s \in S$ es adyacente a todos los vértices de $G \setminus s$.
 \end{afirmacion}
-Pero recíprocamente, si un conjunto $S \subset V$ satisface la afirmación anterior, entonces $S$ o el conjunto vacío deben violar la condición de Tutte: Si $S$ no viola la condición de Tutte, podemos unir las componentes impares de $G \setminus S$ de manera disjunta con $S$ y emparejar a todos los vértices restantes formando un matching perfecto, salvo que $\abs G$ sea impar, en cuyo caso $\emptyset$ no cumple \eqref{eq:condicion de Tutte}.
+Si un conjunto $S \subset V$ satisface la afirmación anterior, entonces $S$ o el conjunto vacío deben violar la condición de Tutte: si $S$ no viola la condición de Tutte, podemos unir las componentes impares de $G \setminus S$ de manera disjunta con $S$ y emparejar a todos los vértices restantes formando un matching perfecto, salvo que $\abs G$ sea impar, en cuyo caso $\emptyset$ no cumple \eqref{eq:condicion de Tutte}.
 
-Con lo cual, si probamos que $G$ contiene un subconjunto $S$ que cumple la afirmación llegaremos a un absurdo. Sea $S$ el conjunto de vérticees que son adyacentes a todo otro vértice. Si $S$ no cumple la afirmación, es porque alguna componente de $G\setminus S$ tiene dos vértices $a,a'$ no adyacentes. Sean $a,b,c$ los primeros tres vértices en algún $a$-$a'$ camino de longitud mínima dentro de esta componente; entonces $ab,bc \in E$ pero $ac \not \in E$. Como $b \not \in S$, existe un vértice $d \in V$ tal que $bd \not \in E$. Por maximalidad de $G$, existe un matching $M_1$ que cubre $V$ en $G+ ac$, y otro matching $M_2$ que cubre a $V$ en $G + bd$.
+Con lo cual, si probamos que $G$ contiene un subconjunto $S$ que cumple la afirmación llegaremos a un absurdo. Sea $S$ el conjunto de vértices que son adyacentes a todo otro vértice. Si $S$ no cumple la afirmación, es porque alguna componente de $G\setminus S$ tiene dos vértices $a,a'$ no adyacentes. Sean $a,b,c$ los primeros tres vértices en algún $a$-$a'$ camino de longitud mínima dentro de esta componente; entonces $ab,bc \in E$ pero $ac \not \in E$. Como $b \not \in S$, existe un vértice $d \in V$ tal que $bd \not \in E$ (en particular es distinto de los demás vértices). Por maximalidad de $G$, existe un matching $M_1$ que cubre $V$ en $G+ ac$, y otro matching $M_2$ que cubre a $V$ en $G + bd$; más aún, $ac \in M_1$ y $bd \in M_2$.
 
-\InscapeDEPRECADO[.8]{Ver la pagina 42 para una ilustración de la contradicción.}
+\Inkscape[][llegando a una contradicion]{Llegando a una contradicción.}{"Figuras/Matchings/Dibujo 11.pdf_tex"}
 
-Sea $P = d \cdots v$ un camino maximal en $G$ que empieza en $d$ con una arista de $M_1$ y que contiene alternadamente aristas de $M_1$ y $M_2$ como se ve en el dibujo de arriba. Si la última arista de $P$ se encuentra en $M_1$, entonces $v = b$, pues si no podríamos continuar $P$ y obtener un camino $M_2$-aumentante en $G + bd$. Escribamos entonces $C := P + bd$ en este caso. Por otro lado, si la última arista de $P$ yace en $M_2$, entonces por maximalidad de $P$ la $M_1$-arista en $v$ debe ser $ac$, con lo cual $v \in \{a, c \}$; en este caso escribamos $C:= d P v b d$. En cualquier caso, $C$ es un ciclo par donde las aristas se alternan afuera y adentro de $M_2$, y con su única arista fuera de $E$ es $bd$. Reemplazando en $M_2$ sus aristas en $C$ por las aristas de $C \setminus M_2$, obtenemos un matching perfecto de $G$ contenido en $E$, absurdo.
+Sea $P = d \cdots v$ un camino maximal en $G$ que empieza en $d$ con una arista de $M_1$ y que contiene alternadamente aristas de $M_1$ y $M_2$ como se ve en el dibujo de arriba \ref{Figura:llegando a una contradicion}. Si la última arista de $P$ se encuentra en $M_1$, entonces $v = b$, pues si no, $v$ no está cubierto por $M_2$ y por lo tanto $P$ es un camino $M_2$-aumentante en $G + bd$. Escribamos entonces $C := P + bd$ en este caso. Por otro lado, si la última arista de $P$ yace en $M_2$, entonces por maximalidad de $P$ la $M_1$-arista que cubre $v$ debe ser $ac$, con lo cual $v \in \{a, c \}$; en este caso escribamos $C:= d P v b d$. En cualquier caso, $C$ es un ciclo par donde las aristas se alternan afuera y adentro de $M_2$, y tal que su única arista fuera de $E$ es $bd$. Reemplazando en $M_2$ sus aristas en $C$ por las aristas de $C \setminus M_2$, obtenemos un matching perfecto de $G$ contenido en $E$, absurdo.
 \end{proof}
 
 
 
 \begin{corollary}\label{corolario:todo grafo 3-regular tiene un matching perfecto}
-Todo grafo $G = (V,E)$ $3$-regular sin puentes tiene un matching perfecto.
+Todo grafo $3$-regular sin puentes $G = (V,E)$ tiene un matching perfecto.
 \end{corollary}
 \begin{proof}
-Por el Teorema de Tutte, basta ver que todo $S \subset V$ cumple la condición \eqref{eq:condicion de Tutte}. En efecto, consideremos las componentes impares $C$ de $G\setminus S$. Como $G$ es $3$-regular, los grado en $G$ de los vértices en $C$ suman un número impar, pero solamente una cantidad par de esta suma proviene de aristas en $C$: tenemos la siguiente ecuación módulo $2$
+Por el Teorema de Tutte, basta ver que todo $S \subset V$ cumple la condición \eqref{eq:condicion de Tutte}. En efecto, consideremos una componente impar $C$ de $G\setminus S$. Como $G$ es $3$-regular, $\sum_{v \in C} d_G (v)$ vale $3 \cdot \abs C$ que es impar, pero solamente una cantidad par de esta suma proviene de aristas en $C$, con lo cual:
 \begin{align*}
-1 &\equiv \sum_{v \in C} d_G (v)\\
-&= \left ( \sum_{v \in C}  d_C (v)\right) + \# \{\text{$C$-$S$ caminos}\},
+1 &\equiv \sum_{v \in C} d_G (v) \mod 2\\
+&= \underbrace{\left ( \sum_{v \in C}  d_C (v)\right)}_{= 2 \Abs C} + \# \{\text{$C$-$S$ caminos}\} \equiv \# \{\text{$C$-$S$ caminos}\} \mod 2.
 \end{align*}
-pero la sumatoria del lado derecho es par, pues recordemos que esta sumatoria es el doble de la cantidad de aristas de $C$.
-Con lo cual, $G$ tiene un número impar de $S$-$C$ aristas, y por lo tanto tiene al menos $3$ de estas aristas ya que $G$ no tiene puentes. Consecuentemente el número de aristas entre $S$ y $G\setminus S$ es al menos $3 q (G\setminus S)$. Por otro lado, esta cantidad es a lo más $3 \abs S$, porque $G$ es $3$-regular. Juntando ambas cosas, nos queda $q ( G\setminus S) \leq \abs S$, como queríamos probar.
+Con lo cual, $G$ tiene un número impar de $S$-$C$ aristas, y por lo tanto tiene al menos $3$ de estas aristas ya que $G$ no tiene puentes. Como $C$ era una componente impar arbitraria de $G \setminus S$, podemos concluir que el número de aristas entre $S$ y $G\setminus S$ es al menos $3 q (G\setminus S)$. Por otro lado, esta cantidad es a lo más $3 \abs S$, porque $G$ es $3$-regular. Consecuentemente, obtenemos $q ( G\setminus S) \leq \abs S$, como queríamos.
 \end{proof}
 
 
@@ -2470,10 +2469,10 @@ Con lo cual, $G$ tiene un número impar de $S$-$C$ aristas, y por lo tanto tiene
 \begin{definition}
 Un grafo no vacío $G = (V,E)$ se llama \textbf{factor-crítico} si no tiene matching perfecto, pero para cada vértice $v \in G$, el grafo $G \setminus \{v\}$ tiene un matching perfecto.
 
-Llamamos a un conjunto de vértices $S \subset V$ matcheable con $\mathcal C_{G \setminus S}$ si el grafo bipartito $G_S$\footnote{$G_S$ es el grafo creado a partir de $G$ por contracción de las componentes $C \in \mathcal C_{G \setminus S}$ a vértices y borrando todas las aristas dentro de $S$. Formalmente, $G_S$ es el grafo con conjunto de vértices $S \cup \mathcal C_{G \setminus S}$ y conjunto de aristas $\set{sC | \text{ existe un vértice $c \in C$ adyacente a $s$ en $G$}}$.} contiene un matching que cubre a $S$.
+Llamamos a un conjunto de vértices $S \subset V$ \textbf{matcheable} con $\mathcal C_{G \setminus S}$ si el grafo bipartito $G_S$\footnote{$G_S$ es el grafo creado a partir de $G$ por contracción de las componentes $C \in \mathcal C_{G \setminus S}$ a vértices y borrando todas las aristas dentro de $S$. Formalmente, $G_S$ es el grafo con conjunto de vértices $S \cup \mathcal C_{G \setminus S}$ y conjunto de aristas $\set{sC | \text{ existe un vértice $c \in C$ adyacente a $s$ en $G$}}$.} contiene un matching que cubre a $S$.
 \end{definition}
 
-\InscapeDEPRECADO{Ilustración cómo se ve el grafo $G_S$ construido a partir de \yellow{$S$}.}
+\Inkscape{Ilustración de cómo se ve el grafo $G_S$ construido a partir de \orange{$S$}.}{"Figuras/Matchings/Dibujo 12.pdf_tex"}
 
 \begin{theorem}\label{th:teorema del conjunto S con componentes del complemento factores criticos impares, con la propiedad de que caracteriza si el grafo tiene matching perfecto o no.}
 Todo grafo $G = (V,E)$ contiene un conjunto de vértices $S$ con las siguientes propiedades:

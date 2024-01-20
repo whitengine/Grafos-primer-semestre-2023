@@ -5,12 +5,23 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d64069ff-abb3-47fa-9feb-8331f5baf8d7" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/Figuras/Matchings/Dibujo 10.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Figuras/Matchings/Dibujo 10.pdf_tex" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Figuras/Matchings/Dibujo 10.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Figuras/Matchings/Dibujo 11.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Figuras/Matchings/Dibujo 11.pdf_tex" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Figuras/Matchings/Dibujo 11.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Figuras/Matchings/Dibujo 12.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Figuras/Matchings/Dibujo 12.pdf_tex" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Figuras/Matchings/Dibujo 12.svg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/main.aux" beforeDir="false" afterPath="$PROJECT_DIR$/out/main.aux" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/main.log" beforeDir="false" afterPath="$PROJECT_DIR$/out/main.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/main.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/out/main.pdf" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/main.synctex.gz" beforeDir="false" afterPath="$PROJECT_DIR$/out/main.synctex.gz" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/main.toc" beforeDir="false" afterPath="$PROJECT_DIR$/out/main.toc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Editor de Grafos/Figuras/Clase 12/Dibujo 3.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/Editor de Grafos/Figuras/Clase 12/Dibujo 3.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Editor de Grafos/Figuras/Clase 12/Dibujo 5.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/Editor de Grafos/Figuras/Clase 12/Dibujo 5.svg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main.tex" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.tex" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -220,15 +231,12 @@
       <workItem from="1705447077880" duration="19000" />
       <workItem from="1705618634757" duration="7694000" />
       <workItem from="1705678670818" duration="34000" />
-      <workItem from="1705699463255" duration="4612000" />
-    </task>
-    <task id="LOCAL-00002" summary="arreglado?">
-      <option name="closed" value="true" />
-      <created>1698180398705</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1698180398705</updated>
+      <workItem from="1705699463255" duration="5226000" />
+      <workItem from="1705758323834" duration="115000" />
+      <workItem from="1705763638720" duration="522000" />
+      <workItem from="1705767316319" duration="2037000" />
+      <workItem from="1705772601111" duration="5799000" />
+      <workItem from="1705786399208" duration="4031000" />
     </task>
     <task id="LOCAL-00003" summary="arreglado?">
       <option name="closed" value="true" />
@@ -614,7 +622,15 @@
       <option name="project" value="LOCAL" />
       <updated>1705701110794</updated>
     </task>
-    <option name="localTasksCounter" value="51" />
+    <task id="LOCAL-00051" summary="arreglado?">
+      <option name="closed" value="true" />
+      <created>1705704174105</created>
+      <option name="number" value="00051" />
+      <option name="presentableId" value="LOCAL-00051" />
+      <option name="project" value="LOCAL" />
+      <updated>1705704174105</updated>
+    </task>
+    <option name="localTasksCounter" value="52" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
