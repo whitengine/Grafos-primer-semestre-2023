@@ -2480,7 +2480,7 @@ Todo grafo $G = (V,E)$ contiene un conjunto de vértices $S$ con las siguientes 
 \item $S$ es matcheable con $\mathcal C _{G \setminus S}$;
 \item toda componente de $G\setminus S$ es factor-crítico.
 \end{enumerate}
-Más aún, dados un conjunto $S$ de esta forma, el grafo $G$ contiene un matching perfecto si y solo si $\abs S = \abs{\mathcal C_{G \setminus S}}$.
+Más aún, dado un conjunto $S$ de esta forma, el grafo $G$ contiene un matching perfecto si y solo si $\abs S = \abs{\mathcal C_{G \setminus S}}$.
 \end{theorem}
 
 Para un grafo $G$, la afirmación del teorema de Tutte se sigue directamente de este resultado. En efecto, por (i) e (ii) tenemos que $\abs S \leq \abs{\mathcal C_{G\setminus S}} = q (G\setminus S)$ ya que los grafos factores-críticos tienen orden impar; con lo cual la condición \eqref{eq:condicion de Tutte} $q (G\setminus S) \leq \abs S$ implica $\abs S = \abs {\mathcal C _{G\setminus S}}$, y la existencia de un matching perfecto se sigue de la última afirmación del resultado.
@@ -2494,15 +2494,15 @@ Consideremos los conjuntos $T \subset V$ para los cuales no se cumple la condici
 \[
     d(T) := d_G (T) := q(G \setminus T) - \abs T
 \]
-es máximo; tomemos un conjunto $T$, llamado $S$, de cardinal máximo. Observemos sque $d(S) \geq d(\emptyset) \geq 0$.
+es máximo; tomemos un conjunto $T$, llamado $S$, de cardinal máximo. Observemos que $d(S) \geq d(\emptyset) \geq 0$.
 
 Veamos primero que todas las componentes $C \in \mathcal C_{G \setminus S}$ son impares. En efecto, si $\abs C$ es par, podemos tomar $c \in C$ y considerar $T := S \cup \{c\}$. Como $C \setminus \{c\}$ tiene orden impar, debe tener al menos una componente impar, la cual también es componente de $G \setminus T$. Así,
 \[
-    q(G\setminus T) \neq q(G \setminus S) + 1 \quad \text{mientras que} \quad \abs T = \abs S + 1,
+    q(G\setminus T) \geq q(G \setminus S) + 1 \quad \text{mientras que} \quad \abs T = \abs S + 1,
 \]
 con lo cual $d(T) \geq d(S)$ contradiciendo la elección de $S$ de tamaño máximo.
 
-Luego probaremos la afirmación (ii), eso es que todo $C \in \mathcal C _{G \setminus S}$ tiene un factor crítico. Supongamos que no, es decir, existen $C\in \mathcal C _{G \setminus S}$ y $c \in C$ tales que $C' := C \setminus \{c\}$ no tiene matching perfecto. Por la hipótesis inductiva, y la observación anterior, en donde vimos que este teorema implica el Teorema de Tutte \ref{th:teorema de Tutte}, existe un conjutno $S' \subset V(C')$ tal que
+Luego probaremos la afirmación (ii), eso es que toda $C \in \mathcal C _{G \setminus S}$ es factor crítico. Supongamos que no, es decir, existen $C\in \mathcal C _{G \setminus S}$ y $c \in C$ tales que $C' := C \setminus \{c\}$ no tiene matching perfecto. Por la hipótesis inductiva, y la observación anterior, en donde vimos que este teorema implica el Teorema de Tutte \ref{th:teorema de Tutte}, existe un conjunto $S' \subset V(C')$ tal que
 \[
     q(C' \setminus S') > \abs {S'}.
 \]
@@ -2510,15 +2510,15 @@ Como $\abs C$ es impar, $\abs{C'}$ es par, las cantidades $q(C' \setminus S')$ y
 \[
     q(C' \setminus S') \geq \abs {S'} + 2
 \]
-y $d_{C'} (S') \neq 2$. Tomemos $T := S \cup \{c\} \cup S'$, cumple:
+y $d_{C'} (S') \geq 2$. Tomemos $T := S \cup \{c\} \cup S'$, cumple:
 \[
     d(T) \geq (q(G \setminus S) - 1 + q(C' \setminus S')) - (\abs S + 1 + \abs{S'})  \geq d(S) - 1 - 1 + d_{C'} (S') \geq d(S),
 \]
 donde el primer $-1$ proviene de que perdimos la componente impar $C$ y el segundo $-1$ proviene de incluir a $c$ en $T$. Nuevamente, esto contradice la elección de $S$.
 
-Finalmente, nos queda probar que $S$ es matcheable con $\mathcal C _{G \setminus S}$. Si no lo fuera, entonces por el Teorema \ref{th:teorema de Hall} aplicado al grafo bipartito $G_S$, existe un conjunto $S' \subset S$ con más vértices que vecinos, es decir, $S'$ tiene menos aristas que componentes de $\mathcal C_{G \setminus S}$. Debido a que las componentes no adyacentes a $S'$ son también componentes de $G \setminus (S \setminus S')$, y de que al quitar los vértices $S'$ de $S$ nos quedan también las componentes, el conjunto $T = S \setminus S'$ satisface
+Finalmente, nos queda probar que $S$ es matcheable con $\mathcal C _{G \setminus S}$. Si no lo fuera, entonces por el Teorema \ref{th:teorema de Hall} aplicado al grafo bipartito $G_S$, existe un conjunto $S' \subset S$ con más vértices que vecinos, es decir, $S'$ tiene menos aristas que componentes de $\mathcal C_{G \setminus S}$. Debido a que las componentes no adyacentes a $S'$ son también componentes de $G \setminus (S \setminus S')$, y de que al quitar los vértices $S'$ de $S$ perdemos a lo sumo las componentes de $G\setminus S$ adyacentes a $S'$, el conjunto $T = S \setminus S'$ satisface:
 \[
-    d(T) \geq (q(G \setminus S) - \abs{N_{G_S} (S')}) - (\abs S - \abs S') > d(S),
+    d(T) \geq (q(G \setminus S) - \abs{N_{G_S} (S')}) - (\abs S - \abs {S'}) > d(S),
 \]
 contradiciendo la elección de $S$.
 \end{proof}
@@ -2533,15 +2533,15 @@ k_S \leq \abs S \quad \text{y} \quad k_{\mathcal C} \leq \frac{\abs V - \abs S -
 Más aún, $M$ es un matching máximo si y solo si se alcanzan ambas igualdades.
 \end{proposition}
 \begin{proof}
-Primero veamos que todo matching cumple \eqref{eq:matching condition 1}. Por un lado, claramente vale la primera desigualdad. Por otro lado, como todos los $C \in \mathcal{C}$ son impares, alguno de sus vértices no es incidente con una arista de $M$, así contando vértices cubiertos por $M$ en $G\setminus S$, vale la segunda desigualdad.
+Primero veamos que todo matching cumple \eqref{eq:matching condition 1}. Por un lado, claramente vale la primera desigualdad. Por otro lado, como todos los $C \in \mathcal{C}$ son impares, alguno de sus vértices no es incidente con una arista de $M$, así contando vértices cubiertos por $M$ en $G\setminus S$, vale la segunda desigualdad: a lo más $M$ cubre $\frac{\abs C -1}2$ aristas de cada componente $C \in \mathcal C$, pues tienen orden impar.
 
-Más aún, existe un matching $M_0$ que cumple las igualdades en \eqref{eq:matching condition 1}: Tomemos $\abs S$ aristas entre $S \bigcup \mathcal C$ gracias a (i), y luego usemos (ii) para encontrar un un conjunto de $\frac{\abs C-1}{2}$ aristas en cada componente $C \in \mathcal C$. Así, $M_0$ tiene
+Más aún, existe un matching $M_0$ que cumple las igualdades en \eqref{eq:matching condition 1}: tomemos $\abs S$ aristas de $G_S$ gracias a (i) y las pensamos en $G$, y luego usemos (ii) para encontrar un conjunto de $\frac{\abs C-1}{2}$ aristas en cada componente $C \in \mathcal C$ no dos incidentes entre sí. Así, $M_0$ tiene
 \[
     \abs{M_0} = \abs S + \frac{\abs V - \abs S - \abs {\mathcal{C}}}{2}
 \]
-aristas. Esto implica junto con \eqref{eq:matching condition 1} que todo matching máximo tiene que cumplir las igualdades en \eqref{eq:matching condition 1}.
+aristas. Esto implica junto con \eqref{eq:matching condition 1}, que todo matching máximo tiene que cumplir las igualdades en \eqref{eq:matching condition 1}, y en particular $M_0$ es un matching máximo. (Notar que $k_S + k_{\mathcal C}$ coincide con el número de aristas del matching).
 
-Recíprocamente, si $M$ cumple las igualdades en \eqref{eq:matching condition 1}, entonces $k_S = \abs S$ implica que todo vértice $s \in S$ tiene una arista $st \in M$ con $t \in G \setminus S$, y por $k_\mathcal{C} = \frac{\abs V - \abs S - \abs{\mathcal{C}}}{2}$ se tiene que $M$ tiene exactamente $\frac{\abs C - 1}{2}$ aristas en $C$ para cada $C \in \mathcal{C}$. Como estas últimas aristas solamente no cubren a un vértice en $C$, el extremo $t$ de cada arista $st$, debe caer en una ditinta componente $C$ para cada distinto $s$. Con lo cual $M$ tiene el mismo cardinal que el matching máximo $M_0$.
+Recíprocamente, si $M$ cumple las igualdades en \eqref{eq:matching condition 1}, entonces $k_S = \abs S$ implica que todo vértice $s \in S$ tiene una arista $st \in M$ con $t \in G \setminus S$, y por $k_\mathcal{C} = \frac{\abs V - \abs S - \abs{\mathcal{C}}}{2}$, se tiene que $M$ tiene exactamente $\frac{\abs C - 1}{2}$ aristas en $C$ para cada $C \in \mathcal{C}$. Como estas últimas aristas solamente no cubren a un vértice de $C$, el extremo $t$ de cada arista $st$, debe caer en una ditinta componente $C$ para cada distinto $s$. Con lo cual, $M$ tiene el mismo cardinal que el matching máximo $M_0$, i.e., es matching máximo.
 \end{proof}
 
 
@@ -2550,13 +2550,13 @@ Recíprocamente, si $M$ cumple las igualdades en \eqref{eq:matching condition 1}
 
 
 \begin{remark}
-Existe algorítmos polinomiales para encontrar matchings máximos en un grafo. Más precisamente, el ``blossom algorithm'' desarrollado por Jack Edmonds en 1961\footnote{Ver \cite{edmonds1991glimpseOfHeaven}.} corre en tiempo $O (\abs E \abs V^2)$ donde $G = (V,E)$. Existe un algorítmo más eficiente, obtenido por Micali y Vazirani\footnote{Ver \cite{micaliSilvioVazirani1980MaximumMatching}.}, qu ecorre en tiempo $O(\abs E \sqrt{\abs V})$, pero es mucho más complicado.
+Existe algorítmos polinomiales para encontrar matchings máximos en un grafo. Más precisamente, el ``blossom algorithm'' desarrollado por Jack Edmonds en 1961 \cite{edmonds1991glimpseOfHeaven}, el cual corre en tiempo $O (\abs E \abs V^2)$, donde $G = (V,E)$. Existe un algorítmo más eficiente, obtenido por Micali y Vazirani \cite{micaliSilvioVazirani1980MaximumMatching}, el cual corre en tiempo $O(\abs E \sqrt{\abs V})$, pero es mucho más complicado.
 \end{remark}
 
 \bigskip
 
 \begin{definition}\label{def:condicion de Tutte debil}
-Decimos que $G$ cumple la \textbf{condición de Tutte débil} si para $S \subset V(G)$ tal que $\abs S \leq 1$, hay a lo más una componente impar en $\mathcal C _{G \setminus \{x\}}$. En particular tomando $S = \emptyset$, $G$ tiene que tener orden par, no tiene vértices aislados y porlotanto tiene almenos una arista.
+Diremos que $G$ cumple la \textbf{condición de Tutte débil} si para todo $S \subset V(G)$ tal que $\abs S \leq 1$, se cumple \ref{def:condicion de Tutte debil}. En particular tomando $S = \emptyset$, $G$ tiene que tener orden par, no tiene vértices aislados y por lo tanto, tiene al menos una arista.
 \end{definition}
 
 \begin{exercise}
@@ -2573,7 +2573,7 @@ Como el Teorema de Tutte \ref{th:teorema de Tutte} dice que un grafo con matchin
 Como los primeros son un caso particular de grafos bipartitos, basta con probar la última afirmación. De todas formas, como no estoy seguro de que esté bien la demostración para grafos bipartitos, daré una demostración diferente que sirve para bosques (el cual implica el de árboles)
 
 \begin{enumerate}[(i)]
-\item[\textit{Caso bosques:}] Por inducción en la cantidad de vértices $n$ de un bosque $T$. Recordemos que $n$ tiene que ser par y $G$ tiene que tener almenos una arista, luego los casos $n = 2,3$ son triviales. En general para $n \geq 4$, si $x \in G$ es una hoja con un padre $y$, consideramos el bosque $T' = T \setminus \{x,y\}$. Este nuevo bosque sigue cumpliendo la condición de Tutte débil \ref{def:condicion de Tutte debil}. En efecto, sea $z \in T'$, las componentes conexas de $T' \setminus \{z\}$ de orden impar son a lo más la cantidad de componentes impares de $T \setminus \{z\}$, pues como no hay ciclos en $T$, $x$ e $y$ son adyacentes como mucho a una componente de $T' \setminus \{z\}$, luego por la condición débil, $T' \setminus \{z\}$ tiene a lo más una componente impar. Como $z\in T'$ era arbitrario, podemos aplicar hipótesis inductiva con $ \abs{T'} = n -2 \geq 2$, luego $T'$ tiene matching perfecto, con lo cual agregando la arista $xy$ obtenemos un matching perfecto de $T$.
+\item[\textit{Caso bosques:}] Por inducción en la cantidad de vértices $n$ de un bosque $T$. Recordemos que $n$ tiene que ser par y $G$ tiene que tener al menos una arista, luego los casos $n = 2,3$ son triviales. En general para $n \geq 4$, si $x \in G$ es una hoja con un padre $y$, consideramos el bosque $T' = T \setminus \{x,y\}$. Este nuevo bosque sigue cumpliendo la condición de Tutte débil \ref{def:condicion de Tutte debil}. En efecto, sea $z \in T'$, las componentes conexas de $T' \setminus \{z\}$ de orden impar son a lo más la cantidad de componentes impares de $T \setminus \{z\}$, pues como no hay ciclos en $T$, $x$ e $y$ son adyacentes como mucho a una componente de $T' \setminus \{z\}$, luego por la condición débil, $T' \setminus \{z\}$ tiene a lo más una componente impar. Como $z\in T'$ era arbitrario, podemos aplicar hipótesis inductiva con $ \abs{T'} = n -2 \geq 2$, luego $T'$ tiene matching perfecto, con lo cual agregando la arista $xy$ obtenemos un matching perfecto de $T$.
 \item[\textit{Caso $X,Y$-bigrafos:}] Por la condición de Tutte débil \ref{def:condicion de Tutte debil}, existe un subconjunto $S \subset X$ que tiene almenos un vecino, i.e. cumple la condición de Hall \eqref{eq:condicion de Hall}, luego tomemos $S$ de tamaño máximo tal que cumple la condición (en particular es no trivial). Supongamos por el absurdo que no tenemos un matching perfecto, es decir que $S \subsetneq X$. Sea $x \in X \setminus S$ arbitrario. Por maximalidad de $S$, tenemos que $\abs S = \abs N (S) \subset Y$, más aún, $N (x) \subset S$, i.e. los vértices de $Y \setminus N(S)$ son aislados. Como $\abs X = \abs Y$, debe haber almenos un $y \in Y \setminus N(S)$, sin embargo $G$ no tiene vértices aislados, absurdo.
 
 \InscapeDEPRECADO{Ilustración del absurdo en un bigrafo que cumple la condición débil.}
@@ -2588,7 +2588,7 @@ Como los primeros son un caso particular de grafos bipartitos, basta con probar 
 Estamos motivados ahora de generalizar los teoremas de König y Hall: dados una clase de grafos $\mathcal H$, nos gustaría encontrar una función $f : \naturals \rightarrow \naturals$ independiente de cualquier grafo $G$, tal que $G$ tiene $k$ subgrafos disjuntos isomorfos a un grafo de $\mathcal H$ o tiene un subconjunto con a lo más $f(k)$ vértices que cubren los subgrafos de $G$ pertenecientes a $\mathcal H$. Si existe una función $f$ para $\mathcal H$ que cumple lo anteriormente mencionado, decimios que $\mathcal H$ tiene la \textbf{propiedad de Erdös-Pósa}.
 
 \begin{Warning}
-En lo que sigue, usamos la notación del diestal ``$\log$'' que creo que se refiere al logarítmo en base $2$.
+En lo que sigue de esta sección, $\log$ notará el logarítmo en base $2$.
 \end{Warning}
 
 \begin{lemma}
