@@ -63,14 +63,23 @@
 
 \usepackage[shortlabels]{enumitem}
 
+\definecolor{violet}{rgb}{0.0,0.2,0.7}
+\definecolor{rouge2}{rgb}{0.8,0.0,0.2}
 \usepackage{hyperref}
 \hypersetup{
-    colorlinks,
-    citecolor=red,
-    filecolor=red,
-    linkcolor=red,
-    urlcolor=red
-}
+    %bookmarks=true,         % show bookmarks bar?
+    unicode=false,          % non-Latin characters in Acrobat’s bookmarks
+    pdftoolbar=true,        % show Acrobat’s toolbar?
+    pdfmenubar=true,        % show Acrobat’s menu?
+    pdffitwindow=false,     % window fit to page when opened
+    pdfstartview={FitH},    % fits the width of the page to the window
+    pdftitle={},    % title
+    pdfauthor={},     % author
+    colorlinks=true,       % false: boxed links; true: colored links
+   linkcolor=violet,          % color of internal links
+    citecolor=rouge2,        % color of links to bibliography
+    filecolor=black,      % color of file links
+    urlcolor=cyan}           % color of external links
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 

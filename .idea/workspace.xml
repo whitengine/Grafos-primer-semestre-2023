@@ -6,10 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="d64069ff-abb3-47fa-9feb-8331f5baf8d7" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/main.log" beforeDir="false" afterPath="$PROJECT_DIR$/out/main.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/main.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/out/main.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/main.synctex.gz" beforeDir="false" afterPath="$PROJECT_DIR$/out/main.synctex.gz" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main.tex" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.tex" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,13 +43,13 @@
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
     &quot;git-widget-placeholder&quot;: &quot;master&quot;,
     &quot;last.edited.regexp&quot;: &quot;\\njjj&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/home/enzo/Desktop/Doctorado Chile/Clases/2023/Primer semestre/Grafos-primer-semestre-2023&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/enzo/Desktop/Doctorado Chile/Clases/2023/Primer semestre/MAT 529 - Aritmetica&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
@@ -144,7 +140,7 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-python-sdk-50da183f06c8-2887949eec09-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-233.13135.95" />
+        <option value="bundled-python-sdk-5a2391486177-2887949eec09-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-233.13763.11" />
       </set>
     </attachedChunks>
   </component>
@@ -224,15 +220,14 @@
       <workItem from="1705767316319" duration="2037000" />
       <workItem from="1705772601111" duration="5799000" />
       <workItem from="1705786399208" duration="4169000" />
-      <workItem from="1705875724011" duration="5489000" />
-    </task>
-    <task id="LOCAL-00004" summary="arreglado?">
-      <option name="closed" value="true" />
-      <created>1703546471666</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1703546471666</updated>
+      <workItem from="1705875724011" duration="5574000" />
+      <workItem from="1705934615709" duration="7000" />
+      <workItem from="1706799210958" duration="112000" />
+      <workItem from="1706799342212" duration="57000" />
+      <workItem from="1706840039723" duration="23000" />
+      <workItem from="1707273371086" duration="9000" />
+      <workItem from="1707318956282" duration="126000" />
+      <workItem from="1707321648239" duration="61000" />
     </task>
     <task id="LOCAL-00005" summary="arreglado?">
       <option name="closed" value="true" />
@@ -618,7 +613,15 @@
       <option name="project" value="LOCAL" />
       <updated>1705793987113</updated>
     </task>
-    <option name="localTasksCounter" value="53" />
+    <task id="LOCAL-00053" summary="arreglado?">
+      <option name="closed" value="true" />
+      <created>1705890312144</created>
+      <option name="number" value="00053" />
+      <option name="presentableId" value="LOCAL-00053" />
+      <option name="project" value="LOCAL" />
+      <updated>1705890312145</updated>
+    </task>
+    <option name="localTasksCounter" value="54" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
