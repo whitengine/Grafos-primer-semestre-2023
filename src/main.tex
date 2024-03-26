@@ -108,6 +108,9 @@
 \newtheorem{warn}[theorem]{\textbf{ADVERTENCIA}}
 \renewenvironment{warning}{\begin{warn}}{\end{warn}}
 
+%me gusta renovar el ambiente demostración para que este subrayado
+\renewenvironment{proof}[1][Demostración]{\noindent \textit{\underline{#1}.\hspace{2mm}}}{\hfill\qed}
+
 %crear ejercicio
 \newtheorem{exercise}[theorem]{Ejercicio}
 %solución
@@ -2927,10 +2930,11 @@ Tenemos que \begin{enumerate}[(i)]
 \end{lemma}
 \begin{proof}
 \begin{enumerate}[(i)]
-\end{enumerate}
+
 \item Tomemos un conjunto de vértices aislados de tamaño máximo $\alpha (G \setminus H)$ en $G \setminus H$, luego como ese conjunto junto con $v \in H$ es aislado en $G$ se sigue que $\alpha (G \setminus H) + 1 \leq \alpha (G)$.
 
 \item Como $m(G) \not \leq m(G \setminus H)$, tenemos que $m(G\setminus H) +1 \leq m(G)$. Por otro lado, si agarramos un cubrimiento por subgrafos disjuntos de tipo $\mathcal H$ de $G \setminus H$ y le agregamos $H$, obtenemos un cubrimiento disjunto de $G$, luego $m(G\setminus H) + 1 \geq m(G)$.
+\end{enumerate}
 \end{proof}
 
 Luego por el lema anterior, y aplicando hipótesis inductiva a $G \setminus H$, tenemos que

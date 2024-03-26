@@ -43,7 +43,7 @@
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
     &quot;git-widget-placeholder&quot;: &quot;master&quot;,
     &quot;last.edited.regexp&quot;: &quot;\\njjj&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/home/enzo/Desktop/Doctorado Chile/Clases/2023/Primer semestre/MAT 529 - Aritmetica&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/enzo/Desktop/Doctorado Chile/Clases/2023/Primer semestre/Grafos-primer-semestre-2023&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -140,7 +140,7 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-python-sdk-5a2391486177-2887949eec09-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-233.13763.11" />
+        <option value="bundled-python-sdk-09665e90c3a7-b11f5e8da5ad-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-233.15026.15" />
       </set>
     </attachedChunks>
   </component>
@@ -228,14 +228,15 @@
       <workItem from="1707273371086" duration="9000" />
       <workItem from="1707318956282" duration="126000" />
       <workItem from="1707321648239" duration="61000" />
-    </task>
-    <task id="LOCAL-00005" summary="arreglado?">
-      <option name="closed" value="true" />
-      <created>1703551966836</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1703551966836</updated>
+      <workItem from="1707875458738" duration="37000" />
+      <workItem from="1708026702553" duration="52000" />
+      <workItem from="1708097826473" duration="14000" />
+      <workItem from="1711038678035" duration="4000" />
+      <workItem from="1711156231044" duration="10000" />
+      <workItem from="1711221914755" duration="4000" />
+      <workItem from="1711423403974" duration="13000" />
+      <workItem from="1711424747358" duration="59000" />
+      <workItem from="1711424931414" duration="146000" />
     </task>
     <task id="LOCAL-00006" summary="arreglado?">
       <option name="closed" value="true" />
@@ -621,7 +622,15 @@
       <option name="project" value="LOCAL" />
       <updated>1705890312145</updated>
     </task>
-    <option name="localTasksCounter" value="54" />
+    <task id="LOCAL-00054" summary="arreglado?">
+      <option name="closed" value="true" />
+      <created>1707875483697</created>
+      <option name="number" value="00054" />
+      <option name="presentableId" value="LOCAL-00054" />
+      <option name="project" value="LOCAL" />
+      <updated>1707875483697</updated>
+    </task>
+    <option name="localTasksCounter" value="55" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
